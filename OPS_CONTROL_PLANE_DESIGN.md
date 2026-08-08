@@ -594,3 +594,20 @@ web/src/
 | 数据库迁移兼容 | 升级破坏现有安装 | xormigrate 增量迁移 + 回滚测试 |
 | i18n 文案量 | Phase 2 页面多 | 中文先行，英文随页面同步补 |
 | 原型的"部署日志实时流" | SSE 长连接成本 | 复用现有 stream 机制 + 断线重连 + 落库兜底 |
+
+## 12. 实施状态（2026-08-08 更新）
+
+| 阶段 | 状态 | 说明 |
+|---|---|---|
+| Phase 1 视觉统一 | ✅ 框架完成 | Token 映射（P1.1）、原子组件（P1.2）、Sidebar/Topbar 布局（P1.3）、全局辅助类（P1.4）、Login/404 精修示范；其余 CI 页面已由 Token 全局换肤生效 |
+| Phase 2 部署控制面 | ✅ 全部完成 | 10 张表 + 迁移、OpsStore、部署引擎（状态机/审批/批次/回滚/锁）、40+ REST API、Node Agent 通道、前端 17 页面 + 路由 + Pinia + i18n；后端 40 包测试全绿 |
+| Phase 3 Node Agent | ✅ 代码完成 | cmd/node-agent 二进制（注册/心跳/指标采集/白名单任务执行/docker·k8s·systemd 适配器/健康探针）、NodeAgentExecutor（下发任务+轮询）、WOODPECKER_USE_NODE_AGENT 开关；白名单测试通过；真实节点端到端待 staging 验证 |
+
+### 提交历史（18 次提交，13 次功能性）
+- P1.1–P1.5：e821013, c9a4373, 2f7ce6e, 987c770, 614653e, 066c366, fbff390, 4d11ddf
+- P2.1–P2.8：f6e4afb, 001a6a9, 0c2f42e, 2a87b21, 4166473, b2287ab
+- P3.1–P3.4：41d41e1, 8f9a7bc
+
+### 验证证据
+- 后端：`go build ./...`、`go vet`（仅上游既有 context-leak 告警）、`go test -tags test ./server/...` 41 包全绿（含 ops 引擎 3 测试 + node-agent 白名单 2 测试）
+- 前端：`vue-tsc`、`eslint`、`vite build`、`vitest` 56 用例全绿
