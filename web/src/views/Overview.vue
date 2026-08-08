@@ -1,7 +1,8 @@
 <template>
   <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
   <Scaffold>
-    <template #title>{{ $t('ops.sidebar.overview') }}  <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
+    <template #title>
+{{ $t('ops.sidebar.overview') }}  <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
 </template>
 
     <div class="wp-stack">
@@ -31,7 +32,7 @@
             <div v-for="item in feed.slice(0, 10)" :key="`${item.repo_id}-${item.number}`" class="activity-item">
               <span class="status-dot" :class="item.status" />
               <div class="activity-copy">
-                <strong class="text-wp-text-200">{{ repoName(item.repo_id) }} · #{{ item.number }}</strong>
+                <strong class="text-wp-text-200">{{ repoName(item.repo_id) }}{{ pipelineRef(item.number) }}</strong>
                 <p class="wp-muted">{{ item.message || '—' }}</p>
               </div>
               <span class="wp-muted text-xs">{{ item.event }}</span>
@@ -58,7 +59,7 @@
             <div class="wp-card-header"><h2>{{ $t('overview.repositories') }}</h2><router-link class="text-wp-link-100 text-xs" to="/repos">{{ $t('ops.infrastructure.view_all') }}</router-link></div>
             <div class="wp-card-body wp-stack">
               <div v-for="repo in repoStore.ownedRepos.slice(0, 8)" :key="repo.id" class="wp-split">
-                <router-link class="text-wp-link-100" :to="{ name: 'repo', params: { repoId: repo.id } }">{{ repo.owner }}/{{ repo.name }}</router-link>
+                <router-link class="text-wp-link-100" :to="{ name: 'repo', params: { repoId: repo.id } }">{{ repo.full_name }}</router-link>
                 <span v-if="repo.last_pipeline" class="wp-muted text-xs">{{ repo.last_pipeline.status }}</span>
               </div>
               <span v-if="repoStore.ownedRepos.length === 0" class="wp-muted">{{ $t('overview.no_repos') }}</span>
@@ -93,6 +94,10 @@ function repoName(repoId: number): string {
   const repo = repoStore.repos.get(repoId);
   return repo ? `${repo.owner}/${repo.name}` : `#${repoId}`;
 }
+
+function pipelineRef(number: number): string {
+  return ` #${number}`;
+}
 const agents = ref<Agent[]>([]);
 
 const runningCount = computed(() => feed.value.filter((p) => p.status === 'running' || p.status === 'pending').length);
@@ -102,9 +107,11 @@ onMounted(async () => {
     repoStore.loadRepos(),
     apiClient.getPipelineFeed().then((r) => {
       feed.value = r ?? [];
+      return r;
     }),
     apiClient.getAgents().then((r) => {
       agents.value = r ?? [];
+      return r;
     }),
   ]);
 });
