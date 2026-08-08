@@ -58,6 +58,7 @@ var migrationTasks = []*xormigrate.Migration{
 	&addCronField,
 	&updatePipelineStructureTagsReleases,
 	&replaceZeroForgeIDsInUsers,
+	&addOpsControlPlane,
 }
 
 var allBeans = []any{
@@ -79,6 +80,17 @@ var allBeans = []any{
 	new(model.Forge),
 	new(model.Workflow),
 	new(model.Org),
+	new(model.Server),
+	new(model.ServerGroup),
+	new(model.Application),
+	new(model.Environment),
+	new(model.Release),
+	new(model.Deployment),
+	new(model.DeploymentTarget),
+	new(model.Approval),
+	new(model.Alert),
+	new(model.AuditLog),
+	new(model.NodeTask),
 }
 
 // TODO: make xormigrate context aware
