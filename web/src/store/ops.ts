@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import { computed, reactive, ref } from 'vue';
-import type { Ref } from 'vue';
+import type { ComputedRef, Ref  } from 'vue';
 
 import useApiClient from '~/compositions/useApiClient';
 import type {
@@ -26,7 +26,8 @@ export const useServerStore = defineStore('ops-servers', () => {
 
   const serverList = computed(() => [...servers.values()].sort((a, b) => a.id - b.id));
   const groupList = computed(() => [...groups.values()].sort((a, b) => a.id - b.id));
-  const activeAlerts = computed(() => [...alerts.values()].filter((a) => a.status === 'active'));
+  const alertsList = computed(() => [...alerts.values()].sort((a, b) => b.id - a.id));
+  const activeAlerts = computed(() => alertsList.value.filter((a) => a.status === 'active'));
 
   function getServer(serverId: Ref<number> | number) {
     const id = typeof serverId === 'number' ? serverId : serverId.value;
@@ -67,6 +68,7 @@ export const useServerStore = defineStore('ops-servers', () => {
     loaded,
     serverList,
     groupList,
+    alertsList,
     activeAlerts,
     getServer,
     setServer,
@@ -120,7 +122,7 @@ export const useApplicationStore = defineStore('ops-applications', () => {
     await Promise.all([loadApplications(), loadEnvironments(), loadReleases()]);
   }
 
-  function releasesOf(appId: number) {
+  function releasesOf(appId: number): ComputedRef<AppRelease[]> {
     return computed(() => releaseList.value.filter((r) => r.application_id === appId));
   }
 

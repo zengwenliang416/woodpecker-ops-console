@@ -25,6 +25,16 @@
   <SvgIcon v-else-if="name === 'sun'" :bg-circle="bgCircle" :path="mdiWhiteBalanceSunny" size="1.3rem" />
   <SvgIcon v-else-if="name === 'moon'" :bg-circle="bgCircle" :path="mdiWeatherNight" size="1.3rem" />
   <SvgIcon v-else-if="name === 'search'" :bg-circle="bgCircle" :path="mdiMagnify" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'cpu'" :bg-circle="bgCircle" :path="mdiCpu64Bit" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'memory'" :bg-circle="bgCircle" :path="mdiMemory" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'disk'" :bg-circle="bgCircle" :path="mdiHarddisk" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'check'" :bg-circle="bgCircle" :path="mdiCheck" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'shield'" :bg-circle="bgCircle" :path="mdiShieldCheckOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'rollback'" :bg-circle="bgCircle" :path="mdiRocketLaunchOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'warning'" :bg-circle="bgCircle" :path="mdiAlertOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'x'" :bg-circle="bgCircle" :path="mdiClose" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'stop'" :bg-circle="bgCircle" :path="mdiStopCircle" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'package'" :bg-circle="bgCircle" :path="mdiPackageVariant" size="1.3rem" />
   <SvgIcon v-else-if="name === 'settings'" :bg-circle="bgCircle" :path="mdiCog" size="1.3rem" />
   <SvgIcon v-else-if="name === 'settings-outline'" :bg-circle="bgCircle" :path="mdiCogOutline" size="1.3rem" />
   <SvgIcon v-else-if="name === 'trash'" :bg-circle="bgCircle" :path="mdiTrashCanOutline" size="1.3rem" />
@@ -143,6 +153,7 @@ import {
   mdiAccountOutline,
   mdiAlarm,
   mdiAlertCircle,
+  mdiAlertOutline,
   mdiApplicationOutline,
   mdiArrowLeft,
   mdiBellOutline,
@@ -151,6 +162,11 @@ import {
   mdiCalendarClockOutline,
   mdiChartTimelineVariant,
   mdiCheckCircle,
+  mdiCheck,
+  mdiCpu64Bit,
+  mdiMemory,
+  mdiHarddisk,
+  mdiShieldCheckOutline,
   mdiChevronRight,
   mdiClockTimeEightOutline,
   mdiClose,
@@ -249,6 +265,16 @@ export type IconNames =
   | 'sun'
   | 'moon'
   | 'search'
+  | 'cpu'
+  | 'memory'
+  | 'disk'
+  | 'check'
+  | 'shield'
+  | 'rollback'
+  | 'warning'
+  | 'x'
+  | 'stop'
+  | 'package'
   | 'settings'
   | 'settings-outline'
   | 'trash'

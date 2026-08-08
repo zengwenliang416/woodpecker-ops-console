@@ -348,15 +348,52 @@ const routes: RouteRecordRaw[] = [
     meta: { authentication: 'required' },
   },
 
+  {
+    path: '/:repoOwner/:repoName/:pathMatch(.*)*',
+    component: (): Component => import('~/views/repo/RepoDeprecatedRedirect.vue'),
+    props: true,
+  },
   // TODO: deprecated routes => remove after some time
   {
     path: '/:ownerOrOrgId',
     redirect: (route) => ({ name: 'org', params: route.params }),
   },
   {
-    path: '/:repoOwner/:repoName/:pathMatch(.*)*',
-    component: (): Component => import('~/views/repo/RepoDeprecatedRedirect.vue'),
-    props: true,
+    path: '/:ownerOrOrgId',
+    redirect: (route) => ({ name: 'org', params: route.params }),
+  },
+
+  // ---------- Ops: infrastructure & deployment control plane ----------
+  {
+    path: '/infrastructure',
+    component: (): Component => import('~/views/RouterView.vue'),
+    meta: { authentication: 'required' },
+    children: [
+      { path: '', name: 'infrastructure', component: (): Component => import('~/views/infrastructure/InfrastructureOverview.vue') },
+      { path: 'servers', name: 'infrastructure-servers', component: (): Component => import('~/views/infrastructure/InfrastructureServers.vue') },
+      { path: 'servers/:serverId', name: 'infrastructure-server', component: (): Component => import('~/views/infrastructure/InfrastructureServer.vue'), props: true },
+      { path: 'groups', name: 'infrastructure-groups', component: (): Component => import('~/views/infrastructure/InfrastructureGroups.vue') },
+      { path: 'groups/:groupId', name: 'infrastructure-group', component: (): Component => import('~/views/infrastructure/InfrastructureGroup.vue'), props: true },
+      { path: 'services', name: 'infrastructure-services', component: (): Component => import('~/views/infrastructure/InfrastructureServices.vue') },
+      { path: 'alerts', name: 'infrastructure-alerts', component: (): Component => import('~/views/infrastructure/InfrastructureAlerts.vue') },
+    ],
+  },
+  {
+    path: '/deployments',
+    component: (): Component => import('~/views/RouterView.vue'),
+    meta: { authentication: 'required' },
+    children: [
+      { path: '', name: 'deployments', component: (): Component => import('~/views/deployments/Deployments.vue') },
+      { path: 'new', name: 'deployment-new', component: (): Component => import('~/views/deployments/DeploymentNew.vue') },
+      { path: 'approvals', name: 'deployment-approvals', component: (): Component => import('~/views/deployments/DeploymentApprovals.vue') },
+      { path: 'apps', name: 'applications', component: (): Component => import('~/views/deployments/Applications.vue') },
+      { path: 'apps/:appId', name: 'application', component: (): Component => import('~/views/deployments/ApplicationDetail.vue'), props: true },
+      { path: 'environments', name: 'environments', component: (): Component => import('~/views/deployments/Environments.vue') },
+      { path: 'environments/:envId', name: 'environment', component: (): Component => import('~/views/deployments/EnvironmentDetail.vue'), props: true },
+      { path: 'releases', name: 'releases', component: (): Component => import('~/views/deployments/Releases.vue') },
+      { path: 'policies', name: 'deployment-policies', component: (): Component => import('~/views/deployments/DeploymentPolicies.vue') },
+      { path: ':deploymentId', name: 'deployment', component: (): Component => import('~/views/deployments/DeploymentDetail.vue'), props: true },
+    ],
   },
 
   // not found handler
