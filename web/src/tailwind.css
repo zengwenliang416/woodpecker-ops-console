@@ -125,6 +125,16 @@
   --color-wp-link-100: var(--wp-link-100);
   --color-wp-link-200: var(--wp-link-200);
 
+  --color-wp-border-100: var(--wp-border);
+  --color-wp-border-200: var(--wp-border-strong);
+
+  --radius-wp-sm: var(--wp-radius-sm);
+  --radius-wp: var(--wp-radius);
+  --radius-wp-lg: var(--wp-radius-lg);
+
+  --shadow-wp-sm: var(--wp-shadow-sm);
+  --shadow-wp: var(--wp-shadow);
+
   --spacing-sm: 24rem;
   --spacing-md: 28rem;
   --spacing-lg: 32rem;

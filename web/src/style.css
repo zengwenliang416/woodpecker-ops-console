@@ -1,116 +1,161 @@
 @reference "./tailwind.css";
 
+/* ============================================================
+   Design Tokens — 对齐 woodpecker-functional-prototype-with-ops
+   原型 app.css（深色为主，浅色可切换）
+   ============================================================ */
+
 :root,
 :root[data-theme='light'] {
-  --wp-background-100: var(--color-white);
-  --wp-background-200: var(--color-gray-50);
-  --wp-background-300: var(--color-gray-200);
-  --wp-background-400: var(--color-gray-300);
-  --wp-background-500: var(--color-gray-400);
+  color-scheme: light;
 
-  --wp-text-100: var(--color-gray-600);
-  --wp-text-200: var(--color-gray-700);
-  --wp-text-alt-100: var(--color-gray-500);
+  /* 背景层级：100 最浅 → 500 最深 */
+  --wp-background-100: #edf2f4; /* surface-3 */
+  --wp-background-200: #f8fafb; /* surface-2 */
+  --wp-background-300: #ffffff; /* surface-1 卡片 */
+  --wp-background-400: #ffffff; /* bg-sidebar */
+  --wp-background-500: #f4f7f8; /* bg-app */
 
-  --wp-primary-100: var(--color-int-wp-primary-300);
-  --wp-primary-200: var(--color-int-wp-primary-400);
-  --wp-primary-300: var(--color-int-wp-primary-500);
-  --wp-primary-text-100: var(--color-white);
+  /* 文本 */
+  --wp-text-100: #526975; /* text-2 */
+  --wp-text-200: #15232d; /* text-1 */
+  --wp-text-alt-100: #82939d; /* text-3 */
 
-  --wp-control-neutral-100: var(--color-gray-100);
-  --wp-control-neutral-200: var(--color-gray-200);
-  --wp-control-neutral-300: var(--color-gray-300);
+  /* 品牌绿 */
+  --wp-primary-100: #15984d; /* brand */
+  --wp-primary-200: #087b3b; /* brand-strong */
+  --wp-primary-300: #06632f;
+  --wp-primary-text-100: #ffffff;
 
-  --wp-control-info-100: var(--color-int-wp-control-info-100);
-  --wp-control-info-200: var(--color-int-wp-control-info-200);
-  --wp-control-info-300: var(--color-int-wp-control-info-300);
+  /* 控件 */
+  --wp-control-neutral-100: #ffffff;
+  --wp-control-neutral-200: #f8fafb;
+  --wp-control-neutral-300: #dce5e9; /* border */
 
-  --wp-control-ok-100: var(--color-int-wp-control-ok-100);
-  --wp-control-ok-200: var(--color-int-wp-control-ok-200);
-  --wp-control-ok-300: var(--color-int-wp-control-ok-300);
+  --wp-control-info-100: #4c8dff;
+  --wp-control-info-200: #3a6fd8;
+  --wp-control-info-300: #2c56a8;
 
-  --wp-error-100: var(--color-int-wp-error-100);
-  --wp-error-200: var(--color-int-wp-error-200);
-  --wp-error-300: var(--color-int-wp-error-300);
+  --wp-control-ok-100: #15984d;
+  --wp-control-ok-200: #0f7a3e;
+  --wp-control-ok-300: #0a5f30;
 
-  --wp-state-neutral-100: var(--color-int-wp-state-neutral-100);
-  --wp-state-ok-100: var(--color-int-wp-state-ok-100);
-  --wp-state-info-100: var(--color-int-wp-state-info-100);
-  --wp-state-warn-100: var(--color-int-wp-state-warn-100);
+  /* 错误 */
+  --wp-error-100: #ff5d61;
+  --wp-error-200: #e04a4e;
+  --wp-error-300: #b8383c;
 
-  --wp-hint-warn-100: var(--color-int-wp-hint-warn-100);
-  --wp-hint-warn-200: var(--color-int-wp-hint-warn-200);
+  /* 状态色 */
+  --wp-state-neutral-100: #82939d;
+  --wp-state-ok-100: #15984d;
+  --wp-state-info-100: #4c8dff;
+  --wp-state-warn-100: #d19d43;
 
-  --wp-code-inline-100: var(--color-gray-200);
-  --wp-code-inline-200: var(--color-gray-200);
+  /* 提示 */
+  --wp-hint-warn-100: #fff7e0;
+  --wp-hint-warn-200: #e8b84b;
 
-  --wp-code-inline-text-100: var(--color-gray-600);
+  /* 代码 */
+  --wp-code-inline-100: #edf2f4;
+  --wp-code-inline-200: #e3eaed;
+  --wp-code-inline-text-100: #526975;
 
-  --wp-code-100: var(--color-int-wp-secondary-300);
-  --wp-code-200: var(--color-int-wp-secondary-600);
-  --wp-code-300: var(--color-int-wp-secondary-600);
+  --wp-code-100: #f4f7f8;
+  --wp-code-200: #edf2f4;
+  --wp-code-300: #e3eaed;
+  --wp-code-text-100: #15232d;
+  --wp-code-text-alt-100: #526975;
 
-  --wp-code-text-100: var(--color-gray-200);
-  --wp-code-text-alt-100: var(--color-gray-300);
+  /* 链接 */
+  --wp-link-100: #2c56a8;
+  --wp-link-200: #1d3f7e;
 
-  --wp-link-100: var(--color-blue-600);
-  --wp-link-200: var(--color-blue-700);
+  /* 布局与形状（原型 Token） */
+  --wp-sidebar-w: 248px;
+  --wp-topbar-h: 64px;
+  --wp-radius-sm: 7px;
+  --wp-radius: 11px;
+  --wp-radius-lg: 16px;
+  --wp-border: #dce5e9;
+  --wp-border-strong: #c5d2d8;
+  --wp-shadow: 0 20px 65px rgba(31, 51, 64, 0.13);
+  --wp-shadow-sm: 0 8px 22px rgba(31, 51, 64, 0.08);
 }
 
 :root[data-theme='dark'] {
-  --wp-background-100: var(--color-int-wp-secondary-200);
-  --wp-background-200: var(--color-int-wp-secondary-400);
-  --wp-background-300: var(--color-int-wp-secondary-500);
-  --wp-background-400: var(--color-int-wp-secondary-600);
-  --wp-background-500: var(--color-int-wp-secondary-800);
+  color-scheme: dark;
 
-  --wp-text-100: var(--color-gray-300);
-  --wp-text-200: var(--color-gray-200);
-  --wp-text-alt-100: var(--color-gray-400);
+  /* 背景层级：100 最浅 → 500 最深 */
+  --wp-background-100: #172733; /* surface-3 */
+  --wp-background-200: #12202b; /* surface-2 */
+  --wp-background-300: #0e1923; /* surface-1 卡片 */
+  --wp-background-400: #0a131b; /* bg-sidebar */
+  --wp-background-500: #081017; /* bg-app */
 
-  --wp-primary-100: var(--color-int-wp-secondary-300);
-  --wp-primary-200: var(--color-int-wp-secondary-400);
-  --wp-primary-300: var(--color-int-wp-secondary-600);
-  --wp-primary-text-100: var(--color-gray-300);
+  /* 文本 */
+  --wp-text-100: #a9bac4; /* text-2 */
+  --wp-text-200: #edf5f7; /* text-1 */
+  --wp-text-alt-100: #708492; /* text-3 */
 
-  --wp-control-neutral-100: var(--color-int-wp-secondary-400);
-  --wp-control-neutral-200: var(--color-int-wp-secondary-300);
-  --wp-control-neutral-300: var(--color-int-wp-secondary-200);
+  /* 品牌绿 */
+  --wp-primary-100: #25c267; /* brand */
+  --wp-primary-200: #16a653; /* brand-strong */
+  --wp-primary-300: #0f8a41;
+  --wp-primary-text-100: #06150c;
 
-  --wp-control-info-100: var(--color-int-wp-control-info-dark-100);
-  --wp-control-info-200: var(--color-int-wp-control-info-dark-200);
-  --wp-control-info-300: var(--color-int-wp-control-info-dark-300);
+  /* 控件 */
+  --wp-control-neutral-100: #12202b; /* surface-2 */
+  --wp-control-neutral-200: #172733; /* surface-3 */
+  --wp-control-neutral-300: #304452; /* border-strong */
 
-  --wp-control-ok-100: var(--color-int-wp-control-ok-dark-100);
-  --wp-control-ok-200: var(--color-int-wp-control-ok-dark-200);
-  --wp-control-ok-300: var(--color-int-wp-control-ok-dark-300);
+  --wp-control-info-100: #4c8dff;
+  --wp-control-info-200: #3a6fd8;
+  --wp-control-info-300: #2c56a8;
 
-  --wp-error-100: var(--color-int-wp-error-200);
-  --wp-error-200: var(--color-int-wp-error-300);
-  --wp-error-300: var(--color-int-wp-error-300);
+  --wp-control-ok-100: #28c76f; /* success */
+  --wp-control-ok-200: #1fae5c;
+  --wp-control-ok-300: #178f4a;
 
-  --wp-state-neutral-100: var(--color-int-wp-state-neutral-100);
-  --wp-state-ok-100: var(--color-int-wp-state-ok-dark-100);
-  --wp-state-info-100: var(--color-int-wp-state-info-dark-100);
-  --wp-state-warn-100: var(--color-int-wp-state-warn-dark-100);
+  /* 错误 */
+  --wp-error-100: #ff5d61; /* danger */
+  --wp-error-200: #e04a4e;
+  --wp-error-300: #b8383c;
 
-  --wp-hint-warn-100: var(--color-int-wp-hint-warn-dark-100);
-  --wp-hint-warn-200: var(--color-int-wp-hint-warn-dark-200);
+  /* 状态色 */
+  --wp-state-neutral-100: #708492;
+  --wp-state-ok-100: #28c76f;
+  --wp-state-info-100: #4c8dff;
+  --wp-state-warn-100: #ffb548;
 
-  --wp-code-inline-100: var(--color-int-wp-secondary-700);
-  --wp-code-inline-200: var(--color-int-wp-secondary-300);
+  /* 提示 */
+  --wp-hint-warn-100: #3a2f14;
+  --wp-hint-warn-200: #d19d43;
 
-  --wp-code-inline-text-100: var(--color-gray-300);
+  /* 代码 */
+  --wp-code-inline-100: #12202b;
+  --wp-code-inline-200: #172733;
+  --wp-code-inline-text-100: #a9bac4;
 
-  --wp-code-100: var(--color-int-wp-secondary-700); /* #222631 */
-  --wp-code-200: var(--color-int-wp-secondary-600); /* #2a2e3a */
-  --wp-code-300: var(--color-int-wp-secondary-800); /* #1B1F28 */
+  --wp-code-100: #0a131b;
+  --wp-code-200: #0e1923;
+  --wp-code-300: #081017;
+  --wp-code-text-100: #a9bac4;
+  --wp-code-text-alt-100: #708492;
 
-  --wp-code-text-100: var(--color-gray-200);
-  --wp-code-text-alt-100: var(--color-gray-400);
+  /* 链接 */
+  --wp-link-100: #4c8dff;
+  --wp-link-200: #6da1ff;
 
-  --wp-link-100: var(--color-blue-400);
-  --wp-link-200: var(--color-blue-500);
+  /* 布局与形状（原型 Token） */
+  --wp-sidebar-w: 248px;
+  --wp-topbar-h: 64px;
+  --wp-radius-sm: 7px;
+  --wp-radius: 11px;
+  --wp-radius-lg: 16px;
+  --wp-border: #22323f;
+  --wp-border-strong: #304452;
+  --wp-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+  --wp-shadow-sm: 0 8px 24px rgba(0, 0, 0, 0.16);
 }
 
 html,
@@ -118,6 +163,15 @@ body,
 #app {
   width: 100%;
   height: 100%;
+}
+
+body {
+  background: var(--wp-background-500);
+  color: var(--wp-text-200);
+  font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
 
 .vue-notification {
