@@ -23,6 +23,7 @@ const (
 	DeploymentStatusRejected         DeploymentStatus = "rejected"
 	DeploymentStatusApproved         DeploymentStatus = "approved"
 	DeploymentStatusRunning          DeploymentStatus = "running"
+	DeploymentStatusPaused           DeploymentStatus = "paused"
 	DeploymentStatusSuccess          DeploymentStatus = "success"
 	DeploymentStatusFailed           DeploymentStatus = "failed"
 	DeploymentStatusCancelled        DeploymentStatus = "cancelled"

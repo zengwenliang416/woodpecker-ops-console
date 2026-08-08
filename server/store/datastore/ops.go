@@ -222,7 +222,7 @@ func (s storage) DeploymentTargetUpsert(target *model.DeploymentTarget) error {
 }
 
 func (s storage) DeploymentTargetList(deploymentID int64) (targets []*model.DeploymentTarget, _ error) {
-	return targets, s.engine.Where("deployment_id = ?", deploymentID).OrderBy("id").Find(&targets)
+	return targets, s.engine.Where("deployment_id = ?", deploymentID).OrderBy("deployment_id").Find(&targets)
 }
 
 func (s storage) DeploymentTargetDeleteByDeployment(deploymentID int64) error {

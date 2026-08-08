@@ -84,7 +84,7 @@ var allBeans = []any{
 	new(model.ServerGroup),
 	new(model.Application),
 	new(model.Environment),
-	new(model.Release),
+	new(model.AppRelease),
 	new(model.Deployment),
 	new(model.DeploymentTarget),
 	new(model.Approval),
