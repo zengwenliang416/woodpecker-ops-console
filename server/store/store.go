@@ -23,6 +23,8 @@ import (
 // TODO: CreateX func should return new object to not indirect let storage change an existing object (alter ID etc...)
 
 type Store interface {
+	OpsStore
+
 	// Users
 	// GetUser gets a user by unique ID.
 	GetUser(int64) (*model.User, error)
