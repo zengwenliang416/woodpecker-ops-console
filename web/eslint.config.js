@@ -110,6 +110,7 @@ export default antfu(
       'src/assets/locales/**/*',
       '!src/assets/locales/en.json',
       'components.d.ts',
+      '**/._*',
     ],
   },
 );

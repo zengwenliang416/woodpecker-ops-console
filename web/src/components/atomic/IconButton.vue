@@ -1,5 +1,5 @@
 <template>
-  <router-link v-if="to" :to="to" :title="title" :aria-label="title" class="icon-button h-8 w-8">
+  <router-link v-if="to" :to="to" :title="title" :aria-label="title" class="icon-button" :class="sizeClasses">
     <slot>
       <Icon v-if="icon" :name="icon" />
     </slot>
@@ -10,6 +10,7 @@
     :title="title"
     :aria-label="title"
     class="icon-button"
+    :class="sizeClasses"
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -17,7 +18,7 @@
       <Icon v-if="icon" :name="icon" />
     </slot>
   </a>
-  <button v-else :disabled="disabled" class="icon-button" type="button" :title="title" :aria-label="title">
+  <button v-else :disabled="disabled" class="icon-button" :class="sizeClasses" type="button" :title="title" :aria-label="title">
     <slot>
       <Icon v-if="icon" :name="icon" />
     </slot>
@@ -28,26 +29,44 @@
 </template>
 
 <script lang="ts" setup>
+import { computed } from 'vue';
 import type { RouteLocationRaw } from 'vue-router';
 
 import Icon from '~/components/atomic/Icon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 
-defineProps<{
-  icon?: IconNames;
-  disabled?: boolean;
-  to?: RouteLocationRaw;
-  isLoading?: boolean;
-  title?: string;
-  href?: string;
-}>();
+const props = withDefaults(
+  defineProps<{
+    icon?: IconNames;
+    disabled?: boolean;
+    to?: RouteLocationRaw;
+    isLoading?: boolean;
+    title?: string;
+    href?: string;
+    size?: 'sm' | 'md' | 'lg';
+  }>(),
+  {
+    size: 'md',
+  },
+);
+
+const sizeClasses = computed(() => {
+  switch (props.size) {
+    case 'sm':
+      return 'h-7.5 w-7.5';
+    case 'lg':
+      return 'h-10 w-10';
+    default:
+      return 'h-9 w-9';
+  }
+});
 </script>
 
 <style scoped>
 @reference '~/tailwind.css';
 
 .icon-button {
-  @apply hover:bg-wp-control-neutral-100 dark:hover:bg-wp-control-neutral-300 relative flex shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-md bg-transparent px-1 py-1 disabled:cursor-not-allowed disabled:opacity-50;
+  @apply hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100 relative flex shrink-0 cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-transparent px-1 py-1 transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-50;
   @apply in-[.border-wp-background-400]:hover:bg-wp-control-neutral-200;
 }
 </style>

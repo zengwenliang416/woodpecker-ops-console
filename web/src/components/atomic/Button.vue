@@ -2,22 +2,29 @@
   <component
     :is="to === undefined ? 'button' : httpLink ? 'a' : 'router-link'"
     v-bind="btnAttrs"
-    class="border-wp-control-neutral-200 relative flex shrink-0 cursor-pointer items-center overflow-hidden rounded-md border px-2 py-1 whitespace-nowrap transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-50"
-    :class="{
-      'border-wp-control-neutral-200 bg-wp-control-neutral-100 text-wp-text-100 hover:bg-wp-control-neutral-200':
-        color === 'gray',
-      'border-wp-control-ok-300 bg-wp-control-ok-100 hover:bg-wp-control-ok-200 text-white': color === 'green',
-      'border-wp-control-info-300 bg-wp-control-info-100 hover:bg-wp-control-info-200 text-white': color === 'blue',
-      'border-wp-error-300 bg-wp-error-100 hover:bg-wp-error-200 text-white': color === 'red',
-      ...passedClasses,
-    }"
+    class="relative flex shrink-0 cursor-pointer items-center justify-center gap-1.5 overflow-hidden rounded-lg border whitespace-nowrap font-semibold transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-45"
+    :class="[
+      sizeClasses,
+      {
+        'border-wp-border-200 bg-wp-control-neutral-100 text-wp-text-200 hover:border-wp-border-100 hover:bg-wp-control-neutral-200':
+          color === 'gray',
+        'border-transparent bg-gradient-to-br from-wp-primary-100 to-wp-primary-200 text-white shadow-[0_8px_22px_rgba(37,194,103,0.18)] hover:from-[#32d477] hover:to-wp-primary-100':
+          color === 'green',
+        'border-wp-error-100/40 bg-wp-error-100/10 text-wp-error-100 hover:border-wp-error-100/60 hover:bg-wp-error-100/20':
+          color === 'red',
+        'border-wp-control-info-300 bg-wp-control-info-100 text-white hover:bg-wp-control-info-200':
+          color === 'blue',
+        'active:translate-y-px': !disabled,
+        ...passedClasses,
+      },
+    ]"
     :title="title"
     :disabled="disabled"
   >
     <slot>
-      <Icon v-if="startIcon" :name="startIcon" class="h-5! w-5!" :class="{ invisible: isLoading, 'mr-1': text }" />
+      <Icon v-if="startIcon" :name="startIcon" class="h-4.5! w-4.5!" :class="{ invisible: isLoading, 'mr-1': text }" />
       <span :class="{ invisible: isLoading }">{{ text }}</span>
-      <Icon v-if="endIcon" :name="endIcon" class="ml-2 h-6 w-6" :class="{ invisible: isLoading }" />
+      <Icon v-if="endIcon" :name="endIcon" class="ml-2 h-5 w-5" :class="{ invisible: isLoading }" />
       <div
         v-if="isLoading"
         class="absolute top-0 right-0 bottom-0 left-0 flex items-center justify-center"
@@ -48,6 +55,7 @@ const props = withDefaults(
     disabled?: boolean;
     to?: RouteLocationRaw;
     color?: 'blue' | 'green' | 'red' | 'gray';
+    size?: 'sm' | 'md' | 'lg';
     startIcon?: IconNames;
     endIcon?: IconNames;
     isLoading?: boolean;
@@ -57,10 +65,22 @@ const props = withDefaults(
     title: undefined,
     to: undefined,
     color: 'gray',
+    size: 'md',
     startIcon: undefined,
     endIcon: undefined,
   },
 );
+
+const sizeClasses = computed(() => {
+  switch (props.size) {
+    case 'sm':
+      return 'min-h-7.5 px-2 py-1 text-[11px]';
+    case 'lg':
+      return 'min-h-[43px] px-4 py-2.5 text-[13px]';
+    default:
+      return 'min-h-9 px-3 py-1.5 text-xs';
+  }
+});
 
 const httpLink = computed(() => typeof props.to === 'string' && props.to.startsWith('http'));
 
