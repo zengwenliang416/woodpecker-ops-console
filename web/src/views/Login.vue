@@ -22,6 +22,7 @@
       <div class="flex min-h-48 flex-col items-center justify-center gap-5 p-6 text-center md:w-2/5">
         <h1 class="text-wp-text-200 text-xl font-bold">{{ $t('login_to_woodpecker_with') }}</h1>
         <div class="flex w-full max-w-70 flex-col gap-2.5">
+          <Button
             v-for="forge in forgesWithNameAndFavicon"
             :key="forge.id"
             :start-icon="forge.type === 'addon' ? 'repo' : forge.type"
