@@ -32,6 +32,7 @@ import (
 	"go.woodpecker-ci.org/woodpecker/v3/server/cache"
 	"go.woodpecker-ci.org/woodpecker/v3/server/forge/setup"
 	"go.woodpecker-ci.org/woodpecker/v3/server/logging"
+	"go.woodpecker-ci.org/woodpecker/v3/server/ops"
 	"go.woodpecker-ci.org/woodpecker/v3/server/model"
 	"go.woodpecker-ci.org/woodpecker/v3/server/pubsub/memory"
 	"go.woodpecker-ci.org/woodpecker/v3/server/queue"
@@ -177,6 +178,9 @@ func setupEvilGlobals(ctx context.Context, c *cli.Command, s store.Store) (err e
 	if err != nil {
 		return fmt.Errorf("could not setup log store: %w", err)
 	}
+
+	// ops control plane
+	server.Config.Services.Ops = ops.NewEngine(s, pubsub, ops.NewMockExecutor())
 
 	// agents
 	server.Config.Agent.DisableUserRegisteredAgentRegistration = c.Bool("disable-user-agent-registration")

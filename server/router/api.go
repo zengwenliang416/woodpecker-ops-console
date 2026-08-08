@@ -277,5 +277,74 @@ func apiRoutes(e *gin.RouterGroup) {
 				debugger.GET("/pprof/trace", debug.TraceHandler())
 			}
 		}
+
+		opsBase := apiBase.Group("/infrastructure")
+		{
+			opsBase.GET("/overview", session.MustUser(), api.GetInfrastructureOverview)
+			opsBase.GET("/servers", session.MustUser(), api.GetServers)
+			opsBase.POST("/servers", session.MustUser(), api.PostServer)
+			opsBase.GET("/servers/:server_id", session.MustUser(), api.GetServer)
+			opsBase.PATCH("/servers/:server_id", session.MustUser(), api.PatchServer)
+			opsBase.DELETE("/servers/:server_id", session.MustAdmin(), api.DeleteServer)
+			opsBase.POST("/servers/:server_id/maintenance", session.MustUser(), api.PostServerMaintenance)
+			opsBase.POST("/servers/:server_id/restart", session.MustUser(), api.PostServerRestart)
+			opsBase.GET("/servers/:server_id/deployments", session.MustUser(), api.GetServerDeployments)
+			opsBase.GET("/groups", session.MustUser(), api.GetServerGroups)
+			opsBase.POST("/groups", session.MustUser(), api.PostServerGroup)
+			opsBase.GET("/groups/:group_id", session.MustUser(), api.GetServerGroup)
+			opsBase.PATCH("/groups/:group_id", session.MustUser(), api.PatchServerGroup)
+			opsBase.DELETE("/groups/:group_id", session.MustAdmin(), api.DeleteServerGroup)
+			opsBase.GET("/services", session.MustUser(), api.GetServices)
+			opsBase.GET("/alerts", session.MustUser(), api.GetAlerts)
+			opsBase.POST("/alerts/:alert_id/acknowledge", session.MustUser(), api.PostAlertAcknowledge)
+			opsBase.POST("/alerts/:alert_id/resolve", session.MustUser(), api.PostAlertResolve)
+		}
+
+		opsApps := apiBase.Group("/applications")
+		{
+			opsApps.GET("", session.MustUser(), api.GetApplications)
+			opsApps.POST("", session.MustUser(), api.PostApplication)
+			opsApps.GET("/:app_id", session.MustUser(), api.GetApplication)
+			opsApps.PATCH("/:app_id", session.MustUser(), api.PatchApplication)
+			opsApps.DELETE("/:app_id", session.MustAdmin(), api.DeleteApplication)
+		}
+
+		opsEnvs := apiBase.Group("/environments")
+		{
+			opsEnvs.GET("", session.MustUser(), api.GetEnvironments)
+			opsEnvs.POST("", session.MustAdmin(), api.PostEnvironment)
+			opsEnvs.GET("/:env_id", session.MustUser(), api.GetEnvironment)
+			opsEnvs.PATCH("/:env_id", session.MustAdmin(), api.PatchEnvironment)
+			opsEnvs.DELETE("/:env_id", session.MustAdmin(), api.DeleteEnvironment)
+		}
+
+		opsReleases := apiBase.Group("/releases")
+		{
+			opsReleases.GET("", session.MustUser(), api.GetReleases)
+			opsReleases.POST("", session.MustUser(), api.PostRelease)
+			opsReleases.GET("/:release_id", session.MustUser(), api.GetRelease)
+		}
+
+		opsDeployments := apiBase.Group("/deployments")
+		{
+			opsDeployments.GET("", session.MustUser(), api.GetDeployments)
+			opsDeployments.POST("", session.MustUser(), api.PostDeployment)
+			opsDeployments.GET("/:deployment_id", session.MustUser(), api.GetDeployment)
+			opsDeployments.GET("/:deployment_id/logs", session.MustUser(), api.GetDeploymentLogs)
+			opsDeployments.POST("/:deployment_id/approve", session.MustUser(), api.PostDeploymentApprove)
+			opsDeployments.POST("/:deployment_id/reject", session.MustUser(), api.PostDeploymentReject)
+			opsDeployments.POST("/:deployment_id/pause", session.MustUser(), api.PostDeploymentPause)
+			opsDeployments.POST("/:deployment_id/resume", session.MustUser(), api.PostDeploymentResume)
+			opsDeployments.POST("/:deployment_id/cancel", session.MustUser(), api.PostDeploymentCancel)
+			opsDeployments.POST("/:deployment_id/advance", session.MustUser(), api.PostDeploymentAdvance)
+			opsDeployments.POST("/:deployment_id/retry", session.MustUser(), api.PostDeploymentRetry)
+			opsDeployments.POST("/:deployment_id/rollback", session.MustUser(), api.PostDeploymentRollback)
+		}
+
+		opsMisc := apiBase.Group("/ops")
+		{
+			opsMisc.GET("/policies", session.MustUser(), api.GetPolicies)
+			opsMisc.GET("/audit-logs", session.MustAdmin(), api.GetAuditLogs)
+		}
 	}
 }

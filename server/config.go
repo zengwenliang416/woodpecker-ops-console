@@ -21,6 +21,7 @@ import (
 	"go.woodpecker-ci.org/woodpecker/v3/server/cache"
 	"go.woodpecker-ci.org/woodpecker/v3/server/logging"
 	"go.woodpecker-ci.org/woodpecker/v3/server/model"
+	"go.woodpecker-ci.org/woodpecker/v3/server/ops"
 	"go.woodpecker-ci.org/woodpecker/v3/server/scheduler"
 	"go.woodpecker-ci.org/woodpecker/v3/server/services"
 	"go.woodpecker-ci.org/woodpecker/v3/server/services/log"
@@ -34,6 +35,7 @@ var Config = struct {
 		Membership cache.MembershipService
 		Manager    services.Manager
 		LogStore   log.Service
+		Ops        *ops.Engine
 	}
 	Server struct {
 		JWTSecret             string
