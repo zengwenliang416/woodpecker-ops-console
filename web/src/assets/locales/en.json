@@ -635,5 +635,38 @@
   "exit_fullscreen": "Exit fullscreen",
   "help_translating": "You can help translate Woodpecker into your language on {0}.",
   "weblate": "our Weblate",
-  "disabled": "Disabled"
+  "disabled": "Disabled",
+  "ops": {
+    "sidebar": {
+      "close": "Close navigation",
+      "open": "Open navigation",
+      "workspace": "Workspace",
+      "overview": "Overview",
+      "delivery": "Delivery",
+      "deployments": "Deployments",
+      "applications": "Applications",
+      "environments": "Environments",
+      "server_ops": "Server Ops",
+      "infrastructure": "Infrastructure",
+      "servers": "Servers",
+      "alerts": "Alerts",
+      "build_infra": "Build Infrastructure",
+      "agents": "Build Agents",
+      "queue": "Queue",
+      "secrets": "Secrets",
+      "management": "Management",
+      "admin": "System Admin",
+      "users": "Users",
+      "forges": "Forge",
+      "help": "Help",
+      "personal": "Personal settings",
+      "brand_name": "Woodpecker",
+      "brand_subtitle": "CI/CD Platform"
+    },
+    "topbar": {
+      "search_placeholder": "Search pipelines, repos, users and settings…",
+      "theme": "Toggle theme",
+      "search_shortcut": "⌘ K"
+    }
+  }
 }

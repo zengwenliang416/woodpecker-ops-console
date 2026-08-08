@@ -13,6 +13,18 @@
   <SvgIcon v-else-if="name === 'back'" :bg-circle="bgCircle" :path="mdiArrowLeft" size="1.3rem" />
   <SvgIcon v-else-if="name === 'github'" :bg-circle="bgCircle" :path="mdiGithub" size="1.3rem" />
   <SvgIcon v-else-if="name === 'repo'" :bg-circle="bgCircle" :path="mdiGit" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'server'" :bg-circle="bgCircle" :path="mdiServer" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'infrastructure'" :bg-circle="bgCircle" :path="mdiServerNetwork" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'bell'" :bg-circle="bgCircle" :path="mdiBellOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'overview'" :bg-circle="bgCircle" :path="mdiViewDashboardOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'app'" :bg-circle="bgCircle" :path="mdiApplicationOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'environment'" :bg-circle="bgCircle" :path="mdiEarth" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'rocket'" :bg-circle="bgCircle" :path="mdiRocketLaunchOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'menu'" :bg-circle="bgCircle" :path="mdiMenu" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'activity'" :bg-circle="bgCircle" :path="mdiChartTimelineVariant" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'sun'" :bg-circle="bgCircle" :path="mdiWhiteBalanceSunny" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'moon'" :bg-circle="bgCircle" :path="mdiWeatherNight" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'search'" :bg-circle="bgCircle" :path="mdiMagnify" size="1.3rem" />
   <SvgIcon v-else-if="name === 'settings'" :bg-circle="bgCircle" :path="mdiCog" size="1.3rem" />
   <SvgIcon v-else-if="name === 'settings-outline'" :bg-circle="bgCircle" :path="mdiCogOutline" size="1.3rem" />
   <SvgIcon v-else-if="name === 'trash'" :bg-circle="bgCircle" :path="mdiTrashCanOutline" size="1.3rem" />
@@ -131,10 +143,13 @@ import {
   mdiAccountOutline,
   mdiAlarm,
   mdiAlertCircle,
+  mdiApplicationOutline,
   mdiArrowLeft,
+  mdiBellOutline,
   mdiBitbucket,
   mdiBugOutline,
   mdiCalendarClockOutline,
+  mdiChartTimelineVariant,
   mdiCheckCircle,
   mdiChevronRight,
   mdiClockTimeEightOutline,
@@ -147,6 +162,7 @@ import {
   mdiDocker,
   mdiDotsVertical,
   mdiDownloadOutline,
+  mdiEarth,
   mdiEyeOffOutline,
   mdiEyeOutline,
   mdiFileCogOutline,
@@ -166,6 +182,8 @@ import {
   mdiInformationSlabCircleOutline,
   mdiLockOpenOutline,
   mdiLockOutline,
+  mdiMagnify,
+  mdiMenu,
   mdiMinusCircle,
   mdiPackageVariant,
   mdiPause,
@@ -180,6 +198,9 @@ import {
   mdiRadioboxBlank,
   mdiRadioboxIndeterminateVariant,
   mdiRefresh,
+  mdiRocketLaunchOutline,
+  mdiServer,
+  mdiServerNetwork,
   mdiShieldKeyOutline,
   mdiSourceBranch,
   mdiSourceCommit,
@@ -193,6 +214,9 @@ import {
   mdiTrayFull,
   mdiUnfoldLessHorizontal,
   mdiUnfoldMoreHorizontal,
+  mdiViewDashboardOutline,
+  mdiWeatherNight,
+  mdiWhiteBalanceSunny,
   mdiWrenchCogOutline,
 } from '@mdi/js';
 import { siForgejo, siGitea } from 'simple-icons';
@@ -213,6 +237,18 @@ export type IconNames =
   | 'back'
   | 'github'
   | 'repo'
+  | 'server'
+  | 'infrastructure'
+  | 'bell'
+  | 'overview'
+  | 'app'
+  | 'environment'
+  | 'rocket'
+  | 'menu'
+  | 'activity'
+  | 'sun'
+  | 'moon'
+  | 'search'
   | 'settings'
   | 'settings-outline'
   | 'trash'
