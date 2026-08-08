@@ -5,7 +5,7 @@
     @click="toggle"
   >
     <div v-if="pipelineCount > 0" class="spinner" />
-    <div class="z-0 flex h-full w-full items-center justify-center rounded-md bg-white/15 font-bold dark:bg-black/10">
+    <div class="z-0 flex h-full w-full items-center justify-center rounded-lg bg-white/15 font-bold dark:bg-black/10">
       <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
       {{ pipelineCount > 9 ? '9+' : pipelineCount }}
     </div>
@@ -37,7 +37,7 @@ onMounted(async () => {
   }
 }
 .spinner {
-  @apply absolute inset-1.5 rounded-md;
+  @apply absolute inset-1.5 rounded-lg;
   overflow: hidden;
 }
 .spinner::before {

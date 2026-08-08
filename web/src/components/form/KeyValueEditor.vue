@@ -6,7 +6,7 @@
         :model-value="item.key"
         :placeholder="keyPlaceholder"
         :class="{
-          'bg-red-100 dark:bg-red-900':
+          'bg-wp-error-100/20 dark:bg-wp-error-100/20':
             isDuplicateKey(item.key, index) || (item.key === '' && index !== displayItems.length - 1),
         }"
         @update:model-value="updateItem(index, 'key', $event)"

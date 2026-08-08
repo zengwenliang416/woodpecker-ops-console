@@ -81,7 +81,7 @@
           <div
             v-if="group.isActualCommand"
             class="sticky -top-4 z-10 col-span-3 my-1 flex cursor-pointer items-center rounded-sm px-2 py-1 font-mono text-sm shadow-xs"
-            :class="[group.command && isSelected(group.command) ? 'bg-blue-900' : 'bg-wp-code-100']"
+            :class="[group.command && isSelected(group.command) ? 'bg-wp-background-100' : 'bg-wp-code-100']"
             @click="toggleGroup(group.id)"
           >
             <Icon
@@ -108,9 +108,9 @@
                 :href="`#L${line.number}`"
                 class="text-wp-code-text-alt-100 pr-6 pl-2 text-right whitespace-nowrap select-none"
                 :class="{
-                  'bg-red-600/40 dark:bg-red-800/50': line.type === 'error',
+                  'bg-wp-error-100/30': line.type === 'error',
                   'bg-yellow-600/40 dark:bg-yellow-800/50': line.type === 'warning',
-                  'bg-blue-600/30': isSelected(line),
+                  'bg-wp-state-info-100/25': isSelected(line),
                   underline: isSelected(line),
                 }"
               >
@@ -120,9 +120,9 @@
               <span
                 class="wrap-break-words align-top whitespace-pre-wrap"
                 :class="{
-                  'bg-red-600/40 dark:bg-red-800/50': line.type === 'error',
+                  'bg-wp-error-100/30': line.type === 'error',
                   'bg-yellow-600/40 dark:bg-yellow-800/50': line.type === 'warning',
-                  'bg-blue-600/30': isSelected(line),
+                  'bg-wp-state-info-100/25': isSelected(line),
                 }"
                 v-html="line.text"
               />
@@ -130,9 +130,9 @@
               <span
                 class="text-wp-code-text-alt-100 pr-1 text-right whitespace-nowrap select-none"
                 :class="{
-                  'bg-red-600/40 dark:bg-red-800/50': line.type === 'error',
+                  'bg-wp-error-100/30': line.type === 'error',
                   'bg-yellow-600/40 dark:bg-yellow-800/50': line.type === 'warning',
-                  'bg-blue-600/30': isSelected(line),
+                  'bg-wp-state-info-100/25': isSelected(line),
                 }"
               >
                 {{ formatTime(line.time) }}

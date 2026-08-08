@@ -33,7 +33,7 @@
               v-for="(item, index) in data"
               :key="item.key"
               class="px-4 sm:w-full md:w-1/4"
-              :class="{ 'border-gray-300 md:border-l dark:border-gray-600': index !== 0 }"
+              :class="{ 'border-wp-border-100 md:border-l': index !== 0 }"
             >
               <div class="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
                 <span class="mr-1 inline-block h-2 w-2 rounded-full align-middle" :class="`${item.color}`">&nbsp;</span>

@@ -2,7 +2,7 @@
   <!-- overlay -->
   <div
     v-if="open"
-    class="fixed top-0 right-0 bottom-0 left-0 z-40 bg-gray-900 opacity-80 print:hidden"
+    class="fixed top-0 right-0 bottom-0 left-0 z-40 bg-black/60 print:hidden"
     @click="$emit('close')"
   />
   <!-- overlay end -->

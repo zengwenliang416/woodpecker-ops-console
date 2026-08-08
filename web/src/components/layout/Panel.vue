@@ -1,5 +1,5 @@
 <template>
-  <div class="border-wp-background-400 dark:border-wp-background-100 w-full overflow-hidden rounded-md border">
+  <div class="border-wp-background-400 dark:border-wp-background-100 w-full overflow-hidden rounded-lg border">
     <component
       :is="collapsable ? 'button' : 'div'"
       v-if="title"
