@@ -18,6 +18,16 @@ import type {
   RepoSettings,
   Secret,
   User,
+  Alert,
+  AuditLog,  AppRelease,
+  Application,
+  Deployment,
+  DeploymentDetail,
+  DeploymentLog,
+  Environment,
+  InfrastructureOverview,
+  Server,
+  ServerGroup,
 } from './types';
 
 const DEFAULT_FORGE_ID = 1;
@@ -449,4 +459,192 @@ export default class WoodpeckerClient extends ApiClient {
       reconnect: true,
     });
   }
+
+  // ---------- Ops: infrastructure ----------
+
+  async getInfrastructureOverview(): Promise<InfrastructureOverview | null> {
+    return this._get('/api/infrastructure/overview') as Promise<InfrastructureOverview | null>;
+  }
+
+  async getServers(opts?: PaginationOptions): Promise<Server[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/infrastructure/servers?${query}`) as Promise<Server[] | null>;
+  }
+
+  async getServer(serverId: number): Promise<Server | null> {
+    return this._get(`/api/infrastructure/servers/${serverId}`) as Promise<Server | null>;
+  }
+
+  async createServer(data: Partial<Server>): Promise<Server | null> {
+    return this._post('/api/infrastructure/servers', data) as Promise<Server | null>;
+  }
+
+  async updateServer(serverId: number, data: Partial<Server>): Promise<Server | null> {
+    return this._patch(`/api/infrastructure/servers/${serverId}`, data) as Promise<Server | null>;
+  }
+
+  async deleteServer(serverId: number): Promise<unknown> {
+    return this._delete(`/api/infrastructure/servers/${serverId}`);
+  }
+
+  async setServerMaintenance(serverId: number, maintenance: boolean): Promise<Server | null> {
+    return this._post(`/api/infrastructure/servers/${serverId}/maintenance`, { maintenance }) as Promise<Server | null>;
+  }
+
+  async getServerDeployments(serverId: number): Promise<Deployment[] | null> {
+    return this._get(`/api/infrastructure/servers/${serverId}/deployments`) as Promise<Deployment[] | null>;
+  }
+
+  async getServerGroups(opts?: PaginationOptions): Promise<ServerGroup[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/infrastructure/groups?${query}`) as Promise<ServerGroup[] | null>;
+  }
+
+  async createServerGroup(data: Partial<ServerGroup>): Promise<ServerGroup | null> {
+    return this._post('/api/infrastructure/groups', data) as Promise<ServerGroup | null>;
+  }
+
+  async updateServerGroup(groupId: number, data: Partial<ServerGroup>): Promise<ServerGroup | null> {
+    return this._patch(`/api/infrastructure/groups/${groupId}`, data) as Promise<ServerGroup | null>;
+  }
+
+  async deleteServerGroup(groupId: number): Promise<unknown> {
+    return this._delete(`/api/infrastructure/groups/${groupId}`);
+  }
+
+  async getOpsServices(): Promise<unknown[]> {
+    return this._get('/api/infrastructure/services') as Promise<unknown[]>;
+  }
+
+  async getAlerts(opts?: PaginationOptions): Promise<Alert[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/infrastructure/alerts?${query}`) as Promise<Alert[] | null>;
+  }
+
+  async acknowledgeAlert(alertId: number): Promise<Alert | null> {
+    return this._post(`/api/infrastructure/alerts/${alertId}/acknowledge`) as Promise<Alert | null>;
+  }
+
+  async resolveAlert(alertId: number): Promise<Alert | null> {
+    return this._post(`/api/infrastructure/alerts/${alertId}/resolve`) as Promise<Alert | null>;
+  }
+
+  // ---------- Ops: applications & releases ----------
+
+  async getApplications(opts?: PaginationOptions): Promise<Application[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/applications?${query}`) as Promise<Application[] | null>;
+  }
+
+  async createApplication(data: Partial<Application>): Promise<Application | null> {
+    return this._post('/api/applications', data) as Promise<Application | null>;
+  }
+
+  async updateApplication(appId: number, data: Partial<Application>): Promise<Application | null> {
+    return this._patch(`/api/applications/${appId}`, data) as Promise<Application | null>;
+  }
+
+  async deleteApplication(appId: number): Promise<unknown> {
+    return this._delete(`/api/applications/${appId}`);
+  }
+
+  async getApplication(appId: number): Promise<{ application: Application; releases: AppRelease[] } | null> {
+    return this._get(`/api/applications/${appId}`) as Promise<{ application: Application; releases: AppRelease[] } | null>;
+  }
+
+  async getEnvironments(opts?: PaginationOptions): Promise<Environment[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/environments?${query}`) as Promise<Environment[] | null>;
+  }
+
+  async createEnvironment(data: Partial<Environment>): Promise<Environment | null> {
+    return this._post('/api/environments', data) as Promise<Environment | null>;
+  }
+
+  async updateEnvironment(envId: number, data: Partial<Environment>): Promise<Environment | null> {
+    return this._patch(`/api/environments/${envId}`, data) as Promise<Environment | null>;
+  }
+
+  async deleteEnvironment(envId: number): Promise<unknown> {
+    return this._delete(`/api/environments/${envId}`);
+  }
+
+  async getReleases(opts?: PaginationOptions): Promise<AppRelease[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/releases?${query}`) as Promise<AppRelease[] | null>;
+  }
+
+  async createRelease(data: Partial<AppRelease>): Promise<AppRelease | null> {
+    return this._post('/api/releases', data) as Promise<AppRelease | null>;
+  }
+
+  // ---------- Ops: deployments ----------
+
+  async getDeployments(opts?: PaginationOptions): Promise<Deployment[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/deployments?${query}`) as Promise<Deployment[] | null>;
+  }
+
+  async createDeployment(data: {
+    application_id: number;
+    environment_id: number;
+    release_id: number;
+    group_id: number;
+    strategy?: string;
+    batch_size?: number;
+  }): Promise<Deployment | null> {
+    return this._post('/api/deployments', data) as Promise<Deployment | null>;
+  }
+
+  async getDeployment(deploymentId: number): Promise<DeploymentDetail | null> {
+    return this._get(`/api/deployments/${deploymentId}`) as Promise<DeploymentDetail | null>;
+  }
+
+  async getDeploymentLogs(deploymentId: number): Promise<DeploymentLog[] | null> {
+    return this._get(`/api/deployments/${deploymentId}/logs`) as Promise<DeploymentLog[] | null>;
+  }
+
+  async approveDeployment(deploymentId: number, comment?: string): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/approve`, { comment });
+  }
+
+  async rejectDeployment(deploymentId: number, comment?: string): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/reject`, { comment });
+  }
+
+  async pauseDeployment(deploymentId: number): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/pause`);
+  }
+
+  async resumeDeployment(deploymentId: number): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/resume`);
+  }
+
+  async cancelDeployment(deploymentId: number): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/cancel`);
+  }
+
+  async advanceDeployment(deploymentId: number): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/advance`);
+  }
+
+  async retryDeployment(deploymentId: number, serverIds: number[]): Promise<unknown> {
+    return this._post(`/api/deployments/${deploymentId}/retry`, { server_ids: serverIds });
+  }
+
+  async rollbackDeployment(deploymentId: number): Promise<Deployment | null> {
+    return this._post(`/api/deployments/${deploymentId}/rollback`) as Promise<Deployment | null>;
+  }
+
+  // ---------- Ops: policies & audit ----------
+
+  async getOpsPolicies(): Promise<unknown | null> {
+    return this._get('/api/ops/policies');
+  }
+
+  async getAuditLogs(opts?: PaginationOptions): Promise<AuditLog[] | null> {
+    const query = encodeQueryString(opts);
+    return this._get(`/api/ops/audit-logs?${query}`) as Promise<AuditLog[] | null>;
+  }
 }
+
