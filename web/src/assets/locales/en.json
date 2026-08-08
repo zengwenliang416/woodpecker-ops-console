@@ -857,5 +857,21 @@
       "strategies": "Strategies"
     }
   },
-  "refresh": "refresh"
+  "refresh": "refresh",
+  "overview": {
+    "repositories": "Repositories",
+    "active_repos": "active",
+    "running": "Running",
+    "pipelines_running": "pipelines running",
+    "agents": "Agents",
+    "agents_online": "registered",
+    "feed": "Activity",
+    "recent_activity": "recent activity",
+    "no_activity": "No recent activity",
+    "no_activity_hint": "Pipelines will show up here once they run.",
+    "online": "Online",
+    "disabled": "Disabled",
+    "no_agents": "No agents registered yet.",
+    "no_repos": "No repositories enabled yet."
+  }
 }

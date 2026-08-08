@@ -26,6 +26,12 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: '',
+        name: 'overview',
+        component: (): Component => import('~/views/Overview.vue'),
+        meta: { authentication: 'required' },
+      },
+      {
+        path: 'repos',
         name: 'repos',
         component: (): Component => import('~/views/Repos.vue'),
         meta: { authentication: 'required' },

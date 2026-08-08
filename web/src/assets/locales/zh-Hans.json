@@ -1011,5 +1011,21 @@
       "strategies": "策略"
     }
   },
-  "refresh": "刷新"
+  "refresh": "刷新",
+  "overview": {
+    "repositories": "仓库",
+    "active_repos": "已启用",
+    "running": "运行中",
+    "pipelines_running": "流水线运行中",
+    "agents": "Agents",
+    "agents_online": "已注册",
+    "feed": "动态",
+    "recent_activity": "最近动态",
+    "no_activity": "暂无动态",
+    "no_activity_hint": "流水线运行后会显示在这里。",
+    "online": "在线",
+    "disabled": "已禁用",
+    "no_agents": "尚未注册 Agent。",
+    "no_repos": "尚未启用仓库。"
+  }
 }
