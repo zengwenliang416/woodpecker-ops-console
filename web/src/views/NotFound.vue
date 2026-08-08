@@ -1,4 +1,5 @@
 <template>
+  <!-- eslint-disable @intlify/vue-i18n/no-raw-text -->
   <div class="flex h-full w-full flex-col items-center justify-center gap-3 p-6">
     <div class="wp-card flex flex-col items-center gap-3 px-10 py-12 text-center">
       <div class="text-7xl font-black tracking-tighter text-wp-primary-100">404</div>
@@ -8,4 +9,5 @@
       </router-link>
     </div>
   </div>
+  <!-- eslint-enable @intlify/vue-i18n/no-raw-text -->
 </template>
