@@ -292,6 +292,11 @@ var flags = append([]cli.Flag{
 		Name:    "disable-user-agent-registration",
 		Usage:   "Disable user registered agents",
 	},
+	&cli.BoolFlag{
+		Sources: cli.EnvVars("WOODPECKER_USE_NODE_AGENT"),
+		Name:    "use-node-agent",
+		Usage:   "Dispatch deployments to real Node Agents instead of the mock executor",
+	},
 	&cli.DurationFlag{
 		Sources: cli.EnvVars("WOODPECKER_KEEPALIVE_MIN_TIME"),
 		Name:    "keepalive-min-time",

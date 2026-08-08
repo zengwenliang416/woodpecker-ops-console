@@ -180,7 +180,11 @@ func setupEvilGlobals(ctx context.Context, c *cli.Command, s store.Store) (err e
 	}
 
 	// ops control plane
-	server.Config.Services.Ops = ops.NewEngine(s, pubsub, ops.NewMockExecutor())
+	var executor ops.Executor = ops.NewMockExecutor()
+	if c.Bool("use-node-agent") {
+		executor = ops.NewNodeAgentExecutor(s)
+	}
+	server.Config.Services.Ops = ops.NewEngine(s, pubsub, executor)
 
 	// agents
 	server.Config.Agent.DisableUserRegisteredAgentRegistration = c.Bool("disable-user-agent-registration")

@@ -346,5 +346,14 @@ func apiRoutes(e *gin.RouterGroup) {
 			opsMisc.GET("/policies", session.MustUser(), api.GetPolicies)
 			opsMisc.GET("/audit-logs", session.MustAdmin(), api.GetAuditLogs)
 		}
+
+		nodeAgent := apiBase.Group("/node-agent", api.RequireNodeAgent())
+		{
+			nodeAgent.POST("/register", api.PostNodeAgentRegister)
+			nodeAgent.POST("/heartbeat", api.PostNodeAgentHeartbeat)
+			nodeAgent.GET("/tasks", api.GetNodeAgentTasks)
+			nodeAgent.POST("/tasks/:task_id/result", api.PostNodeAgentTaskResult)
+			nodeAgent.GET("/status/:server_id", api.GetNodeAgentStatus)
+		}
 	}
 }
