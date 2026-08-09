@@ -50,10 +50,14 @@
             <Button
               v-if="pipeline.status === 'success' && repo.allow_deploy"
               class="shrink-0"
+              start-icon="rocket"
+              :color="opsDeploymentTarget ? 'green' : 'gray'"
               :text="$t('repo.pipeline.actions.deploy')"
-              @click="showDeployPipelinePopup = true"
+              :to="opsDeploymentTarget"
+              @click="openDeploy"
             />
             <DeployPipelinePopup
+              v-if="!opsDeploymentTarget"
               :pipeline-number="pipelineId"
               :open="showDeployPipelinePopup"
               @close="showDeployPipelinePopup = false"
@@ -150,6 +154,7 @@ import usePipeline from '~/compositions/usePipeline';
 import { useRouteBack } from '~/compositions/useRouteBack';
 import type { Pipeline, PipelineConfig } from '~/lib/api/types';
 import { pipelineHasErrorsToShow, workflowsWithErrors } from '~/lib/pipeline';
+import { useApplicationStore } from '~/store/ops';
 import { usePipelineStore } from '~/store/pipelines';
 
 const props = defineProps<{
@@ -165,6 +170,7 @@ const favicon = useFavicon();
 const i18n = useI18n();
 
 const pipelineStore = usePipelineStore();
+const appStore = useApplicationStore();
 const { durationAsNumber } = useDate();
 const pipelineId = toRef(props, 'pipelineId');
 const _repoId = toRef(props, 'repoId');
@@ -192,6 +198,26 @@ watch(
 );
 
 const showDeployPipelinePopup = ref(false);
+const opsRelease = computed(() =>
+  appStore.releaseList.find(
+    (release) => release.pipeline_id === pipeline.value?.id || release.pipeline_id === pipeline.value?.number,
+  ),
+);
+const opsDeploymentTarget = computed(() => {
+  if (!opsRelease.value) {
+    return undefined;
+  }
+  return {
+    path: '/deployments/new',
+    query: { applicationId: opsRelease.value.application_id, releaseId: opsRelease.value.id },
+  };
+});
+
+function openDeploy() {
+  if (!opsDeploymentTarget.value) {
+    showDeployPipelinePopup.value = true;
+  }
+}
 
 async function loadPipeline(): Promise<void> {
   await pipelineStore.loadPipeline(repo.value.id, Number.parseInt(pipelineId.value, 10));
@@ -223,7 +249,7 @@ const { doSubmit: restartPipeline, isLoading: isRestartingPipeline } = useAsyncA
   });
 });
 
-onMounted(loadPipeline);
+onMounted(() => Promise.all([loadPipeline(), appStore.loadAll()]));
 watch([repositoryId, pipelineId], loadPipeline);
 
 const goBack = useRouteBack({ name: 'repo' });
