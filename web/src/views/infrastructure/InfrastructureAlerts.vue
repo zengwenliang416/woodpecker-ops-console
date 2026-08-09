@@ -3,6 +3,9 @@
   <Scaffold>
     <template #title>{{ $t('ops.alerts.title') }}</template>
 
+    <div class="mb-4">
+      <InfrastructureNav :server-count="serverStore.serverList.length" :alert-count="serverStore.activeAlerts.length" />
+    </div>
     <section class="wp-card">
       <div class="wp-filters">
         <select v-model="statusFilter" class="select wp-mono">
@@ -14,22 +17,50 @@
       </div>
       <div class="wp-table-scroll">
         <table>
-          <thead><tr><th>{{ $t('ops.alerts.severity') }}</th><th>{{ $t('ops.alerts.type') }}</th><th>{{ $t('ops.alerts.message') }}</th><th>{{ $t('ops.alerts.status') }}</th><th>{{ $t('ops.alerts.created') }}</th><th /></tr></thead>
+          <thead>
+            <tr>
+              <th>{{ $t('ops.alerts.severity') }}</th>
+              <th>{{ $t('ops.alerts.type') }}</th>
+              <th>{{ $t('ops.alerts.message') }}</th>
+              <th>{{ $t('ops.alerts.status') }}</th>
+              <th>{{ $t('ops.alerts.created') }}</th>
+              <th />
+            </tr>
+          </thead>
           <tbody>
             <tr v-for="alert in filteredAlerts" :key="alert.id">
-              <td><span class="badge" :class="severityClass(alert.severity)">{{ alert.severity }}</span></td>
+              <td>
+                <span class="badge" :class="severityClass(alert.severity)">{{ alert.severity }}</span>
+              </td>
               <td class="wp-mono">{{ alert.type }}</td>
               <td>{{ alert.message }}</td>
-              <td><span class="badge" :class="alertStatusClass(alert.status)">{{ alert.status }}</span></td>
+              <td>
+                <span class="badge" :class="alertStatusClass(alert.status)">{{ alert.status }}</span>
+              </td>
               <td class="wp-muted">{{ new Date((alert.created ?? 0) * 1000).toLocaleString() }}</td>
               <td>
                 <div class="wp-cluster">
-                  <Button v-if="alert.status === 'active'" size="sm" :text="$t('ops.alerts.acknowledge')" @click="acknowledge(alert.id)" />
-                  <Button v-if="alert.status !== 'resolved'" size="sm" color="green" :text="$t('ops.alerts.resolve')" @click="resolve(alert.id)" />
+                  <Button
+                    v-if="alert.status === 'active'"
+                    size="sm"
+                    :text="$t('ops.alerts.acknowledge')"
+                    @click="acknowledge(alert.id)"
+                  />
+                  <Button
+                    v-if="alert.status !== 'resolved'"
+                    size="sm"
+                    color="green"
+                    :text="$t('ops.alerts.resolve')"
+                    @click="resolve(alert.id)"
+                  />
                 </div>
               </td>
             </tr>
-            <tr v-if="filteredAlerts.length === 0"><td colspan="6" class="wp-empty-state"><strong>{{ $t('ops.alerts.none') }}</strong></td></tr>
+            <tr v-if="filteredAlerts.length === 0">
+              <td colspan="6" class="wp-empty-state">
+                <strong>{{ $t('ops.alerts.none') }}</strong>
+              </td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -44,6 +75,7 @@ import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
+import InfrastructureNav from '~/components/ops/InfrastructureNav.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useWPTitle } from '~/compositions/useWPTitle';
 import { useServerStore } from '~/store/ops';
@@ -55,7 +87,9 @@ useWPTitle(computed(() => [t('ops.alerts.title')]));
 
 const statusFilter = ref('all');
 
-const filteredAlerts = computed(() => serverStore.alertsList.filter((a) => statusFilter.value === 'all' || a.status === statusFilter.value));
+const filteredAlerts = computed(() =>
+  serverStore.alertsList.filter((a) => statusFilter.value === 'all' || a.status === statusFilter.value),
+);
 
 async function acknowledge(alertId: number) {
   await apiClient.acknowledgeAlert(alertId);
@@ -87,5 +121,5 @@ function alertStatusClass(status: string): string {
   return 'text-wp-error-100';
 }
 
-onMounted(() => serverStore.loadAlerts());
+onMounted(() => serverStore.loadAll());
 </script>
