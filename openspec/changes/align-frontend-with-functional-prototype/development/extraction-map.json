@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "change_id": "align-frontend-with-functional-prototype",
+  "targets": [
+    {
+      "pattern": "date and duration normalization",
+      "destination": "web/src/compositions/useDate.ts and focused composition tests",
+      "trigger": "all user-visible date and duration consumers require the same invalid-value fallback"
+    },
+    {
+      "pattern": "page header, primary action, metrics, filters, tables, status regions, and pagination",
+      "destination": "web/src/components under the closest existing domain or layout family",
+      "trigger": "two real route consumers share the same behavior contract"
+    },
+    {
+      "pattern": "loading, empty, error, disabled, permission, and stale-state behavior",
+      "destination": "web/src/components or web/src/compositions according to whether the behavior is visual or headless",
+      "trigger": "the same state behavior is implemented in a second route family"
+    },
+    {
+      "pattern": "pagination, latest-request-wins, mutation reconciliation, or realtime subscription",
+      "destination": "web/src/compositions or web/src/store",
+      "trigger": "page-local state logic repeats or crosses route boundaries"
+    }
+  ],
+  "forbidden_dependencies": [
+    "Shared atomic, form, and layout components importing route views.",
+    "Shared visual components importing typed API clients or Pinia domain stores.",
+    "Production code importing files from the approved standalone prototype.",
+    "Page-local styles introducing an independent token system."
+  ],
+  "review_rule": "Record the reused, created, or extracted component in the owning task report before marking that task complete."
+}

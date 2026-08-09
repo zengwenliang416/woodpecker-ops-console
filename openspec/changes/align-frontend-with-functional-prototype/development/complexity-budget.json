@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "change_id": "align-frontend-with-functional-prototype",
+  "budgets": [
+    {
+      "area": "vertical slice size",
+      "limit": "one route family or one shared integrity boundary per production commit"
+    },
+    {
+      "area": "component cohesion",
+      "limit": "one user-facing responsibility per shared component; split when API, layout, and state responsibilities mix"
+    },
+    {
+      "area": "coupling",
+      "limit": "atomic, form, and layout components must not import route views, typed API clients, or Pinia domain stores"
+    },
+    {
+      "area": "duplication",
+      "limit": "extract repeated UI or headless behavior after the second real route consumer"
+    },
+    {
+      "area": "dependencies",
+      "limit": "no new frontend dependency unless current Vue, VueUse, Pinia, Router, i18n, and utility capabilities are insufficient and review is recorded"
+    },
+    {
+      "area": "validation",
+      "limit": "each slice requires focused tests plus formatting, lint, typecheck, build, and targeted browser evidence before its task is checked"
+    }
+  ],
+  "stop_conditions": [
+    "A slice requires a new backend contract, persistence rule, permission rule, or state machine.",
+    "A production component would import prototype fixtures or duplicate a shared behavior contract.",
+    "The change exceeds the allowed roots in scope.json."
+  ]
+}

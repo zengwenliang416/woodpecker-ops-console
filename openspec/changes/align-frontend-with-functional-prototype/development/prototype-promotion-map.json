@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "promotion_policy": "reimplement_under_development_gate",
+  "allowed_to_copy": [
+    "Static Simplified Chinese copy explicitly approved in the prototype handoff",
+    "Semantic token intent, spacing measurements, route labels, and documented interaction outcomes"
+  ],
+  "must_reimplement": [
+    "Vue components and production CSS using the existing component and token system",
+    "State, typed API calls, validation, permission checks, persistence, and side effects",
+    "Responsive behavior, accessibility semantics, locale fallback, loading, empty, error, disabled, and stale states"
+  ],
+  "blocked_direct_copies": [
+    "Prototype-only fixtures, mock data, fake API handlers, and review-only layout glue",
+    "Browser-memory transitions, simulated success responses, inline prototype scripts, and standalone prototype CSS",
+    "Any prototype action without a real production API and permission contract"
+  ]
+}

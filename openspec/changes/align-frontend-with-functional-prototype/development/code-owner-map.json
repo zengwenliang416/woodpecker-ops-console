@@ -1,0 +1,41 @@
+{
+  "schema_version": 1,
+  "change_id": "align-frontend-with-functional-prototype",
+  "owners": [
+    {
+      "path": "openspec/changes/align-frontend-with-functional-prototype",
+      "owner": "specnav-controller",
+      "responsibility": "requirements, scope, task packets, evidence, and lifecycle contracts"
+    },
+    {
+      "path": "web/src/compositions",
+      "owner": "frontend-shared-behavior",
+      "responsibility": "date, duration, async, theme, locale, pagination, and reusable headless behavior"
+    },
+    {
+      "path": "web/src/components",
+      "owner": "frontend-component-system",
+      "responsibility": "atomic, form, layout, ops, repository, pipeline, and extracted shared UI"
+    },
+    {
+      "path": "web/src/views",
+      "owner": "frontend-route-families",
+      "responsibility": "route-level composition, real user actions, responsive states, and parity evidence"
+    },
+    {
+      "path": "web/src/lib/api",
+      "owner": "frontend-data-boundary",
+      "responsibility": "existing typed API contracts; changes require review"
+    },
+    {
+      "path": "web/src/store",
+      "owner": "frontend-state-boundary",
+      "responsibility": "Pinia state, pagination, latest-request-wins, and server-confirmed mutation reconciliation"
+    },
+    {
+      "path": "web/src/assets/locales",
+      "owner": "frontend-localization",
+      "responsibility": "Simplified Chinese and English fallback for completed slices"
+    }
+  ]
+}

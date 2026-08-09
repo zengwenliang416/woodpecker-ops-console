@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "active_change": "align-frontend-with-functional-prototype",
+  "status": "passed",
+  "ok": true,
+  "checked_at": "2026-08-09T07:40:00.000Z",
+  "blockers": [],
+  "checks": {
+    "requirements_contract": "passed",
+    "prototype_contract": "passed",
+    "prototype_decision": "approved-user-design",
+    "git_baseline": "d49d7f4",
+    "scope_lock": "openspec/changes/align-frontend-with-functional-prototype/scope.json",
+    "first_vertical_slice": "001-date-duration-integrity"
+  }
+}

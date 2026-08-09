@@ -1,0 +1,47 @@
+{
+  "task_id": "001-date-duration-integrity",
+  "goal": "Users see deterministic neutral fallbacks for invalid, missing, negative, non-finite, and extreme dates and durations while valid values remain locale-aware.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/001-date-duration-integrity/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html"
+  ],
+  "allowed_files": [
+    "web/src/compositions/useDate.ts",
+    "web/src/compositions/useElapsedTime.ts",
+    "web/src/compositions/useDate.test.ts",
+    "web/src/compositions/useElapsedTime.test.ts"
+  ],
+  "test_paths": [
+    "web/src/compositions/useDate.test.ts",
+    "web/src/compositions/useElapsedTime.test.ts"
+  ],
+  "non_goals": [
+    "Do not restyle route families or the application shell.",
+    "Do not change backend, API, permission, persistence, or pipeline state contracts.",
+    "Do not edit page-local direct Date formatters in this slice.",
+    "Do not add dependencies or copy prototype implementation code."
+  ],
+  "expected_evidence": [
+    "Focused Vitest output covering valid and invalid date and duration inputs.",
+    "Frontend Prettier, ESLint, TypeScript, and Vite build output.",
+    "git diff --check output.",
+    "Task report with A4 coverage.",
+    "Independent spec and quality review artifacts."
+  ],
+  "unsafe_assumptions": [
+    "Finite timestamps may still be outside the JavaScript Date range.",
+    "Zero, missing, and invalid duration values may have distinct domain meanings.",
+    "Existing page-local Date formatting is not automatically covered by shared composition tests."
+  ],
+  "stop_condition": "Stop before editing outside the four allowed files or if fallback semantics require a new product, API, permission, persistence, or component-boundary decision."
+}

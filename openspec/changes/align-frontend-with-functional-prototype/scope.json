@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "change_id": "align-frontend-with-functional-prototype",
+  "stage": "development",
+  "allowed_roots": [
+    "web/src",
+    "web/package.json",
+    "web/pnpm-lock.yaml",
+    "web/vite.config.ts",
+    "openspec/changes/align-frontend-with-functional-prototype"
+  ],
+  "denied_roots": [
+    ".git",
+    "web/node_modules",
+    "web/dist",
+    "coverage",
+    "server",
+    "pipeline",
+    "store",
+    "woodpecker-functional-prototype-with-ops"
+  ],
+  "requires_review_on": [
+    "web/package.json",
+    "web/pnpm-lock.yaml",
+    "web/src/router.ts",
+    "web/src/lib/api",
+    "web/src/store"
+  ],
+  "allowed_operations": {
+    "create": true,
+    "modify": true,
+    "delete": false,
+    "rename": false
+  },
+  "prototype_sources": [
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html"
+  ],
+  "expires_when": "verification_started"
+}
