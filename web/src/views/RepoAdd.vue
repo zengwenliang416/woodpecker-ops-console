@@ -9,6 +9,13 @@
         <template v-for="repo in searchedRepos" :key="repo.forge_remote_id">
           <!-- Conflict case: forge repo exists but a stale Woodpecker repo with same name blocks activation -->
           <div v-if="repo.has_forge_name_conflict" class="space-y-0">
+            <FeedbackState
+              class="mb-2"
+              compact
+              kind="stale"
+              :title="$t('feedback.stale_title')"
+              :description="$t('repo.enable.conflict_desc')"
+            />
             <!-- New forge repo (that causes conflict) -->
             <ListItem class="items-center rounded-b-none! border-b-0!">
               <div class="flex w-full items-center">
@@ -85,6 +92,7 @@ import { useRouter } from 'vue-router';
 
 import Badge from '~/components/atomic/Badge.vue';
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import ListItem from '~/components/atomic/ListItem.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';

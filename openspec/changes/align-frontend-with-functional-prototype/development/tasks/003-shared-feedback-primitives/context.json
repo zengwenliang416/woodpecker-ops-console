@@ -1,0 +1,65 @@
+{
+  "task_id": "003-shared-feedback-primitives",
+  "goal": "Users receive accessible, prototype-aligned loading, empty, error, disabled, permission, and stale feedback across repository and pipeline route families without changing real data or permission contracts.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/003-shared-feedback-primitives/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/component-architecture/design.md"
+  ],
+  "allowed_files": [
+    "web/src/components/atomic/FeedbackState.vue",
+    "web/src/components/atomic/FeedbackState.test.ts",
+    "web/src/components/atomic/Button.vue",
+    "web/src/components/atomic/Button.test.ts",
+    "web/src/components/atomic/IconButton.vue",
+    "web/src/components/atomic/IconButton.test.ts",
+    "web/src/components/atomic/Error.vue",
+    "web/src/components/atomic/Error.test.ts",
+    "web/src/views/repo/RepoBranches.vue",
+    "web/src/views/repo/RepoBranches.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.vue",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+    "web/src/views/RepoAdd.vue",
+    "web/src/views/RepoAdd.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json"
+  ],
+  "test_paths": [
+    "web/src/components/atomic/FeedbackState.test.ts",
+    "web/src/components/atomic/Button.test.ts",
+    "web/src/components/atomic/IconButton.test.ts",
+    "web/src/components/atomic/Error.test.ts",
+    "web/src/views/RepoAdd.test.ts",
+    "web/src/views/repo/RepoBranches.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+  ],
+  "non_goals": [
+    "Do not change routes, APIs, stores, pagination, authentication, permission calculation, persistence, or backend behavior.",
+    "Do not invent retry or success behavior.",
+    "Do not replace notifications, form validation, field-level disabled styling, or unrelated route content.",
+    "Do not add dependencies or prototype fixtures."
+  ],
+  "expected_evidence": [
+    "Focused tests covering every FeedbackState variant, action slot, semantic role/live behavior, and compact rendering.",
+    "Focused tests proving Button and IconButton block click/navigation while loading or disabled and expose aria-busy.",
+    "Focused tests proving Error alert semantics and repository-branch plus pipeline-debug integration states.",
+    "Full Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Task report with A3 coverage and independent spec/quality reviews."
+  ],
+  "unsafe_assumptions": [
+    "Visual opacity does not disable an interactive control.",
+    "Notifications do not replace persistent route feedback.",
+    "Permission and stale/conflict truth must remain sourced from existing production values.",
+    "A new generic state machine is not justified without a second real consumer."
+  ],
+  "stop_condition": "Stop before editing outside the sixteen allowed files or adding retry, permission, API, store, persistence, or route behavior."
+}

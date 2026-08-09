@@ -14,11 +14,12 @@
       </InputField>
     </Panel>
   </template>
-  <div v-else class="flex h-full items-center justify-center">
-    <div class="bg-wp-error-100 dark:bg-wp-error-200 rounded-lg p-8 text-center shadow-lg">
-      <p class="text-2xl font-bold text-white">{{ $t('repo.pipeline.debug.no_permission') }}</p>
-    </div>
-  </div>
+  <FeedbackState
+    v-else
+    kind="permission"
+    :title="$t('repo.pipeline.debug.no_permission')"
+    :description="$t('feedback.permission_description')"
+  />
 </template>
 
 <script setup lang="ts">
@@ -26,6 +27,7 @@ import { computed, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import InputField from '~/components/form/InputField.vue';
 import Panel from '~/components/layout/Panel.vue';
 import useApiClient from '~/compositions/useApiClient';

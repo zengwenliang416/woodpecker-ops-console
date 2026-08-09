@@ -9,12 +9,18 @@
       {{ branch }}
       <Badge v-if="branch === repo?.default_branch" :value="$t('default')" class="ml-auto" />
     </ListItem>
-    <div v-if="loading" class="text-wp-text-100 flex justify-center">
-      <Icon name="spinner" />
-    </div>
-    <Panel v-else-if="branches.length === 0" class="flex justify-center">
-      {{ $t('empty_list', { entity: $t('repo.branches') }) }}
-    </Panel>
+    <FeedbackState
+      v-if="loading"
+      kind="loading"
+      :title="$t('feedback.loading_title')"
+      :description="$t('feedback.loading_description')"
+    />
+    <FeedbackState
+      v-else-if="branches.length === 0"
+      kind="empty"
+      :title="$t('empty_list', { entity: $t('repo.branches') })"
+      :description="$t('feedback.empty_description')"
+    />
   </div>
 </template>
 
@@ -23,9 +29,8 @@ import { computed, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Badge from '~/components/atomic/Badge.vue';
-import Icon from '~/components/atomic/Icon.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import ListItem from '~/components/atomic/ListItem.vue';
-import Panel from '~/components/layout/Panel.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { requiredInject } from '~/compositions/useInjectProvide';
 import { usePagination } from '~/compositions/usePaginate';

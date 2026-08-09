@@ -64,6 +64,13 @@
   "documentation_for": "Documentation for \"{topic}\"",
   "pipeline_feed": "Pipeline feed",
   "empty_list": "No {entity} found!",
+  "feedback": {
+    "loading_title": "Loading",
+    "loading_description": "Requesting the latest information.",
+    "empty_description": "There is no information to show in this view.",
+    "permission_description": "Your current permissions do not allow access to this information.",
+    "stale_title": "Outdated data needs attention"
+  },
   "not_found": {
     "not_found": "Whoa 404, either we broke something or you had a typing mishap :-/",
     "back_home": "Back to home"

@@ -1,11 +1,18 @@
 <template>
-  <router-link v-if="to" :to="to" :title="title" :aria-label="title" class="icon-button" :class="sizeClasses">
+  <router-link
+    v-if="to && !interactiveDisabled"
+    :to="to"
+    :title="title"
+    :aria-label="title"
+    class="icon-button"
+    :class="sizeClasses"
+  >
     <slot>
       <Icon v-if="icon" :name="icon" />
     </slot>
   </router-link>
   <a
-    v-else-if="href"
+    v-else-if="href && !interactiveDisabled"
     :href="href"
     :title="title"
     :aria-label="title"
@@ -20,7 +27,9 @@
   </a>
   <button
     v-else
-    :disabled="disabled"
+    :disabled="interactiveDisabled"
+    :aria-disabled="interactiveDisabled || undefined"
+    :aria-busy="isLoading || undefined"
     class="icon-button"
     :class="sizeClasses"
     type="button"
@@ -68,6 +77,8 @@ const sizeClasses = computed(() => {
       return 'h-9 w-9';
   }
 });
+
+const interactiveDisabled = computed(() => props.disabled || props.isLoading);
 </script>
 
 <style scoped>

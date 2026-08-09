@@ -1,6 +1,8 @@
 <template>
   <div
     class="border-wp-error-200 bg-wp-error-100 flex items-center gap-2 rounded-lg border border-l-4 border-solid p-2 text-white"
+    role="alert"
+    aria-live="assertive"
   >
     <Icon v-if="!textOnly" name="alert" />
     <slot>

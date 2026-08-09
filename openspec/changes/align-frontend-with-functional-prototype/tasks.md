@@ -14,7 +14,7 @@
 
 - [x] 2.1 Reproduce and fix invalid or extreme user-visible dates and durations through the shared formatting boundary, with focused regression tests.
 - [x] 2.2 Verify the 248px sidebar, 64px topbar, drawer behavior, theme toggle, locale behavior, global search placeholder, and permission-aware navigation against the prototype.
-- [ ] 2.3 Add or repair shared loading, empty, error, disabled, permission, and stale-state primitives required by at least two route families.
+- [x] 2.3 Add or repair shared loading, empty, error, disabled, permission, and stale-state primitives required by at least two route families.
 - [ ] 2.4 Capture equivalent dark/light desktop and 390px shell evidence before route-family implementation.
 
 ## 3. Pipeline Detail Vertical Slice

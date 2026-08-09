@@ -1,6 +1,6 @@
 <template>
   <component
-    :is="to === undefined ? 'button' : httpLink ? 'a' : 'router-link'"
+    :is="componentTag"
     v-bind="btnAttrs"
     class="relative flex shrink-0 cursor-pointer items-center justify-center gap-1.5 overflow-hidden rounded-lg border font-semibold whitespace-nowrap transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-45"
     :class="[
@@ -13,12 +13,14 @@
         'border-wp-error-100/40 bg-wp-error-100/10 text-wp-error-100 hover:border-wp-error-100/60 hover:bg-wp-error-100/20':
           color === 'red',
         'border-wp-control-info-300 bg-wp-control-info-100 hover:bg-wp-control-info-200 text-white': color === 'blue',
-        'active:translate-y-px': !disabled,
+        'active:translate-y-px': !interactiveDisabled,
         ...passedClasses,
       },
     ]"
     :title="title"
-    :disabled="disabled"
+    :disabled="interactiveDisabled"
+    :aria-disabled="interactiveDisabled || undefined"
+    :aria-busy="isLoading || undefined"
   >
     <slot>
       <Icon v-if="startIcon" :name="startIcon" class="h-4.5! w-4.5!" :class="{ invisible: isLoading, 'mr-1': text }" />
@@ -82,9 +84,16 @@ const sizeClasses = computed(() => {
 });
 
 const httpLink = computed(() => typeof props.to === 'string' && props.to.startsWith('http'));
+const interactiveDisabled = computed(() => props.disabled || props.isLoading);
+const componentTag = computed(() => {
+  if (props.to == null || interactiveDisabled.value) {
+    return 'button';
+  }
+  return httpLink.value ? 'a' : 'router-link';
+});
 
 const btnAttrs = computed(() => {
-  if (props.to === null) {
+  if (props.to == null || interactiveDisabled.value) {
     return { type: 'button' };
   }
 

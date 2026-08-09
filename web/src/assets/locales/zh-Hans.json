@@ -685,6 +685,13 @@
   "username": "用户名",
   "welcome": "欢迎来到 Woodpecker",
   "empty_list": "找不到 {entity} ！",
+  "feedback": {
+    "loading_title": "正在加载",
+    "loading_description": "正在获取最新信息。",
+    "empty_description": "当前视图暂无可显示的信息。",
+    "permission_description": "当前权限不允许访问此信息。",
+    "stale_title": "过期数据需要处理"
+  },
   "login_to_cli": "登录到 CLI",
   "global_level_secret": "全局密钥",
   "org_level_secret": "组织密钥",
