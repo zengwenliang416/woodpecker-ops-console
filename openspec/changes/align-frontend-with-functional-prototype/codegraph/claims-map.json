@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-09T13:10:41.003Z",
+  "generated_at": "2026-08-09T14:57:13.810Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -72,7 +72,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "003-shared-feedback-primitives",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Open repository branches, pipeline debug, or repository activation and receive",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -80,16 +80,69 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/003-shared-feedback-primitives/context.json"
       ],
       "expected_evidence": [
-        "Focused tests or command output",
-        "Task report",
-        "Spec review",
-        "Quality review"
+        "Focused tests covering every FeedbackState variant, action slot, semantic role/live behavior, and compact rendering.",
+        "Focused tests proving Button and IconButton block click/navigation while loading or disabled and expose aria-busy.",
+        "Focused tests proving Error alert semantics and repository-branch plus pipeline-debug integration states.",
+        "Full Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+        "Task report with A3 coverage and independent spec/quality reviews."
       ],
       "allowed_files": [
-        "src"
+        "web/src/components/atomic/FeedbackState.vue",
+        "web/src/components/atomic/FeedbackState.test.ts",
+        "web/src/components/atomic/Button.vue",
+        "web/src/components/atomic/Button.test.ts",
+        "web/src/components/atomic/IconButton.vue",
+        "web/src/components/atomic/IconButton.test.ts",
+        "web/src/components/atomic/Error.vue",
+        "web/src/components/atomic/Error.test.ts",
+        "web/src/views/repo/RepoBranches.vue",
+        "web/src/views/repo/RepoBranches.test.ts",
+        "web/src/views/repo/pipeline/PipelineDebug.vue",
+        "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "web/src/views/RepoAdd.vue",
+        "web/src/views/RepoAdd.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
       ],
       "query_ids": [
         "development:task-003-shared-feedback-primitives:evidence"
+      ]
+    },
+    {
+      "id": "development:task-004-shell-theme-evidence",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "004-shell-theme-evidence",
+      "text": "Open the production shell and the approved prototype in equivalent theme,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/004-shell-theme-evidence/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/004-shell-theme-evidence/context.json"
+      ],
+      "expected_evidence": [
+        "Rendered production and approved-prototype screenshots for dark/light at 1600x1000 and 390x844.",
+        "Computed measurements for sidebar, topbar, brand, navigation density, colors, theme attributes, and page overflow.",
+        "Mobile drawer evidence for closed/open state, backdrop, ARIA, focus entry/return, inert background, scroll lock, and Escape close.",
+        "Focused shell Vitest plus full Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+        "Evidence-bearing task report plus independent spec and quality reviews covering A2 and A3 within shared-shell scope."
+      ],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/App.test.ts",
+        "web/src/components/layout/header/Sidebar.vue",
+        "web/src/components/layout/header/Sidebar.test.ts",
+        "web/src/components/layout/header/Navbar.vue",
+        "web/src/components/layout/header/Navbar.test.ts",
+        "web/src/compositions/useTheme.ts",
+        "web/src/style.css",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "web/src/viteConfig.test.ts",
+        "web/vite.config.ts"
+      ],
+      "query_ids": [
+        "development:task-004-shell-theme-evidence:evidence"
       ]
     }
   ]

@@ -110,6 +110,27 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "004-shell-theme-evidence",
+      "baseline_task_id": "2.4",
+      "goal": "Capture equivalent dark/light desktop and 390px production-versus-prototype shell evidence before route-family implementation.",
+      "depends_on": ["2.3"],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/App.test.ts",
+        "web/src/components/layout/header/Sidebar.vue",
+        "web/src/components/layout/header/Sidebar.test.ts",
+        "web/src/components/layout/header/Navbar.vue",
+        "web/src/components/layout/header/Navbar.test.ts",
+        "web/src/compositions/useTheme.ts",
+        "web/src/style.css",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "web/src/viteConfig.test.ts",
+        "web/vite.config.ts"
+      ],
+      "status": "complete"
     }
   ]
 }

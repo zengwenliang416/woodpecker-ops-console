@@ -1,0 +1,58 @@
+{
+  "task_id": "004-shell-theme-evidence",
+  "goal": "Capture current production and approved-prototype evidence proving the shared shell remains equivalent in dark/light desktop and 390px mobile states before route-family implementation.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/004-shell-theme-evidence/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html"
+  ],
+  "allowed_files": [
+    "web/src/App.vue",
+    "web/src/App.test.ts",
+    "web/src/components/layout/header/Sidebar.vue",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.vue",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/compositions/useTheme.ts",
+    "web/src/style.css",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "web/src/viteConfig.test.ts",
+    "web/vite.config.ts"
+  ],
+  "test_paths": [
+    "web/src/App.test.ts",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/viteConfig.test.ts"
+  ],
+  "non_goals": [
+    "Do not redesign route-family pages or claim route-family parity.",
+    "Do not change APIs, stores, router behavior, authentication, permission calculation, persistence, backend code, dependencies, or the approved prototype.",
+    "Do not add a second shell, token system, comparison harness, or prototype fixture to production.",
+    "Do not modify an allowed production file unless a rendered, reproducible requirement delta is observed."
+  ],
+  "expected_evidence": [
+    "Rendered production and approved-prototype screenshots for dark/light at 1600x1000 and 390x844.",
+    "Computed measurements for sidebar, topbar, brand, navigation density, colors, theme attributes, and page overflow.",
+    "Mobile drawer evidence for closed/open state, backdrop, ARIA, focus entry/return, inert background, scroll lock, and Escape close.",
+    "Focused shell Vitest plus full Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Evidence-bearing task report plus independent spec and quality reviews covering A2 and A3 within shared-shell scope."
+  ],
+  "unsafe_assumptions": [
+    "Earlier browser evidence does not prove the current committed shell snapshot.",
+    "Source token equality does not prove computed geometry, readability, overflow, or interaction.",
+    "Visual comparison is invalid unless theme, locale, viewport, permission role, and populated-data state are equivalent.",
+    "Pixel identity is not required when hierarchy, density, behavior, and semantic tokens satisfy the approved contract."
+  ],
+  "stop_condition": "Stop before production edits if the pages cannot be rendered in equivalent states, or if a measured defect requires changes outside the twelve allowed production/test files."
+}

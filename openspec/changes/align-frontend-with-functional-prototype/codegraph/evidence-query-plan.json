@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-09T13:10:41.003Z",
+  "generated_at": "2026-08-09T14:57:13.810Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -39,7 +39,7 @@
       "stage": "development",
       "task_id": "003-shared-feedback-primitives",
       "status": "planned",
-      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open repository branches, pipeline debug, or repository activation and receive\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "file paths",
         "symbols",
@@ -47,6 +47,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-003-shared-feedback-primitives --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-004-shell-theme-evidence:evidence",
+      "claim_id": "development:task-004-shell-theme-evidence",
+      "stage": "development",
+      "task_id": "004-shell-theme-evidence",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open the production shell and the approved prototype in equivalent theme,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-004-shell-theme-evidence --query \"<query>\" --write --json"
     }
   ]
 }
