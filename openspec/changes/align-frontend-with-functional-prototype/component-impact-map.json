@@ -1,0 +1,48 @@
+{
+  "new_components": [
+    "Only add focused shared prototype-aligned components when at least two route screens share the same behavior contract."
+  ],
+  "reused_components": [
+    "App shell, Sidebar, Navbar",
+    "atomic Button, IconButton, Badge, Icon, Error, Warning",
+    "form InputField, SelectField, Checkbox, RadioField and editors",
+    "layout Container, Panel, Popup, Settings, Scaffold, Header, Tabs",
+    "ops DeploymentNav, InfrastructureNav, OpsMetricCard, OpsMetricPanel, OpsSectionNav, OpsSparkline, PrototypeIcon",
+    "repository and pipeline domain components",
+    "Pinia repository, pipeline, server, application, and deployment stores"
+  ],
+  "extraction_triggers": [
+    "same prototype page-header/action pattern appears in two route families",
+    "same metric/card/table/filter/status/empty-state behavior appears twice",
+    "same loading, pagination, stale-request, mutation, or subscription state machine repeats",
+    "page-local component owns more than one user-facing responsibility"
+  ],
+  "forbidden_dependencies": [
+    "atomic, form, and layout components importing API clients or Pinia domain stores",
+    "shared components importing route pages",
+    "frontend components importing Go server or datastore modules",
+    "page-local CSS creating a second token system",
+    "production components importing standalone prototype fixtures or state"
+  ],
+  "hooks": [
+    "reuse existing useTheme, useI18n, useApiClient, useAsyncAction, useDate, usePaginate, usePipeline, useRouteBack and authentication/config compositions",
+    "extract new headless behavior only after repeated real consumers are confirmed"
+  ],
+  "utilities": [
+    "reuse existing pipeline, repository metrics, date, formatting, and status utilities",
+    "add invalid date/duration normalization at the shared formatting boundary when confirmed"
+  ],
+  "services": [
+    "typed ApiClient",
+    "existing Pinia stores",
+    "existing Go API/store contracts"
+  ],
+  "required_component_tests": [
+    "shared component render and emitted intent variants",
+    "disabled/loading/error/empty/permission variants",
+    "router registration and tab navigation",
+    "store pagination and latest-request-wins",
+    "theme/i18n and 390px responsive visual checks for completed slices"
+  ],
+  "unresolved_gaps": []
+}

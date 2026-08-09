@@ -1,0 +1,48 @@
+{
+  "screens": [
+    {
+      "id": "all-documented-routes",
+      "label": "Woodpecker Functional Prototype: 67 Routes And Tab States",
+      "requirements": [
+        "requirements.md"
+      ],
+      "acceptance": [
+        "acceptance.md"
+      ],
+      "components": [
+        "component-impact-map.json"
+      ],
+      "visual_evidence": [
+        "visual-inventory.json#project_shell"
+      ],
+      "data_flows": [
+        "frontend-backend-data-flow"
+      ],
+      "theme_modes": [
+        "dark",
+        "light"
+      ],
+      "locales": [
+        "zh-Hans"
+      ],
+      "implementation_files": [
+        "artifact/index.html",
+        "artifact/assets/app.js",
+        "artifact/assets/views.js",
+        "artifact/assets/ui.js",
+        "artifact/assets/app.css",
+        "web/src/router.ts",
+        "web/src/views/**",
+        "web/src/components/**"
+      ]
+    }
+  ],
+  "variants": [
+    "default",
+    "loading",
+    "empty",
+    "error",
+    "disabled",
+    "permission"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "touched_specs": [
+    "ui-design",
+    "system-architecture",
+    "frontend-backend-data-flow",
+    "component-architecture"
+  ],
+  "ui_rules": [
+    "approved source: woodpecker-functional-prototype-with-ops",
+    "all 67 documented routes and states tracked",
+    "248px desktop sidebar and 64px topbar",
+    "shared semantic tokens and components",
+    "explicit loading, empty, error, permission, disabled, and stale states",
+    "dark Simplified Chinese primary review plus representative light and English coverage",
+    "responsive desktop, tablet, and 390px mobile behavior"
+  ],
+  "architecture_modules": [
+    "web/src/views",
+    "web/src/components",
+    "web/src/compositions",
+    "web/src/store",
+    "web/src/lib/api",
+    "server/router",
+    "server/api",
+    "server/store"
+  ],
+  "api_contracts": [
+    "existing CI repository, pipeline, feed, log, org, admin, and user APIs",
+    "/api/infrastructure/*",
+    "/api/applications/*",
+    "/api/environments/*",
+    "/api/releases/*",
+    "/api/deployments/*",
+    "/api/ops/*",
+    "/api/stream/*"
+  ],
+  "database_entities": [
+    "Repository",
+    "Pipeline",
+    "Server",
+    "ServerGroup",
+    "Application",
+    "Environment",
+    "AppRelease",
+    "Deployment",
+    "DeploymentTarget",
+    "Approval",
+    "Alert",
+    "AuditLog",
+    "NodeTask"
+  ],
+  "permissions": [
+    "guest versus authenticated route access",
+    "repository push permission",
+    "administrator-only destructive and management actions",
+    "node-agent credential boundary"
+  ],
+  "operational_constraints": [
+    "complete paginated loading",
+    "latest-request-wins",
+    "server-confirmed mutations",
+    "no schema migration for visual-only slices",
+    "390px no page-level overflow",
+    "same-state visual comparison"
+  ],
+  "data_flows": [
+    "FLOW-CI-BROWSE",
+    "FLOW-INFRA-LIST",
+    "FLOW-INFRA-ACTION",
+    "FLOW-DEPLOY-BROWSE",
+    "FLOW-DEPLOY-CREATE",
+    "FLOW-DEPLOY-ACTION",
+    "FLOW-REALTIME",
+    "FLOW-PREFERENCES"
+  ],
+  "theme_modes": [
+    "system",
+    "light-dark",
+    "theme-toggle:existing"
+  ],
+  "locale_policy": [
+    "i18n:enabled",
+    "locales:ar,bar,bn,cs,de,en,eo,es,fi,fr,hi,hu,id,it,ja,ko,lv,nb-NO,nl,pl,pt,ru,th,uk,ur,zh-Hans,zh-Hant",
+    "default-locale:browser-supported",
+    "fallback-locale:en"
+  ],
+  "unresolved_gaps": []
+}

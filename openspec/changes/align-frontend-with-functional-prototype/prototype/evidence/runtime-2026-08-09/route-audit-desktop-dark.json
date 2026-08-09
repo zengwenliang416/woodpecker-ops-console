@@ -1,0 +1,2625 @@
+{
+  "generatedAt": "2026-08-09T07:15:10.103Z",
+  "declaredEntry": "prototype/artifact/index.html",
+  "baseUrl": "http://127.0.0.1:8131/",
+  "viewport": "desktop-1600x1000",
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "registeredStates": 67,
+  "renderedStates": 67,
+  "unexpectedNotFound": [],
+  "missingNotFoundFallback": [],
+  "horizontalOverflowRoutes": [],
+  "missingProjectShell": [],
+  "stateCoverage": {
+    "populated": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ],
+    "empty": [
+      42,
+      48
+    ],
+    "disabled": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      37
+    ],
+    "error": [
+      2,
+      7,
+      11,
+      12,
+      15,
+      22,
+      34,
+      46,
+      53,
+      65
+    ],
+    "permission": [
+      1,
+      6,
+      17,
+      18,
+      22,
+      25,
+      28,
+      29,
+      32,
+      37,
+      40,
+      42,
+      44,
+      61,
+      63,
+      64,
+      65
+    ],
+    "loading": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      45,
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67
+    ]
+  },
+  "consoleErrors": [],
+  "routes": [
+    {
+      "index": 1,
+      "route": "/login",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 315,
+      "hash": "#/login",
+      "headings": [
+        "快速、可靠，为开发者而生的 CI/CD",
+        "欢迎回来"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": false,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/login",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 2,
+      "route": "/overview",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1171,
+      "hash": "#/overview",
+      "headings": [
+        "概览",
+        "最近活动",
+        "仓库健康度",
+        "Agent 容量",
+        "最近失败"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 4,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/overview",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 3,
+      "route": "/repos",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1769,
+      "hash": "#/repos",
+      "headings": [
+        "仓库",
+        "仓库健康度",
+        "按团队"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1222,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 4,
+      "route": "/repos/add",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 541,
+      "hash": "#/repos/add",
+      "headings": [
+        "添加仓库",
+        "选择代码平台",
+        "Acme GitHub",
+        "Acme GitLab",
+        "Internal Gitea",
+        "Legacy Bitbucket"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/add",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 5,
+      "route": "/repos/101",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1461,
+      "hash": "#/repos/101",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1188,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 6,
+      "route": "/repos/101/branches",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 835,
+      "hash": "#/repos/101/branches",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/branches",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 7,
+      "route": "/repos/101/branches/main",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 833,
+      "hash": "#/repos/101/branches/main",
+      "headings": [
+        "backend-api",
+        "main",
+        "最近提交",
+        "fix: correct null check in user service",
+        "流水线历史",
+        "比较状态",
+        "快速操作"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 2,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/branches/main",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 8,
+      "route": "/repos/101/pull-requests",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 787,
+      "hash": "#/repos/101/pull-requests",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pull-requests",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 9,
+      "route": "/repos/101/pull-requests/92",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 763,
+      "hash": "#/repos/101/pull-requests/92",
+      "headings": [
+        "backend-api",
+        "Add OIDC token exchange",
+        "流水线检查",
+        "变更摘要",
+        "讨论",
+        "审查状态",
+        "分支"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1444,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pull-requests/92",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 10,
+      "route": "/repos/101/manual",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 614,
+      "hash": "#/repos/101/manual",
+      "headings": [
+        "backend-api",
+        "运行流水线",
+        "运行参数",
+        "执行预览"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/manual",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 11,
+      "route": "/repos/101/pipeline/842",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1181,
+      "hash": "#/repos/101/pipeline/842",
+      "headings": [
+        "Pipeline #842",
+        "步骤明细",
+        "构建失败"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1796,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 12,
+      "route": "/repos/101/pipeline/842?tab=logs",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1847,
+      "hash": "#/repos/101/pipeline/842?tab=logs",
+      "headings": [
+        "Pipeline #842",
+        "构建失败"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1960,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 4,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842?tab=logs",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 13,
+      "route": "/repos/101/pipeline/842/changed-files",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 844,
+      "hash": "#/repos/101/pipeline/842/changed-files",
+      "headings": [
+        "Pipeline #842",
+        "6 个文件"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/changed-files",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 14,
+      "route": "/repos/101/pipeline/842/config",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 455,
+      "hash": "#/repos/101/pipeline/842/config",
+      "headings": [
+        "Pipeline #842",
+        "配置分析",
+        "配置来源"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/config",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 15,
+      "route": "/repos/101/pipeline/842/errors",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 786,
+      "hash": "#/repos/101/pipeline/842/errors",
+      "headings": [
+        "Pipeline #842",
+        "TypeScript 类型错误",
+        "未使用的变量",
+        "失败摘要",
+        "与上次成功比较"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 2,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/errors",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 16,
+      "route": "/repos/101/pipeline/842/debug",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 651,
+      "hash": "#/repos/101/pipeline/842/debug",
+      "headings": [
+        "Pipeline #842",
+        "交互式 Debug 会话",
+        "运行环境",
+        "可用工具"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/debug",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 17,
+      "route": "/repos/101/settings",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 638,
+      "hash": "#/repos/101/settings",
+      "headings": [
+        "backend-api",
+        "仓库信息",
+        "流水线行为",
+        "自动取消旧流水线",
+        "允许 Pull Request",
+        "受信任仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1081,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 18,
+      "route": "/repos/101/settings/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1315,
+      "hash": "#/repos/101/settings/secrets",
+      "headings": [
+        "backend-api",
+        "Repository Secrets"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1175,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/secrets",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 19,
+      "route": "/repos/101/settings/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 735,
+      "hash": "#/repos/101/settings/registries",
+      "headings": [
+        "backend-api",
+        "镜像仓库凭据"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/registries",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 20,
+      "route": "/repos/101/settings/crons",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 677,
+      "hash": "#/repos/101/settings/crons",
+      "headings": [
+        "backend-api",
+        "定时任务"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/crons",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 21,
+      "route": "/repos/101/settings/badge",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 745,
+      "hash": "#/repos/101/settings/badge",
+      "headings": [
+        "backend-api",
+        "状态徽章",
+        "徽章配置",
+        "预览"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/badge",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 22,
+      "route": "/repos/101/settings/actions",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 627,
+      "hash": "#/repos/101/settings/actions",
+      "headings": [
+        "backend-api",
+        "仓库操作",
+        "维护操作",
+        "重新同步 Forge",
+        "清理流水线缓存",
+        "导出仓库数据",
+        "危险区域",
+        "禁用仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1001,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/actions",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 23,
+      "route": "/repos/101/settings/extensions",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 547,
+      "hash": "#/repos/101/settings/extensions",
+      "headings": [
+        "backend-api",
+        "扩展",
+        "HashiCorp Vault",
+        "Open Policy Agent",
+        "Remote Cache",
+        "Chat Notifications"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/extensions",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 24,
+      "route": "/orgs/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1070,
+      "hash": "#/orgs/1",
+      "headings": [
+        "Acme Corp"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1027,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/orgs/1",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 25,
+      "route": "/orgs/1/settings/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1171,
+      "hash": "#/orgs/1/settings/secrets",
+      "headings": [
+        "Acme Corp 设置",
+        "组织 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1012,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/secrets",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 26,
+      "route": "/orgs/1/settings/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 651,
+      "hash": "#/orgs/1/settings/registries",
+      "headings": [
+        "Acme Corp 设置",
+        "组织镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/registries",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 27,
+      "route": "/orgs/1/settings/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 539,
+      "hash": "#/orgs/1/settings/agents",
+      "headings": [
+        "Acme Corp 设置",
+        "组织 Agents"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/agents",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 28,
+      "route": "/admin",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 980,
+      "hash": "#/admin",
+      "headings": [
+        "系统管理",
+        "系统组件",
+        "HTTP API",
+        "gRPC Agent API",
+        "PostgreSQL",
+        "Valkey Queue",
+        "Object Storage",
+        "Forge Webhooks"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1245,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 29,
+      "route": "/admin/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1211,
+      "hash": "#/admin/secrets",
+      "headings": [
+        "全局 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/secrets",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 30,
+      "route": "/admin/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 649,
+      "hash": "#/admin/registries",
+      "headings": [
+        "全局镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/registries",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 31,
+      "route": "/admin/repos",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1208,
+      "hash": "#/admin/repos",
+      "headings": [
+        "仓库管理"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1096,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/repos",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 32,
+      "route": "/admin/users",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 863,
+      "hash": "#/admin/users",
+      "headings": [
+        "用户管理"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/users",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 33,
+      "route": "/admin/orgs",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 650,
+      "hash": "#/admin/orgs",
+      "headings": [
+        "组织管理"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/orgs",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 34,
+      "route": "/admin/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1269,
+      "hash": "#/admin/agents",
+      "headings": [
+        "Agent 集群"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1100,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/agents",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 35,
+      "route": "/admin/queue",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 724,
+      "hash": "#/admin/queue",
+      "headings": [
+        "任务队列"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/queue",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 36,
+      "route": "/admin/forges",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 585,
+      "hash": "#/admin/forges",
+      "headings": [
+        "Forge 连接",
+        "Acme GitHub",
+        "Acme GitLab",
+        "Internal Gitea",
+        "Legacy Bitbucket"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/forges",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 37,
+      "route": "/admin/forges/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 484,
+      "hash": "#/admin/forges/1",
+      "headings": [
+        "Acme GitHub",
+        "连接设置",
+        "Webhook 与同步",
+        "自动安装 Webhook",
+        "定期同步仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 1,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/forges/1",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 38,
+      "route": "/admin/forges/create",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 459,
+      "hash": "#/admin/forges/create",
+      "headings": [
+        "新建 Forge",
+        "Forge 配置"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/admin/forges/create",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 39,
+      "route": "/user",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 526,
+      "hash": "#/user",
+      "headings": [
+        "个人设置",
+        "个人资料",
+        "界面偏好",
+        "主题",
+        "紧凑表格",
+        "默认日志自动换行",
+        "通知",
+        "流水线失败"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1177,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/user",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 40,
+      "route": "/user/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1160,
+      "hash": "#/user/secrets",
+      "headings": [
+        "个人 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/user/secrets",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 41,
+      "route": "/user/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 639,
+      "hash": "#/user/registries",
+      "headings": [
+        "个人镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/user/registries",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 42,
+      "route": "/user/cli-and-api",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 630,
+      "hash": "#/user/cli-and-api",
+      "headings": [
+        "CLI 与 API",
+        "Woodpecker CLI",
+        "个人 API Token",
+        "尚未生成个人 Token",
+        "已授权应用",
+        "woodpecker-cli · macOS",
+        "VS Code Extension"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1170,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 1,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/user/cli-and-api",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 43,
+      "route": "/user/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 473,
+      "hash": "#/user/agents",
+      "headings": [
+        "个人 Agents"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/user/agents",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 44,
+      "route": "/cli/auth",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 176,
+      "hash": "#/cli/auth",
+      "headings": [
+        "授权命令行访问"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": false,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/cli/auth",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 45,
+      "route": "/definitely-not-a-route",
+      "expectedNotFound": true,
+      "appChildren": 1,
+      "bodyTextLength": 272,
+      "hash": "#/definitely-not-a-route",
+      "headings": [
+        "页面不存在"
+      ],
+      "horizontalOverflow": false,
+      "notFound": true,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/definitely-not-a-route",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 46,
+      "route": "/infrastructure",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1655,
+      "hash": "#/infrastructure",
+      "headings": [
+        "基础设施",
+        "服务器健康",
+        "最近部署",
+        "基础设施健康",
+        "需要处理",
+        "部署控制面"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1549,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 47,
+      "route": "/infrastructure/servers",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1416,
+      "hash": "#/infrastructure/servers",
+      "headings": [
+        "服务器",
+        "节点状态",
+        "区域分布",
+        "安全提示"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1094,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 48,
+      "route": "/infrastructure/servers/201",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 954,
+      "hash": "#/infrastructure/servers/201",
+      "headings": [
+        "prod-api-01",
+        "运行状态",
+        "当前发布",
+        "最近事件",
+        "健康检查",
+        "活动告警",
+        "快捷操作"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1255,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 1,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 49,
+      "route": "/infrastructure/servers/201?tab=monitoring",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 524,
+      "hash": "#/infrastructure/servers/201?tab=monitoring",
+      "headings": [
+        "prod-api-01"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1017,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=monitoring",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 50,
+      "route": "/infrastructure/servers/201?tab=workloads",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 646,
+      "hash": "#/infrastructure/servers/201?tab=workloads",
+      "headings": [
+        "prod-api-01"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=workloads",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 51,
+      "route": "/infrastructure/servers/201?tab=deployments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 557,
+      "hash": "#/infrastructure/servers/201?tab=deployments",
+      "headings": [
+        "prod-api-01",
+        "节点部署记录"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=deployments",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 52,
+      "route": "/infrastructure/servers/201?tab=events",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 482,
+      "hash": "#/infrastructure/servers/201?tab=events",
+      "headings": [
+        "prod-api-01",
+        "服务器事件"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=events",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 53,
+      "route": "/infrastructure/servers/201?tab=settings",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 622,
+      "hash": "#/infrastructure/servers/201?tab=settings",
+      "headings": [
+        "prod-api-01",
+        "节点身份",
+        "Node Agent",
+        "自动升级",
+        "指标采样",
+        "危险操作",
+        "吊销节点证书",
+        "从控制面移除"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1197,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=settings",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 54,
+      "route": "/infrastructure/groups",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 702,
+      "hash": "#/infrastructure/groups",
+      "headings": [
+        "服务器组"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/groups",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 55,
+      "route": "/infrastructure/groups/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 705,
+      "hash": "#/infrastructure/groups/1",
+      "headings": [
+        "prod-api",
+        "组内服务器",
+        "部署策略",
+        "标签"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/groups/1",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 56,
+      "route": "/infrastructure/services",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1802,
+      "hash": "#/infrastructure/services",
+      "headings": [
+        "服务与容器"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1174,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/services",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 57,
+      "route": "/infrastructure/alerts",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 977,
+      "hash": "#/infrastructure/alerts",
+      "headings": [
+        "告警中心",
+        "Node Agent heartbeat missing",
+        "Root disk usage above threshold",
+        "Container restart rate elevated",
+        "TLS certificate expires soon"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/infrastructure/alerts",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 58,
+      "route": "/deployments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1492,
+      "hash": "#/deployments",
+      "headings": [
+        "部署中心",
+        "需要审批",
+        "环境健康"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1168,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 59,
+      "route": "/deployments/new",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 662,
+      "hash": "#/deployments/new",
+      "headings": [
+        "新建部署",
+        "选择应用和 Release"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/new",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 60,
+      "route": "/deployments/142",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1344,
+      "hash": "#/deployments/142",
+      "headings": [
+        "Deployment DEP-142",
+        "发布进度",
+        "部署日志",
+        "部署详情",
+        "健康验证"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1164,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/142",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 61,
+      "route": "/deployments/approvals",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 631,
+      "hash": "#/deployments/approvals",
+      "headings": [
+        "部署审批",
+        "DEP-138 · notification-service",
+        "审批规则",
+        "最近审批"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/approvals",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 62,
+      "route": "/deployments/apps",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 980,
+      "hash": "#/deployments/apps",
+      "headings": [
+        "应用"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/apps",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 63,
+      "route": "/deployments/apps/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1001,
+      "hash": "#/deployments/apps/1",
+      "headings": [
+        "backend-api",
+        "环境状态",
+        "v1.4.0",
+        "v1.4.1-rc.2",
+        "最近部署",
+        "应用配置",
+        "可用 Release"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1069,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/apps/1",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 64,
+      "route": "/deployments/environments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 598,
+      "hash": "#/deployments/environments",
+      "headings": [
+        "环境"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/environments",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 65,
+      "route": "/deployments/environments/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1297,
+      "hash": "#/deployments/environments/1",
+      "headings": [
+        "Production",
+        "已部署应用",
+        "服务器",
+        "保护策略",
+        "最近部署"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1415,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 1,
+        "loading": true,
+        "permission": true,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/environments/1",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    },
+    {
+      "index": 66,
+      "route": "/deployments/releases",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1220,
+      "hash": "#/deployments/releases",
+      "headings": [
+        "Release"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1000,
+        "width": 1600
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/releases",
+      "viewport": {
+        "height": 1000,
+        "width": 1600
+      }
+    },
+    {
+      "index": 67,
+      "route": "/deployments/policies",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 834,
+      "hash": "#/deployments/policies",
+      "headings": [
+        "部署策略",
+        "Production safe rollout",
+        "Staging fast feedback",
+        "Development preview"
+      ],
+      "horizontalOverflow": false,
+      "notFound": false,
+      "projectShell": true,
+      "projectShellValue": "woodpecker-functional-prototype",
+      "scroll": {
+        "height": 1112,
+        "width": 1590
+      },
+      "stateSignals": {
+        "disabled": 0,
+        "empty": 0,
+        "error": 0,
+        "loading": true,
+        "permission": false,
+        "populated": true
+      },
+      "theme": "dark",
+      "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+      "url": "http://127.0.0.1:8131/#/deployments/policies",
+      "viewport": {
+        "height": 1000,
+        "width": 1590
+      }
+    }
+  ]
+}

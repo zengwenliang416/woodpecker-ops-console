@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "generated_at": "2026-08-09T07:30:24.047Z",
+  "current_focus": "align-frontend-with-functional-prototype",
+  "changes": [
+    {
+      "id": "align-frontend-with-functional-prototype",
+      "stage": "prototype",
+      "status": "active",
+      "branch": null,
+      "created_at": null,
+      "last_active_at": null
+    }
+  ]
+}

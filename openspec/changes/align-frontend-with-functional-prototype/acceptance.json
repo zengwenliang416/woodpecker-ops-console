@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "change_id": "align-frontend-with-functional-prototype",
+  "assertions": [
+    {
+      "id": "A1",
+      "statement": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status.",
+      "verify_via": "e2e",
+      "status": "failing",
+      "evidence_ref": null
+    },
+    {
+      "id": "A2",
+      "statement": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations.",
+      "verify_via": "sensory",
+      "status": "failing",
+      "evidence_ref": null
+    },
+    {
+      "id": "A3",
+      "statement": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px.",
+      "verify_via": "static",
+      "status": "failing",
+      "evidence_ref": null
+    },
+    {
+      "id": "A4",
+      "statement": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite.",
+      "verify_via": "unit",
+      "status": "failing",
+      "evidence_ref": null
+    }
+  ]
+}

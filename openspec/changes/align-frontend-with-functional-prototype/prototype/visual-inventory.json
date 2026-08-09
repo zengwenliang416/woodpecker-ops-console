@@ -1,0 +1,105 @@
+{
+  "schema": "specnav.prototype.visualInventory.v1",
+  "version": "1",
+  "discovery_status": "complete",
+  "source_project": "woodpecker-main",
+  "evidence": {
+    "screenshots": [
+      "artifact/preview_pipeline_release.png",
+      "artifact/preview_infrastructure_overview.png",
+      "artifact/preview_server_monitoring.png",
+      "artifact/preview_deployment_detail.png",
+      "artifact/preview_deployment_wizard.png",
+      "/tmp/woodpecker-ui-review/overview-final.png",
+      "/tmp/woodpecker-ui-review/repos-verified-final.png",
+      "/tmp/woodpecker-ui-review/infrastructure.png",
+      "/tmp/woodpecker-ui-review/server-monitoring.png",
+      "/tmp/woodpecker-ui-review/deployment-detail-final.png",
+      "/tmp/woodpecker-ui-review/deployment-wizard.png"
+    ],
+    "routes": [
+      "artifact/ROUTES.md",
+      "artifact/assets/app.js",
+      "web/src/router.ts",
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md"
+    ],
+    "design_specs": [
+      "openspec/specs/ui-design/design.md"
+    ],
+    "component_sources": [
+      "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json"
+    ],
+    "codegraph_claims": []
+  },
+  "project_shell": {
+    "source": "artifact/index.html and artifact/assets/app.js, derived from woodpecker-functional-prototype-with-ops",
+    "required_elements": [
+      "248px grouped sidebar navigation",
+      "64px global topbar",
+      "global search and command palette",
+      "light/dark theme control",
+      "workspace and user controls",
+      "route-level page headers, actions, tabs, cards, tables and state regions",
+      "mobile sidebar drawer"
+    ],
+    "omitted_elements": [
+      "locale switcher; the approved prototype is Simplified Chinese and production locale behavior is verified separately"
+    ],
+    "theme_policy": "match prototype-manifest.json ui_capabilities.theme",
+    "i18n_policy": "match prototype-manifest.json ui_capabilities.i18n"
+  },
+  "business_surface": {
+    "screens": [
+      "all 67 documented routes and tab states"
+    ],
+    "fields": [
+      "repository, pipeline, branch, pull request and setting fields",
+      "server, server group, service, metric and alert fields",
+      "application, environment, release, deployment, approval and policy fields",
+      "organization, administration, agent, queue, forge and user setting fields"
+    ],
+    "actions": [
+      "navigation, search, filter, theme, create, update, delete and copy",
+      "pipeline run, approve, decline, cancel, retry, debug and deploy",
+      "maintenance, restart, alert acknowledge/resolve and server registration",
+      "deployment create, approve, reject, pause, resume, advance, retry and rollback"
+    ],
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "permission",
+      "populated"
+    ]
+  },
+  "verification_matrix": {
+    "viewports": [
+      "desktop",
+      "mobile-390x844"
+    ],
+    "theme_modes": [
+      "dark",
+      "light"
+    ],
+    "locales": [
+      "zh-Hans"
+    ],
+    "states": [
+      "loading",
+      "empty",
+      "error",
+      "disabled",
+      "permission",
+      "populated"
+    ]
+  },
+  "unsupported_capabilities": [
+    "real Woodpecker Server API",
+    "real Node Agent operations",
+    "real Prometheus metrics",
+    "real SSH, Docker, Kubernetes or systemd execution",
+    "real mTLS, task signing, certificate rotation and approval services",
+    "prototype locale switching"
+  ]
+}

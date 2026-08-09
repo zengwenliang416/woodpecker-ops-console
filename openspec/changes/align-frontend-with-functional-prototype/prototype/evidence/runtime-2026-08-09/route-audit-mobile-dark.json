@@ -1,0 +1,2437 @@
+{
+  "generatedAt": "2026-08-09T07:18:23.870Z",
+  "declaredEntry": "prototype/artifact/index.html",
+  "baseUrl": "http://127.0.0.1:8131/",
+  "viewport": "mobile-390x844",
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "registeredStates": 67,
+  "renderedStates": 67,
+  "unexpectedNotFound": [],
+  "missingNotFoundFallback": [],
+  "horizontalOverflowRoutes": [],
+  "missingProjectShell": [],
+  "missingMobileMenu": [],
+  "routesWithContainedScroll": [
+    {
+      "index": 3,
+      "route": "/repos",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 881
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "route": "/repos/add",
+      "internalScrollers": [
+        {
+          "className": "wizard-steps",
+          "clientWidth": 350,
+          "scrollWidth": 740
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "route": "/repos/101",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 778
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "route": "/repos/101/pipeline/842",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 316,
+          "scrollWidth": 516
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "route": "/repos/101/pipeline/842/changed-files",
+      "internalScrollers": [
+        {
+          "className": "diff-code",
+          "clientWidth": 350,
+          "scrollWidth": 428
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "route": "/repos/101/settings/secrets",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "route": "/repos/101/settings/registries",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "route": "/repos/101/settings/crons",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 539
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "route": "/orgs/1",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 512
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "route": "/orgs/1/settings/secrets",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "route": "/orgs/1/settings/registries",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "route": "/admin/secrets",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "route": "/admin/registries",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "route": "/admin/repos",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 614
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "route": "/admin/users",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 592
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "route": "/admin/orgs",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 433
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "route": "/admin/queue",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 600
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "route": "/user/secrets",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "route": "/user/registries",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "route": "/infrastructure",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 752
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "route": "/infrastructure/servers",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 1022
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "route": "/infrastructure/servers/201?tab=workloads",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 874
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "route": "/infrastructure/servers/201?tab=deployments",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 542
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "route": "/infrastructure/groups",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 750
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "route": "/infrastructure/groups/1",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 649
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "route": "/infrastructure/services",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 988
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "route": "/deployments",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 977
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "route": "/deployments/new",
+      "internalScrollers": [
+        {
+          "className": "wizard-steps",
+          "clientWidth": 350,
+          "scrollWidth": 920
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "route": "/deployments/apps/1",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 490
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "route": "/deployments/environments/1",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 637
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "route": "/deployments/releases",
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 935
+        }
+      ]
+    }
+  ],
+  "consoleErrors": [],
+  "routes": [
+    {
+      "index": 1,
+      "route": "/login",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 100,
+      "hash": "#/login",
+      "headings": [
+        "快速、可靠，为开发者而生的 CI/CD",
+        "欢迎回来"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": false,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/login",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 2,
+      "route": "/overview",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1147,
+      "hash": "#/overview",
+      "headings": [
+        "概览",
+        "最近活动",
+        "仓库健康度",
+        "Agent 容量",
+        "最近失败"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2470,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/overview",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 3,
+      "route": "/repos",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1745,
+      "hash": "#/repos",
+      "headings": [
+        "仓库",
+        "仓库健康度",
+        "按团队"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 881
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2165,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 4,
+      "route": "/repos/add",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 517,
+      "hash": "#/repos/add",
+      "headings": [
+        "添加仓库",
+        "选择代码平台",
+        "Acme GitHub",
+        "Acme GitLab",
+        "Internal Gitea",
+        "Legacy Bitbucket"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "wizard-steps",
+          "clientWidth": 350,
+          "scrollWidth": 740
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1123,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/add",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 5,
+      "route": "/repos/101",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1437,
+      "hash": "#/repos/101",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 778
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2166,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 6,
+      "route": "/repos/101/branches",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 472,
+      "hash": "#/repos/101/branches",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 986,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/branches",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 7,
+      "route": "/repos/101/branches/main",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 809,
+      "hash": "#/repos/101/branches/main",
+      "headings": [
+        "backend-api",
+        "main",
+        "最近提交",
+        "fix: correct null check in user service",
+        "流水线历史",
+        "比较状态",
+        "快速操作"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1655,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/branches/main",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 8,
+      "route": "/repos/101/pull-requests",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 598,
+      "hash": "#/repos/101/pull-requests",
+      "headings": [
+        "backend-api"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 975,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pull-requests",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 9,
+      "route": "/repos/101/pull-requests/92",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 739,
+      "hash": "#/repos/101/pull-requests/92",
+      "headings": [
+        "backend-api",
+        "Add OIDC token exchange",
+        "流水线检查",
+        "变更摘要",
+        "讨论",
+        "审查状态",
+        "分支"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2314,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pull-requests/92",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 10,
+      "route": "/repos/101/manual",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 590,
+      "hash": "#/repos/101/manual",
+      "headings": [
+        "backend-api",
+        "运行流水线",
+        "运行参数",
+        "执行预览"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1423,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/manual",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 11,
+      "route": "/repos/101/pipeline/842",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1157,
+      "hash": "#/repos/101/pipeline/842",
+      "headings": [
+        "Pipeline #842",
+        "步骤明细",
+        "构建失败"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 316,
+          "scrollWidth": 516
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2099,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 12,
+      "route": "/repos/101/pipeline/842?tab=logs",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1823,
+      "hash": "#/repos/101/pipeline/842?tab=logs",
+      "headings": [
+        "Pipeline #842",
+        "构建失败"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1874,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842?tab=logs",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 13,
+      "route": "/repos/101/pipeline/842/changed-files",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 820,
+      "hash": "#/repos/101/pipeline/842/changed-files",
+      "headings": [
+        "Pipeline #842",
+        "6 个文件"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "diff-code",
+          "clientWidth": 350,
+          "scrollWidth": 428
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 951,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/changed-files",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 14,
+      "route": "/repos/101/pipeline/842/config",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 431,
+      "hash": "#/repos/101/pipeline/842/config",
+      "headings": [
+        "Pipeline #842",
+        "配置分析",
+        "配置来源"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1543,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/config",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 15,
+      "route": "/repos/101/pipeline/842/errors",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 762,
+      "hash": "#/repos/101/pipeline/842/errors",
+      "headings": [
+        "Pipeline #842",
+        "TypeScript 类型错误",
+        "未使用的变量",
+        "失败摘要",
+        "与上次成功比较"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1687,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/errors",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 16,
+      "route": "/repos/101/pipeline/842/debug",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 627,
+      "hash": "#/repos/101/pipeline/842/debug",
+      "headings": [
+        "Pipeline #842",
+        "交互式 Debug 会话",
+        "运行环境",
+        "可用工具"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1457,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/pipeline/842/debug",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 17,
+      "route": "/repos/101/settings",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 614,
+      "hash": "#/repos/101/settings",
+      "headings": [
+        "backend-api",
+        "仓库信息",
+        "流水线行为",
+        "自动取消旧流水线",
+        "允许 Pull Request",
+        "受信任仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1463,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 18,
+      "route": "/repos/101/settings/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1291,
+      "hash": "#/repos/101/settings/secrets",
+      "headings": [
+        "backend-api",
+        "Repository Secrets"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2135,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/secrets",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 19,
+      "route": "/repos/101/settings/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 711,
+      "hash": "#/repos/101/settings/registries",
+      "headings": [
+        "backend-api",
+        "镜像仓库凭据"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1185,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/registries",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 20,
+      "route": "/repos/101/settings/crons",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 653,
+      "hash": "#/repos/101/settings/crons",
+      "headings": [
+        "backend-api",
+        "定时任务"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 539
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1199,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/crons",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 21,
+      "route": "/repos/101/settings/badge",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 721,
+      "hash": "#/repos/101/settings/badge",
+      "headings": [
+        "backend-api",
+        "状态徽章",
+        "徽章配置",
+        "预览"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1509,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/badge",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 22,
+      "route": "/repos/101/settings/actions",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 603,
+      "hash": "#/repos/101/settings/actions",
+      "headings": [
+        "backend-api",
+        "仓库操作",
+        "维护操作",
+        "重新同步 Forge",
+        "清理流水线缓存",
+        "导出仓库数据",
+        "危险区域",
+        "禁用仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1272,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/actions",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 23,
+      "route": "/repos/101/settings/extensions",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 523,
+      "hash": "#/repos/101/settings/extensions",
+      "headings": [
+        "backend-api",
+        "扩展",
+        "HashiCorp Vault",
+        "Open Policy Agent",
+        "Remote Cache",
+        "Chat Notifications"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1363,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/repos/101/settings/extensions",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 24,
+      "route": "/orgs/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1046,
+      "hash": "#/orgs/1",
+      "headings": [
+        "Acme Corp"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 512
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1756,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/orgs/1",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 25,
+      "route": "/orgs/1/settings/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1147,
+      "hash": "#/orgs/1/settings/secrets",
+      "headings": [
+        "Acme Corp 设置",
+        "组织 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1676,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/secrets",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 26,
+      "route": "/orgs/1/settings/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 627,
+      "hash": "#/orgs/1/settings/registries",
+      "headings": [
+        "Acme Corp 设置",
+        "组织镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 991,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/registries",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 27,
+      "route": "/orgs/1/settings/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 515,
+      "hash": "#/orgs/1/settings/agents",
+      "headings": [
+        "Acme Corp 设置",
+        "组织 Agents"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/orgs/1/settings/agents",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 28,
+      "route": "/admin",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 956,
+      "hash": "#/admin",
+      "headings": [
+        "系统管理",
+        "系统组件",
+        "HTTP API",
+        "gRPC Agent API",
+        "PostgreSQL",
+        "Valkey Queue",
+        "Object Storage",
+        "Forge Webhooks"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2302,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 29,
+      "route": "/admin/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1187,
+      "hash": "#/admin/secrets",
+      "headings": [
+        "全局 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1760,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/secrets",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 30,
+      "route": "/admin/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 625,
+      "hash": "#/admin/registries",
+      "headings": [
+        "全局镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 984,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/registries",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 31,
+      "route": "/admin/repos",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1184,
+      "hash": "#/admin/repos",
+      "headings": [
+        "仓库管理"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 614
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1571,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/repos",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 32,
+      "route": "/admin/users",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 839,
+      "hash": "#/admin/users",
+      "headings": [
+        "用户管理"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 592
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1555,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/users",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 33,
+      "route": "/admin/orgs",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 626,
+      "hash": "#/admin/orgs",
+      "headings": [
+        "组织管理"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 433
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1294,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/orgs",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 34,
+      "route": "/admin/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 769,
+      "hash": "#/admin/agents",
+      "headings": [
+        "Agent 集群"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1900,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/agents",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 35,
+      "route": "/admin/queue",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 700,
+      "hash": "#/admin/queue",
+      "headings": [
+        "任务队列"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 600
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1586,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/queue",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 36,
+      "route": "/admin/forges",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 561,
+      "hash": "#/admin/forges",
+      "headings": [
+        "Forge 连接",
+        "Acme GitHub",
+        "Acme GitLab",
+        "Internal Gitea",
+        "Legacy Bitbucket"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1146,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/forges",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 37,
+      "route": "/admin/forges/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 460,
+      "hash": "#/admin/forges/1",
+      "headings": [
+        "Acme GitHub",
+        "连接设置",
+        "Webhook 与同步",
+        "自动安装 Webhook",
+        "定期同步仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1289,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/forges/1",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 38,
+      "route": "/admin/forges/create",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 435,
+      "hash": "#/admin/forges/create",
+      "headings": [
+        "新建 Forge",
+        "Forge 配置"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1169,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/admin/forges/create",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 39,
+      "route": "/user",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 502,
+      "hash": "#/user",
+      "headings": [
+        "个人设置",
+        "个人资料",
+        "界面偏好",
+        "主题",
+        "紧凑表格",
+        "默认日志自动换行",
+        "通知",
+        "流水线失败"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1477,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/user",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 40,
+      "route": "/user/secrets",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1136,
+      "hash": "#/user/secrets",
+      "headings": [
+        "个人 Secrets"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 672
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1595,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/user/secrets",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 41,
+      "route": "/user/registries",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 615,
+      "hash": "#/user/registries",
+      "headings": [
+        "个人镜像仓库"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 721
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 910,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/user/registries",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 42,
+      "route": "/user/cli-and-api",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 606,
+      "hash": "#/user/cli-and-api",
+      "headings": [
+        "CLI 与 API",
+        "Woodpecker CLI",
+        "个人 API Token",
+        "尚未生成个人 Token",
+        "已授权应用",
+        "woodpecker-cli · macOS",
+        "VS Code Extension"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1335,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/user/cli-and-api",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 43,
+      "route": "/user/agents",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 449,
+      "hash": "#/user/agents",
+      "headings": [
+        "个人 Agents"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/user/agents",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 44,
+      "route": "/cli/auth",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 176,
+      "hash": "#/cli/auth",
+      "headings": [
+        "授权命令行访问"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": false,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/cli/auth",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 45,
+      "route": "/definitely-not-a-route",
+      "expectedNotFound": true,
+      "appChildren": 1,
+      "bodyTextLength": 248,
+      "hash": "#/definitely-not-a-route",
+      "headings": [
+        "页面不存在"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": true,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/definitely-not-a-route",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 46,
+      "route": "/infrastructure",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1631,
+      "hash": "#/infrastructure",
+      "headings": [
+        "基础设施",
+        "服务器健康",
+        "最近部署",
+        "基础设施健康",
+        "需要处理",
+        "部署控制面"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 752
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 3586,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 47,
+      "route": "/infrastructure/servers",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1392,
+      "hash": "#/infrastructure/servers",
+      "headings": [
+        "服务器",
+        "节点状态",
+        "区域分布",
+        "安全提示"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 1022
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1928,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 48,
+      "route": "/infrastructure/servers/201",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 930,
+      "hash": "#/infrastructure/servers/201",
+      "headings": [
+        "prod-api-01",
+        "运行状态",
+        "当前发布",
+        "最近事件",
+        "健康检查",
+        "活动告警",
+        "快捷操作"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2805,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 49,
+      "route": "/infrastructure/servers/201?tab=monitoring",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 500,
+      "hash": "#/infrastructure/servers/201?tab=monitoring",
+      "headings": [
+        "prod-api-01"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1800,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=monitoring",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 50,
+      "route": "/infrastructure/servers/201?tab=workloads",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 622,
+      "hash": "#/infrastructure/servers/201?tab=workloads",
+      "headings": [
+        "prod-api-01"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 874
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=workloads",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 51,
+      "route": "/infrastructure/servers/201?tab=deployments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 533,
+      "hash": "#/infrastructure/servers/201?tab=deployments",
+      "headings": [
+        "prod-api-01",
+        "节点部署记录"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 542
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=deployments",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 52,
+      "route": "/infrastructure/servers/201?tab=events",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 458,
+      "hash": "#/infrastructure/servers/201?tab=events",
+      "headings": [
+        "prod-api-01",
+        "服务器事件"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=events",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 53,
+      "route": "/infrastructure/servers/201?tab=settings",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 598,
+      "hash": "#/infrastructure/servers/201?tab=settings",
+      "headings": [
+        "prod-api-01",
+        "节点身份",
+        "Node Agent",
+        "自动升级",
+        "指标采样",
+        "危险操作",
+        "吊销节点证书",
+        "从控制面移除"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1547,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/servers/201?tab=settings",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 54,
+      "route": "/infrastructure/groups",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 678,
+      "hash": "#/infrastructure/groups",
+      "headings": [
+        "服务器组"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 360,
+          "scrollWidth": 750
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 844,
+        "width": 390
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/groups",
+      "viewport": {
+        "height": 844,
+        "width": 390
+      }
+    },
+    {
+      "index": 55,
+      "route": "/infrastructure/groups/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 681,
+      "hash": "#/infrastructure/groups/1",
+      "headings": [
+        "prod-api",
+        "组内服务器",
+        "部署策略",
+        "标签"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 649
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1801,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/groups/1",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 56,
+      "route": "/infrastructure/services",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1778,
+      "hash": "#/infrastructure/services",
+      "headings": [
+        "服务与容器"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 988
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1941,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/services",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 57,
+      "route": "/infrastructure/alerts",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 953,
+      "hash": "#/infrastructure/alerts",
+      "headings": [
+        "告警中心",
+        "Node Agent heartbeat missing",
+        "Root disk usage above threshold",
+        "Container restart rate elevated",
+        "TLS certificate expires soon"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2110,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/infrastructure/alerts",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 58,
+      "route": "/deployments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1468,
+      "hash": "#/deployments",
+      "headings": [
+        "部署中心",
+        "需要审批",
+        "环境健康"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 977
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2177,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 59,
+      "route": "/deployments/new",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 638,
+      "hash": "#/deployments/new",
+      "headings": [
+        "新建部署",
+        "选择应用和 Release"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "wizard-steps",
+          "clientWidth": 350,
+          "scrollWidth": 920
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 874,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/new",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 60,
+      "route": "/deployments/142",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1320,
+      "hash": "#/deployments/142",
+      "headings": [
+        "Deployment DEP-142",
+        "发布进度",
+        "部署日志",
+        "部署详情",
+        "健康验证"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2160,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/142",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 61,
+      "route": "/deployments/approvals",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 607,
+      "hash": "#/deployments/approvals",
+      "headings": [
+        "部署审批",
+        "DEP-138 · notification-service",
+        "审批规则",
+        "最近审批"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1334,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/approvals",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 62,
+      "route": "/deployments/apps",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 956,
+      "hash": "#/deployments/apps",
+      "headings": [
+        "应用"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1973,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/apps",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 63,
+      "route": "/deployments/apps/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 977,
+      "hash": "#/deployments/apps/1",
+      "headings": [
+        "backend-api",
+        "环境状态",
+        "v1.4.0",
+        "v1.4.1-rc.2",
+        "最近部署",
+        "应用配置",
+        "可用 Release"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 490
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2536,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/apps/1",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 64,
+      "route": "/deployments/environments",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 574,
+      "hash": "#/deployments/environments",
+      "headings": [
+        "环境"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1870,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/environments",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 65,
+      "route": "/deployments/environments/1",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1229,
+      "hash": "#/deployments/environments/1",
+      "headings": [
+        "Production",
+        "已部署应用",
+        "服务器",
+        "保护策略",
+        "最近部署"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 637
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 2786,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/environments/1",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 66,
+      "route": "/deployments/releases",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 1196,
+      "hash": "#/deployments/releases",
+      "headings": [
+        "Release"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [
+        {
+          "className": "table-scroll",
+          "clientWidth": 350,
+          "scrollWidth": 935
+        }
+      ],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1141,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/releases",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    },
+    {
+      "index": 67,
+      "route": "/deployments/policies",
+      "expectedNotFound": false,
+      "appChildren": 1,
+      "bodyTextLength": 810,
+      "hash": "#/deployments/policies",
+      "headings": [
+        "部署策略",
+        "Production safe rollout",
+        "Staging fast feedback",
+        "Development preview"
+      ],
+      "horizontalOverflow": false,
+      "internalScrollers": [],
+      "mobileMenuVisible": true,
+      "notFound": false,
+      "projectShell": true,
+      "scroll": {
+        "height": 1966,
+        "width": 380
+      },
+      "theme": "dark",
+      "url": "http://127.0.0.1:8131/#/deployments/policies",
+      "viewport": {
+        "height": 844,
+        "width": 380
+      }
+    }
+  ]
+}
