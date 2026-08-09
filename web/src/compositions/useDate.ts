@@ -1,6 +1,20 @@
 import { useI18n } from 'vue-i18n';
 
 let currentLocale = 'en';
+const EMPTY_TIME = '—';
+const MAX_DATE_MS = 8_640_000_000_000_000;
+
+function isValidDuration(value: number | undefined): value is number {
+  return value !== undefined && Number.isFinite(value) && value >= 0 && value <= Number.MAX_SAFE_INTEGER;
+}
+
+function isValidTimestamp(value: number): boolean {
+  return Number.isFinite(value) && value > 0 && value <= MAX_DATE_MS;
+}
+
+function isValidDate(date: Date | undefined): date is Date {
+  return date !== undefined && isValidTimestamp(date.getTime());
+}
 
 function splitDuration(durationMs: number) {
   const totalSeconds = durationMs / 1000;
@@ -9,7 +23,7 @@ function splitDuration(durationMs: number) {
 
   const seconds = Math.floor(totalSeconds) % 60;
   const minutes = Math.floor(totalMinutes) % 60;
-  const hours = Math.floor(totalHours) % 24;
+  const hours = Math.floor(totalHours);
 
   return {
     seconds,
@@ -21,15 +35,27 @@ function splitDuration(durationMs: number) {
   };
 }
 
-function toLocaleString(date: Date, tz?: string) {
-  return date.toLocaleString(currentLocale, {
-    dateStyle: 'short',
-    timeStyle: 'short',
-    timeZone: tz,
-  });
+function toLocaleString(date?: Date, tz?: string) {
+  if (!isValidDate(date)) {
+    return EMPTY_TIME;
+  }
+
+  try {
+    return date.toLocaleString(currentLocale, {
+      dateStyle: 'short',
+      timeStyle: 'short',
+      timeZone: tz,
+    });
+  } catch {
+    return EMPTY_TIME;
+  }
 }
 
 function timeAgo(date: number) {
+  if (!isValidTimestamp(date)) {
+    return EMPTY_TIME;
+  }
+
   const seconds = Math.floor((Date.now() - date) / 1000);
 
   const formatter = new Intl.RelativeTimeFormat(currentLocale);
@@ -57,7 +83,11 @@ function timeAgo(date: number) {
   return useI18n().t('time.just_now');
 }
 
-function prettyDuration(durationMs: number) {
+function prettyDuration(durationMs?: number) {
+  if (!isValidDuration(durationMs)) {
+    return EMPTY_TIME;
+  }
+
   const t = splitDuration(durationMs);
 
   if (t.totalHours > 1) {
@@ -75,7 +105,11 @@ function prettyDuration(durationMs: number) {
   );
 }
 
-function durationAsNumber(durationMs: number): string {
+function durationAsNumber(durationMs?: number): string {
+  if (!isValidDuration(durationMs)) {
+    return EMPTY_TIME;
+  }
+
   const { seconds, minutes, hours } = splitDuration(durationMs);
 
   const minSecFormat = `${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;

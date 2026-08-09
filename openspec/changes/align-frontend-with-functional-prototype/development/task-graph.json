@@ -14,7 +14,7 @@
       "id": "phase-2",
       "task_ids": ["2.1", "2.2", "2.3", "2.4"],
       "depends_on": ["phase-1"],
-      "status": "planned"
+      "status": "in_progress"
     },
     {
       "id": "phase-3",
@@ -65,7 +65,7 @@
         "web/src/compositions/useDate.test.ts",
         "web/src/compositions/useElapsedTime.test.ts"
       ],
-      "status": "ready_after_entry"
+      "status": "complete"
     }
   ]
 }

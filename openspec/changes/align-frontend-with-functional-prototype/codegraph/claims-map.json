@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-09T07:36:26.217Z",
+  "generated_at": "2026-08-09T07:53:10.362Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -8,7 +8,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "001-date-duration-integrity",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Reproduce invalid or extreme values with focused tests, normalize them in the",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -16,13 +16,17 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/001-date-duration-integrity/context.json"
       ],
       "expected_evidence": [
-        "Focused tests or command output",
-        "Task report",
-        "Spec review",
-        "Quality review"
+        "Focused Vitest output covering valid and invalid date and duration inputs.",
+        "Frontend Prettier, ESLint, TypeScript, and Vite build output.",
+        "git diff --check output.",
+        "Task report with A4 coverage.",
+        "Independent spec and quality review artifacts."
       ],
       "allowed_files": [
-        "src"
+        "web/src/compositions/useDate.ts",
+        "web/src/compositions/useElapsedTime.ts",
+        "web/src/compositions/useDate.test.ts",
+        "web/src/compositions/useElapsedTime.test.ts"
       ],
       "query_ids": [
         "development:task-001-date-duration-integrity:evidence"
