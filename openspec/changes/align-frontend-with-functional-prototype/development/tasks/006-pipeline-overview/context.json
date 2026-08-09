@@ -1,0 +1,55 @@
+{
+  "task_id": "006-pipeline-overview",
+  "goal": "Rebuild the real pipeline overview with execution summary, step status, duration, environment, explicit image availability, and current step-log routing without changing APIs or task 3.3 log behavior.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/006-pipeline-overview/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/views/repo/pipeline/Pipeline.vue",
+    "web/src/components/repo/pipeline/PipelineStepList.vue",
+    "web/src/components/repo/pipeline/PipelineLog.vue",
+    "web/src/components/repo/pipeline/PipelineStepDuration.vue",
+    "web/src/lib/api/types/pipeline.ts",
+    "web/src/lib/api/types/pipelineConfig.ts",
+    "server/model/step.go"
+  ],
+  "allowed_files": [
+    "web/src/views/repo/pipeline/Pipeline.vue",
+    "web/src/views/repo/pipeline/Pipeline.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json"
+  ],
+  "test_paths": [
+    "web/src/views/repo/pipeline/Pipeline.test.ts"
+  ],
+  "non_goals": [
+    "Do not parse YAML, add dependencies, change the step/API/backend contract, or invent image, queue, resource, agent, release, annotation, or artifact data.",
+    "Do not redesign the PipelineLog console or changed-files/config/errors/debug bodies owned by task 3.3.",
+    "Do not modify PipelineWrapper header actions, router, API client, store, authentication, permissions, backend, persistence, dependencies, or the approved prototype."
+  ],
+  "expected_evidence": [
+    "Focused red/green component tests for overview defaults, real summary/context, image fallback/config entry, log routing, empty/error states, and approval/decline behavior.",
+    "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Targeted desktop and 390px browser evidence for overview and selected-log states in dark Simplified Chinese plus representative light/English and read-only permission.",
+    "Evidence-bearing task report plus independent A2/A3/A4 spec and quality reviews."
+  ],
+  "unsafe_assumptions": [
+    "The persisted/API PipelineStep does not expose the executor image, so missing image must be explicit rather than inferred.",
+    "Historical config order and arbitrary YAML syntax cannot be safely mapped to persisted step PIDs in this frontend-only slice.",
+    "An absent stepId means overview; it must not silently select the first step based on viewport width.",
+    "Prototype presentation never overrides real error, approval, decline, route, or repository permission behavior."
+  ],
+  "stop_condition": "Stop if implementation needs any file outside the four allowed files, a new route/API/store/backend/dependency contract, YAML parsing, fixture data, or task 3.3 log/tab redesign."
+}

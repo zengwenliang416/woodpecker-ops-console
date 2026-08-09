@@ -144,6 +144,19 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "006-pipeline-overview",
+      "baseline_task_id": "3.2",
+      "goal": "Rebuild the real pipeline overview with execution summary, step status, duration, environment, explicit image availability, and current step-log routing.",
+      "depends_on": ["3.1"],
+      "allowed_files": [
+        "web/src/views/repo/pipeline/Pipeline.vue",
+        "web/src/views/repo/pipeline/Pipeline.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }
