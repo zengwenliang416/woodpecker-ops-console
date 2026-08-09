@@ -2,18 +2,17 @@
   <component
     :is="to === undefined ? 'button' : httpLink ? 'a' : 'router-link'"
     v-bind="btnAttrs"
-    class="relative flex shrink-0 cursor-pointer items-center justify-center gap-1.5 overflow-hidden rounded-lg border whitespace-nowrap font-semibold transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-45"
+    class="relative flex shrink-0 cursor-pointer items-center justify-center gap-1.5 overflow-hidden rounded-lg border font-semibold whitespace-nowrap transition-all duration-150 disabled:cursor-not-allowed disabled:opacity-45"
     :class="[
       sizeClasses,
       {
         'border-wp-border-200 bg-wp-control-neutral-100 text-wp-text-200 hover:border-wp-border-100 hover:bg-wp-control-neutral-200':
           color === 'gray',
-        'border-transparent bg-gradient-to-br from-wp-primary-100 to-wp-primary-200 text-white shadow-[0_8px_22px_rgba(37,194,103,0.18)] hover:from-[#32d477] hover:to-wp-primary-100':
+        'from-wp-primary-100 to-wp-primary-200 hover:to-wp-primary-100 border-transparent bg-gradient-to-br text-white shadow-[0_8px_22px_rgba(37,194,103,0.18)] hover:from-[#32d477]':
           color === 'green',
         'border-wp-error-100/40 bg-wp-error-100/10 text-wp-error-100 hover:border-wp-error-100/60 hover:bg-wp-error-100/20':
           color === 'red',
-        'border-wp-control-info-300 bg-wp-control-info-100 text-white hover:bg-wp-control-info-200':
-          color === 'blue',
+        'border-wp-control-info-300 bg-wp-control-info-100 hover:bg-wp-control-info-200 text-white': color === 'blue',
         'active:translate-y-px': !disabled,
         ...passedClasses,
       },
@@ -46,7 +45,7 @@ import { computed, useAttrs } from 'vue';
 import type { RouteLocationRaw } from 'vue-router';
 
 import type { IconNames } from '~/components/atomic/Icon.vue';
-import Icon from '~/components/atomic/Icon.vue';
+import Icon from '~/components/ops/PrototypeIcon.vue';
 
 const props = withDefaults(
   defineProps<{

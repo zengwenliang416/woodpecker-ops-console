@@ -18,7 +18,15 @@
       <Icon v-if="icon" :name="icon" />
     </slot>
   </a>
-  <button v-else :disabled="disabled" class="icon-button" :class="sizeClasses" type="button" :title="title" :aria-label="title">
+  <button
+    v-else
+    :disabled="disabled"
+    class="icon-button"
+    :class="sizeClasses"
+    type="button"
+    :title="title"
+    :aria-label="title"
+  >
     <slot>
       <Icon v-if="icon" :name="icon" />
     </slot>
@@ -32,7 +40,7 @@
 import { computed } from 'vue';
 import type { RouteLocationRaw } from 'vue-router';
 
-import Icon from '~/components/atomic/Icon.vue';
+import Icon from '~/components/ops/PrototypeIcon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 
 const props = withDefaults(

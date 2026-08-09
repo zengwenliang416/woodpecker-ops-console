@@ -87,6 +87,7 @@
   <SvgIcon v-else-if="name === 'chevron-right'" :bg-circle="bgCircle" :path="mdiChevronRight" size="1.3rem" />
   <SvgIcon v-else-if="name === 'close'" :bg-circle="bgCircle" :path="mdiClose" size="1.3rem" />
   <SvgIcon v-else-if="name === 'edit'" :bg-circle="bgCircle" :path="mdiPencilOutline" size="1.3rem" />
+  <SvgIcon v-else-if="name === 'external'" :bg-circle="bgCircle" :path="mdiOpenInNew" size="1.3rem" />
   <SvgIcon v-else-if="name === 'download'" :bg-circle="bgCircle" :path="mdiDownloadOutline" size="1.3rem" />
   <SvgIcon v-else-if="name === 'stopwatch'" :bg-circle="bgCircle" :path="mdiAlarm" size="1.3rem" />
   <SvgIcon v-else-if="name === 'auto-scroll'" :bg-circle="bgCircle" :path="mdiEyeOutline" size="1.3rem" />
@@ -201,6 +202,7 @@ import {
   mdiMagnify,
   mdiMenu,
   mdiMinusCircle,
+  mdiOpenInNew,
   mdiPackageVariant,
   mdiPause,
   mdiPencilOutline,
@@ -305,6 +307,7 @@ export type IconNames =
   | 'turn-off'
   | 'close'
   | 'edit'
+  | 'external'
   | 'stopwatch'
   | 'download'
   | 'auto-scroll'

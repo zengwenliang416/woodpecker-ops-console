@@ -10,12 +10,7 @@
     <IconButton :title="$t('ops.topbar.theme')" @click="toggleTheme">
       <Icon :name="isDark ? 'sun' : 'moon'" />
     </IconButton>
-    <IconButton
-      v-if="user?.admin"
-      class="relative"
-      :title="$t('settings')"
-      :to="{ name: 'admin-settings' }"
-    >
+    <IconButton v-if="user?.admin" class="relative" :title="$t('settings')" :to="{ name: 'admin-settings' }">
       <Icon name="settings" />
       <div v-if="version?.needsUpdate" class="bg-wp-error-100 absolute top-2 right-2 h-3 w-3 rounded-full" />
     </IconButton>
@@ -27,7 +22,7 @@
       v-else
       :text="$t('login')"
       :to="{ name: 'login' }"
-      class="topbar-link !border-transparent bg-wp-primary-100 text-white"
+      class="topbar-link bg-wp-primary-100 !border-transparent text-white"
       @click="saveRedirect"
     />
   </header>
@@ -38,7 +33,7 @@ import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 import Button from '~/components/atomic/Button.vue';
-import Icon from '~/components/atomic/Icon.vue';
+import Icon from '~/components/ops/PrototypeIcon.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
 import useAuthentication from '~/compositions/useAuthentication';
 import useNotifications from '~/compositions/useNotifications';
@@ -73,7 +68,6 @@ function saveRedirect() {
 function notifySearch() {
   notify({ title: 'Command palette', text: '⌘K 命令面板将在后续阶段接入（Phase 2）', type: 'info' });
 }
-
 </script>
 <style scoped>
 @reference '~/tailwind.css';
@@ -87,12 +81,12 @@ function notifySearch() {
 }
 
 .global-search {
-  @apply text-wp-text-alt-100 border-wp-border-100 dark:border-wp-background-100 hover:border-wp-border-200 hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100 flex h-9.5 min-w-0 items-center gap-2.5 rounded-lg border bg-wp-control-neutral-100 px-3 text-[13px] transition-colors duration-150;
+  @apply text-wp-text-alt-100 border-wp-border-100 dark:border-wp-background-100 hover:border-wp-border-200 hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100 bg-wp-control-neutral-100 flex h-9.5 min-w-0 items-center gap-2.5 rounded-lg border px-3 text-[13px] transition-colors duration-150;
   width: min(590px, 52vw);
 }
 
 .global-search kbd {
-  @apply text-wp-text-alt-100 border-wp-border-100 dark:border-wp-background-100 border-b-2 ml-auto rounded-md bg-wp-control-neutral-200 px-1.5 py-0.5 font-sans text-[11px];
+  @apply text-wp-text-alt-100 border-wp-border-100 dark:border-wp-background-100 bg-wp-control-neutral-200 ml-auto rounded-md border-b-2 px-1.5 py-0.5 font-sans text-[11px];
 }
 
 .topbar-spacer {

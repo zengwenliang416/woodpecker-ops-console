@@ -1,8 +1,8 @@
 <template>
-  <aside class="sidebar" :class="{ 'sidebar-open': open }" aria-label="主导航">
+  <aside class="sidebar" :class="{ 'sidebar-open': open }" :aria-label="$t('ops.sidebar.main')">
     <div class="sidebar-brand">
       <router-link :to="{ name: 'home' }" class="flex min-w-0 items-center gap-2.5">
-        <WoodpeckerLogo class="h-8.5 w-8.5 shrink-0" />
+        <WoodpeckerLogo class="text-wp-primary-100 h-8 w-8 shrink-0" />
         <div class="brand-copy">
           <strong>{{ $t('ops.sidebar.brand_name') }}</strong>
           <small>{{ $t('ops.sidebar.brand_subtitle') }}</small>
@@ -21,6 +21,7 @@
         <router-link to="/repos" class="nav-link" :class="{ active: isActive('/repos') }">
           <Icon name="repo" />
           <span>{{ $t('repos') }}</span>
+          <span v-if="repoStore.ownedRepos.length" class="nav-count">{{ repoStore.ownedRepos.length }}</span>
         </router-link>
       </div>
 
@@ -34,9 +35,25 @@
           <Icon name="app" />
           <span>{{ $t('ops.sidebar.applications') }}</span>
         </router-link>
-        <router-link to="/deployments/environments" class="nav-link" :class="{ active: isActive('/deployments/environments') }">
+        <router-link
+          to="/deployments/environments"
+          class="nav-link"
+          :class="{ active: isActive('/deployments/environments') }"
+        >
           <Icon name="environment" />
           <span>{{ $t('ops.sidebar.environments') }}</span>
+        </router-link>
+        <router-link to="/deployments/releases" class="nav-link" :class="{ active: isActive('/deployments/releases') }">
+          <Icon name="package" />
+          <span>{{ $t('ops.releases.title') }}</span>
+        </router-link>
+        <router-link
+          to="/deployments/approvals"
+          class="nav-link"
+          :class="{ active: isActive('/deployments/approvals') }"
+        >
+          <Icon name="shield" />
+          <span>{{ $t('ops.approvals.title') }}</span>
         </router-link>
       </div>
 
@@ -46,11 +63,35 @@
           <Icon name="infrastructure" />
           <span>{{ $t('ops.sidebar.infrastructure') }}</span>
         </router-link>
-        <router-link to="/infrastructure/servers" class="nav-link" :class="{ active: isActive('/infrastructure/servers') }">
+        <router-link
+          to="/infrastructure/servers"
+          class="nav-link"
+          :class="{ active: isActive('/infrastructure/servers') }"
+        >
           <Icon name="server" />
           <span>{{ $t('ops.sidebar.servers') }}</span>
         </router-link>
-        <router-link to="/infrastructure/alerts" class="nav-link" :class="{ active: isActive('/infrastructure/alerts') }">
+        <router-link
+          to="/infrastructure/groups"
+          class="nav-link"
+          :class="{ active: isActive('/infrastructure/groups') }"
+        >
+          <Icon name="list-group" />
+          <span>{{ $t('ops.groups.title') }}</span>
+        </router-link>
+        <router-link
+          to="/infrastructure/services"
+          class="nav-link"
+          :class="{ active: isActive('/infrastructure/services') }"
+        >
+          <Icon name="docker" />
+          <span>{{ $t('ops.services.title') }}</span>
+        </router-link>
+        <router-link
+          to="/infrastructure/alerts"
+          class="nav-link"
+          :class="{ active: isActive('/infrastructure/alerts') }"
+        >
           <Icon name="bell" />
           <span>{{ $t('ops.sidebar.alerts') }}</span>
         </router-link>
@@ -58,11 +99,21 @@
 
       <div class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.build_infra') }}</div>
-        <router-link to="/admin/agents" class="nav-link" :class="{ active: isActive('/admin/agents') }">
+        <router-link
+          v-if="user?.admin"
+          to="/admin/agents"
+          class="nav-link"
+          :class="{ active: isActive('/admin/agents') }"
+        >
           <Icon name="agent" />
           <span>{{ $t('ops.sidebar.agents') }}</span>
         </router-link>
-        <router-link to="/admin/queue" class="nav-link" :class="{ active: isActive('/admin/queue') }">
+        <router-link
+          v-if="user?.admin"
+          to="/admin/queue"
+          class="nav-link"
+          :class="{ active: isActive('/admin/queue') }"
+        >
           <Icon name="tray-full" />
           <span>{{ $t('ops.sidebar.queue') }}</span>
         </router-link>
@@ -72,7 +123,7 @@
         </router-link>
       </div>
 
-      <div class="nav-section">
+      <div v-if="user?.admin" class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.management') }}</div>
         <router-link to="/admin" class="nav-link" :class="{ active: isActive('/admin') }">
           <Icon name="settings" />
@@ -119,10 +170,11 @@ import { computed } from 'vue';
 import { useRoute } from 'vue-router';
 
 import WoodpeckerLogo from '~/assets/logo.svg?component';
-import Icon from '~/components/atomic/Icon.vue';
+import Icon from '~/components/ops/PrototypeIcon.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
 import useAuthentication from '~/compositions/useAuthentication';
 import useConfig from '~/compositions/useConfig';
+import { useRepoStore } from '~/store/repos';
 
 defineProps<{
   open?: boolean;
@@ -133,6 +185,7 @@ defineEmits<{
 }>();
 
 const route = useRoute();
+const repoStore = useRepoStore();
 const authentication = useAuthentication();
 const { user } = authentication;
 const config = useConfig();
@@ -148,11 +201,11 @@ function isActive(target: string): boolean {
   if (target === '/repos') {
     return path === '/repos' || path.startsWith('/repos/');
   }
-  if (target === '/deployments') {
-    return path === '/deployments' || path.startsWith('/deployments/');
+  if (target === '/deployments' || target === '/infrastructure' || target === '/overview') {
+    return path === target;
   }
-  if (target === '/infrastructure') {
-    return path === '/infrastructure' || path.startsWith('/infrastructure/');
+  if (target.startsWith('/deployments/') || target.startsWith('/infrastructure/')) {
+    return path === target || path.startsWith(`${target}/`);
   }
   return path === target;
 }
@@ -164,7 +217,7 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 @reference '~/tailwind.css';
 
 .sidebar {
-  @apply border-wp-border-100 dark:border-wp-background-100 fixed inset-y-0 left-0 z-30 hidden w-62 flex-col border-r bg-wp-background-400 transition-transform duration-200 dark:bg-wp-background-400;
+  @apply border-wp-border-100 dark:border-wp-background-100 bg-wp-background-400 dark:bg-wp-background-400 fixed inset-y-0 left-0 z-30 hidden w-62 flex-col border-r transition-transform duration-200;
   @apply md:static md:flex;
 }
 
@@ -214,7 +267,7 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 }
 
 .nav-count {
-  @apply text-wp-text-alt-100 ml-auto flex h-5 min-w-5 items-center justify-center rounded-full bg-wp-control-neutral-200 px-1.5 text-[10px] font-bold;
+  @apply text-wp-text-alt-100 bg-wp-control-neutral-200 ml-auto flex h-5 min-w-5 items-center justify-center rounded-full px-1.5 text-[10px] font-bold;
 }
 
 .nav-link.active .nav-count {
