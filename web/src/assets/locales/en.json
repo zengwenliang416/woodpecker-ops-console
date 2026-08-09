@@ -258,6 +258,8 @@
       }
     },
     "pipeline": {
+      "eyebrow": "Pipeline",
+      "overview": "Overview",
       "tasks": "Tasks",
       "config": "Config",
       "files": "Changed files",
@@ -277,7 +279,7 @@
       "log_delete_error": "An error occurred when deleting the step logs",
       "actions": {
         "cancel": "Cancel",
-        "restart": "Restart",
+        "retry": "Retry",
         "canceled": "This step has been canceled.",
         "skipped": "This step has been skipped.",
         "cancel_success": "Pipeline canceled",
@@ -308,6 +310,14 @@
         "cron": "Cron",
         "manual": "Manual",
         "release": "Release"
+      },
+      "metadata": {
+        "branch": "Branch:",
+        "event": "Trigger:",
+        "author": "Author:",
+        "commit": "Commit:",
+        "created": "Created:",
+        "duration": "Duration:"
       },
       "status": {
         "status": "Status: {status}",

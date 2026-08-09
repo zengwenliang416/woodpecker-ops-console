@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-09T14:57:13.810Z",
+  "generated_at": "2026-08-09T16:44:37.484Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -143,6 +143,34 @@
       ],
       "query_ids": [
         "development:task-004-shell-theme-evidence:evidence"
+      ]
+    },
+    {
+      "id": "development:task-005-pipeline-detail-header",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "005-pipeline-detail-header",
+      "text": "Open a real repository pipeline and receive a prototype-aligned detail header",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/005-pipeline-detail-header/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/005-pipeline-detail-header/context.json"
+      ],
+      "expected_evidence": [
+        "Focused red/green component tests for metadata hierarchy, translated status, action state, permissions, API/router intent, deploy target, and tabs.",
+        "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+        "Targeted desktop and 390px browser evidence for push and read-only pipeline detail states.",
+        "Evidence-bearing task report plus independent A2/A3 spec and quality reviews."
+      ],
+      "allowed_files": [
+        "web/src/views/repo/pipeline/PipelineWrapper.vue",
+        "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "query_ids": [
+        "development:task-005-pipeline-detail-header:evidence"
       ]
     }
   ]

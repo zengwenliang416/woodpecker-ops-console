@@ -258,13 +258,15 @@
         "log_auto_scroll": "启用自动滚动",
         "log_auto_scroll_off": "禁用自动滚动",
         "log_download": "下载",
-        "restart": "重启",
+        "retry": "重试",
         "restart_success": "流水线已重启",
         "log_delete": "删除",
         "skipped": "此步骤已被跳过。",
         "expand_all": "展开全部",
         "collapse_all": "收起全部"
       },
+      "eyebrow": "流水线",
+      "overview": "概览",
       "config": "配置",
       "errors": "错误",
       "event": {
@@ -277,6 +279,14 @@
         "release": "发布",
         "pr_closed": "拉取请求已合并/关闭",
         "pr_metadata": "拉取请求元数据已改变"
+      },
+      "metadata": {
+        "branch": "分支：",
+        "event": "触发事件：",
+        "author": "作者：",
+        "commit": "提交：",
+        "created": "创建时间：",
+        "duration": "持续时间："
       },
       "exit_code": "退出代码 {exitCode}",
       "files": "修改的文件",

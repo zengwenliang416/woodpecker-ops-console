@@ -16,8 +16,13 @@
 - `004-shell-theme-evidence` / baseline task `2.4`: current production and
   approved-prototype shared shells passed equivalent dark/light desktop and
   attested 390px mobile review without requiring a production change.
+- `005-pipeline-detail-header` / baseline task `3.1`: the real pipeline detail
+  header now exposes the approved repository/pipeline hierarchy, translated
+  status and execution metadata, real cancel/retry/deploy behavior, and
+  permission-aware navigation to existing overview, changed-files, config,
+  errors, and debug routes.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `3.1` through `8.4` remain incomplete.
+  Tasks `3.2` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -31,11 +36,14 @@
   pipeline consumers, English/Simplified-Chinese locales, and focused tests.
 - Slice `004` changed no file under `web/`; its diff is limited to SpecNav and
   CodeGraph evidence/lifecycle artifacts.
+- Pipeline detail header: `web/src/views/repo/pipeline/PipelineWrapper.vue`,
+  its focused component test, and English/Simplified-Chinese locales.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
   `development/tasks/003-shared-feedback-primitives/report.md`, and
-  `development/tasks/004-shell-theme-evidence/report.md`.
+  `development/tasks/004-shell-theme-evidence/report.md`, and
+  `development/tasks/005-pipeline-detail-header/report.md`.
 
 ## Requirements Covered
 
@@ -46,6 +54,9 @@
   evidence-only shell/theme gate in slice `004`.
 - Slice `004` records only the shared-shell prerequisite for future `A2`
   route-family verification. It does not mark any route family complete.
+- `A2` and `A3` were independently verified for the completed pipeline detail
+  header slice `005`; this does not cover the pipeline overview body, logs, or
+  detailed tab bodies owned by tasks `3.2` and `3.3`.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -58,6 +69,9 @@
   hierarchy, and accessible mobile drawer behavior.
 - Shared feedback states use compact/full presentation and semantic status
   behavior without introducing a generic application state machine.
+- Pipeline detail uses the approved `repository / Pipeline` eyebrow, translated
+  icon-plus-text status, real commit context, responsive actions, and existing
+  production route destinations without copying prototype fixtures.
 - Desktop/mobile comparisons normalize theme, locale, viewport, administrator
   permission, and populated-data state instead of copying prototype fixtures.
 
@@ -69,6 +83,10 @@
   `Error`, `PrototypeIcon`, `useTheme`, `useDate`, `useElapsedTime`, Vue i18n,
   Vue Router, pagination, authentication, permission, repository, and
   configuration seams.
+- Reused for pipeline detail: `Scaffold`, `Tab`, `PipelineStatusIcon`,
+  `RenderMarkdown`, `DeployPipelinePopup`, `usePipeline`, `useAsyncAction`,
+  pipeline/application stores, repository injection, and current API/router
+  actions.
 - Extracted: no new extraction was required after shared feedback ownership was
   established; slice `004` intentionally added no duplicate shell or theme
   component.
@@ -77,7 +95,7 @@
 
 - No backend, API payload, store, router, authentication, permission
   calculation, persistence, migration, or dependency contract changed in
-  slices `001` through `004`.
+  slices `001` through `005`.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -92,24 +110,30 @@
 - Shared-feedback tests cover all variants, live-region semantics, busy and
   disabled route/HTTP/external controls, submit-type preservation, repository
   branch states, pipeline permission state, and repository stale conflicts.
-- The current full frontend regression baseline is 22 test files and 112 tests.
+- Pipeline-header tests cover the approved eyebrow, all 11 pipeline statuses,
+  all 9 webhook events, pending and terminal action boundaries, retry busy
+  semantics, both deploy paths, deploy-disabled state, permissions, and tabs.
+- The current full frontend regression baseline is 23 test files and 141 tests.
 
 ## Local Validation
 
-- PASS: current focused shell suite, 4 files and 16 tests.
-- PASS: current complete frontend suite, 22 files and 112 tests.
+- PASS: current pipeline-header focused suite, 1 file and 29 tests.
+- PASS: current complete frontend suite, 23 files and 141 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
 - PASS: targeted desktop and 390px browser evidence for completed slices,
   including theme, locale, responsive overflow, drawer lifecycle, feedback
-  states, long copy, and busy/disabled controls.
+  states, long copy, busy/disabled controls, pipeline metadata, action/tab
+  permission boundaries, and an equivalent dark Simplified-Chinese
+  production/prototype comparison.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twenty-eight baseline tasks remain incomplete, including every route-family
-  implementation and full six-domain verification task. Global prototype
+- Twenty-seven baseline tasks remain incomplete, including the pipeline
+  overview/log bodies, remaining route-family implementation, and full
+  six-domain verification tasks. Global prototype
   parity must not be claimed.
 - The unchanged `web/src/style.css` has a pre-existing Prettier mismatch.
   Slice `004` records the original failure plus a contract-accepted,
@@ -124,11 +148,15 @@
 - Temporary browser screenshots are not durable change artifacts; replayable
   system-executed receipts and future six-domain evidence must carry the final
   verification burden.
+- The standalone prototype screenshot API cropped the attested `1600x1000` and
+  `390x844` viewports to `1590x994` and `380x822`; production screenshots retain
+  the requested dimensions and the viewport receipt discloses the prototype
+  crop.
 
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `3.1` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `3.2` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

@@ -1,7 +1,7 @@
 {
   "schema": "specnav.codegraph.status.v1",
   "ok": true,
-  "generated_at": "2026-08-09T15:16:09.604Z",
+  "generated_at": "2026-08-09T16:44:59.982Z",
   "project_root": "/Volumes/zwl/open_sources/woodpecker-main",
   "active_change": "align-frontend-with-functional-prototype",
   "policy": {

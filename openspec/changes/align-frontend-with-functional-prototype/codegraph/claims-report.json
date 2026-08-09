@@ -1,22 +1,24 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-09T15:16:09.606Z",
+  "generated_at": "2026-08-09T16:44:59.983Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 4,
+  "claims_count": 5,
   "verified_claims": [],
   "unverified_claims": [
     "development:task-001-date-duration-integrity",
     "development:task-002-shared-shell-alignment",
     "development:task-003-shared-feedback-primitives",
-    "development:task-004-shell-theme-evidence"
+    "development:task-004-shell-theme-evidence",
+    "development:task-005-pipeline-detail-header"
   ],
   "blockers": [],
   "warnings": [
     "codegraph:claim-unverified:development:task-001-date-duration-integrity",
     "codegraph:claim-unverified:development:task-002-shared-shell-alignment",
     "codegraph:claim-unverified:development:task-003-shared-feedback-primitives",
-    "codegraph:claim-unverified:development:task-004-shell-theme-evidence"
+    "codegraph:claim-unverified:development:task-004-shell-theme-evidence",
+    "codegraph:claim-unverified:development:task-005-pipeline-detail-header"
   ]
 }

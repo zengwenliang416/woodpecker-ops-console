@@ -1,0 +1,52 @@
+{
+  "task_id": "005-pipeline-detail-header",
+  "goal": "Align the real pipeline detail header, status metadata, primary actions, and existing route tabs with the approved prototype without changing API, store, router, or permission contracts.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/005-pipeline-detail-header/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/views/repo/pipeline/PipelineWrapper.vue",
+    "web/src/views/repo/pipeline/Pipeline.vue",
+    "web/src/compositions/usePipeline.ts",
+    "web/src/store/pipelines.ts"
+  ],
+  "allowed_files": [
+    "web/src/views/repo/pipeline/PipelineWrapper.vue",
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json"
+  ],
+  "test_paths": [
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts"
+  ],
+  "non_goals": [
+    "Do not implement the step overview, log presentation, changed-files/config/errors/debug page bodies, or release outcome panel owned by tasks 3.2 and 3.3.",
+    "Do not modify router, API, store, authentication, repository permission calculation, backend, persistence, dependencies, or the approved prototype.",
+    "Do not add a fake more menu, a second tab system, prototype fixtures, or a generic page-header abstraction without a second equivalent consumer."
+  ],
+  "expected_evidence": [
+    "Focused red/green component tests for metadata hierarchy, translated status, action state, permissions, API/router intent, deploy target, and tabs.",
+    "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Targeted desktop and 390px browser evidence for push and read-only pipeline detail states.",
+    "Evidence-bearing task report plus independent A2/A3 spec and quality reviews."
+  ],
+  "unsafe_assumptions": [
+    "Prototype action availability never overrides real pipeline state or repository push permission.",
+    "A successful pipeline may lack a release mapping and must retain the existing deploy popup fallback.",
+    "The prototype log query tab is not a production route contract yet.",
+    "Zero changed-files or error counts do not make the existing read-only routes unreachable."
+  ],
+  "stop_condition": "Stop if implementation requires changes outside the four allowed files or invents a router, API, store, permission, or component-boundary contract."
+}

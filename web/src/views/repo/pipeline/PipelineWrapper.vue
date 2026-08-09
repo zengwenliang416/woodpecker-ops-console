@@ -7,81 +7,116 @@
     full-width-header
   >
     <template #title>
-      <span>
-        <router-link :to="{ name: 'org', params: { orgId: repo.org_id } }" class="hover:underline">{{
-          repo.owner
-          /* eslint-disable-next-line @intlify/vue-i18n/no-raw-text */
-        }}</router-link>
-        /
-        <router-link :to="{ name: 'repo' }" class="hover:underline">{{ repo.name }}</router-link>
+      <span data-testid="pipeline-detail-heading" class="flex min-w-0 flex-col gap-3 py-1">
+        <span
+          data-testid="pipeline-detail-eyebrow"
+          class="text-wp-text-alt-100 flex flex-wrap items-center gap-1 text-sm font-normal"
+        >
+          <router-link :to="{ name: 'repo' }" class="hover:underline">{{ repo.name }}</router-link>
+          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
+          <span>/</span>
+          <span>{{ $t('repo.pipeline.eyebrow') }}</span>
+        </span>
+
+        <span class="flex flex-wrap items-center gap-3">
+          <span class="text-xl font-semibold">{{ $t('repo.pipeline.pipeline', { pipelineId }) }}</span>
+          <span
+            data-testid="pipeline-status"
+            class="border-wp-state-neutral-200 bg-wp-state-neutral-100 flex items-center gap-2 rounded-full border px-3 py-1 text-sm font-medium"
+          >
+            <PipelineStatusIcon :status="pipeline.status" class="shrink-0" />
+            <span>{{ pipelineStatusTitle }}</span>
+          </span>
+        </span>
+
+        <RenderMarkdown
+          data-testid="pipeline-message"
+          class="max-w-4xl text-base font-normal"
+          :title="message"
+          :content="shortMessage"
+          inline
+        />
+
+        <span
+          data-testid="pipeline-metadata"
+          class="text-wp-text-alt-100 flex flex-wrap gap-x-5 gap-y-2 text-sm font-normal"
+        >
+          <span v-if="prettyRef" class="flex items-center gap-1.5">
+            <Icon name="branch" />
+            <span>{{ $t('repo.pipeline.metadata.branch') }}</span>
+            <span class="text-wp-text-100">{{ prettyRef }}</span>
+          </span>
+          <span class="flex items-center gap-1.5">
+            <Icon name="activity" />
+            <span>{{ $t('repo.pipeline.metadata.event') }}</span>
+            <span class="text-wp-text-100">{{ pipelineEventTitle }}</span>
+          </span>
+          <span v-if="pipeline.author" class="flex items-center gap-1.5">
+            <Icon name="user" />
+            <span>{{ $t('repo.pipeline.metadata.author') }}</span>
+            <span class="text-wp-text-100">{{ pipeline.author }}</span>
+          </span>
+          <span v-if="pipeline.commit" class="flex items-center gap-1.5">
+            <Icon name="commit" />
+            <span>{{ $t('repo.pipeline.metadata.commit') }}</span>
+            <span class="text-wp-text-100 font-mono">{{ pipeline.commit.slice(0, 10) }}</span>
+          </span>
+          <span class="flex items-center gap-1.5" :title="$t('repo.pipeline.created', { created })">
+            <Icon name="since" />
+            <span>{{ $t('repo.pipeline.metadata.created') }}</span>
+            <span class="text-wp-text-100">{{ since }}</span>
+          </span>
+          <span
+            class="flex items-center gap-1.5"
+            :title="
+              durationElapsed > 0 ? $t('repo.pipeline.duration', { duration: durationAsNumber(durationElapsed) }) : ''
+            "
+          >
+            <Icon name="duration" />
+            <span>{{ $t('repo.pipeline.metadata.duration') }}</span>
+            <span class="text-wp-text-100">{{ duration }}</span>
+          </span>
+        </span>
       </span>
     </template>
 
     <template #headerActions>
-      <div class="flex w-full items-center justify-between gap-2">
-        <div class="flex min-w-0 content-start gap-2">
-          <PipelineStatusIcon :status="pipeline.status" class="flex shrink-0" />
-          <span class="shrink-0 text-center">{{ $t('repo.pipeline.pipeline', { pipelineId }) }}</span>
-          <!-- eslint-disable-next-line @intlify/vue-i18n/no-raw-text -->
-          <span class="hidden md:inline-block">-</span>
-          <RenderMarkdown
-            class="min-w-0 overflow-hidden text-ellipsis whitespace-nowrap"
-            :title="message"
-            :content="shortMessage"
-            inline
+      <template v-if="repoPermissions!.push && pipeline.status !== 'blocked'">
+        <div class="flex flex-wrap justify-end gap-2">
+          <Button
+            v-if="pipeline.status === 'pending' || pipeline.status === 'running'"
+            class="shrink-0"
+            :text="$t('repo.pipeline.actions.cancel')"
+            :is-loading="isCancelingPipeline"
+            @click="cancelPipeline"
+          />
+          <Button
+            class="shrink-0"
+            :text="$t('repo.pipeline.actions.retry')"
+            :is-loading="isRestartingPipeline"
+            @click="restartPipeline"
+          />
+          <Button
+            v-if="pipeline.status === 'success' && repo.allow_deploy"
+            class="shrink-0"
+            start-icon="rocket"
+            :color="opsDeploymentTarget ? 'green' : 'gray'"
+            :text="$t('repo.pipeline.actions.deploy')"
+            :to="opsDeploymentTarget"
+            @click="openDeploy"
+          />
+          <DeployPipelinePopup
+            v-if="!opsDeploymentTarget"
+            :pipeline-number="pipelineId"
+            :open="showDeployPipelinePopup"
+            @close="showDeployPipelinePopup = false"
           />
         </div>
-
-        <template v-if="repoPermissions!.push && pipeline.status !== 'blocked'">
-          <div class="flex content-start gap-x-2">
-            <Button
-              v-if="pipeline.status === 'pending' || pipeline.status === 'running'"
-              class="shrink-0"
-              :text="$t('repo.pipeline.actions.cancel')"
-              :is-loading="isCancelingPipeline"
-              @click="cancelPipeline"
-            />
-            <Button
-              class="shrink-0"
-              :text="$t('repo.pipeline.actions.restart')"
-              :is-loading="isRestartingPipeline"
-              @click="restartPipeline"
-            />
-            <Button
-              v-if="pipeline.status === 'success' && repo.allow_deploy"
-              class="shrink-0"
-              start-icon="rocket"
-              :color="opsDeploymentTarget ? 'green' : 'gray'"
-              :text="$t('repo.pipeline.actions.deploy')"
-              :to="opsDeploymentTarget"
-              @click="openDeploy"
-            />
-            <DeployPipelinePopup
-              v-if="!opsDeploymentTarget"
-              :pipeline-number="pipelineId"
-              :open="showDeployPipelinePopup"
-              @close="showDeployPipelinePopup = false"
-            />
-          </div>
-        </template>
-      </div>
+      </template>
     </template>
 
     <template #tabActions>
       <div class="flex flex-wrap gap-4 md:flex-nowrap">
-        <div class="flex shrink-0 items-center gap-2" :title="$t('repo.pipeline.created', { created })">
-          <Icon name="since" />
-          <span>{{ since }}</span>
-        </div>
-        <div
-          class="flex shrink-0 items-center gap-2"
-          :title="
-            durationElapsed > 0 ? $t('repo.pipeline.duration', { duration: durationAsNumber(durationElapsed) }) : ''
-          "
-        >
-          <Icon name="duration" />
-          <span>{{ duration }}</span>
-        </div>
         <div v-if="pipeline.status === 'killed' && pipeline.cancel_info" class="flex shrink-0 items-center gap-2">
           <Icon name="status-killed" />
           <span class="truncate">
@@ -103,22 +138,20 @@
       </div>
     </template>
 
-    <Tab icon="tray-full" :to="{ name: 'repo-pipeline' }" :title="$t('repo.pipeline.tasks')" />
+    <Tab icon="tray-full" :to="{ name: 'repo-pipeline' }" :title="$t('repo.pipeline.overview')" />
     <Tab
-      v-if="errorsTabCount > 0"
-      :to="{ name: 'repo-pipeline-errors' }"
-      icon="alert"
-      :title="pipelineHasErrorsToShow(pipeline) ? $t('repo.pipeline.errors') : $t('repo.pipeline.warnings')"
-      :count="errorsTabCount"
-      :icon-class="pipelineHasErrorsToShow(pipeline) ? 'text-wp-error-100' : 'text-wp-state-warn-100'"
-    />
-    <Tab icon="file-cog-outline" :to="{ name: 'repo-pipeline-config' }" :title="$t('repo.pipeline.config')" />
-    <Tab
-      v-if="pipeline.changed_files && pipeline.changed_files.length > 0"
       :to="{ name: 'repo-pipeline-changed-files' }"
       icon="file-edit-outline"
       :title="$t('repo.pipeline.files')"
       :count="pipeline.changed_files?.length"
+    />
+    <Tab icon="file-cog-outline" :to="{ name: 'repo-pipeline-config' }" :title="$t('repo.pipeline.config')" />
+    <Tab
+      :to="{ name: 'repo-pipeline-errors' }"
+      icon="alert"
+      :title="$t('repo.pipeline.errors')"
+      :count="errorsTabCount"
+      :icon-class="pipelineHasErrorsToShow(pipeline) ? 'text-wp-error-100' : 'text-wp-state-warn-100'"
     />
     <Tab
       v-if="repoPermissions && repoPermissions.push"
@@ -152,6 +185,7 @@ import { provide, requiredInject } from '~/compositions/useInjectProvide';
 import useNotifications from '~/compositions/useNotifications';
 import usePipeline from '~/compositions/usePipeline';
 import { useRouteBack } from '~/compositions/useRouteBack';
+import { WebhookEvents } from '~/lib/api/types';
 import type { Pipeline, PipelineConfig } from '~/lib/api/types';
 import { pipelineHasErrorsToShow, workflowsWithErrors } from '~/lib/pipeline';
 import { useApplicationStore } from '~/store/ops';
@@ -179,11 +213,38 @@ const repo = requiredInject('repo');
 const repoPermissions = requiredInject('repo-permissions');
 
 const pipeline = pipelineStore.getPipeline(repositoryId, pipelineId);
-const { since, duration, durationElapsed, created, message, shortMessage } = usePipeline(pipeline);
+const { since, duration, durationElapsed, created, message, shortMessage, prettyRef } = usePipeline(pipeline);
 
 const errorsTabCount = computed(
   () => (pipeline.value?.errors?.length ?? 0) + workflowsWithErrors(pipeline.value).length,
 );
+const pipelineStatusTitle = computed(() => {
+  const status = pipeline.value?.status;
+  if (!status) {
+    return '';
+  }
+
+  const translationKey = `repo.pipeline.status.${status}`;
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
+  return i18n.te(translationKey) ? i18n.t(translationKey) : status;
+});
+
+const pipelineEventTranslationAliases: Partial<Record<WebhookEvents, string>> = {
+  [WebhookEvents.PullRequest]: 'pr',
+  [WebhookEvents.PullRequestClosed]: 'pr_closed',
+  [WebhookEvents.PullRequestMetadata]: 'pr_metadata',
+  [WebhookEvents.Deploy]: 'deploy',
+};
+const pipelineEventTitle = computed(() => {
+  const event = pipeline.value?.event;
+  if (!event) {
+    return '';
+  }
+
+  const translationKey = `repo.pipeline.event.${pipelineEventTranslationAliases[event] ?? event}`;
+  // eslint-disable-next-line @intlify/vue-i18n/no-dynamic-keys
+  return i18n.te(translationKey) ? i18n.t(translationKey) : event;
+});
 provide('pipeline', pipeline as Ref<Pipeline>); // can't be undefined because of v-if in template
 
 const pipelineConfigs = ref<PipelineConfig[]>();
