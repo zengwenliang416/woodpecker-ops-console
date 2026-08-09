@@ -1,18 +1,50 @@
 import { defineStore } from 'pinia';
 import { computed, reactive, ref } from 'vue';
-import type { ComputedRef, Ref  } from 'vue';
+import type { ComputedRef, Ref } from 'vue';
 
 import useApiClient from '~/compositions/useApiClient';
 import type {
   Alert,
-  AppRelease,
   Application,
+  AppRelease,
   Deployment,
   DeploymentDetail,
   Environment,
   Server,
   ServerGroup,
 } from '~/lib/api/types';
+
+interface OpsPageOptions {
+  page: number;
+  perPage: number;
+}
+
+interface Identifiable {
+  id: number;
+}
+
+const OPS_PAGE_SIZE = 50;
+const OPS_MAX_PAGES = 1000;
+
+async function loadAllPages<T>(loader: (options: OpsPageOptions) => Promise<T[] | null>): Promise<T[]> {
+  const items: T[] = [];
+  for (let page = 1; page <= OPS_MAX_PAGES; page += 1) {
+    const batch = (await loader({ page, perPage: OPS_PAGE_SIZE })) ?? [];
+    items.push(...batch);
+    if (batch.length < OPS_PAGE_SIZE) {
+      break;
+    }
+  }
+  return items;
+}
+
+function syncMap<T extends Identifiable>(target: Map<number, T>, items: T[]): void {
+  const nextIds = new Set(items.map((item) => item.id));
+  target.forEach((_, id) => {
+    if (!nextIds.has(id)) target.delete(id);
+  });
+  items.forEach((item) => target.set(item.id, { ...target.get(item.id), ...item }));
+}
 
 // ---------- Servers ----------
 
@@ -23,6 +55,9 @@ export const useServerStore = defineStore('ops-servers', () => {
   const groups: Map<number, ServerGroup> = reactive(new Map());
   const alerts: Map<number, Alert> = reactive(new Map());
   const loaded = ref(false);
+  let serverLoadGeneration = 0;
+  let groupLoadGeneration = 0;
+  let alertLoadGeneration = 0;
 
   const serverList = computed(() => [...servers.values()].sort((a, b) => a.id - b.id));
   const groupList = computed(() => [...groups.values()].sort((a, b) => a.id - b.id));
@@ -39,21 +74,24 @@ export const useServerStore = defineStore('ops-servers', () => {
   }
 
   async function loadServers() {
-    const list = (await apiClient.getServers()) ?? [];
-    list.forEach((server) => setServer(server));
+    const generation = ++serverLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getServers(options));
+    if (generation === serverLoadGeneration) syncMap(servers, list);
     loaded.value = true;
     return list;
   }
 
   async function loadGroups() {
-    const list = (await apiClient.getServerGroups()) ?? [];
-    list.forEach((group) => groups.set(group.id, { ...groups.get(group.id), ...group }));
+    const generation = ++groupLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getServerGroups(options));
+    if (generation === groupLoadGeneration) syncMap(groups, list);
     return list;
   }
 
   async function loadAlerts() {
-    const list = (await apiClient.getAlerts()) ?? [];
-    list.forEach((alert) => alerts.set(alert.id, { ...alerts.get(alert.id), ...alert }));
+    const generation = ++alertLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getAlerts(options));
+    if (generation === alertLoadGeneration) syncMap(alerts, list);
     return list;
   }
 
@@ -87,6 +125,9 @@ export const useApplicationStore = defineStore('ops-applications', () => {
   const applications: Map<number, Application> = reactive(new Map());
   const environments: Map<number, Environment> = reactive(new Map());
   const releases: Map<number, AppRelease> = reactive(new Map());
+  let applicationLoadGeneration = 0;
+  let environmentLoadGeneration = 0;
+  let releaseLoadGeneration = 0;
 
   const applicationList = computed(() => [...applications.values()].sort((a, b) => a.id - b.id));
   const environmentList = computed(() => [...environments.values()].sort((a, b) => a.id - b.id));
@@ -101,20 +142,23 @@ export const useApplicationStore = defineStore('ops-applications', () => {
   }
 
   async function loadApplications() {
-    const list = (await apiClient.getApplications()) ?? [];
-    list.forEach((app) => applications.set(app.id, { ...applications.get(app.id), ...app }));
+    const generation = ++applicationLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getApplications(options));
+    if (generation === applicationLoadGeneration) syncMap(applications, list);
     return list;
   }
 
   async function loadEnvironments() {
-    const list = (await apiClient.getEnvironments()) ?? [];
-    list.forEach((env) => environments.set(env.id, { ...environments.get(env.id), ...env }));
+    const generation = ++environmentLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getEnvironments(options));
+    if (generation === environmentLoadGeneration) syncMap(environments, list);
     return list;
   }
 
   async function loadReleases() {
-    const list = (await apiClient.getReleases()) ?? [];
-    list.forEach((release) => releases.set(release.id, { ...releases.get(release.id), ...release }));
+    const generation = ++releaseLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getReleases(options));
+    if (generation === releaseLoadGeneration) syncMap(releases, list);
     return list;
   }
 
@@ -150,9 +194,12 @@ export const useDeploymentStore = defineStore('ops-deployments', () => {
 
   const deployments: Map<number, Deployment> = reactive(new Map());
   const details: Map<number, DeploymentDetail> = reactive(new Map());
+  let deploymentLoadGeneration = 0;
 
   const deploymentList = computed(() => [...deployments.values()].sort((a, b) => b.id - a.id));
-  const runningDeployments = computed(() => deploymentList.value.filter((d) => ['running', 'paused', 'pending_approval'].includes(d.status)));
+  const runningDeployments = computed(() =>
+    deploymentList.value.filter((d) => ['running', 'paused', 'pending_approval'].includes(d.status)),
+  );
   const pendingApprovals = computed(() => deploymentList.value.filter((d) => d.status === 'pending_approval'));
 
   function getDeployment(deploymentId: Ref<number> | number) {
@@ -169,8 +216,9 @@ export const useDeploymentStore = defineStore('ops-deployments', () => {
   }
 
   async function loadDeployments() {
-    const list = (await apiClient.getDeployments()) ?? [];
-    list.forEach((deployment) => setDeployment(deployment));
+    const generation = ++deploymentLoadGeneration;
+    const list = await loadAllPages(async (options) => apiClient.getDeployments(options));
+    if (generation === deploymentLoadGeneration) syncMap(deployments, list);
     return list;
   }
 

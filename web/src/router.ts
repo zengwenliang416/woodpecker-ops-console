@@ -18,7 +18,13 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/',
     name: 'home',
-    redirect: { name: 'repos' },
+    redirect: { name: 'overview' },
+  },
+  {
+    path: '/overview',
+    name: 'overview',
+    component: (): Component => import('~/views/Overview.vue'),
+    meta: { authentication: 'required' },
   },
   {
     path: '/repos',
@@ -26,12 +32,6 @@ const routes: RouteRecordRaw[] = [
     children: [
       {
         path: '',
-        name: 'overview',
-        component: (): Component => import('~/views/Overview.vue'),
-        meta: { authentication: 'required' },
-      },
-      {
-        path: 'repos',
         name: 'repos',
         component: (): Component => import('~/views/Repos.vue'),
         meta: { authentication: 'required' },
@@ -375,13 +375,43 @@ const routes: RouteRecordRaw[] = [
     component: (): Component => import('~/views/RouterView.vue'),
     meta: { authentication: 'required' },
     children: [
-      { path: '', name: 'infrastructure', component: (): Component => import('~/views/infrastructure/InfrastructureOverview.vue') },
-      { path: 'servers', name: 'infrastructure-servers', component: (): Component => import('~/views/infrastructure/InfrastructureServers.vue') },
-      { path: 'servers/:serverId', name: 'infrastructure-server', component: (): Component => import('~/views/infrastructure/InfrastructureServer.vue'), props: true },
-      { path: 'groups', name: 'infrastructure-groups', component: (): Component => import('~/views/infrastructure/InfrastructureGroups.vue') },
-      { path: 'groups/:groupId', name: 'infrastructure-group', component: (): Component => import('~/views/infrastructure/InfrastructureGroup.vue'), props: true },
-      { path: 'services', name: 'infrastructure-services', component: (): Component => import('~/views/infrastructure/InfrastructureServices.vue') },
-      { path: 'alerts', name: 'infrastructure-alerts', component: (): Component => import('~/views/infrastructure/InfrastructureAlerts.vue') },
+      {
+        path: '',
+        name: 'infrastructure',
+        component: (): Component => import('~/views/infrastructure/InfrastructureOverview.vue'),
+      },
+      {
+        path: 'servers',
+        name: 'infrastructure-servers',
+        component: (): Component => import('~/views/infrastructure/InfrastructureServers.vue'),
+      },
+      {
+        path: 'servers/:serverId',
+        name: 'infrastructure-server',
+        component: (): Component => import('~/views/infrastructure/InfrastructureServer.vue'),
+        props: true,
+      },
+      {
+        path: 'groups',
+        name: 'infrastructure-groups',
+        component: (): Component => import('~/views/infrastructure/InfrastructureGroups.vue'),
+      },
+      {
+        path: 'groups/:groupId',
+        name: 'infrastructure-group',
+        component: (): Component => import('~/views/infrastructure/InfrastructureGroup.vue'),
+        props: true,
+      },
+      {
+        path: 'services',
+        name: 'infrastructure-services',
+        component: (): Component => import('~/views/infrastructure/InfrastructureServices.vue'),
+      },
+      {
+        path: 'alerts',
+        name: 'infrastructure-alerts',
+        component: (): Component => import('~/views/infrastructure/InfrastructureAlerts.vue'),
+      },
     ],
   },
   {
@@ -390,15 +420,50 @@ const routes: RouteRecordRaw[] = [
     meta: { authentication: 'required' },
     children: [
       { path: '', name: 'deployments', component: (): Component => import('~/views/deployments/Deployments.vue') },
-      { path: 'new', name: 'deployment-new', component: (): Component => import('~/views/deployments/DeploymentNew.vue') },
-      { path: 'approvals', name: 'deployment-approvals', component: (): Component => import('~/views/deployments/DeploymentApprovals.vue') },
-      { path: 'apps', name: 'applications', component: (): Component => import('~/views/deployments/Applications.vue') },
-      { path: 'apps/:appId', name: 'application', component: (): Component => import('~/views/deployments/ApplicationDetail.vue'), props: true },
-      { path: 'environments', name: 'environments', component: (): Component => import('~/views/deployments/Environments.vue') },
-      { path: 'environments/:envId', name: 'environment', component: (): Component => import('~/views/deployments/EnvironmentDetail.vue'), props: true },
+      {
+        path: 'new',
+        name: 'deployment-new',
+        component: (): Component => import('~/views/deployments/DeploymentNew.vue'),
+      },
+      {
+        path: 'approvals',
+        name: 'deployment-approvals',
+        component: (): Component => import('~/views/deployments/DeploymentApprovals.vue'),
+      },
+      {
+        path: 'apps',
+        name: 'applications',
+        component: (): Component => import('~/views/deployments/Applications.vue'),
+      },
+      {
+        path: 'apps/:appId',
+        name: 'application',
+        component: (): Component => import('~/views/deployments/ApplicationDetail.vue'),
+        props: true,
+      },
+      {
+        path: 'environments',
+        name: 'environments',
+        component: (): Component => import('~/views/deployments/Environments.vue'),
+      },
+      {
+        path: 'environments/:envId',
+        name: 'environment',
+        component: (): Component => import('~/views/deployments/EnvironmentDetail.vue'),
+        props: true,
+      },
       { path: 'releases', name: 'releases', component: (): Component => import('~/views/deployments/Releases.vue') },
-      { path: 'policies', name: 'deployment-policies', component: (): Component => import('~/views/deployments/DeploymentPolicies.vue') },
-      { path: ':deploymentId', name: 'deployment', component: (): Component => import('~/views/deployments/DeploymentDetail.vue'), props: true },
+      {
+        path: 'policies',
+        name: 'deployment-policies',
+        component: (): Component => import('~/views/deployments/DeploymentPolicies.vue'),
+      },
+      {
+        path: ':deploymentId',
+        name: 'deployment',
+        component: (): Component => import('~/views/deployments/DeploymentDetail.vue'),
+        props: true,
+      },
     ],
   },
 
@@ -412,8 +477,8 @@ const routes: RouteRecordRaw[] = [
 
 const { rootPath } = useConfig();
 const router = createRouter({
-  history: createWebHistory(),
-  routes: routes.map((r) => ({ ...r, path: `${rootPath}${r.path}` })),
+  history: createWebHistory(rootPath || '/'),
+  routes,
 });
 
 router.beforeEach(async (to, _, next) => {

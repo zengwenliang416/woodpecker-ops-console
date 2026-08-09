@@ -1,9 +1,18 @@
 import ApiClient, { encodeQueryString } from './client';
 import type {
   Agent,
+  Alert,
+  Application,
+  AppRelease,
+  AuditLog,
   Cron,
+  Deployment,
+  DeploymentDetail,
+  DeploymentLog,
+  Environment,
   ExtensionSettings,
   Forge,
+  InfrastructureOverview,
   Org,
   OrgPermissions,
   Pipeline,
@@ -17,17 +26,9 @@ import type {
   RepoPermissions,
   RepoSettings,
   Secret,
-  User,
-  Alert,
-  AuditLog,  AppRelease,
-  Application,
-  Deployment,
-  DeploymentDetail,
-  DeploymentLog,
-  Environment,
-  InfrastructureOverview,
   Server,
   ServerGroup,
+  User,
 } from './types';
 
 const DEFAULT_FORGE_ID = 1;
@@ -491,6 +492,10 @@ export default class WoodpeckerClient extends ApiClient {
     return this._post(`/api/infrastructure/servers/${serverId}/maintenance`, { maintenance }) as Promise<Server | null>;
   }
 
+  async restartServer(serverId: number): Promise<unknown> {
+    return this._post(`/api/infrastructure/servers/${serverId}/restart`);
+  }
+
   async getServerDeployments(serverId: number): Promise<Deployment[] | null> {
     return this._get(`/api/infrastructure/servers/${serverId}/deployments`) as Promise<Deployment[] | null>;
   }
@@ -549,7 +554,10 @@ export default class WoodpeckerClient extends ApiClient {
   }
 
   async getApplication(appId: number): Promise<{ application: Application; releases: AppRelease[] } | null> {
-    return this._get(`/api/applications/${appId}`) as Promise<{ application: Application; releases: AppRelease[] } | null>;
+    return this._get(`/api/applications/${appId}`) as Promise<{
+      application: Application;
+      releases: AppRelease[];
+    } | null>;
   }
 
   async getEnvironments(opts?: PaginationOptions): Promise<Environment[] | null> {
@@ -647,4 +655,3 @@ export default class WoodpeckerClient extends ApiClient {
     return this._get(`/api/ops/audit-logs?${query}`) as Promise<AuditLog[] | null>;
   }
 }
-
