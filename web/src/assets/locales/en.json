@@ -703,6 +703,8 @@
     },
     "topbar": {
       "search_placeholder": "Search pipelines, repos, users and settings…",
+      "search_unavailable_title": "Search unavailable",
+      "search_unavailable_text": "Global search is not available in this build.",
       "theme": "Toggle theme",
       "search_shortcut": "⌘ K"
     },

@@ -1,0 +1,58 @@
+{
+  "task_id": "002-shared-shell-alignment",
+  "goal": "Authenticated regular users and administrators can use a prototype-aligned, responsive shared shell with accessible drawer behavior, working preferences, localized search feedback, and unchanged permission boundaries.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/002-shared-shell-alignment/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html"
+  ],
+  "allowed_files": [
+    "web/src/App.vue",
+    "web/src/App.test.ts",
+    "web/src/components/layout/header/Sidebar.vue",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.vue",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "web/src/viteConfig.test.ts",
+    "web/vite.config.ts"
+  ],
+  "test_paths": [
+    "web/src/App.test.ts",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/viteConfig.test.ts"
+  ],
+  "non_goals": [
+    "Do not implement a command palette or global search backend.",
+    "Do not move locale selection into the topbar.",
+    "Do not change routes, backend authorization, APIs, persistence, or administrator capabilities.",
+    "Do not restyle route-family content or add dependencies.",
+    "Do not copy prototype fixtures or JavaScript into production."
+  ],
+  "expected_evidence": [
+    "Focused component tests covering shell dimensions, drawer interactions, permissions, theme toggle, locale copy, locale discovery filtering, and unavailable search feedback.",
+    "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Desktop and 390px browser evidence in dark Simplified Chinese plus representative light or English coverage.",
+    "Task report with A2 and A3 coverage.",
+    "Independent spec and quality review artifacts."
+  ],
+  "unsafe_assumptions": [
+    "Prototype administrator fixtures do not replace production permission checks.",
+    "A prototype command palette does not authorize simulated production success without a real contract.",
+    "Resolved theme and stored auto preference are distinct existing behaviors.",
+    "Visual hiding alone does not prove accessible drawer behavior.",
+    "Filesystem entries under src/assets/locales may include AppleDouble metadata that is not a valid locale."
+  ],
+  "stop_condition": "Stop before editing outside the ten allowed files, changing backend/router authorization, or inventing a search/data contract."
+}

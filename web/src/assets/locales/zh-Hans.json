@@ -857,6 +857,8 @@
     },
     "topbar": {
       "search_placeholder": "搜索流水线、仓库、用户和设置…",
+      "search_unavailable_title": "全局搜索暂不可用",
+      "search_unavailable_text": "当前版本尚未提供全局搜索。",
       "theme": "切换主题",
       "search_shortcut": "⌘ K"
     },

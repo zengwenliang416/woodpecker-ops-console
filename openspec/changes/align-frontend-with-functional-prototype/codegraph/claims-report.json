@@ -1,16 +1,18 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-09T08:05:37.654Z",
+  "generated_at": "2026-08-09T13:07:18.659Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 1,
+  "claims_count": 2,
   "verified_claims": [],
   "unverified_claims": [
-    "development:task-001-date-duration-integrity"
+    "development:task-001-date-duration-integrity",
+    "development:task-002-shared-shell-alignment"
   ],
   "blockers": [],
   "warnings": [
-    "codegraph:claim-unverified:development:task-001-date-duration-integrity"
+    "codegraph:claim-unverified:development:task-001-date-duration-integrity",
+    "codegraph:claim-unverified:development:task-002-shared-shell-alignment"
   ]
 }

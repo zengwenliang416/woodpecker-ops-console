@@ -1,6 +1,13 @@
 <template>
   <header class="topbar">
-    <IconButton class="md:hidden!" icon="menu" :title="$t('ops.sidebar.open')" @click="$emit('openSidebar')" />
+    <IconButton
+      class="md:hidden!"
+      icon="menu"
+      :title="$t('ops.sidebar.open')"
+      :aria-expanded="sidebarOpen"
+      aria-controls="app-sidebar"
+      @click="emitOpenSidebar"
+    />
     <button class="global-search" type="button" @click="notifySearch">
       <Icon name="search" class="h-4.5 w-4.5" />
       <span>{{ $t('ops.topbar.search_placeholder') }}</span>
@@ -30,6 +37,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
 import Button from '~/components/atomic/Button.vue';
@@ -43,8 +51,12 @@ import { useVersion } from '~/compositions/useVersion';
 
 import ActivePipelines from './ActivePipelines.vue';
 
-defineEmits<{
-  (event: 'openSidebar'): void;
+defineProps<{
+  sidebarOpen?: boolean;
+}>();
+
+const emit = defineEmits<{
+  (event: 'openSidebar', trigger: HTMLElement | null): void;
 }>();
 
 const version = useVersion();
@@ -54,8 +66,13 @@ const authentication = useAuthentication();
 const { user } = authentication;
 const { notify } = useNotifications();
 const { theme, storeTheme } = useTheme();
+const { t } = useI18n();
 
 const isDark = computed(() => theme.value === 'dark');
+
+function emitOpenSidebar(event: MouseEvent) {
+  emit('openSidebar', event.currentTarget instanceof HTMLElement ? event.currentTarget : null);
+}
 
 function toggleTheme() {
   storeTheme.value = isDark.value ? 'light' : 'dark';
@@ -66,14 +83,18 @@ function saveRedirect() {
 }
 
 function notifySearch() {
-  notify({ title: 'Command palette', text: '⌘K 命令面板将在后续阶段接入（Phase 2）', type: 'info' });
+  notify({
+    title: t('ops.topbar.search_unavailable_title'),
+    text: t('ops.topbar.search_unavailable_text'),
+    type: 'info',
+  });
 }
 </script>
 <style scoped>
 @reference '~/tailwind.css';
 
 .topbar {
-  @apply border-wp-border-100 dark:border-wp-background-100 sticky top-0 z-24 flex items-center gap-4 px-5;
+  @apply border-wp-border-100 dark:border-wp-background-100 sticky top-0 z-24 flex shrink-0 items-center gap-4 px-[22px];
   height: var(--wp-topbar-h);
   border-bottom-width: 1px;
   background: var(--wp-background-400);
@@ -89,6 +110,10 @@ function notifySearch() {
   @apply text-wp-text-alt-100 border-wp-border-100 dark:border-wp-background-100 bg-wp-control-neutral-200 ml-auto rounded-md border-b-2 px-1.5 py-0.5 font-sans text-[11px];
 }
 
+.global-search span {
+  @apply min-w-0 overflow-hidden text-ellipsis whitespace-nowrap;
+}
+
 .topbar-spacer {
   @apply flex-1;
 }
@@ -99,5 +124,21 @@ function notifySearch() {
 
 .topbar-link {
   @apply text-wp-primary-text-100;
+}
+
+@media (max-width: 767px) {
+  .topbar {
+    @apply gap-1.5 overflow-hidden px-3;
+  }
+
+  .global-search {
+    @apply flex-1 px-2;
+    width: auto;
+  }
+
+  .global-search kbd,
+  .topbar-spacer {
+    display: none;
+  }
 }
 </style>

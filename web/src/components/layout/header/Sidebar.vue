@@ -1,5 +1,11 @@
 <template>
-  <aside class="sidebar" :class="{ 'sidebar-open': open }" :aria-label="$t('ops.sidebar.main')">
+  <aside
+    id="app-sidebar"
+    class="sidebar"
+    :class="{ 'sidebar-open': open }"
+    :aria-label="$t('ops.sidebar.main')"
+    tabindex="-1"
+  >
     <div class="sidebar-brand">
       <router-link :to="{ name: 'home' }" class="flex min-w-0 items-center gap-2.5">
         <WoodpeckerLogo class="text-wp-primary-100 h-8 w-8 shrink-0" />
@@ -8,7 +14,13 @@
           <small>{{ $t('ops.sidebar.brand_subtitle') }}</small>
         </div>
       </router-link>
-      <IconButton class="md:hidden!" icon="close" :title="$t('ops.sidebar.close')" @click="$emit('close')" />
+      <IconButton
+        class="md:hidden!"
+        data-drawer-close
+        icon="close"
+        :title="$t('ops.sidebar.close')"
+        @click="$emit('close')"
+      />
     </div>
 
     <div class="sidebar-scroll">
@@ -217,16 +229,20 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 @reference '~/tailwind.css';
 
 .sidebar {
-  @apply border-wp-border-100 dark:border-wp-background-100 bg-wp-background-400 dark:bg-wp-background-400 fixed inset-y-0 left-0 z-30 hidden w-62 flex-col border-r transition-transform duration-200;
-  @apply md:static md:flex;
+  @apply border-wp-border-100 dark:border-wp-background-100 bg-wp-background-400 dark:bg-wp-background-400 fixed inset-y-0 left-0 z-30 flex shrink-0 flex-col border-r transition-transform duration-200;
+  width: var(--wp-sidebar-w);
+  visibility: hidden;
+  transform: translateX(-100%);
+  box-shadow: var(--wp-shadow);
 }
 
 .sidebar-open {
-  @apply flex!;
+  visibility: visible;
+  transform: translateX(0);
 }
 
 .sidebar-brand {
-  @apply border-wp-border-100 dark:border-wp-background-100 flex items-center gap-2 border-b px-4;
+  @apply border-wp-border-100 dark:border-wp-background-100 flex items-center gap-[11px] border-b px-[18px];
   height: var(--wp-topbar-h);
 }
 
@@ -235,15 +251,15 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 }
 
 .brand-copy strong {
-  @apply text-wp-text-200 text-[13px] font-bold whitespace-nowrap;
+  @apply text-wp-text-200 text-[17px] font-bold tracking-[-0.02em] whitespace-nowrap;
 }
 
 .brand-copy small {
-  @apply text-wp-text-alt-100 text-[10px] whitespace-nowrap;
+  @apply text-wp-text-alt-100 mt-[-2px] text-[10px] tracking-[0.04em] whitespace-nowrap uppercase;
 }
 
 .sidebar-scroll {
-  @apply flex-1 overflow-y-auto px-3 py-3;
+  @apply flex-1 overflow-y-auto px-2.5 pt-1.5 pb-[18px];
 }
 
 .nav-section {
@@ -255,7 +271,7 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 }
 
 .nav-link {
-  @apply text-wp-text-100 hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100 relative mb-0.5 flex min-h-9 w-full items-center gap-2.5 rounded-lg px-2.5 text-[13px] font-medium transition-colors duration-150;
+  @apply text-wp-text-100 hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100 relative mb-0.5 flex min-h-10 w-full items-center gap-[11px] rounded-[9px] px-2.5 text-[13px] font-medium transition-colors duration-150;
 }
 
 .nav-link.active {
@@ -275,6 +291,21 @@ const isUserActive = computed(() => route.path.startsWith('/user'));
 }
 
 .sidebar-footer {
-  @apply border-wp-border-100 dark:border-wp-background-100 border-t p-3;
+  @apply border-wp-border-100 dark:border-wp-background-100 border-t p-2.5;
+}
+
+@media (min-width: 768px) {
+  .sidebar {
+    position: static;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .sidebar {
+    transition: none;
+  }
 }
 </style>

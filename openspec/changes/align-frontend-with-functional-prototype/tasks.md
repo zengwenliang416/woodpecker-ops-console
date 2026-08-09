@@ -13,7 +13,7 @@
 用户结果：用户可以在桌面端和移动端看到可信的日期、时长、导航与通用状态反馈。
 
 - [x] 2.1 Reproduce and fix invalid or extreme user-visible dates and durations through the shared formatting boundary, with focused regression tests.
-- [ ] 2.2 Verify the 248px sidebar, 64px topbar, drawer behavior, theme toggle, locale behavior, global search placeholder, and permission-aware navigation against the prototype.
+- [x] 2.2 Verify the 248px sidebar, 64px topbar, drawer behavior, theme toggle, locale behavior, global search placeholder, and permission-aware navigation against the prototype.
 - [ ] 2.3 Add or repair shared loading, empty, error, disabled, permission, and stale-state primitives required by at least two route families.
 - [ ] 2.4 Capture equivalent dark/light desktop and 390px shell evidence before route-family implementation.
 

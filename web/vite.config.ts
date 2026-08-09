@@ -17,6 +17,12 @@ const getEnvString = (envVar: string | undefined) => (envVar != null && envVar !
 const viteUserSessCookie = getEnvString(process.env.VITE_DEV_USER_SESS_COOKIE);
 const viteDevProxy = getEnvString(process.env.VITE_DEV_PROXY);
 
+export function getSupportedLocales(filenames: string[]): string[] {
+  return filenames
+    .filter((filename) => filename.endsWith('.json') && !filename.startsWith('._'))
+    .map((filename) => filename.slice(0, -'.json'.length));
+}
+
 function woodpeckerInfoPlugin(): Plugin {
   return {
     name: 'woodpecker-info',
@@ -72,7 +78,7 @@ export default defineConfig({
       const virtualModuleId = 'virtual:vue-i18n-supported-locales';
       const resolvedVirtualModuleId = `\0${virtualModuleId}`;
 
-      const filenames = readdirSync('src/assets/locales/').map((filename) => filename.replace('.json', ''));
+      const filenames = getSupportedLocales(readdirSync('src/assets/locales/'));
 
       return {
         name: 'vue-i18n-supported-locales',

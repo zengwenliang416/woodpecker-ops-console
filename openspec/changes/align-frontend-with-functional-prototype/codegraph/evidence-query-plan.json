@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-09T07:53:10.363Z",
+  "generated_at": "2026-08-09T12:06:14.498Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -17,6 +17,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-001-date-duration-integrity --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-002-shared-shell-alignment:evidence",
+      "claim_id": "development:task-002-shared-shell-alignment",
+      "stage": "development",
+      "task_id": "002-shared-shell-alignment",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open the shared shell as an authenticated regular user or administrator, use the\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-002-shared-shell-alignment --query \"<query>\" --write --json"
     }
   ]
 }

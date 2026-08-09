@@ -3,11 +3,11 @@
     <router-view v-if="layout === 'blank'" />
     <template v-else>
       <div class="app-shell">
-        <Sidebar :open="sidebarOpen" @close="sidebarOpen = false" />
-        <div v-if="sidebarOpen" class="drawer-backdrop md:hidden" @click="sidebarOpen = false" />
-        <div class="app-main">
-          <Navbar @open-sidebar="sidebarOpen = true" />
-          <main class="relative flex h-full min-h-0">
+        <Sidebar :open="sidebarOpen" @close="closeSidebar" />
+        <div v-if="sidebarOpen" class="drawer-backdrop md:hidden" aria-hidden="true" @click="closeSidebar" />
+        <div ref="appMain" class="app-main">
+          <Navbar :sidebar-open="sidebarOpen" @open-sidebar="openSidebar" />
+          <main class="relative flex min-h-0 flex-1">
             <div id="scroll-component" class="flex grow flex-col overflow-y-auto">
               <router-view />
             </div>
@@ -25,7 +25,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue';
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
@@ -52,12 +52,126 @@ apiClient.setErrorHandler((err) => {
 const layout = computed(() => route.meta.layout ?? 'default');
 
 const sidebarOpen = ref(false);
-watch(
-  () => route.path,
-  () => {
-    sidebarOpen.value = false;
-  },
-);
+const appMain = ref<HTMLElement>();
+let previousBodyOverflow: string | undefined;
+let sidebarTrigger: HTMLElement | null = null;
+let desktopMediaQuery: MediaQueryList | undefined;
+
+const focusableSelector = [
+  'a[href]',
+  'button:not([disabled])',
+  'input:not([disabled])',
+  'select:not([disabled])',
+  'textarea:not([disabled])',
+  '[tabindex]:not([tabindex="-1"])',
+].join(',');
+
+function getSidebarElement() {
+  return document.getElementById('app-sidebar');
+}
+
+function getSidebarFocusables() {
+  return [...(getSidebarElement()?.querySelectorAll<HTMLElement>(focusableSelector) ?? [])].filter(
+    (element) => !element.hidden,
+  );
+}
+
+function setBackgroundInert(inert: boolean) {
+  if (inert) {
+    appMain.value?.setAttribute('inert', '');
+    return;
+  }
+  appMain.value?.removeAttribute('inert');
+}
+
+function restoreBodyScroll() {
+  if (previousBodyOverflow === undefined) {
+    return;
+  }
+  document.body.style.overflow = previousBodyOverflow;
+  previousBodyOverflow = undefined;
+}
+
+function openSidebar(trigger?: HTMLElement | null) {
+  if (desktopMediaQuery?.matches) {
+    return;
+  }
+  sidebarTrigger = trigger ?? null;
+  sidebarOpen.value = true;
+}
+
+function closeSidebar() {
+  sidebarOpen.value = false;
+}
+
+watch(sidebarOpen, async (isOpen) => {
+  if (isOpen) {
+    previousBodyOverflow ??= document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    setBackgroundInert(true);
+    await nextTick();
+    (getSidebarFocusables()[0] ?? getSidebarElement())?.focus();
+    return;
+  }
+
+  restoreBodyScroll();
+  setBackgroundInert(false);
+  await nextTick();
+  sidebarTrigger?.focus();
+  sidebarTrigger = null;
+});
+
+watch(() => route.path, closeSidebar);
+
+function handleDrawerKeydown(event: KeyboardEvent) {
+  if (event.key === 'Escape' && sidebarOpen.value) {
+    closeSidebar();
+    return;
+  }
+  if (event.key !== 'Tab' || !sidebarOpen.value) {
+    return;
+  }
+
+  const focusables = getSidebarFocusables();
+  const first = focusables[0];
+  const last = focusables.at(-1);
+  if (!first || !last) {
+    event.preventDefault();
+    getSidebarElement()?.focus();
+    return;
+  }
+
+  const activeElement = document.activeElement;
+  if (!getSidebarElement()?.contains(activeElement)) {
+    event.preventDefault();
+    first.focus();
+  } else if (event.shiftKey && activeElement === first) {
+    event.preventDefault();
+    last.focus();
+  } else if (!event.shiftKey && activeElement === last) {
+    event.preventDefault();
+    first.focus();
+  }
+}
+
+function handleDesktopBreakpoint(event: MediaQueryListEvent) {
+  if (event.matches && sidebarOpen.value) {
+    sidebarTrigger = null;
+    closeSidebar();
+  }
+}
+
+onMounted(() => {
+  document.addEventListener('keydown', handleDrawerKeydown);
+  desktopMediaQuery = window.matchMedia('(min-width: 768px)');
+  desktopMediaQuery.addEventListener('change', handleDesktopBreakpoint);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleDrawerKeydown);
+  desktopMediaQuery?.removeEventListener('change', handleDesktopBreakpoint);
+  setBackgroundInert(false);
+  restoreBodyScroll();
+});
 
 const { locale } = useI18n();
 watch(
@@ -86,7 +200,7 @@ watch(
 }
 
 .drawer-backdrop {
-  @apply fixed inset-0 z-20 bg-black/50;
+  @apply fixed inset-0 z-25 bg-black/50;
 }
 
 #scroll-component {
