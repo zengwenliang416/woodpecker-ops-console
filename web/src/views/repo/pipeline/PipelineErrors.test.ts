@@ -104,4 +104,14 @@ describe('pipeline error diagnostics', () => {
     expect(wrapper.get('[data-feedback-state="empty"]').text()).toContain('No pipeline errors');
     expect(wrapper.text()).not.toContain('Previous success');
   });
+
+  it('contains long runtime errors inside the diagnostic surface', () => {
+    const wrapper = mountErrors({
+      workflowError: `container failed: ${'trace/'.repeat(50)}`,
+    });
+
+    expect(wrapper.classes()).toContain('min-w-0');
+    expect(wrapper.get('article').classes()).toContain('min-w-0');
+    expect(wrapper.get('pre').classes()).toEqual(expect.arrayContaining(['min-w-0', 'overflow-auto']));
+  });
 });

@@ -1,0 +1,75 @@
+{
+  "task_id": "008-pipeline-regression-coverage",
+  "goal": "Protect the completed pipeline detail route family with focused component and router regressions for current routes, status/cancellation variants, permissions, actions, tabs, empty/error states, and responsive containment.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/008-pipeline-regression-coverage/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/router.ts",
+    "web/src/router.test.ts",
+    "web/src/views/repo/pipeline/PipelineWrapper.vue",
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+    "web/src/views/repo/pipeline/Pipeline.vue",
+    "web/src/views/repo/pipeline/Pipeline.test.ts",
+    "web/src/components/repo/pipeline/PipelineLog.vue",
+    "web/src/components/repo/pipeline/PipelineLog.test.ts",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+    "web/src/views/repo/pipeline/PipelineConfig.vue",
+    "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+    "web/src/views/repo/pipeline/PipelineErrors.vue",
+    "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.vue",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+  ],
+  "allowed_files": [
+    "web/src/router.test.ts",
+    "web/src/views/repo/pipeline/PipelineWrapper.vue",
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+    "web/src/views/repo/pipeline/Pipeline.test.ts",
+    "web/src/components/repo/pipeline/PipelineLog.test.ts",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+    "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+    "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+  ],
+  "test_paths": [
+    "web/src/router.test.ts",
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+    "web/src/views/repo/pipeline/Pipeline.test.ts",
+    "web/src/components/repo/pipeline/PipelineLog.test.ts",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+    "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+    "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+  ],
+  "non_goals": [
+    "Do not change production components other than the verified PipelineWrapper cancellation-parameter correction, router definitions, APIs, stores, backend behavior, persistence, dependencies, authentication, permission calculation, locales, or the approved prototype.",
+    "Do not add routes, query parameters, status/event variants, permissions, actions, fields, fixtures, compatibility behavior, or prototype-only data.",
+    "Do not perform task 3.5 consolidated browser, dark/light theme, locale, screenshot, or sensory evidence."
+  ],
+  "expected_evidence": [
+    "Focused router/component tests covering named routes, tabs/counts, killed cancellation context, permissions/actions, step routing, empty/error states, and local responsive containment.",
+    "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+    "Evidence-bearing task report plus independent spec and quality reviews that keep task 3.5 sensory evidence open."
+  ],
+  "unsafe_assumptions": [
+    "Rendered tabs do not prove named route resolution or route parameter shape.",
+    "Status variants do not prove all cancel_info branches.",
+    "Workflow PID, step PID, invalid step ID, and log-close selection behavior are distinct contracts.",
+    "Structural containment assertions are not browser no-overflow evidence."
+  ],
+  "stop_condition": "Stop if a required fix needs any production file other than PipelineWrapper.vue, a new router/API/store/backend/dependency/permission contract, prototype-only data, task 3.5 sensory evidence, or duplicated shared test infrastructure."
+}

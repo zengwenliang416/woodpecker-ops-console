@@ -98,8 +98,19 @@ const PipelineLogStub = defineComponent({
   props: {
     stepId: Number,
   },
-  setup(props) {
-    return () => h('section', { 'data-testid': 'pipeline-log', 'data-step-id': props.stepId });
+  emits: ['update:stepId'],
+  setup(props, { emit }) {
+    return () =>
+      h('section', { 'data-testid': 'pipeline-log', 'data-step-id': props.stepId }, [
+        h(
+          'button',
+          {
+            'data-testid': 'pipeline-log-close',
+            onClick: () => emit('update:stepId', null),
+          },
+          'close log',
+        ),
+      ]);
   },
 });
 
@@ -337,6 +348,40 @@ describe('pipeline overview', () => {
 
     expect(wrapper.find('[data-testid="pipeline-overview"]').exists()).toBe(false);
     expect(wrapper.get('[data-testid="pipeline-log"]').attributes('data-step-id')).toBe('12');
+  });
+
+  it.each([
+    ['10', '11'],
+    ['999', '11'],
+  ])('maps workflow and invalid route parameter %s to the current first real step', (stepId, expectedStepId) => {
+    const wrapper = mountPipeline({ stepId });
+
+    expect(wrapper.find('[data-testid="pipeline-overview"]').exists()).toBe(false);
+    expect(wrapper.get('[data-testid="pipeline-log"]').attributes('data-step-id')).toBe(expectedStepId);
+  });
+
+  it('clears the current step route parameter when the mobile log closes', async () => {
+    testState.route.params = { repoId: '101', pipelineId: '842', stepId: '12' };
+    const wrapper = mountPipeline({ stepId: '12' });
+
+    await wrapper.get('[data-testid="pipeline-log-close"]').trigger('click');
+
+    expect(testState.routerReplace).toHaveBeenCalledWith({
+      params: {
+        repoId: '101',
+        pipelineId: '842',
+        stepId: '',
+      },
+    });
+  });
+
+  it('contains the overview and dense step table inside the route body on narrow viewports', () => {
+    const wrapper = mountPipeline();
+    const table = wrapper.get('table');
+
+    expect(wrapper.get('[data-testid="pipeline-overview"]').classes()).toContain('min-w-0');
+    expect(table.classes()).toContain('min-w-3xl');
+    expect(table.element.parentElement?.classList.contains('overflow-x-auto')).toBe(true);
   });
 
   it('renders an explicit no-step state without manufacturing summary rows', () => {

@@ -276,6 +276,19 @@ describe('pipeline log diagnostics', () => {
     expect(wrapper.get('[data-testid="log-console"]').attributes('data-wrap')).toBe('false');
   });
 
+  it('keeps log controls wrap-safe and scrolls dense output inside the console', async () => {
+    const wrapper = mountLog();
+    await finishLogLoad();
+
+    const search = wrapper.get('[data-testid="log-search"]');
+    const controls = wrapper.get('[data-testid="log-errors-only"]').element.parentElement;
+    const consoleElement = wrapper.get('[data-testid="log-console"]');
+
+    expect(search.element.parentElement?.classList.contains('min-w-0')).toBe(true);
+    expect(controls?.classList.contains('flex-wrap')).toBe(true);
+    expect(consoleElement.classes()).toEqual(expect.arrayContaining(['max-w-full', 'overflow-auto']));
+  });
+
   it('keeps destructive log deletion hidden without repository push permission', async () => {
     const wrapper = mountLog({ pull: true, push: false, admin: false });
     await finishLogLoad();

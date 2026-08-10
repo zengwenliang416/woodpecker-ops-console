@@ -233,8 +233,18 @@ function mountWrapper({
         DeployPipelinePopup: DeployPipelinePopupStub,
         Icon: true,
         RouterLink: defineComponent({
-          setup(_, { slots }) {
-            return () => h('a', slots.default?.());
+          props: {
+            to: [String, Object],
+          },
+          setup(props, { slots }) {
+            return () =>
+              h(
+                'a',
+                {
+                  'data-router-to': props.to !== undefined ? JSON.stringify(props.to) : undefined,
+                },
+                slots.default?.(),
+              );
           },
         }),
         RouterView: true,
@@ -409,6 +419,85 @@ describe('pipeline detail header', () => {
       'Config',
       'Errors',
     ]);
+  });
+
+  it('binds tabs to the existing named routes and reports real changed-file and error counts', async () => {
+    const wrapper = mountWrapper({
+      currentPipeline: pipeline({
+        changed_files: ['src/main.ts', 'README.md'],
+        errors: [{ type: 'linter', message: 'missing image', is_warning: false }],
+        workflows: [
+          {
+            id: 1,
+            pipeline_id: 842,
+            pid: 10,
+            name: 'build',
+            state: 'failure',
+            error: 'container failed',
+            children: [],
+          },
+        ],
+      }),
+    });
+    await flushPromises();
+
+    expect(
+      wrapper.findAll('[data-tab]').map((tab) => ({
+        title: tab.attributes('data-tab'),
+        to: tab.attributes('data-to'),
+        count: tab.attributes('data-count'),
+      })),
+    ).toEqual([
+      { title: 'Overview', to: JSON.stringify({ name: 'repo-pipeline' }), count: undefined },
+      {
+        title: 'Changed files',
+        to: JSON.stringify({ name: 'repo-pipeline-changed-files' }),
+        count: '2',
+      },
+      { title: 'Config', to: JSON.stringify({ name: 'repo-pipeline-config' }), count: undefined },
+      { title: 'Errors', to: JSON.stringify({ name: 'repo-pipeline-errors' }), count: '2' },
+      { title: 'Debug', to: JSON.stringify({ name: 'repo-pipeline-debug' }), count: undefined },
+    ]);
+  });
+
+  it.each([
+    [
+      { canceled_by_user: '', canceled_by_step: '', superseded_by: 843 },
+      'Superseded by #843',
+      { name: 'repo-pipeline', params: { pipelineId: 843 } },
+    ],
+    [{ canceled_by_user: 'alice', canceled_by_step: '', superseded_by: 0 }, 'Canceled by alice', undefined],
+    [{ canceled_by_user: '', canceled_by_step: 'build', superseded_by: 0 }, 'Canceled due to build', undefined],
+  ])(
+    'renders killed pipeline cancellation context from the current pipeline data',
+    async (cancelInfo, text, target) => {
+      const wrapper = mountWrapper({
+        currentPipeline: pipeline({
+          status: 'killed',
+          cancel_info: cancelInfo,
+        }),
+      });
+      await flushPromises();
+
+      const cancellation = wrapper.get('[data-slot="tab-actions"]');
+      expect(cancellation.text()).toContain(text);
+      if (target) {
+        expect(cancellation.get('[data-router-to]').attributes('data-router-to')).toBe(JSON.stringify(target));
+      } else {
+        expect(cancellation.find('[data-router-to]').exists()).toBe(false);
+      }
+    },
+  );
+
+  it('keeps the completed pipeline header and action groups wrap-safe for narrow viewports', async () => {
+    const wrapper = mountWrapper();
+    await flushPromises();
+
+    expect(wrapper.get('[data-testid="pipeline-detail-heading"]').classes()).toContain('min-w-0');
+    expect(wrapper.get('[data-testid="pipeline-detail-eyebrow"]').classes()).toContain('flex-wrap');
+    expect(wrapper.get('[data-testid="pipeline-metadata"]').classes()).toContain('flex-wrap');
+    expect(wrapper.get('[data-slot="header-actions"] > div').classes()).toContain('flex-wrap');
+    expect(wrapper.get('[data-slot="tab-actions"] > div').classes()).toContain('flex-wrap');
   });
 
   it('keeps blocked pipelines mutation-free while retaining permission-gated debug access', async () => {

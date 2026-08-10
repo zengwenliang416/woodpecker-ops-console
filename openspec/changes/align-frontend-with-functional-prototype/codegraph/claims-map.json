@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-09T17:38:54.171Z",
+  "generated_at": "2026-08-10T03:23:55.071Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -236,6 +236,31 @@
       ],
       "query_ids": [
         "development:task-007-pipeline-log-diagnostics:evidence"
+      ]
+    },
+    {
+      "id": "development:task-008-pipeline-regression-coverage",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "008-pipeline-regression-coverage",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/008-pipeline-regression-coverage/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/008-pipeline-regression-coverage/context.json"
+      ],
+      "expected_evidence": [
+        "Focused tests or command output",
+        "Task report",
+        "Spec review",
+        "Quality review"
+      ],
+      "allowed_files": [
+        "src"
+      ],
+      "query_ids": [
+        "development:task-008-pipeline-regression-coverage:evidence"
       ]
     }
   ]

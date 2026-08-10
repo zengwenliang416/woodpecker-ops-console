@@ -119,4 +119,14 @@ describe('pipeline debug feedback', () => {
     expect(testState.notify).toHaveBeenCalledWith({ type: 'success', title: 'Metadata downloaded successfully' });
     expect(testState.revokeObjectURL).toHaveBeenCalledWith('blob:metadata');
   });
+
+  it('contains the CLI and version values inside local scroll regions', () => {
+    const wrapper = mountDebug(true);
+    const codeBlocks = wrapper.findAll('pre');
+
+    expect(wrapper.classes()).toContain('min-w-0');
+    expect(codeBlocks).toHaveLength(2);
+    expect(codeBlocks[0].element.parentElement?.classList.contains('overflow-auto')).toBe(true);
+    expect(codeBlocks[1].classes()).toEqual(expect.arrayContaining(['min-w-0', 'overflow-auto']));
+  });
 });

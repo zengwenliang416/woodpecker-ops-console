@@ -181,6 +181,26 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "008-pipeline-regression-coverage",
+      "baseline_task_id": "3.4",
+      "goal": "Protect the completed pipeline detail route family with focused component and router regressions for current routes, status/cancellation variants, permissions, actions, tabs, empty/error states, and responsive containment.",
+      "depends_on": [
+        "3.3"
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/views/repo/pipeline/PipelineWrapper.vue",
+        "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+        "web/src/views/repo/pipeline/Pipeline.test.ts",
+        "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+      ],
+      "status": "complete"
     }
   ]
 }

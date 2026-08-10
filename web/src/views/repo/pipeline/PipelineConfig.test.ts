@@ -108,4 +108,19 @@ describe('pipeline configuration diagnostics', () => {
 
     expect(wrapper.get('[data-feedback-state="empty"]').text()).toContain('No historical configuration');
   });
+
+  it('contains long read-only configuration inside its own scroll region', () => {
+    const wrapper = mountConfig([
+      {
+        hash: 'config-hash',
+        name: '.woodpecker.yml',
+        data: encode(`steps:\n  test:\n    commands:\n      - ${'x'.repeat(200)}`),
+      },
+    ]);
+    const code = wrapper.get('[data-config-code]');
+
+    expect(wrapper.classes()).toContain('min-w-0');
+    expect(code.element.parentElement?.classList.contains('min-w-0')).toBe(true);
+    expect(code.element.parentElement?.classList.contains('overflow-auto')).toBe(true);
+  });
 });

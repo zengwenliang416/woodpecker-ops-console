@@ -77,4 +77,12 @@ describe('pipeline changed files diagnostics', () => {
     await filteredWrapper.get('[data-testid="changed-files-search"]').setValue('docs');
     expect(filteredWrapper.get('[data-feedback-state="empty"]').text()).toContain('No matching files');
   });
+
+  it('contains long changed-file paths inside the diagnostic card', () => {
+    const wrapper = mountChangedFiles(['packages/really-long-feature-name/src/routes/deeply/nested/pipeline.ts']);
+
+    expect(wrapper.classes()).toEqual(expect.arrayContaining(['min-w-0', 'overflow-hidden']));
+    expect(wrapper.get('ul').classes()).toEqual(expect.arrayContaining(['min-w-0', 'overflow-auto']));
+    expect(wrapper.get('li span').classes()).toEqual(expect.arrayContaining(['min-w-0', 'break-all']));
+  });
 });
