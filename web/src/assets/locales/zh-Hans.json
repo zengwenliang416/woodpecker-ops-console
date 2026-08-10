@@ -347,6 +347,37 @@
       "warnings": "警告",
       "we_got_some_errors": "哦不，发生了一些错误！",
       "no_logs": "无日志",
+      "log_diagnostics": {
+        "search": "搜索日志行",
+        "search_placeholder": "搜索已加载的日志行…",
+        "errors_only": "仅看错误",
+        "wrap_lines": "自动换行",
+        "clear_filters": "清除筛选",
+        "visible_lines": "{visible}/{total} 行",
+        "no_match": "没有匹配的日志行"
+      },
+      "changed_files": {
+        "title": "变更文件路径",
+        "description": "本次流水线执行报告的文件路径。",
+        "search": "搜索路径",
+        "search_placeholder": "筛选变更文件路径…",
+        "file_count_one": "{count} 个文件",
+        "file_count": "{count} 个文件",
+        "filtered_file_count_one": "{visible}/{total} 个文件",
+        "filtered_file_count": "{visible}/{total} 个文件",
+        "empty": "没有变更文件",
+        "empty_description": "本次流水线未报告变更文件路径。",
+        "no_match": "没有匹配的文件",
+        "no_match_description": "当前搜索没有匹配任何已报告路径。"
+      },
+      "config_diagnostics": {
+        "read_only": "已解码的历史配置，仅供只读检查。",
+        "copy": "复制配置",
+        "copy_success": "配置已复制",
+        "copy_error": "无法复制配置",
+        "empty": "没有历史配置",
+        "empty_description": "此流水线不包含已存储的配置快照。"
+      },
       "created": "创建于：{created}",
       "debug": {
         "title": "调试",
@@ -370,7 +401,14 @@
       "version": "此流水线在该 Woodpecker 版本上执行。",
       "version_header": "Woodpecker 版本",
       "parse_errors": "解析错误",
-      "runtime_errors": "运行时错误"
+      "runtime_errors": "运行时错误",
+      "error_diagnostics": {
+        "title": "流水线诊断",
+        "description": "本次执行报告的运行时和配置错误。",
+        "view_changed_files": "查看变更文件",
+        "empty": "没有流水线错误",
+        "empty_description": "此流水线未报告运行时或配置错误。"
+      }
     },
     "pull_requests": "合并请求",
     "settings": {

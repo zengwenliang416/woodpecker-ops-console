@@ -296,6 +296,37 @@
       "log_download_error": "An error occurred while downloading the log file",
       "log_delete_confirm": "Do you really want to delete the step logs?",
       "log_delete_error": "An error occurred when deleting the step logs",
+      "log_diagnostics": {
+        "search": "Search log lines",
+        "search_placeholder": "Search loaded log lines…",
+        "errors_only": "Errors only",
+        "wrap_lines": "Wrap lines",
+        "clear_filters": "Clear filters",
+        "visible_lines": "{visible} of {total} lines",
+        "no_match": "No matching log lines"
+      },
+      "changed_files": {
+        "title": "Changed file paths",
+        "description": "Files reported by this pipeline execution.",
+        "search": "Search paths",
+        "search_placeholder": "Filter changed file paths…",
+        "file_count_one": "{count} file",
+        "file_count": "{count} files",
+        "filtered_file_count_one": "{visible} of {total} file",
+        "filtered_file_count": "{visible} of {total} files",
+        "empty": "No changed files",
+        "empty_description": "This pipeline did not report any changed file paths.",
+        "no_match": "No matching files",
+        "no_match_description": "No reported path matches the current search."
+      },
+      "config_diagnostics": {
+        "read_only": "Historical configuration, decoded for read-only inspection.",
+        "copy": "Copy config",
+        "copy_success": "Configuration copied",
+        "copy_error": "Configuration could not be copied",
+        "empty": "No historical configuration",
+        "empty_description": "This pipeline does not include a stored configuration snapshot."
+      },
       "actions": {
         "cancel": "Cancel",
         "retry": "Retry",
@@ -358,6 +389,13 @@
       "we_got_some_errors": "Oh no, an error occurred!",
       "parse_errors": "Parse errors",
       "runtime_errors": "Runtime errors",
+      "error_diagnostics": {
+        "title": "Pipeline diagnostics",
+        "description": "Runtime and configuration errors reported for this execution.",
+        "view_changed_files": "View changed files",
+        "empty": "No pipeline errors",
+        "empty_description": "This pipeline does not report runtime or configuration errors."
+      },
       "duration": "Pipeline duration: {duration}",
       "created": "Created: {created}",
       "version": "The Woodpecker version this pipeline was executed on.",

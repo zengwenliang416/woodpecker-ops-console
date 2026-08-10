@@ -73,9 +73,60 @@
       </div>
 
       <div
-        v-show="hasLogs && loadedLogs && (log?.length || 0) > 0"
+        v-if="hasLogs && loadedLogs"
+        class="border-wp-code-200 bg-wp-code-100 flex flex-col gap-2 border-t px-3 py-2 sm:flex-row sm:items-center"
+      >
+        <label class="relative min-w-0 flex-1">
+          <span class="sr-only">{{ $t('repo.pipeline.log_diagnostics.search') }}</span>
+          <input
+            v-model="logSearch"
+            data-testid="log-search"
+            type="search"
+            class="border-wp-code-200 bg-wp-code-200 text-wp-code-text-100 placeholder:text-wp-code-text-alt-100 focus:border-wp-primary-100 h-8 w-full rounded-md border px-3 text-xs outline-hidden"
+            :placeholder="$t('repo.pipeline.log_diagnostics.search_placeholder')"
+          />
+        </label>
+        <div class="flex flex-wrap items-center gap-2">
+          <Button
+            data-testid="log-errors-only"
+            size="sm"
+            :color="errorsOnly ? 'red' : 'gray'"
+            :text="$t('repo.pipeline.log_diagnostics.errors_only')"
+            :aria-pressed="errorsOnly"
+            @click="errorsOnly = !errorsOnly"
+          />
+          <Button
+            data-testid="log-wrap"
+            size="sm"
+            :color="wrapLines ? 'green' : 'gray'"
+            :text="$t('repo.pipeline.log_diagnostics.wrap_lines')"
+            :aria-pressed="wrapLines"
+            @click="wrapLines = !wrapLines"
+          />
+          <Button
+            data-testid="log-clear-filters"
+            size="sm"
+            :disabled="!hasActiveFilters"
+            :text="$t('repo.pipeline.log_diagnostics.clear_filters')"
+            @click="clearFilters"
+          />
+          <span class="text-wp-code-text-alt-100 ml-auto text-[11px] whitespace-nowrap">
+            {{
+              $t('repo.pipeline.log_diagnostics.visible_lines', {
+                visible: filteredLog.length,
+                total: log?.length ?? 0,
+              })
+            }}
+          </span>
+        </div>
+      </div>
+
+      <div
+        v-show="hasLogs && loadedLogs && filteredLog.length > 0"
         ref="consoleElement"
-        class="grid w-full max-w-full grow scroll-pt-8 auto-rows-min grid-cols-[min-content_minmax(0,1fr)_min-content] overflow-x-hidden overflow-y-auto p-4 text-xs md:text-sm"
+        data-testid="log-console"
+        :data-wrap="String(wrapLines)"
+        class="grid w-full max-w-full grow scroll-pt-8 auto-rows-min grid-cols-[min-content_minmax(0,1fr)_min-content] overflow-auto p-4 text-xs md:text-sm"
       >
         <div v-for="group in groupedLogs" :key="group.id" class="contents">
           <div
@@ -102,7 +153,7 @@
           </div>
 
           <template v-if="!collapsedCommands.has(group.id)">
-            <div v-for="line in group.lines" :key="line.index" class="contents font-mono">
+            <div v-for="line in group.lines" :key="line.index" data-log-line class="contents font-mono">
               <a
                 :id="`L${line.number}`"
                 :href="`#L${line.number}`"
@@ -118,11 +169,13 @@
               </a>
               <!-- eslint-disable vue/no-v-html -->
               <span
-                class="wrap-break-words align-top whitespace-pre-wrap"
+                class="align-top"
                 :class="{
                   'bg-wp-error-100/30': line.type === 'error',
                   'bg-yellow-600/40 dark:bg-yellow-800/50': line.type === 'warning',
                   'bg-wp-state-info-100/25': isSelected(line),
+                  'wrap-break-words whitespace-pre-wrap': wrapLines,
+                  'whitespace-pre': !wrapLines,
                 }"
                 v-html="line.text"
               />
@@ -148,6 +201,14 @@
         <span v-else-if="!step?.started">{{ $t('repo.pipeline.step_not_started') }}</span>
         <div v-else-if="!loadedLogs">{{ $t('repo.pipeline.loading') }}</div>
         <div v-else-if="log?.length === 0">{{ $t('repo.pipeline.no_logs') }}</div>
+        <div
+          v-else-if="hasActiveFilters && filteredLog.length === 0"
+          data-testid="log-filter-empty"
+          class="flex max-w-md flex-col items-center gap-3 px-4 text-center"
+        >
+          <span>{{ $t('repo.pipeline.log_diagnostics.no_match') }}</span>
+          <Button size="sm" :text="$t('repo.pipeline.log_diagnostics.clear_filters')" @click="clearFilters" />
+        </div>
       </div>
 
       <div
@@ -172,6 +233,7 @@ import { computed, nextTick, onBeforeUnmount, onMounted, ref, toRef, watch } fro
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
 
+import Button from '~/components/atomic/Button.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
 import PipelineStatusIcon from '~/components/repo/pipeline/PipelineStatusIcon.vue';
@@ -190,6 +252,7 @@ interface LogLine {
   rawText?: string;
   time?: number;
   type: 'error' | 'warning' | null;
+  sourceType?: number;
 }
 
 interface LogBlock {
@@ -226,6 +289,10 @@ const stream = ref<EventSource>();
 const log = ref<LogLine[]>();
 const consoleElement = ref<Element>();
 const fullscreen = ref(false);
+const logSearch = ref('');
+const errorsOnly = ref(false);
+const wrapLines = ref(true);
+let loadGeneration = 0;
 
 const loadedLogs = computed(() => !!log.value);
 const hasLogs = computed(
@@ -246,6 +313,16 @@ const maxLineCount = config.maxPipelineLogLineCount; // TODO(2653): implement la
 const hasPushPermission = computed(() => repoPermissions?.value?.push);
 
 const collapsedCommands = ref(new Set<number>());
+const hasActiveFilters = computed(() => logSearch.value.trim().length > 0 || errorsOnly.value);
+const filteredLog = computed(() => {
+  const search = logSearch.value.trim().toLocaleLowerCase();
+  return (log.value ?? []).filter((line) => {
+    if (errorsOnly.value && line.sourceType !== 1) {
+      return false;
+    }
+    return search.length === 0 || (line.rawText ?? '').toLocaleLowerCase().includes(search);
+  });
+});
 
 const commandRegex = /^\s*-\s(.+)$/gm;
 const specialCharsRegex = /[.*+?^${}()|[\]\\]/g;
@@ -270,15 +347,15 @@ const knownCommandMatchers = computed(() => {
   return patterns;
 });
 
-const groupedLogs = computed(() => {
-  if (!log.value) return [];
+function groupLogLines(lines: LogLine[]): LogBlock[] {
+  if (lines.length === 0) return [];
 
   if (!pipelineConfigs.value || pipelineConfigs.value.length === 0) {
     return [
       {
         id: 0,
         command: null,
-        lines: log.value,
+        lines,
         isActualCommand: false,
       },
     ];
@@ -287,7 +364,7 @@ const groupedLogs = computed(() => {
   const blocks: LogBlock[] = [];
   let currentBlock: LogBlock | null = null;
 
-  log.value.forEach((line) => {
+  lines.forEach((line) => {
     const trimmedText = (line.rawText || '').trim();
 
     let isCommand = false;
@@ -319,11 +396,11 @@ const groupedLogs = computed(() => {
   });
 
   return blocks;
-});
+}
 
-const hasGroupedLogs = computed(() => {
-  return groupedLogs.value.find((g) => g.isActualCommand);
-});
+const allGroupedLogs = computed(() => groupLogLines(log.value ?? []));
+const groupedLogs = computed(() => groupLogLines(filteredLog.value));
+const hasGroupedLogs = computed(() => allGroupedLogs.value.some((group) => group.isActualCommand));
 
 const urlRegex = /https?:\/\/\S+/g;
 
@@ -357,7 +434,7 @@ function expandAll() {
 
 function collapseAll() {
   const newSet = new Set<number>();
-  groupedLogs.value.forEach((group) => {
+  allGroupedLogs.value.forEach((group) => {
     if (group.isActualCommand) {
       newSet.add(group.id);
     }
@@ -374,7 +451,12 @@ function processText(text: string): string {
   return txt;
 }
 
-function writeLog(line: Partial<LogLine>) {
+function clearFilters() {
+  logSearch.value = '';
+  errorsOnly.value = false;
+}
+
+function writeLog(line: { index?: number; text?: string; time?: number; sourceType?: number }) {
   const rawText = decode(line.text ?? '');
   logBuffer.value.push({
     index: line.index ?? 0,
@@ -382,7 +464,8 @@ function writeLog(line: Partial<LogLine>) {
     text: processText(line.text ?? ''),
     rawText,
     time: line.time ?? 0,
-    type: null, // TODO: implement way to detect errors and warnings
+    type: line.sourceType === 1 ? 'error' : null,
+    sourceType: line.sourceType,
   });
 }
 
@@ -473,6 +556,8 @@ async function loadLogs() {
     return;
   }
 
+  const generation = ++loadGeneration;
+  const requestedStepSlug = stepSlug.value;
   log.value = undefined;
   logBuffer.value = [];
   ansiUp.value = new AnsiUp();
@@ -487,12 +572,18 @@ async function loadLogs() {
   if (step.value.state !== 'running' && step.value.state !== 'pending') {
     loadedStepSlug.value = stepSlug.value;
     const logs = await apiClient.getLogs(repo.value.id, pipeline.value.number, step.value.id);
-    logs?.forEach((line) => writeLog({ index: line.line, text: line.data, time: line.time }));
+    if (generation !== loadGeneration || requestedStepSlug !== stepSlug.value) {
+      return;
+    }
+    logs?.forEach((line) => writeLog({ index: line.line, text: line.data, time: line.time, sourceType: line.type }));
     flushLogs(false);
   } else {
     loadedStepSlug.value = stepSlug.value;
     stream.value = apiClient.streamLogs(repo.value.id, pipeline.value.number, step.value.id, (line) => {
-      writeLog({ index: line.line, text: line.data, time: line.time });
+      if (generation !== loadGeneration || requestedStepSlug !== stepSlug.value) {
+        return;
+      }
+      writeLog({ index: line.line, text: line.data, time: line.time, sourceType: line.type });
       flushLogs(true);
     });
   }
@@ -567,7 +658,9 @@ watch(step, async (newStep, oldStep) => {
 const expandLogGroupWithPageHash = (hash: string) => {
   if (hash.startsWith('#L')) {
     const lineNum = Number.parseInt(hash.substring(2));
-    const parentGroup = groupedLogs.value.find((g) => lineNum === g.id || g.lines.some((l) => l.number === lineNum));
+    const parentGroup = allGroupedLogs.value.find(
+      (group) => lineNum === group.id || group.lines.some((line) => line.number === lineNum),
+    );
     if (parentGroup && collapsedCommands.value.has(parentGroup.id)) {
       collapsedCommands.value.delete(parentGroup.id);
     }

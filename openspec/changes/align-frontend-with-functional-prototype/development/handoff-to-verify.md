@@ -26,8 +26,13 @@
   and steps, with workflow/step counts, terminal progress, translated status,
   duration, environment, explicit image unavailability, and current step-log
   routing while preserving error, approval, decline, and permission behavior.
+- `007-pipeline-log-diagnostics` / baseline task `3.3`: the current log,
+  changed-files, config, errors, and Debug surfaces now expose real searchable
+  diagnostics, explicit empty/permission states, responsive containment, and
+  latest-request-wins step-log loading while preserving current routes, APIs,
+  streaming, downloads, deletion, and permissions.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `3.3` through `8.4` remain incomplete.
+  Tasks `3.4` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -45,13 +50,18 @@
   its focused component test, and English/Simplified-Chinese locales.
 - Pipeline execution overview: `web/src/views/repo/pipeline/Pipeline.vue`, its
   focused component test, and English/Simplified-Chinese locales.
+- Pipeline diagnostics: `web/src/components/repo/pipeline/PipelineLog.vue`,
+  `web/src/views/repo/pipeline/PipelineChangedFiles.vue`,
+  `PipelineConfig.vue`, `PipelineErrors.vue`, `PipelineDebug.vue`, five focused
+  tests, and English/Simplified-Chinese locales.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
   `development/tasks/003-shared-feedback-primitives/report.md`, and
   `development/tasks/004-shell-theme-evidence/report.md`, and
   `development/tasks/005-pipeline-detail-header/report.md`, and
-  `development/tasks/006-pipeline-overview/report.md`.
+  `development/tasks/006-pipeline-overview/report.md`, and
+  `development/tasks/007-pipeline-log-diagnostics/report.md`.
 
 ## Requirements Covered
 
@@ -69,6 +79,10 @@
   execution overview slice `006`; this covers only real workflow/step summary,
   unavailable-data fallbacks, current step-log entry, and responsive
   containment, not task `3.3` log controls or remaining route bodies.
+- `A2`, `A3`, and `A4` were independently verified for the completed pipeline
+  diagnostics slice `007`; this covers only current step logs, changed-file
+  paths, historical config, runtime/parse errors, metadata Debug, responsive
+  containment, and stale-log response protection, not tasks `3.4` or `3.5`.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -88,6 +102,11 @@
   environment data; unsupported executor image, queue, resource, agent,
   release, annotation, artifact, graph, and start-clock fixtures are not
   invented.
+- Pipeline diagnostics use current log types, changed-file strings, base64
+  config snapshots, typed errors, repository permissions, and metadata
+  endpoint data. Prototype-only diff statistics, config analysis, remediation,
+  previous-success comparison, and interactive Debug sessions are not
+  invented.
 - Desktop/mobile comparisons normalize theme, locale, viewport, administrator
   permission, and populated-data state instead of copying prototype fixtures.
 
@@ -106,16 +125,20 @@
 - Reused for the execution overview: `PipelineStepList`, `PipelineLog`,
   `PipelineStatusIcon`, `PipelineStepDuration`, `Badge`, `Panel`, `Button`,
   `usePipeline`, pipeline/config injection, Vue i18n, and current step routing.
+- Reused for diagnostics: `Button`, `IconButton`, `FeedbackState`, `Panel`,
+  `SyntaxHighlight`, `DocsLink`, `RenderMarkdown`, current API and injection
+  seams, notifications, i18n, router, clipboard, and browser download APIs.
 - Extracted: no new extraction was required after shared feedback ownership was
   established; slice `004` intentionally added no duplicate shell or theme
   component, and slice `006` has no second consumer with the same
-  workflow/environment/image/log contract.
+  workflow/environment/image/log contract. Slice `007` keeps its five distinct
+  diagnostic contracts separate instead of adding a configurable abstraction.
 
 ## API / Data Flow Changes
 
 - No backend, API payload, store, router, authentication, permission
   calculation, persistence, migration, or dependency contract changed in
-  slices `001` through `006`.
+  slices `001` through `007`.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -137,12 +160,16 @@
   explicit image availability and config entry, selected-step routing, empty
   workflows, error precedence, blocked approval/decline APIs, and read-only
   permission.
-- The current full frontend regression baseline is 24 test files and 149 tests.
+- Pipeline-diagnostics tests cover local log search/stderr filtering without
+  refetch, no-match/reset, wrapping, push-gated deletion, stale old-request
+  rejection, changed-file search/empty states, config decode/copy/empty
+  behavior, real error/empty behavior, and Debug permission/download cleanup.
+- The current full frontend regression baseline is 28 test files and 160 tests.
 
 ## Local Validation
 
-- PASS: current pipeline-overview focused suite, 1 file and 8 tests.
-- PASS: current complete frontend suite, 24 files and 149 tests.
+- PASS: current pipeline-diagnostics focused suite, 5 files and 13 tests.
+- PASS: current complete frontend suite, 28 files and 160 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -150,16 +177,17 @@
   including theme, locale, responsive overflow, drawer lifecycle, feedback
   states, long copy, busy/disabled controls, pipeline metadata, action/tab
   permission boundaries, execution overview and selected log states, explicit
-  unavailable-data fallbacks, internal table scrolling, and equivalent
-  dark Simplified-Chinese production/prototype comparison.
+  unavailable-data fallbacks, local log/path filters, config copy, error/empty
+  states, push/read-only Debug, internal dense-content scrolling, and
+  equivalent dark Simplified-Chinese production/prototype comparison.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twenty-six baseline tasks remain incomplete, including the pipeline log and
-  remaining route bodies, remaining route-family implementation, and full
-  six-domain verification tasks. Global prototype
-  parity must not be claimed.
+- Twenty-five baseline tasks remain incomplete, including remaining pipeline
+  status/router/action coverage, consolidated pipeline evidence, other
+  route-family implementation, and full six-domain verification tasks. Global
+  prototype parity must not be claimed.
 - The unchanged `web/src/style.css` has a pre-existing Prettier mismatch.
   Slice `004` records the original failure plus a contract-accepted,
   task-scoped zero-diff adjudication; this is not evidence that the file is
@@ -180,11 +208,15 @@
 - The current persisted/API step contract does not expose executor image data.
   Slice `006` reports this explicitly and does not parse arbitrary YAML or
   infer prototype fixture values.
+- Browser automation did not expose a capture event for the programmatic Debug
+  Blob download. The focused test directly verifies the metadata endpoint,
+  success feedback, and object-URL cleanup; final E2E verification must retain
+  that distinction.
 
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `3.3` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `3.4` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

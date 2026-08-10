@@ -157,6 +157,30 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "007-pipeline-log-diagnostics",
+      "baseline_task_id": "3.3",
+      "goal": "Align the real pipeline log, changed-files, configuration, error, and debug surfaces with shared responsive diagnostic patterns without changing routes, APIs, permissions, or inventing prototype-only data.",
+      "depends_on": [
+        "3.2"
+      ],
+      "allowed_files": [
+        "web/src/components/repo/pipeline/PipelineLog.vue",
+        "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "web/src/views/repo/pipeline/PipelineConfig.vue",
+        "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "web/src/views/repo/pipeline/PipelineErrors.vue",
+        "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "web/src/views/repo/pipeline/PipelineDebug.vue",
+        "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "web/src/style/console.css",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }

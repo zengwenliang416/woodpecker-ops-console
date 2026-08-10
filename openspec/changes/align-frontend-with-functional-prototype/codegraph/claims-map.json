@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-09T17:34:20.408Z",
+  "generated_at": "2026-08-09T17:38:54.171Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -199,6 +199,43 @@
       ],
       "query_ids": [
         "development:task-006-pipeline-overview:evidence"
+      ]
+    },
+    {
+      "id": "development:task-007-pipeline-log-diagnostics",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "007-pipeline-log-diagnostics",
+      "text": "Open any existing pipeline diagnostic destination and receive a coherent",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/007-pipeline-log-diagnostics/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/007-pipeline-log-diagnostics/context.json"
+      ],
+      "expected_evidence": [
+        "Focused red/green tests for log filters/wrapping and preserved actions, changed-file/config/error empty states, debug permission/download behavior, and responsive containment.",
+        "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+        "Desktop and 390px browser evidence for real log, changed-file, config, error, and debug states in dark Simplified Chinese plus representative light/English and push/read-only permissions.",
+        "Evidence-bearing task report plus independent A2/A3/A4 spec and quality reviews."
+      ],
+      "allowed_files": [
+        "web/src/components/repo/pipeline/PipelineLog.vue",
+        "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "web/src/views/repo/pipeline/PipelineConfig.vue",
+        "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "web/src/views/repo/pipeline/PipelineErrors.vue",
+        "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "web/src/views/repo/pipeline/PipelineDebug.vue",
+        "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "web/src/style/console.css",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "query_ids": [
+        "development:task-007-pipeline-log-diagnostics:evidence"
       ]
     }
   ]

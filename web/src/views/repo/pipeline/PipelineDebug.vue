@@ -1,19 +1,32 @@
 <template>
-  <template v-if="repoPermissions && repoPermissions.push">
-    <Panel>
-      <InputField :label="$t('repo.pipeline.debug.metadata_exec_title')">
-        <p class="text-wp-text-alt-100 mb-2 text-sm">{{ $t('repo.pipeline.debug.metadata_exec_desc') }}</p>
-        <pre class="code-box">{{ cliExecWithMetadata }}</pre>
-      </InputField>
-      <div class="flex items-center space-x-4">
-        <Button :is-loading="isLoading" :text="$t('repo.pipeline.debug.download_metadata')" @click="downloadMetadata" />
+  <div
+    v-if="repoPermissions && repoPermissions.push"
+    class="grid min-w-0 gap-4 lg:grid-cols-[minmax(0,1.5fr)_minmax(16rem,0.5fr)]"
+  >
+    <Panel :title="$t('repo.pipeline.debug.metadata_exec_title')">
+      <div class="flex min-w-0 flex-col gap-4">
+        <p class="text-wp-text-alt-100 text-sm leading-6">{{ $t('repo.pipeline.debug.metadata_exec_desc') }}</p>
+        <div class="min-w-0 overflow-auto rounded-lg">
+          <pre class="code-box min-w-max font-mono text-xs">{{ cliExecWithMetadata }}</pre>
+        </div>
+        <div class="flex flex-wrap items-center gap-3">
+          <Button
+            :is-loading="isLoading"
+            :text="$t('repo.pipeline.debug.download_metadata')"
+            @click="downloadMetadata"
+          />
+          <span class="text-wp-text-alt-100 min-w-0 text-xs break-all">{{ metadataFileName }}</span>
+        </div>
       </div>
-      <InputField v-if="pipeline.version" :label="$t('repo.pipeline.version_header')" class="pt-4">
-        <p class="text-wp-text-alt-100 mb-2 text-sm">{{ $t('repo.pipeline.version') }}</p>
-        <pre class="code-box">{{ pipeline.version }}</pre>
-      </InputField>
     </Panel>
-  </template>
+
+    <Panel v-if="pipeline.version" :title="$t('repo.pipeline.version_header')">
+      <div class="flex min-w-0 flex-col gap-3">
+        <p class="text-wp-text-alt-100 text-sm leading-6">{{ $t('repo.pipeline.version') }}</p>
+        <pre class="code-box min-w-0 overflow-auto font-mono text-xs">{{ pipeline.version }}</pre>
+      </div>
+    </Panel>
+  </div>
   <FeedbackState
     v-else
     kind="permission"
@@ -28,7 +41,6 @@ import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
 import FeedbackState from '~/components/atomic/FeedbackState.vue';
-import InputField from '~/components/form/InputField.vue';
 import Panel from '~/components/layout/Panel.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { requiredInject } from '~/compositions/useInjectProvide';
