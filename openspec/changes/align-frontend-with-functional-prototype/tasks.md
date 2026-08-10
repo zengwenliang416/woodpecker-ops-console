@@ -31,7 +31,7 @@
 
 用户结果：用户可以浏览、筛选和管理与批准原型一致的仓库流水线、分支、拉取请求及设置。
 
-- [ ] 4.1 Align repository pipeline-list metrics, filters, table/list density, status actions, pagination, empty state, and deploy entry.
+- [x] 4.1 Align repository pipeline-list metrics, filters, table/list density, status actions, pagination, empty state, and deploy entry.
 - [ ] 4.2 Align branch list/detail and pull-request list/detail routes with real Forge and pipeline data.
 - [ ] 4.3 Align manual-run, general settings, secrets, registries, crons, badge, actions, and extensions routes without changing existing contracts.
 - [ ] 4.4 Add repository route/component tests for filters, permissions, actions, pagination, empty/error states, theme, and 390px behavior.

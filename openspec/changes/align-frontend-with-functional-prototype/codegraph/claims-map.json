@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-10T07:49:09.846Z",
+  "generated_at": "2026-08-10T12:57:12.766Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -301,6 +301,37 @@
       ],
       "query_ids": [
         "development:task-009-pipeline-validation-evidence:evidence"
+      ]
+    },
+    {
+      "id": "development:task-010-repository-pipeline-list",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "010-repository-pipeline-list",
+      "text": "Enter `/repos/:repoId`, derive current repository metrics from the pipelines",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/context.json"
+      ],
+      "expected_evidence": [
+        "Focused component and metric tests proving derived metrics, filters, local/server pagination boundary, empty states, route actions, and push/read-only deployment gating.",
+        "Full frontend Vitest plus targeted Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+        "Current desktop and 390px browser evidence for populated and filtered-empty repository pipeline states without page-level horizontal overflow.",
+        "Evidence-bearing task report plus independent spec and quality reviews for baseline task 4.1."
+      ],
+      "allowed_files": [
+        "web/src/views/repo/RepoPipelines.vue",
+        "web/src/views/repo/RepoPipelines.test.ts",
+        "web/src/store/pipelines.ts",
+        "web/src/store/pipelines.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/evidence/**"
+      ],
+      "query_ids": [
+        "development:task-010-repository-pipeline-list:evidence"
       ]
     }
   ]

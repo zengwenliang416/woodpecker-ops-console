@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-10T07:49:09.847Z",
+  "generated_at": "2026-08-10T12:57:12.767Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -137,6 +137,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-009-pipeline-validation-evidence --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-010-repository-pipeline-list:evidence",
+      "claim_id": "development:task-010-repository-pipeline-list",
+      "stage": "development",
+      "task_id": "010-repository-pipeline-list",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/repos/:repoId`, derive current repository metrics from the pipelines\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-010-repository-pipeline-list --query \"<query>\" --write --json"
     }
   ]
 }

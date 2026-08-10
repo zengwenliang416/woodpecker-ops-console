@@ -91,8 +91,10 @@ export const usePipelineStore = defineStore('pipelines', () => {
     _pipelines.forEach((pipeline) => {
       setPipeline(repoId, pipeline);
     });
-    hasMore.value = _pipelines.length >= perPage;
+    const repoHasMore = _pipelines.length >= perPage;
+    hasMore.value = repoHasMore;
     loading.value = false;
+    return repoHasMore;
   }
 
   async function loadPipeline(repoId: number, pipelinesNumber: number) {

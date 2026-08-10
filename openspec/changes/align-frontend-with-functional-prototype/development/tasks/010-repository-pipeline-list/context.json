@@ -1,0 +1,63 @@
+{
+  "task_id": "010-repository-pipeline-list",
+  "goal": "Users can scan, filter, paginate, open, and deploy eligible pipelines from a repository activity page that matches the approved prototype's information density while preserving current repository APIs and permissions.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "web/src/views/repo/RepoWrapper.vue",
+    "web/src/views/repo/RepoPipelines.vue",
+    "web/src/components/repo/pipeline/PipelineList.vue",
+    "web/src/components/repo/pipeline/PipelineItem.vue",
+    "web/src/components/layout/popups/DeployPipelinePopup.vue",
+    "web/src/store/pipelines.ts",
+    "web/src/lib/repoMetrics.ts",
+    "web/src/lib/api/index.ts",
+    "web/src/lib/api/types/pipeline.ts"
+  ],
+  "allowed_files": [
+    "web/src/views/repo/RepoPipelines.vue",
+    "web/src/views/repo/RepoPipelines.test.ts",
+    "web/src/store/pipelines.ts",
+    "web/src/store/pipelines.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/evidence/**"
+  ],
+  "test_paths": [
+    "web/src/views/repo/RepoPipelines.test.ts",
+    "web/src/store/pipelines.test.ts",
+    "web/src/lib/repoMetrics.test.ts"
+  ],
+  "non_goals": [
+    "Do not edit branch, pull-request, manual-run, repository-settings, pipeline-detail, API, backend, route, permission, dependency, approved-prototype, or operations release-mapping contracts. The only approved store contract change is returning request-local hasMore from loadRepoPipelines.",
+    "Do not add cancel, restart, approval, or decline mutations to the list.",
+    "Do not fabricate server totals, pipeline metrics, release mappings, deployment targets, or prototype fixtures.",
+    "Do not turn PipelineList into a multi-mode abstraction for this one route."
+  ],
+  "expected_evidence": [
+    "Focused component and metric tests proving derived metrics, filters, local/server pagination boundary, empty states, route actions, and push/read-only deployment gating.",
+    "Full frontend Vitest plus targeted Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+    "Current desktop and 390px browser evidence for populated and filtered-empty repository pipeline states without page-level horizontal overflow.",
+    "Evidence-bearing task report plus independent spec and quality reviews for baseline task 4.1."
+  ],
+  "unsafe_assumptions": [
+    "The current pipeline list API exposes no confirmed total count; store hasMore is the only authoritative next-page signal.",
+    "Prototype metric values, authors, branches, events, releases, and deployment targets are illustrative rather than production data.",
+    "A successful pipeline alone does not authorize deployment; repository allow_deploy and push permission are both required.",
+    "Branch and pull-request use of PipelineList does not justify forcing the repository-root table contract onto those routes."
+  ],
+  "stop_condition": "Stop if implementation needs a new API, any store change beyond the approved request-local loadRepoPipelines return value, a route/permission/release contract, a shared component rewrite, an approved-prototype edit, a fabricated total, or any production file outside the allowed list."
+}

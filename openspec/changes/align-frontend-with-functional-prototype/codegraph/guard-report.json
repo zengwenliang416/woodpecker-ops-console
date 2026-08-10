@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.guard_report.v1",
-  "generated_at": "2026-08-10T09:51:28.192Z",
+  "generated_at": "2026-08-10T12:57:35.963Z",
   "active_change": "align-frontend-with-functional-prototype",
   "stage": "development",
   "ok": true,
@@ -63,7 +63,7 @@
   },
   "evidence_index": {
     "schema": "specnav.codegraph.evidence_index.v1",
-    "generated_at": "2026-08-10T09:51:28.190Z",
+    "generated_at": "2026-08-10T12:57:35.956Z",
     "active_change": "align-frontend-with-functional-prototype",
     "source_raw": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence.jsonl",
     "by_claim": {},
@@ -74,11 +74,11 @@
   },
   "claims_report": {
     "schema": "specnav.codegraph.claims_report.v1",
-    "generated_at": "2026-08-10T09:51:28.192Z",
+    "generated_at": "2026-08-10T12:57:35.963Z",
     "active_change": "align-frontend-with-functional-prototype",
     "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
     "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-    "claims_count": 9,
+    "claims_count": 10,
     "verified_claims": [],
     "unverified_claims": [
       "development:task-001-date-duration-integrity",
@@ -89,7 +89,8 @@
       "development:task-006-pipeline-overview",
       "development:task-007-pipeline-log-diagnostics",
       "development:task-008-pipeline-regression-coverage",
-      "development:task-009-pipeline-validation-evidence"
+      "development:task-009-pipeline-validation-evidence",
+      "development:task-010-repository-pipeline-list"
     ],
     "blockers": [],
     "warnings": [
@@ -101,7 +102,8 @@
       "codegraph:claim-unverified:development:task-006-pipeline-overview",
       "codegraph:claim-unverified:development:task-007-pipeline-log-diagnostics",
       "codegraph:claim-unverified:development:task-008-pipeline-regression-coverage",
-      "codegraph:claim-unverified:development:task-009-pipeline-validation-evidence"
+      "codegraph:claim-unverified:development:task-009-pipeline-validation-evidence",
+      "codegraph:claim-unverified:development:task-010-repository-pipeline-list"
     ]
   },
   "drift": {
@@ -121,6 +123,7 @@
     "codegraph:claim-unverified:development:task-006-pipeline-overview",
     "codegraph:claim-unverified:development:task-007-pipeline-log-diagnostics",
     "codegraph:claim-unverified:development:task-008-pipeline-regression-coverage",
-    "codegraph:claim-unverified:development:task-009-pipeline-validation-evidence"
+    "codegraph:claim-unverified:development:task-009-pipeline-validation-evidence",
+    "codegraph:claim-unverified:development:task-010-repository-pipeline-list"
   ]
 }

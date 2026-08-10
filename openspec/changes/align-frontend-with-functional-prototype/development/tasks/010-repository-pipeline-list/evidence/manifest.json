@@ -1,0 +1,154 @@
+{
+  "schema_version": 2,
+  "task_id": "010-repository-pipeline-list",
+  "captured_at": "2026-08-10T12:41:19.643Z",
+  "route": "http://127.0.0.1:8010/repos/101",
+  "runtime": {
+    "frontend": "Vite development server at 127.0.0.1:8010",
+    "api": "task-009 deterministic Mock API at 127.0.0.1:8123",
+    "repository_id": 101,
+    "pipeline_number": 842
+  },
+  "screenshots": {
+    "desktop_populated": {
+      "file": "repository-pipelines-desktop-populated.png",
+      "sha256": "1ea6b4281aba4b1717b0367d817b0449574bbab2190273ecc993022bf676ff90"
+    },
+    "desktop_filtered_empty": {
+      "file": "repository-pipelines-desktop-filtered-empty.png",
+      "sha256": "84fc4746513bde365e124ce1183bf312e8d066a91c3469dd72ab39d0c65317be"
+    },
+    "mobile_populated": {
+      "file": "repository-pipelines-mobile-populated.png",
+      "sha256": "7db13dbe27a446f977c04f692d866cce691790f610e8f82f1dc9737101fa483b"
+    },
+    "mobile_filtered_empty": {
+      "file": "repository-pipelines-mobile-filtered-empty.png",
+      "sha256": "2f075bbccacee2ec9f1b8f4bc7f1e40971f1219ac781819f93d3f9edc324c071"
+    }
+  },
+  "measurements": {
+    "desktop": {
+      "populated": {
+        "href": "http://127.0.0.1:8010/repos/101?task010=desktop-1786365677752",
+        "title": "Activity · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 992,
+          "scroll_width": 992,
+          "overflow_x": "visible"
+        },
+        "table_container": {
+          "client_width": 990,
+          "scroll_width": 1080,
+          "overflow_x": "auto"
+        },
+        "table": {
+          "client_width": 1080,
+          "scroll_width": 1080,
+          "overflow_x": "visible"
+        },
+        "metric_columns": "322.656px 322.672px 322.656px",
+        "pipeline_rows": 1,
+        "feedback_text": null,
+        "raw_locale_keys": []
+      },
+      "filtered_empty": {
+        "href": "http://127.0.0.1:8010/repos/101?task010=desktop-1786365677752",
+        "title": "Activity · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 992,
+          "scroll_width": 992,
+          "overflow_x": "visible"
+        },
+        "table_container": null,
+        "table": null,
+        "metric_columns": "322.656px 322.672px 322.656px",
+        "pipeline_rows": 0,
+        "feedback_text": "No matching pipelines\nChange or clear the current filters to see other loaded runs.\nClear filters",
+        "raw_locale_keys": []
+      }
+    },
+    "mobile": {
+      "populated": {
+        "href": "http://127.0.0.1:8010/repos/101?task010=mobile-1786365678941",
+        "title": "Activity · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 358,
+          "scroll_width": 358,
+          "overflow_x": "visible"
+        },
+        "table_container": {
+          "client_width": 356,
+          "scroll_width": 1080,
+          "overflow_x": "auto"
+        },
+        "table": {
+          "client_width": 1080,
+          "scroll_width": 1080,
+          "overflow_x": "visible"
+        },
+        "metric_columns": "358px",
+        "pipeline_rows": 1,
+        "feedback_text": null,
+        "raw_locale_keys": []
+      },
+      "filtered_empty": {
+        "href": "http://127.0.0.1:8010/repos/101?task010=mobile-1786365678941",
+        "title": "Activity · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 358,
+          "scroll_width": 358,
+          "overflow_x": "visible"
+        },
+        "table_container": null,
+        "table": null,
+        "metric_columns": "358px",
+        "pipeline_rows": 0,
+        "feedback_text": "No matching pipelines\nChange or clear the current filters to see other loaded runs.\nClear filters",
+        "raw_locale_keys": []
+      }
+    }
+  },
+  "browser_stderr": {
+    "contains_page_console_output": false,
+    "note": "Chrome process stderr is not used as page-console evidence.",
+    "line_count": 2
+  },
+  "scope_note": "Task 4.1 records populated and filtered-empty layout evidence. Task 4.5 remains responsible for full repository parity, permission, theme, locale, and browser-health closure."
+}

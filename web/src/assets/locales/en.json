@@ -111,6 +111,61 @@
       }
     },
     "activity": "Activity",
+    "pipeline_list": {
+      "metrics": {
+        "latest_result": "Latest result",
+        "success_rate": "Success rate",
+        "average_duration": "Average duration",
+        "latest_hint": "#{pipeline} · {time}",
+        "success_hint": "{success}/{total} completed runs succeeded",
+        "duration_hint": "{count} completed duration samples",
+        "no_result": "No result",
+        "no_runs": "No pipeline runs"
+      },
+      "filters": {
+        "search_label": "Search repository pipelines",
+        "search_placeholder": "Search pipeline, commit, author, or branch…",
+        "status_label": "Filter pipelines by status",
+        "branch_label": "Filter pipelines by branch",
+        "event_label": "Filter pipelines by trigger",
+        "all_statuses": "All statuses",
+        "all_branches": "All branches",
+        "all_events": "All events",
+        "clear": "Clear filters"
+      },
+      "columns": {
+        "status": "Status",
+        "pipeline": "Pipeline",
+        "branch": "Branch",
+        "event": "Trigger",
+        "author": "Author",
+        "commit": "Commit",
+        "duration": "Duration",
+        "queued": "Queued",
+        "finished": "Finished"
+      },
+      "empty": {
+        "title": "No pipelines",
+        "description": "No pipeline has been started for this repository yet."
+      },
+      "no_match": {
+        "title": "No matching pipelines",
+        "description": "Change or clear the current filters to see other loaded runs."
+      },
+      "pagination": {
+        "loaded_count": "{count} loaded pipelines",
+        "filtered_count": "{visible} of {loaded} loaded pipelines",
+        "page": "{current} / {total}",
+        "previous": "Previous",
+        "next": "Next"
+      },
+      "actions": {
+        "deploy": "Deploy pipeline #{pipeline}",
+        "view": "View pipeline #{pipeline}"
+      },
+      "unknown_author": "Unknown",
+      "not_available": "—"
+    },
     "branches": "Branches",
     "pull_requests": "Pull requests",
     "add": "Add repository",
