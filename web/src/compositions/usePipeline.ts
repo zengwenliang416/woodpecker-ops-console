@@ -6,6 +6,7 @@ import { useI18n } from 'vue-i18n';
 import { useDate } from '~/compositions/useDate';
 import { useElapsedTime } from '~/compositions/useElapsedTime';
 import type { Pipeline } from '~/lib/api/types';
+import { getPullRequestIndexFromRef, isPullRequestEvent } from '~/lib/pipelineRefs';
 import { escapeHtml } from '~/lib/utils';
 
 const { toLocaleString, timeAgo, prettyDuration } = useDate();
@@ -95,18 +96,9 @@ export default (pipeline: Ref<Pipeline | undefined>) => {
       return pipeline.value.ref.replaceAll('refs/tags/', '');
     }
 
-    if (
-      pipeline.value?.event === 'pull_request' ||
-      pipeline.value?.event === 'pull_request_closed' ||
-      pipeline.value?.event === 'pull_request_metadata'
-    ) {
-      return `#${pipeline.value.ref
-        .replaceAll('refs/pull/', '')
-        .replaceAll('refs/merge-requests/', '')
-        .replaceAll('refs/pull-requests/', '')
-        .replaceAll('/merge', '')
-        .replaceAll('/head', '')
-        .replaceAll('/from', '')}`;
+    if (pipeline.value && isPullRequestEvent(pipeline.value.event)) {
+      const pullRequestIndex = getPullRequestIndexFromRef(pipeline.value.ref);
+      return pullRequestIndex !== undefined ? `#${pullRequestIndex}` : pipeline.value.ref;
     }
 
     return pipeline.value?.ref;

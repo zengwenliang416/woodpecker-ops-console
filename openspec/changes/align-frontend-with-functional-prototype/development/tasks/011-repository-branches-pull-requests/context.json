@@ -1,0 +1,76 @@
+{
+  "task_id": "011-repository-branches-pull-requests",
+  "goal": "Users can search, page, refresh, and open repository branches and pull requests, then inspect their real pipeline history without unsupported Forge metadata or mutations.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/011-repository-branches-pull-requests/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "web/src/views/repo/RepoWrapper.vue",
+    "web/src/views/repo/RepoBranches.vue",
+    "web/src/views/repo/RepoBranch.vue",
+    "web/src/views/repo/RepoPullRequests.vue",
+    "web/src/views/repo/RepoPullRequest.vue",
+    "web/src/components/repo/pipeline/PipelineList.vue",
+    "web/src/compositions/usePaginate.ts",
+    "web/src/compositions/usePipeline.ts",
+    "web/src/lib/api/index.ts",
+    "web/src/lib/api/types/pull_request.ts",
+    "web/src/lib/api/types/pipeline.ts"
+  ],
+  "allowed_files": [
+    "web/src/views/repo/RepoBranches.vue",
+    "web/src/views/repo/RepoBranches.test.ts",
+    "web/src/views/repo/RepoBranch.vue",
+    "web/src/views/repo/RepoBranch.test.ts",
+    "web/src/views/repo/RepoPullRequests.vue",
+    "web/src/views/repo/RepoPullRequests.test.ts",
+    "web/src/views/repo/RepoPullRequest.vue",
+    "web/src/views/repo/RepoPullRequest.test.ts",
+    "web/src/components/repo/RepoPipelineReference.vue",
+    "web/src/components/repo/RepoPipelineReference.test.ts",
+    "web/src/lib/pipelineRefs.ts",
+    "web/src/lib/pipelineRefs.test.ts",
+    "web/src/compositions/usePipeline.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/011-repository-branches-pull-requests/evidence/**"
+  ],
+  "test_paths": [
+    "web/src/lib/pipelineRefs.test.ts",
+    "web/src/components/repo/RepoPipelineReference.test.ts",
+    "web/src/views/repo/RepoBranches.test.ts",
+    "web/src/views/repo/RepoBranch.test.ts",
+    "web/src/views/repo/RepoPullRequests.test.ts",
+    "web/src/views/repo/RepoPullRequest.test.ts"
+  ],
+  "non_goals": [
+    "Do not edit API types/endpoints, backend, router, RepoWrapper, PipelineList, pipeline store, manual-run, repository settings, permission calculation, dependency, or approved-prototype files.",
+    "Do not add branch protection, ahead/behind, comparison, deletion, PR creation, author/source/target/review/comment/diff metadata, or Forge write actions.",
+    "Do not fabricate server totals or imply that the injected recent pipeline collection is complete."
+  ],
+  "expected_evidence": [
+    "Focused pure-function and route-component tests proving PR ref normalization, branch/PR search, refresh, pagination, explicit states, exact correlation, and detail navigation.",
+    "Full frontend Vitest plus targeted Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+    "Current desktop and 390px browser evidence for populated branch/PR list and detail states without page-level horizontal overflow.",
+    "Evidence-bearing task report plus independent spec and quality reviews for baseline task 4.2."
+  ],
+  "unsafe_assumptions": [
+    "Branch APIs expose only names and PR APIs expose only index/title; all richer prototype metadata is unsupported.",
+    "Pipeline enrichment is limited to already-loaded real repository pipelines and can be absent.",
+    "PR ref normalization supports only the formats already handled by current production code.",
+    "Loaded counts are not authoritative server totals."
+  ],
+  "stop_condition": "Stop if implementation needs richer API fields, a new request or mutation, route/store/RepoWrapper/PipelineList/manual-run change, a new permission rule, approved-prototype edit, or fabricated branch/PR metadata."
+}

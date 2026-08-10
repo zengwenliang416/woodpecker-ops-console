@@ -63,11 +63,9 @@
   "unknown_error": "An unknown error occurred",
   "documentation_for": "Documentation for \"{topic}\"",
   "pipeline_feed": "Pipeline feed",
-  "empty_list": "No {entity} found!",
   "feedback": {
     "loading_title": "Loading",
     "loading_description": "Requesting the latest information.",
-    "empty_description": "There is no information to show in this view.",
     "permission_description": "Your current permissions do not allow access to this information.",
     "stale_title": "Outdated data needs attention"
   },
@@ -165,6 +163,53 @@
       },
       "unknown_author": "Unknown",
       "not_available": "—"
+    },
+    "repository_refs": {
+      "common": {
+        "refresh": "Refresh",
+        "clear_search": "Clear search",
+        "load_more": "Load more",
+        "filtered_count": "{visible} of {loaded} loaded records",
+        "no_message": "Pipeline run",
+        "no_loaded_pipeline": "No pipeline in the loaded repository history",
+        "separator": " · ",
+        "not_available": "—"
+      },
+      "branches": {
+        "search_label": "Search loaded branches",
+        "search_placeholder": "Search branches…",
+        "loaded_count": "{count} loaded branches",
+        "row_description": "Open branch pipeline history",
+        "empty_title": "No branches",
+        "empty_description": "The Forge did not return any branches for this repository.",
+        "no_match_title": "No matching branches",
+        "no_match_description": "Change or clear the search to see other loaded branches.",
+        "detail_eyebrow": "Branch",
+        "detail_description": "Latest available execution context and loaded pipeline history for this branch."
+      },
+      "pull_requests": {
+        "search_label": "Search loaded pull requests",
+        "search_placeholder": "Search pull request number or title…",
+        "index": "#{index}",
+        "loaded_count": "{count} loaded pull requests",
+        "row_description": "Open pull request pipeline history",
+        "empty_title": "No pull requests",
+        "empty_description": "The Forge did not return any pull requests for this repository.",
+        "no_match_title": "No matching pull requests",
+        "no_match_description": "Change or clear the search to see other loaded pull requests.",
+        "detail_eyebrow": "Pull request",
+        "detail_description": "Latest available execution context and loaded pipeline history for this pull request.",
+        "fallback_title": "Pull request #{index}"
+      },
+      "detail": {
+        "summary": "Pipeline summary",
+        "loaded_history": "Loaded history",
+        "run_count": "{count} loaded runs",
+        "latest_result": "Latest result",
+        "latest_commit": "Latest commit",
+        "pipeline_history": "Pipeline history",
+        "pipeline_history_description": "Real pipeline runs currently loaded for this repository reference."
+      }
     },
     "branches": "Branches",
     "pull_requests": "Pull requests",
@@ -341,8 +386,6 @@
         "view_logs": "View logs"
       },
       "step_not_started": "This step hasn't started yet.",
-      "pipelines_for": "Pipelines for branch \"{branch}\"",
-      "pipelines_for_pr": "Pipelines for pull request #{index}",
       "exit_code": "Exit Code {exitCode}",
       "loading": "Loading…",
       "no_logs": "No logs",

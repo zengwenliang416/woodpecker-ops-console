@@ -1,0 +1,365 @@
+{
+  "schema_version": 1,
+  "task_id": "011-repository-branches-pull-requests",
+  "captured_at": "2026-08-10T14:47:32.930Z",
+  "runtime": {
+    "frontend": "Vite development server at 127.0.0.1:8010",
+    "api": "task-011 deterministic Mock API at 127.0.0.1:8123",
+    "repository_id": 101
+  },
+  "routes": [
+    {
+      "name": "branches",
+      "path": "/repos/101/branches",
+      "ready": "document.querySelectorAll('[data-testid=\"branch-row\"]').length === 4",
+      "selector": "[data-testid=\"branch-row\"]",
+      "expectedText": "main"
+    },
+    {
+      "name": "branch-detail",
+      "path": "/repos/101/branches/main",
+      "ready": "Boolean(document.querySelector('.reference-header'))",
+      "selector": ".reference-header",
+      "expectedText": "main"
+    },
+    {
+      "name": "pull-requests",
+      "path": "/repos/101/pull-requests",
+      "ready": "document.querySelectorAll('[data-testid=\"pull-request-row\"]').length === 3",
+      "selector": "[data-testid=\"pull-request-row\"]",
+      "expectedText": "Improve pipeline diagnostics"
+    },
+    {
+      "name": "pull-request-detail",
+      "path": "/repos/101/pull-requests/42",
+      "ready": "Boolean(document.querySelector('.reference-header'))",
+      "selector": ".reference-header",
+      "expectedText": "Improve pipeline diagnostics"
+    }
+  ],
+  "screenshots": {
+    "desktop_branches": {
+      "file": "repository-refs-desktop-branches.png",
+      "sha256": "14b9e5e9a1fcd2a3bb49cfcd84ef2399e3cd3d93b5108cb44a1c5130daad6e96"
+    },
+    "desktop_branch_detail": {
+      "file": "repository-refs-desktop-branch-detail.png",
+      "sha256": "3153ed5dc59cbd07530c9ec88d9627b1744b00d9bec28c65fa24207f5adddbc7"
+    },
+    "desktop_pull_requests": {
+      "file": "repository-refs-desktop-pull-requests.png",
+      "sha256": "cb49aa550783b4776b6023ffd2aa341710e77ca8d170a26a97217a08359eee61"
+    },
+    "desktop_pull_request_detail": {
+      "file": "repository-refs-desktop-pull-request-detail.png",
+      "sha256": "86a97946b828eb5facc4e69d962577c7b31e3945cf199ced9aebfb9bae262db2"
+    },
+    "mobile_branches": {
+      "file": "repository-refs-mobile-branches.png",
+      "sha256": "c1cb8cd494079b16f6fb3f9f9316f14d4ce66ccb026817e09eae8b7e5a9495ef"
+    },
+    "mobile_branch_detail": {
+      "file": "repository-refs-mobile-branch-detail.png",
+      "sha256": "ecf983c429b69c27608745e7c7aab6ba222df16d37331f8d8cdf2890cdb57b1a"
+    },
+    "mobile_pull_requests": {
+      "file": "repository-refs-mobile-pull-requests.png",
+      "sha256": "99091bb4f31084c720570c3ae4b84041b3816ca2c254c220279351af25803ec9"
+    },
+    "mobile_pull_request_detail": {
+      "file": "repository-refs-mobile-pull-request-detail.png",
+      "sha256": "6407a2961d370d708d168cba4b8ca6e848d527ef5c430e49588fd309f14cfc2d"
+    }
+  },
+  "measurements": {
+    "desktop": {
+      "branches": {
+        "href": "http://127.0.0.1:8010/repos/101/branches?task011=desktop-1786373240937",
+        "title": "Branches · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1032,
+          "scroll_width": 1032,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 990,
+          "scroll_width": 990,
+          "overflow_x": "visible"
+        },
+        "target_count": 4,
+        "target_text": "main\ndefault\n\nOpen branch pipeline history\n\nstabilize repository reference views\n\na1b2c3d4e5 · 14 hours ago",
+        "summary_cards": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "branch-detail": {
+        "href": "http://127.0.0.1:8010/repos/101/branches/main?task011=desktop-1786373243229",
+        "title": "Activity · main · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1032,
+          "scroll_width": 1032,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 990,
+          "scroll_width": 990,
+          "overflow_x": "visible"
+        },
+        "target_count": 1,
+        "target_text": "BRANCH\nmain\ndefault\n\nLatest available execution context and loaded pipeline history for this branch.",
+        "summary_cards": 3,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "pull-requests": {
+        "href": "http://127.0.0.1:8010/repos/101/pull-requests?task011=desktop-1786373245420",
+        "title": "Pull requests · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1032,
+          "scroll_width": 1032,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 990,
+          "scroll_width": 990,
+          "overflow_x": "visible"
+        },
+        "target_count": 3,
+        "target_text": "#42\nImprove pipeline diagnostics\n\nOpen pull request pipeline history\n\nrun diagnostics checks\n\nc3d4e5f678 · 14 hours ago",
+        "summary_cards": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "pull-request-detail": {
+        "href": "http://127.0.0.1:8010/repos/101/pull-requests/42?task011=desktop-1786373246480",
+        "title": "Activity · 42 · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1032,
+          "scroll_width": 1032,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 990,
+          "scroll_width": 990,
+          "overflow_x": "visible"
+        },
+        "target_count": 1,
+        "target_text": "PULL REQUEST\nImprove pipeline diagnostics\n\n#42\n\nLatest available execution context and loaded pipeline history for this pull request.",
+        "summary_cards": 3,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      }
+    },
+    "mobile": {
+      "branches": {
+        "href": "http://127.0.0.1:8010/repos/101/branches?task011=mobile-1786373247264",
+        "title": "Branches · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 356,
+          "scroll_width": 356,
+          "overflow_x": "visible"
+        },
+        "target_count": 4,
+        "target_text": "main\ndefault\n\nOpen branch pipeline history\n\nstabilize repository reference views\n\na1b2c3d4e5 · 14 hours ago",
+        "summary_cards": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "branch-detail": {
+        "href": "http://127.0.0.1:8010/repos/101/branches/main?task011=mobile-1786373249173",
+        "title": "Activity · main · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 356,
+          "scroll_width": 356,
+          "overflow_x": "visible"
+        },
+        "target_count": 1,
+        "target_text": "BRANCH\nmain\ndefault\n\nLatest available execution context and loaded pipeline history for this branch.",
+        "summary_cards": 3,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "pull-requests": {
+        "href": "http://127.0.0.1:8010/repos/101/pull-requests?task011=mobile-1786373250671",
+        "title": "Pull requests · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 356,
+          "scroll_width": 356,
+          "overflow_x": "visible"
+        },
+        "target_count": 3,
+        "target_text": "#42\nImprove pipeline diagnostics\n\nOpen pull request pipeline history\n\nrun diagnostics checks\n\nc3d4e5f678 · 14 hours ago",
+        "summary_cards": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "pull-request-detail": {
+        "href": "http://127.0.0.1:8010/repos/101/pull-requests/42?task011=mobile-1786373251801",
+        "title": "Activity · 42 · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 356,
+          "scroll_width": 356,
+          "overflow_x": "visible"
+        },
+        "target_count": 1,
+        "target_text": "PULL REQUEST\nImprove pipeline diagnostics\n\n#42\n\nLatest available execution context and loaded pipeline history for this pull request.",
+        "summary_cards": 3,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      }
+    }
+  },
+  "browser_stderr": {
+    "contains_page_console_output": false,
+    "line_count": 2
+  },
+  "scope_note": "Task 4.2 records current branch/PR list and detail layout evidence. Task 4.5 remains responsible for the full repository parity, theme, locale, permission, and health matrix."
+}

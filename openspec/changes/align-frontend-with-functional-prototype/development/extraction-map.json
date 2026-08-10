@@ -21,6 +21,16 @@
       "pattern": "pagination, latest-request-wins, mutation reconciliation, or realtime subscription",
       "destination": "web/src/compositions or web/src/store",
       "trigger": "page-local state logic repeats or crosses route boundaries"
+    },
+    {
+      "pattern": "pull-request event recognition and Forge ref normalization",
+      "destination": "web/src/lib/pipelineRefs.ts",
+      "trigger": "repository PR list/detail and pipeline presentation must correlate the same real pipeline refs"
+    },
+    {
+      "pattern": "repository branch and pull-request detail header, latest pipeline summary, and history",
+      "destination": "web/src/components/repo/RepoPipelineReference.vue",
+      "trigger": "both real detail routes require the same information hierarchy over different reference identifiers"
     }
   ],
   "forbidden_dependencies": [

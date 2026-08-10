@@ -219,6 +219,49 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "010-repository-pipeline-list",
+      "baseline_task_id": "4.1",
+      "goal": "Users can scan, filter, paginate, open, and deploy eligible pipelines from the repository activity page using real repository data and permissions.",
+      "depends_on": [
+        "3.5"
+      ],
+      "allowed_files": [
+        "web/src/views/repo/RepoPipelines.vue",
+        "web/src/views/repo/RepoPipelines.test.ts",
+        "web/src/store/pipelines.ts",
+        "web/src/store/pipelines.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
+    },
+    {
+      "packet_id": "011-repository-branches-pull-requests",
+      "baseline_task_id": "4.2",
+      "goal": "Users can search, page, refresh, and open repository branches and pull requests, then inspect their real pipeline history without unsupported Forge metadata or mutations.",
+      "depends_on": [
+        "4.1"
+      ],
+      "allowed_files": [
+        "web/src/views/repo/RepoBranches.vue",
+        "web/src/views/repo/RepoBranches.test.ts",
+        "web/src/views/repo/RepoBranch.vue",
+        "web/src/views/repo/RepoBranch.test.ts",
+        "web/src/views/repo/RepoPullRequests.vue",
+        "web/src/views/repo/RepoPullRequests.test.ts",
+        "web/src/views/repo/RepoPullRequest.vue",
+        "web/src/views/repo/RepoPullRequest.test.ts",
+        "web/src/components/repo/RepoPipelineReference.vue",
+        "web/src/components/repo/RepoPipelineReference.test.ts",
+        "web/src/lib/pipelineRefs.ts",
+        "web/src/lib/pipelineRefs.test.ts",
+        "web/src/compositions/usePipeline.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }

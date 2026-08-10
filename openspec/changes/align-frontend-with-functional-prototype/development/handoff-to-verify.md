@@ -40,8 +40,16 @@
   production-versus-approved-prototype browser evidence across desktop/mobile,
   dark Simplified Chinese, representative light English, and push/read-only
   states.
+- `010-repository-pipeline-list` / baseline task `4.1`: the repository activity
+  route now uses real pipeline-derived metrics, filters, dense local-scroll
+  presentation, authoritative request-local pagination state, current
+  navigation/deploy permissions, and concurrent repository isolation.
+- `011-repository-branches-pull-requests` / baseline task `4.2`: branch and
+  pull-request list/detail routes now use real Forge records plus exact loaded
+  pipeline correlation, searchable/paginated responsive presentation, shared
+  reference detail hierarchy, and owner-safe confirmed-row refresh behavior.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `4.1` through `8.4` remain incomplete.
+  Tasks `4.3` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -70,6 +78,14 @@
   task-local Mock API, smoke, bounded CDP capture, independent verifier,
   thirty measurement/PNG pairs, per-state console artifacts, replay summary,
   checksummed manifest, report, and independent reviews.
+- Repository pipeline list: `web/src/views/repo/RepoPipelines.vue`, focused
+  route/metric tests, the request-local `hasMore` return from
+  `web/src/store/pipelines.ts`, its real concurrent Pinia regression, locales,
+  and four responsive browser states.
+- Repository references: branch/PR list and detail routes, shared
+  `RepoPipelineReference.vue`, shared `pipelineRefs.ts`, focused lifecycle and
+  correlation tests, locales, task-local Mock API/capture/verifier, and eight
+  responsive browser states.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -79,7 +95,9 @@
   `development/tasks/006-pipeline-overview/report.md`, and
   `development/tasks/007-pipeline-log-diagnostics/report.md`,
   `development/tasks/008-pipeline-regression-coverage/report.md`, and
-  `development/tasks/009-pipeline-validation-evidence/report.md`.
+  `development/tasks/009-pipeline-validation-evidence/report.md`,
+  `development/tasks/010-repository-pipeline-list/report.md`, and
+  `development/tasks/011-repository-branches-pull-requests/report.md`.
 
 ## Requirements Covered
 
@@ -110,6 +128,13 @@
   tests, exact-dimension desktop/mobile PNG evidence, live route and
   destination semantics, service/proxy/prototype identity, and push/read-only
   browser states.
+- `A3` and `A4` were independently verified for repository pipeline-list slice
+  `010`, including real metrics/filters/actions, request-local concurrent
+  pagination state, focused/full regressions, and responsive containment.
+- `A3` and `A4` were independently verified for repository reference slice
+  `011`, including exact branch/PR correlation, explicit fallbacks, confirmed
+  refresh continuity, active and obsolete request ownership, focused/full
+  regressions, and desktop/390px populated-route evidence.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -143,6 +168,9 @@
   keys, page overflow, permission leakage, or checksum drift.
 - Desktop/mobile comparisons normalize theme, locale, viewport, administrator
   permission, and populated-data state instead of copying prototype fixtures.
+- Repository lists use only current API/store data and loaded pipeline history.
+  Unsupported server totals, branch protection/comparison, PR review/diff
+  metadata, and Forge mutations are not invented.
 
 ## Components Created / Reused / Extracted
 
@@ -165,17 +193,23 @@
 - Reused for regression/evidence closure: current Vitest configuration, Vue
   Router, Vite proxy, production API/store seams, Chrome CDP, Node/Python
   standard libraries, and the immutable standalone prototype.
-- Extracted: no new extraction was required after shared feedback ownership was
-  established; slice `004` intentionally added no duplicate shell or theme
-  component, and slice `006` has no second consumer with the same
-  workflow/environment/image/log contract. Slice `007` keeps its five distinct
-  diagnostic contracts separate instead of adding a configurable abstraction.
+- Created/extracted for repository references:
+  `web/src/components/repo/RepoPipelineReference.vue` centralizes the shared
+  branch/PR detail hierarchy, while `web/src/lib/pipelineRefs.ts` centralizes
+  production PR event/ref normalization.
+- No additional generic list abstraction was added: branch `string[]` and PR
+  `{ index, title }[]` remain distinct typed route contracts.
 
 ## API / Data Flow Changes
 
 - No backend, API payload, store, router runtime, authentication, permission
   calculation, persistence, migration, or dependency contract changed in
   slices `001` through `009`.
+- Slice `010` only returns its already-computed request-local `hasMore` value
+  from the existing pipeline-store action; no backend/API payload, router,
+  permission, persistence, migration, or dependency contract changed.
+- Slice `011` adds no API, store, router, permission, backend, mutation,
+  persistence, migration, or dependency contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -205,14 +239,24 @@
   all current status/cancellation branches, permission-aware actions and tabs,
   selected-step routing, explicit empty/error states, stale logs, metadata
   behavior, and structural mobile containment.
-- The current full frontend regression baseline is 28 test files and 175 tests.
+- Repository pipeline tests cover request-local concurrent pagination results,
+  filters, metrics, actions, permissions, empty/loading states, and responsive
+  local scrolling.
+- Repository reference tests cover exact ref/event correlation, shared detail
+  summaries, loaded search/pagination, synchronous-clear refresh continuity,
+  disabled actions, active success/rejection, repository reset, and obsolete
+  fulfill/reject ownership.
+- The current full frontend regression baseline is 35 test files and 211 tests.
 
 ## Local Validation
 
 - PASS: final pipeline-focused suite, 8 files and 66 tests; the exact command
   also passed three sequential stability runs after the router test timeout
   stabilization.
-- PASS: current complete frontend suite, 28 files and 175 tests.
+- PASS: pipeline-phase complete frontend baseline, 28 files and 175 tests.
+- PASS: repository pipeline-list focused suite, 3 files and 13 tests.
+- PASS: repository reference focused suite, 6 files and 27 tests.
+- PASS: current complete frontend suite, 35 files and 211 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -232,11 +276,14 @@
 - PASS: independent evidence verifier for all thirty state/PNG pairs, exact
   console correspondence, service/route/content assertions, and all manifest
   SHA-256 values.
+- PASS: repository pipeline-list four-state and repository reference eight-state
+  desktop/mobile capture plus independent checksum/route/content/overflow
+  verification.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twenty-three baseline tasks remain incomplete across repository,
+- Twenty-one baseline tasks remain incomplete across repository,
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.
@@ -268,7 +315,7 @@
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `4.1` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `4.3` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for
