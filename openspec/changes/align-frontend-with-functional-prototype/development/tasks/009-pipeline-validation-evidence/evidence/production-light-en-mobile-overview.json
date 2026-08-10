@@ -1,0 +1,625 @@
+{
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 844
+  },
+  "bodyText": "Search pipelines, repos, users and settings… 0 backend-api / Pipeline Pipeline #842 failure fix null handling in user route Branch: main Trigger: Push Author: alice Commit: a1b2c3d4e5 Created: 9 hours ago Duration: 5 minutes Retry Overview alice main a1b2c3d4e5 CI true NODE_ENV test build-and-test 05:20 Clone repository 00:32 Install dependencies 01:59 Typecheck application 02:47 TARGET_ENV staging release-verification 00:01 Verify release 00:01 Pipeline execution overview Step status, duration, and runtime context from this pipeline execution. WORKFLOWS 2 STEPS 4 FINISHED 4/4 DURATION 5 minutes Step Status Environment Image Duration Action Clone repository build-and-test success CI true NODE_ENV test Not reported View config 00:32 View logs Install dependencies build-and-test success CI true NODE_ENV test Not reported View config 01:59 View logs Typecheck application build-and-test failure CI true NODE_ENV test Not reported View config 02:47 View logs Verify release release-verification skipped TARGET_ENV staging Not reported View config 00:01 View logs",
+  "bodyTextSample": "Search pipelines, repos, users and settings… 0 backend-api / Pipeline Pipeline #842 failure fix null handling in user route Branch: main Trigger: Push Author: alice Commit: a1b2c3d4e5 Created: 9 hours ago Duration: 5 minutes Retry Overview alice main a1b2c3d4e5 CI true NODE_ENV test build-and-test 05:20 Clone repository 00:32 Install dependencies 01:59 Typecheck application 02:47 TARGET_ENV staging release-verification 00:01 Verify release 00:01 Pipeline execution overview Step status, duration, and runtime context from this pipeline execution. WORKFLOWS 2 STEPS 4 FINISHED 4/4 DURATION 5 minutes Step Status Environment Image Duration Action Clone repository build-and-test success CI true NODE_ENV test Not reported View config 00:32 View logs Install dependencies build-and-test success CI true NODE_ENV test Not reported View config 01:59 View logs Typecheck application build-and-test failure CI true NODE_ENV test Not reported View config 02:47 View logs Verify release release-verification skipped TARGET_ENV staging Not reported View config 00:01 View logs",
+  "colors": {
+    "background": "rgb(244, 247, 248)",
+    "text": "rgb(21, 35, 45)"
+  },
+  "controls": [
+    {
+      "tag": "a",
+      "text": "WoodpeckerCI/CD Platform",
+      "href": "/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Close navigation",
+      "ariaLabel": "Close navigation"
+    },
+    {
+      "tag": "a",
+      "text": "Overview",
+      "href": "/overview",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Repos1",
+      "href": "/repos",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Deployments",
+      "href": "/deployments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Applications",
+      "href": "/deployments/apps",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Environments",
+      "href": "/deployments/environments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Releases",
+      "href": "/deployments/releases",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Production approvals",
+      "href": "/deployments/approvals",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Infrastructure",
+      "href": "/infrastructure",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Servers",
+      "href": "/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Server groups",
+      "href": "/infrastructure/groups",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Services & containers",
+      "href": "/infrastructure/services",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Alerts",
+      "href": "/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents",
+      "href": "/admin/agents",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Queue",
+      "href": "/admin/queue",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Secrets",
+      "href": "/user/secrets",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "System Admin",
+      "href": "/admin",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Users",
+      "href": "/admin/users",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "/admin/forges",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Docs",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Personal settings",
+      "href": "/user",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Open navigation",
+      "ariaLabel": "Open navigation"
+    },
+    {
+      "tag": "button",
+      "text": "Search pipelines, repos, users and settings…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Toggle theme",
+      "ariaLabel": "Toggle theme"
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/admin",
+      "title": "Settings",
+      "ariaLabel": "Settings"
+    },
+    {
+      "tag": "button",
+      "text": "0",
+      "href": null,
+      "title": "Pipeline feed",
+      "ariaLabel": "Pipeline feed"
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/user",
+      "title": "User Settings",
+      "ariaLabel": "User Settings"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Back",
+      "ariaLabel": "Back"
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "Retry",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Overview",
+      "href": "/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "main",
+      "href": "/repos/101/branches/main",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "a1b2c3d4e5",
+      "href": "https://forge.example/acme/backend-api/commit/a1b2c3d4e5",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "build-and-test05:20",
+      "href": null,
+      "title": "build-and-test",
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "Clone repository00:32",
+      "href": null,
+      "title": "Clone repository",
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "Install dependencies01:59",
+      "href": null,
+      "title": "Install dependencies",
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "Typecheck application02:47",
+      "href": null,
+      "title": "Typecheck application",
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "release-verification00:01",
+      "href": null,
+      "title": "release-verification",
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "Verify release00:01",
+      "href": null,
+      "title": "Verify release",
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "View config",
+      "href": "/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "View logs",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "View config",
+      "href": "/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "View logs",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "View config",
+      "href": "/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "View logs",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "View config",
+      "href": "/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "View logs",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    }
+  ],
+  "denseContainers": [
+    {
+      "index": 0,
+      "tag": "div",
+      "className": "overflow-x-auto",
+      "testId": null,
+      "clientWidth": 356,
+      "scrollWidth": 849,
+      "rectWidth": 356,
+      "overflowX": "auto"
+    },
+    {
+      "index": 1,
+      "tag": "table",
+      "className": "w-full min-w-3xl border-collapse text-left text-sm",
+      "testId": null,
+      "clientWidth": 849,
+      "scrollWidth": 849,
+      "rectWidth": 848.88,
+      "overflowX": "visible"
+    }
+  ],
+  "document": {
+    "className": "light",
+    "clientHeight": 844,
+    "clientWidth": 390,
+    "dataTheme": "light",
+    "lang": "en",
+    "scrollHeight": 844,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "terminalRouteName": "repo-pipeline",
+  "title": "Tasks · Pipeline #842 · acme/backend-api · Woodpecker",
+  "url": "http://127.0.0.1:8010/repos/101/pipeline/842",
+  "stateId": "production-light-en-mobile-overview",
+  "surface": "production light English overview",
+  "permission": "push",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "capturedAt": "2026-08-10T09:30:32.170Z",
+  "health": {
+    "startedAt": "2026-08-10T09:30:28.032Z",
+    "endedAt": "2026-08-10T09:30:32.170Z",
+    "errorCount": 0,
+    "warningCount": 38,
+    "console": [
+      {
+        "level": "debug",
+        "message": "[vite] connecting...",
+        "timestamp": "2026-08-10T09:30:28.433Z"
+      },
+      {
+        "level": "debug",
+        "message": "[vite] connected.",
+        "timestamp": "2026-08-10T09:30:28.590Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.469Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.469Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.469Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.469Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.469Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.470Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.470Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.470Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.470Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.471Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.471Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.474Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.474Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.475Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.475Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.476Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.476Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.476Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.477Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.477Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.477Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.477Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.478Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.478Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.478Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.478Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.479Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.479Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.480Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.480Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.482Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.482Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.482Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.483Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.483Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.483Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:29.484Z"
+      },
+      {
+        "level": "warning",
+        "message": "[VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.\n├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next(\"/path\")` becomes `return \"/path\"`.\n╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next",
+        "timestamp": "2026-08-10T09:30:29.488Z"
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8010/assets/custom.js",
+        "reason": "optional Woodpecker custom JavaScript hook is absent from the local Vite evidence host",
+        "timestamp": "2026-08-10T09:30:28.398Z"
+      }
+    ]
+  }
+}

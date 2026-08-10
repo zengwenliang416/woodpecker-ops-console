@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "states": 30,
+  "productionStates": 18,
+  "prototypeStates": 12,
+  "errorStates": [],
+  "totalWarnings": 2396,
+  "serviceIdentity": {
+    "sourceBaseCommit": "5712db6fce31b79ec01f1e9239b70f3a79282ab6",
+    "gitHead": "5712db6fce31b79ec01f1e9239b70f3a79282ab6",
+    "productionRuntimeUnchangedFromBase": true,
+    "viteProxyRepository": "acme/backend-api",
+    "productionEntrypoint": "/src/main.ts",
+    "productionRouterMarker": "repo-pipeline-debug",
+    "prototypeMarker": "approved-user-design"
+  },
+  "manifestUpdated": true,
+  "generatedAt": "2026-08-10T09:30:39.486Z"
+}

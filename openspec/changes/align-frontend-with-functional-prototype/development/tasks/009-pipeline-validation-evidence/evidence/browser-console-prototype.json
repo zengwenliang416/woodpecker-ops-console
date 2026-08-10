@@ -1,0 +1,218 @@
+[
+  {
+    "stateId": "prototype-dark-zh-desktop-overview",
+    "startedAt": "2026-08-10T09:30:09.299Z",
+    "endedAt": "2026-08-10T09:30:10.454Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:09.477Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-desktop-log",
+    "startedAt": "2026-08-10T09:30:10.567Z",
+    "endedAt": "2026-08-10T09:30:11.699Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:10.729Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-desktop-changed-files",
+    "startedAt": "2026-08-10T09:30:11.802Z",
+    "endedAt": "2026-08-10T09:30:12.954Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:11.976Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-desktop-config",
+    "startedAt": "2026-08-10T09:30:13.045Z",
+    "endedAt": "2026-08-10T09:30:14.129Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:13.179Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-desktop-errors",
+    "startedAt": "2026-08-10T09:30:14.204Z",
+    "endedAt": "2026-08-10T09:30:15.316Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:14.318Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-desktop-debug",
+    "startedAt": "2026-08-10T09:30:15.424Z",
+    "endedAt": "2026-08-10T09:30:16.540Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:15.573Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-overview",
+    "startedAt": "2026-08-10T09:30:16.679Z",
+    "endedAt": "2026-08-10T09:30:18.011Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:16.897Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-log",
+    "startedAt": "2026-08-10T09:30:18.277Z",
+    "endedAt": "2026-08-10T09:30:19.545Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:18.616Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-changed-files",
+    "startedAt": "2026-08-10T09:30:19.652Z",
+    "endedAt": "2026-08-10T09:30:20.715Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:19.787Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-config",
+    "startedAt": "2026-08-10T09:30:20.785Z",
+    "endedAt": "2026-08-10T09:30:21.826Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:20.897Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-errors",
+    "startedAt": "2026-08-10T09:30:21.904Z",
+    "endedAt": "2026-08-10T09:30:22.962Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:22.016Z"
+      }
+    ]
+  },
+  {
+    "stateId": "prototype-dark-zh-mobile-debug",
+    "startedAt": "2026-08-10T09:30:23.027Z",
+    "endedAt": "2026-08-10T09:30:24.074Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:23.144Z"
+      }
+    ]
+  }
+]

@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-10T03:23:55.071Z",
+  "generated_at": "2026-08-10T07:49:09.846Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -243,7 +243,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "008-pipeline-regression-coverage",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Resolve every current pipeline destination through its production named route,",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -251,16 +251,56 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/008-pipeline-regression-coverage/context.json"
       ],
       "expected_evidence": [
-        "Focused tests or command output",
-        "Task report",
-        "Spec review",
-        "Quality review"
+        "Focused router/component tests covering named routes, tabs/counts, killed cancellation context, permissions/actions, step routing, empty/error states, and local responsive containment.",
+        "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, and git diff output.",
+        "Evidence-bearing task report plus independent spec and quality reviews that keep task 3.5 sensory evidence open."
       ],
       "allowed_files": [
-        "src"
+        "web/src/router.test.ts",
+        "web/src/views/repo/pipeline/PipelineWrapper.vue",
+        "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+        "web/src/views/repo/pipeline/Pipeline.test.ts",
+        "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "web/src/views/repo/pipeline/PipelineDebug.test.ts"
       ],
       "query_ids": [
         "development:task-008-pipeline-regression-coverage:evidence"
+      ]
+    },
+    {
+      "id": "development:task-009-pipeline-validation-evidence",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "009-pipeline-validation-evidence",
+      "text": "Replay the current pipeline detail implementation against a deterministic Mock",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/context.json"
+      ],
+      "expected_evidence": [
+        "Current focused eight-file pipeline Vitest and complete frontend Vitest receipts.",
+        "Targeted pipeline Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+        "Durable production and approved-prototype screenshots at 1600x1000 and 390x844 for dark Simplified Chinese and representative light English states.",
+        "Browser measurements for terminal route, viewport, screenshot dimensions, theme, language, colors, page/dense-container overflow, permissions, i18n leakage, and console/runtime/network errors.",
+        "A task-local replayable Mock API harness and evidence manifest tied to the current Git commit.",
+        "Evidence-bearing task report plus independent spec and quality reviews for baseline task 3.5."
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/context.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/report.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/spec-review.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/quality-review.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
+      ],
+      "query_ids": [
+        "development:task-009-pipeline-validation-evidence:evidence"
       ]
     }
   ]

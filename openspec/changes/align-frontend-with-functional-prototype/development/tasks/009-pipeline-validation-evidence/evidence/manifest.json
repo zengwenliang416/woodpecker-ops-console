@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "task_id": "009-pipeline-validation-evidence",
+  "baseline_task_id": "3.5",
+  "commit": "5712db6fce31b79ec01f1e9239b70f3a79282ab6",
+  "captured_from": "2026-08-10T09:29:44.945Z",
+  "captured_through": "2026-08-10T09:30:39.444Z",
+  "evidence_root": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence",
+  "mock_api": {
+    "entrypoint": "mock_api.py",
+    "command": "python3 openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/mock_api.py",
+    "smoke_command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/mock_api_smoke.mjs",
+    "base_url": "http://127.0.0.1:8123",
+    "production_url": "http://127.0.0.1:8010",
+    "prototype_url": "http://127.0.0.1:4173",
+    "fixture": {
+      "repository_id": 101,
+      "pipeline_number": 842,
+      "workflows": 2,
+      "terminal_steps": 4,
+      "changed_files": 6,
+      "pipeline_errors": 2,
+      "selected_log_step_id": 2003
+    },
+    "permission_control": "/api/evidence/permissions?push=0|1",
+    "verified_endpoint_count": 14,
+    "verified_endpoints": [
+      "/api/repos/101",
+      "/api/repos/101/pipelines/842",
+      "/api/repos/101/pipelines/842/config",
+      "/api/repos/101/logs/842/2003",
+      "/api/repos/101/pipelines/842/metadata",
+      "/api/forges/1",
+      "/api/applications?page=1&perPage=50",
+      "/api/environments?page=1&perPage=50",
+      "/api/releases?page=1&perPage=50",
+      "/api/stream/events",
+      "/api/repos/101/logs/842/not-a-number",
+      "/api/not-supported",
+      "/api/evidence/permissions?push=0",
+      "/api/evidence/permissions?push=1"
+    ],
+    "final_permission_state": {
+      "pull": true,
+      "push": true,
+      "admin": true
+    }
+  },
+  "state_matrix": [
+    {
+      "surface": "production",
+      "theme": "dark",
+      "locale": "zh-Hans",
+      "permission": "push",
+      "viewport": "1600x1000",
+      "png_dimensions": "1600x1000",
+      "artifacts": [
+        "production-dark-zh-desktop-overview",
+        "production-dark-zh-desktop-log",
+        "production-dark-zh-desktop-changed-files",
+        "production-dark-zh-desktop-config",
+        "production-dark-zh-desktop-errors",
+        "production-dark-zh-desktop-debug"
+      ]
+    },
+    {
+      "surface": "production",
+      "theme": "dark",
+      "locale": "zh-Hans",
+      "permission": "push",
+      "viewport": "390x844",
+      "png_dimensions": "390x844",
+      "artifacts": [
+        "production-dark-zh-mobile-overview",
+        "production-dark-zh-mobile-log",
+        "production-dark-zh-mobile-changed-files",
+        "production-dark-zh-mobile-config",
+        "production-dark-zh-mobile-errors",
+        "production-dark-zh-mobile-debug"
+      ]
+    },
+    {
+      "surface": "approved-prototype",
+      "theme": "dark",
+      "locale": "zh-CN",
+      "permission": "prototype-administrator",
+      "viewport": "1600x1000",
+      "png_dimensions": "1600x1000",
+      "artifacts": [
+        "prototype-dark-zh-desktop-overview",
+        "prototype-dark-zh-desktop-log",
+        "prototype-dark-zh-desktop-changed-files",
+        "prototype-dark-zh-desktop-config",
+        "prototype-dark-zh-desktop-errors",
+        "prototype-dark-zh-desktop-debug"
+      ]
+    },
+    {
+      "surface": "approved-prototype",
+      "theme": "dark",
+      "locale": "zh-CN",
+      "permission": "prototype-administrator",
+      "viewport": "390x844",
+      "png_dimensions": "390x844",
+      "artifacts": [
+        "prototype-dark-zh-mobile-overview",
+        "prototype-dark-zh-mobile-log",
+        "prototype-dark-zh-mobile-changed-files",
+        "prototype-dark-zh-mobile-config",
+        "prototype-dark-zh-mobile-errors",
+        "prototype-dark-zh-mobile-debug"
+      ]
+    },
+    {
+      "surface": "production",
+      "theme": "light",
+      "locale": "en",
+      "permission": "push",
+      "viewport": "1600x1000",
+      "png_dimensions": "1600x1000",
+      "artifacts": [
+        "production-light-en-desktop-overview",
+        "production-light-en-desktop-log"
+      ]
+    },
+    {
+      "surface": "production",
+      "theme": "light",
+      "locale": "en",
+      "permission": "push",
+      "viewport": "390x844",
+      "png_dimensions": "390x844",
+      "artifacts": [
+        "production-light-en-mobile-overview",
+        "production-light-en-mobile-log"
+      ]
+    },
+    {
+      "surface": "production",
+      "theme": "light",
+      "locale": "en",
+      "permission": "read-only",
+      "viewport": "1600x1000",
+      "png_dimensions": "1600x1000",
+      "artifacts": [
+        "production-light-en-readonly-desktop-overview",
+        "production-light-en-readonly-desktop-debug"
+      ]
+    }
+  ],
+  "artifact_convention": {
+    "measurement_suffix": ".json",
+    "screenshot_suffix": ".png",
+    "paired_artifacts": 30,
+    "console_artifacts": [
+      "browser-console-production.json",
+      "browser-console-prototype.json"
+    ],
+    "replay_artifacts": [
+      "capture_browser.mjs",
+      "mock_api_smoke.mjs",
+      "verify_evidence.mjs",
+      "browser-replay-summary.json"
+    ],
+    "capture_command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/capture_browser.mjs",
+    "verification_command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/verify_evidence.mjs",
+    "total_files_excluding_manifest": 67
+  },
+  "assertions": {
+    "production_page_level_horizontal_overflow": false,
+    "prototype_page_level_horizontal_overflow": false,
+    "production_raw_i18n_keys": 0,
+    "prototype_raw_i18n_keys": 0,
+    "production_console_errors": 0,
+    "prototype_console_errors": 0,
+    "push_overview_retry_visible": true,
+    "push_desktop_debug_tab_visible": true,
+    "read_only_retry_visible": false,
+    "read_only_debug_tab_visible": false,
+    "read_only_direct_debug_permission_feedback_visible": true,
+    "read_only_direct_debug_metadata_download_visible": false,
+    "mobile_dense_content_uses_local_scrolling": true
+  },
+  "console_adjudication": {
+    "production_warning_count": 2396,
+    "prototype_warning_count": 0,
+    "blocking_errors": 0,
+    "warning_breakdown": {
+      "vue_i18n_startup_or_fallback": 2370,
+      "pipeline_wrapper_step_id": 8,
+      "router_deprecated_next_callback": 18,
+      "other": 0
+    },
+    "warnings": [
+      "vue-i18n reports transient missing-key warnings during asynchronous locale startup and switching; settled English and Simplified-Chinese evidence renders translated copy with no raw keys, and the referenced English keys exist in web/src/assets/locales/en.json",
+      "the selected-step route emits an existing extraneous stepId attribute warning on PipelineWrapper",
+      "Vue Router emits the existing deprecated next() navigation-guard warning"
+    ],
+    "decision": "non-blocking concerns for this evidence-only slice because no warning produced a settled visible defect, failed request, runtime exception, or acceptance violation"
+  },
+  "capture_disclosure": {
+    "retained_invalid_attempts": [],
+    "png_encoding_and_dimensions": "All thirty screenshots have the PNG signature and exactly match their configured 1600x1000 or 390x844 viewport dimensions.",
+    "service_identity": "The capture verifies that the manifest base commit is an ancestor of HEAD, production runtime files are unchanged from that base except the allowed router test, the Vite /api proxy returns the exact task Mock API repository fixture, the production HTML/router source expose the expected entrypoint and route marker, and the standalone prototype exposes its approved-user-design marker.",
+    "route_and_content_identity": "Production terminal route names are read from the live Vue Router currentRoute. The verifier independently checks exact URLs plus destination-specific rendered data for overview, selected log, all six changed files, decoded configuration, both diagnostics, push metadata download, read-only denial, and approved-prototype equivalents.",
+    "network_settle_policy": "Any request still pending after the five-second network-settle deadline is recorded as a network failure and makes the replay summary fail.",
+    "optional_resource_interception": [
+      "The production replay fulfills only http://127.0.0.1:8010/assets/custom.js with an empty JavaScript response because this optional Woodpecker custom hook is absent from the local Vite evidence host.",
+      "The approved-prototype replay fulfills only http://127.0.0.1:4173/favicon.ico with an empty icon response because the standalone artifact does not ship a favicon."
+    ],
+    "authoritative_artifacts": "Only the artifacts listed by the state matrix and console files in this manifest are used for task closure."
+  },
+  "checksums": {
+    "algorithm": "SHA-256",
+    "all_files_excluding_manifest": "50fadfd79fbb093929e73eff3010be010bf553c9b35b2eb31d91fc24338f6b5d",
+    "all_png_files": "080b81fa06e92bb83c0534c1a26a5af48e344a564aaaa93582d56d722b27b245",
+    "all_json_files_excluding_manifest": "f3271808de23086332363dc73bf81221464adfc71643156e0e66e353d8419d3d",
+    "mock_api_py": "60f9f6657f39982aa1d1720bce44bfe135daee887213e60e4202d79307c0aa99",
+    "capture_browser_mjs": "bba9add181ba0f31b405c224c40fcf85f16c7768aca8d2c2f183adce03087cbc",
+    "mock_api_smoke_mjs": "2a4020049241a70cfc802f5cfecc94b09b9e945c7e82d618243d6c93ca97dc7b",
+    "verify_evidence_mjs": "de8f0c7d5504327355a0d79a75645f04246733b01691bd1873a6e13787764988",
+    "browser_replay_summary_json": "8d93d4d306c1a9a09056df2b888cdc41f786536da1a6126d8592191b0ac7c300",
+    "replay": "find . -maxdepth 1 -type f ! -name manifest.json -print0 | sort -z | xargs -0 shasum -a 256 | shasum -a 256"
+  }
+}

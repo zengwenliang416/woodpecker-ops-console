@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-10T03:23:55.071Z",
+  "generated_at": "2026-08-10T07:49:09.847Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -114,7 +114,7 @@
       "stage": "development",
       "task_id": "008-pipeline-regression-coverage",
       "status": "planned",
-      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Resolve every current pipeline destination through its production named route,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "file paths",
         "symbols",
@@ -122,6 +122,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-008-pipeline-regression-coverage --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-009-pipeline-validation-evidence:evidence",
+      "claim_id": "development:task-009-pipeline-validation-evidence",
+      "stage": "development",
+      "task_id": "009-pipeline-validation-evidence",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Replay the current pipeline detail implementation against a deterministic Mock\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-009-pipeline-validation-evidence --query \"<query>\" --write --json"
     }
   ]
 }

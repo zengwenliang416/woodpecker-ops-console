@@ -20,7 +20,7 @@
       "id": "phase-3",
       "task_ids": ["3.1", "3.2", "3.3", "3.4", "3.5"],
       "depends_on": ["phase-2"],
-      "status": "in_progress"
+      "status": "complete"
     },
     {
       "id": "phase-4",
@@ -199,6 +199,24 @@
         "web/src/views/repo/pipeline/PipelineConfig.test.ts",
         "web/src/views/repo/pipeline/PipelineErrors.test.ts",
         "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+      ],
+      "status": "complete"
+    },
+    {
+      "packet_id": "009-pipeline-validation-evidence",
+      "baseline_task_id": "3.5",
+      "goal": "Validate the completed pipeline detail route family and capture equivalent-state desktop/mobile, dark/representative-light, locale, and permission evidence against the approved prototype.",
+      "depends_on": [
+        "3.4"
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/context.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/report.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/spec-review.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/quality-review.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
       ],
       "status": "complete"
     }

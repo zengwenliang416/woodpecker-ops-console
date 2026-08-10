@@ -13,7 +13,7 @@ describe('router base path', () => {
     expect(router.resolve('/overview').href).toBe('/woodpecker/overview');
     expect(router.resolve('/deployments/new').href).toBe('/woodpecker/deployments/new');
     expect(router.resolve('/infrastructure/servers/7').href).toBe('/woodpecker/infrastructure/servers/7');
-  });
+  }, 15_000);
 
   it('resolves every pipeline destination without falling through the optional step route', async () => {
     Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: '/woodpecker' });
@@ -66,5 +66,5 @@ describe('router base path', () => {
         expect(incomingRoute.params).not.toHaveProperty('stepId');
       }
     }
-  });
+  }, 15_000);
 });

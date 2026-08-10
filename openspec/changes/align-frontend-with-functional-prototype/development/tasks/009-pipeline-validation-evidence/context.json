@@ -1,0 +1,70 @@
+{
+  "task_id": "009-pipeline-validation-evidence",
+  "goal": "Prove the completed pipeline detail route family passes current focused/full frontend validation and equivalent-state production-versus-prototype browser review across desktop/mobile, theme, locale, and permission boundaries.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "web/src/router.ts",
+    "web/src/views/repo/pipeline/PipelineWrapper.vue",
+    "web/src/views/repo/pipeline/Pipeline.vue",
+    "web/src/components/repo/pipeline/PipelineLog.vue",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+    "web/src/views/repo/pipeline/PipelineConfig.vue",
+    "web/src/views/repo/pipeline/PipelineErrors.vue",
+    "web/src/views/repo/pipeline/PipelineDebug.vue"
+  ],
+  "allowed_files": [
+    "web/src/router.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/context.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/spec-review.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/quality-review.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
+  ],
+  "test_paths": [
+    "web/src/router.test.ts",
+    "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+    "web/src/views/repo/pipeline/Pipeline.test.ts",
+    "web/src/components/repo/pipeline/PipelineLog.test.ts",
+    "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+    "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+    "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+    "web/src/views/repo/pipeline/PipelineDebug.test.ts"
+  ],
+  "non_goals": [
+    "Do not edit production frontend, router runtime, API, store, backend, persistence, dependencies, authentication, permission calculation, locales, or the approved prototype.",
+    "Do not change router assertions or production behavior; the only web edit allowed is an explicit timeout for the existing dynamic-import router tests.",
+    "Do not add routes, fields, states, mutations, compatibility behavior, or prototype-only data.",
+    "Do not reuse earlier screenshots or reports as evidence for the current commit.",
+    "Do not claim later route families, global accessibility/internationalization/responsive closure, or all 67 route rows are complete."
+  ],
+  "expected_evidence": [
+    "Current focused eight-file pipeline Vitest and complete frontend Vitest receipts.",
+    "Targeted pipeline Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+    "Durable production and approved-prototype screenshots at 1600x1000 and 390x844 for dark Simplified Chinese and representative light English states.",
+    "Browser measurements for terminal route, viewport, screenshot dimensions, theme, language, colors, page/dense-container overflow, permissions, i18n leakage, and console/runtime/network errors.",
+    "A task-local replayable Mock API harness and evidence manifest tied to the current Git commit.",
+    "Evidence-bearing task report plus independent spec and quality reviews for baseline task 3.5."
+  ],
+  "unsafe_assumptions": [
+    "Previous screenshots, green tests, CSS classes, or source tokens do not prove current rendered behavior.",
+    "Production and prototype evidence is comparable only when route family, viewport, theme, locale, permission role, and populated-data state are normalized.",
+    "Pixel identity is not required when hierarchy, behavior, responsive containment, and semantic tokens satisfy the approved contract.",
+    "Prototype-only values must not be copied into production or treated as supported backend fields."
+  ],
+  "stop_condition": "Stop before any production edit. If current rendered evidence exposes a defect, record it, expand allowed files through Scope Lock, rerun development entry, and add a focused failing regression before repair."
+}

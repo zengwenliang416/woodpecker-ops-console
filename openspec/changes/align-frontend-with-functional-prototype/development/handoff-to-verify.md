@@ -31,8 +31,17 @@
   diagnostics, explicit empty/permission states, responsive containment, and
   latest-request-wins step-log loading while preserving current routes, APIs,
   streaming, downloads, deletion, and permissions.
+- `008-pipeline-regression-coverage` / baseline task `3.4`: the completed
+  pipeline route family is protected by focused named/inbound router and
+  component regressions for statuses, cancellation context, permissions,
+  actions, tabs, empty/error/stale states, and responsive containment.
+- `009-pipeline-validation-evidence` / baseline task `3.5`: the complete
+  pipeline route family passed current focused/full validation and replayable
+  production-versus-approved-prototype browser evidence across desktop/mobile,
+  dark Simplified Chinese, representative light English, and push/read-only
+  states.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `3.4` through `8.4` remain incomplete.
+  Tasks `4.1` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -54,6 +63,13 @@
   `web/src/views/repo/pipeline/PipelineChangedFiles.vue`,
   `PipelineConfig.vue`, `PipelineErrors.vue`, `PipelineDebug.vue`, five focused
   tests, and English/Simplified-Chinese locales.
+- Pipeline regression coverage: `web/src/router.test.ts`, focused tests for the
+  pipeline wrapper, overview, log, changed-files, config, errors, and Debug,
+  plus the regression-proven `PipelineWrapper.vue` cancellation-context fix.
+- Pipeline validation evidence: one test-only router timeout stabilization and
+  task-local Mock API, smoke, bounded CDP capture, independent verifier,
+  thirty measurement/PNG pairs, per-state console artifacts, replay summary,
+  checksummed manifest, report, and independent reviews.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -61,7 +77,9 @@
   `development/tasks/004-shell-theme-evidence/report.md`, and
   `development/tasks/005-pipeline-detail-header/report.md`, and
   `development/tasks/006-pipeline-overview/report.md`, and
-  `development/tasks/007-pipeline-log-diagnostics/report.md`.
+  `development/tasks/007-pipeline-log-diagnostics/report.md`,
+  `development/tasks/008-pipeline-regression-coverage/report.md`, and
+  `development/tasks/009-pipeline-validation-evidence/report.md`.
 
 ## Requirements Covered
 
@@ -83,6 +101,15 @@
   diagnostics slice `007`; this covers only current step logs, changed-file
   paths, historical config, runtime/parse errors, metadata Debug, responsive
   containment, and stale-log response protection, not tasks `3.4` or `3.5`.
+- `A3` and `A4` were independently verified for slice `008` within the
+  pipeline regression scope: current route precedence, status/cancellation
+  variants, permissions/actions, explicit states, stale responses, and local
+  responsive containment.
+- `A2`, `A3`, and `A4` were independently verified for slice `009` within the
+  completed pipeline route family using current `66` focused tests, `175` full
+  tests, exact-dimension desktop/mobile PNG evidence, live route and
+  destination semantics, service/proxy/prototype identity, and push/read-only
+  browser states.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -107,6 +134,13 @@
   endpoint data. Prototype-only diff statistics, config analysis, remediation,
   previous-success comparison, and interactive Debug sessions are not
   invented.
+- Pipeline regression coverage preserves existing route/API/store/permission
+  contracts and fixes only the regression-proven killed-step cancellation
+  interpolation. The final evidence slice changes no production runtime.
+- Pipeline browser evidence compares the live production route family with the
+  immutable approved prototype, records exact URLs and rendered semantics, and
+  blocks on console/runtime/network/HTTP failures, pending requests, raw i18n
+  keys, page overflow, permission leakage, or checksum drift.
 - Desktop/mobile comparisons normalize theme, locale, viewport, administrator
   permission, and populated-data state instead of copying prototype fixtures.
 
@@ -128,6 +162,9 @@
 - Reused for diagnostics: `Button`, `IconButton`, `FeedbackState`, `Panel`,
   `SyntaxHighlight`, `DocsLink`, `RenderMarkdown`, current API and injection
   seams, notifications, i18n, router, clipboard, and browser download APIs.
+- Reused for regression/evidence closure: current Vitest configuration, Vue
+  Router, Vite proxy, production API/store seams, Chrome CDP, Node/Python
+  standard libraries, and the immutable standalone prototype.
 - Extracted: no new extraction was required after shared feedback ownership was
   established; slice `004` intentionally added no duplicate shell or theme
   component, and slice `006` has no second consumer with the same
@@ -136,9 +173,9 @@
 
 ## API / Data Flow Changes
 
-- No backend, API payload, store, router, authentication, permission
+- No backend, API payload, store, router runtime, authentication, permission
   calculation, persistence, migration, or dependency contract changed in
-  slices `001` through `007`.
+  slices `001` through `009`.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -164,12 +201,18 @@
   refetch, no-match/reset, wrapping, push-gated deletion, stale old-request
   rejection, changed-file search/empty states, config decode/copy/empty
   behavior, real error/empty behavior, and Debug permission/download cleanup.
-- The current full frontend regression baseline is 28 test files and 160 tests.
+- Pipeline regression tests cover named and inbound destination precedence,
+  all current status/cancellation branches, permission-aware actions and tabs,
+  selected-step routing, explicit empty/error states, stale logs, metadata
+  behavior, and structural mobile containment.
+- The current full frontend regression baseline is 28 test files and 175 tests.
 
 ## Local Validation
 
-- PASS: current pipeline-diagnostics focused suite, 5 files and 13 tests.
-- PASS: current complete frontend suite, 28 files and 160 tests.
+- PASS: final pipeline-focused suite, 8 files and 66 tests; the exact command
+  also passed three sequential stability runs after the router test timeout
+  stabilization.
+- PASS: current complete frontend suite, 28 files and 175 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -180,14 +223,23 @@
   unavailable-data fallbacks, local log/path filters, config copy, error/empty
   states, push/read-only Debug, internal dense-content scrolling, and
   equivalent dark Simplified-Chinese production/prototype comparison.
+- PASS: task-local Mock API smoke across 14 endpoint/status assertions.
+- PASS: bounded 30-state CDP replay with verified Git/runtime/Vite
+  proxy/Mock/prototype identity, live route names, complete destination
+  semantics, per-state console/runtime/network/HTTP health, exact PNG
+  dimensions, permission boundaries, no page overflow/raw keys, clean exit,
+  and same-run manifest refresh.
+- PASS: independent evidence verifier for all thirty state/PNG pairs, exact
+  console correspondence, service/route/content assertions, and all manifest
+  SHA-256 values.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twenty-five baseline tasks remain incomplete, including remaining pipeline
-  status/router/action coverage, consolidated pipeline evidence, other
-  route-family implementation, and full six-domain verification tasks. Global
-  prototype parity must not be claimed.
+- Twenty-three baseline tasks remain incomplete across repository,
+  organization/administration/user, operations, accessibility/i18n/responsive,
+  and full six-domain verification work. Global prototype parity must not be
+  claimed.
 - The unchanged `web/src/style.css` has a pre-existing Prettier mismatch.
   Slice `004` records the original failure plus a contract-accepted,
   task-scoped zero-diff adjudication; this is not evidence that the file is
@@ -216,7 +268,7 @@
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `3.4` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `4.1` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

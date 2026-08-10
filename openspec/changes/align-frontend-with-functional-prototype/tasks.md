@@ -25,7 +25,7 @@
 - [x] 3.2 Rebuild the pipeline overview to show step status, duration, environment/image context, execution summary, and log entry without losing current approval, decline, restart, cancel, and deploy behavior.
 - [x] 3.3 Align pipeline log, changed-files, configuration, error analysis, and debug tabs with shared cards, tables, controls, and responsive behavior.
 - [x] 3.4 Add focused component/router tests for pipeline status variants, permissions, actions, tabs, empty/error states, and mobile behavior.
-- [ ] 3.5 Run focused and full frontend validation, then record desktop/mobile dark-mode and representative light-mode pipeline evidence.
+- [x] 3.5 Run focused and full frontend validation, then record desktop/mobile dark-mode and representative light-mode pipeline evidence.
 
 ## 4. Repository Route Family
 

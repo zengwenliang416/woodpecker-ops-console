@@ -1,0 +1,499 @@
+{
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600,
+    "scrollHeight": 1000
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos 1 DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 backend-api / Pipeline Pipeline #842 failure fix null handling in user route Branch: main Trigger: Push Author: alice Commit: a1b2c3d4e5 Created: 9 hours ago Duration: 5 minutes Overview Changed files 6 Config Errors 2 You are not allowed to access the debug information Your current permissions do not allow access to this information.",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos 1 DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 backend-api / Pipeline Pipeline #842 failure fix null handling in user route Branch: main Trigger: Push Author: alice Commit: a1b2c3d4e5 Created: 9 hours ago Duration: 5 minutes Overview Changed files 6 Config Errors 2 You are not allowed to access the debug information Your current permissions do not allow access to this information.",
+  "colors": {
+    "background": "rgb(244, 247, 248)",
+    "text": "rgb(21, 35, 45)"
+  },
+  "controls": [
+    {
+      "tag": "a",
+      "text": "WoodpeckerCI/CD Platform",
+      "href": "/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Close navigation",
+      "ariaLabel": "Close navigation"
+    },
+    {
+      "tag": "a",
+      "text": "Overview",
+      "href": "/overview",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Repos1",
+      "href": "/repos",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Deployments",
+      "href": "/deployments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Applications",
+      "href": "/deployments/apps",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Environments",
+      "href": "/deployments/environments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Releases",
+      "href": "/deployments/releases",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Production approvals",
+      "href": "/deployments/approvals",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Infrastructure",
+      "href": "/infrastructure",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Servers",
+      "href": "/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Server groups",
+      "href": "/infrastructure/groups",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Services & containers",
+      "href": "/infrastructure/services",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Alerts",
+      "href": "/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents",
+      "href": "/admin/agents",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Queue",
+      "href": "/admin/queue",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Secrets",
+      "href": "/user/secrets",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "System Admin",
+      "href": "/admin",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Users",
+      "href": "/admin/users",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "/admin/forges",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Docs",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Personal settings",
+      "href": "/user",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Open navigation",
+      "ariaLabel": "Open navigation"
+    },
+    {
+      "tag": "button",
+      "text": "Search pipelines, repos, users and settings…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Toggle theme",
+      "ariaLabel": "Toggle theme"
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/admin",
+      "title": "Settings",
+      "ariaLabel": "Settings"
+    },
+    {
+      "tag": "button",
+      "text": "0",
+      "href": null,
+      "title": "Pipeline feed",
+      "ariaLabel": "Pipeline feed"
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/user",
+      "title": "User Settings",
+      "ariaLabel": "User Settings"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Back",
+      "ariaLabel": "Back"
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Overview",
+      "href": "/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Changed files6",
+      "href": "/repos/101/pipeline/842/changed-files",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Config",
+      "href": "/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Errors2",
+      "href": "/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "light",
+    "clientHeight": 1000,
+    "clientWidth": 1600,
+    "dataTheme": "light",
+    "lang": "en",
+    "scrollHeight": 1000,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "terminalRouteName": "repo-pipeline-debug",
+  "title": "Debug · Pipeline #842 · acme/backend-api · Woodpecker",
+  "url": "http://127.0.0.1:8010/repos/101/pipeline/842/debug",
+  "stateId": "production-light-en-readonly-desktop-debug",
+  "surface": "production read-only debug",
+  "permission": "read-only",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-10T09:30:39.444Z",
+  "health": {
+    "startedAt": "2026-08-10T09:30:37.405Z",
+    "endedAt": "2026-08-10T09:30:39.444Z",
+    "errorCount": 0,
+    "warningCount": 38,
+    "console": [
+      {
+        "level": "debug",
+        "message": "[vite] connecting...",
+        "timestamp": "2026-08-10T09:30:37.541Z"
+      },
+      {
+        "level": "debug",
+        "message": "[vite] connected.",
+        "timestamp": "2026-08-10T09:30:37.550Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.969Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.969Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.969Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.969Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.970Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.970Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.970Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.970Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.970Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.971Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.971Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.973Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.974Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.975Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.975Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.975Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.976Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.976Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.977Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.977Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.978Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.978Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.978Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.979Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.979Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.979Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.980Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.980Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.980Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.980Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.982Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.982Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.982Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.983Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.983Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.983Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages.",
+        "timestamp": "2026-08-10T09:30:37.984Z"
+      },
+      {
+        "level": "warning",
+        "message": "[VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.\n├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next(\"/path\")` becomes `return \"/path\"`.\n╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next",
+        "timestamp": "2026-08-10T09:30:37.989Z"
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8010/assets/custom.js",
+        "reason": "optional Woodpecker custom JavaScript hook is absent from the local Vite evidence host",
+        "timestamp": "2026-08-10T09:30:37.529Z"
+      }
+    ]
+  }
+}

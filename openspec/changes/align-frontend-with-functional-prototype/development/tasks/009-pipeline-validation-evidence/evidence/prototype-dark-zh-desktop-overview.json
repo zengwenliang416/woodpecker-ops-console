@@ -1,0 +1,358 @@
+{
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590,
+    "scrollHeight": 1797
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 5 个步骤 总计 2m 47s 1. Clone repository woodpeckerci/plugin-git 18s 2. Install dependencies node:22-alpine 2m 14s 3. Run tests node:22-alpine · 128 tests passed 5m 36s 4. Build application node:22-alpine · Exit code 1 1m 42s 5 5. Deploy to production plugins/kubernetes — 流水线执行概览 步骤状态、耗时与运行环境 图形视图 排队时间 18s 执行时间 2m 47s 资源消耗 4.8 CPU·m 步骤明细 步骤 状态 镜像 持续时间 开始 1. Clone repository 成功 woodpeckerci/plugin-git 18s 10:12:40 2. Install dependencies 成功 node:22-alpine 2m 14s 10:15:41 3. Run tests 成功 node:22-alpine 5m 36s 10:18:42 4. Build application 失败 node:22-alpine 1m 42s 10:21:43 5. Deploy to production 等待中 plugins/kubernetes — 10:24:44 详情 注释 2 产物 2 触发事件 push 作者 A alice 提交 a1b2c3d 消息 fix: correct null check in user service 创建时间 2026-08-05 10:12:43 持续时间 2m 47s Agent agent-us-east-1a-01 构建失败 第一个失败命令 $ npm run build src/routes/user.ts:42:15 · TS2345 查看错误分析",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 5 个步骤 总计 2m 47s 1. Clone repository woodpeckerci/plugin-git 18s 2. Install dependencies node:22-alpine 2m 14s 3. Run tests node:22-alpine · 128 tests passed 5m 36s 4. Build application node:22-alpine · Exit code 1 1m 42s 5 5. Deploy to production plugins/kubernetes — 流水线执行概览 步骤状态、耗时与运行环境 图形视图 排队时间 18s 执行时间 2m 47s 资源消耗 4.8 CPU·m 步骤明细 步骤 状态 镜像 持续时间 开始 1. Clone repository 成功 woodpeckerci/plugin-git 18s 10:12:40 2. Install dependencies 成功 node:22-alpine 2m 14s 10:15:41 3. Run tests 成功 node:22-alpine 5m 36s 10:18:42 4. Build application 失败 node:22-alpine 1m 42s 10:21:43 5. Deploy to production 等待中 plugins/kubernetes — 10:24:44 详情 注释 2 产物 2 触发事件 push 作者 A alice 提交 a1b2c3d 消息 fix: correct null check in user service 创建时间 2026-08-05 10:12:43 持续时间 2m 47s Agent agent-us-east-1a-01 构建失败 第一个失败命令 $ npm run build src/routes/user.ts:42:15 · TS2345 查看错误分析",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航"
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航"
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知"
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "重试",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "取消",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "更多",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "日志",
+      "href": "#/repos/101/pipeline/842?tab=logs",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "变更文件6",
+      "href": "#/repos/101/pipeline/842/changed-files",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "配置",
+      "href": "#/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "错误1",
+      "href": "#/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "调试",
+      "href": "#/repos/101/pipeline/842/debug",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "图形视图",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "详情",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "注释 2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "产物 2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "查看错误分析",
+      "href": "#/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null
+    }
+  ],
+  "denseContainers": [
+    {
+      "index": 0,
+      "tag": "table",
+      "className": "",
+      "testId": null,
+      "clientWidth": 1250,
+      "scrollWidth": 1250,
+      "rectWidth": 1250,
+      "overflowX": "visible"
+    }
+  ],
+  "document": {
+    "className": "",
+    "clientHeight": 1000,
+    "clientWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1797,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:4173/#/repos/101/pipeline/842",
+  "stateId": "prototype-dark-zh-desktop-overview",
+  "surface": "approved prototype overview",
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-10T09:30:10.454Z",
+  "health": {
+    "startedAt": "2026-08-10T09:30:09.299Z",
+    "endedAt": "2026-08-10T09:30:10.454Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:09.477Z"
+      }
+    ]
+  }
+}

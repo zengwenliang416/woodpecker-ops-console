@@ -1,0 +1,368 @@
+{
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 1854
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 5 个步骤 总计 2m 47s 1. Clone repository woodpeckerci/plugin-git 18s 2. Install dependencies node:22-alpine 2m 14s 3. Run tests node:22-alpine · 128 tests passed 5m 36s 4. Build application node:22-alpine · Exit code 1 1m 42s 5 5. Deploy to production plugins/kubernetes — Step 4: Build application node:22-alpine 失败 1m 42s 错误 自动换行 1 10:12:43 Running step: Build application 2 10:12:43 Using image: node:22-alpine 3 10:12:43 Working directory: /drone/src 4 10:12:45 $ npm ci 5 10:12:45 added 342 packages, and audited 343 packages in 2s 6 10:12:45 12 packages are looking for funding 7 10:12:45 found 0 vulnerabilities 8 10:12:45 $ npm run build 9 10:12:46 > backend-api@1.4.0 build 10 10:12:46 > tsc -p tsconfig.build.json 11 10:12:48 src/routes/user.ts:42:15 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'. 12 10:12:48 42 const userId = req.query.id.toString(); 13 10:12:48 ~~~~~~~~~~~~~ 14 10:12:48 src/utils/email.ts:17:9 - warning TS6133: 'debug' is declared but its value is never read. 15 10:12:48 17 const debug = require('debug')('email'); 16 10:12:48 Found 1 error in src/routes/user.ts:42 17 10:12:48 Found 1 warning in src/utils/email.ts:17 18 10:12:48 error Command failed with exit code 1. 19 10:12:48 Step failed 详情 注释 2 产物 2 触发事件 push 作者 A alice 提交 a1b2c3d 消息 fix: correct null check in user service 创建时间 2026-08-05 10:12:43 持续时间 2m 47s Agent agent-us-east-1a-01 构建失败 第一个失败命令 $ npm run build src/routes/user.ts:42:15 · TS2345 查看错误分析",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 5 个步骤 总计 2m 47s 1. Clone repository woodpeckerci/plugin-git 18s 2. Install dependencies node:22-alpine 2m 14s 3. Run tests node:22-alpine · 128 tests passed 5m 36s 4. Build application node:22-alpine · Exit code 1 1m 42s 5 5. Deploy to production plugins/kubernetes — Step 4: Build application node:22-alpine 失败 1m 42s 错误 自动换行 1 10:12:43 Running step: Build application 2 10:12:43 Using image: node:22-alpine 3 10:12:43 Working directory: /drone/src 4 10:12:45 $ npm ci 5 10:12:45 added 342 packages, and audited 343 packages in 2s 6 10:12:45 12 packages are looking for funding 7 10:12:45 found 0 vulnerabilities 8 10:12:45 $ npm run build 9 10:12:46 > backend-api@1.4.0 build 10 10:12:46 > tsc -p tsconfig.build.json 11 10:12:48 src/routes/user.ts:42:15 - error TS2345: Argument of type 'string | undefined' is not assignable to parameter of type 'string'. 12 10:12:48 42 const userId = req.query.id.toString(); 13 10:12:48 ~~~~~~~~~~~~~ 14 10:12:48 src/utils/email.ts:17:9 - warning TS6133: 'debug' is declared but its value is never read. 15 10:12:48 17 const debug = require('debug')('email'); 16 10:12:48 Found 1 error in src/routes/user.ts:42 17 10:12:48 Found 1 warning in src/utils/email.ts:17 18 10:12:48 error Command failed with exit code 1. 19 10:12:48 Step failed 详情 注释 2 产物 2 触发事件 push 作者 A a",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航"
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航"
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题"
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知"
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "重试",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "取消",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "更多",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "日志",
+      "href": "#/repos/101/pipeline/842?tab=logs",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "变更文件6",
+      "href": "#/repos/101/pipeline/842/changed-files",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "配置",
+      "href": "#/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "错误1",
+      "href": "#/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "调试",
+      "href": "#/repos/101/pipeline/842/debug",
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "错误",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "自动换行",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "详情",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "注释 2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "button",
+      "text": "产物 2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null
+    },
+    {
+      "tag": "a",
+      "text": "查看错误分析",
+      "href": "#/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "",
+    "clientHeight": 844,
+    "clientWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1854,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:4173/#/repos/101/pipeline/842?tab=logs",
+  "stateId": "prototype-dark-zh-mobile-log",
+  "surface": "approved prototype log",
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "capturedAt": "2026-08-10T09:30:19.545Z",
+  "health": {
+    "startedAt": "2026-08-10T09:30:18.277Z",
+    "endedAt": "2026-08-10T09:30:19.545Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:4173/favicon.ico",
+        "reason": "standalone approved prototype does not ship a favicon",
+        "timestamp": "2026-08-10T09:30:18.616Z"
+      }
+    ]
+  }
+}
