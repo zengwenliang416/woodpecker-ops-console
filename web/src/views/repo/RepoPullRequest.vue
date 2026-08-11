@@ -1,11 +1,24 @@
 <template>
-  <RepoPipelineReference kind="pull-request" :title="title" :reference="`#${pullRequest}`" :pipelines="pipelines" />
+  <FeedbackState
+    v-if="!pullRequestsAvailable"
+    kind="disabled"
+    :title="$t('repo.repository_refs.pull_requests.disabled_title')"
+    :description="$t('repo.repository_refs.pull_requests.disabled_description')"
+  />
+  <RepoPipelineReference
+    v-else
+    kind="pull-request"
+    :title="title"
+    :reference="`#${pullRequest}`"
+    :pipelines="pipelines"
+  />
 </template>
 
 <script lang="ts" setup>
 import { computed, toRef } from 'vue';
 import { useI18n } from 'vue-i18n';
 
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import RepoPipelineReference from '~/components/repo/RepoPipelineReference.vue';
 import { requiredInject } from '~/compositions/useInjectProvide';
 import { useWPTitle } from '~/compositions/useWPTitle';
@@ -16,10 +29,7 @@ const props = defineProps<{
 }>();
 const pullRequest = toRef(props, 'pullRequest');
 const repo = requiredInject('repo');
-if (!repo.value.pr_enabled || !repo.value.allow_pr) {
-  throw new Error('Unexpected: pull requests are disabled for repo');
-}
-
+const pullRequestsAvailable = computed(() => repo.value.pr_enabled && repo.value.allow_pr);
 const allPipelines = requiredInject('pipelines');
 const pipelines = computed(() =>
   allPipelines.value.filter((pipeline) => pipelineMatchesPullRequest(pipeline, pullRequest.value)),

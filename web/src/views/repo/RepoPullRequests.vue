@@ -1,5 +1,11 @@
 <template>
-  <div class="min-w-0 space-y-4">
+  <FeedbackState
+    v-if="!pullRequestsAvailable"
+    kind="disabled"
+    :title="$t('repo.repository_refs.pull_requests.disabled_title')"
+    :description="$t('repo.repository_refs.pull_requests.disabled_description')"
+  />
+  <div v-else class="min-w-0 space-y-4">
     <section class="reference-toolbar">
       <label class="search-control">
         <span class="sr-only">{{ $t('repo.repository_refs.pull_requests.search_label') }}</span>
@@ -134,15 +140,13 @@ import { getPullRequestIndexFromRef, isPullRequestEvent } from '~/lib/pipelineRe
 
 const apiClient = useApiClient();
 const repo = requiredInject('repo');
-if (!repo.value.pr_enabled || !repo.value.allow_pr) {
-  throw new Error('Unexpected: pull requests are disabled for repo');
-}
-
+const pullRequestsAvailable = computed(() => repo.value.pr_enabled && repo.value.allow_pr);
 const allPipelines = requiredInject('pipelines');
 const search = ref('');
 const { timeAgo } = useDate();
 
 async function loadPullRequests(page: number): Promise<PullRequest[]> {
+  if (!pullRequestsAvailable.value) return [];
   return apiClient.getRepoPullRequests(repo.value.id, { page });
 }
 

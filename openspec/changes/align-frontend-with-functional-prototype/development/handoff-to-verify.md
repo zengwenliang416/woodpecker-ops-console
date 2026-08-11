@@ -52,8 +52,12 @@
   seven repository settings routes now use current APIs and permissions with
   responsive shared settings boundaries, repository lifecycle-owned mutations
   and runs, confirmed-row pagination recovery, and current responsive evidence.
+- `013-repository-regression-coverage` / baseline task `4.4`: all current
+  non-pipeline repository destinations are protected by named/inbound router,
+  permission/action/theme, active-error, same-ID lifecycle, disabled-route,
+  loading-recovery, and structural responsive regressions.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `4.4` through `8.4` remain incomplete.
+  Tasks `4.5` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -94,6 +98,10 @@
   wrapper and seven settings routes, four shared presentation components,
   `repoBadge.ts`, focused lifecycle/permission/state tests, locales, task-local
   Mock API/capture/verifier, and ten responsive browser states.
+- Repository regression coverage: `web/src/router.test.ts`,
+  `RepoWrapper.vue` and its new shell/lifecycle suite, shared pagination and
+  pipeline-store loading repairs/tests, disabled PR route states/tests,
+  repository activity/settings containment tests, and bilingual disabled copy.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -106,7 +114,8 @@
   `development/tasks/009-pipeline-validation-evidence/report.md`,
   `development/tasks/010-repository-pipeline-list/report.md`, and
   `development/tasks/011-repository-branches-pull-requests/report.md`, and
-  `development/tasks/012-repository-manual-run-settings/report.md`.
+  `development/tasks/012-repository-manual-run-settings/report.md`, and
+  `development/tasks/013-repository-regression-coverage/report.md`.
 
 ## Requirements Covered
 
@@ -148,6 +157,12 @@
   slice `012`, including current branch/resource data, permission and mutation
   boundaries, same-ID route lifecycle ownership, confirmed-row replacement
   timing, focused/full regressions, and desktop/390px evidence.
+- `A4` was independently verified for repository regression slice `013`,
+  including named/inbound routes, permission/action boundaries, Vue-owned
+  active failures, complete `A -> B -> A` load ownership, disabled direct
+  access, shared loading recovery, and structural containment. Full `A3`
+  remains open because task `4.5` owns current-byte desktop/390px browser
+  evidence.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -188,6 +203,10 @@
   resource APIs, permissions, mutations, and route outcomes. Prototype-only
   audit, history, cache, export, archive, verification, marketplace, or
   inferred metadata is not invented.
+- Repository regression coverage preserves all current route, API, store,
+  authentication, and permission contracts while repairing only
+  regression-proven lifecycle/error, loading, disabled-route, and containment
+  behavior.
 
 ## Components Created / Reused / Extracted
 
@@ -232,6 +251,8 @@
   persistence, migration, or dependency contract.
 - Slice `012` adds no API, store, router, permission, backend, persistence,
   migration, dependency, or approved-prototype contract.
+- Slice `013` adds no API, store, router, permission, backend, persistence,
+  migration, dependency, or approved-prototype contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -273,7 +294,12 @@
   precedence, same-ID lifecycle races, mutation/run side effects, confirmed-row
   refresh recovery, page-two replacement timing, badge formatting, actions,
   extensions, and local mobile table containment.
-- The current full frontend regression baseline is 49 test files and 286 tests.
+- Repository regression tests cover all non-pipeline named/inbound
+  destinations, pull/push/admin/PR gates, active error propagation, every
+  downstream `A -> B -> A` completion, disabled PR no-request behavior,
+  rejected/overlapping loading, theme-invariant controls, and activity/settings
+  structural containment.
+- The current full frontend regression baseline is 50 test files and 314 tests.
 
 ## Local Validation
 
@@ -284,7 +310,9 @@
 - PASS: repository pipeline-list focused suite, 3 files and 13 tests.
 - PASS: repository reference focused suite, 6 files and 27 tests.
 - PASS: repository manual-run/settings focused suite, 14 files and 75 tests.
-- PASS: current complete frontend suite, 49 files and 286 tests.
+- PASS: repository regression focused suite, 9 files and 63 tests.
+- PASS: repository regression supporting suite, 22 files and 118 tests.
+- PASS: current complete frontend suite, 50 files and 314 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -315,7 +343,7 @@
 
 ## Known Risks
 
-- Twenty baseline tasks remain incomplete across repository,
+- Nineteen baseline tasks remain incomplete across repository,
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.
@@ -347,7 +375,7 @@
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `4.4` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `4.5` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

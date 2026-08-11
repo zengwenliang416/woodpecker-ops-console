@@ -197,6 +197,8 @@
         "empty_description": "The Forge did not return any pull requests for this repository.",
         "no_match_title": "No matching pull requests",
         "no_match_description": "Change or clear the search to see other loaded pull requests.",
+        "disabled_title": "Pull requests are disabled",
+        "disabled_description": "This repository is not configured to expose pull request pipeline history.",
         "detail_eyebrow": "Pull request",
         "detail_description": "Latest available execution context and loaded pipeline history for this pull request.",
         "fallback_title": "Pull request #{index}"

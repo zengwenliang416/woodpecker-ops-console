@@ -302,7 +302,34 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "status": "in_progress"
+      "status": "complete"
+    },
+    {
+      "packet_id": "013-repository-regression-coverage",
+      "baseline_task_id": "4.4",
+      "goal": "Protect the completed repository route family with named and inbound route resolution, shared wrapper permission and action boundaries, active-owner repository loading, theme-invariant controls, and structural 390px containment regressions.",
+      "depends_on": [
+        "4.3"
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/views/repo/RepoWrapper.vue",
+        "web/src/views/repo/RepoWrapper.test.ts",
+        "web/src/views/repo/RepoPipelines.test.ts",
+        "web/src/views/repo/RepoPullRequests.vue",
+        "web/src/views/repo/RepoPullRequests.test.ts",
+        "web/src/views/repo/RepoPullRequest.vue",
+        "web/src/views/repo/RepoPullRequest.test.ts",
+        "web/src/compositions/usePaginate.ts",
+        "web/src/compositions/usePaginate.test.ts",
+        "web/src/store/pipelines.ts",
+        "web/src/store/pipelines.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }

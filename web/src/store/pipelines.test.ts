@@ -28,10 +28,12 @@ function pipeline(number: number): Pipeline {
 
 function deferred<T>() {
   let resolveValue!: (value: T) => void;
-  const promise = new Promise<T>((resolve) => {
+  let rejectValue!: (reason?: unknown) => void;
+  const promise = new Promise<T>((resolve, reject) => {
     resolveValue = resolve;
+    rejectValue = reject;
   });
-  return { promise, resolve: resolveValue };
+  return { promise, reject: rejectValue, resolve: resolveValue };
 }
 
 describe('pipeline store', () => {
@@ -69,5 +71,31 @@ describe('pipeline store', () => {
         [202, true],
       ]),
     );
+  });
+
+  it('releases repository loading when the pipeline request rejects', async () => {
+    api.getPipelineList.mockRejectedValueOnce(new Error('pipeline list failed'));
+    const store = usePipelineStore();
+
+    await expect(store.loadRepoPipelines(101, 1)).rejects.toThrow('pipeline list failed');
+
+    expect(store.loading).toBe(false);
+  });
+
+  it('keeps loading active until every overlapping repository request settles', async () => {
+    const first = deferred<Pipeline[]>();
+    const second = deferred<Pipeline[]>();
+    api.getPipelineList.mockReturnValueOnce(first.promise).mockReturnValueOnce(second.promise);
+    const store = usePipelineStore();
+
+    const firstLoad = store.loadRepoPipelines(101, 1);
+    const secondLoad = store.loadRepoPipelines(202, 1);
+    first.reject(new Error('obsolete pipeline list failed'));
+    await expect(firstLoad).rejects.toThrow('obsolete pipeline list failed');
+    expect(store.loading).toBe(true);
+
+    second.resolve([]);
+    await expect(secondLoad).resolves.toBe(false);
+    expect(store.loading).toBe(false);
   });
 });

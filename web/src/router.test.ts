@@ -67,4 +67,108 @@ describe('router base path', () => {
       }
     }
   }, 15_000);
+
+  it('resolves every non-pipeline repository destination from names and inbound paths', async () => {
+    Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: '/woodpecker' });
+    const { default: router } = await import('./router');
+
+    const destinations = [
+      { name: 'repos', path: '/repos', params: {}, authentication: 'required' },
+      { name: 'repo-add', path: '/repos/add', params: {}, authentication: 'required' },
+      { name: 'repo', path: '/repos/101', params: { repoId: 101 }, repoHeader: true },
+      { name: 'repo-branches', path: '/repos/101/branches', params: { repoId: 101 }, repoHeader: true },
+      {
+        name: 'repo-branch',
+        path: '/repos/101/branches/release%2F2026.08',
+        params: { repoId: 101, branch: 'release/2026.08' },
+        repoHeader: true,
+      },
+      {
+        name: 'repo-pull-requests',
+        path: '/repos/101/pull-requests',
+        params: { repoId: 101 },
+        repoHeader: true,
+      },
+      {
+        name: 'repo-pull-request',
+        path: '/repos/101/pull-requests/92',
+        params: { repoId: 101, pullRequest: 92 },
+        repoHeader: true,
+      },
+      {
+        name: 'repo-manual',
+        path: '/repos/101/manual',
+        params: { repoId: 101 },
+        authentication: 'required',
+        repoHeader: true,
+      },
+      { name: 'repo-settings', path: '/repos/101/settings', params: { repoId: 101 }, authentication: 'required' },
+      {
+        name: 'repo-settings-secrets',
+        path: '/repos/101/settings/secrets',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+      {
+        name: 'repo-settings-registries',
+        path: '/repos/101/settings/registries',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+      {
+        name: 'repo-settings-crons',
+        path: '/repos/101/settings/crons',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+      {
+        name: 'repo-settings-badge',
+        path: '/repos/101/settings/badge',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+      {
+        name: 'repo-settings-actions',
+        path: '/repos/101/settings/actions',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+      {
+        name: 'repo-settings-extensions',
+        path: '/repos/101/settings/extensions',
+        params: { repoId: 101 },
+        authentication: 'required',
+      },
+    ] as const;
+
+    for (const destination of destinations) {
+      const route = router.resolve({
+        name: destination.name,
+        params: destination.params,
+      });
+      expect(route.href).toBe(`/woodpecker${destination.path}`);
+
+      const incomingRoute = router.resolve(destination.path);
+      expect(incomingRoute.matched.at(-1)?.name).toBe(destination.name);
+      if ('repoId' in destination.params) {
+        expect(incomingRoute.params.repoId).toBe('101');
+      }
+      if ('branch' in destination.params) {
+        expect(incomingRoute.params.branch).toBe(destination.params.branch);
+      }
+      if ('pullRequest' in destination.params) {
+        expect(incomingRoute.params.pullRequest).toBe(`${destination.params.pullRequest}`);
+      }
+      if ('authentication' in destination) {
+        expect(incomingRoute.meta.authentication).toBe(destination.authentication);
+      } else {
+        expect(incomingRoute.meta.authentication).toBeUndefined();
+      }
+      if ('repoHeader' in destination) {
+        expect(incomingRoute.meta.repoHeader).toBe(destination.repoHeader);
+      } else {
+        expect(incomingRoute.meta.repoHeader).toBeUndefined();
+      }
+    }
+  }, 15_000);
 });

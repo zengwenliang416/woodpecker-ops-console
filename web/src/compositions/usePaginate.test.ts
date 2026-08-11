@@ -156,6 +156,27 @@ describe('usePaginate', () => {
     expect(usePaginationComposition.data.value.length).toBe(6);
   });
 
+  it('releases loading when a reset request rejects', async () => {
+    let rejectNextRequest = false;
+    let usePaginationComposition = null as unknown as ReturnType<typeof usePagination>;
+    mountComposition(() => {
+      usePaginationComposition = usePagination<{ name: string }>(
+        async () => {
+          if (rejectNextRequest) throw new Error('page load failed');
+          return repoSecrets[0];
+        },
+        () => true,
+        { pageSize: 3 },
+      );
+    });
+    await waitForState(usePaginationComposition.loading, false);
+
+    rejectNextRequest = true;
+    await expect(usePaginationComposition.resetPage()).rejects.toThrow('page load failed');
+
+    expect(usePaginationComposition.loading.value).toBe(false);
+  });
+
   describe('reset while a request is in flight', () => {
     interface Deferred {
       page: number;

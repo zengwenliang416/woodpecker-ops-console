@@ -106,36 +106,67 @@ const forgeIcon = computed<IconNames>(() => {
   }
   return 'repo';
 });
+let loadGeneration = 0;
 
 async function loadRepo() {
-  repoPermissions.value = await apiClient.getRepoPermissions(repositoryId.value);
-  if (!repoPermissions.value.pull) {
-    notifications.notify({ type: 'error', title: i18n.t('repo.not_allowed') });
-    // no access and not authenticated, redirect to login
-    if (!isAuthenticated) {
-      await router.replace({ name: 'login', query: { url: route.fullPath } });
+  const repoId = repositoryId.value;
+  const generation = ++loadGeneration;
+  const isCurrentLoad = () => generation === loadGeneration && repoId === repositoryId.value;
+  repoPermissions.value = undefined;
+  forge.value = undefined;
+
+  try {
+    const permissions = await apiClient.getRepoPermissions(repoId);
+    if (!isCurrentLoad()) {
       return;
     }
-    await router.replace({ name: 'home' });
-    return;
-  }
 
-  await repoStore.loadRepo(repositoryId.value);
-  await pipelineStore.loadRepoPipelines(repositoryId.value);
+    if (!permissions.pull) {
+      notifications.notify({ type: 'error', title: i18n.t('repo.not_allowed') });
+      // no access and not authenticated, redirect to login
+      if (!isAuthenticated) {
+        await router.replace({ name: 'login', query: { url: route.fullPath } });
+        return;
+      }
+      await router.replace({ name: 'home' });
+      return;
+    }
 
-  if (repo.value) {
-    forge.value = (await forgeStore.getForge(repo.value?.forge_id)).value;
+    repoPermissions.value = permissions;
+    await repoStore.loadRepo(repoId);
+    if (!isCurrentLoad()) {
+      return;
+    }
+
+    await pipelineStore.loadRepoPipelines(repoId);
+    if (!isCurrentLoad()) {
+      return;
+    }
+
+    const currentRepo = repo.value;
+    if (currentRepo) {
+      const currentForge = await forgeStore.getForge(currentRepo.forge_id);
+      if (!isCurrentLoad()) {
+        return;
+      }
+      forge.value = currentForge.value;
+    }
+
+    if (isCurrentLoad()) {
+      updateLastAccess(repoId);
+    }
+  } catch (error) {
+    if (isCurrentLoad()) {
+      repoPermissions.value = undefined;
+      forge.value = undefined;
+      throw error;
+    }
   }
-  updateLastAccess(repositoryId.value);
 }
 
-onMounted(() => {
-  loadRepo();
-});
+onMounted(loadRepo);
 
-watch([repositoryId], () => {
-  loadRepo();
-});
+watch([repositoryId], () => loadRepo());
 
 const badgeUrl = computed(() => repo.value && `${config.rootPath}/api/badges/${repo.value.id}/status.svg`);
 </script>

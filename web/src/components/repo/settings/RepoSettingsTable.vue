@@ -31,7 +31,7 @@ withDefaults(
 @reference '~/tailwind.css';
 
 .repo-settings-table-shell {
-  @apply border-wp-border-100 overflow-hidden rounded-xl border;
+  @apply border-wp-border-100 min-w-0 overflow-hidden rounded-xl border;
 }
 
 .repo-settings-table-scroll {

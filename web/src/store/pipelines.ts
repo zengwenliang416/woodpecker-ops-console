@@ -35,6 +35,17 @@ export const usePipelineStore = defineStore('pipelines', () => {
 
   const pipelines: Map<number, Map<number, Pipeline>> = reactive(new Map());
   const loading = ref(false);
+  let activeLoads = 0;
+
+  function startLoading() {
+    activeLoads += 1;
+    loading.value = true;
+  }
+
+  function finishLoading() {
+    activeLoads -= 1;
+    loading.value = activeLoads > 0;
+  }
 
   function setPipeline(repoId: number, pipeline: Pipeline) {
     const repoPipelines = pipelines.get(repoId) ?? new Map<number, Pipeline>();
@@ -86,22 +97,28 @@ export const usePipelineStore = defineStore('pipelines', () => {
   const hasMore = ref(false);
 
   async function loadRepoPipelines(repoId: number, page?: number) {
-    loading.value = true;
-    const _pipelines = await apiClient.getPipelineList(repoId, { page, perPage });
-    _pipelines.forEach((pipeline) => {
-      setPipeline(repoId, pipeline);
-    });
-    const repoHasMore = _pipelines.length >= perPage;
-    hasMore.value = repoHasMore;
-    loading.value = false;
-    return repoHasMore;
+    startLoading();
+    try {
+      const _pipelines = await apiClient.getPipelineList(repoId, { page, perPage });
+      _pipelines.forEach((pipeline) => {
+        setPipeline(repoId, pipeline);
+      });
+      const repoHasMore = _pipelines.length >= perPage;
+      hasMore.value = repoHasMore;
+      return repoHasMore;
+    } finally {
+      finishLoading();
+    }
   }
 
   async function loadPipeline(repoId: number, pipelinesNumber: number) {
-    loading.value = true;
-    const pipeline = await apiClient.getPipeline(repoId, pipelinesNumber);
-    setPipeline(repoId, pipeline);
-    loading.value = false;
+    startLoading();
+    try {
+      const pipeline = await apiClient.getPipeline(repoId, pipelinesNumber);
+      setPipeline(repoId, pipeline);
+    } finally {
+      finishLoading();
+    }
   }
 
   const pipelineFeed = computed(() =>
@@ -125,12 +142,15 @@ export const usePipelineStore = defineStore('pipelines', () => {
   async function loadPipelineFeed() {
     await repoStore.loadRepos();
 
-    loading.value = true;
-    const _pipelines = await apiClient.getPipelineFeed();
-    _pipelines.forEach((pipeline) => {
-      setPipeline(pipeline.repo_id, pipeline);
-    });
-    loading.value = false;
+    startLoading();
+    try {
+      const _pipelines = await apiClient.getPipelineFeed();
+      _pipelines.forEach((pipeline) => {
+        setPipeline(pipeline.repo_id, pipeline);
+      });
+    } finally {
+      finishLoading();
+    }
   }
 
   return {

@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-11T07:37:41.731Z",
+  "generated_at": "2026-08-11T08:37:48.061Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -427,6 +427,46 @@
       ],
       "query_ids": [
         "development:task-012-repository-manual-run-settings:evidence"
+      ]
+    },
+    {
+      "id": "development:task-013-repository-regression-coverage",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "013-repository-regression-coverage",
+      "text": "Resolve every current non-pipeline repository destination through its production",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/013-repository-regression-coverage/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/013-repository-regression-coverage/context.json"
+      ],
+      "expected_evidence": [
+        "Focused router and RepoWrapper tests proving all current non-pipeline repository destinations, permission/action/tab boundaries, light/dark control invariance, repository reload, rejection behavior, redirect ownership, and A -> B -> A stale-completion isolation.",
+        "Repository-family supporting Vitest proving filters, pagination, empty/error states, actions, mutations, and structural narrow-layout containment.",
+        "Full frontend Vitest plus targeted Prettier, ESLint, TypeScript, Vite build, JSONL, SpecNav contract, and git diff receipts.",
+        "Evidence-bearing task report plus independent A3/A4 spec and quality reviews that keep task 4.5 sensory parity open."
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/views/repo/RepoWrapper.vue",
+        "web/src/views/repo/RepoWrapper.test.ts",
+        "web/src/views/repo/RepoPipelines.test.ts",
+        "web/src/views/repo/RepoPullRequests.vue",
+        "web/src/views/repo/RepoPullRequests.test.ts",
+        "web/src/views/repo/RepoPullRequest.vue",
+        "web/src/views/repo/RepoPullRequest.test.ts",
+        "web/src/compositions/usePaginate.ts",
+        "web/src/compositions/usePaginate.test.ts",
+        "web/src/store/pipelines.ts",
+        "web/src/store/pipelines.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "query_ids": [
+        "development:task-013-repository-regression-coverage:evidence"
       ]
     }
   ]

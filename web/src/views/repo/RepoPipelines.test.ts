@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { defineComponent, h, nextTick, ref } from 'vue';
@@ -249,6 +251,15 @@ describe('repository pipeline list', () => {
     pipelineStore.loadRepoPipelines.mockReset();
     pipelineStore.actionSubscribers.clear();
     pipelineStore.$onAction.mockClear();
+  });
+
+  it('keeps the 1080px activity table inside its mobile-local scroll contract', () => {
+    const source = readFileSync(resolve(process.cwd(), 'src/views/repo/RepoPipelines.vue'), 'utf8');
+
+    expect(source).toMatch(/\.pipeline-table-card\s*\{[\s\S]*min-w-0 overflow-hidden/);
+    expect(source).toMatch(/\.pipeline-table-scroll\s*\{[\s\S]*max-w-full/);
+    expect(source).toMatch(/\.pipeline-table\s*\{[\s\S]*min-w-\[1080px\]/);
+    expect(source).toMatch(/@media \(max-width: 640px\)\s*\{[\s\S]*\.pipeline-filters\s*\{[\s\S]*grid-cols-1/);
   });
 
   it('derives metrics and filters the loaded real pipeline collection', async () => {

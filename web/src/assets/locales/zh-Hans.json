@@ -337,6 +337,8 @@
         "empty_description": "代码托管平台没有返回此仓库的合并请求。",
         "no_match_title": "没有匹配的合并请求",
         "no_match_description": "请修改或清除搜索条件以查看其他已加载合并请求。",
+        "disabled_title": "合并请求已禁用",
+        "disabled_description": "此仓库未配置为展示合并请求流水线历史。",
         "detail_eyebrow": "合并请求",
         "detail_description": "此合并请求当前可用的最新执行上下文与已加载流水线历史。",
         "fallback_title": "合并请求 #{index}"

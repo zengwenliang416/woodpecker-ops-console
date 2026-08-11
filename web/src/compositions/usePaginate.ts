@@ -49,29 +49,32 @@ export function usePagination<T, S = unknown>(
 
     loading.value = true;
     const requestGeneration = generation;
-    const newData = (await _loadData(page.value, each.value?.[0] as S)) ?? [];
-    if (requestGeneration !== generation) {
-      // resetPage was called while this request was in flight; a fresh
-      // request owns the state now, so discard this response entirely
-      return;
-    }
-    hasMore.value = newData.length >= pageSize.value && newData.length > 0;
-    if (newData.length > 0) {
-      data.value.push(...newData);
-    }
-
-    // last page and each has more
-    if (!hasMore.value && each.value.length > 0) {
-      // use next each element
-      each.value.shift();
-      page.value = 1;
-      hasMore.value = each.value.length > 0;
-      if (hasMore.value) {
-        loading.value = false;
-        await loadData();
+    try {
+      const newData = (await _loadData(page.value, each.value?.[0] as S)) ?? [];
+      if (requestGeneration !== generation) {
+        // resetPage was called while this request was in flight; a fresh
+        // request owns the state now, so discard this response entirely
+        return;
       }
+      hasMore.value = newData.length >= pageSize.value && newData.length > 0;
+      if (newData.length > 0) {
+        data.value.push(...newData);
+      }
+
+      // last page and each has more
+      if (!hasMore.value && each.value.length > 0) {
+        // use next each element
+        each.value.shift();
+        page.value = 1;
+        hasMore.value = each.value.length > 0;
+        if (hasMore.value) {
+          loading.value = false;
+          await loadData();
+        }
+      }
+    } finally {
+      if (requestGeneration === generation) loading.value = false;
     }
-    loading.value = false;
   }
 
   onMounted(loadData);

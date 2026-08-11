@@ -9,18 +9,21 @@ import { WebhookEvents } from '~/lib/api/types/webhook';
 
 import RepoPullRequests from './RepoPullRequests.vue';
 
+const api = vi.hoisted(() => ({
+  getRepoPullRequests: vi.fn(),
+}));
+
 const pagination = vi.hoisted(() => ({
   data: undefined as ReturnType<typeof ref<PullRequest[]>> | undefined,
   loading: undefined as ReturnType<typeof ref<boolean>> | undefined,
   hasMore: undefined as ReturnType<typeof ref<boolean>> | undefined,
+  loader: undefined as ((page: number) => Promise<PullRequest[]>) | undefined,
   resetPage: vi.fn<() => Promise<void>>(),
   nextPage: vi.fn<() => void>(),
 }));
 
 vi.mock('~/compositions/useApiClient', () => ({
-  default: () => ({
-    getRepoPullRequests: vi.fn(),
-  }),
+  default: () => api,
 }));
 
 vi.mock('~/compositions/usePaginate', async () => {
@@ -30,13 +33,17 @@ vi.mock('~/compositions/usePaginate', async () => {
   pagination.hasMore = vueRef(false);
 
   return {
-    usePagination: () => ({
-      data: pagination.data,
-      loading: pagination.loading,
-      hasMore: pagination.hasMore,
-      resetPage: pagination.resetPage,
-      nextPage: pagination.nextPage,
-    }),
+    usePagination: (loader: (page: number) => Promise<PullRequest[]>) => {
+      pagination.loader = loader;
+      void loader(1);
+      return {
+        data: pagination.data,
+        loading: pagination.loading,
+        hasMore: pagination.hasMore,
+        resetPage: pagination.resetPage,
+        nextPage: pagination.nextPage,
+      };
+    },
   };
 });
 
@@ -163,11 +170,28 @@ function mountPullRequests(
 
 describe('repository pull requests', () => {
   beforeEach(() => {
+    api.getRepoPullRequests.mockReset();
     pagination.data!.value = [];
     pagination.loading!.value = true;
     pagination.hasMore!.value = false;
+    pagination.loader = undefined;
     pagination.resetPage.mockReset();
     pagination.nextPage.mockReset();
+  });
+
+  it('renders a disabled state instead of throwing on direct access when pull requests are unavailable', () => {
+    const wrapper = mountPullRequests(
+      [],
+      ref({
+        id: 1,
+        full_name: 'acme/repo',
+        pr_enabled: false,
+        allow_pr: false,
+      }),
+    );
+
+    expect(wrapper.get('[data-feedback-state="disabled"]').text()).toContain('Pull requests are disabled');
+    expect(api.getRepoPullRequests).not.toHaveBeenCalled();
   });
 
   it('distinguishes loading, empty, and no-match states', async () => {

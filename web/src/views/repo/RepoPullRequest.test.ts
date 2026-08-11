@@ -31,6 +31,17 @@ const ReferenceStub = defineComponent({
   },
 });
 
+const FeedbackStateStub = defineComponent({
+  props: {
+    kind: String,
+    title: String,
+    description: String,
+  },
+  setup(props) {
+    return () => h('section', { 'data-feedback-state': props.kind }, [h('strong', props.title), props.description]);
+  },
+});
+
 const i18n = createI18n({
   legacy: false,
   locale: 'en',
@@ -41,7 +52,14 @@ function pipeline(number: number, event: WebhookEvents, refValue: string, title 
   return { number, event, ref: refValue, title } as Pipeline;
 }
 
-function mountPullRequest(pipelines: Pipeline[]) {
+function mountPullRequest(
+  pipelines: Pipeline[],
+  repo = ref({
+    full_name: 'acme/repo',
+    pr_enabled: true,
+    allow_pr: true,
+  }),
+) {
   return mount(RepoPullRequest, {
     props: {
       pullRequest: '42',
@@ -49,14 +67,11 @@ function mountPullRequest(pipelines: Pipeline[]) {
     global: {
       plugins: [i18n],
       provide: {
-        repo: ref({
-          full_name: 'acme/repo',
-          pr_enabled: true,
-          allow_pr: true,
-        }),
+        repo,
         pipelines: ref(pipelines),
       },
       stubs: {
+        FeedbackState: FeedbackStateStub,
         RepoPipelineReference: ReferenceStub,
       },
     },
@@ -64,6 +79,19 @@ function mountPullRequest(pipelines: Pipeline[]) {
 }
 
 describe('repository pull-request detail', () => {
+  it('renders a disabled state instead of throwing on direct access when pull requests are unavailable', () => {
+    const wrapper = mountPullRequest(
+      [],
+      ref({
+        full_name: 'acme/repo',
+        pr_enabled: false,
+        allow_pr: false,
+      }),
+    );
+
+    expect(wrapper.get('[data-feedback-state="disabled"]').text()).toContain('Pull requests are disabled');
+  });
+
   it('passes exact PR pipeline events and newest real title to the shared detail', () => {
     const wrapper = mountPullRequest([
       pipeline(5, WebhookEvents.PullRequest, 'refs/pull/42/merge', 'Older title'),
