@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.guard_report.v1",
-  "generated_at": "2026-08-11T09:53:34.024Z",
+  "generated_at": "2026-08-11T14:45:07.905Z",
   "active_change": "align-frontend-with-functional-prototype",
   "stage": "development",
   "ok": true,
@@ -63,7 +63,7 @@
   },
   "evidence_index": {
     "schema": "specnav.codegraph.evidence_index.v1",
-    "generated_at": "2026-08-11T09:53:34.020Z",
+    "generated_at": "2026-08-11T14:45:07.903Z",
     "active_change": "align-frontend-with-functional-prototype",
     "source_raw": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence.jsonl",
     "by_claim": {},
@@ -74,11 +74,11 @@
   },
   "claims_report": {
     "schema": "specnav.codegraph.claims_report.v1",
-    "generated_at": "2026-08-11T09:53:34.024Z",
+    "generated_at": "2026-08-11T14:45:07.905Z",
     "active_change": "align-frontend-with-functional-prototype",
     "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
     "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-    "claims_count": 13,
+    "claims_count": 14,
     "verified_claims": [],
     "unverified_claims": [
       "development:task-001-date-duration-integrity",
@@ -93,7 +93,8 @@
       "development:task-010-repository-pipeline-list",
       "development:task-011-repository-branches-pull-requests",
       "development:task-012-repository-manual-run-settings",
-      "development:task-013-repository-regression-coverage"
+      "development:task-013-repository-regression-coverage",
+      "development:task-014-repository-validation-evidence"
     ],
     "blockers": [],
     "warnings": [
@@ -109,7 +110,8 @@
       "codegraph:claim-unverified:development:task-010-repository-pipeline-list",
       "codegraph:claim-unverified:development:task-011-repository-branches-pull-requests",
       "codegraph:claim-unverified:development:task-012-repository-manual-run-settings",
-      "codegraph:claim-unverified:development:task-013-repository-regression-coverage"
+      "codegraph:claim-unverified:development:task-013-repository-regression-coverage",
+      "codegraph:claim-unverified:development:task-014-repository-validation-evidence"
     ]
   },
   "drift": {
@@ -133,6 +135,7 @@
     "codegraph:claim-unverified:development:task-010-repository-pipeline-list",
     "codegraph:claim-unverified:development:task-011-repository-branches-pull-requests",
     "codegraph:claim-unverified:development:task-012-repository-manual-run-settings",
-    "codegraph:claim-unverified:development:task-013-repository-regression-coverage"
+    "codegraph:claim-unverified:development:task-013-repository-regression-coverage",
+    "codegraph:claim-unverified:development:task-014-repository-validation-evidence"
   ]
 }

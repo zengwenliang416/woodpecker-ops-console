@@ -26,7 +26,7 @@
       "id": "phase-4",
       "task_ids": ["4.1", "4.2", "4.3", "4.4", "4.5"],
       "depends_on": ["phase-2", "phase-3"],
-      "status": "planned"
+      "status": "complete"
     },
     {
       "id": "phase-5",
@@ -328,6 +328,26 @@
         "web/src/components/repo/settings/RepoSettingsTable.test.ts",
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
+    },
+    {
+      "packet_id": "014-repository-validation-evidence",
+      "baseline_task_id": "4.5",
+      "goal": "Verify every repository parity-matrix row at the current commit with equivalent-state production-versus-approved-prototype browser evidence and honest per-row outcomes.",
+      "depends_on": [
+        "4.4"
+      ],
+      "allowed_files": [
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/drift-check.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md"
       ],
       "status": "complete"
     }

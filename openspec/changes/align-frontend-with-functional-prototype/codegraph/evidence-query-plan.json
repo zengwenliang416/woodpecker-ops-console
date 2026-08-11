@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-11T08:37:48.062Z",
+  "generated_at": "2026-08-11T11:43:41.235Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -197,6 +197,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-013-repository-regression-coverage --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-014-repository-validation-evidence:evidence",
+      "claim_id": "development:task-014-repository-validation-evidence",
+      "stage": "development",
+      "task_id": "014-repository-validation-evidence",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Replay repository parity rows `3` through `23` against a deterministic Mock API\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-014-repository-validation-evidence --query \"<query>\" --write --json"
     }
   ]
 }

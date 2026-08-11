@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "states": 100,
+  "primaryStates": 84,
+  "secondaryStates": 16,
+  "productionStates": 58,
+  "prototypeStates": 42,
+  "verifiedRows": [
+    3,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23
+  ],
+  "blockedRows": [
+    4
+  ],
+  "errorStates": [],
+  "warningCategories": {
+    "vue_i18n": 8900,
+    "vue_extraneous_props": 24,
+    "vue_router_deprecation": 60,
+    "other": 0
+  },
+  "serviceIdentity": {
+    "sourceBaseCommit": "c416ce346110b4b2315c995e2302797ea5ee9f0c",
+    "gitHead": "c416ce346110b4b2315c995e2302797ea5ee9f0c",
+    "productionRuntimeUnchangedFromBase": true,
+    "serviceOwnership": "task-started-exclusive-ports",
+    "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+    "mockFixture": "014-repository-validation-evidence",
+    "proxiedRepository": "acme/backend-api",
+    "productionEntrypoint": "/src/main.ts",
+    "productionRouterMarker": "repo-settings-extensions",
+    "productionTree": "189c785155c0fb53052f16ba189202ae49fefc8a",
+    "prototypeMarker": "approved-user-design",
+    "prototypeTree": "af9ee6bbc16ef8116d6f787072377717a4901fdd",
+    "prototypeIndexSha256": "4de458b47856bef1262959d1a47a6cbf685142641617fa40356a42a3bde060e6",
+    "dependencyChecksums": {
+      "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/mock_api.py": "60f9f6657f39982aa1d1720bce44bfe135daee887213e60e4202d79307c0aa99",
+      "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/evidence/mock_api.py": "b8b0934c555eceef079f8230c742c2b9a5f3a3d7432db30f6ff97f6a6cda475e"
+    }
+  },
+  "generatedAt": "2026-08-11T14:14:08.091Z"
+}

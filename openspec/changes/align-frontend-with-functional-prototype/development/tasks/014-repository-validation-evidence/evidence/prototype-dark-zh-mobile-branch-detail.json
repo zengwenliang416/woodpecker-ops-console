@@ -1,0 +1,445 @@
+{
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 1655
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 分支 main 分支详情与最近流水线。 运行此分支 复制名称 最近提交 a1b2c3d 失败 fix: correct null check in user service A alice · 2 分钟前 流水线历史 查看全部 #842 fix: correct null check in user service a1b2c3d · alice 2 分钟前 #841 feat: add pagination to list endpoints d4e5f6a · bob 18 分钟前 #839 refactor: optimize query performance f1g2h3i · alice 1 小时前 #838 chore: update dependencies b2c3d4e · dave 2 小时前 #836 WIP: experiment with new cache strategy c3d4e5f · alice 3 小时前 比较状态 目标分支 main 领先提交 0 落后提交 0 保护规则 已启用 最近更新 2 分钟前 快速操作 创建 Pull Request 比较变更 删除分支",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 分支 main 分支详情与最近流水线。 运行此分支 复制名称 最近提交 a1b2c3d 失败 fix: correct null check in user service A alice · 2 分钟前 流水线历史 查看全部 #842 fix: correct null check in user service a1b2c3d · alice 2 分钟前 #841 feat: add pagination to list endpoints d4e5f6a · bob 18 分钟前 #839 refactor: optimize query performance f1g2h3i · alice 1 小时前 #838 chore: update dependencies b2c3d4e · dave 2 小时前 #836 WIP: experiment with new cache strategy c3d4e5f · alice 3 小时前 比较状态 目标分支 main 领先提交 0 落后提交 0 保护规则 已启用 最近更新 2 分钟前 快速操作 创建 Pull Request 比较变更 删除分支",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "部署应用",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "运行流水线",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "分支6",
+      "href": "#/repos/101/branches",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Pull Requests3",
+      "href": "#/repos/101/pull-requests",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "设置",
+      "href": "#/repos/101/settings",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "运行此分支",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "复制名称",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "查看全部",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#842 fix: correct null check in user servicea1b2c3d · alice2 分钟前",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#841 feat: add pagination to list endpointsd4e5f6a · bob18 分钟前",
+      "href": "#/repos/101/pipeline/841",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#839 refactor: optimize query performancef1g2h3i · alice1 小时前",
+      "href": "#/repos/101/pipeline/839",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#838 chore: update dependenciesb2c3d4e · dave2 小时前",
+      "href": "#/repos/101/pipeline/838",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#836 WIP: experiment with new cache strategyc3d4e5f · alice3 小时前",
+      "href": "#/repos/101/pipeline/836",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "创建 Pull Request",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "比较变更",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "删除分支",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "",
+    "clientHeight": 844,
+    "clientWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1655,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 0,
+    "visibleTableCount": 0
+  },
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:8141/#/repos/101/branches/main",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "prototype-dark-zh-mobile-branch-detail",
+  "row": 7,
+  "destination": "branch-detail",
+  "surface": "prototype",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/main/",
+      "passed": true
+    },
+    {
+      "pattern": "/分支/",
+      "passed": true
+    }
+  ],
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "capturedAt": "2026-08-11T14:13:28.614Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:27.712Z",
+    "endedAt": "2026-08-11T14:13:28.614Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "warningCategories": {
+      "vue_i18n": 0,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 0,
+      "other": 0
+    },
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8141/favicon.ico",
+        "reason": "prototype favicon is not part of the artifact",
+        "timestamp": "2026-08-11T14:13:27.931Z"
+      }
+    ]
+  }
+}

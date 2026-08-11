@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-11T08:37:48.061Z",
+  "generated_at": "2026-08-11T11:43:41.232Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -467,6 +467,41 @@
       ],
       "query_ids": [
         "development:task-013-repository-regression-coverage:evidence"
+      ]
+    },
+    {
+      "id": "development:task-014-repository-validation-evidence",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "014-repository-validation-evidence",
+      "text": "Replay repository parity rows `3` through `23` against a deterministic Mock API",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/context.json"
+      ],
+      "expected_evidence": [
+        "Current repository-focused and full frontend Vitest receipts plus targeted Prettier, ESLint, TypeScript, Vite build, JSON/JSONL, SpecNav entry, and git diff receipts.",
+        "Production and approved-prototype dark Simplified-Chinese screenshots and measurements at 1600x1000 and 390x844 for repository parity rows 3 through 23.",
+        "Representative production light-English desktop/mobile and push, read-only, and administrator permission evidence.",
+        "Per-state URL, terminal route, viewport, PNG, theme, locale, content, controls, overflow, raw-i18n, console, runtime, network, HTTP, service identity, and Git commit records.",
+        "An updated route-parity matrix whose repository rows are individually verified or evidence-bearing blocked.",
+        "A replayable task-local Mock API, capture runner, evidence verifier, manifest, task report, and independent spec and quality reviews for baseline task 4.5."
+      ],
+      "allowed_files": [
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/drift-check.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md"
+      ],
+      "query_ids": [
+        "development:task-014-repository-validation-evidence:evidence"
       ]
     }
   ]

@@ -1,0 +1,800 @@
+{
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590,
+    "scrollHeight": 1188
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 最新结果 成功 #841 · 18 分钟前 成功率 96.3% ↑ 2.1% 平均时长 8m 42s ↓ 1m 12s 全部状态 成功 失败 运行中 警告 等待中 已取消 全部分支 main develop release/1.4.0 feature/oidc 全部事件 push pull_request schedule tag manual 状态 流水线 分支 触发 作者 提交 时长 排队 完成 失败 #842 main push A alice fix: correct null check in user service a1b2c3d 2m 47s 18s 2 分钟前 成功 #841 main pull_request B bob feat: add pagination to list endpoints d4e5f6a 5m 12s 22s 18 分钟前 成功 #840 develop push C carol chore: bump dependencies e7f8g9h 3m 33s 15s 45 分钟前 失败 #839 main push A alice refactor: optimize query performance f1g2h3i 1m 42s 19s 1 小时前 警告 #838 main schedule D dave chore: update dependencies b2c3d4e 6m 21s 30s 2 小时前 成功 #837 release/1.4.0 tag E erin release: v1.4.0 v1.4.0 4m 02s 12s 3 小时前 已取消 #836 main push A alice WIP: experiment with new cache strategy c3d4e5f — 8s 3 小时前 成功 #835 develop push B bob docs: update README d5e6f7g 1m 54s 14s 5 小时前 运行中 #834 feature/oidc pull_request F frank feat: OIDC token exchange e8f9a0b 1m 08s 5s 运行中 等待中 #833 main manual A alice Manual production validation a9b0c1d — 42s 等待中 显示 1 至 10 项，共 10 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 最新结果 成功 #841 · 18 分钟前 成功率 96.3% ↑ 2.1% 平均时长 8m 42s ↓ 1m 12s 全部状态 成功 失败 运行中 警告 等待中 已取消 全部分支 main develop release/1.4.0 feature/oidc 全部事件 push pull_request schedule tag manual 状态 流水线 分支 触发 作者 提交 时长 排队 完成 失败 #842 main push A alice fix: correct null check in user service a1b2c3d 2m 47s 18s 2 分钟前 成功 #841 main pull_request B bob feat: add pagination to list endpoints d4e5f6a 5m 12s 22s 18 分钟前 成功 #840 develop push C carol chore: bump dependencies e7f8g9h 3m 33s 15s 45 分钟前 失败 #839 main push A alice refactor: optimize query performance f1g2h3i 1m 42s 19s 1 小时前 警告 #838 main schedule D dave chore: update dependencies b2c3d4e 6m 21s 30s 2 小时前 成功 #837 release/1.4.0 tag E erin release: v1.4.0 v1.4.0 4m 02s 12s 3 小时前 已取消 #836 main push A alice WIP: experiment with new cache strategy c3d4e5f — 8s 3 小时前 成功 #835 develop push B bob docs: update README d5e6f7g 1m 54s 14s 5 小时前 运行中 #834 feature/oidc pull_request F frank feat: OIDC token exchange e8f9a0b 1m 08s 5s 运行中 等待中 #833 main manual A alice Manual production validation a9b0c1d — 42s 等待中 显示 1 至 10 项，共 10 项 1 2 3",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "部署应用",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "运行流水线",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "分支6",
+      "href": "#/repos/101/branches",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Pull Requests3",
+      "href": "#/repos/101/pull-requests",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "设置",
+      "href": "#/repos/101/settings",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "全部状态成功失败运行中警告等待中已取消",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "全部分支maindeveloprelease/1.4.0feature/oidc",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "全部事件pushpull_requestscheduletagmanual",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#842",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "fix: correct null check in user service",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#841",
+      "href": "#/repos/101/pipeline/841",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "feat: add pagination to list endpoints",
+      "href": "#/repos/101/pipeline/841",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "部署此 Release",
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/841",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#840",
+      "href": "#/repos/101/pipeline/840",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "chore: bump dependencies",
+      "href": "#/repos/101/pipeline/840",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/840",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#839",
+      "href": "#/repos/101/pipeline/839",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "refactor: optimize query performance",
+      "href": "#/repos/101/pipeline/839",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/839",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#838",
+      "href": "#/repos/101/pipeline/838",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "chore: update dependencies",
+      "href": "#/repos/101/pipeline/838",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/838",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#837",
+      "href": "#/repos/101/pipeline/837",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "release: v1.4.0",
+      "href": "#/repos/101/pipeline/837",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "部署此 Release",
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/837",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#836",
+      "href": "#/repos/101/pipeline/836",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "WIP: experiment with new cache strategy",
+      "href": "#/repos/101/pipeline/836",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/836",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#835",
+      "href": "#/repos/101/pipeline/835",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "docs: update README",
+      "href": "#/repos/101/pipeline/835",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/835",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#834",
+      "href": "#/repos/101/pipeline/834",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "feat: OIDC token exchange",
+      "href": "#/repos/101/pipeline/834",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/834",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "#833",
+      "href": "#/repos/101/pipeline/833",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Manual production validation",
+      "href": "#/repos/101/pipeline/833",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "#/repos/101/pipeline/833",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "1",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "3",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [
+    {
+      "index": 0,
+      "tag": "div",
+      "className": "table-scroll",
+      "testId": null,
+      "clientWidth": 1284,
+      "scrollWidth": 1284,
+      "rectWidth": 1284,
+      "overflowX": "auto",
+      "locallyScrollable": false
+    },
+    {
+      "index": 1,
+      "tag": "table",
+      "className": "",
+      "testId": null,
+      "clientWidth": 1284,
+      "scrollWidth": 1284,
+      "rectWidth": 1284,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "document": {
+    "className": "",
+    "clientHeight": 1000,
+    "clientWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1188,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 0,
+    "visibleTableCount": 1
+  },
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:8141/#/repos/101",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "prototype-dark-zh-desktop-activity",
+  "row": 5,
+  "destination": "activity",
+  "surface": "prototype",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/acme\\/backend-api/i",
+      "passed": true
+    },
+    {
+      "pattern": "/842/",
+      "passed": true
+    },
+    {
+      "pattern": "/流水线/",
+      "passed": true
+    }
+  ],
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-11T14:13:06.033Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:05.156Z",
+    "endedAt": "2026-08-11T14:13:06.033Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "warningCategories": {
+      "vue_i18n": 0,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 0,
+      "other": 0
+    },
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8141/favicon.ico",
+        "reason": "prototype favicon is not part of the artifact",
+        "timestamp": "2026-08-11T14:13:05.321Z"
+      }
+    ]
+  }
+}

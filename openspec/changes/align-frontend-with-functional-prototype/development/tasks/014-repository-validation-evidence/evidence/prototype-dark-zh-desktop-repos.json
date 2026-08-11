@@ -1,0 +1,796 @@
+{
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590,
+    "scrollHeight": 1222
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 管理代码仓库及其 CI/CD 流水线。 添加仓库 全部状态 成功 失败 运行中 警告 等待中 全部 Forge GitHub GitLab Gitea Bitbucket 清除 仓库 Forge 分支 最近流水线 上次运行 平均时长 成功率 可见性 acme/backend-api Backend API service with Go and PostgreSQL GitHub main 成功 2 分钟前 2m 47s 96.3% 私有 acme/web-frontend Customer-facing Vue application GitLab main 成功 5 分钟前 3m 18s 97.1% 私有 acme/worker-service Asynchronous job processing service GitHub develop 失败 12 分钟前 6m 07s 88.9% 私有 acme/mobile-app Cross-platform mobile application Bitbucket main 成功 18 分钟前 7m 41s 94% 私有 acme/infrastructure Infrastructure as code and cluster configuration GitHub main 警告 24 分钟前 2m 02s 91.2% 私有 acme/data-pipeline Batch and streaming data processing jobs GitLab main 成功 31 分钟前 8m 52s 95.3% 私有 acme/auth-service Authentication and authorization service GitHub feature/oauth2 运行中 1 分钟前 — 86.7% 私有 acme/marketing-site Public website and documentation landing pages GitHub main 成功 1 小时前 1m 34s 99.2% 公开 acme/reports-api Reporting and export APIs GitLab main 失败 1 小时前 5m 21s 84.5% 私有 acme/legacy-monolith Legacy application maintained during migration Bitbucket release/1.4 成功 2 小时前 9m 03s 92.8% 私有 acme/shared-libraries Shared internal packages and design tokens GitHub main 成功 3 小时前 1m 08s 98.6% 公开 acme/notification-service Email, SMS and webhook notifications Gitea main 等待中 刚刚 — 93.1% 私有 显示 1 至 10 项，共 12 项 1 2 3 仓库健康度 12 总仓库 成功 7 失败 2 运行中 1 等待中 1 按团队 Platform 3 个仓库 Backend 4 个仓库 Frontend 1 个仓库 Data 1 个仓库 DevOps 1 个仓库",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 管理代码仓库及其 CI/CD 流水线。 添加仓库 全部状态 成功 失败 运行中 警告 等待中 全部 Forge GitHub GitLab Gitea Bitbucket 清除 仓库 Forge 分支 最近流水线 上次运行 平均时长 成功率 可见性 acme/backend-api Backend API service with Go and PostgreSQL GitHub main 成功 2 分钟前 2m 47s 96.3% 私有 acme/web-frontend Customer-facing Vue application GitLab main 成功 5 分钟前 3m 18s 97.1% 私有 acme/worker-service Asynchronous job processing service GitHub develop 失败 12 分钟前 6m 07s 88.9% 私有 acme/mobile-app Cross-platform mobile application Bitbucket main 成功 18 分钟前 7m 41s 94% 私有 acme/infrastructure Infrastructure as code and cluster configuration GitHub main 警告 24 分钟前 2m 02s 91.2% 私有 acme/data-pipeline Batch and streaming data processing jobs GitLab main 成功 31 分钟前 8m 52s 95.3% 私有 acme/auth-service Authentication and authorization service GitHub feature/oauth2 运行中 1 分钟前 — 86.7% 私有 acme/marketing-site Public website and documentation landing pages GitHub main 成功 1 小时前 1m 34s 99.2% 公开 acme/reports-api Reporting and export APIs GitLab main 失败 1 小时前 5m 21s 84.5% 私有 acme/legacy-monolith Legacy application maintained during migration Bitbucket release/1.4 成功 2 小时前 9m 03s 92.8% 私有 acme/shared-libraries Shared internal packages and design tokens GitHub main 成功 3 小时前 1m 08s 98.6% 公开 acme/notification-service Email, SMS and webhook notifications Gitea main 等待中 刚刚 — 93.1% 私有 显示 1 至 10 项，共 12 项 1 2 3 仓库健康度 12 总仓库 成功 7 失败 2 运行中 1 等待中 1 按团队 Platform 3 个仓库 Backend 4 个仓库 Frontend 1 个仓库 Data 1 个仓库 DevOps 1 个仓库",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "添加仓库",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "全部状态成功失败运行中警告等待中",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "全部 ForgeGitHubGitLabGiteaBitbucket",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "清除",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 backend-api",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/backend-api",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 web-frontend",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/web-frontend",
+      "href": "#/repos/102",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 worker-service",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/worker-service",
+      "href": "#/repos/103",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 mobile-app",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/mobile-app",
+      "href": "#/repos/104",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 infrastructure",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/infrastructure",
+      "href": "#/repos/105",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 data-pipeline",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/data-pipeline",
+      "href": "#/repos/106",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 auth-service",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/auth-service",
+      "href": "#/repos/107",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 marketing-site",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/marketing-site",
+      "href": "#/repos/108",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 reports-api",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/reports-api",
+      "href": "#/repos/109",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 legacy-monolith",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/legacy-monolith",
+      "href": "#/repos/110",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 shared-libraries",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/shared-libraries",
+      "href": "#/repos/111",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "选择仓库 notification-service",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme/notification-service",
+      "href": "#/repos/112",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "1",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "2",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "3",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [
+    {
+      "index": 0,
+      "tag": "div",
+      "className": "table-scroll",
+      "testId": null,
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "rectWidth": 938,
+      "overflowX": "auto",
+      "locallyScrollable": false
+    },
+    {
+      "index": 1,
+      "tag": "table",
+      "className": "",
+      "testId": null,
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "rectWidth": 938,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "document": {
+    "className": "",
+    "clientHeight": 1000,
+    "clientWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1222,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 0,
+    "visibleTableCount": 1
+  },
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:8141/#/repos",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "prototype-dark-zh-desktop-repos",
+  "row": 3,
+  "destination": "repos",
+  "surface": "prototype",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/acme\\/backend-api/i",
+      "passed": true
+    },
+    {
+      "pattern": "/仓库/",
+      "passed": true
+    }
+  ],
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-11T14:13:04.036Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:03.140Z",
+    "endedAt": "2026-08-11T14:13:04.036Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "warningCategories": {
+      "vue_i18n": 0,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 0,
+      "other": 0
+    },
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8141/favicon.ico",
+        "reason": "prototype favicon is not part of the artifact",
+        "timestamp": "2026-08-11T14:13:03.304Z"
+      }
+    ]
+  }
+}

@@ -1,0 +1,477 @@
+{
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 1464
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 基本设置 Secrets 镜像仓库 定时任务 状态徽章 仓库操作 扩展 仓库信息 调整仓库名称、描述和默认分支。 仓库名称 默认分支 main develop feature/oidc feature/user-preferences hotfix/rate-limit release/1.4.0 描述 流水线配置路径 执行超时 30 分钟 60 分钟 120 分钟 保存更改 流水线行为 控制触发、取消和信任策略。 自动取消旧流水线 同一分支出现新提交时取消仍在等待或运行的旧任务。 允许 Pull Request 接收并运行 Forge 的 Pull Request Webhook。 受信任仓库 允许使用主机挂载和提升权限的插件。",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库 / ACME backend-api main 私有 GitHub acme/backend-api 部署应用 运行流水线 流水线 分支 6 Pull Requests 3 设置 基本设置 Secrets 镜像仓库 定时任务 状态徽章 仓库操作 扩展 仓库信息 调整仓库名称、描述和默认分支。 仓库名称 默认分支 main develop feature/oidc feature/user-preferences hotfix/rate-limit release/1.4.0 描述 流水线配置路径 执行超时 30 分钟 60 分钟 120 分钟 保存更改 流水线行为 控制触发、取消和信任策略。 自动取消旧流水线 同一分支出现新提交时取消仍在等待或运行的旧任务。 允许 Pull Request 接收并运行 Forge 的 Pull Request Webhook。 受信任仓库 允许使用主机挂载和提升权限的插件。",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "部署应用",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "运行流水线",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "分支6",
+      "href": "#/repos/101/branches",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Pull Requests3",
+      "href": "#/repos/101/pull-requests",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "设置",
+      "href": "#/repos/101/settings",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基本设置",
+      "href": "#/repos/101/settings",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets",
+      "href": "#/repos/101/settings/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "镜像仓库",
+      "href": "#/repos/101/settings/registries",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "定时任务",
+      "href": "#/repos/101/settings/crons",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "状态徽章",
+      "href": "#/repos/101/settings/badge",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库操作",
+      "href": "#/repos/101/settings/actions",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "扩展",
+      "href": "#/repos/101/settings/extensions",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "maindevelopfeature/oidcfeature/user-preferenceshotfix/rate-limitrelease/1.4.0",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "30 分钟60 分钟120 分钟",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "保存更改",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "",
+    "clientHeight": 844,
+    "clientWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1464,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 7,
+    "visibleTableCount": 0
+  },
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:8141/#/repos/101/settings",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "prototype-dark-zh-mobile-settings-general",
+  "row": 17,
+  "destination": "settings-general",
+  "surface": "prototype",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/流水线行为/",
+      "passed": true
+    },
+    {
+      "pattern": "/仓库信息/",
+      "passed": true
+    }
+  ],
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "capturedAt": "2026-08-11T14:13:38.659Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:37.828Z",
+    "endedAt": "2026-08-11T14:13:38.659Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "warningCategories": {
+      "vue_i18n": 0,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 0,
+      "other": 0
+    },
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8141/favicon.ico",
+        "reason": "prototype favicon is not part of the artifact",
+        "timestamp": "2026-08-11T14:13:37.979Z"
+      }
+    ]
+  }
+}

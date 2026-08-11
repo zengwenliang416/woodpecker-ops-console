@@ -1,0 +1,1359 @@
+{
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600,
+    "scrollHeight": 1000
+  },
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme / backend-api / 设置 项目 密钥 注册表 计划 徽标 扩展程序 操作 操作 执行现有仓库维护、启用、禁用和删除操作。 已启用 维护操作 由服务器确认的仓库修复和重新启用操作。 修复仓库 与 Forge 重新同步仓库元数据、权限、分支和 Webhook 状态。 修复仓库 危险区域 这些操作会中断新的流水线活动或永久删除仓库数据。 禁用仓库 停止处理新的 Webhook，同时保留现有仓库历史。 禁用仓库 删除仓库 永久删除仓库及其存储在 Woodpecker 中的数据。 删除仓库",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme / backend-api / 设置 项目 密钥 注册表 计划 徽标 扩展程序 操作 操作 执行现有仓库维护、启用、禁用和删除操作。 已启用 维护操作 由服务器确认的仓库修复和重新启用操作。 修复仓库 与 Forge 重新同步仓库元数据、权限、分支和 Webhook 状态。 修复仓库 危险区域 这些操作会中断新的流水线活动或永久删除仓库数据。 禁用仓库 停止处理新的 Webhook，同时保留现有仓库历史。 禁用仓库 删除仓库 永久删除仓库及其存储在 Woodpecker 中的数据。 删除仓库",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "a",
+      "text": "WoodpeckerCI/CD 平台",
+      "href": "/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "收起导航",
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库1",
+      "href": "/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心",
+      "href": "/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用",
+      "href": "/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境",
+      "href": "/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Releases",
+      "href": "/deployments/releases",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "生产审批",
+      "href": "/deployments/approvals",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器",
+      "href": "/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器组",
+      "href": "/infrastructure/groups",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务与容器",
+      "href": "/infrastructure/services",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警",
+      "href": "/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "构建 Agent",
+      "href": "/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列",
+      "href": "/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "密钥",
+      "href": "/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "个人设置",
+      "href": "/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "打开导航",
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "切换主题",
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/admin",
+      "title": "设置",
+      "ariaLabel": "设置",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "0",
+      "href": null,
+      "title": "流水线视图",
+      "ariaLabel": "流水线视图",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/user",
+      "title": "用户设置",
+      "ariaLabel": "用户设置",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "返回",
+      "ariaLabel": "返回",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme",
+      "href": "/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "项目",
+      "href": "/repos/101/settings",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "密钥",
+      "href": "/repos/101/settings/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "注册表",
+      "href": "/repos/101/settings/registries",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "计划",
+      "href": "/repos/101/settings/crons",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "徽标",
+      "href": "/repos/101/settings/badge",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "扩展程序",
+      "href": "/repos/101/settings/extensions",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "操作",
+      "href": "/repos/101/settings/actions",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "修复仓库",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "禁用仓库",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "删除仓库",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "dark",
+    "clientHeight": 1000,
+    "clientWidth": 1600,
+    "dataTheme": "dark",
+    "lang": "zh-Hans",
+    "scrollHeight": 1000,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 7,
+    "visibleTableCount": 0
+  },
+  "terminalRouteName": "repo-settings-actions",
+  "title": "操作 · acme/backend-api · Woodpecker",
+  "url": "http://127.0.0.1:8140/repos/101/settings/actions",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "production-dark-zh-desktop-settings-actions",
+  "row": 22,
+  "destination": "settings-actions",
+  "surface": "production",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/Danger zone|危险区域/i",
+      "passed": true
+    },
+    {
+      "pattern": "/Repair|修复/i",
+      "passed": true
+    }
+  ],
+  "permission": "admin",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-11T14:12:20.590Z",
+  "health": {
+    "startedAt": "2026-08-11T14:12:18.898Z",
+    "endedAt": "2026-08-11T14:12:20.590Z",
+    "errorCount": 0,
+    "warningCount": 187,
+    "warningCategories": {
+      "vue_i18n": 185,
+      "vue_extraneous_props": 1,
+      "vue_router_deprecation": 1,
+      "other": 0
+    },
+    "console": [
+      {
+        "level": "debug",
+        "message": "[vite] connecting...",
+        "timestamp": "2026-08-11T14:12:19.016Z"
+      },
+      {
+        "level": "debug",
+        "message": "[vite] connected.",
+        "timestamp": "2026-08-11T14:12:19.024Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.611Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.main' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.611Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.close' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.workspace' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.612Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.delivery' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.server_ops' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.build_infra' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.management' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.613Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.help' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'docs' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.614Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.616Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_name' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.616Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.616Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.617Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_subtitle' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.617Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.617Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.622Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.overview' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.622Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.622Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.623Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'repos' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.624Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.624Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.624Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.deployments' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.624Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.625Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.625Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.applications' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.625Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.625Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.625Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.environments' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.626Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.626Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.626Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.releases.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.626Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.626Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.627Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.approvals.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.627Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.627Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.627Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.infrastructure' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.628Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.628Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.628Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.servers' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.628Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.628Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.groups.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.services.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.629Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.630Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.alerts' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.630Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.630Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.631Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.agents' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.631Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.631Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.631Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.queue' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.632Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.632Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.632Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.secrets' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.632Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.632Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.633Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.admin' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.633Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.633Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.636Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.users' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.636Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.636Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.636Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.forges' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.637Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.637Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.637Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.personal' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.637Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.638Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.open' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_placeholder' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_shortcut' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.639Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.theme' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'settings' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.640Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.641Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'user.settings.settings' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.641Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.641Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.645Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'pipeline_feed' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.645Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.645Z"
+      },
+      {
+        "level": "warning",
+        "message": "[VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.\n├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next(\"/path\")` becomes `return \"/path\"`.\n╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next",
+        "timestamp": "2026-08-11T14:12:19.650Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.737Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.main' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.close' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.workspace' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.delivery' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.server_ops' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.738Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.build_infra' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.management' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.help' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'docs' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.739Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.740Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_name' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.740Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.740Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_subtitle' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.740Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.740Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.overview' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'repos' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.deployments' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.applications' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.environments' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.releases.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.741Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.approvals.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.infrastructure' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.servers' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.groups.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.services.title' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.742Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.alerts' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.agents' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.queue' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.secrets' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.admin' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.users' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.forges' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.743Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.personal' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.open' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_placeholder' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_shortcut' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.theme' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'settings' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'user.settings.settings' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.744Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'zh' locale messages.",
+        "timestamp": "2026-08-11T14:12:19.745Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'pipeline_feed' key with 'en' locale.",
+        "timestamp": "2026-08-11T14:12:19.745Z"
+      },
+      {
+        "level": "warning",
+        "message": "[Vue warn]: Extraneous non-props attributes (repoId) were passed to component but could not be automatically inherited because component renders fragment or text or teleport root nodes. \n  at <Scaffold key=0 go-back=fn repoId=\"101\" > \n  at <RepoSettings repoId=\"101\" onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref<  > > \n  at <RouterView key=1 > \n  at <RepoWrapper repoId=\"101\" onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > \n  at <RouterView> \n  at <RouterView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref< Proxy(Object) > > \n  at <RouterView> \n  at <App>",
+        "timestamp": "2026-08-11T14:12:20.019Z"
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8140/assets/custom.js",
+        "reason": "optional local custom script",
+        "timestamp": "2026-08-11T14:12:18.999Z"
+      }
+    ]
+  }
+}

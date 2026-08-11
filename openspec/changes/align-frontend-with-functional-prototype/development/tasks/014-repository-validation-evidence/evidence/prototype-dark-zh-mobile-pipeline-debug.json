@@ -1,0 +1,421 @@
+{
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "scrollHeight": 1457
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 交互式 Debug 会话 重新运行失败步骤并在退出前保持容器可连接。 失败步骤 Build application Run tests 会话时长 15 分钟 30 分钟 60 分钟 访问方式 SSH 临时证书 Web Terminal 使用与失败流水线相同的 Secret 与变量 从失败步骤前的工作区快照恢复 安全提醒 Debug 会话可访问构建环境中的敏感变量，所有操作都会写入审计日志。 启动 Debug 会话 运行环境 镜像 node:22-alpine 工作目录 /woodpecker/src CPU 2 cores 内存 4 GiB 网络 受限制 可用工具 node 22.4.1 npm 10.8.1 git 2.45.2 curl 8.8.0",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A BACKEND-API / 流水线 Pipeline #842 失败 main push A alice a1b2c3d 2 分钟前 重试 取消 更多 概览 日志 变更文件 6 配置 错误 1 调试 交互式 Debug 会话 重新运行失败步骤并在退出前保持容器可连接。 失败步骤 Build application Run tests 会话时长 15 分钟 30 分钟 60 分钟 访问方式 SSH 临时证书 Web Terminal 使用与失败流水线相同的 Secret 与变量 从失败步骤前的工作区快照恢复 安全提醒 Debug 会话可访问构建环境中的敏感变量，所有操作都会写入审计日志。 启动 Debug 会话 运行环境 镜像 node:22-alpine 工作目录 /woodpecker/src CPU 2 cores 内存 4 GiB 网络 受限制 可用工具 node 22.4.1 npm 10.8.1 git 2.45.2 curl 8.8.0",
+  "colors": {
+    "background": "rgb(8, 16, 23)",
+    "text": "rgb(237, 245, 247)"
+  },
+  "controls": [
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "收起导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "ACAcme Corp",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "仓库12",
+      "href": "#/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "流水线",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "组织6",
+      "href": "#/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "部署中心2",
+      "href": "#/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "应用4",
+      "href": "#/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "环境3",
+      "href": "#/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "基础设施",
+      "href": "#/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "服务器8",
+      "href": "#/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "告警2",
+      "href": "#/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents8",
+      "href": "#/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "任务队列5",
+      "href": "#/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets9",
+      "href": "#/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "系统管理",
+      "href": "#/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "用户",
+      "href": "#/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "#/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "文档",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "支持",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "A个人设置",
+      "href": "#/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "打开导航",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "搜索流水线、仓库、用户和设置…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "切换主题",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": "通知",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "AAliceAdministrator",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "backend-api",
+      "href": "#/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "重试",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "取消",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": true
+    },
+    {
+      "tag": "button",
+      "text": "更多",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "概览",
+      "href": "#/repos/101/pipeline/842",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "日志",
+      "href": "#/repos/101/pipeline/842?tab=logs",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "变更文件6",
+      "href": "#/repos/101/pipeline/842/changed-files",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "配置",
+      "href": "#/repos/101/pipeline/842/config",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "错误1",
+      "href": "#/repos/101/pipeline/842/errors",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "调试",
+      "href": "#/repos/101/pipeline/842/debug",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "Build applicationRun tests",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "15 分钟30 分钟60 分钟",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "SSH 临时证书Web Terminal",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "启动 Debug 会话",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "",
+    "clientHeight": 844,
+    "clientWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN",
+    "scrollHeight": 1457,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 0,
+    "visibleTableCount": 0
+  },
+  "terminalRouteName": null,
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "url": "http://127.0.0.1:8141/#/repos/101/pipeline/842/debug",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "prototype-dark-zh-mobile-pipeline-debug",
+  "row": 16,
+  "destination": "pipeline-debug",
+  "surface": "prototype",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/交互式 Debug 会话/",
+      "passed": true
+    },
+    {
+      "pattern": "/node:22-alpine/",
+      "passed": true
+    }
+  ],
+  "permission": "prototype-administrator",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "capturedAt": "2026-08-11T14:13:37.718Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:36.879Z",
+    "endedAt": "2026-08-11T14:13:37.718Z",
+    "errorCount": 0,
+    "warningCount": 0,
+    "warningCategories": {
+      "vue_i18n": 0,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 0,
+      "other": 0
+    },
+    "console": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8141/favicon.ico",
+        "reason": "prototype favicon is not part of the artifact",
+        "timestamp": "2026-08-11T14:13:37.039Z"
+      }
+    ]
+  }
+}

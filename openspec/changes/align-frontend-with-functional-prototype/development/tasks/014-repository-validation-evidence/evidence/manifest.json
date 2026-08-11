@@ -1,0 +1,118 @@
+{
+  "schema_version": 1,
+  "task_id": "014-repository-validation-evidence",
+  "commit": "c416ce346110b4b2315c995e2302797ea5ee9f0c",
+  "matrix": {
+    "repository_rows": [
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "primary_states": 84,
+    "secondary_states": 16,
+    "expected_states": 100
+  },
+  "runtime": {
+    "production_url": "http://127.0.0.1:8140",
+    "prototype_url": "http://127.0.0.1:8141",
+    "mock_api_url": "http://127.0.0.1:8142",
+    "production_entrypoint": "/src/main.ts",
+    "prototype_marker": "approved-user-design"
+  },
+  "dependencies": {
+    "pipeline_fixture": "development/tasks/009-pipeline-validation-evidence/evidence/mock_api.py",
+    "settings_fixture": "development/tasks/012-repository-manual-run-settings/evidence/mock_api.py"
+  },
+  "expected_outcome": {
+    "verified_rows": [
+      3,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "blocked_rows": [
+      4
+    ],
+    "blocked_reason": {
+      "4": "Production exposes the existing Forge repository activation list while the approved prototype defines a four-step configuration wizard."
+    }
+  },
+  "captured_from": "2026-08-11T14:11:42.138Z",
+  "captured_through": "2026-08-11T14:14:08.060Z",
+  "checksums": {
+    "mock_api_py": "3ce7cabb788ad3946de5b928f460849eec8e997014834e78240e0d18f5cb1599",
+    "mock_api_smoke_mjs": "6430ccc2b9e11be90f5b80b72d1db6d3dbedd71890f2f3def96a1594d081bda9",
+    "capture_browser_mjs": "923cc57c6ab5eefd7a3cdb372866bcc24ccc399deaf798691b9d3529810e7cc0",
+    "verify_evidence_mjs": "22e5b3d5d55644b0967deeb9a9848579554663e4656a55946cfea21f73907be5",
+    "browser_replay_summary_json": "42c3b56fc416ed6e7725f7f9bed06bc79615688696c7b5efcd6194da8bf6c825",
+    "all_png_files": "bb021fd4572bc837a9926ca3df1740d74056134ce685eadc1987a4886595983d",
+    "all_measurement_files": "66443e961f63cf16cb02ffb14d2b59488a97a06d3b6aff65b97ee8a2866581d5"
+  },
+  "service_identity": {
+    "sourceBaseCommit": "c416ce346110b4b2315c995e2302797ea5ee9f0c",
+    "gitHead": "c416ce346110b4b2315c995e2302797ea5ee9f0c",
+    "productionRuntimeUnchangedFromBase": true,
+    "serviceOwnership": "task-started-exclusive-ports",
+    "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+    "mockFixture": "014-repository-validation-evidence",
+    "proxiedRepository": "acme/backend-api",
+    "productionEntrypoint": "/src/main.ts",
+    "productionRouterMarker": "repo-settings-extensions",
+    "productionTree": "189c785155c0fb53052f16ba189202ae49fefc8a",
+    "prototypeMarker": "approved-user-design",
+    "prototypeTree": "af9ee6bbc16ef8116d6f787072377717a4901fdd",
+    "prototypeIndexSha256": "4de458b47856bef1262959d1a47a6cbf685142641617fa40356a42a3bde060e6",
+    "dependencyChecksums": {
+      "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/mock_api.py": "60f9f6657f39982aa1d1720bce44bfe135daee887213e60e4202d79307c0aa99",
+      "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/evidence/mock_api.py": "b8b0934c555eceef079f8230c742c2b9a5f3a3d7432db30f6ff97f6a6cda475e"
+    }
+  },
+  "actual": {
+    "states": 100,
+    "production_states": 58,
+    "prototype_states": 42,
+    "error_states": [],
+    "warning_count": 8984,
+    "warning_categories": {
+      "vue_i18n": 8900,
+      "vue_extraneous_props": 24,
+      "vue_router_deprecation": 60,
+      "other": 0
+    }
+  },
+  "run_id": "1082fba7-576e-4c0f-8f72-fb8beca08df0"
+}

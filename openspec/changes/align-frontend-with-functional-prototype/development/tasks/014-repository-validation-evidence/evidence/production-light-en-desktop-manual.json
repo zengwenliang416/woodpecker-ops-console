@@ -1,0 +1,598 @@
+{
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600,
+    "scrollHeight": 1000
+  },
+  "bodyText": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos 1 DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 acme / backend-api Activity Branches Pull requests Show pipelines Trigger a manual pipeline run Choose a real repository branch, add optional variables, and trigger the existing manual pipeline flow. Select branch main release/2026.08 feature/pipeline-diagnostics docs/reference-guide Additional pipeline variables Specify additional variables to be used in your pipeline. Variables with the same name are overwritten. Run pipeline The server validates the workflow and creates the pipeline before navigation. Run summary Current values that will be sent to the existing pipeline endpoint. Repository acme/backend-api Default branch main Available branches 4 Variables 0 Server-confirmed execution No successful run is shown until the existing pipeline API confirms it.",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos 1 DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 acme / backend-api Activity Branches Pull requests Show pipelines Trigger a manual pipeline run Choose a real repository branch, add optional variables, and trigger the existing manual pipeline flow. Select branch main release/2026.08 feature/pipeline-diagnostics docs/reference-guide Additional pipeline variables Specify additional variables to be used in your pipeline. Variables with the same name are overwritten. Run pipeline The server validates the workflow and creates the pipeline before navigation. Run summary Current values that will be sent to the existing pipeline endpoint. Repository acme/backend-api Default branch main Available branches 4 Variables 0 Server-confirmed execution No successful run is shown until the existing pipeline API confirms it.",
+  "colors": {
+    "background": "rgb(244, 247, 248)",
+    "text": "rgb(21, 35, 45)"
+  },
+  "controls": [
+    {
+      "tag": "a",
+      "text": "WoodpeckerCI/CD Platform",
+      "href": "/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Close navigation",
+      "ariaLabel": "Close navigation",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Overview",
+      "href": "/overview",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Repos1",
+      "href": "/repos",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Deployments",
+      "href": "/deployments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Applications",
+      "href": "/deployments/apps",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Environments",
+      "href": "/deployments/environments",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Releases",
+      "href": "/deployments/releases",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Production approvals",
+      "href": "/deployments/approvals",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Infrastructure",
+      "href": "/infrastructure",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Servers",
+      "href": "/infrastructure/servers",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Server groups",
+      "href": "/infrastructure/groups",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Services & containers",
+      "href": "/infrastructure/services",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Alerts",
+      "href": "/infrastructure/alerts",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Build Agents",
+      "href": "/admin/agents",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Queue",
+      "href": "/admin/queue",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Secrets",
+      "href": "/user/secrets",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "System Admin",
+      "href": "/admin",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Users",
+      "href": "/admin/users",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Forge",
+      "href": "/admin/forges",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Docs",
+      "href": "https://woodpecker-ci.org/docs/",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Personal settings",
+      "href": "/user",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Open navigation",
+      "ariaLabel": "Open navigation",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "Search pipelines, repos, users and settings…⌘ K",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "",
+      "href": null,
+      "title": "Toggle theme",
+      "ariaLabel": "Toggle theme",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/admin",
+      "title": "Settings",
+      "ariaLabel": "Settings",
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "0",
+      "href": null,
+      "title": "Pipeline feed",
+      "ariaLabel": "Pipeline feed",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/user",
+      "title": "User Settings",
+      "ariaLabel": "User Settings",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "acme",
+      "href": "/orgs/1",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "/api/badges/101/status.svg",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "",
+      "href": "https://forge.example/acme/backend-api",
+      "title": "Open repository in forge",
+      "ariaLabel": "Open repository in forge",
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Activity",
+      "href": "/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Branches",
+      "href": "/repos/101/branches",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Pull requests",
+      "href": "/repos/101/pull-requests",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "a",
+      "text": "Show pipelines",
+      "href": "/repos/101",
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "select",
+      "text": "mainrelease/2026.08feature/pipeline-diagnosticsdocs/reference-guide",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "input",
+      "text": "",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    },
+    {
+      "tag": "button",
+      "text": "Run pipeline",
+      "href": null,
+      "title": null,
+      "ariaLabel": null,
+      "disabled": false
+    }
+  ],
+  "denseContainers": [],
+  "document": {
+    "className": "light",
+    "clientHeight": 1000,
+    "clientWidth": 1600,
+    "dataTheme": "light",
+    "lang": "en",
+    "scrollHeight": 1000,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "semanticMarkers": {
+    "wizardStepCount": 0,
+    "repoSettingsNavCount": 0,
+    "visibleTableCount": 0
+  },
+  "terminalRouteName": "repo-manual",
+  "title": "Run pipeline · acme/backend-api · Woodpecker",
+  "url": "http://127.0.0.1:8140/repos/101/manual",
+  "runId": "1082fba7-576e-4c0f-8f72-fb8beca08df0",
+  "stateId": "production-light-en-desktop-manual",
+  "row": 10,
+  "destination": "manual",
+  "surface": "production",
+  "parityStatus": "verified",
+  "contentAssertions": [
+    {
+      "pattern": "/main/",
+      "passed": true
+    },
+    {
+      "pattern": "/运行流水线|Run pipeline/i",
+      "passed": true
+    }
+  ],
+  "permission": "push",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "capturedAt": "2026-08-11T14:13:51.965Z",
+  "health": {
+    "startedAt": "2026-08-11T14:13:50.587Z",
+    "endedAt": "2026-08-11T14:13:51.965Z",
+    "errorCount": 0,
+    "warningCount": 38,
+    "warningCategories": {
+      "vue_i18n": 37,
+      "vue_extraneous_props": 0,
+      "vue_router_deprecation": 1,
+      "other": 0
+    },
+    "console": [
+      {
+        "level": "debug",
+        "message": "[vite] connecting...",
+        "timestamp": "2026-08-11T14:13:50.723Z"
+      },
+      {
+        "level": "debug",
+        "message": "[vite] connected.",
+        "timestamp": "2026-08-11T14:13:50.757Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.036Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.037Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.037Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.037Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.038Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.038Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.041Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.041Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.042Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.043Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.043Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.043Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.043Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.044Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.044Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.044Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.045Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.045Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.045Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.045Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.046Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.046Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.046Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.047Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.048Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.049Z"
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages.",
+        "timestamp": "2026-08-11T14:13:51.050Z"
+      },
+      {
+        "level": "warning",
+        "message": "[VUE_ROUTER_R0025] The `next()` callback in navigation guards is deprecated.\n├▶ fix: Return the value instead: `next()` becomes `return`, `next(false)` becomes `return false`, `next(\"/path\")` becomes `return \"/path\"`.\n╰▶ see: https://router.vuejs.org/guide/advanced/navigation-guards.html#Optional-third-argument-next",
+        "timestamp": "2026-08-11T14:13:51.055Z"
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "interceptedOptionalAssets": [
+      {
+        "url": "http://127.0.0.1:8140/assets/custom.js",
+        "reason": "optional local custom script",
+        "timestamp": "2026-08-11T14:13:50.710Z"
+      }
+    ]
+  }
+}

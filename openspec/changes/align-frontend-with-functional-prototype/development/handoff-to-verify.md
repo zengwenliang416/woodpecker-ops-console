@@ -56,8 +56,12 @@
   non-pipeline repository destinations are protected by named/inbound router,
   permission/action/theme, active-error, same-ID lifecycle, disabled-route,
   loading-recovery, and structural responsive regressions.
+- `014-repository-validation-evidence` / baseline task `4.5`: repository rows
+  `3` and `5-23` passed current production-versus-approved-prototype replay
+  across required desktop/mobile states; row `4` is explicitly blocked by the
+  measured production activation list versus prototype four-step add wizard.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `4.5` through `8.4` remain incomplete.
+  Tasks `5.1` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -102,6 +106,11 @@
   `RepoWrapper.vue` and its new shell/lifecycle suite, shared pagination and
   pipeline-store loading repairs/tests, disabled PR route states/tests,
   repository activity/settings containment tests, and bilingual disabled copy.
+- Repository validation evidence: task-local deterministic Mock API, smoke
+  runner, exclusive-service no-resume CDP capture, independent strict verifier,
+  `100` measurement/PNG pairs, replay summary, checksummed manifest, report,
+  and superseding independent reviews. No production or approved-prototype
+  file changed in slice `014`.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -115,7 +124,8 @@
   `development/tasks/010-repository-pipeline-list/report.md`, and
   `development/tasks/011-repository-branches-pull-requests/report.md`, and
   `development/tasks/012-repository-manual-run-settings/report.md`, and
-  `development/tasks/013-repository-regression-coverage/report.md`.
+  `development/tasks/013-repository-regression-coverage/report.md`, and
+  `development/tasks/014-repository-validation-evidence/report.md`.
 
 ## Requirements Covered
 
@@ -163,8 +173,11 @@
   access, shared loading recovery, and structural containment. Full `A3`
   remains open because task `4.5` owns current-byte desktop/390px browser
   evidence.
-- `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
-  remaining development and parity-matrix work is complete.
+- `A1` and task-scoped `A3` were independently verified for repository
+  evidence slice `014`: all `67` inventory rows retain an allowed status and
+  repository rows `3-23` have current same-state evidence. Full repository
+  `A2` remains open because row `4` is blocked; full-change `A3`/`A4` remain
+  open until the remaining development and parity-matrix work is complete.
 
 ## Prototype Decisions Implemented
 
@@ -207,6 +220,9 @@
   authentication, and permission contracts while repairing only
   regression-proven lifecycle/error, loading, disabled-route, and containment
   behavior.
+- Repository evidence uses current production APIs and a task-local deterministic
+  fixture only for replay. It does not disguise the `/repos/add` mismatch:
+  production has `0` wizard steps and the approved prototype has `4`.
 
 ## Components Created / Reused / Extracted
 
@@ -253,6 +269,9 @@
   migration, dependency, or approved-prototype contract.
 - Slice `013` adds no API, store, router, permission, backend, persistence,
   migration, dependency, or approved-prototype contract.
+- Slice `014` adds no production or approved-prototype change. Its Mock API,
+  capture, verifier, measurements, screenshots, summary, and manifest are
+  task-local evidence artifacts.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -299,6 +318,10 @@
   downstream `A -> B -> A` completion, disabled PR no-request behavior,
   rejected/overlapping loading, theme-invariant controls, and activity/settings
   structural containment.
+- Repository validation reuses the current `32`-file/`214`-test repository
+  suite and adds task-local Mock API smoke plus strict verification for exact
+  inventory, run identity, protected trees, routes, content, permissions,
+  browser health, warning classification, overflow, and checksums.
 - The current full frontend regression baseline is 50 test files and 314 tests.
 
 ## Local Validation
@@ -312,6 +335,7 @@
 - PASS: repository manual-run/settings focused suite, 14 files and 75 tests.
 - PASS: repository regression focused suite, 9 files and 63 tests.
 - PASS: repository regression supporting suite, 22 files and 118 tests.
+- PASS: repository validation focused suite, 32 files and 214 tests.
 - PASS: current complete frontend suite, 50 files and 314 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
@@ -339,14 +363,23 @@
   independent checksum/route/content/permission/overflow verification,
   including mobile Secrets `390/390` document containment and `821/345` local
   scrolling.
+- PASS: repository no-resume replay for exactly `100` current-run states
+  (`58` production and `42` prototype), with exclusive task-owned services,
+  one shared run ID, exact inventory, protected-tree identity, atomic summary
+  and manifest replacement, zero page-overflow/raw-key/browser-error states,
+  and verified checksums.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Nineteen baseline tasks remain incomplete across repository,
+- Eighteen baseline tasks remain incomplete across
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.
+- Repository row `4` remains blocked: production `/repos/add` renders the
+  Forge activation list while the approved prototype renders a four-step
+  configuration wizard. Baseline task `4.5` is complete as an evidence task,
+  not as a claim that every repository route matches.
 - The unchanged `web/src/style.css` has a pre-existing Prettier mismatch.
   Slice `004` records the original failure plus a contract-accepted,
   task-scoped zero-diff adjudication; this is not evidence that the file is
@@ -375,7 +408,7 @@
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `4.5` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `5.1` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

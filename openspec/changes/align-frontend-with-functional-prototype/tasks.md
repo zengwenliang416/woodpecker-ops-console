@@ -35,7 +35,7 @@
 - [x] 4.2 Align branch list/detail and pull-request list/detail routes with real Forge and pipeline data.
 - [x] 4.3 Align manual-run, general settings, secrets, registries, crons, badge, actions, and extensions routes without changing existing contracts.
 - [x] 4.4 Add repository route/component tests for filters, permissions, actions, pagination, empty/error states, theme, and 390px behavior.
-- [ ] 4.5 Verify every repository parity-matrix row and record same-state screenshot evidence.
+- [x] 4.5 Verify every repository parity-matrix row and record same-state screenshot evidence.
 
 ## 5. Organization, Administration, And User Routes
 
