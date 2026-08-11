@@ -357,6 +357,116 @@
         }
       }
     },
+    "settings_surface": {
+      "navigation_label": "Repository settings",
+      "retry": "Retry",
+      "inherited": "Inherited",
+      "read_only": "Read only",
+      "editable": "Editable",
+      "loaded_count": "{count} loaded",
+      "columns": {
+        "scope": "Scope",
+        "access": "Access",
+        "actions": "Actions"
+      },
+      "scope": {
+        "repo": "Repository",
+        "org": "Organization",
+        "global": "Global"
+      },
+      "manual": {
+        "description": "Choose a real repository branch, add optional variables, and trigger the existing manual pipeline flow.",
+        "loading_title": "Loading branches",
+        "loading_description": "Reading all available branch pages from the connected forge.",
+        "error_title": "Branches could not be loaded",
+        "error_fallback": "The branch request failed.",
+        "empty_title": "No branches available",
+        "empty_description": "The connected forge did not return a branch that can be selected.",
+        "confirmation_hint": "The server validates the workflow and creates the pipeline before navigation.",
+        "summary_title": "Run summary",
+        "summary_description": "Current values that will be sent to the existing pipeline endpoint.",
+        "repository": "Repository",
+        "default_branch": "Default branch",
+        "available_branches": "Available branches",
+        "variables_count": "Variables",
+        "server_authority_title": "Server-confirmed execution",
+        "server_authority_description": "No successful run is shown until the existing pipeline API confirms it."
+      },
+      "general": {
+        "description": "Configure supported repository behavior, execution policy, visibility, approval, and trust controls.",
+        "loading_title": "Preparing repository settings",
+        "loading_description": "Reading the current confirmed repository values.",
+        "pipeline_behavior_title": "Pipeline behavior",
+        "pipeline_behavior_description": "Control supported triggers, deployment access, visibility, and approval requirements.",
+        "execution_title": "Execution policy",
+        "execution_description": "Configure timeout, pipeline path, and cancellation behavior using current repository fields.",
+        "trust_title": "Trust and credentials",
+        "trust_description": "Limit clone credentials and administrator-only privileged pipeline capabilities."
+      },
+      "secrets": {
+        "form_description": "Create or update a repository-owned secret using the existing secret contract.",
+        "loading_title": "Loading secrets",
+        "loading_description": "Combining repository, organization, and global secret pages.",
+        "error_title": "Secrets could not be loaded",
+        "error_fallback": "The secret request failed.",
+        "empty_description": "Create the first repository secret for this pipeline scope."
+      },
+      "registries": {
+        "form_description": "Create, inspect, or update a repository-owned registry credential.",
+        "loading_title": "Loading registries",
+        "loading_description": "Combining repository, organization, and global registry pages.",
+        "error_title": "Registries could not be loaded",
+        "error_fallback": "The registry request failed.",
+        "empty_description": "Add the first registry credential available to this repository."
+      },
+      "crons": {
+        "form_description": "Configure the existing cron name, branch, timezone, schedule, variables, and enabled state.",
+        "loading_title": "Loading scheduled pipelines",
+        "loading_description": "Reading the current repository cron pages.",
+        "error_title": "Scheduled pipelines could not be loaded",
+        "error_fallback": "The scheduled pipeline request failed.",
+        "empty_description": "Create a cron schedule to trigger this repository automatically.",
+        "next_execution": "Next execution"
+      },
+      "badge": {
+        "description": "Generate the existing status badge URL or an embeddable Markdown or HTML representation.",
+        "loading_title": "Loading badge branches",
+        "loading_description": "Reading branch names for the badge target.",
+        "error_title": "Badge branches could not be loaded",
+        "error_fallback": "The badge branch request failed.",
+        "empty_title": "No badge branches available",
+        "empty_description": "The repository did not return a branch that can be used for a status badge.",
+        "configuration_title": "Badge configuration",
+        "embed_code": "Embed code",
+        "embed_description": "The output updates from the current branch, event, workflow, step, and syntax selections.",
+        "preview_title": "Preview",
+        "preview_description": "Live server-rendered badge for the current selection.",
+        "preview_alt": "Repository pipeline status badge",
+        "preview_branch": "Branch",
+        "preview_events": "Events"
+      },
+      "actions": {
+        "description": "Run the existing repository maintenance, activation, deactivation, and deletion operations.",
+        "active": "Active",
+        "inactive": "Inactive",
+        "maintenance_title": "Maintenance",
+        "maintenance_description": "Server-confirmed actions that repair or re-enable the repository.",
+        "repair_description": "Reconcile repository metadata, permissions, branches, and webhook state with the forge.",
+        "enable_description": "Enable webhook processing and pipeline execution for this inactive repository.",
+        "danger_title": "Danger zone",
+        "danger_description": "These operations interrupt new pipeline activity or permanently remove repository data.",
+        "disable_description": "Stop processing new webhooks while retaining existing repository history.",
+        "delete_description": "Permanently remove the repository and its stored Woodpecker data."
+      },
+      "extensions": {
+        "signature_loading_title": "Loading signature public key",
+        "signature_error_title": "Signature public key could not be loaded",
+        "signature_error_fallback": "The signature public key request failed.",
+        "config_description": "Delegate pipeline configuration resolution to the supported HTTP endpoint.",
+        "registry_description": "Delegate registry credential resolution to the supported HTTP endpoint.",
+        "secret_description": "Delegate secret resolution to the supported HTTP endpoint."
+      }
+    },
     "pipeline": {
       "eyebrow": "Pipeline",
       "overview": "Overview",

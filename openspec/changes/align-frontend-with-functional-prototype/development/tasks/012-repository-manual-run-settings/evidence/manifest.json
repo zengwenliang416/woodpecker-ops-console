@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "task_id": "012-repository-manual-run-settings",
+  "captured_at": "2026-08-11T07:11:21.161Z",
+  "runtime": {
+    "frontend": "Vite development server at 127.0.0.1:8010",
+    "api": "task-012 deterministic Mock API at 127.0.0.1:8123",
+    "repository_id": 101
+  },
+  "routes": [
+    {
+      "name": "manual-run",
+      "path": "/repos/101/manual",
+      "ready": "Boolean(document.querySelector('[data-testid=\"manual-pipeline-form\"]'))",
+      "selector": "[data-testid=\"manual-pipeline-form\"]",
+      "expectedText": "Run pipeline"
+    },
+    {
+      "name": "general",
+      "path": "/repos/101/settings",
+      "ready": "Boolean(document.querySelector('.repo-settings-page form'))",
+      "selector": ".repo-settings-page",
+      "expectedText": "Pipeline behavior"
+    },
+    {
+      "name": "secrets",
+      "path": "/repos/101/settings/secrets",
+      "ready": "document.querySelectorAll('.repo-settings-table-scroll tbody tr').length === 4",
+      "selector": ".repo-settings-table-scroll",
+      "expectedText": "DEPLOY_TOKEN",
+      "localScrollSelector": ".repo-settings-table-scroll"
+    },
+    {
+      "name": "badge",
+      "path": "/repos/101/settings/badge",
+      "ready": "Boolean(document.querySelector('.badge-layout'))",
+      "selector": ".badge-layout",
+      "expectedText": "Badge configuration"
+    },
+    {
+      "name": "actions",
+      "path": "/repos/101/settings/actions",
+      "ready": "Boolean(document.querySelector('.repo-settings-section-danger'))",
+      "selector": ".repo-settings-section-danger",
+      "expectedText": "Danger zone"
+    }
+  ],
+  "screenshots": {
+    "desktop_manual_run": {
+      "file": "repository-settings-desktop-manual-run.png",
+      "sha256": "7dc6b7e4e2acac4ae3c26d79f2f455a32ac5753cccbf7475e3514f08275b32a0"
+    },
+    "desktop_general": {
+      "file": "repository-settings-desktop-general.png",
+      "sha256": "e7aceb182e3386a5c46dd201e7ac765195a172caff9a7e056928bc4138d614d0"
+    },
+    "desktop_secrets": {
+      "file": "repository-settings-desktop-secrets.png",
+      "sha256": "8de4325d712f88a6c08200d59b47e598a290b3cffe0a7d4393f6cc64c12da59e"
+    },
+    "desktop_badge": {
+      "file": "repository-settings-desktop-badge.png",
+      "sha256": "e251d5719a3cadf58f6a2865fa1eab826660ec675cca1fffdc37bfe9945a2a46"
+    },
+    "desktop_actions": {
+      "file": "repository-settings-desktop-actions.png",
+      "sha256": "d8acd687ac905b6504c303f44ed8e3272cfea257c26fca6a0bb6783c9a21b6b2"
+    },
+    "mobile_manual_run": {
+      "file": "repository-settings-mobile-manual-run.png",
+      "sha256": "6cac54af96ac1cc0d89fd9cb56554a0795f54b7c0e9bc6be999bceaa8ac3ca39"
+    },
+    "mobile_general": {
+      "file": "repository-settings-mobile-general.png",
+      "sha256": "892728f478c1ebe4e45f95be016e4bc10f874f2a9101373a84ed61b6acb7688b"
+    },
+    "mobile_secrets": {
+      "file": "repository-settings-mobile-secrets.png",
+      "sha256": "5edd9f61e4f992d46437006ee7fa5384af70808e04390243cbb4c19946e64653"
+    },
+    "mobile_badge": {
+      "file": "repository-settings-mobile-badge.png",
+      "sha256": "5fd37e4bc8da6e7120d85d2b6cb150c434a955acd72bb28b3e2b9c7e143e8063"
+    },
+    "mobile_actions": {
+      "file": "repository-settings-mobile-actions.png",
+      "sha256": "a26880a32373320bda64099e4f353a89d22ee3480deb53cb1a9333a6b7c98a58"
+    }
+  },
+  "measurements": {
+    "desktop": {
+      "manual-run": {
+        "href": "http://127.0.0.1:8010/repos/101/manual?task012=desktop-1786432258860",
+        "pathname": "/repos/101/manual",
+        "title": "Run pipeline · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 639,
+          "scroll_width": 639,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Select branch\nmain\nrelease/2026.08\nfeature/pipeline-diagnostics\ndocs/reference-guide\nAdditional pipeline variables\nSpecify additional variables to be used in your pipeline. Variables with the same name are overwritten.\nRun pipeline\nThe server validates the workflow and creates the pipeline before navigation.",
+        "navigation_items": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "general": {
+        "href": "http://127.0.0.1:8010/repos/101/settings?task012=desktop-1786432262810",
+        "pathname": "/repos/101/settings",
+        "title": "Project settings · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Project settings\n\nConfigure supported repository behavior, execution policy, visibility, approval, and trust controls.\n\nPipeline behavior\n\nControl supported triggers, deployment access, visibility, and approval requirements.\n\nAllow Pull Requests\nAllow the execution of pipelines on pull requests.\nAllow Deployments\nAllow deployments for successful pipelines. All users with push permissions can trigger these, so use with caution.\nProject visibility\nPublic\nAnyone can see your project without being logged in.\nInternal\nOnly authenticated users of the Woodpecker instance can see this project.\nPrivate\nOnly you and other owners of the repository can see this project.\nApproval requirements\nPrevent malicious pipelines from exposing secrets or running harmful tasks by approving them before execution.\nNone\nEvery event triggers pipelines, including pull requests. This setting can be dangerous and is only recommended for private instances.\nPull request from forked repository\nAll pull requests\nAll events from forge\nAllowed users\nPipelines created by the listed users never require approval.\nExecution policy\n\nConfigure timeout, pipeline path, and cancellation behavior using current repository fields.\n\nTimeout\nminutes\nPipeline path\nPath to your pipeline config (for example my/path/). Folders should end with a /.\nCancel previous pipelines\nSelected event triggers cancel pending and running pipelines of the same event before starting the next one.\nPush\nTag\nPull Request\nDeploy\nTrust and credentials\n\nLimit clone credentials and administrator-only privileged pipeline capabilities.\n\nCustom trusted clone plugins\nPlugins that get access to netrc credentials that can be used to clone repositories from the forge or push them into the forge.\nTrusted\nNetwork\nPipeline containers get access to network privileges like changing DNS.\nVolumes\nPipeline containers are allowed to mount volumes.\nSecurity\nPipeline containers get access to security privileges.\nSave settings",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "secrets": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/secrets?task012=desktop-1786432264021",
+        "pathname": "/repos/101/settings/secrets",
+        "title": "Secrets · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 751,
+          "scroll_width": 821,
+          "overflow_x": "auto"
+        },
+        "local_scroll": {
+          "client_width": 751,
+          "scroll_width": 821,
+          "overflow_x": "auto",
+          "scroll_left_before": 0,
+          "scroll_left_after": 70
+        },
+        "target_count": 1,
+        "target_text": "Name\tScope\tAvailable at the following events\tNote\t\nActions\n\n\nDEPLOY_TOKEN\n\t\nRepository\n\t\npush\nmanual\n\tProduction deployment credential\t\n\n\nNPM_TOKEN\n\t\nRepository\n\t\npush\n\tPackage publishing\t\n\n\nORG_SIGNING_KEY\n\t\nOrganization\n\t\npush\ntag\n\tInherited signing material\tInherited\n\nGLOBAL_MIRROR\n\t\nGlobal\n\t\npush\n\tSystem mirror credential\tInherited",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "badge": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/badge?task012=desktop-1786432265471",
+        "pathname": "/repos/101/settings/badge",
+        "title": "Badge · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Badge configuration\nBranch\nmain\nrelease/2026.08\nfeature/pipeline-diagnostics\ndocs/reference-guide\nSyntax\nURL\nMarkdown\nHTML\nEvents\nPush\ndefault\nTag\nRelease\nPull Request\nPull Request merged/closed\nPull Request metadata changed\nDeploy\nCron\nManual\nWorkflow\nStep\nEmbed code\nThe output updates from the current branch, event, workflow, step, and syntax selections.\n[![status-badge](http://127.0.0.1:8010/api/badges/101/status.svg)](http://127.0.0.1:8010/repos/101)\nPreview\n\nLive server-rendered badge for the current selection.\n\nBranch\nmain\nEvents\npush",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "actions": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/actions?task012=desktop-1786432266551",
+        "pathname": "/repos/101/settings/actions",
+        "title": "Actions · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 1280,
+          "height": 720
+        },
+        "document": {
+          "client_width": 1280,
+          "scroll_width": 1280,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 1021,
+          "scroll_width": 1021,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 753,
+          "scroll_width": 753,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 751,
+          "scroll_width": 751,
+          "overflow_x": "hidden"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Danger zone\n\nThese operations interrupt new pipeline activity or permanently remove repository data.\n\nDisable repository\n\nStop processing new webhooks while retaining existing repository history.\n\nDisable repository\nDelete repository\n\nPermanently remove the repository and its stored Woodpecker data.\n\nDelete repository",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      }
+    },
+    "mobile": {
+      "manual-run": {
+        "href": "http://127.0.0.1:8010/repos/101/manual?task012=mobile-1786432269806",
+        "pathname": "/repos/101/manual",
+        "title": "Run pipeline · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "target": {
+          "client_width": 313,
+          "scroll_width": 313,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Select branch\nmain\nrelease/2026.08\nfeature/pipeline-diagnostics\ndocs/reference-guide\nAdditional pipeline variables\nSpecify additional variables to be used in your pipeline. Variables with the same name are overwritten.\nRun pipeline\nThe server validates the workflow and creates the pipeline before navigation.",
+        "navigation_items": 0,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "general": {
+        "href": "http://127.0.0.1:8010/repos/101/settings?task012=mobile-1786432274485",
+        "pathname": "/repos/101/settings",
+        "title": "Project settings · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Project settings\n\nConfigure supported repository behavior, execution policy, visibility, approval, and trust controls.\n\nPipeline behavior\n\nControl supported triggers, deployment access, visibility, and approval requirements.\n\nAllow Pull Requests\nAllow the execution of pipelines on pull requests.\nAllow Deployments\nAllow deployments for successful pipelines. All users with push permissions can trigger these, so use with caution.\nProject visibility\nPublic\nAnyone can see your project without being logged in.\nInternal\nOnly authenticated users of the Woodpecker instance can see this project.\nPrivate\nOnly you and other owners of the repository can see this project.\nApproval requirements\nPrevent malicious pipelines from exposing secrets or running harmful tasks by approving them before execution.\nNone\nEvery event triggers pipelines, including pull requests. This setting can be dangerous and is only recommended for private instances.\nPull request from forked repository\nAll pull requests\nAll events from forge\nAllowed users\nPipelines created by the listed users never require approval.\nExecution policy\n\nConfigure timeout, pipeline path, and cancellation behavior using current repository fields.\n\nTimeout\nminutes\nPipeline path\nPath to your pipeline config (for example my/path/). Folders should end with a /.\nCancel previous pipelines\nSelected event triggers cancel pending and running pipelines of the same event before starting the next one.\nPush\nTag\nPull Request\nDeploy\nTrust and credentials\n\nLimit clone credentials and administrator-only privileged pipeline capabilities.\n\nCustom trusted clone plugins\nPlugins that get access to netrc credentials that can be used to clone repositories from the forge or push them into the forge.\nTrusted\nNetwork\nPipeline containers get access to network privileges like changing DNS.\nVolumes\nPipeline containers are allowed to mount volumes.\nSecurity\nPipeline containers get access to security privileges.\nSave settings",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "secrets": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/secrets?task012=mobile-1786432276973",
+        "pathname": "/repos/101/settings/secrets",
+        "title": "Secrets · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 345,
+          "scroll_width": 821,
+          "overflow_x": "auto"
+        },
+        "local_scroll": {
+          "client_width": 345,
+          "scroll_width": 821,
+          "overflow_x": "auto",
+          "scroll_left_before": 0,
+          "scroll_left_after": 120
+        },
+        "target_count": 1,
+        "target_text": "Name\tScope\tAvailable at the following events\tNote\t\nActions\n\n\nDEPLOY_TOKEN\n\t\nRepository\n\t\npush\nmanual\n\tProduction deployment credential\t\n\n\nNPM_TOKEN\n\t\nRepository\n\t\npush\n\tPackage publishing\t\n\n\nORG_SIGNING_KEY\n\t\nOrganization\n\t\npush\ntag\n\tInherited signing material\tInherited\n\nGLOBAL_MIRROR\n\t\nGlobal\n\t\npush\n\tSystem mirror credential\tInherited",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "badge": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/badge?task012=mobile-1786432277960",
+        "pathname": "/repos/101/settings/badge",
+        "title": "Badge · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Badge configuration\nBranch\nmain\nrelease/2026.08\nfeature/pipeline-diagnostics\ndocs/reference-guide\nSyntax\nURL\nMarkdown\nHTML\nEvents\nPush\ndefault\nTag\nRelease\nPull Request\nPull Request merged/closed\nPull Request metadata changed\nDeploy\nCron\nManual\nWorkflow\nStep\nEmbed code\nThe output updates from the current branch, event, workflow, step, and syntax selections.\n[![status-badge](http://127.0.0.1:8010/api/badges/101/status.svg)](http://127.0.0.1:8010/repos/101)\nPreview\n\nLive server-rendered badge for the current selection.\n\nBranch\nmain\nEvents\npush",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      },
+      "actions": {
+        "href": "http://127.0.0.1:8010/repos/101/settings/actions?task012=mobile-1786432279458",
+        "pathname": "/repos/101/settings/actions",
+        "title": "Actions · acme/backend-api · Woodpecker",
+        "viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "document": {
+          "client_width": 390,
+          "scroll_width": 390,
+          "page_level_horizontal_overflow": false
+        },
+        "page": {
+          "client_width": 379,
+          "scroll_width": 379,
+          "overflow_x": "auto"
+        },
+        "main": {
+          "client_width": 347,
+          "scroll_width": 347,
+          "overflow_x": "visible"
+        },
+        "target": {
+          "client_width": 345,
+          "scroll_width": 345,
+          "overflow_x": "hidden"
+        },
+        "local_scroll": null,
+        "target_count": 1,
+        "target_text": "Danger zone\n\nThese operations interrupt new pipeline activity or permanently remove repository data.\n\nDisable repository\n\nStop processing new webhooks while retaining existing repository history.\n\nDisable repository\nDelete repository\n\nPermanently remove the repository and its stored Woodpecker data.\n\nDelete repository",
+        "navigation_items": 7,
+        "raw_locale_keys": [],
+        "console_errors": [],
+        "network_errors": [],
+        "known_network_errors": [
+          {
+            "status": 404,
+            "url": "http://127.0.0.1:8010/assets/custom.js"
+          }
+        ]
+      }
+    }
+  },
+  "browser_stderr": {
+    "contains_page_console_output": false,
+    "line_count": 2
+  },
+  "scope_note": "Task 4.3 records populated manual-run and repository-settings evidence. Tasks 4.4 and 4.5 remain responsible for full repository-family regression and parity closure."
+}

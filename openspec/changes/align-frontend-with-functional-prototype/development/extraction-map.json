@@ -31,6 +31,16 @@
       "pattern": "repository branch and pull-request detail header, latest pipeline summary, and history",
       "destination": "web/src/components/repo/RepoPipelineReference.vue",
       "trigger": "both real detail routes require the same information hierarchy over different reference identifiers"
+    },
+    {
+      "pattern": "repository settings navigation, section framing, dense table containment, and maintenance or danger action rows",
+      "destination": "web/src/components/repo/settings",
+      "trigger": "manual-run and the seven repository setting routes share the approved settings hierarchy while retaining distinct data and mutation contracts"
+    },
+    {
+      "pattern": "repository status badge URL and URL, Markdown, or HTML embed formatting",
+      "destination": "web/src/lib/repoBadge.ts",
+      "trigger": "badge route rendering and focused tests require one deterministic encoding contract"
     }
   ],
   "forbidden_dependencies": [

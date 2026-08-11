@@ -48,8 +48,12 @@
   pull-request list/detail routes now use real Forge records plus exact loaded
   pipeline correlation, searchable/paginated responsive presentation, shared
   reference detail hierarchy, and owner-safe confirmed-row refresh behavior.
+- `012-repository-manual-run-settings` / baseline task `4.3`: manual-run and
+  seven repository settings routes now use current APIs and permissions with
+  responsive shared settings boundaries, repository lifecycle-owned mutations
+  and runs, confirmed-row pagination recovery, and current responsive evidence.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `4.3` through `8.4` remain incomplete.
+  Tasks `4.4` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -86,6 +90,10 @@
   `RepoPipelineReference.vue`, shared `pipelineRefs.ts`, focused lifecycle and
   correlation tests, locales, task-local Mock API/capture/verifier, and eight
   responsive browser states.
+- Repository manual-run/settings: `RepoManualPipeline.vue`, the settings
+  wrapper and seven settings routes, four shared presentation components,
+  `repoBadge.ts`, focused lifecycle/permission/state tests, locales, task-local
+  Mock API/capture/verifier, and ten responsive browser states.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -97,7 +105,8 @@
   `development/tasks/008-pipeline-regression-coverage/report.md`, and
   `development/tasks/009-pipeline-validation-evidence/report.md`,
   `development/tasks/010-repository-pipeline-list/report.md`, and
-  `development/tasks/011-repository-branches-pull-requests/report.md`.
+  `development/tasks/011-repository-branches-pull-requests/report.md`, and
+  `development/tasks/012-repository-manual-run-settings/report.md`.
 
 ## Requirements Covered
 
@@ -135,6 +144,10 @@
   `011`, including exact branch/PR correlation, explicit fallbacks, confirmed
   refresh continuity, active and obsolete request ownership, focused/full
   regressions, and desktop/390px populated-route evidence.
+- `A3` and `A4` were independently verified for repository manual-run/settings
+  slice `012`, including current branch/resource data, permission and mutation
+  boundaries, same-ID route lifecycle ownership, confirmed-row replacement
+  timing, focused/full regressions, and desktop/390px evidence.
 - `A1`, full route-family `A2`, and full-change `A3`/`A4` remain open until the
   remaining development and parity-matrix work is complete.
 
@@ -171,6 +184,10 @@
 - Repository lists use only current API/store data and loaded pipeline history.
   Unsupported server totals, branch protection/comparison, PR review/diff
   metadata, and Forge mutations are not invented.
+- Repository manual-run/settings use current repository fields, branch and
+  resource APIs, permissions, mutations, and route outcomes. Prototype-only
+  audit, history, cache, export, archive, verification, marketplace, or
+  inferred metadata is not invented.
 
 ## Components Created / Reused / Extracted
 
@@ -197,6 +214,9 @@
   `web/src/components/repo/RepoPipelineReference.vue` centralizes the shared
   branch/PR detail hierarchy, while `web/src/lib/pipelineRefs.ts` centralizes
   production PR event/ref normalization.
+- Created/extracted for repository settings: presentation-only
+  `RepoSettingsNav`, `RepoSettingsSection`, `RepoSettingsTable`, and
+  `RepoSettingsActionRow`, plus the pure typed `repoBadge.ts` formatter.
 - No additional generic list abstraction was added: branch `string[]` and PR
   `{ index, title }[]` remain distinct typed route contracts.
 
@@ -210,6 +230,8 @@
   permission, persistence, migration, or dependency contract changed.
 - Slice `011` adds no API, store, router, permission, backend, mutation,
   persistence, migration, or dependency contract.
+- Slice `012` adds no API, store, router, permission, backend, persistence,
+  migration, dependency, or approved-prototype contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -246,7 +268,12 @@
   summaries, loaded search/pagination, synchronous-clear refresh continuity,
   disabled actions, active success/rejection, repository reset, and obsolete
   fulfill/reject ownership.
-- The current full frontend regression baseline is 35 test files and 211 tests.
+- Repository manual-run/settings tests cover branch paging and variables,
+  permission changes, loading/error/empty states, inherited-resource
+  precedence, same-ID lifecycle races, mutation/run side effects, confirmed-row
+  refresh recovery, page-two replacement timing, badge formatting, actions,
+  extensions, and local mobile table containment.
+- The current full frontend regression baseline is 49 test files and 286 tests.
 
 ## Local Validation
 
@@ -256,7 +283,8 @@
 - PASS: pipeline-phase complete frontend baseline, 28 files and 175 tests.
 - PASS: repository pipeline-list focused suite, 3 files and 13 tests.
 - PASS: repository reference focused suite, 6 files and 27 tests.
-- PASS: current complete frontend suite, 35 files and 211 tests.
+- PASS: repository manual-run/settings focused suite, 14 files and 75 tests.
+- PASS: current complete frontend suite, 49 files and 286 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -279,11 +307,15 @@
 - PASS: repository pipeline-list four-state and repository reference eight-state
   desktop/mobile capture plus independent checksum/route/content/overflow
   verification.
+- PASS: repository manual-run/settings ten-state desktop/mobile capture plus
+  independent checksum/route/content/permission/overflow verification,
+  including mobile Secrets `390/390` document containment and `821/345` local
+  scrolling.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twenty-one baseline tasks remain incomplete across repository,
+- Twenty baseline tasks remain incomplete across repository,
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.
@@ -315,7 +347,7 @@
 ## Items Requiring Six-Domain Verification
 
 - Do not begin final six-domain verification yet.
-- After tasks `4.3` through `8.1` are complete, verify all 67 parity-matrix
+- After tasks `4.4` through `8.1` are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

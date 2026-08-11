@@ -691,6 +691,116 @@
       },
       "settings": "设置"
     },
+    "settings_surface": {
+      "navigation_label": "仓库设置",
+      "retry": "重试",
+      "inherited": "继承",
+      "read_only": "只读",
+      "editable": "可编辑",
+      "loaded_count": "已加载 {count} 项",
+      "columns": {
+        "scope": "作用域",
+        "access": "访问方式",
+        "actions": "操作"
+      },
+      "scope": {
+        "repo": "仓库",
+        "org": "组织",
+        "global": "全局"
+      },
+      "manual": {
+        "description": "选择真实仓库分支，添加可选变量，并通过现有手动流水线流程触发执行。",
+        "loading_title": "正在加载分支",
+        "loading_description": "正在从关联 Forge 读取全部可用分支页。",
+        "error_title": "无法加载分支",
+        "error_fallback": "分支请求失败。",
+        "empty_title": "没有可用分支",
+        "empty_description": "关联 Forge 没有返回可供选择的分支。",
+        "confirmation_hint": "服务器验证工作流并创建流水线后才会跳转。",
+        "summary_title": "运行摘要",
+        "summary_description": "将发送给现有流水线接口的当前值。",
+        "repository": "仓库",
+        "default_branch": "默认分支",
+        "available_branches": "可用分支",
+        "variables_count": "变量",
+        "server_authority_title": "服务器确认执行",
+        "server_authority_description": "现有流水线接口确认前，界面不会展示成功运行。"
+      },
+      "general": {
+        "description": "配置仓库支持的触发、执行策略、可见性、审批与信任控制。",
+        "loading_title": "正在准备仓库设置",
+        "loading_description": "正在读取仓库当前确认值。",
+        "pipeline_behavior_title": "流水线行为",
+        "pipeline_behavior_description": "控制支持的触发、部署访问、可见性和审批要求。",
+        "execution_title": "执行策略",
+        "execution_description": "使用现有仓库字段配置超时、流水线路径和取消行为。",
+        "trust_title": "信任与凭据",
+        "trust_description": "限制克隆凭据和仅管理员可配置的流水线特权能力。"
+      },
+      "secrets": {
+        "form_description": "使用现有 Secret 合同创建或更新仓库级 Secret。",
+        "loading_title": "正在加载 Secrets",
+        "loading_description": "正在合并仓库、组织和全局 Secret 分页结果。",
+        "error_title": "无法加载 Secrets",
+        "error_fallback": "Secret 请求失败。",
+        "empty_description": "为此流水线作用域创建第一个仓库 Secret。"
+      },
+      "registries": {
+        "form_description": "创建、查看或更新仓库级镜像仓库凭据。",
+        "loading_title": "正在加载镜像仓库",
+        "loading_description": "正在合并仓库、组织和全局镜像仓库分页结果。",
+        "error_title": "无法加载镜像仓库",
+        "error_fallback": "镜像仓库请求失败。",
+        "empty_description": "添加此仓库可用的第一个镜像仓库凭据。"
+      },
+      "crons": {
+        "form_description": "配置现有计划任务的名称、分支、时区、表达式、变量和启用状态。",
+        "loading_title": "正在加载定时流水线",
+        "loading_description": "正在读取当前仓库计划任务分页结果。",
+        "error_title": "无法加载定时流水线",
+        "error_fallback": "定时流水线请求失败。",
+        "empty_description": "创建计划任务以自动触发此仓库。",
+        "next_execution": "下次执行"
+      },
+      "badge": {
+        "description": "生成现有状态徽章 URL，或可嵌入的 Markdown、HTML 内容。",
+        "loading_title": "正在加载徽章分支",
+        "loading_description": "正在读取徽章目标分支名称。",
+        "error_title": "无法加载徽章分支",
+        "error_fallback": "徽章分支请求失败。",
+        "empty_title": "没有可用的徽章分支",
+        "empty_description": "仓库未返回可用于状态徽章的分支。",
+        "configuration_title": "徽章配置",
+        "embed_code": "嵌入代码",
+        "embed_description": "输出会随当前分支、事件、工作流、步骤和语法选择更新。",
+        "preview_title": "预览",
+        "preview_description": "当前选择对应的服务器实时状态徽章。",
+        "preview_alt": "仓库流水线状态徽章",
+        "preview_branch": "分支",
+        "preview_events": "事件"
+      },
+      "actions": {
+        "description": "执行现有仓库维护、启用、禁用和删除操作。",
+        "active": "已启用",
+        "inactive": "未启用",
+        "maintenance_title": "维护操作",
+        "maintenance_description": "由服务器确认的仓库修复和重新启用操作。",
+        "repair_description": "与 Forge 重新同步仓库元数据、权限、分支和 Webhook 状态。",
+        "enable_description": "为未启用仓库恢复 Webhook 处理和流水线执行。",
+        "danger_title": "危险区域",
+        "danger_description": "这些操作会中断新的流水线活动或永久删除仓库数据。",
+        "disable_description": "停止处理新的 Webhook，同时保留现有仓库历史。",
+        "delete_description": "永久删除仓库及其存储在 Woodpecker 中的数据。"
+      },
+      "extensions": {
+        "signature_loading_title": "正在加载签名公钥",
+        "signature_error_title": "无法加载签名公钥",
+        "signature_error_fallback": "签名公钥请求失败。",
+        "config_description": "将流水线配置解析委托给受支持的 HTTP 端点。",
+        "registry_description": "将镜像仓库凭据解析委托给受支持的 HTTP 端点。",
+        "secret_description": "将 Secret 解析委托给受支持的 HTTP 端点。"
+      }
+    },
     "user_none": "该组织/用户尚无项目",
     "visibility": {
       "visibility": "项目可见性",

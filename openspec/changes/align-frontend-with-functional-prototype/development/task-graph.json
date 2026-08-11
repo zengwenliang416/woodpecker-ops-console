@@ -262,6 +262,47 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "012-repository-manual-run-settings",
+      "baseline_task_id": "4.3",
+      "goal": "Repository operators can manually trigger a real pipeline and administer the existing repository settings surfaces through a dense, responsive information hierarchy without invented metadata, mutations, or server capabilities.",
+      "depends_on": [
+        "4.2"
+      ],
+      "allowed_files": [
+        "web/src/views/repo/RepoManualPipeline.vue",
+        "web/src/views/repo/RepoManualPipeline.test.ts",
+        "web/src/views/repo/settings/RepoSettings.vue",
+        "web/src/views/repo/settings/RepoSettings.test.ts",
+        "web/src/views/repo/settings/General.vue",
+        "web/src/views/repo/settings/General.test.ts",
+        "web/src/views/repo/settings/Secrets.vue",
+        "web/src/views/repo/settings/Secrets.test.ts",
+        "web/src/views/repo/settings/Registries.vue",
+        "web/src/views/repo/settings/Registries.test.ts",
+        "web/src/views/repo/settings/Crons.vue",
+        "web/src/views/repo/settings/Crons.test.ts",
+        "web/src/views/repo/settings/Badge.vue",
+        "web/src/views/repo/settings/Badge.test.ts",
+        "web/src/views/repo/settings/Actions.vue",
+        "web/src/views/repo/settings/Actions.test.ts",
+        "web/src/views/repo/settings/Extensions.vue",
+        "web/src/views/repo/settings/Extensions.test.ts",
+        "web/src/components/repo/settings/RepoSettingsNav.vue",
+        "web/src/components/repo/settings/RepoSettingsNav.test.ts",
+        "web/src/components/repo/settings/RepoSettingsSection.vue",
+        "web/src/components/repo/settings/RepoSettingsSection.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/components/repo/settings/RepoSettingsActionRow.vue",
+        "web/src/components/repo/settings/RepoSettingsActionRow.test.ts",
+        "web/src/lib/repoBadge.ts",
+        "web/src/lib/repoBadge.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "in_progress"
     }
   ]
 }

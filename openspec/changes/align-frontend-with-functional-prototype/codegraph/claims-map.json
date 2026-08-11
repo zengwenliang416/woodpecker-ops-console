@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-10T15:05:27.705Z",
+  "generated_at": "2026-08-11T07:37:41.731Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -372,6 +372,61 @@
       ],
       "query_ids": [
         "development:task-011-repository-branches-pull-requests:evidence"
+      ]
+    },
+    {
+      "id": "development:task-012-repository-manual-run-settings",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "012-repository-manual-run-settings",
+      "text": "Enter the manual-run or repository-settings routes, pass the existing",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/context.json"
+      ],
+      "expected_evidence": [
+        "Focused component, route, and pure-function tests proving manual-run loading/validation/submission, admin navigation, supported settings rendering, inherited-resource boundaries, cron actions, badge formatting, destructive pending state, and extension submission.",
+        "Full frontend Vitest plus targeted Prettier, ESLint, TypeScript, Vite build, and git diff receipts.",
+        "Current desktop and 390px browser evidence for manual-run, general settings, resource table, badge, and danger-region states without page-level horizontal overflow.",
+        "Evidence-bearing task report plus independent spec and quality reviews for baseline task 4.3."
+      ],
+      "allowed_files": [
+        "web/src/views/repo/RepoManualPipeline.vue",
+        "web/src/views/repo/RepoManualPipeline.test.ts",
+        "web/src/views/repo/settings/RepoSettings.vue",
+        "web/src/views/repo/settings/RepoSettings.test.ts",
+        "web/src/views/repo/settings/General.vue",
+        "web/src/views/repo/settings/General.test.ts",
+        "web/src/views/repo/settings/Secrets.vue",
+        "web/src/views/repo/settings/Secrets.test.ts",
+        "web/src/views/repo/settings/Registries.vue",
+        "web/src/views/repo/settings/Registries.test.ts",
+        "web/src/views/repo/settings/Crons.vue",
+        "web/src/views/repo/settings/Crons.test.ts",
+        "web/src/views/repo/settings/Badge.vue",
+        "web/src/views/repo/settings/Badge.test.ts",
+        "web/src/views/repo/settings/Actions.vue",
+        "web/src/views/repo/settings/Actions.test.ts",
+        "web/src/views/repo/settings/Extensions.vue",
+        "web/src/views/repo/settings/Extensions.test.ts",
+        "web/src/components/repo/settings/RepoSettingsNav.vue",
+        "web/src/components/repo/settings/RepoSettingsNav.test.ts",
+        "web/src/components/repo/settings/RepoSettingsSection.vue",
+        "web/src/components/repo/settings/RepoSettingsSection.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/components/repo/settings/RepoSettingsActionRow.vue",
+        "web/src/components/repo/settings/RepoSettingsActionRow.test.ts",
+        "web/src/lib/repoBadge.ts",
+        "web/src/lib/repoBadge.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/evidence/**"
+      ],
+      "query_ids": [
+        "development:task-012-repository-manual-run-settings:evidence"
       ]
     }
   ]
