@@ -1,41 +1,89 @@
 <template>
-  <Settings :title="$t('admin.settings.agents.agents')" :description>
-    <template #headerActions>
+  <div class="agent-settings-page">
+    <header class="agent-settings-page-header">
+      <div class="min-w-0">
+        <h1>{{ $t('admin.settings.agents.agents') }}</h1>
+        <p>{{ description }}</p>
+      </div>
       <Button
         v-if="selectedAgent"
         :text="$t('admin.settings.agents.show')"
         start-icon="back"
         @click="selectedAgent = undefined"
       />
-      <Button v-else :text="$t('admin.settings.agents.add')" start-icon="plus" @click="showAddAgent" />
-    </template>
+      <Button v-else color="green" :text="$t('admin.settings.agents.add')" start-icon="plus" @click="showAddAgent" />
+    </header>
 
-    <AgentList
-      v-if="!selectedAgent"
-      :loading="loading"
-      :agents="agents"
-      :is-deleting="isDeleting"
-      :is-admin="isAdmin"
-      @edit="editAgent"
-      @delete="deleteAgent"
-    />
-    <AgentForm
-      v-else
-      v-model="selectedAgent"
-      :is-editing-agent="isEditingAgent"
-      :is-saving="isSaving"
-      @save="saveAgent"
-      @cancel="selectedAgent = undefined"
-    />
-  </Settings>
+    <SettingsSection
+      v-if="selectedAgent"
+      :title="isEditingAgent ? $t('admin.settings.agents.edit_agent') : $t('admin.settings.agents.add')"
+      :description="description"
+    >
+      <AgentForm
+        v-model="selectedAgent"
+        :is-editing-agent="isEditingAgent"
+        :is-saving="isSaving"
+        @save="saveAgent"
+        @cancel="selectedAgent = undefined"
+      />
+    </SettingsSection>
+
+    <template v-else>
+      <FeedbackState
+        v-if="loadError"
+        compact
+        kind="error"
+        :title="$t('admin.settings.agents.agents')"
+        :description="loadError"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('admin.settings.agents.retry')" @click="reloadAgents" />
+        </template>
+      </FeedbackState>
+
+      <FeedbackState
+        v-if="loading && displayedAgents.length === 0"
+        kind="loading"
+        :title="$t('admin.settings.agents.agents')"
+        :description="description"
+      />
+
+      <FeedbackState
+        v-else-if="!loadError && displayedAgents.length === 0"
+        kind="empty"
+        :title="$t('admin.settings.agents.none')"
+        :description="description"
+      >
+        <template #action>
+          <Button start-icon="plus" :text="$t('admin.settings.agents.add')" @click="showAddAgent" />
+        </template>
+      </FeedbackState>
+
+      <SettingsSection
+        v-else-if="displayedAgents.length > 0"
+        :title="$t('admin.settings.agents.agents')"
+        :description="description"
+      >
+        <AgentList
+          :loading="false"
+          :agents="displayedAgents"
+          :is-deleting="isDeleting"
+          :is-admin="isAdmin"
+          @edit="editAgent"
+          @delete="deleteAgent"
+        />
+      </SettingsSection>
+    </template>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
-import Settings from '~/components/layout/Settings.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
+import SettingsSection from '~/components/settings/SettingsSection.vue';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import useNotifications from '~/compositions/useNotifications';
 import { usePagination } from '~/compositions/usePaginate';
@@ -52,6 +100,8 @@ const props = defineProps<{
   updateAgent: (agent: Agent) => Promise<Agent | void>;
   deleteAgent: (agent: Agent) => Promise<unknown>;
   isAdmin?: boolean;
+  ownerKey?: string | number;
+  ownerLifecycle?: () => string | number | undefined;
 }>();
 
 const notifications = useNotifications();
@@ -59,36 +109,141 @@ const { t } = useI18n();
 
 const selectedAgent = ref<Partial<Agent>>();
 const isEditingAgent = computed(() => !!selectedAgent.value?.id);
+const loadError = ref('');
+const confirmedAgents = ref<Agent[] | null>(null);
+let reloadGeneration = 0;
+let ownerLifecycleGeneration = 0;
 
-const { resetPage, data: agents, loading } = usePagination(props.loadAgents);
+interface MutationOwnership {
+  owner: string | number | undefined;
+  ownerLifecycleKey: string | number | undefined;
+  generation: number;
+}
+
+let saveOwnership: MutationOwnership | undefined;
+let deleteOwnership: MutationOwnership | undefined;
+
+function currentOwnership(): MutationOwnership {
+  return {
+    owner: props.ownerKey,
+    ownerLifecycleKey: props.ownerLifecycle?.(),
+    generation: ownerLifecycleGeneration,
+  };
+}
+
+function ownsCurrentLifecycle(ownership: MutationOwnership | undefined) {
+  if (!ownership) {
+    return false;
+  }
+  return (
+    ownership.owner === props.ownerKey &&
+    ownership.ownerLifecycleKey === props.ownerLifecycle?.() &&
+    ownership.generation === ownerLifecycleGeneration
+  );
+}
+
+function notifyMutationError(error: unknown) {
+  notifications.notify({
+    title: error instanceof Error ? error.message : t('admin.settings.agents.mutation_error_fallback'),
+    type: 'error',
+  });
+}
+
+async function loadAgents(page: number) {
+  const requestGeneration = reloadGeneration;
+  const requestOwner = props.ownerKey;
+  const requestOwnerLifecycleKey = props.ownerLifecycle?.();
+  try {
+    return await props.loadAgents(page);
+  } catch (error) {
+    if (
+      requestGeneration === reloadGeneration &&
+      requestOwner === props.ownerKey &&
+      requestOwnerLifecycleKey === props.ownerLifecycle?.()
+    ) {
+      loadError.value = error instanceof Error ? error.message : t('admin.settings.agents.error_fallback');
+    }
+    return [];
+  }
+}
+
+const { resetPage, data: agents, loading } = usePagination(loadAgents);
+const displayedAgents = computed(() => confirmedAgents.value ?? agents.value);
+
+watch(
+  [agents, loading, loadError],
+  ([rows, isLoading, error]) => {
+    if (!isLoading && !error) {
+      confirmedAgents.value = [...rows];
+    }
+  },
+  { deep: true },
+);
+
+async function reloadAgents() {
+  reloadGeneration += 1;
+  loadError.value = '';
+  await resetPage();
+}
 
 const { doSubmit: saveAgent, isLoading: isSaving } = useAsyncAction(async () => {
   if (!selectedAgent.value) {
     throw new Error("Unexpected: Can't get agent");
   }
 
-  if (isEditingAgent.value) {
-    await props.updateAgent(selectedAgent.value as Agent);
+  saveOwnership = currentOwnership();
+  const editing = isEditingAgent.value;
+  try {
+    if (editing) {
+      await props.updateAgent(selectedAgent.value as Agent);
+    } else {
+      const createdAgent = await props.createAgent(selectedAgent.value);
+      if (!ownsCurrentLifecycle(saveOwnership)) {
+        return;
+      }
+      selectedAgent.value = createdAgent;
+    }
+  } catch (error) {
+    if (ownsCurrentLifecycle(saveOwnership)) {
+      notifyMutationError(error);
+    }
+    return;
+  }
+  if (!ownsCurrentLifecycle(saveOwnership)) {
+    return;
+  }
+
+  if (editing) {
     selectedAgent.value = undefined;
-  } else {
-    selectedAgent.value = await props.createAgent(selectedAgent.value);
   }
   notifications.notify({
-    title: isEditingAgent.value ? t('admin.settings.agents.saved') : t('admin.settings.agents.created'),
+    title: editing ? t('admin.settings.agents.saved') : t('admin.settings.agents.created'),
     type: 'success',
   });
-  await resetPage();
+  await reloadAgents();
 });
 
-const { doSubmit: deleteAgent, isLoading: isDeleting } = useAsyncAction(async (_agent: Agent) => {
+const { doSubmit: deleteAgent, isLoading: isDeleting } = useAsyncAction(async (agent: Agent) => {
   // eslint-disable-next-line no-alert
   if (!confirm(t('admin.settings.agents.delete_confirm'))) {
     return;
   }
 
-  await props.deleteAgent(_agent);
+  deleteOwnership = currentOwnership();
+  try {
+    await props.deleteAgent(agent);
+  } catch (error) {
+    if (ownsCurrentLifecycle(deleteOwnership)) {
+      notifyMutationError(error);
+    }
+    return;
+  }
+  if (!ownsCurrentLifecycle(deleteOwnership)) {
+    return;
+  }
+
   notifications.notify({ title: t('admin.settings.agents.deleted'), type: 'success' });
-  await resetPage();
+  await reloadAgents();
 });
 
 function editAgent(agent: Agent) {
@@ -98,4 +253,36 @@ function editAgent(agent: Agent) {
 function showAddAgent() {
   selectedAgent.value = { name: '' };
 }
+
+watch(
+  () => props.ownerKey,
+  () => {
+    ownerLifecycleGeneration += 1;
+    reloadGeneration += 1;
+    selectedAgent.value = undefined;
+    loadError.value = '';
+    confirmedAgents.value = null;
+    void resetPage();
+  },
+);
 </script>
+
+<style scoped>
+@reference '~/tailwind.css';
+
+.agent-settings-page {
+  @apply flex min-w-0 flex-col gap-4;
+}
+
+.agent-settings-page-header {
+  @apply flex min-w-0 flex-col gap-3 sm:flex-row sm:items-start sm:justify-between;
+}
+
+.agent-settings-page-header h1 {
+  @apply text-wp-text-200 text-lg font-bold;
+}
+
+.agent-settings-page-header p {
+  @apply text-wp-text-alt-100 mt-1 max-w-2xl text-xs leading-5;
+}
+</style>

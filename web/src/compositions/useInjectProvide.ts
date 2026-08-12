@@ -10,6 +10,7 @@ export interface InjectKeys {
   'repo-permissions': Ref<RepoPermissions>;
   org: Ref<Org>;
   'org-permissions': Ref<OrgPermissions>;
+  'org-lifecycle': Ref<number>;
   pipeline: Ref<Pipeline>;
   'pipeline-configs': Ref<PipelineConfig[] | undefined>;
   tabs: Ref<Tab[]>;

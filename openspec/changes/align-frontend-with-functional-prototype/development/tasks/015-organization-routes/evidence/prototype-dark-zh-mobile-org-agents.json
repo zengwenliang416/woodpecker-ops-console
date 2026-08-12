@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Acme Corp 设置 管理组织级共享资源。 组织 Secrets 组织镜像仓库 组织 Agents 组织 Agents 限制哪些 Agent 可以执行该组织的任务。 绑定 Agent agent-us-east-1a-01 linux x64 docker Docker agent-us-east-1a-02 linux arm64 k8s Kubernetes agent-us-east-1b-01 linux x64 gpu Docker agent-eu-west-1a-01 linux x64 k8s Kubernetes agent-eu-west-1a-02 linux arm64 spot Kubernetes",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Acme Corp 设置 管理组织级共享资源。 组织 Secrets 组织镜像仓库 组织 Agents 组织 Agents 限制哪些 Agent 可以执行该组织的任务。 绑定 Agent agent-us-east-1a-01 linux x64 docker Docker agent-us-east-1a-02 linux arm64 k8s Kubernetes agent-us-east-1b-01 linux x64 gpu Docker agent-eu-west-1a-01 linux x64 k8s Kubernetes agent-eu-west-1a-02 linux arm64 spot Kubernetes",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "f5452fe5-ef9d-4b00-9126-20404e946858",
+  "stateId": "prototype-dark-zh-mobile-org-agents",
+  "row": 27,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Agent/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

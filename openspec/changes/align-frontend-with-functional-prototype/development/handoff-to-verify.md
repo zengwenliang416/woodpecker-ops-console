@@ -60,8 +60,13 @@
   `3` and `5-23` passed current production-versus-approved-prototype replay
   across required desktop/mobile states; row `4` is explicitly blocked by the
   measured production activation list versus prototype four-step add wizard.
+- `015-organization-routes` / baseline task `5.1`: organization members now
+  browse real organization repositories with explicit states, while
+  administrators manage real Secrets, Registries, and feature-gated Agents
+  through a responsive shared settings hierarchy with active organization
+  lifecycle ownership and representative rows `24-27` desktop/390px evidence.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `5.1` through `8.4` remain incomplete.
+  Tasks `5.2` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -322,7 +327,14 @@
   suite and adds task-local Mock API smoke plus strict verification for exact
   inventory, run identity, protected trees, routes, content, permissions,
   browser health, warning classification, overflow, and checksums.
-- The current full frontend regression baseline is 50 test files and 314 tests.
+- Organization route tests cover current named/inbound destinations,
+  organization and permission ownership, repository filtering/search and
+  explicit states, responsive settings navigation, Agent feature disablement,
+  Registry precedence, create/update/delete lifecycle ownership, active
+  mutation failures, obsolete fulfilled/rejected completions, confirmed-row
+  recovery, shared repository-store overlap, shared component containment, and
+  current-organization back behavior.
+- The current full frontend regression baseline is 59 test files and 351 tests.
 
 ## Local Validation
 
@@ -336,7 +348,10 @@
 - PASS: repository regression focused suite, 9 files and 63 tests.
 - PASS: repository regression supporting suite, 22 files and 118 tests.
 - PASS: repository validation focused suite, 32 files and 214 tests.
-- PASS: current complete frontend suite, 50 files and 314 tests.
+- PASS: organization route focused suite, 13 files and 44 tests.
+- PASS: supporting repository settings suite after shared component promotion,
+  8 files and 62 tests.
+- PASS: current complete frontend suite, 59 files and 351 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -368,11 +383,18 @@
   one shared run ID, exact inventory, protected-tree identity, atomic summary
   and manifest replacement, zero page-overflow/raw-key/browser-error states,
   and verified checksums.
+- PASS: organization task replay for exactly `16` final-run states
+  (`8` production and `8` approved prototype) under run
+  `f5452fe5-ef9d-4b00-9126-20404e946858`, covering rows `24-27` in dark
+  Simplified Chinese at `1600x1000` and `390x844`, exact terminal routes,
+  expected content, exact JSON/PNG state inventory and row/surface/viewport
+  mapping, zero page overflow/raw locale keys/browser errors, and local mobile
+  settings-table containment.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Eighteen baseline tasks remain incomplete across
+- Seventeen baseline tasks remain incomplete across
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.

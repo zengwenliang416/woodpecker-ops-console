@@ -103,7 +103,7 @@ import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import InputField from '~/components/form/InputField.vue';
 import KeyValueEditor from '~/components/form/KeyValueEditor.vue';
 import SelectField from '~/components/form/SelectField.vue';
-import RepoSettingsSection from '~/components/repo/settings/RepoSettingsSection.vue';
+import RepoSettingsSection from '~/components/settings/SettingsSection.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import { requiredInject } from '~/compositions/useInjectProvide';

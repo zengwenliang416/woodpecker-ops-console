@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 组织 Acme Corp 组织仓库、成员与共享资源。 邀请成员 组织设置 仓库 128 活跃成员 42 成功率 98.7% 月度流水线 1,842 全部团队 Platform Backend Frontend 仓库 团队 状态 成功率 最近运行 acme/backend-api Backend API service with Go and PostgreSQL Platform 成功 96.3% 2 分钟前 acme/web-frontend Customer-facing Vue application Frontend 成功 97.1% 5 分钟前 acme/worker-service Asynchronous job processing service Backend 失败 88.9% 12 分钟前 acme/mobile-app Cross-platform mobile application Mobile 成功 94% 18 分钟前 acme/infrastructure Infrastructure as code and cluster configuration DevOps 警告 91.2% 24 分钟前 acme/data-pipeline Batch and streaming data processing jobs Data 成功 95.3% 31 分钟前 acme/auth-service Authentication and authorization service Platform 运行中 86.7% 1 分钟前 acme/marketing-site Public website and documentation landing pages Marketing 成功 99.2% 1 小时前 显示 1 至 8 项，共 8 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 组织 Acme Corp 组织仓库、成员与共享资源。 邀请成员 组织设置 仓库 128 活跃成员 42 成功率 98.7% 月度流水线 1,842 全部团队 Platform Backend Frontend 仓库 团队 状态 成功率 最近运行 acme/backend-api Backend API service with Go and PostgreSQL Platform 成功 96.3% 2 分钟前 acme/web-frontend Customer-facing Vue application Frontend 成功 97.1% 5 分钟前 acme/worker-service Asynchronous job processing service Backend 失败 88.9% 12 分钟前 acme/mobile-app Cross-platform mobile application Mobile 成功 94% 18 分钟前 acme/infrastructure Infrastructure as code and cluster configuration DevOps 警告 91.2% 24 分钟前 acme/data-pipeline Batch and streaming data processing jobs Data 成功 95.3% 31 分钟前 acme/auth-service Authentication and authorization service Platform 运行中 86.7% 1 分钟前 acme/marketing-site Public website and documentation landing pages Marketing 成功 99.2% 1 小时前 显示 1 至 8 项，共 8 项 1 2 3",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "f5452fe5-ef9d-4b00-9126-20404e946858",
+  "stateId": "prototype-dark-zh-mobile-org-overview",
+  "row": 24,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/acme/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

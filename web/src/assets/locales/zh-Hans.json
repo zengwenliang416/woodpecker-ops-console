@@ -18,6 +18,9 @@
         "delete_confirm": "你真的要删除该 Agent 吗？删除后它将无法再次连接到此服务器。",
         "deleted": "已删除代理",
         "desc": "注册到此服务器的代理。",
+        "error_fallback": "Agent 请求失败。",
+        "mutation_error_fallback": "Agent 变更失败。",
+        "retry": "重试",
         "edit_agent": "编辑 Agent",
         "id": "ID",
         "last_contact": {
@@ -166,6 +169,25 @@
     "not_found": "啊，404，我们搞砸了什么，或者您拼错了什么词 :-/"
   },
   "org": {
+    "surface": {
+      "loading_title": "正在加载组织",
+      "loading_description": "正在加载组织及您当前的访问权限。",
+      "error_title": "组织不可用",
+      "error_fallback": "组织请求失败。",
+      "retry": "重试",
+      "repositories_title": "组织仓库",
+      "repositories_description": "属于此组织且当前账号可见的仓库。",
+      "search_placeholder": "搜索组织仓库",
+      "repositories_loading_title": "正在加载仓库",
+      "repositories_loading_description": "正在加载当前账号可见的仓库。",
+      "repositories_error_title": "仓库不可用",
+      "repositories_error_fallback": "仓库请求失败。",
+      "repositories_empty_description": "当前账号看不到此组织下的仓库。",
+      "repositories_no_match_title": "没有匹配的仓库",
+      "repositories_no_match_description": "请修改或清除搜索条件。",
+      "repositories_loaded_count": "已加载 {count} 个仓库",
+      "open_repository": "打开 {repo}"
+    },
     "settings": {
       "not_allowed": "你没有访问组织设置的权限",
       "secrets": {
@@ -196,6 +218,27 @@
       },
       "registries": {
         "desc": "可以为组织添加注册表凭据，以便在所有流水线中使用私有镜像。"
+      },
+      "surface": {
+        "navigation_label": "组织设置",
+        "breadcrumb_separator": "/",
+        "loaded_count": "已加载 {count} 项资源",
+        "secrets_form_description": "使用现有 Secret 合同创建或更新组织密钥。",
+        "secrets_loading_title": "正在加载组织密钥",
+        "secrets_loading_description": "正在加载此组织的密钥分页数据。",
+        "secrets_error_title": "组织密钥不可用",
+        "secrets_error_fallback": "组织密钥请求失败。",
+        "secrets_mutation_error_fallback": "组织密钥变更失败。",
+        "secrets_empty_description": "创建第一个可供组织仓库使用的密钥。",
+        "registries_form_description": "创建或更新组织拥有的镜像仓库凭据。",
+        "registries_loading_title": "正在加载镜像仓库凭据",
+        "registries_loading_description": "正在合并组织和继承的全局凭据分页数据。",
+        "registries_error_title": "镜像仓库凭据不可用",
+        "registries_error_fallback": "组织镜像仓库请求失败。",
+        "registries_mutation_error_fallback": "组织镜像仓库变更失败。",
+        "registries_empty_description": "添加第一个可供此组织使用的镜像仓库凭据。",
+        "agents_disabled_title": "组织 Agent 已禁用",
+        "agents_disabled_description": "当前服务端不允许用户注册组织 Agent。"
       }
     }
   },

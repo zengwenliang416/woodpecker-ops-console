@@ -32,7 +32,7 @@
       "id": "phase-5",
       "task_ids": ["5.1", "5.2", "5.3", "5.4", "5.5"],
       "depends_on": ["phase-2"],
-      "status": "planned"
+      "status": "in_progress"
     },
     {
       "id": "phase-6",
@@ -162,9 +162,7 @@
       "packet_id": "007-pipeline-log-diagnostics",
       "baseline_task_id": "3.3",
       "goal": "Align the real pipeline log, changed-files, configuration, error, and debug surfaces with shared responsive diagnostic patterns without changing routes, APIs, permissions, or inventing prototype-only data.",
-      "depends_on": [
-        "3.2"
-      ],
+      "depends_on": ["3.2"],
       "allowed_files": [
         "web/src/components/repo/pipeline/PipelineLog.vue",
         "web/src/components/repo/pipeline/PipelineLog.test.ts",
@@ -186,9 +184,7 @@
       "packet_id": "008-pipeline-regression-coverage",
       "baseline_task_id": "3.4",
       "goal": "Protect the completed pipeline detail route family with focused component and router regressions for current routes, status/cancellation variants, permissions, actions, tabs, empty/error states, and responsive containment.",
-      "depends_on": [
-        "3.3"
-      ],
+      "depends_on": ["3.3"],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/views/repo/pipeline/PipelineWrapper.vue",
@@ -206,9 +202,7 @@
       "packet_id": "009-pipeline-validation-evidence",
       "baseline_task_id": "3.5",
       "goal": "Validate the completed pipeline detail route family and capture equivalent-state desktop/mobile, dark/representative-light, locale, and permission evidence against the approved prototype.",
-      "depends_on": [
-        "3.4"
-      ],
+      "depends_on": ["3.4"],
       "allowed_files": [
         "web/src/router.test.ts",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
@@ -224,9 +218,7 @@
       "packet_id": "010-repository-pipeline-list",
       "baseline_task_id": "4.1",
       "goal": "Users can scan, filter, paginate, open, and deploy eligible pipelines from the repository activity page using real repository data and permissions.",
-      "depends_on": [
-        "3.5"
-      ],
+      "depends_on": ["3.5"],
       "allowed_files": [
         "web/src/views/repo/RepoPipelines.vue",
         "web/src/views/repo/RepoPipelines.test.ts",
@@ -241,9 +233,7 @@
       "packet_id": "011-repository-branches-pull-requests",
       "baseline_task_id": "4.2",
       "goal": "Users can search, page, refresh, and open repository branches and pull requests, then inspect their real pipeline history without unsupported Forge metadata or mutations.",
-      "depends_on": [
-        "4.1"
-      ],
+      "depends_on": ["4.1"],
       "allowed_files": [
         "web/src/views/repo/RepoBranches.vue",
         "web/src/views/repo/RepoBranches.test.ts",
@@ -267,9 +257,7 @@
       "packet_id": "012-repository-manual-run-settings",
       "baseline_task_id": "4.3",
       "goal": "Repository operators can manually trigger a real pipeline and administer the existing repository settings surfaces through a dense, responsive information hierarchy without invented metadata, mutations, or server capabilities.",
-      "depends_on": [
-        "4.2"
-      ],
+      "depends_on": ["4.2"],
       "allowed_files": [
         "web/src/views/repo/RepoManualPipeline.vue",
         "web/src/views/repo/RepoManualPipeline.test.ts",
@@ -308,9 +296,7 @@
       "packet_id": "013-repository-regression-coverage",
       "baseline_task_id": "4.4",
       "goal": "Protect the completed repository route family with named and inbound route resolution, shared wrapper permission and action boundaries, active-owner repository loading, theme-invariant controls, and structural 390px containment regressions.",
-      "depends_on": [
-        "4.3"
-      ],
+      "depends_on": ["4.3"],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/views/repo/RepoWrapper.vue",
@@ -335,9 +321,7 @@
       "packet_id": "014-repository-validation-evidence",
       "baseline_task_id": "4.5",
       "goal": "Verify every repository parity-matrix row at the current commit with equivalent-state production-versus-approved-prototype browser evidence and honest per-row outcomes.",
-      "depends_on": [
-        "4.4"
-      ],
+      "depends_on": ["4.4"],
       "allowed_files": [
         "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/**",
@@ -348,6 +332,43 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/drift-check.jsonl",
         "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md"
+      ],
+      "status": "complete"
+    },
+    {
+      "packet_id": "015-organization-routes",
+      "baseline_task_id": "5.1",
+      "goal": "Organization members can browse real organization repositories and administrators can manage existing organization Secrets, Registries, and Agents through a responsive prototype-aligned settings hierarchy with active lifecycle ownership.",
+      "depends_on": ["4.5"],
+      "allowed_files": [
+        "web/src/router.ts",
+        "web/src/router.test.ts",
+        "web/src/views/org/**",
+        "web/src/components/org/settings/**",
+        "web/src/components/settings/**",
+        "web/src/components/repo/settings/RepoSettingsSection.vue",
+        "web/src/components/repo/settings/RepoSettingsSection.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/components/repo/settings/RepoSettingsActionRow.vue",
+        "web/src/components/repo/settings/RepoSettingsActionRow.test.ts",
+        "web/src/views/repo/RepoManualPipeline.vue",
+        "web/src/views/repo/RepoManualPipeline.test.ts",
+        "web/src/views/repo/settings/General.vue",
+        "web/src/views/repo/settings/General.test.ts",
+        "web/src/views/repo/settings/Secrets.vue",
+        "web/src/views/repo/settings/Registries.vue",
+        "web/src/views/repo/settings/Crons.vue",
+        "web/src/views/repo/settings/Badge.vue",
+        "web/src/views/repo/settings/Actions.vue",
+        "web/src/views/repo/settings/Extensions.vue",
+        "web/src/components/agent/AgentManager.vue",
+        "web/src/components/agent/AgentManager.test.ts",
+        "web/src/compositions/useInjectProvide.ts",
+        "web/src/store/repos.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
     }

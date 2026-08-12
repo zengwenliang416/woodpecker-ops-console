@@ -83,8 +83,8 @@ import { useRouter } from 'vue-router';
 
 import Badge from '~/components/atomic/Badge.vue';
 import Button from '~/components/atomic/Button.vue';
-import RepoSettingsActionRow from '~/components/repo/settings/RepoSettingsActionRow.vue';
-import RepoSettingsSection from '~/components/repo/settings/RepoSettingsSection.vue';
+import RepoSettingsActionRow from '~/components/settings/SettingsActionRow.vue';
+import RepoSettingsSection from '~/components/settings/SettingsSection.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import { requiredInject } from '~/compositions/useInjectProvide';

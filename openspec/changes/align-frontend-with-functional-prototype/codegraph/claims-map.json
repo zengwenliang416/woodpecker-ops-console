@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-11T11:43:41.232Z",
+  "generated_at": "2026-08-12T06:51:19.384Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -502,6 +502,76 @@
       ],
       "query_ids": [
         "development:task-014-repository-validation-evidence:evidence"
+      ]
+    },
+    {
+      "id": "development:task-015-organization-routes",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "015-organization-routes",
+      "text": "Enter `/orgs/:orgId`, load the current organization and permissions, browse and",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/context.json"
+      ],
+      "expected_evidence": [
+        "Focused router and component tests covering the four organization destinations, settings redirect, admin/member and Agent feature gates, explicit loading/empty/no-match/error/retry states, CRUD and pagination, and 390px containment.",
+        "A -> B -> A deferred-response regressions proving organization, permission, list, save, and delete completions belong to the active organization lifecycle.",
+        "Supporting repository settings and AgentManager regressions proving shared component extraction preserves current consumers.",
+        "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, JSON/JSONL, SpecNav entry, diff checks, and task-local desktop/mobile browser evidence.",
+        "Evidence-bearing task report and independent spec/quality reviews that keep baseline task 5.5 and full A2 verification open."
+      ],
+      "allowed_files": [
+        "web/src/router.ts",
+        "web/src/router.test.ts",
+        "web/src/views/org/OrgWrapper.vue",
+        "web/src/views/org/OrgWrapper.test.ts",
+        "web/src/views/org/OrgRepos.vue",
+        "web/src/views/org/OrgRepos.test.ts",
+        "web/src/views/org/settings/OrgSettingsWrapper.vue",
+        "web/src/views/org/settings/OrgSettingsWrapper.test.ts",
+        "web/src/views/org/settings/OrgSecrets.vue",
+        "web/src/views/org/settings/OrgSecrets.test.ts",
+        "web/src/views/org/settings/OrgRegistries.vue",
+        "web/src/views/org/settings/OrgRegistries.test.ts",
+        "web/src/views/org/settings/OrgAgents.vue",
+        "web/src/views/org/settings/OrgAgents.test.ts",
+        "web/src/components/org/settings/OrgSettingsNav.vue",
+        "web/src/components/org/settings/OrgSettingsNav.test.ts",
+        "web/src/components/settings/SettingsSection.vue",
+        "web/src/components/settings/SettingsSection.test.ts",
+        "web/src/components/settings/SettingsTable.vue",
+        "web/src/components/settings/SettingsTable.test.ts",
+        "web/src/components/settings/SettingsActionRow.vue",
+        "web/src/components/settings/SettingsActionRow.test.ts",
+        "web/src/components/repo/settings/RepoSettingsSection.vue",
+        "web/src/components/repo/settings/RepoSettingsSection.test.ts",
+        "web/src/components/repo/settings/RepoSettingsTable.vue",
+        "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+        "web/src/components/repo/settings/RepoSettingsActionRow.vue",
+        "web/src/components/repo/settings/RepoSettingsActionRow.test.ts",
+        "web/src/views/repo/RepoManualPipeline.vue",
+        "web/src/views/repo/RepoManualPipeline.test.ts",
+        "web/src/views/repo/settings/General.vue",
+        "web/src/views/repo/settings/General.test.ts",
+        "web/src/views/repo/settings/Secrets.vue",
+        "web/src/views/repo/settings/Registries.vue",
+        "web/src/views/repo/settings/Crons.vue",
+        "web/src/views/repo/settings/Badge.vue",
+        "web/src/views/repo/settings/Actions.vue",
+        "web/src/views/repo/settings/Extensions.vue",
+        "web/src/components/agent/AgentManager.vue",
+        "web/src/components/agent/AgentManager.test.ts",
+        "web/src/compositions/useInjectProvide.ts",
+        "web/src/store/repos.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "query_ids": [
+        "development:task-015-organization-routes:evidence"
       ]
     }
   ]

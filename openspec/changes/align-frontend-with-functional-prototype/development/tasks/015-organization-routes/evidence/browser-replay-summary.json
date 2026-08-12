@@ -1,0 +1,33 @@
+{
+  "ok": true,
+  "runId": "f5452fe5-ef9d-4b00-9126-20404e946858",
+  "states": 16,
+  "productionStates": 8,
+  "prototypeStates": 8,
+  "rows": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "stateIds": [
+    "production-dark-zh-desktop-org-agents",
+    "production-dark-zh-desktop-org-overview",
+    "production-dark-zh-desktop-org-registries",
+    "production-dark-zh-desktop-org-secrets",
+    "production-dark-zh-mobile-org-agents",
+    "production-dark-zh-mobile-org-overview",
+    "production-dark-zh-mobile-org-registries",
+    "production-dark-zh-mobile-org-secrets",
+    "prototype-dark-zh-desktop-org-agents",
+    "prototype-dark-zh-desktop-org-overview",
+    "prototype-dark-zh-desktop-org-registries",
+    "prototype-dark-zh-desktop-org-secrets",
+    "prototype-dark-zh-mobile-org-agents",
+    "prototype-dark-zh-mobile-org-overview",
+    "prototype-dark-zh-mobile-org-registries",
+    "prototype-dark-zh-mobile-org-secrets"
+  ],
+  "failedStates": [],
+  "generatedAt": "2026-08-12T07:48:24.800Z"
+}

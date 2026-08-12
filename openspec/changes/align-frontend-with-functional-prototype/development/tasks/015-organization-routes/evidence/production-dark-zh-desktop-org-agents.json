@@ -1,0 +1,47 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme/ 设置 密钥 注册表 代理 代理 注册到此组织代理。 添加代理 代理 注册到此组织代理。 agent-17 平台 linux/amd64 后端 docker 容量 4 上次通信 1天前",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme/ 设置 密钥 注册表 代理 代理 注册到此组织代理。 添加代理 代理 注册到此组织代理。 agent-17 平台 linux/amd64 后端 docker 容量 4 上次通信 1天前",
+  "terminalRouteName": "org-settings-agents",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "org-settings-nav",
+      "clientWidth": 218,
+      "scrollWidth": 218,
+      "overflowX": "visible"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "f5452fe5-ef9d-4b00-9126-20404e946858",
+  "stateId": "production-dark-zh-desktop-org-agents",
+  "row": 27,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/agent-17/i",
+      "passed": true
+    },
+    {
+      "pattern": "/Agent/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

@@ -113,7 +113,7 @@ import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Checkbox from '~/components/form/Checkbox.vue';
 import InputField from '~/components/form/InputField.vue';
 import TextField from '~/components/form/TextField.vue';
-import RepoSettingsSection from '~/components/repo/settings/RepoSettingsSection.vue';
+import RepoSettingsSection from '~/components/settings/SettingsSection.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import { requiredInject } from '~/compositions/useInjectProvide';

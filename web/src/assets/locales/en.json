@@ -628,6 +628,25 @@
     }
   },
   "org": {
+    "surface": {
+      "loading_title": "Loading organization",
+      "loading_description": "Loading the organization and your current access.",
+      "error_title": "Organization unavailable",
+      "error_fallback": "The organization request failed.",
+      "retry": "Retry",
+      "repositories_title": "Organization repositories",
+      "repositories_description": "Repositories visible to you that belong to this organization.",
+      "search_placeholder": "Search organization repositories",
+      "repositories_loading_title": "Loading repositories",
+      "repositories_loading_description": "Loading the repositories visible to your account.",
+      "repositories_error_title": "Repositories unavailable",
+      "repositories_error_fallback": "The repository request failed.",
+      "repositories_empty_description": "No repositories from this organization are visible to your account.",
+      "repositories_no_match_title": "No matching repositories",
+      "repositories_no_match_description": "Change or clear the search to see organization repositories.",
+      "repositories_loaded_count": "{count} repositories loaded",
+      "open_repository": "Open {repo}"
+    },
     "settings": {
       "not_allowed": "You are not allowed to access the settings of this organization",
       "secrets": {
@@ -638,6 +657,27 @@
       },
       "agents": {
         "desc": "Agents registered for this organization."
+      },
+      "surface": {
+        "navigation_label": "Organization settings",
+        "breadcrumb_separator": "/",
+        "loaded_count": "{count} resources loaded",
+        "secrets_form_description": "Create or update an organization-owned secret using the existing secret contract.",
+        "secrets_loading_title": "Loading organization secrets",
+        "secrets_loading_description": "Loading secret pages for this organization.",
+        "secrets_error_title": "Organization secrets unavailable",
+        "secrets_error_fallback": "The organization secret request failed.",
+        "secrets_mutation_error_fallback": "The organization secret change failed.",
+        "secrets_empty_description": "Create the first secret shared by this organization's repositories.",
+        "registries_form_description": "Create or update an organization-owned registry credential.",
+        "registries_loading_title": "Loading registry credentials",
+        "registries_loading_description": "Combining organization and inherited global registry pages.",
+        "registries_error_title": "Registry credentials unavailable",
+        "registries_error_fallback": "The organization registry request failed.",
+        "registries_mutation_error_fallback": "The organization registry change failed.",
+        "registries_empty_description": "Add the first registry credential available to this organization.",
+        "agents_disabled_title": "Organization Agents are disabled",
+        "agents_disabled_description": "This server does not allow users to register organization Agents."
       }
     }
   },
@@ -656,6 +696,9 @@
       "agents": {
         "agents": "Agents",
         "desc": "Agents registered on this server.",
+        "error_fallback": "The Agent request failed.",
+        "mutation_error_fallback": "The Agent change failed.",
+        "retry": "Retry",
         "none": "There are no agents yet.",
         "id": "ID",
         "add": "Add agent",

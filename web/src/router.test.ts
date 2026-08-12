@@ -171,4 +171,47 @@ describe('router base path', () => {
       }
     }
   }, 15_000);
+
+  it('resolves every organization destination and preserves settings authentication', async () => {
+    Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: '/woodpecker' });
+    const { default: router } = await import('./router');
+
+    const destinations = [
+      { name: 'org', path: '/orgs/17', authentication: undefined, orgHeader: true },
+      {
+        name: 'org-settings-secrets',
+        path: '/orgs/17/settings/secrets',
+        authentication: 'required',
+        orgHeader: undefined,
+      },
+      {
+        name: 'org-settings-registries',
+        path: '/orgs/17/settings/registries',
+        authentication: 'required',
+        orgHeader: undefined,
+      },
+      {
+        name: 'org-settings-agents',
+        path: '/orgs/17/settings/agents',
+        authentication: 'required',
+        orgHeader: undefined,
+      },
+    ] as const;
+
+    for (const destination of destinations) {
+      expect(router.resolve({ name: destination.name, params: { orgId: 17 } }).href).toBe(
+        `/woodpecker${destination.path}`,
+      );
+      const incoming = router.resolve(destination.path);
+      expect(incoming.matched.at(-1)?.name).toBe(destination.name);
+      expect(incoming.params.orgId).toBe('17');
+      expect(incoming.meta.authentication).toBe(destination.authentication);
+      expect(incoming.meta.orgHeader).toBe(destination.orgHeader);
+    }
+
+    const settingsRoot = router.resolve('/orgs/17/settings');
+    expect(settingsRoot.redirectedFrom).toBeUndefined();
+    expect(settingsRoot.matched.at(-1)?.name).toBe('org-settings');
+    expect(settingsRoot.meta.authentication).toBe('required');
+  }, 15_000);
 });

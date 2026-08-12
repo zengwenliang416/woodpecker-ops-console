@@ -121,7 +121,7 @@ import type { CheckboxOption, SelectOption } from '~/components/form/form.types'
 import InputField from '~/components/form/InputField.vue';
 import SelectField from '~/components/form/SelectField.vue';
 import TextField from '~/components/form/TextField.vue';
-import RepoSettingsSection from '~/components/repo/settings/RepoSettingsSection.vue';
+import RepoSettingsSection from '~/components/settings/SettingsSection.vue';
 import useApiClient from '~/compositions/useApiClient';
 import useConfig from '~/compositions/useConfig';
 import { requiredInject } from '~/compositions/useInjectProvide';

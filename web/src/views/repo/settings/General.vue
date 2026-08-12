@@ -210,7 +210,7 @@ import ListEditor from '~/components/form/ListEditor.vue';
 import NumberField from '~/components/form/NumberField.vue';
 import RadioField from '~/components/form/RadioField.vue';
 import TextField from '~/components/form/TextField.vue';
-import RepoSettingsSection from '~/components/repo/settings/RepoSettingsSection.vue';
+import RepoSettingsSection from '~/components/settings/SettingsSection.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import useAuthentication from '~/compositions/useAuthentication';

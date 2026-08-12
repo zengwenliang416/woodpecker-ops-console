@@ -1,10 +1,10 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-11T14:45:07.905Z",
+  "generated_at": "2026-08-12T08:08:18.195Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 14,
+  "claims_count": 15,
   "verified_claims": [],
   "unverified_claims": [
     "development:task-001-date-duration-integrity",
@@ -20,7 +20,8 @@
     "development:task-011-repository-branches-pull-requests",
     "development:task-012-repository-manual-run-settings",
     "development:task-013-repository-regression-coverage",
-    "development:task-014-repository-validation-evidence"
+    "development:task-014-repository-validation-evidence",
+    "development:task-015-organization-routes"
   ],
   "blockers": [],
   "warnings": [
@@ -37,6 +38,7 @@
     "codegraph:claim-unverified:development:task-011-repository-branches-pull-requests",
     "codegraph:claim-unverified:development:task-012-repository-manual-run-settings",
     "codegraph:claim-unverified:development:task-013-repository-regression-coverage",
-    "codegraph:claim-unverified:development:task-014-repository-validation-evidence"
+    "codegraph:claim-unverified:development:task-014-repository-validation-evidence",
+    "codegraph:claim-unverified:development:task-015-organization-routes"
   ]
 }
