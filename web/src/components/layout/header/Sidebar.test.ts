@@ -147,6 +147,20 @@ describe('shared sidebar', () => {
     expect(destinations).not.toContain('/admin/forges');
   });
 
+  it('keeps protected application and personal destinations out of the guest sidebar', () => {
+    state.user = null;
+    const wrapper = mountSidebar();
+    const destinations = wrapper.findAll('[data-to]').map((link) => link.attributes('data-to'));
+
+    expect(destinations).toEqual(['{"name":"login"}']);
+    expect(wrapper.text()).toContain('Docs');
+    expect(wrapper.text()).not.toContain('Overview');
+    expect(wrapper.text()).not.toContain('Repositories');
+    expect(wrapper.text()).not.toContain('Deployments');
+    expect(wrapper.text()).not.toContain('Infrastructure');
+    expect(wrapper.text()).not.toContain('Personal settings');
+  });
+
   it('shows administrator navigation only to administrators', () => {
     state.user = { id: 2, login: 'admin', admin: true };
     const wrapper = mountSidebar();

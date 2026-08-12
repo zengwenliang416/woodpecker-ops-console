@@ -1,10 +1,10 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-12T14:44:33.761Z",
+  "generated_at": "2026-08-12T16:35:23.787Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 17,
+  "claims_count": 18,
   "verified_claims": [],
   "unverified_claims": [
     "development:task-001-date-duration-integrity",
@@ -23,7 +23,8 @@
     "development:task-014-repository-validation-evidence",
     "development:task-015-organization-routes",
     "development:task-016-administration-routes",
-    "development:task-017-user-auth-routes"
+    "development:task-017-user-auth-routes",
+    "development:task-018-authorization-boundaries"
   ],
   "blockers": [],
   "warnings": [
@@ -43,6 +44,7 @@
     "codegraph:claim-unverified:development:task-014-repository-validation-evidence",
     "codegraph:claim-unverified:development:task-015-organization-routes",
     "codegraph:claim-unverified:development:task-016-administration-routes",
-    "codegraph:claim-unverified:development:task-017-user-auth-routes"
+    "codegraph:claim-unverified:development:task-017-user-auth-routes",
+    "codegraph:claim-unverified:development:task-018-authorization-boundaries"
   ]
 }

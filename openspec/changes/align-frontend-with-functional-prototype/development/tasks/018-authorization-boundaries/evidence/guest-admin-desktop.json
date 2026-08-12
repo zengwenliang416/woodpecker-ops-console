@@ -1,0 +1,22 @@
+{
+  "terminalRouteName": "login",
+  "terminalPath": "/login",
+  "protectedLinks": [],
+  "bodyText": "Woodpecker CI\n自托管 CI/CD\n放心构建\n为掌控基础设施的团队提供快速、可靠的流水线。\n\n通过当前 Woodpecker 服务器已配置的 Forge 提供商登录。\n\n欢迎回来\n\n登录 Woodpecker 使用\n\n正在加载登录提供商\n正在读取此服务器已配置的 Forge 提供商。",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "guest-admin-desktop",
+  "actor": "guest",
+  "requestedPath": "/admin/users",
+  "expectedRouteName": "login",
+  "expectedProtectedLinks": [],
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

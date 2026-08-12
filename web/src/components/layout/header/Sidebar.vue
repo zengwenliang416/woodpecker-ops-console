@@ -7,7 +7,7 @@
     tabindex="-1"
   >
     <div class="sidebar-brand">
-      <router-link :to="{ name: 'home' }" class="flex min-w-0 items-center gap-2.5">
+      <router-link :to="user ? { name: 'home' } : { name: 'login' }" class="flex min-w-0 items-center gap-2.5">
         <WoodpeckerLogo class="text-wp-primary-100 h-8 w-8 shrink-0" />
         <div class="brand-copy">
           <strong>{{ $t('ops.sidebar.brand_name') }}</strong>
@@ -24,7 +24,7 @@
     </div>
 
     <div class="sidebar-scroll">
-      <div class="nav-section">
+      <div v-if="user" class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.workspace') }}</div>
         <router-link to="/overview" class="nav-link" :class="{ active: isActive('/overview') }">
           <Icon name="overview" />
@@ -37,7 +37,7 @@
         </router-link>
       </div>
 
-      <div class="nav-section">
+      <div v-if="user" class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.delivery') }}</div>
         <router-link to="/deployments" class="nav-link" :class="{ active: isActive('/deployments') }">
           <Icon name="rocket" />
@@ -69,7 +69,7 @@
         </router-link>
       </div>
 
-      <div class="nav-section">
+      <div v-if="user" class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.server_ops') }}</div>
         <router-link to="/infrastructure" class="nav-link" :class="{ active: isActive('/infrastructure') }">
           <Icon name="infrastructure" />
@@ -109,7 +109,7 @@
         </router-link>
       </div>
 
-      <div class="nav-section">
+      <div v-if="user" class="nav-section">
         <div class="nav-label">{{ $t('ops.sidebar.build_infra') }}</div>
         <router-link
           v-if="user?.admin"
@@ -166,7 +166,7 @@
       </div>
     </div>
 
-    <div class="sidebar-footer">
+    <div v-if="user" class="sidebar-footer">
       <router-link :to="{ name: 'user' }" class="nav-link" :class="{ active: isUserActive }">
         <img v-if="user?.avatar_url" class="h-6 w-6 rounded-md" :src="user.avatar_url" />
         <Icon v-else name="user" />

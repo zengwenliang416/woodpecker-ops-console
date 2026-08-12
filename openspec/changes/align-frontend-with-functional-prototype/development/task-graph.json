@@ -420,6 +420,30 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "018-authorization-boundaries",
+      "baseline_task_id": "5.4",
+      "goal": "Guests and authenticated actors receive consistent navigation visibility and direct-route behavior while current system, repository, and organization authorization contracts remain authoritative.",
+      "depends_on": ["5.3"],
+      "allowed_files": [
+        "web/src/router.ts",
+        "web/src/router.test.ts",
+        "web/src/components/layout/header/Sidebar.vue",
+        "web/src/components/layout/header/Sidebar.test.ts",
+        "web/src/components/layout/header/Navbar.test.ts",
+        "web/src/views/admin/AdminSettingsWrapper.vue",
+        "web/src/views/admin/AdminSettingsWrapper.test.ts",
+        "web/src/views/repo/RepoWrapper.vue",
+        "web/src/views/repo/RepoWrapper.test.ts",
+        "web/src/views/repo/settings/RepoSettings.vue",
+        "web/src/views/repo/settings/RepoSettings.test.ts",
+        "web/src/views/org/OrgWrapper.vue",
+        "web/src/views/org/OrgWrapper.test.ts",
+        "web/src/views/org/settings/OrgSettingsWrapper.vue",
+        "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
+      ],
+      "status": "complete"
     }
   ]
 }

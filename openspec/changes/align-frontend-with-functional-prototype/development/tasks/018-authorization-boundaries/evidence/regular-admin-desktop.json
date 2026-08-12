@@ -1,0 +1,54 @@
+{
+  "terminalRouteName": "overview",
+  "terminalPath": "/overview",
+  "protectedLinks": [
+    "/",
+    "/overview",
+    "/repos",
+    "/deployments",
+    "/deployments/apps",
+    "/deployments/environments",
+    "/deployments/releases",
+    "/deployments/approvals",
+    "/infrastructure",
+    "/infrastructure/servers",
+    "/infrastructure/groups",
+    "/infrastructure/services",
+    "/infrastructure/alerts",
+    "/user/secrets",
+    "/user"
+  ],
+  "bodyText": "Woodpecker\nCI/CD 平台\n工作区\n概览\n仓库\n1\n交付\n部署中心\n应用\n环境\nReleases\n生产审批\n服务器运维\n基础设施\n服务器\n服务器组\n服务与容器\n告警\n构建基础设施\n密钥\n帮助\n文档\n个人设置\n搜索流水线、仓库、用户和设置…\n⌘ K\n0\n概览\n全部环境\n生产环境\n预发布环境\n配置概览\n\n整个 CI/CD 环境的实时摘要。\n\n活跃流水线\n0\n当前没有运行任务\n成功率\n—\n0/0 条近期流水线成功\n平均时长\n—\n暂无完成记录\n仓库数量\n1\n当前账号可访问的仓库\n最近活动\n\n所有仓库的最新执行\n\n查看全部\n暂无流水线活动\n\n仓库流水线运行后会显示在这里。\n\n仓库健康度\n\n基于近期流水线状态\n\n暂无仓库\n\n添加仓库后会显示健康情况。\n\n查看所有仓库\n最近失败\n近期没有失败\n所有流水线运行正常。\n你没有访问服务器设置的权限",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "regular-admin-desktop",
+  "actor": "regular",
+  "requestedPath": "/admin/users",
+  "expectedRouteName": "overview",
+  "expectedProtectedLinks": [
+    "/",
+    "/overview",
+    "/repos",
+    "/deployments",
+    "/deployments/apps",
+    "/deployments/environments",
+    "/deployments/releases",
+    "/deployments/approvals",
+    "/infrastructure",
+    "/infrastructure/servers",
+    "/infrastructure/groups",
+    "/infrastructure/services",
+    "/infrastructure/alerts",
+    "/user/secrets",
+    "/user"
+  ],
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

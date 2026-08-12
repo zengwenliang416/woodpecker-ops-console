@@ -1,0 +1,22 @@
+{
+  "terminalRouteName": "org",
+  "terminalPath": "/orgs/1",
+  "protectedLinks": [],
+  "bodyText": "搜索流水线、仓库、用户和设置…\n登录\n正在加载组织\n正在加载组织\n正在加载组织及您当前的访问权限。",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "guest-public-mobile",
+  "actor": "guest",
+  "requestedPath": "/orgs/1",
+  "expectedRouteName": "org",
+  "expectedProtectedLinks": [],
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

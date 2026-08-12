@@ -1,0 +1,22 @@
+{
+  "terminalRouteName": "repo",
+  "terminalPath": "/repos/101",
+  "protectedLinks": [],
+  "bodyText": "Woodpecker\nCI/CD 平台\n帮助\n文档\n搜索流水线、仓库、用户和设置…\n⌘ K\n登录",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "guest-public-repo-desktop",
+  "actor": "guest",
+  "requestedPath": "/repos/101",
+  "expectedRouteName": "repo",
+  "expectedProtectedLinks": [],
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "terminalRouteName": "repo",
+  "terminalPath": "/repos/101",
+  "protectedLinks": [],
+  "bodyText": "搜索流水线、仓库、用户和设置…\n登录\nacme\n / backend-api\n活动\n分支\n运行流水线\n最新结果\n失败\n#842 · 3天前\n成功率\n50.0%\n1/2 条完成记录成功\n平均时长\n07:52\n2 条完成耗时样本\n全部状态\n成功\n失败\n运行中\n等待中\n已跳过\n全部分支\nfeature/repository-evidence\nmain\n全部事件\n合并请求\n推送\n状态\t流水线\t分支\t触发\t作者\t提交\t耗时\t排队\t完成\t\n\n失败\t#842\t\nmain\n\t推送\t\nalice\n\t\nfix null handling in user route\na1b2c3d4e5\n\t05:22\t00:18\t3天前\t\n\n\n成功\t#841\t\nfeature/repository-evidence\n\t合并请求\t\nalice\n\t\nfeat: harden repository evidence\na1b2c3d4e5\n\t10:22\t00:18\t3天前\t\n已加载 2 条流水线\n上一页\n1 / 1\n下一页",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "guest-public-repo-mobile",
+  "actor": "guest",
+  "requestedPath": "/repos/101",
+  "expectedRouteName": "repo",
+  "expectedProtectedLinks": [],
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

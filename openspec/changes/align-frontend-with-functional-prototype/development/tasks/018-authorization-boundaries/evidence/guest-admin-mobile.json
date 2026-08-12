@@ -1,0 +1,22 @@
+{
+  "terminalRouteName": "login",
+  "terminalPath": "/login",
+  "protectedLinks": [],
+  "bodyText": "欢迎回来\n\n登录 Woodpecker 使用\n\n正在加载登录提供商\n正在读取此服务器已配置的 Forge 提供商。",
+  "pageLevelHorizontalOverflow": false,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "stateId": "guest-admin-mobile",
+  "actor": "guest",
+  "requestedPath": "/admin/users",
+  "expectedRouteName": "login",
+  "expectedProtectedLinks": [],
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": []
+  }
+}

@@ -75,8 +75,14 @@
   organization-backed Secrets, Registries, and optional Agents, plus current
   token APIs; guests and CLI clients receive Forge-only login, safe OAuth error
   links, query-owned localhost authorization, and a truthful catch-all 404.
+- `018-authorization-boundaries` / baseline task `5.4`: guests now receive a
+  login-only application Sidebar while retaining public repository and
+  organization routes; regular users are rejected from direct or saved
+  `/admin/**` destinations before administration content mounts; system
+  administrators retain direct access; repository and organization decisions
+  remain server-backed.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `5.4` through `8.4` remain incomplete.
+  Tasks `5.5` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -139,6 +145,11 @@
   not-found actions, bilingual copy, focused regressions, task-local Mock API,
   CDP capture, strict verifier, `32` measurement/PNG pairs, report, and
   superseding independent reviews.
+- Authorization boundaries: inherited `system-admin` route metadata,
+  browser-compatible ancestor lookup, failure-tolerant translated denial,
+  direct/saved administration guards, guest Sidebar visibility, focused
+  repository/organization permission regressions, ten desktop/mobile browser
+  states, exact link-inventory verifier, report, and final independent reviews.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -156,7 +167,8 @@
   `development/tasks/014-repository-validation-evidence/report.md`,
   `development/tasks/015-organization-routes/report.md`, and
   `development/tasks/016-administration-routes/report.md`, and
-  `development/tasks/017-user-auth-routes/report.md`.
+  `development/tasks/017-user-auth-routes/report.md`, and
+  `development/tasks/018-authorization-boundaries/report.md`.
 
 ## Requirements Covered
 
@@ -219,8 +231,15 @@
   `017`: the eight existing destinations pass focused/full/static/build checks
   and exact dark Simplified-Chinese desktop/390px evidence; confirmed resources,
   editors, tokens, Forge loads, and CLI callbacks reject obsolete owner
-  completions. Full `A2` remains open under task `5.5`, permission-family
-  closure remains task `5.4`, and rows `1` and `39-45` remain `in-progress`.
+  completions. Full `A2` remains open under task `5.5`, and rows `1` and
+  `39-45` remain `in-progress`.
+- Task-scoped `A3` was independently verified for authorization slice `018`:
+  guest public repository/organization entry, guest login continuation,
+  regular-user direct/saved administration denial, system-administrator entry,
+  exact role-specific navigation inventories, locale readiness/failure, and
+  repository/organization server-backed permission boundaries pass focused,
+  full, static/build, and exact desktop/390px evidence. Full `A2` and parity
+  row verification remain open under task `5.5`.
 
 ## Prototype Decisions Implemented
 
@@ -276,6 +295,11 @@
   Forge providers, and the localhost CLI callback protocol. Password/SSO,
   profile mutation, authorized applications, device/location approval, Agent
   telemetry, and unsafe OAuth error links are not invented or exposed.
+- Authorization boundaries use existing bootstrap authentication,
+  administrator flags, inherited route metadata, saved destinations,
+  notifications, i18n, and server-returned `RepoPermissions`/`OrgPermissions`.
+  Hidden navigation is not treated as enforcement, and no resource permission
+  is inferred statically.
 
 ## Components Created / Reused / Extracted
 
@@ -334,6 +358,10 @@
   authentication, permission calculation, persistence, migration, dependency,
   or approved-prototype contract. It repairs component-owned request/editor
   lifecycle behavior around existing administration APIs.
+- Slice `018` adds no role, route, API, store, backend permission, persistence,
+  migration, dependency, or static repository/organization authorization. It
+  centralizes existing route entry, preserves resource permission owners, and
+  changes only authenticated navigation visibility.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -463,14 +491,20 @@
   surface/viewport/terminal-route bindings, expected content, exact PNG
   dimensions, zero page overflow/raw locale keys/browser errors, and strict
   JSON/PNG inventory.
+- PASS: authorization task replay for exactly `10` final current-byte states
+  under run `35884fa1-a6ba-4077-bf2e-c80d409f3c86`, covering guest public
+  organization/repository entry, guest administration login, regular-user
+  denial, and administrator entry at `1600x1000` and `390x844`, with exact
+  unique link inventories, non-admin `/admin` exclusion, zero overflow/browser
+  errors, exact PNG dimensions, and an equal-count malicious-link negative
+  replay rejected with exit `1`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Sixteen baseline tasks remain incomplete across
-  organization/administration/user, operations, accessibility/i18n/responsive,
-  and full six-domain verification work. Global prototype parity must not be
-  claimed.
+- Fourteen baseline tasks remain incomplete across route-family parity,
+  operations, accessibility/i18n/responsive, and full six-domain verification
+  work. Global prototype parity must not be claimed.
 - Repository row `4` remains blocked: production `/repos/add` renders the
   Forge activation list while the approved prototype renders a four-step
   configuration wizard. Baseline task `4.5` is complete as an evidence task,

@@ -1,0 +1,19 @@
+{
+  "ok": true,
+  "runId": "35884fa1-a6ba-4077-bf2e-c80d409f3c86",
+  "states": 10,
+  "stateIds": [
+    "guest-public-desktop",
+    "guest-public-mobile",
+    "guest-public-repo-desktop",
+    "guest-public-repo-mobile",
+    "guest-admin-desktop",
+    "guest-admin-mobile",
+    "regular-admin-desktop",
+    "regular-admin-mobile",
+    "admin-admin-desktop",
+    "admin-admin-mobile"
+  ],
+  "failedStates": [],
+  "generatedAt": "2026-08-12T16:19:04.376Z"
+}

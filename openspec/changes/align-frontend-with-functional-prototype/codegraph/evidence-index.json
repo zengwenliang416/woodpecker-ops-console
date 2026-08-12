@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_index.v1",
-  "generated_at": "2026-08-12T14:44:33.754Z",
+  "generated_at": "2026-08-12T16:35:23.785Z",
   "active_change": "align-frontend-with-functional-prototype",
   "source_raw": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence.jsonl",
   "by_claim": {},

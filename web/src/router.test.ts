@@ -1,8 +1,82 @@
+import { mount } from '@vue/test-utils';
 import { afterEach, describe, expect, it, vi } from 'vitest';
+import { defineComponent } from 'vue';
+
+const notificationState = vi.hoisted(() => ({
+  notify: vi.fn(),
+}));
+
+const i18nState = vi.hoisted(() => {
+  const state = {
+    locale: 'en',
+    messagesReady: true,
+    setI18nLanguage: vi.fn<(locale: string) => Promise<void>>(),
+  };
+  state.setI18nLanguage.mockImplementation(async (locale) => {
+    state.locale = locale;
+    state.messagesReady = true;
+  });
+  return state;
+});
+
+const adminWrapperState = vi.hoisted(() => ({
+  mounts: 0,
+}));
+
+vi.mock('~/compositions/useNotifications', () => ({
+  default: () => notificationState,
+}));
+
+vi.mock('~/compositions/useI18n', () => ({
+  i18n: {
+    global: {
+      locale: {
+        get value() {
+          return i18nState.locale;
+        },
+      },
+      t: (key: string) =>
+        i18nState.messagesReady
+          ? i18nState.locale === 'zh-Hans'
+            ? '你没有访问服务器设置的权限'
+            : 'You are not allowed to access server settings'
+          : key,
+    },
+  },
+  setI18nLanguage: i18nState.setI18nLanguage,
+}));
+
+vi.mock('~/views/admin/AdminSettingsWrapper.vue', () => ({
+  default: defineComponent({
+    name: 'AdminSettingsWrapperStub',
+    setup() {
+      adminWrapperState.mounts += 1;
+      return () => null;
+    },
+  }),
+}));
+
+vi.mock('~/views/Overview.vue', () => ({
+  default: defineComponent({
+    name: 'OverviewStub',
+    template: '<div data-testid="overview" />',
+  }),
+}));
 
 describe('router base path', () => {
   afterEach(() => {
     Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: undefined });
+    Object.defineProperty(window, 'WOODPECKER_USER', { configurable: true, value: undefined });
+    localStorage.clear();
+    notificationState.notify.mockReset();
+    i18nState.locale = 'en';
+    i18nState.messagesReady = true;
+    i18nState.setI18nLanguage.mockReset();
+    i18nState.setI18nLanguage.mockImplementation(async (locale) => {
+      i18nState.locale = locale;
+      i18nState.messagesReady = true;
+    });
+    adminWrapperState.mounts = 0;
     vi.resetModules();
   });
 
@@ -241,6 +315,7 @@ describe('router base path', () => {
       const incoming = router.resolve(destination.path);
       expect(incoming.matched.at(-1)?.name).toBe(destination.name);
       expect(incoming.meta.authentication).toBe('required');
+      expect(incoming.meta.authorization).toBe('system-admin');
       if ('forgeId' in destination.params) {
         expect(incoming.params.forgeId).toBe(`${destination.params.forgeId}`);
       }
@@ -280,5 +355,189 @@ describe('router base path', () => {
     const missing = router.resolve('/definitely-not-a-route');
     expect(missing.matched.at(-1)?.name).toBe('not-found');
     expect(router.resolve('/definitely/not/a/route').matched.at(-1)?.name).toBe('not-found');
+  }, 15_000);
+
+  it.each([
+    {
+      actor: 'guest',
+      user: undefined,
+      destination: '/admin/users',
+      expectedName: 'login',
+      expectedNotification: false,
+    },
+    {
+      actor: 'regular user',
+      user: { id: 2, login: 'member', admin: false },
+      destination: '/admin/users',
+      expectedName: 'overview',
+      expectedNotification: true,
+    },
+    {
+      actor: 'system administrator',
+      user: { id: 1, login: 'admin', admin: true },
+      destination: '/admin/users',
+      expectedName: 'admin-settings-users',
+      expectedNotification: false,
+    },
+  ])(
+    'enforces direct administration access for $actor before rendering child routes',
+    async ({ user, destination, expectedName, expectedNotification }) => {
+      Object.defineProperty(window, 'WOODPECKER_USER', { configurable: true, value: user });
+      const { default: router } = await import('./router');
+
+      await router.push(destination);
+      await router.isReady();
+
+      expect(router.currentRoute.value.name).toBe(expectedName);
+      expect(notificationState.notify).toHaveBeenCalledTimes(expectedNotification ? 1 : 0);
+      if (user === undefined) {
+        expect(localStorage.getItem('woodpecker:user-config')).toContain('"redirectUrl":"/admin/users"');
+      }
+      if (expectedNotification) {
+        expect(notificationState.notify).toHaveBeenCalledWith({
+          type: 'error',
+          title: 'You are not allowed to access server settings',
+        });
+      }
+    },
+    15_000,
+  );
+
+  it('rejects a saved administration redirect without an intermediate protected navigation', async () => {
+    Object.defineProperty(window, 'WOODPECKER_USER', {
+      configurable: true,
+      value: { id: 2, login: 'member', admin: false },
+    });
+    localStorage.setItem(
+      'woodpecker:user-config',
+      JSON.stringify({
+        isPipelineFeedOpen: false,
+        redirectUrl: '/admin/users',
+        collapseLogGroupsByDefault: true,
+      }),
+    );
+    const { default: router } = await import('./router');
+
+    await router.push('/overview');
+    await router.isReady();
+
+    expect(router.currentRoute.value.name).toBe('overview');
+    expect(notificationState.notify).toHaveBeenCalledTimes(1);
+    expect(notificationState.notify).toHaveBeenCalledWith({
+      type: 'error',
+      title: 'You are not allowed to access server settings',
+    });
+    expect(localStorage.getItem('woodpecker:user-config')).toContain('"redirectUrl":""');
+  }, 15_000);
+
+  it('loads the active locale before the first administration denial notification', async () => {
+    Object.defineProperty(window, 'WOODPECKER_USER', {
+      configurable: true,
+      value: { id: 2, login: 'member', admin: false },
+    });
+    i18nState.locale = 'zh-Hans';
+    i18nState.messagesReady = false;
+    let finishLoading: (() => void) | undefined;
+    i18nState.setI18nLanguage.mockImplementationOnce(
+      async (locale) =>
+        new Promise((resolve) => {
+          finishLoading = () => {
+            i18nState.locale = locale;
+            i18nState.messagesReady = true;
+            resolve();
+          };
+        }),
+    );
+    const { default: router } = await import('./router');
+
+    const navigation = router.push('/admin/users');
+    await vi.waitFor(() => expect(i18nState.setI18nLanguage).toHaveBeenCalledWith('zh-Hans'));
+    expect(notificationState.notify).not.toHaveBeenCalled();
+    finishLoading?.();
+    await navigation;
+    await router.isReady();
+
+    expect(notificationState.notify).toHaveBeenCalledTimes(1);
+    expect(notificationState.notify).toHaveBeenCalledWith({
+      type: 'error',
+      title: '你没有访问服务器设置的权限',
+    });
+  }, 15_000);
+
+  it('rejects administration before the wrapper mounts and emits one denial', async () => {
+    Object.defineProperty(window, 'WOODPECKER_USER', {
+      configurable: true,
+      value: { id: 2, login: 'member', admin: false },
+    });
+    const { default: router } = await import('./router');
+    const wrapper = mount(defineComponent({ template: '<RouterView />' }), {
+      global: {
+        plugins: [router],
+      },
+    });
+
+    await router.push('/admin/users');
+    await router.isReady();
+
+    expect(router.currentRoute.value.name).toBe('overview');
+    expect(adminWrapperState.mounts).toBe(0);
+    expect(notificationState.notify).toHaveBeenCalledTimes(1);
+    wrapper.unmount();
+  }, 15_000);
+
+  it('keeps direct administration denial reliable when locale loading fails', async () => {
+    Object.defineProperty(window, 'WOODPECKER_USER', {
+      configurable: true,
+      value: { id: 2, login: 'member', admin: false },
+    });
+    i18nState.messagesReady = false;
+    i18nState.setI18nLanguage.mockRejectedValueOnce(new Error('locale unavailable'));
+    const { default: router } = await import('./router');
+    const wrapper = mount(defineComponent({ template: '<RouterView />' }), {
+      global: {
+        plugins: [router],
+      },
+    });
+
+    await expect(router.push('/admin/users')).resolves.toBeUndefined();
+    await router.isReady();
+
+    expect(router.currentRoute.value.name).toBe('overview');
+    expect(adminWrapperState.mounts).toBe(0);
+    expect(notificationState.notify).toHaveBeenCalledTimes(1);
+    expect(notificationState.notify).toHaveBeenCalledWith({
+      type: 'error',
+      title: 'You are not allowed to access server settings',
+    });
+    wrapper.unmount();
+  }, 15_000);
+
+  it('clears a saved administration redirect when locale loading fails', async () => {
+    Object.defineProperty(window, 'WOODPECKER_USER', {
+      configurable: true,
+      value: { id: 2, login: 'member', admin: false },
+    });
+    localStorage.setItem(
+      'woodpecker:user-config',
+      JSON.stringify({
+        isPipelineFeedOpen: false,
+        redirectUrl: '/admin/users',
+        collapseLogGroupsByDefault: true,
+      }),
+    );
+    i18nState.messagesReady = false;
+    i18nState.setI18nLanguage.mockRejectedValueOnce(new Error('locale unavailable'));
+    const { default: router } = await import('./router');
+
+    await expect(router.push('/overview')).resolves.toBeUndefined();
+    await router.isReady();
+
+    expect(router.currentRoute.value.name).toBe('overview');
+    expect(localStorage.getItem('woodpecker:user-config')).toContain('"redirectUrl":""');
+    expect(notificationState.notify).toHaveBeenCalledTimes(1);
+    expect(notificationState.notify).toHaveBeenCalledWith({
+      type: 'error',
+      title: 'You are not allowed to access server settings',
+    });
   }, 15_000);
 });

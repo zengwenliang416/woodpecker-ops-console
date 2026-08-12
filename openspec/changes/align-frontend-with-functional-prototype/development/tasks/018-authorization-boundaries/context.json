@@ -1,0 +1,72 @@
+{
+  "task_id": "018-authorization-boundaries",
+  "goal": "Guests and authenticated actors receive consistent navigation visibility and direct-route behavior while existing system, repository, and organization authorization contracts remain authoritative.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/018-authorization-boundaries/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/router.ts",
+    "web/src/components/layout/header/Sidebar.vue",
+    "web/src/components/layout/header/Navbar.vue",
+    "web/src/views/admin/AdminSettingsWrapper.vue",
+    "web/src/views/repo/RepoWrapper.vue",
+    "web/src/views/repo/settings/RepoSettings.vue",
+    "web/src/views/org/OrgWrapper.vue",
+    "web/src/views/org/settings/OrgSettingsWrapper.vue",
+    "web/src/compositions/useAuthentication.ts",
+    "web/src/lib/api/types/repo.ts",
+    "web/src/lib/api/types/org.ts",
+    "web/src/lib/api/types/user.ts"
+  ],
+  "allowed_files": [
+    "web/src/router.ts",
+    "web/src/router.test.ts",
+    "web/src/components/layout/header/Sidebar.vue",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/views/admin/AdminSettingsWrapper.vue",
+    "web/src/views/admin/AdminSettingsWrapper.test.ts",
+    "web/src/views/repo/RepoWrapper.vue",
+    "web/src/views/repo/RepoWrapper.test.ts",
+    "web/src/views/repo/settings/RepoSettings.vue",
+    "web/src/views/repo/settings/RepoSettings.test.ts",
+    "web/src/views/org/OrgWrapper.vue",
+    "web/src/views/org/OrgWrapper.test.ts",
+    "web/src/views/org/settings/OrgSettingsWrapper.vue",
+    "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
+  ],
+  "test_paths": [
+    "web/src/router.test.ts",
+    "web/src/components/layout/header/Sidebar.test.ts",
+    "web/src/components/layout/header/Navbar.test.ts",
+    "web/src/views/admin/AdminSettingsWrapper.test.ts",
+    "web/src/views/repo/RepoWrapper.test.ts",
+    "web/src/views/repo/settings/RepoSettings.test.ts",
+    "web/src/views/org/OrgWrapper.test.ts",
+    "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
+  ],
+  "non_goals": [
+    "Do not add roles, routes, APIs, typed fields, stores, backend middleware, persistence, dependencies, migrations, or authentication algorithms.",
+    "Do not replace dynamic repository or organization permission loading with static route metadata.",
+    "Do not change public repository or organization visibility, operations role design, node-agent policy, verified parity statuses, or complete A2."
+  ],
+  "expected_evidence": [
+    "Focused real-router tests for guest, regular authenticated user, and system administrator navigation to protected routes.",
+    "Sidebar and topbar tests proving guest, user, and administrator destination visibility.",
+    "Existing repository and organization wrapper regressions proving current server permission denial, action gating, permission changes, and obsolete completion isolation.",
+    "Full frontend Vitest, formatting, lint, TypeScript, Vite build, JSON/JSONL, and diff checks.",
+    "Evidence-bearing report and independent spec and quality reviews for task-scoped A3."
+  ],
+  "unsafe_assumptions": [
+    "Navigation visibility does not replace direct-route or server authorization.",
+    "Authenticated users are not automatically system administrators.",
+    "Repository and organization permissions cannot be inferred from the bootstrap user alone.",
+    "Task-local authorization tests do not complete sensory parity or task 5.5."
+  ],
+  "stop_condition": "Stop if the implementation needs a new role, route, API, type, store, backend contract, persistence, dependency, migration, authentication mechanism, public-route restriction, or static inference of dynamic resource permissions."
+}

@@ -1,16 +1,33 @@
 import type { Component } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
-import type { RouteRecordRaw } from 'vue-router';
+import type { RouteLocationMatched, RouteRecordRaw } from 'vue-router';
 
 import useAuthentication from '~/compositions/useAuthentication';
 import useConfig from '~/compositions/useConfig';
+import { i18n, setI18nLanguage } from '~/compositions/useI18n';
+import useNotifications from '~/compositions/useNotifications';
 import useUserConfig from '~/compositions/useUserConfig';
 
 declare module 'vue-router' {
   interface RouteMeta {
     authentication?: 'required' | 'guest-only';
+    authorization?: 'system-admin';
     repoHeader?: true;
     layout?: 'default' | 'blank';
+  }
+}
+
+type AuthenticationMode = 'required' | 'guest-only';
+type AuthorizationMode = 'system-admin';
+const englishAdminDeniedTitle = 'You are not allowed to access server settings';
+
+function findRouteMeta(
+  matched: readonly RouteLocationMatched[],
+  key: 'authentication' | 'authorization',
+): AuthenticationMode | AuthorizationMode | undefined {
+  for (let index = matched.length - 1; index >= 0; index -= 1) {
+    const value = matched[index]?.meta[key];
+    if (value != null) return value;
   }
 }
 
@@ -243,7 +260,7 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/admin',
     component: (): Component => import('~/views/admin/AdminSettingsWrapper.vue'),
-    meta: { authentication: 'required' },
+    meta: { authentication: 'required', authorization: 'system-admin' },
     children: [
       {
         path: '',
@@ -467,34 +484,52 @@ const router = createRouter({
   routes,
 });
 
-router.beforeEach(async (to, _, next) => {
-  const authenticationMode = to.matched.toReversed().find((record) => record.meta.authentication != null)
-    ?.meta.authentication;
+router.beforeEach(async (to) => {
+  const authenticationMode = findRouteMeta(to.matched, 'authentication');
+  const authorizationMode = findRouteMeta(to.matched, 'authorization');
 
   const config = useUserConfig();
   const { redirectUrl } = config.userConfig.value;
 
-  const { isAuthenticated } = useAuthentication();
+  const { isAuthenticated, user } = useAuthentication();
+  const denySystemAdminAccess = async () => {
+    try {
+      await setI18nLanguage(i18n.global.locale.value);
+    } catch {
+      // Authorization navigation must not depend on a locale chunk loading successfully.
+    }
+    const translatedTitle = i18n.global.t('admin.settings.not_allowed');
+    useNotifications().notify({
+      type: 'error',
+      title: translatedTitle === 'admin.settings.not_allowed' ? englishAdminDeniedTitle : translatedTitle,
+    });
+    return { name: 'home' } as const;
+  };
 
   // redirect to saved url when not on login page
   if (redirectUrl !== '' && isAuthenticated && authenticationMode !== 'guest-only') {
     config.setUserConfig('redirectUrl', '');
-    next(redirectUrl);
-    return;
+
+    const redirectAuthorizationMode = findRouteMeta(router.resolve(redirectUrl).matched, 'authorization');
+    if (redirectAuthorizationMode === 'system-admin' && user?.admin !== true) {
+      return denySystemAdminAccess();
+    }
+
+    return redirectUrl;
   }
 
   if (authenticationMode === 'required' && !isAuthenticated) {
     config.setUserConfig('redirectUrl', to.fullPath);
-    next({ name: 'login' });
-    return;
+    return { name: 'login' };
   }
 
   if (authenticationMode === 'guest-only' && isAuthenticated) {
-    next({ name: 'home' });
-    return;
+    return { name: 'home' };
   }
 
-  next();
+  if (authorizationMode === 'system-admin' && user?.admin !== true) {
+    return denySystemAdminAccess();
+  }
 });
 
 export default router;

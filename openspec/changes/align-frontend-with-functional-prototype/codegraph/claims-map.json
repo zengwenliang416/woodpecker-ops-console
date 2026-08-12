@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-12T14:02:03.709Z",
+  "generated_at": "2026-08-12T15:48:50.862Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -679,6 +679,46 @@
       ],
       "query_ids": [
         "development:task-017-user-auth-routes:evidence"
+      ]
+    },
+    {
+      "id": "development:task-018-authorization-boundaries",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "018-authorization-boundaries",
+      "text": "Open the production shell and protected route families as a guest, regular",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/018-authorization-boundaries/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/018-authorization-boundaries/context.json"
+      ],
+      "expected_evidence": [
+        "Focused real-router tests for guest, regular authenticated user, and system administrator navigation to protected routes.",
+        "Sidebar and topbar tests proving guest, user, and administrator destination visibility.",
+        "Existing repository and organization wrapper regressions proving current server permission denial, action gating, permission changes, and obsolete completion isolation.",
+        "Full frontend Vitest, formatting, lint, TypeScript, Vite build, JSON/JSONL, and diff checks.",
+        "Evidence-bearing report and independent spec and quality reviews for task-scoped A3."
+      ],
+      "allowed_files": [
+        "web/src/router.ts",
+        "web/src/router.test.ts",
+        "web/src/components/layout/header/Sidebar.vue",
+        "web/src/components/layout/header/Sidebar.test.ts",
+        "web/src/components/layout/header/Navbar.test.ts",
+        "web/src/views/admin/AdminSettingsWrapper.vue",
+        "web/src/views/admin/AdminSettingsWrapper.test.ts",
+        "web/src/views/repo/RepoWrapper.vue",
+        "web/src/views/repo/RepoWrapper.test.ts",
+        "web/src/views/repo/settings/RepoSettings.vue",
+        "web/src/views/repo/settings/RepoSettings.test.ts",
+        "web/src/views/org/OrgWrapper.vue",
+        "web/src/views/org/OrgWrapper.test.ts",
+        "web/src/views/org/settings/OrgSettingsWrapper.vue",
+        "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
+      ],
+      "query_ids": [
+        "development:task-018-authorization-boundaries:evidence"
       ]
     }
   ]
