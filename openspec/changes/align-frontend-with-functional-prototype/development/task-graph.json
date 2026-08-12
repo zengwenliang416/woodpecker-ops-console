@@ -387,6 +387,39 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "017-user-auth-routes",
+      "baseline_task_id": "5.3",
+      "goal": "Authenticated users can operate the existing personal preferences, Secrets, Registries, CLI/API token, and optional Agents routes while guests, CLI clients, and unknown routes receive resilient prototype-aligned login, authorization, and not-found states.",
+      "depends_on": ["5.2"],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/router.ts",
+        "web/src/views/user/UserWrapper.vue",
+        "web/src/views/user/UserWrapper.test.ts",
+        "web/src/views/user/UserGeneral.vue",
+        "web/src/views/user/UserGeneral.test.ts",
+        "web/src/views/user/UserSecrets.vue",
+        "web/src/views/user/UserSecrets.test.ts",
+        "web/src/views/user/UserRegistries.vue",
+        "web/src/views/user/UserRegistries.test.ts",
+        "web/src/views/user/UserCLIAndAPI.vue",
+        "web/src/views/user/UserCLIAndAPI.test.ts",
+        "web/src/views/user/UserAgents.vue",
+        "web/src/views/user/UserAgents.test.ts",
+        "web/src/components/user/settings/UserSettingsNav.vue",
+        "web/src/components/user/settings/UserSettingsNav.test.ts",
+        "web/src/views/Login.vue",
+        "web/src/views/Login.test.ts",
+        "web/src/views/cli/Auth.vue",
+        "web/src/views/cli/Auth.test.ts",
+        "web/src/views/NotFound.vue",
+        "web/src/views/NotFound.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }

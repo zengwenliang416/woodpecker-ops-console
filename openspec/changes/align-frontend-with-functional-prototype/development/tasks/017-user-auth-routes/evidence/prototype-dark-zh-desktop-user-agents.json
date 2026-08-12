@@ -1,0 +1,35 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 个人 Agents 管理绑定到个人账号的专用 Agent。 注册 Agent 个人资料 个人 Secrets 个人镜像仓库 CLI 与 API 个人 Agents 个人 Agent 只接收当前用户有权运行的仓库任务，可用于本地开发或特殊硬件。 agent-us-east-1a-01 linux x64 docker 8 秒前 详情 agent-us-east-1a-02 linux arm64 k8s 6 秒前 详情 agent-us-east-1b-01 linux x64 gpu 9 秒前 详情",
+  "terminalRouteName": null,
+  "terminalPath": "/user/agents",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "prototype-dark-zh-desktop-user-agents",
+  "row": 43,
+  "surface": "prototype",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/个人 Agents/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

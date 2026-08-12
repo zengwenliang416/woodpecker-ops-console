@@ -355,21 +355,6 @@ const routes: RouteRecordRaw[] = [
     meta: { authentication: 'required' },
   },
 
-  {
-    path: '/:repoOwner/:repoName/:pathMatch(.*)*',
-    component: (): Component => import('~/views/repo/RepoDeprecatedRedirect.vue'),
-    props: true,
-  },
-  // TODO: deprecated routes => remove after some time
-  {
-    path: '/:ownerOrOrgId',
-    redirect: (route) => ({ name: 'org', params: route.params }),
-  },
-  {
-    path: '/:ownerOrOrgId',
-    redirect: (route) => ({ name: 'org', params: route.params }),
-  },
-
   // ---------- Ops: infrastructure & deployment control plane ----------
   {
     path: '/infrastructure',

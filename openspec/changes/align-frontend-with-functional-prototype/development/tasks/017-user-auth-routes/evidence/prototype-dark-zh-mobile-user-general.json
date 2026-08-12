@@ -1,0 +1,39 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 个人设置 管理个人资料、界面偏好和通知。 个人资料 个人 Secrets 个人镜像仓库 CLI 与 API 个人 Agents 个人资料 A Alice Johnson 从 GitHub 同步头像与登录名。 重新同步 显示名称 邮箱 语言 简体中文 English 日本語 时区 Asia/Manila Asia/Shanghai UTC 保存资料 界面偏好 主题 切换深色或浅色界面。 深色 浅色 紧凑表格 减少列表行高，在同一屏显示更多内容。 默认日志自动换行 长日志行自动换行而不是横向滚动。 通知 流水线失败 我触发的流水线失败时发送浏览器通知。 等待审批 部署等待手动审批时通知我。",
+  "terminalRouteName": null,
+  "terminalPath": "/user",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "prototype-dark-zh-mobile-user-general",
+  "row": 39,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/个人设置/i",
+      "passed": true
+    },
+    {
+      "pattern": "/个人资料/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

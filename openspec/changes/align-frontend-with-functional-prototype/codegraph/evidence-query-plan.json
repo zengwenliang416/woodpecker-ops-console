@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-12T09:13:54.931Z",
+  "generated_at": "2026-08-12T14:02:03.710Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -242,6 +242,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-016-administration-routes --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-017-user-auth-routes:evidence",
+      "claim_id": "development:task-017-user-auth-routes",
+      "stage": "development",
+      "task_id": "017-user-auth-routes",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/login` as a guest or enter `/user` as an authenticated user, navigate\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-017-user-auth-routes --query \"<query>\" --write --json"
     }
   ]
 }

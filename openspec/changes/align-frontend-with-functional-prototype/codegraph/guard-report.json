@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.guard_report.v1",
-  "generated_at": "2026-08-12T12:38:53.089Z",
+  "generated_at": "2026-08-12T14:44:33.761Z",
   "active_change": "align-frontend-with-functional-prototype",
   "stage": "development",
   "ok": true,
@@ -63,7 +63,7 @@
   },
   "evidence_index": {
     "schema": "specnav.codegraph.evidence_index.v1",
-    "generated_at": "2026-08-12T12:38:53.086Z",
+    "generated_at": "2026-08-12T14:44:33.754Z",
     "active_change": "align-frontend-with-functional-prototype",
     "source_raw": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence.jsonl",
     "by_claim": {},
@@ -74,11 +74,11 @@
   },
   "claims_report": {
     "schema": "specnav.codegraph.claims_report.v1",
-    "generated_at": "2026-08-12T12:38:53.089Z",
+    "generated_at": "2026-08-12T14:44:33.761Z",
     "active_change": "align-frontend-with-functional-prototype",
     "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
     "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-    "claims_count": 16,
+    "claims_count": 17,
     "verified_claims": [],
     "unverified_claims": [
       "development:task-001-date-duration-integrity",
@@ -96,7 +96,8 @@
       "development:task-013-repository-regression-coverage",
       "development:task-014-repository-validation-evidence",
       "development:task-015-organization-routes",
-      "development:task-016-administration-routes"
+      "development:task-016-administration-routes",
+      "development:task-017-user-auth-routes"
     ],
     "blockers": [],
     "warnings": [
@@ -115,7 +116,8 @@
       "codegraph:claim-unverified:development:task-013-repository-regression-coverage",
       "codegraph:claim-unverified:development:task-014-repository-validation-evidence",
       "codegraph:claim-unverified:development:task-015-organization-routes",
-      "codegraph:claim-unverified:development:task-016-administration-routes"
+      "codegraph:claim-unverified:development:task-016-administration-routes",
+      "codegraph:claim-unverified:development:task-017-user-auth-routes"
     ]
   },
   "drift": {
@@ -142,6 +144,7 @@
     "codegraph:claim-unverified:development:task-013-repository-regression-coverage",
     "codegraph:claim-unverified:development:task-014-repository-validation-evidence",
     "codegraph:claim-unverified:development:task-015-organization-routes",
-    "codegraph:claim-unverified:development:task-016-administration-routes"
+    "codegraph:claim-unverified:development:task-016-administration-routes",
+    "codegraph:claim-unverified:development:task-017-user-auth-routes"
   ]
 }

@@ -2,6 +2,21 @@
   "cancel": "Cancel",
   "login_to_woodpecker_with": "Sign in to Woodpecker with",
   "login": "Sign in",
+  "login_surface": {
+    "product_name": "Woodpecker CI",
+    "tagline": "Self-hosted CI/CD",
+    "eyebrow": "Build with confidence",
+    "title": "Fast, reliable pipelines for teams that own their infrastructure.",
+    "description": "Connect through one of the Forge providers configured by this Woodpecker server.",
+    "welcome": "Welcome back",
+    "loading_title": "Loading sign-in providers",
+    "loading_description": "Requesting the Forge providers configured for this server.",
+    "error_title": "Sign-in providers unavailable",
+    "error_fallback": "The Forge provider request failed.",
+    "retry": "Retry",
+    "empty_title": "No sign-in provider configured",
+    "empty_description": "An administrator must configure a Forge before guests can sign in."
+  },
   "repos": "Repos",
   "repositories": {
     "title": "Repositories",
@@ -70,8 +85,11 @@
     "stale_title": "Outdated data needs attention"
   },
   "not_found": {
-    "not_found": "Whoa 404, either we broke something or you had a typing mishap :-/",
-    "back_home": "Back to home"
+    "code": "404",
+    "title": "Page not found",
+    "description": "This address does not match a Woodpecker page, or the requested resource is no longer available.",
+    "back_overview": "Back to overview",
+    "view_repositories": "View repositories"
   },
   "errors": {
     "not_found": "Server could not find requested object"
@@ -862,6 +880,50 @@
   "user": {
     "settings": {
       "settings": "User Settings",
+      "surface": {
+        "navigation_label": "User settings",
+        "account_description": "Review your Forge identity and manage the preferences stored by this browser.",
+        "identity_title": "Account identity",
+        "identity_description": "These values come from the authenticated Forge account and are read-only here.",
+        "email": "Email",
+        "not_provided": "Not provided",
+        "forge_id": "Forge ID",
+        "preferences_title": "Interface preferences",
+        "preferences_description": "These settings apply locally without changing your Forge profile.",
+        "language_description": "Choose the language used by this browser.",
+        "theme_description": "Follow the system theme or select a fixed appearance.",
+        "retry": "Retry",
+        "actions": "Actions",
+        "access": "Access",
+        "read_only": "Read only",
+        "editable": "Editable",
+        "loaded_count": "{count} loaded",
+        "secret_form_description": "Create or update a Secret through the current user organization contract.",
+        "secrets_loading_title": "Loading personal Secrets",
+        "secrets_loading_description": "Requesting Secrets for your current account organization.",
+        "secrets_empty_description": "Create the first Secret available to your personal repositories.",
+        "secrets_error": "The personal Secret request failed.",
+        "secret_mutation_error": "The personal Secret change failed.",
+        "registry_form_description": "Create, view, or update Registry credentials through the current user organization contract.",
+        "registries_loading_title": "Loading personal Registries",
+        "registries_loading_description": "Requesting Registry credentials for your current account organization.",
+        "registries_empty_description": "Add the first Registry credential available to your personal pipelines.",
+        "registries_error": "The personal Registry request failed.",
+        "registry_mutation_error": "The personal Registry change failed.",
+        "cli_title": "Woodpecker CLI",
+        "cli_description": "Use the existing setup flow against this Woodpecker server.",
+        "token_description": "The current API returns this token whenever the page requests it.",
+        "token_loading_title": "Loading Personal Access Token",
+        "token_loading_description": "Requesting the current token from the server.",
+        "token_error_title": "Token unavailable",
+        "token_error_fallback": "The token request failed.",
+        "token_reset_error_fallback": "The token reset failed.",
+        "token_empty_title": "No token returned",
+        "token_empty_description": "Retry the request before using the API examples.",
+        "api_description": "Use the current token with the existing user API.",
+        "agents_disabled_title": "Personal Agents are disabled",
+        "agents_disabled_description": "This Woodpecker server has not enabled user-registered Agents."
+      },
       "general": {
         "general": "Account",
         "language": "Language",
@@ -890,7 +952,6 @@
         "desc": "Personal Access Token, CLI and API usage",
         "token": "Personal Access Token",
         "api_usage": "Example API Usage",
-        "cli_usage": "Example CLI Usage",
         "download_cli": "Download CLI",
         "reset_token": "Reset token",
         "swagger_ui": "Swagger UI"
@@ -960,6 +1021,16 @@
   "cli_login_failed": "Sign-in to CLI failed",
   "cli_login_denied": "Sign-in to CLI denied",
   "return_to_cli": "You can now close this tab and return to the CLI.",
+  "cli_auth": {
+    "product_name": "Woodpecker CLI",
+    "subtitle": "Local authorization",
+    "invalid_title": "Invalid CLI callback",
+    "invalid_description": "The callback port is missing or outside the valid TCP port range.",
+    "callback_rejected": "The local CLI callback rejected the authorization response.",
+    "error_fallback": "CLI authorization failed.",
+    "retry": "Try again",
+    "back": "Back to CLI & API"
+  },
   "settings": "Settings",
   "oauth_error": "Error while authenticating against OAuth provider",
   "internal_error": "Internal error occurred",
@@ -1041,8 +1112,6 @@
   "forge_saved": "Forge saved",
   "fullscreen": "Fullscreen",
   "exit_fullscreen": "Exit fullscreen",
-  "help_translating": "You can help translate Woodpecker into your language on {0}.",
-  "weblate": "our Weblate",
   "disabled": "Disabled",
   "ops": {
     "sidebar": {

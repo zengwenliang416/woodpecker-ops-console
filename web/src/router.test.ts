@@ -246,4 +246,39 @@ describe('router base path', () => {
       }
     }
   }, 15_000);
+
+  it('resolves user, login, CLI authorization, and not-found destinations with current authentication metadata', async () => {
+    Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: '/woodpecker' });
+    const { default: router } = await import('./router');
+
+    const userDestinations = [
+      { name: 'user', path: '/user' },
+      { name: 'user-secrets', path: '/user/secrets' },
+      { name: 'user-registries', path: '/user/registries' },
+      { name: 'user-cli-and-api', path: '/user/cli-and-api' },
+      { name: 'user-agents', path: '/user/agents' },
+    ] as const;
+
+    for (const destination of userDestinations) {
+      expect(router.resolve({ name: destination.name }).href).toBe(`/woodpecker${destination.path}`);
+      const incoming = router.resolve(destination.path);
+      expect(incoming.matched.at(-1)?.name).toBe(destination.name);
+      expect(incoming.meta.authentication).toBe('required');
+    }
+
+    const login = router.resolve('/login');
+    expect(router.resolve({ name: 'login' }).href).toBe('/woodpecker/login');
+    expect(login.matched.at(-1)?.name).toBe('login');
+    expect(login.meta.authentication).toBe('guest-only');
+    expect(login.meta.layout).toBe('blank');
+
+    const cliAuth = router.resolve('/cli/auth?port=49152');
+    expect(cliAuth.path).toBe('/cli/auth');
+    expect(cliAuth.query.port).toBe('49152');
+    expect(cliAuth.meta.authentication).toBe('required');
+
+    const missing = router.resolve('/definitely-not-a-route');
+    expect(missing.matched.at(-1)?.name).toBe('not-found');
+    expect(router.resolve('/definitely/not/a/route').matched.at(-1)?.name).toBe('not-found');
+  }, 15_000);
 });

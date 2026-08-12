@@ -1,0 +1,39 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 404 页面不存在 此地址没有对应的 Woodpecker 页面，或请求的资源已不可用。 返回概览 查看仓库",
+  "terminalRouteName": "not-found",
+  "terminalPath": "/definitely-not-a-route",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "production-dark-zh-desktop-not-found",
+  "row": 45,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/页面不存在|Page not found/i",
+      "passed": true
+    },
+    {
+      "pattern": "/404/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

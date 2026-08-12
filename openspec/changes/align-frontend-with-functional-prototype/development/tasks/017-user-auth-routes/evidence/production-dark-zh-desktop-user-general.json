@@ -1,0 +1,39 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 用户设置 退出登录 账户设置 密钥 注册表 CLI & API 代理 账户设置 查看 Forge 身份，并管理当前浏览器保存的界面偏好。 账户身份 这些值来自已认证的 Forge 账户，在此处为只读。 AL 用户名 alice 邮箱 alice@example.test FORGE ID 1 界面偏好 这些设置仅在本地生效，不会修改 Forge 资料。 语言 选择当前浏览器使用的语言。 العربية bar বাংলা čeština Deutsch English 世界语 español suomi français हिन्दी magyar Indonesia italiano 日本語 한국어 latviešu norsk bokmål (Norge) Nederlands polski português русский ไทย українська اردو 简体中文 繁體中文 主题 跟随系统主题，或选择固定外观。 自动 亮色 暗色 流水线日志 打开已完成的步骤时，折叠所有命令组以仅显示概要。 默认折叠日志分组",
+  "terminalRouteName": "user",
+  "terminalPath": "/user",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "production-dark-zh-desktop-user-general",
+  "row": 39,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/账户设置|Account/i",
+      "passed": true
+    },
+    {
+      "pattern": "/alice@example\\.test/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

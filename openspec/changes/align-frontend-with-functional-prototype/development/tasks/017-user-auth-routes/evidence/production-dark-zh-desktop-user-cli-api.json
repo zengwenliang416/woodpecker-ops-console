@@ -1,0 +1,39 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 用户设置 退出登录 账户设置 密钥 注册表 CLI & API 代理 CLI & API 个人访问令牌、CLI 和 API 用法 Woodpecker CLI 使用现有 setup 流程连接当前 Woodpecker 服务器。 下载 CLI # woodpecker setup --server http://127.0.0.1:8170 个人访问令牌 当前 API 会在页面请求时返回此 Token。 重置令牌 task017-personal-token API 用法示例 通过当前 Token 调用现有用户 API。 export WOODPECKER_SERVER=\"http://127.0.0.1:8170\" export WOODPECKER_TOKEN=\"task017-personal-token\" curl -i -H \"Authorization: Bearer ${WOODPECKER_TOKEN}\" \"${WOODPECKER_SERVER}/api/user\"",
+  "terminalRouteName": "user-cli-and-api",
+  "terminalPath": "/user/cli-and-api",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "production-dark-zh-desktop-user-cli-api",
+  "row": 42,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/task017-personal-token/i",
+      "passed": true
+    },
+    {
+      "pattern": "/CLI.*API/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

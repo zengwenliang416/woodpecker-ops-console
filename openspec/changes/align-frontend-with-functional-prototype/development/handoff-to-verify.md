@@ -70,8 +70,13 @@
   global Secrets and Registries, repositories, users, organizations, Agents,
   Queue, and Forge list/detail/create routes with current typed APIs, explicit
   states, confirmed-data continuity, and lifecycle-owned mutations.
+- `017-user-auth-routes` / baseline task `5.3`: authenticated users now use a
+  responsive personal settings hierarchy for real identity/preferences,
+  organization-backed Secrets, Registries, and optional Agents, plus current
+  token APIs; guests and CLI clients receive Forge-only login, safe OAuth error
+  links, query-owned localhost authorization, and a truthful catch-all 404.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `5.3` through `8.4` remain incomplete.
+  Tasks `5.4` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -127,6 +132,13 @@
   English/Simplified-Chinese copy, focused regressions, task-local Mock API,
   CDP capture, strict verifier, `44` measurement/PNG pairs, report, and
   superseding independent reviews.
+- User/auth routes: catch-all router coverage, responsive `UserSettingsNav`,
+  real account preferences and identity, organization-backed personal
+  Secret/Registry/Agent routes, current token get/reset, Forge-only login,
+  query-owned localhost CLI authorization, safe OAuth error links, truthful
+  not-found actions, bilingual copy, focused regressions, task-local Mock API,
+  CDP capture, strict verifier, `32` measurement/PNG pairs, report, and
+  superseding independent reviews.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -143,7 +155,8 @@
   `development/tasks/013-repository-regression-coverage/report.md`, and
   `development/tasks/014-repository-validation-evidence/report.md`,
   `development/tasks/015-organization-routes/report.md`, and
-  `development/tasks/016-administration-routes/report.md`.
+  `development/tasks/016-administration-routes/report.md`, and
+  `development/tasks/017-user-auth-routes/report.md`.
 
 ## Requirements Covered
 
@@ -202,6 +215,12 @@
   lifecycle ownership preserves confirmed rows/editors and rejects obsolete or
   post-unmount completions. Full `A2` remains open under task `5.5`, and rows
   `28-38` remain `in-progress`.
+- Task-scoped `A3` and `A4` were independently verified for user/auth slice
+  `017`: the eight existing destinations pass focused/full/static/build checks
+  and exact dark Simplified-Chinese desktop/390px evidence; confirmed resources,
+  editors, tokens, Forge loads, and CLI callbacks reject obsolete owner
+  completions. Full `A2` remains open under task `5.5`, permission-family
+  closure remains task `5.4`, and rows `1` and `39-45` remain `in-progress`.
 
 ## Prototype Decisions Implemented
 
@@ -252,6 +271,11 @@
   permissions, and supported mutations. Prototype-only health, capacity,
   telemetry, audit, invitation, quota, priority, promote/cancel, connection
   test/status/count, and usage metrics are not invented.
+- User/auth routes use only authenticated `User` fields, browser-owned
+  preferences, current organization resource APIs, existing token endpoints,
+  Forge providers, and the localhost CLI callback protocol. Password/SSO,
+  profile mutation, authorized applications, device/location approval, Agent
+  telemetry, and unsafe OAuth error links are not invented or exposed.
 
 ## Components Created / Reused / Extracted
 

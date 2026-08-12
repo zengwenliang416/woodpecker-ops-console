@@ -1,0 +1,35 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A CLI 与 API 管理命令行登录、访问令牌和 API 使用方式。 个人资料 个人 Secrets 个人镜像仓库 CLI 与 API 个人 Agents Woodpecker CLI 在终端中登录当前实例。 服务器地址 https://ci.acme.example 登录命令 woodpecker-cli login --server https://ci.acme.example 打开 CLI 授权页 下载 CLI 个人 API Token Token 只会在创建时显示一次。 尚未生成个人 Token 用于脚本、CLI 或第三方集成访问 Woodpecker API。 生成 Token 已授权应用 woodpecker-cli · macOS 最后使用：2 小时前 · 192.168.1.24 撤销 VS Code Extension 最后使用：3 天前 · 192.168.1.31 撤销",
+  "terminalRouteName": null,
+  "terminalPath": "/user/cli-and-api",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "6e59b655-c195-4474-8ac2-f0cda499de43",
+  "stateId": "prototype-dark-zh-mobile-user-cli-api",
+  "row": 42,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/CLI 与 API/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}
