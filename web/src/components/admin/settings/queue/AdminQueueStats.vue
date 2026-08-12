@@ -1,50 +1,21 @@
 <template>
-  <div v-if="stats" class="flex justify-center">
-    <div
-      class="border-wp-background-400 dark:border-wp-background-100 bg-wp-background-200 dark:bg-wp-background-200 text-wp-text-100 w-full rounded-md border px-5 py-5"
-    >
-      <div class="flex w-full">
-        <h3 class="flex-1 text-lg leading-tight font-semibold uppercase">
-          {{ $t('admin.settings.queue.stats.completed_count') }}
-        </h3>
-      </div>
-      <div class="relative overflow-hidden transition-all duration-500">
-        <div>
-          <div class="pb-4 lg:pb-6">
-            <h4 class="inline-block text-2xl leading-tight font-semibold lg:text-3xl">
-              {{ stats.completed_count }}
-            </h4>
-          </div>
-          <div v-if="total > 0" class="pb-4 lg:pb-6">
-            <div class="flex h-3 overflow-hidden rounded-full transition-all duration-500">
-              <div
-                v-for="item in data"
-                :key="item.key"
-                class="h-full"
-                :class="`${item.color}`"
-                :style="{ width: `${item.percentage}%` }"
-              >
-                &nbsp;
-              </div>
-            </div>
-          </div>
-          <div class="-mx-4 flex sm:flex-wrap">
-            <div
-              v-for="(item, index) in data"
-              :key="item.key"
-              class="px-4 sm:w-full md:w-1/4"
-              :class="{ 'border-wp-border-100 md:border-l': index !== 0 }"
-            >
-              <div class="overflow-hidden text-sm text-ellipsis whitespace-nowrap">
-                <span class="mr-1 inline-block h-2 w-2 rounded-full align-middle" :class="`${item.color}`">&nbsp;</span>
-                <span class="align-middle">{{ item.label }}</span>
-              </div>
-              <div class="text-lg font-medium">
-                {{ item.value }}
-              </div>
-            </div>
-          </div>
-        </div>
+  <div v-if="stats" class="queue-stats">
+    <div class="queue-completed">
+      <span>{{ $t('admin.settings.queue.stats.completed_count') }}</span>
+      <strong>{{ stats.completed_count }}</strong>
+    </div>
+
+    <div v-if="total > 0" class="queue-distribution" aria-hidden="true">
+      <span v-for="item in data" :key="item.key" :class="item.color" :style="{ width: `${item.percentage}%` }" />
+    </div>
+
+    <div class="queue-stat-grid">
+      <div v-for="item in data" :key="item.key" class="queue-stat">
+        <span class="queue-stat-label">
+          <i :class="item.color" aria-hidden="true" />
+          {{ item.label }}
+        </span>
+        <strong>{{ item.value }}</strong>
       </div>
     </div>
   </div>
@@ -89,7 +60,7 @@ const data = computed(() => {
       key: 'running_count',
       label: t('admin.settings.queue.stats.running_count'),
       value: props.stats.running_count,
-      percentage: total.value > 0 ? (props.stats.running_count / total.value) * 100 : 100,
+      percentage: total.value > 0 ? (props.stats.running_count / total.value) * 100 : 0,
       color: 'bg-wp-state-info-100',
     },
     {
@@ -109,3 +80,51 @@ const data = computed(() => {
   ];
 });
 </script>
+
+<style scoped>
+@reference '~/tailwind.css';
+
+.queue-stats {
+  @apply flex min-w-0 flex-col gap-4;
+}
+
+.queue-completed {
+  @apply border-wp-border-100 bg-wp-background-200 flex min-w-0 items-end justify-between gap-3 rounded-lg border px-4 py-3;
+}
+
+.queue-completed span {
+  @apply text-wp-text-alt-100 min-w-0 text-xs font-semibold;
+}
+
+.queue-completed strong {
+  @apply text-wp-text-200 shrink-0 text-2xl font-bold;
+}
+
+.queue-distribution {
+  @apply flex h-2 w-full min-w-0 overflow-hidden rounded-full;
+}
+
+.queue-distribution span {
+  @apply h-full;
+}
+
+.queue-stat-grid {
+  @apply grid min-w-0 grid-cols-2 gap-2 lg:grid-cols-4;
+}
+
+.queue-stat {
+  @apply border-wp-border-100 bg-wp-background-200 flex min-w-0 flex-col gap-1 rounded-lg border px-3 py-2.5;
+}
+
+.queue-stat-label {
+  @apply text-wp-text-alt-100 flex min-w-0 items-center gap-1.5 truncate text-[11px];
+}
+
+.queue-stat-label i {
+  @apply h-2 w-2 shrink-0 rounded-full;
+}
+
+.queue-stat strong {
+  @apply text-wp-text-200 text-lg font-bold;
+}
+</style>

@@ -1,0 +1,53 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 用户 在此服务器上注册的用户。 添加用户 用户名 邮箱 代码托管平台 管理员 操作 alice alice@example.test forge.example 管理员 已加载 1 项资源",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 用户 在此服务器上注册的用户。 添加用户 用户名 邮箱 代码托管平台 管理员 操作 alice alice@example.test forge.example 管理员 已加载 1 项资源",
+  "terminalRouteName": "admin-settings-users",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 774,
+      "overflowX": "auto"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 322,
+      "scrollWidth": 760,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "production-dark-zh-mobile-admin-users",
+  "row": 32,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/alice/i",
+      "passed": true
+    },
+    {
+      "pattern": "/用户|Users/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

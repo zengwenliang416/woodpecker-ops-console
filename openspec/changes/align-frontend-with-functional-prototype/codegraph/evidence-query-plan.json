@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-12T06:51:19.385Z",
+  "generated_at": "2026-08-12T09:13:54.931Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -227,6 +227,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-015-organization-routes --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-016-administration-routes:evidence",
+      "claim_id": "development:task-016-administration-routes",
+      "stage": "development",
+      "task_id": "016-administration-routes",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/admin` as a system administrator, navigate the nine existing\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-016-administration-routes --query \"<query>\" --write --json"
     }
   ]
 }

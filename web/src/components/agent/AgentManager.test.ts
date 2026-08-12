@@ -250,6 +250,58 @@ describe('agent manager', () => {
     expect(pagination.resetPage).toHaveBeenCalledTimes(resetCalls);
   });
 
+  it('keeps an unmounted completion inert when the owner identity is static', async () => {
+    const creation = deferred<Agent>();
+    const createAgent = vi.fn().mockReturnValue(creation.promise);
+    const wrapper = mountManager({ createAgent, ownerKey: 'admin', ownerLifecycle: undefined });
+
+    await wrapper
+      .findAll('button')
+      .find((button) => button.text() === 'Add agent')!
+      .trigger('click');
+    await wrapper.get('[data-testid="agent-save"]').trigger('click');
+    const resetCalls = pagination.resetPage.mock.calls.length;
+    wrapper.unmount();
+    creation.resolve({ id: 9, name: 'obsolete-created' } as Agent);
+    await flushPromises();
+
+    expect(notify).not.toHaveBeenCalled();
+    expect(pagination.resetPage).toHaveBeenCalledTimes(resetCalls);
+  });
+
+  it('allows a new editor to save while an obsolete same-owner save is still pending', async () => {
+    const obsolete = deferred<Agent>();
+    const current = deferred<Agent>();
+    const createAgent = vi.fn().mockReturnValueOnce(obsolete.promise).mockReturnValueOnce(current.promise);
+    const wrapper = mountManager({ createAgent, ownerKey: 'admin', ownerLifecycle: undefined });
+
+    await wrapper
+      .findAll('button')
+      .find((button) => button.text() === 'Add agent')!
+      .trigger('click');
+    await wrapper.get('[data-testid="agent-save"]').trigger('click');
+    await wrapper
+      .findAll('button')
+      .find((button) => button.text() === 'Show agents')!
+      .trigger('click');
+    await wrapper
+      .findAll('button')
+      .find((button) => button.text() === 'Add agent')!
+      .trigger('click');
+    await wrapper.get('[data-testid="agent-save"]').trigger('click');
+
+    expect(createAgent).toHaveBeenCalledTimes(2);
+
+    obsolete.resolve({ id: 8, name: 'obsolete' } as Agent);
+    await flushPromises();
+    expect(notify).not.toHaveBeenCalled();
+    expect(wrapper.find('[data-testid="agent-save"]').exists()).toBe(true);
+
+    current.resolve({ id: 9, name: 'current' } as Agent);
+    await flushPromises();
+    expect(notify).toHaveBeenCalledWith({ title: 'Agent created', type: 'success' });
+  });
+
   it('keeps confirmed rows and the editor when active mutations fail', async () => {
     pagination.data!.value = [{ id: 7, name: 'confirmed-agent' } as Agent];
     const updateAgent = vi.fn().mockRejectedValue(new Error('agent save failed'));

@@ -6,6 +6,7 @@
     :update-agent="updateAgent"
     :delete-agent="deleteAgent"
     :is-admin="true"
+    owner-key="admin"
   />
 </template>
 

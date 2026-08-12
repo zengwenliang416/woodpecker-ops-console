@@ -5,12 +5,7 @@
         <h1>{{ $t('admin.settings.agents.agents') }}</h1>
         <p>{{ description }}</p>
       </div>
-      <Button
-        v-if="selectedAgent"
-        :text="$t('admin.settings.agents.show')"
-        start-icon="back"
-        @click="selectedAgent = undefined"
-      />
+      <Button v-if="selectedAgent" :text="$t('admin.settings.agents.show')" start-icon="back" @click="closeEditor" />
       <Button v-else color="green" :text="$t('admin.settings.agents.add')" start-icon="plus" @click="showAddAgent" />
     </header>
 
@@ -24,7 +19,7 @@
         :is-editing-agent="isEditingAgent"
         :is-saving="isSaving"
         @save="saveAgent"
-        @cancel="selectedAgent = undefined"
+        @cancel="closeEditor"
       />
     </SettingsSection>
 
@@ -78,7 +73,7 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
@@ -111,8 +106,11 @@ const selectedAgent = ref<Partial<Agent>>();
 const isEditingAgent = computed(() => !!selectedAgent.value?.id);
 const loadError = ref('');
 const confirmedAgents = ref<Agent[] | null>(null);
+const isSaving = ref(false);
 let reloadGeneration = 0;
 let ownerLifecycleGeneration = 0;
+let saveGeneration = 0;
+let unmounted = false;
 
 interface MutationOwnership {
   owner: string | number | undefined;
@@ -120,7 +118,6 @@ interface MutationOwnership {
   generation: number;
 }
 
-let saveOwnership: MutationOwnership | undefined;
 let deleteOwnership: MutationOwnership | undefined;
 
 function currentOwnership(): MutationOwnership {
@@ -132,7 +129,7 @@ function currentOwnership(): MutationOwnership {
 }
 
 function ownsCurrentLifecycle(ownership: MutationOwnership | undefined) {
-  if (!ownership) {
+  if (!ownership || unmounted) {
     return false;
   }
   return (
@@ -186,30 +183,38 @@ async function reloadAgents() {
   await resetPage();
 }
 
-const { doSubmit: saveAgent, isLoading: isSaving } = useAsyncAction(async () => {
-  if (!selectedAgent.value) {
-    throw new Error("Unexpected: Can't get agent");
+async function saveAgent() {
+  if (!selectedAgent.value || isSaving.value) {
+    return;
   }
 
-  saveOwnership = currentOwnership();
+  const saveOwnership = currentOwnership();
+  const requestGeneration = ++saveGeneration;
   const editing = isEditingAgent.value;
+  const submittedAgent = deepClone(selectedAgent.value);
+  isSaving.value = true;
+
   try {
     if (editing) {
-      await props.updateAgent(selectedAgent.value as Agent);
+      await props.updateAgent(submittedAgent as Agent);
     } else {
-      const createdAgent = await props.createAgent(selectedAgent.value);
-      if (!ownsCurrentLifecycle(saveOwnership)) {
+      const createdAgent = await props.createAgent(submittedAgent);
+      if (!ownsCurrentLifecycle(saveOwnership) || requestGeneration !== saveGeneration) {
         return;
       }
       selectedAgent.value = createdAgent;
     }
   } catch (error) {
-    if (ownsCurrentLifecycle(saveOwnership)) {
+    if (ownsCurrentLifecycle(saveOwnership) && requestGeneration === saveGeneration) {
       notifyMutationError(error);
     }
     return;
+  } finally {
+    if (ownsCurrentLifecycle(saveOwnership) && requestGeneration === saveGeneration) {
+      isSaving.value = false;
+    }
   }
-  if (!ownsCurrentLifecycle(saveOwnership)) {
+  if (!ownsCurrentLifecycle(saveOwnership) || requestGeneration !== saveGeneration) {
     return;
   }
 
@@ -221,7 +226,7 @@ const { doSubmit: saveAgent, isLoading: isSaving } = useAsyncAction(async () => 
     type: 'success',
   });
   await reloadAgents();
-});
+}
 
 const { doSubmit: deleteAgent, isLoading: isDeleting } = useAsyncAction(async (agent: Agent) => {
   // eslint-disable-next-line no-alert
@@ -247,11 +252,24 @@ const { doSubmit: deleteAgent, isLoading: isDeleting } = useAsyncAction(async (a
 });
 
 function editAgent(agent: Agent) {
+  invalidateEditor();
   selectedAgent.value = deepClone(agent);
 }
 
 function showAddAgent() {
+  invalidateEditor();
   selectedAgent.value = { name: '' };
+}
+
+function invalidateEditor() {
+  ownerLifecycleGeneration += 1;
+  saveGeneration += 1;
+  isSaving.value = false;
+}
+
+function closeEditor() {
+  invalidateEditor();
+  selectedAgent.value = undefined;
 }
 
 watch(
@@ -259,12 +277,21 @@ watch(
   () => {
     ownerLifecycleGeneration += 1;
     reloadGeneration += 1;
+    saveGeneration += 1;
+    isSaving.value = false;
     selectedAgent.value = undefined;
     loadError.value = '';
     confirmedAgents.value = null;
     void resetPage();
   },
 );
+
+onBeforeUnmount(() => {
+  unmounted = true;
+  ownerLifecycleGeneration += 1;
+  reloadGeneration += 1;
+  saveGeneration += 1;
+});
 </script>
 
 <style scoped>

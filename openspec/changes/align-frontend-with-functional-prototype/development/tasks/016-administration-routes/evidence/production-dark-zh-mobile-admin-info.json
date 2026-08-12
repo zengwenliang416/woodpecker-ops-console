@@ -1,0 +1,47 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 系统概览 查看当前 Woodpecker 版本，并进入服务器已有的管理页面。 Woodpecker 版本 当前 Woodpecker 服务报告的版本信息。 你正在运行 Woodpecker 3.9.0-task016 本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。 管理入口 管理当前 Woodpecker API 已提供的服务器资源。 仓库 该服务器上已启用或曾经启用的仓库。 用户 在此服务器上注册的用户。 组织 在此服务器上拥有存储库的组织。 代理 注册到此服务器的代理。 队列 正在等待 Agents 执行的任务。 代码托管平台 配置 Woodpecker 为其工作的代码托管平台。",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 系统概览 查看当前 Woodpecker 版本，并进入服务器已有的管理页面。 Woodpecker 版本 当前 Woodpecker 服务报告的版本信息。 你正在运行 Woodpecker 3.9.0-task016 本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。 管理入口 管理当前 Woodpecker API 已提供的服务器资源。 仓库 该服务器上已启用或曾经启用的仓库。 用户 在此服务器上注册的用户。 组织 在此服务器上拥有存储库的组织。 代理 注册到此服务器的代理。 队列 正在等待 Agents 执行的任务。 代码托管平台 配置 Woodpecker 为其工作的代码托管平台。",
+  "terminalRouteName": "admin-settings",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 774,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "production-dark-zh-mobile-admin-info",
+  "row": 28,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/3\\.9\\.0-task016/i",
+      "passed": true
+    },
+    {
+      "pattern": "/管理入口|Administration destinations/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

@@ -1,51 +1,79 @@
 <template>
-  <Settings :title="$t('admin.settings.orgs.orgs')" :description="$t('admin.settings.orgs.desc')">
-    <div class="text-wp-text-100 space-y-4">
-      <ListItem
-        v-for="org in orgs"
-        :key="org.id"
-        class="bg-wp-background-200! dark:bg-wp-background-200! items-center gap-2"
-      >
-        <span>{{ org.name }}</span>
-        <div class="ml-auto flex items-center gap-2">
-          <IconButton
-            icon="chevron-right"
-            :title="$t('admin.settings.orgs.view')"
-            class="h-8 w-8"
-            :to="{ name: 'org', params: { orgId: org.id } }"
-          />
-          <IconButton
-            icon="settings-outline"
-            :title="$t('admin.settings.orgs.org_settings')"
-            class="h-8 w-8"
-            :to="{ name: 'org-settings', params: { orgId: org.id } }"
-          />
-          <IconButton
-            icon="trash"
-            :title="$t('admin.settings.orgs.delete_org')"
-            class="hover:text-wp-error-100 h-8 w-8"
-            :is-loading="isDeleting"
-            @click="deleteOrg(org)"
-          />
-        </div>
-      </ListItem>
+  <div class="admin-resource-page min-w-0">
+    <SettingsSection :title="$t('admin.settings.orgs.orgs')" :description="$t('admin.settings.orgs.desc')">
+      <FeedbackState v-if="loadError" compact kind="error" :title="$t('unknown_error')" :description="loadError">
+        <template #action>
+          <Button start-icon="refresh" :text="$t('admin.settings.surface.retry')" @click="reloadOrgs" />
+        </template>
+      </FeedbackState>
 
-      <div v-if="loading" class="flex justify-center">
-        <Icon name="spinner" class="animate-spin" />
-      </div>
-      <div v-else-if="orgs?.length === 0" class="ml-2">{{ $t('admin.settings.orgs.none') }}</div>
-    </div>
-  </Settings>
+      <FeedbackState
+        v-if="loading && displayedOrgs.length === 0"
+        kind="loading"
+        :title="$t('feedback.loading_title')"
+        :description="$t('feedback.loading_description')"
+      />
+
+      <FeedbackState
+        v-else-if="!loadError && displayedOrgs.length === 0"
+        kind="empty"
+        :title="$t('admin.settings.orgs.none')"
+      />
+
+      <SettingsTable v-else-if="displayedOrgs.length > 0" class="mt-3" min-width="560px">
+        <template #head>
+          <tr>
+            <th>{{ $t('admin.settings.agents.name.name') }}</th>
+            <th>
+              <span class="sr-only">{{ $t('admin.settings.surface.actions') }}</span>
+            </th>
+          </tr>
+        </template>
+
+        <tr v-for="org in displayedOrgs" :key="org.id">
+          <td>
+            <span class="font-semibold">{{ org.name }}</span>
+          </td>
+          <td>
+            <div class="flex justify-end gap-1">
+              <IconButton
+                icon="chevron-right"
+                :title="$t('admin.settings.orgs.view')"
+                :to="{ name: 'org', params: { orgId: org.id } }"
+              />
+              <IconButton
+                icon="settings-outline"
+                :title="$t('admin.settings.orgs.org_settings')"
+                :to="{ name: 'org-settings', params: { orgId: org.id } }"
+              />
+              <IconButton
+                icon="trash"
+                class="text-wp-error-100"
+                :title="$t('admin.settings.orgs.delete_org')"
+                :is-loading="isDeleting"
+                @click="confirmDeleteOrg(org)"
+              />
+            </div>
+          </td>
+        </tr>
+
+        <template #footer>
+          {{ $t('admin.settings.surface.loaded_count', { count: displayedOrgs.length }) }}
+        </template>
+      </SettingsTable>
+    </SettingsSection>
+  </div>
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue';
+import { computed, nextTick, onBeforeUnmount, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import Icon from '~/components/atomic/Icon.vue';
+import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
-import ListItem from '~/components/atomic/ListItem.vue';
-import Settings from '~/components/layout/Settings.vue';
+import SettingsSection from '~/components/settings/SettingsSection.vue';
+import SettingsTable from '~/components/settings/SettingsTable.vue';
 import useApiClient from '~/compositions/useApiClient';
 import { useAsyncAction } from '~/compositions/useAsyncAction';
 import useNotifications from '~/compositions/useNotifications';
@@ -55,24 +83,115 @@ import type { Org } from '~/lib/api/types';
 
 const apiClient = useApiClient();
 const notifications = useNotifications();
-const { t } = useI18n();
+const i18n = useI18n();
+
+const loadError = ref('');
+const confirmedOrgs = ref<Org[] | null>(null);
+let mounted = true;
+let requestGeneration = 0;
+let lifecycle = 0;
+
+function ownsLifecycle(ownership: number) {
+  return mounted && ownership === lifecycle;
+}
+
+function notifyMutationError(error: unknown) {
+  notifications.notify({
+    title: error instanceof Error ? error.message : i18n.t('unknown_error'),
+    type: 'error',
+  });
+}
 
 async function loadOrgs(page: number): Promise<Org[] | null> {
-  return apiClient.getOrgs({ page });
+  const ownership = requestGeneration;
+  try {
+    const result = await apiClient.getOrgs({ page });
+    if (mounted && ownership === requestGeneration && page === 1 && (result?.length ?? 0) === 0) {
+      confirmedOrgs.value = [];
+    }
+    return result;
+  } catch (error) {
+    if (mounted && ownership === requestGeneration) {
+      loadError.value = error instanceof Error ? error.message : i18n.t('unknown_error');
+    }
+    return [];
+  }
 }
 
 const { resetPage, data: orgs, loading } = usePagination(loadOrgs);
+const displayedOrgs = computed(() => confirmedOrgs.value ?? orgs.value);
 
-const { doSubmit: deleteOrg, isLoading: isDeleting } = useAsyncAction(async (_org: Org) => {
-  // eslint-disable-next-line no-alert
-  if (!confirm(t('admin.settings.orgs.delete_confirm'))) {
+watch(
+  [orgs, loading, loadError],
+  ([rows, isLoading, error]) => {
+    if (!isLoading && !error && (confirmedOrgs.value === null || rows.length > 0)) {
+      confirmedOrgs.value = [...rows];
+    }
+  },
+  { deep: true, immediate: true },
+);
+
+async function waitForPaginationIdle() {
+  await nextTick();
+  if (!loading.value) {
+    return;
+  }
+  await new Promise<void>((resolve) => {
+    const stop = watch(loading, (isLoading) => {
+      if (!isLoading) {
+        stop();
+        resolve();
+      }
+    });
+  });
+}
+
+async function reloadOrgs() {
+  requestGeneration += 1;
+  loadError.value = '';
+  await resetPage();
+  await waitForPaginationIdle();
+}
+
+const { doSubmit: deleteOrg, isLoading: isDeleting } = useAsyncAction(async (org: Org) => {
+  const ownership = lifecycle;
+  try {
+    await apiClient.deleteOrg(org);
+  } catch (error) {
+    if (ownsLifecycle(ownership)) {
+      notifyMutationError(error);
+    }
+    return;
+  }
+  if (!ownsLifecycle(ownership)) {
     return;
   }
 
-  await apiClient.deleteOrg(_org);
-  notifications.notify({ title: t('admin.settings.orgs.deleted'), type: 'success' });
-  await resetPage();
+  notifications.notify({ title: i18n.t('admin.settings.orgs.deleted'), type: 'success' });
+  await reloadOrgs();
 });
 
-useWPTitle(computed(() => [t('admin.settings.orgs.orgs'), t('admin.settings.settings')]));
+function confirmDeleteOrg(org: Org) {
+  // eslint-disable-next-line no-alert
+  if (confirm(i18n.t('admin.settings.orgs.delete_confirm'))) {
+    void deleteOrg(org);
+  }
+}
+
+onBeforeUnmount(() => {
+  mounted = false;
+  lifecycle += 1;
+  requestGeneration += 1;
+});
+
+useWPTitle(computed(() => [i18n.t('admin.settings.orgs.orgs'), i18n.t('admin.settings.settings')]));
 </script>
+
+<style scoped>
+@reference '~/tailwind.css';
+
+.admin-resource-page {
+  @apply flex max-w-full flex-col gap-4;
+  contain: layout paint;
+}
+</style>

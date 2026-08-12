@@ -1,19 +1,15 @@
 <template>
-  <Scaffold enable-tabs>
+  <Scaffold v-if="user?.admin" full-width-header fluid-content>
     <template #title>
       {{ $t('admin.settings.settings') }}
     </template>
-    <Tab icon="info" :to="{ name: 'admin-settings' }" :title="$t('info')" />
-    <Tab icon="secret" :to="{ name: 'admin-settings-secrets' }" :title="$t('secrets.secrets')" />
-    <Tab icon="docker" :to="{ name: 'admin-settings-registries' }" :title="$t('registries.registries')" />
-    <Tab icon="repo" :to="{ name: 'admin-settings-repos' }" :title="$t('admin.settings.repos.repos')" />
-    <Tab icon="user" :to="{ name: 'admin-settings-users' }" :title="$t('admin.settings.users.users')" />
-    <Tab icon="org" :to="{ name: 'admin-settings-orgs' }" :title="$t('admin.settings.orgs.orgs')" />
-    <Tab icon="agent" :to="{ name: 'admin-settings-agents' }" :title="$t('admin.settings.agents.agents')" />
-    <Tab icon="tray-full" :to="{ name: 'admin-settings-queue' }" :title="$t('admin.settings.queue.queue')" />
-    <Tab icon="forge" :to="{ name: 'admin-settings-forges' }" :title="$t('forges')" />
 
-    <router-view />
+    <div class="admin-settings-layout">
+      <AdminSettingsNav />
+      <main class="admin-settings-content">
+        <router-view />
+      </main>
+    </div>
   </Scaffold>
 </template>
 
@@ -22,8 +18,8 @@ import { onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 
+import AdminSettingsNav from '~/components/admin/settings/AdminSettingsNav.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
-import Tab from '~/components/layout/scaffold/Tab.vue';
 import useAuthentication from '~/compositions/useAuthentication';
 import useNotifications from '~/compositions/useNotifications';
 
@@ -39,3 +35,16 @@ onMounted(async () => {
   }
 });
 </script>
+
+<style scoped>
+@reference '~/tailwind.css';
+
+.admin-settings-layout {
+  @apply mx-auto grid w-full max-w-[1500px] min-w-0 grid-cols-1 gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)];
+}
+
+.admin-settings-content {
+  @apply min-w-0;
+  contain: layout paint;
+}
+</style>

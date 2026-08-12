@@ -371,6 +371,22 @@
         "web/src/assets/locales/zh-Hans.json"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "016-administration-routes",
+      "baseline_task_id": "5.2",
+      "goal": "System administrators can operate the existing administration overview, global resources, repositories, users, organizations, Agents, queue, and Forge routes through a responsive prototype-aligned hierarchy with active lifecycle ownership.",
+      "depends_on": ["5.1"],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/views/admin/**",
+        "web/src/components/admin/settings/**",
+        "web/src/components/agent/AgentManager.vue",
+        "web/src/components/agent/AgentManager.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "status": "complete"
     }
   ]
 }

@@ -214,4 +214,36 @@ describe('router base path', () => {
     expect(settingsRoot.matched.at(-1)?.name).toBe('org-settings');
     expect(settingsRoot.meta.authentication).toBe('required');
   }, 15_000);
+
+  it('resolves every administration destination from names and inbound paths', async () => {
+    Object.defineProperty(window, 'WOODPECKER_ROOT_PATH', { configurable: true, value: '/woodpecker' });
+    const { default: router } = await import('./router');
+
+    const destinations = [
+      { name: 'admin-settings', path: '/admin', params: {} },
+      { name: 'admin-settings-secrets', path: '/admin/secrets', params: {} },
+      { name: 'admin-settings-registries', path: '/admin/registries', params: {} },
+      { name: 'admin-settings-repos', path: '/admin/repos', params: {} },
+      { name: 'admin-settings-users', path: '/admin/users', params: {} },
+      { name: 'admin-settings-orgs', path: '/admin/orgs', params: {} },
+      { name: 'admin-settings-agents', path: '/admin/agents', params: {} },
+      { name: 'admin-settings-queue', path: '/admin/queue', params: {} },
+      { name: 'admin-settings-forges', path: '/admin/forges', params: {} },
+      { name: 'admin-settings-forge', path: '/admin/forges/7', params: { forgeId: 7 } },
+      { name: 'admin-settings-forge-create', path: '/admin/forges/create', params: {} },
+    ] as const;
+
+    for (const destination of destinations) {
+      expect(router.resolve({ name: destination.name, params: destination.params }).href).toBe(
+        `/woodpecker${destination.path}`,
+      );
+
+      const incoming = router.resolve(destination.path);
+      expect(incoming.matched.at(-1)?.name).toBe(destination.name);
+      expect(incoming.meta.authentication).toBe('required');
+      if ('forgeId' in destination.params) {
+        expect(incoming.params.forgeId).toBe(`${destination.params.forgeId}`);
+      }
+    }
+  }, 15_000);
 });

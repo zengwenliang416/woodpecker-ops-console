@@ -1,0 +1,53 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 队列 正在等待 Agents 执行的任务。 队列 正在等待 Agents 执行的任务。 暂停 已完成的任务 418 空闲 3 运行中 0 等待中 1 等待依赖项 0 任务 正在等待 Agents 执行的任务。 任务 agent 正在等待 查看流水线 backend-build platform linux/amd64 — — 已加载 1 项",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 队列 正在等待 Agents 执行的任务。 队列 正在等待 Agents 执行的任务。 暂停 已完成的任务 418 空闲 3 运行中 0 等待中 1 等待依赖项 0 任务 正在等待 Agents 执行的任务。 任务 agent 正在等待 查看流水线 backend-build platform linux/amd64 — — 已加载 1 项",
+  "terminalRouteName": "admin-settings-queue",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 774,
+      "overflowX": "auto"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 322,
+      "scrollWidth": 680,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "production-dark-zh-mobile-admin-queue",
+  "row": 35,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/backend-build/i",
+      "passed": true
+    },
+    {
+      "pattern": "/队列|Queue/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

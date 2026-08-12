@@ -1,0 +1,47 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 系统概览 查看当前 Woodpecker 版本，并进入服务器已有的管理页面。 Woodpecker 版本 当前 Woodpecker 服务报告的版本信息。 你正在运行 Woodpecker 3.9.0-task016 本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。 管理入口 管理当前 Woodpecker API 已提供的服务器资源。 仓库 该服务器上已启用或曾经启用的仓库。 用户 在此服务器上注册的用户。 组织 在此服务器上拥有存储库的组织。 代理 注册到此服务器的代理。 队列 正在等待 Agents 执行的任务。 代码托管平台 配置 Woodpecker 为其工作的代码托管平台。",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 系统概览 查看当前 Woodpecker 版本，并进入服务器已有的管理页面。 Woodpecker 版本 当前 Woodpecker 服务报告的版本信息。 你正在运行 Woodpecker 3.9.0-task016 本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。 管理入口 管理当前 Woodpecker API 已提供的服务器资源。 仓库 该服务器上已启用或曾经启用的仓库。 用户 在此服务器上注册的用户。 组织 在此服务器上拥有存储库的组织。 代理 注册到此服务器的代理。 队列 正在等待 Agents 执行的任务。 代码托管平台 配置 Woodpecker 为其工作的代码托管平台。",
+  "terminalRouteName": "admin-settings",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 218,
+      "scrollWidth": 218,
+      "overflowX": "visible"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "production-dark-zh-desktop-admin-info",
+  "row": 28,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/3\\.9\\.0-task016/i",
+      "passed": true
+    },
+    {
+      "pattern": "/管理入口|Administration destinations/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

@@ -65,8 +65,13 @@
   administrators manage real Secrets, Registries, and feature-gated Agents
   through a responsive shared settings hierarchy with active organization
   lifecycle ownership and representative rows `24-27` desktop/390px evidence.
+- `016-administration-routes` / baseline task `5.2`: system administrators now
+  use a responsive administration hierarchy for the truthful version overview,
+  global Secrets and Registries, repositories, users, organizations, Agents,
+  Queue, and Forge list/detail/create routes with current typed APIs, explicit
+  states, confirmed-data continuity, and lifecycle-owned mutations.
 - This is an incremental development snapshot, not a verification handoff.
-  Tasks `5.2` through `8.4` remain incomplete.
+  Tasks `5.3` through `8.4` remain incomplete.
 
 ## Files Changed
 
@@ -116,6 +121,12 @@
   `100` measurement/PNG pairs, replay summary, checksummed manifest, report,
   and superseding independent reviews. No production or approved-prototype
   file changed in slice `014`.
+- Administration routes: administrator router coverage, responsive
+  `AdminSettingsNav`, overview, global resource/repository/user/organization/
+  Agent/Queue/Forge pages, queue statistics, shared Agent lifecycle repair,
+  English/Simplified-Chinese copy, focused regressions, task-local Mock API,
+  CDP capture, strict verifier, `44` measurement/PNG pairs, report, and
+  superseding independent reviews.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -130,7 +141,9 @@
   `development/tasks/011-repository-branches-pull-requests/report.md`, and
   `development/tasks/012-repository-manual-run-settings/report.md`, and
   `development/tasks/013-repository-regression-coverage/report.md`, and
-  `development/tasks/014-repository-validation-evidence/report.md`.
+  `development/tasks/014-repository-validation-evidence/report.md`,
+  `development/tasks/015-organization-routes/report.md`, and
+  `development/tasks/016-administration-routes/report.md`.
 
 ## Requirements Covered
 
@@ -183,6 +196,12 @@
   repository rows `3-23` have current same-state evidence. Full repository
   `A2` remains open because row `4` is blocked; full-change `A3`/`A4` remain
   open until the remaining development and parity-matrix work is complete.
+- Task-scoped `A3` and `A4` were independently verified for administration
+  slice `016`: the eleven existing destinations pass focused/full/static/build
+  checks and exact dark Simplified-Chinese desktop/390px evidence, while active
+  lifecycle ownership preserves confirmed rows/editors and rejects obsolete or
+  post-unmount completions. Full `A2` remains open under task `5.5`, and rows
+  `28-38` remain `in-progress`.
 
 ## Prototype Decisions Implemented
 
@@ -228,6 +247,11 @@
 - Repository evidence uses current production APIs and a task-local deterministic
   fixture only for replay. It does not disguise the `/repos/add` mismatch:
   production has `0` wizard steps and the approved prototype has `4`.
+- Administration routes use only current version/configuration data, typed
+  Secret/Registry/repository/user/organization/Agent/Queue/Forge APIs, existing
+  permissions, and supported mutations. Prototype-only health, capacity,
+  telemetry, audit, invitation, quota, priority, promote/cancel, connection
+  test/status/count, and usage metrics are not invented.
 
 ## Components Created / Reused / Extracted
 
@@ -257,6 +281,11 @@
 - Created/extracted for repository settings: presentation-only
   `RepoSettingsNav`, `RepoSettingsSection`, `RepoSettingsTable`, and
   `RepoSettingsActionRow`, plus the pure typed `repoBadge.ts` formatter.
+- Created for administration navigation: presentation-only
+  `AdminSettingsNav`; reused `SettingsSection`, `SettingsTable`,
+  `SettingsActionRow`, `FeedbackState`, `AgentManager`, `AdminQueueStats`,
+  `AdminForgeForm`, pagination, interval scheduling, notifications, i18n,
+  router, and current API clients.
 - No additional generic list abstraction was added: branch `string[]` and PR
   `{ index, title }[]` remain distinct typed route contracts.
 
@@ -277,6 +306,10 @@
 - Slice `014` adds no production or approved-prototype change. Its Mock API,
   capture, verifier, measurements, screenshots, summary, and manifest are
   task-local evidence artifacts.
+- Slice `016` adds no backend, API payload, store, router runtime,
+  authentication, permission calculation, persistence, migration, dependency,
+  or approved-prototype contract. It repairs component-owned request/editor
+  lifecycle behavior around existing administration APIs.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -334,7 +367,13 @@
   mutation failures, obsolete fulfilled/rejected completions, confirmed-row
   recovery, shared repository-store overlap, shared component containment, and
   current-organization back behavior.
-- The current full frontend regression baseline is 59 test files and 351 tests.
+- Administration tests cover all eleven named/inbound destinations,
+  administrator denial, responsive navigation, explicit states, confirmed-row
+  continuity, pagination, current mutations, Queue overlap/unmount, Forge
+  `A -> B -> A` and same-route refresh preservation, and deferred same-owner
+  Agent/Secret/Registry/User editor replacement without stale publication or
+  successor locking.
+- The current full frontend regression baseline is 74 test files and 422 tests.
 
 ## Local Validation
 
@@ -351,7 +390,10 @@
 - PASS: organization route focused suite, 13 files and 44 tests.
 - PASS: supporting repository settings suite after shared component promotion,
   8 files and 62 tests.
-- PASS: current complete frontend suite, 59 files and 351 tests.
+- PASS: administration route focused suite, 17 files and 84 tests.
+- PASS: isolated supersession for the two unrelated tests that failed only
+  under prior concurrent resource pressure, 2 files and 23 tests.
+- PASS: current complete frontend suite, 74 files and 422 tests.
 - PASS: ESLint, TypeScript, Vite build, and `git diff --check`.
 - PASS: slice-owned targeted Prettier checks. For slice `004`, all 11
   non-baseline allowed shell files pass and `web/` has zero diff.
@@ -390,11 +432,18 @@
   expected content, exact JSON/PNG state inventory and row/surface/viewport
   mapping, zero page overflow/raw locale keys/browser errors, and local mobile
   settings-table containment.
+- PASS: administration task replay for exactly `44` final current-byte states
+  (`22` production and `22` approved prototype) under run
+  `09279f46-4db9-4a6a-b00f-8340ef3c1fc0`, covering rows `28-38` in dark
+  Simplified Chinese at `1600x1000` and `390x844`, exact state/file/row/
+  surface/viewport/terminal-route bindings, expected content, exact PNG
+  dimensions, zero page overflow/raw locale keys/browser errors, and strict
+  JSON/PNG inventory.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Seventeen baseline tasks remain incomplete across
+- Sixteen baseline tasks remain incomplete across
   organization/administration/user, operations, accessibility/i18n/responsive,
   and full six-domain verification work. Global prototype parity must not be
   claimed.
@@ -408,6 +457,14 @@
   formatted.
 - Vite build retains the two pre-existing non-module script warnings for
   `/web-config.js` and `/assets/custom.js`.
+- The installed SpecNav development contract `0.3.0` does not accept this
+  change's established `phases/vertical_slices` task graph and append-only
+  lifecycle context because it now requires `nodes/task_items` plus one
+  authoritative context row per task. Handoff also requires the absent
+  `verify/v2/runtime-status.json`, and it reports the truthful blocked contract
+  receipt as `validation-log:executed-evidence-failed`. This global
+  lifecycle/runtime migration is outside task `016`; entry/handoff must not be
+  reported as passing.
 - Slice `004` prototype mobile rendering used an attested `390x844` viewport,
   while the standalone screenshot API cropped temporary PNG content to
   `380x822`. The crop is disclosed and the PNG alone is not treated as viewport

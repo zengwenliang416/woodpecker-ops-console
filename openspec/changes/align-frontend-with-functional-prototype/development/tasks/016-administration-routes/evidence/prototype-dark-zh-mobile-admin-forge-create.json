@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 新建 Forge 添加一个代码托管平台连接。 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge Forge 配置 保存后可以通过 OAuth 同步用户和仓库。 显示名称 类型 GitHub GitLab Gitea Bitbucket 服务器 URL Client ID Client Secret API URL OAuth 回调地址 https://ci.acme.example/authorize 取消 创建并测试",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 新建 Forge 添加一个代码托管平台连接。 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge Forge 配置 保存后可以通过 OAuth 同步用户和仓库。 显示名称 类型 GitHub GitLab Gitea Bitbucket 服务器 URL Client ID Client Secret API URL OAuth 回调地址 https://ci.acme.example/authorize 取消 创建并测试",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "prototype-dark-zh-mobile-admin-forge-create",
+  "row": 38,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/新建 Forge/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

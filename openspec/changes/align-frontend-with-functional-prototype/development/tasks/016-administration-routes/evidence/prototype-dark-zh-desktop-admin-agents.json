@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator Agent 集群 管理构建 Agent、容量和基础设施标签。 基础设施配置 添加 Agent 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 总 Agents 8 在线 7 88% 运行任务 9 总容量 64 全部状态 在线 忙碌 空闲 离线 全部 Backend Docker Kubernetes Agent Backend CPU 内存 运行任务 队列 / 容量 系统 心跳 agent-us-east-1a-01 linux x64 docker 10.0.1.15 Docker 32% 48% 2 build / test 2 / 10 Ubuntu 24.04 8 秒前 agent-us-east-1a-02 linux arm64 k8s 10.0.1.16 Kubernetes 18% 37% 1 build / test 1 / 8 Ubuntu 24.04 6 秒前 agent-us-east-1b-01 linux x64 gpu 10.0.2.21 Docker 61% 72% 3 build / test 3 / 6 Ubuntu 24.04 9 秒前 agent-eu-west-1a-01 linux x64 k8s 10.1.1.10 Kubernetes 24% 41% 0 idle 0 / 10 Debian 13 12 秒前 agent-eu-west-1a-02 linux arm64 spot 10.1.1.11 Kubernetes 9% 22% 0 idle 0 / 8 Ubuntu 24.04 14 秒前 agent-eu-west-1b-01 windows x64 10.1.2.15 Docker 14% 31% 1 build / test 1 / 6 Windows Server 2025 10 秒前 agent-asia-southeast-1a-01 linux x64 k8s 10.2.1.10 Kubernetes 35% 55% 2 build / test 2 / 10 Ubuntu 24.04 7 秒前 agent-asia-southeast-1a-02 linux arm64 spot 10.2.1.11 Kubernetes 7% 19% 0 idle 0 / 6 Alpine 3.22 3 分钟前 显示 1 至 8 项，共 8 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator Agent 集群 管理构建 Agent、容量和基础设施标签。 基础设施配置 添加 Agent 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 总 Agents 8 在线 7 88% 运行任务 9 总容量 64 全部状态 在线 忙碌 空闲 离线 全部 Backend Docker Kubernetes Agent Backend CPU 内存 运行任务 队列 / 容量 系统 心跳 agent-us-east-1a-01 linux x64 docker 10.0.1.15 Docker 32% 48% 2 build / test 2 / 10 Ubuntu 24.04 8 秒前 agent-us-east-1a-02 linux arm64 k8s 10.0.1.16 Kubernetes 18% 37% 1 build / test 1 / 8 Ubuntu 24.04 6 秒前 agent-us-east-1b-01 linux x64 gpu 10.0.2.21 Docker 61% 72% 3 build / test 3 / 6 Ubuntu 24.04 9 秒前 agent-eu-west-1a-01 linux x64 k8s 10.1.1.10 Kubernetes 24% 41% 0 idle 0 / 10 Debian 13 12 秒前 agent-eu-west-1a-02 linux arm64 spot 10.1.1.11 Kubernetes 9% 22% 0 idle 0 / 8 Ubuntu 24.04 14 秒前 agent-eu-west-1b-01 windows x64 10.1.2.15 Docker 14% 31% 1 build / test 1 / 6 Windows Server 2025 10 秒前 agent-asia-southeast-1a-01 linux x64 k8s 10.2.1.10 Kubernetes 35% 55% 2 build / test 2 / 10 Ubuntu 24.04 7 秒前 agent-asia-southeast-1a-02 linux arm64 spot 10.2.1.11 Kubernetes 7% 19% 0 idle 0 / 6 Alpine 3.22 3 分钟前 显示 1 至 8 项，共 8 项 1 2 3",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1590,
+    "scrollWidth": 1590,
+    "height": 1000,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "prototype-dark-zh-desktop-admin-agents",
+  "row": 34,
+  "surface": "prototype",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Agent 集群/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

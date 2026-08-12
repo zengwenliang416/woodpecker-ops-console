@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 全局镜像仓库 管理实例范围的容器镜像认证。 添加全局镜像仓库 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部作用域 Repository Organization Global 地址 类型 用户名 作用域 验证 更新时间 ghcr.io GitHub Container Registry acme-bot Repository 已验证 2 天前 registry.gitlab.com GitLab Registry deploy-token Organization 已验证 5 天前 registry.acme.internal Private Registry woodpecker Production 已验证 9 天前 docker.io Docker Hub acme-ci Global 需要验证 14 天前 显示 1 至 4 项，共 4 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 全局镜像仓库 管理实例范围的容器镜像认证。 添加全局镜像仓库 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部作用域 Repository Organization Global 地址 类型 用户名 作用域 验证 更新时间 ghcr.io GitHub Container Registry acme-bot Repository 已验证 2 天前 registry.gitlab.com GitLab Registry deploy-token Organization 已验证 5 天前 registry.acme.internal Private Registry woodpecker Production 已验证 9 天前 docker.io Docker Hub acme-ci Global 需要验证 14 天前 显示 1 至 4 项，共 4 项 1 2 3",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "prototype-dark-zh-mobile-admin-registries",
+  "row": 30,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/全局镜像仓库/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

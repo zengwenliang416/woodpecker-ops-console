@@ -42,7 +42,7 @@
 用户结果：用户、组织管理员和系统管理员可以按各自权限查看并管理对应的设置与资源。
 
 - [x] 5.1 Align organization repository, secret, registry, and agent routes with the prototype settings/navigation structure.
-- [ ] 5.2 Align administrator overview, secrets, registries, repositories, users, organizations, agents, queue, forge list/detail/create routes.
+- [x] 5.2 Align administrator overview, secrets, registries, repositories, users, organizations, agents, queue, forge list/detail/create routes.
 - [ ] 5.3 Align personal profile, secrets, registries, CLI/API, agents, CLI authorization, login, and not-found routes.
 - [ ] 5.4 Preserve administrator, repository, organization, guest, and authenticated-user permission boundaries in UI visibility and direct-route behavior.
 - [ ] 5.5 Add focused route/component tests and verify all organization, administration, user, authentication, and error-state parity rows.

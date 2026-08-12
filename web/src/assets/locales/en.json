@@ -685,13 +685,44 @@
     "settings": {
       "settings": "Admin Settings",
       "not_allowed": "You are not allowed to access server settings",
+      "surface": {
+        "navigation_label": "Administration settings",
+        "overview_title": "System overview",
+        "overview_description": "Review the running Woodpecker version and open the existing server administration destinations.",
+        "version_title": "Woodpecker version",
+        "version_description": "Version information reported by this Woodpecker server.",
+        "version_scope": "This page reports version data only; service health and workload metrics require their own production evidence.",
+        "destinations_title": "Administration destinations",
+        "destinations_description": "Manage the server resources exposed by the current Woodpecker API.",
+        "retry": "Retry",
+        "loaded_count": "{count} resources loaded",
+        "actions": "Actions",
+        "access": "Access",
+        "status": "Status",
+        "active": "Active",
+        "read_only": "Read only",
+        "editable": "Editable",
+        "not_available": "—"
+      },
       "secrets": {
         "desc": "Global secrets can be used in the pipelines of all repositories.",
-        "warning": "These secrets are available to all users."
+        "warning": "These secrets are available to all users.",
+        "form_description": "Create or update a global secret using the existing Secret contract.",
+        "loading_title": "Loading global secrets",
+        "loading_description": "Loading the current page of global secrets.",
+        "error_fallback": "The global Secret request failed.",
+        "mutation_error_fallback": "The global Secret change failed.",
+        "empty_description": "Create the first secret available to repositories on this server."
       },
       "registries": {
         "desc": "Global registry credentials can be added to use private images for all pipelines.",
-        "warning": "These registry credentials are available to all users."
+        "warning": "These registry credentials are available to all users.",
+        "form_description": "Create or update global image registry credentials.",
+        "loading_title": "Loading global registry credentials",
+        "loading_description": "Loading the current page of global registry credentials.",
+        "error_fallback": "The global Registry request failed.",
+        "mutation_error_fallback": "The global Registry change failed.",
+        "empty_description": "Add the first registry credentials available to this server."
       },
       "agents": {
         "agents": "Agents",
@@ -753,6 +784,10 @@
         "resume": "Resume",
         "paused": "Queue is paused",
         "resumed": "Queue is resumed",
+        "retry": "Retry",
+        "empty": "There are no queued tasks",
+        "error_fallback": "The Queue request failed.",
+        "mutation_error_fallback": "The Queue change failed.",
         "tasks": "Tasks",
         "task_running": "Task is running",
         "task_pending": "Task is pending",
@@ -812,6 +847,15 @@
           "repair": "Repair all",
           "success": "Repositories repaired"
         }
+      },
+      "forges": {
+        "form_description": "Configure the fields supported by the current Forge contract.",
+        "loading_title": "Loading Forge",
+        "loading_description": "Loading the requested Forge configuration.",
+        "error_title": "Forge unavailable",
+        "error_fallback": "The Forge request failed.",
+        "mutation_error_fallback": "The Forge change failed.",
+        "empty_description": "Add the first Forge connection for this server."
       }
     }
   },

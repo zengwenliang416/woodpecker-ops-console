@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 用户管理 管理登录权限、管理员角色和用户状态。 邀请用户 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部角色 管理员 普通用户 全部状态 活跃 已禁用 用户 Forge 角色 状态 流水线 最后登录 A Alice Johnson @alice · alice@acme.example GitHub 管理员 活跃 184 2 分钟前 B Bob Chen @bob · bob@acme.example GitHub 用户 活跃 98 18 分钟前 C Carol Wilson @carol · carol@acme.example GitLab 用户 活跃 73 45 分钟前 D Dave Miller @dave · dave@acme.example GitHub 用户 活跃 51 2 小时前 E Erin Davis @erin · erin@acme.example Bitbucket 用户 活跃 44 5 小时前 F Frank Lopez @frank · frank@acme.example Gitea 用户 活跃 29 1 天前 B Build Bot @build-bot · ci-bot@acme.example Service 用户 已禁用 1104 12 天前 显示 1 至 7 项，共 7 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 用户管理 管理登录权限、管理员角色和用户状态。 邀请用户 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部角色 管理员 普通用户 全部状态 活跃 已禁用 用户 Forge 角色 状态 流水线 最后登录 A Alice Johnson @alice · alice@acme.example GitHub 管理员 活跃 184 2 分钟前 B Bob Chen @bob · bob@acme.example GitHub 用户 活跃 98 18 分钟前 C Carol Wilson @carol · carol@acme.example GitLab 用户 活跃 73 45 分钟前 D Dave Miller @dave · dave@acme.example GitHub 用户 活跃 51 2 小时前 E Erin Davis @erin · erin@acme.example Bitbucket 用户 活跃 44 5 小时前 F Frank Lopez @frank · frank@acme.example Gitea 用户 活跃 29 1 天前 B Build Bot @build-bot · ci-bot@acme.example Service 用户 已禁用 1104 12 天前 显示 1 至 7 项，共 7 项 1 2 3",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "prototype-dark-zh-mobile-admin-users",
+  "row": 32,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/用户管理/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

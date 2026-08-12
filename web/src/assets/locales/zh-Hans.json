@@ -1,6 +1,25 @@
 {
   "admin": {
     "settings": {
+      "surface": {
+        "navigation_label": "系统管理设置",
+        "overview_title": "系统概览",
+        "overview_description": "查看当前 Woodpecker 版本，并进入服务器已有的管理页面。",
+        "version_title": "Woodpecker 版本",
+        "version_description": "当前 Woodpecker 服务报告的版本信息。",
+        "version_scope": "本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。",
+        "destinations_title": "管理入口",
+        "destinations_description": "管理当前 Woodpecker API 已提供的服务器资源。",
+        "retry": "重试",
+        "loaded_count": "已加载 {count} 项资源",
+        "actions": "操作",
+        "access": "访问权限",
+        "status": "状态",
+        "active": "启用",
+        "read_only": "只读",
+        "editable": "可编辑",
+        "not_available": "—"
+      },
       "agents": {
         "add": "添加代理",
         "agents": "代理",
@@ -73,6 +92,10 @@
         "queue": "队列",
         "resume": "恢复",
         "resumed": "队列已恢复",
+        "retry": "重试",
+        "empty": "当前没有排队任务",
+        "error_fallback": "队列请求失败。",
+        "mutation_error_fallback": "队列变更失败。",
         "stats": {
           "completed_count": "已完成的任务",
           "pending_count": "等待中",
@@ -119,7 +142,13 @@
         "secrets": "密钥",
         "show": "显示所有密钥",
         "value": "值",
-        "warning": "该密钥对所有用户可用。"
+        "warning": "该密钥对所有用户可用。",
+        "form_description": "使用现有 Secret 合同创建或更新全局密钥。",
+        "loading_title": "正在加载全局密钥",
+        "loading_description": "正在加载当前页的全局密钥。",
+        "error_fallback": "全局密钥请求失败。",
+        "mutation_error_fallback": "全局密钥变更失败。",
+        "empty_description": "创建第一个可供此服务器仓库使用的密钥。"
       },
       "settings": "设置",
       "users": {
@@ -148,7 +177,22 @@
       },
       "registries": {
         "desc": "可以添加全局注册凭据以在所有流水线中使用私有镜像。",
-        "warning": "这些注册凭据对所有用户可用。"
+        "warning": "这些注册凭据对所有用户可用。",
+        "form_description": "创建或更新全局镜像仓库凭据。",
+        "loading_title": "正在加载全局镜像仓库凭据",
+        "loading_description": "正在加载当前页的全局镜像仓库凭据。",
+        "error_fallback": "全局镜像仓库请求失败。",
+        "mutation_error_fallback": "全局镜像仓库变更失败。",
+        "empty_description": "添加第一组可供此服务器使用的镜像仓库凭据。"
+      },
+      "forges": {
+        "form_description": "配置当前 Forge 合同支持的字段。",
+        "loading_title": "正在加载 Forge",
+        "loading_description": "正在加载请求的 Forge 配置。",
+        "error_title": "Forge 不可用",
+        "error_fallback": "Forge 请求失败。",
+        "mutation_error_fallback": "Forge 变更失败。",
+        "empty_description": "为此服务器添加第一个 Forge 连接。"
       }
     }
   },

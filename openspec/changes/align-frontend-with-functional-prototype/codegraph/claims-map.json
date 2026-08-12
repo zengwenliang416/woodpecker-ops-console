@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-12T06:51:19.384Z",
+  "generated_at": "2026-08-12T09:13:54.929Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -572,6 +572,65 @@
       ],
       "query_ids": [
         "development:task-015-organization-routes:evidence"
+      ]
+    },
+    {
+      "id": "development:task-016-administration-routes",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "016-administration-routes",
+      "text": "Enter `/admin` as a system administrator, navigate the nine existing",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/context.json"
+      ],
+      "expected_evidence": [
+        "Focused router and component tests covering the eleven administration destinations, administrator denial, responsive navigation, explicit loading/empty/error/retry states, current mutations, and 390px containment.",
+        "Deferred-response regressions proving queue polling/mutations, paginated lists, Agent mutations, Forge A -> B -> A detail loads, and Forge save/create completions belong to the active administration lifecycle.",
+        "Full frontend Vitest, targeted Prettier, ESLint, TypeScript, Vite build, JSON/JSONL, SpecNav entry, diff checks, and task-local desktop/mobile browser evidence.",
+        "Evidence-bearing task report and independent spec/quality reviews that keep baseline task 5.5 and full A2 verification open."
+      ],
+      "allowed_files": [
+        "web/src/router.test.ts",
+        "web/src/views/admin/AdminSettingsWrapper.vue",
+        "web/src/views/admin/AdminSettingsWrapper.test.ts",
+        "web/src/views/admin/AdminInfo.vue",
+        "web/src/views/admin/AdminInfo.test.ts",
+        "web/src/views/admin/AdminSecrets.vue",
+        "web/src/views/admin/AdminSecrets.test.ts",
+        "web/src/views/admin/AdminRegistries.vue",
+        "web/src/views/admin/AdminRegistries.test.ts",
+        "web/src/views/admin/AdminRepos.vue",
+        "web/src/views/admin/AdminRepos.test.ts",
+        "web/src/views/admin/AdminUsers.vue",
+        "web/src/views/admin/AdminUsers.test.ts",
+        "web/src/views/admin/AdminOrgs.vue",
+        "web/src/views/admin/AdminOrgs.test.ts",
+        "web/src/views/admin/AdminAgents.vue",
+        "web/src/views/admin/AdminAgents.test.ts",
+        "web/src/views/admin/AdminQueue.vue",
+        "web/src/views/admin/AdminQueue.test.ts",
+        "web/src/views/admin/forges/AdminForges.vue",
+        "web/src/views/admin/forges/AdminForges.test.ts",
+        "web/src/views/admin/forges/AdminForge.vue",
+        "web/src/views/admin/forges/AdminForge.test.ts",
+        "web/src/views/admin/forges/AdminForgeCreate.vue",
+        "web/src/views/admin/forges/AdminForgeCreate.test.ts",
+        "web/src/components/admin/settings/AdminSettingsNav.vue",
+        "web/src/components/admin/settings/AdminSettingsNav.test.ts",
+        "web/src/components/admin/settings/queue/AdminQueueStats.vue",
+        "web/src/components/admin/settings/queue/AdminQueueStats.test.ts",
+        "web/src/components/admin/settings/forges/AdminForgeForm.vue",
+        "web/src/components/admin/settings/forges/AdminForgeForm.test.ts",
+        "web/src/components/agent/AgentManager.vue",
+        "web/src/components/agent/AgentManager.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json"
+      ],
+      "query_ids": [
+        "development:task-016-administration-routes:evidence"
       ]
     }
   ]

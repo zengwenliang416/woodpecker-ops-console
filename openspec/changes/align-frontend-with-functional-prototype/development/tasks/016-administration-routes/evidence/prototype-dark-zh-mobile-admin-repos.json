@@ -1,0 +1,36 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库管理 查看并管理实例中的所有仓库。 批量导出 同步 Forge 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部组织 Acme Corp Initech 全部状态 活跃 禁用 归档 仓库 组织 Forge 状态 流水线 存储 最近活动 acme/backend-api ID 101 Initech GitHub 成功 23 1.2 GB 2 分钟前 acme/web-frontend ID 102 Acme Corp GitLab 成功 40 1.6 GB 5 分钟前 acme/worker-service ID 103 Acme Corp GitHub 失败 57 1.9 GB 12 分钟前 acme/mobile-app ID 104 Initech Bitbucket 成功 74 2.3 GB 18 分钟前 acme/infrastructure ID 105 Acme Corp GitHub 警告 91 2.7 GB 24 分钟前 acme/data-pipeline ID 106 Acme Corp GitLab 成功 108 3.0 GB 31 分钟前 acme/auth-service ID 107 Initech GitHub 运行中 125 3.4 GB 1 分钟前 acme/marketing-site ID 108 Acme Corp GitHub 成功 142 3.8 GB 1 小时前 acme/reports-api ID 109 Acme Corp GitLab 失败 159 4.2 GB 1 小时前 acme/legacy-monolith ID 110 Initech Bitbucket 成功 176 4.5 GB 2 小时前 acme/shared-libraries ID 111 Acme Corp GitHub 成功 193 4.9 GB 3 小时前 acme/notification-service ID 112 Acme Corp Gitea 等待中 210 5.3 GB 刚刚 显示 1 至 10 项，共 12 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 仓库管理 查看并管理实例中的所有仓库。 批量导出 同步 Forge 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 全部组织 Acme Corp Initech 全部状态 活跃 禁用 归档 仓库 组织 Forge 状态 流水线 存储 最近活动 acme/backend-api ID 101 Initech GitHub 成功 23 1.2 GB 2 分钟前 acme/web-frontend ID 102 Acme Corp GitLab 成功 40 1.6 GB 5 分钟前 acme/worker-service ID 103 Acme Corp GitHub 失败 57 1.9 GB 12 分钟前 acme/mobile-app ID 104 Initech Bitbucket 成功 74 2.3 GB 18 分钟前 acme/infrastructure ID 105 Acme Corp GitHub 警告 91 2.7 GB 24 分钟前 acme/data-pipeline ID 106 Acme Corp GitLab 成功 108 3.0 GB 31 分钟前 acme/auth-service ID 107 Initech GitHub 运行中 125 3.4 GB 1 分钟前 acme/marketing-site ID 108 Acme Corp GitHub 成功 142 3.8 GB 1 小时前 acme/reports-api ID 109 Acme Corp GitLab 失败 159 4.2 GB 1 小时前 acme/legacy-monolith ID 110 Initech Bitbucket 成功 176 4.5 GB 2 小时前 acme/shared-libraries ID 111 Acme Corp GitHub 成功 193 4.9 GB 3 小时前 acme/notification-service ID 112 Acme Corp Gitea 等待中 210 5.3 GB 刚刚 显示 1 至 10 项，共 12 项 1 2 3",
+  "terminalRouteName": null,
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "prototype-dark-zh-mobile-admin-repos",
+  "row": 31,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/仓库管理/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

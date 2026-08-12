@@ -1,0 +1,53 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 注册表凭据 可以添加全局注册凭据以在所有流水线中使用私有镜像。 添加注册表 这些注册凭据对所有用户可用。 地址 用户名 访问权限 操作 docker.io mirror-reader 只读 已加载 1 项资源",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 注册表凭据 可以添加全局注册凭据以在所有流水线中使用私有镜像。 添加注册表 这些注册凭据对所有用户可用。 地址 用户名 访问权限 操作 docker.io mirror-reader 只读 已加载 1 项资源",
+  "terminalRouteName": "admin-settings-registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 218,
+      "scrollWidth": 218,
+      "overflowX": "visible"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 1066,
+      "scrollWidth": 1066,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "09279f46-4db9-4a6a-b00f-8340ef3c1fc0",
+  "stateId": "production-dark-zh-desktop-admin-registries",
+  "row": 30,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/docker\\.io/i",
+      "passed": true
+    },
+    {
+      "pattern": "/注册表|镜像仓库|Registry/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}
