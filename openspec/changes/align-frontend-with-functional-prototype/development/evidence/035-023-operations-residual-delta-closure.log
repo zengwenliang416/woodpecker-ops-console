@@ -1,0 +1,461 @@
+# command: node openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/validate_task.mjs
+# exit_status: 0
+# duration_ms: 132740
+
+## stdout
+
+## Residual source and lifecycle audit
+{
+  "schema": "woodpecker.operations-residual-audit.v1",
+  "ok": true,
+  "task_id": "023-operations-residual-delta-closure",
+  "reviewed_head": "2b14cd2a7010e9e1c3923d6ba4d5b171fcad3c17",
+  "accepted_tasks": [
+    {
+      "task_id": "020-overview-repositories-reverification",
+      "acceptance": "approved",
+      "run_id": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+      "red_team": "15/15",
+      "evidence_bundle": {
+        "states": 20,
+        "screenshots": 20,
+        "checksums": "verified"
+      }
+    },
+    {
+      "task_id": "021-infrastructure-route-reverification",
+      "acceptance": "approved",
+      "run_id": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+      "red_team": "13/13",
+      "evidence_bundle": {
+        "states": 62,
+        "screenshots": 62,
+        "checksums": "verified"
+      }
+    },
+    {
+      "task_id": "022-deployment-route-reverification",
+      "acceptance": "approved",
+      "run_id": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+      "red_team": "15/15",
+      "evidence_bundle": {
+        "states": 54,
+        "screenshots": 54,
+        "checksums": "verified"
+      }
+    }
+  ],
+  "verified_rows": [
+    2,
+    3,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67
+  ],
+  "preserved_blocked_rows": [
+    4
+  ],
+  "newest_owned_objects": 54,
+  "production_repairs_required": false,
+  "object_checks": [
+    {
+      "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "32351b99149d7318237d92d34a15ed939c4b18ee"
+    },
+    {
+      "path": "web/src/App.test.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "09cd618b5a8b2147e53ec87996d0d0116d54a5b4"
+    },
+    {
+      "path": "web/src/App.vue",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "950f9f99dff15da8c9773c3fcfd4a742c56ad3fe"
+    },
+    {
+      "path": "web/src/assets/locales/en.json",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "d49cfe6b856afd37cbedc5f00fb0ced7934c51e5"
+    },
+    {
+      "path": "web/src/assets/locales/zh-Hans.json",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "4daa45f31bdfbd3d11b04bae551ac697e74ed1a1"
+    },
+    {
+      "path": "web/src/components/ops/DeploymentNav.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "60ce48286648a181c99d2e06434318b56ec2ea08"
+    },
+    {
+      "path": "web/src/components/ops/DeploymentNav.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "4660453914b4054dcfa1a5c646d94ae3e75f9d62"
+    },
+    {
+      "path": "web/src/components/ops/InfrastructureNav.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "a19aefd7d18d313b12ca81832a8289a2cd77c887"
+    },
+    {
+      "path": "web/src/components/ops/InfrastructureNav.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "35e2ed9e7fccefaa2be2991b92429c752491aae3"
+    },
+    {
+      "path": "web/src/compositions/useConfirmedRequest.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "43801c345b2c66f99c0b9b84c2f99b76677b20af"
+    },
+    {
+      "path": "web/src/compositions/useConfirmedRequest.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "2120509962f9830089695a342da82d6dbb02e84d"
+    },
+    {
+      "path": "web/src/compositions/useDeploymentPresentation.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "92b7ce04ebdc0c14eeb6ffacb8c7dfad302a149a"
+    },
+    {
+      "path": "web/src/compositions/useDeploymentPresentation.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "995fe75e1c96b22cc7ef27b0762684f207261485"
+    },
+    {
+      "path": "web/src/lib/api/index.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "cdcbc3fd04996ce0867ccc2baaa797fc3997e248"
+    },
+    {
+      "path": "web/src/lib/api/types/ops.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "e70d0eed92b976fbd42dd0dcdc33a465111376c0"
+    },
+    {
+      "path": "web/src/lib/repoMetrics.test.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "1dbdce953a1d80de0a23a437619c999ca88a134f"
+    },
+    {
+      "path": "web/src/lib/repoMetrics.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "7d68df86820f8c51d4b6d0d9c457906f3b786c30"
+    },
+    {
+      "path": "web/src/store/ops.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "808dd1e0bc57fb03fd9855b5745d8479cdb55050"
+    },
+    {
+      "path": "web/src/store/ops.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "9065595aff1dc05094dd8932294d018e92f846c4"
+    },
+    {
+      "path": "web/src/store/repos.test.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "86ea602a8b8a2cec252eed5f22854f8cf74283c0"
+    },
+    {
+      "path": "web/src/store/repos.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "8407b2fe9943f2c116ce6a9de4dd52c19352c889"
+    },
+    {
+      "path": "web/src/views/deployments/ApplicationDetail.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "7e7b4ab60824fe2e88d0381d3a709bdd4db8d787"
+    },
+    {
+      "path": "web/src/views/deployments/Applications.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "2bbccbddc3bcb9fbd82bd6a60421db9f069133c5"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentApprovals.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "440443968dc7100f01bdf9497cd467d87cf50a1b"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentCollections.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "5d5296caca157f18d79b09e1fb59e0e92ad032ca"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentDetail.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "b39940a221469f8ad8c11076b93eea3e3aed0e89"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentDetail.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "2150e2145cd40ca985972c9cabffbba22bd043e3"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentDetails.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "11807555b9476c4d1609b72c90dca7fd44520e6b"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentNew.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "d527ebc146c11d95fe17f71312f94a0a2488a02a"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentNew.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "2bec1e8ac6caf98b863d52205f29ca73c10e9973"
+    },
+    {
+      "path": "web/src/views/deployments/DeploymentPolicies.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "240bc438618a88b117f9f93353ce5f4ed178ee01"
+    },
+    {
+      "path": "web/src/views/deployments/Deployments.test.ts",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "ed376b3d24865c142aa80b03a49b2e73502aaaee"
+    },
+    {
+      "path": "web/src/views/deployments/Deployments.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "280d7b361c8fad6b077dee43be2e65f13a2b62c6"
+    },
+    {
+      "path": "web/src/views/deployments/EnvironmentDetail.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "dde1d8c1845b762e7ed873ed45925d3928499305"
+    },
+    {
+      "path": "web/src/views/deployments/Environments.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "657f1ebc44c20288bbd53cbdf80b60498366f0d9"
+    },
+    {
+      "path": "web/src/views/deployments/Releases.vue",
+      "owner": "022-deployment-route-reverification",
+      "object_id": "45ba2e738aa9a1e5cb5ab68cb69eb2ae4477ad37"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "0393e0ed94a8138794d44874fc207a03a0bcf421"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureAlerts.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "ce92753593032d004e7220d63ac41bf30ae19c52"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "37b9252ae682ffc8a40d41220a43d9940a9d7921"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureGroup.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "e9e4a4d141cbcb16bc7c2ba22a1037a165d5589f"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureGroups.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "50797b8a3ec6098e062688a181d4932ff170c01c"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureGroups.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "314dcce4299f8d3735c435cacbda97d55e9c9166"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "c1f621ea86c4052f26ee1d87b20966da339b8eab"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "be436d3d36c3ab99e8a95ba9c03a7025eb90152b"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "f2e6fae87b60aa20c5aba7f9b742c0a4468d0b55"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "0e6ee98382f7d62963273c35c345549511e108a5"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "7eb5cef3686f0b5ce1cec6ba41e06e868aa29beb"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "533b11d625afed8a6dc9ca4f3c59070e2d42984c"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "a3db108f82115117e483393a32859a34bbb34cf8"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServices.vue",
+      "owner": "021-infrastructure-route-reverification",
+      "object_id": "abf5010dd98d73c85c874798c42ad7f68e0630f6"
+    },
+    {
+      "path": "web/src/views/Overview.test.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "8682a0035e5c686cc0d32b25207036c493efd98a"
+    },
+    {
+      "path": "web/src/views/Overview.vue",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "6543f4bb78096ba853fd570a1abdc48cc7f93881"
+    },
+    {
+      "path": "web/src/views/Repos.test.ts",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "3d6f36704d3a5277f93206f71b44fb2a1f5c3873"
+    },
+    {
+      "path": "web/src/views/Repos.vue",
+      "owner": "020-overview-repositories-reverification",
+      "object_id": "cd928980d69f3c938b765bb2ad4cb51f06c9ebd4"
+    }
+  ]
+}
+
+## Residual audit red-team
+{
+  "schema": "woodpecker.operations-residual-audit-redteam.v1",
+  "ok": true,
+  "positiveAuditExitCode": 0,
+  "mutations": [
+    {
+      "id": "unapproved-acceptance",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "missing-evidence-artifact",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "verified-row-regression",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "blocked-row-incorrectly-closed",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "accepted-object-drift",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    }
+  ]
+}
+
+## Combined focused operations Vitest
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  22 passed (22)
+      Tests  98 passed (98)
+   Start at  02:57:12
+   Duration  14.04s (transform 23.82s, setup 0ms, import 48.31s, tests 4.05s, environment 35.23s)
+
+
+## Full Vitest
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  103 passed (103)
+      Tests  582 passed (582)
+   Start at  02:57:28
+   Duration  39.91s (transform 45.22s, setup 0ms, import 106.96s, tests 27.00s, environment 113.83s)
+
+
+## Task 023 Prettier
+Checking formatting...
+All matched files use Prettier code style!
+
+## ESLint
+
+## Vue TypeScript
+
+## Vite build
+
+## Latest full-tree strict evidence verifier
+{"ok":true,"runId":"0051a9bc-3312-4bf4-a850-6e4d4a205920","measurements":54,"screenshots":54,"rows":[58,59,60,61,62,63,64,65,66,67],"mutationWrites":[{"method":"POST","path":"/api/deployments/142/pause"}],"pageOverflowStates":[],"rawI18nStates":[],"rawEnumStates":[],"checksumsVerified":true}
+
+## JavaScript syntax: audit_residuals.mjs
+
+## JavaScript syntax: redteam_audit.mjs
+
+## JavaScript syntax: validate_task.mjs
+
+## Git whitespace check
+
+{"ok":true,"taskId":"023-operations-residual-delta-closure","focusedFiles":22,"acceptedSlices":3,"verifiedRows":24,"preservedBlockedRows":[4],"auditMutations":"5/5","productionRepairsRequired":false}
+
+
+## stderr
+$ vitest -- --run
+$ eslint --max-warnings 0 .
+$ vue-tsc --noEmit
+$ vite build --base=/BASE_PATH
+<script src="/web-config.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/assets/custom.js"> in "/index.html" can't be bundled without type="module" attribute
+[33m[PLUGIN_TIMINGS] [0mYour build spent 91% of 5.3s inside plugin hooks (4.8s).
+Not measurable — 2 hooks whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - @tailwindcss/vite:generate:build transform (68 calls)
+  - unplugin-vue-i18n:resource load (491 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+

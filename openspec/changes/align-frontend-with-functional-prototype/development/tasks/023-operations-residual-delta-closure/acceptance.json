@@ -1,0 +1,444 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "023-operations-residual-delta-closure",
+  "generated_at": "2026-08-13T19:03:15.411Z",
+  "recorded_at": "2026-08-13T18:59:14.810Z",
+  "status": "approved",
+  "reviewed_git_head": "2b14cd2a7010e9e1c3923d6ba4d5b171fcad3c17",
+  "reviewed_git_tree": "257322836483515d5a408f5c343385d24abd9918",
+  "implementation_scope": {
+    "included_patterns": [
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+      "web/src/App.test.ts",
+      "web/src/App.vue",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/ops/DeploymentNav.test.ts",
+      "web/src/components/ops/DeploymentNav.vue",
+      "web/src/components/ops/InfrastructureNav.test.ts",
+      "web/src/components/ops/InfrastructureNav.vue",
+      "web/src/compositions/useConfirmedRequest.test.ts",
+      "web/src/compositions/useConfirmedRequest.ts",
+      "web/src/compositions/useDeploymentPresentation.test.ts",
+      "web/src/compositions/useDeploymentPresentation.ts",
+      "web/src/lib/api/index.ts",
+      "web/src/lib/api/types/ops.ts",
+      "web/src/lib/repoMetrics.test.ts",
+      "web/src/lib/repoMetrics.ts",
+      "web/src/store/ops.test.ts",
+      "web/src/store/ops.ts",
+      "web/src/store/repos.test.ts",
+      "web/src/store/repos.ts",
+      "web/src/views/Overview.test.ts",
+      "web/src/views/Overview.vue",
+      "web/src/views/Repos.test.ts",
+      "web/src/views/Repos.vue",
+      "web/src/views/deployments/*.test.ts",
+      "web/src/views/deployments/*.vue",
+      "web/src/views/infrastructure/*.test.ts",
+      "web/src/views/infrastructure/*.vue"
+    ],
+    "entries": [
+      {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "32351b99149d7318237d92d34a15ed939c4b18ee"
+      },
+      {
+        "path": "web/src/App.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "09cd618b5a8b2147e53ec87996d0d0116d54a5b4"
+      },
+      {
+        "path": "web/src/App.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "950f9f99dff15da8c9773c3fcfd4a742c56ad3fe"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d49cfe6b856afd37cbedc5f00fb0ced7934c51e5"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4daa45f31bdfbd3d11b04bae551ac697e74ed1a1"
+      },
+      {
+        "path": "web/src/components/ops/DeploymentNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "60ce48286648a181c99d2e06434318b56ec2ea08"
+      },
+      {
+        "path": "web/src/components/ops/DeploymentNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4660453914b4054dcfa1a5c646d94ae3e75f9d62"
+      },
+      {
+        "path": "web/src/components/ops/InfrastructureNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a19aefd7d18d313b12ca81832a8289a2cd77c887"
+      },
+      {
+        "path": "web/src/components/ops/InfrastructureNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "35e2ed9e7fccefaa2be2991b92429c752491aae3"
+      },
+      {
+        "path": "web/src/compositions/useConfirmedRequest.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "43801c345b2c66f99c0b9b84c2f99b76677b20af"
+      },
+      {
+        "path": "web/src/compositions/useConfirmedRequest.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2120509962f9830089695a342da82d6dbb02e84d"
+      },
+      {
+        "path": "web/src/compositions/useDeploymentPresentation.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "92b7ce04ebdc0c14eeb6ffacb8c7dfad302a149a"
+      },
+      {
+        "path": "web/src/compositions/useDeploymentPresentation.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "995fe75e1c96b22cc7ef27b0762684f207261485"
+      },
+      {
+        "path": "web/src/lib/api/index.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cdcbc3fd04996ce0867ccc2baaa797fc3997e248"
+      },
+      {
+        "path": "web/src/lib/api/types/ops.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e70d0eed92b976fbd42dd0dcdc33a465111376c0"
+      },
+      {
+        "path": "web/src/lib/repoMetrics.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1dbdce953a1d80de0a23a437619c999ca88a134f"
+      },
+      {
+        "path": "web/src/lib/repoMetrics.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7d68df86820f8c51d4b6d0d9c457906f3b786c30"
+      },
+      {
+        "path": "web/src/store/ops.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "808dd1e0bc57fb03fd9855b5745d8479cdb55050"
+      },
+      {
+        "path": "web/src/store/ops.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9065595aff1dc05094dd8932294d018e92f846c4"
+      },
+      {
+        "path": "web/src/store/repos.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "86ea602a8b8a2cec252eed5f22854f8cf74283c0"
+      },
+      {
+        "path": "web/src/store/repos.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8407b2fe9943f2c116ce6a9de4dd52c19352c889"
+      },
+      {
+        "path": "web/src/views/deployments/ApplicationDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7e7b4ab60824fe2e88d0381d3a709bdd4db8d787"
+      },
+      {
+        "path": "web/src/views/deployments/Applications.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2bbccbddc3bcb9fbd82bd6a60421db9f069133c5"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentApprovals.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "440443968dc7100f01bdf9497cd467d87cf50a1b"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentCollections.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5d5296caca157f18d79b09e1fb59e0e92ad032ca"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetail.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b39940a221469f8ad8c11076b93eea3e3aed0e89"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2150e2145cd40ca985972c9cabffbba22bd043e3"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetails.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "11807555b9476c4d1609b72c90dca7fd44520e6b"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentNew.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d527ebc146c11d95fe17f71312f94a0a2488a02a"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentNew.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2bec1e8ac6caf98b863d52205f29ca73c10e9973"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentPolicies.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "240bc438618a88b117f9f93353ce5f4ed178ee01"
+      },
+      {
+        "path": "web/src/views/deployments/Deployments.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ed376b3d24865c142aa80b03a49b2e73502aaaee"
+      },
+      {
+        "path": "web/src/views/deployments/Deployments.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "280d7b361c8fad6b077dee43be2e65f13a2b62c6"
+      },
+      {
+        "path": "web/src/views/deployments/EnvironmentDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "dde1d8c1845b762e7ed873ed45925d3928499305"
+      },
+      {
+        "path": "web/src/views/deployments/Environments.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "657f1ebc44c20288bbd53cbdf80b60498366f0d9"
+      },
+      {
+        "path": "web/src/views/deployments/Releases.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "45ba2e738aa9a1e5cb5ab68cb69eb2ae4477ad37"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0393e0ed94a8138794d44874fc207a03a0bcf421"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureAlerts.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ce92753593032d004e7220d63ac41bf30ae19c52"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "37b9252ae682ffc8a40d41220a43d9940a9d7921"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroup.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e9e4a4d141cbcb16bc7c2ba22a1037a165d5589f"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroups.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "50797b8a3ec6098e062688a181d4932ff170c01c"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroups.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "314dcce4299f8d3735c435cacbda97d55e9c9166"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c1f621ea86c4052f26ee1d87b20966da339b8eab"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "be436d3d36c3ab99e8a95ba9c03a7025eb90152b"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f2e6fae87b60aa20c5aba7f9b742c0a4468d0b55"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0e6ee98382f7d62963273c35c345549511e108a5"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7eb5cef3686f0b5ce1cec6ba41e06e868aa29beb"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "533b11d625afed8a6dc9ca4f3c59070e2d42984c"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a3db108f82115117e483393a32859a34bbb34cf8"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServices.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "abf5010dd98d73c85c874798c42ad7f68e0630f6"
+      },
+      {
+        "path": "web/src/views/Overview.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8682a0035e5c686cc0d32b25207036c493efd98a"
+      },
+      {
+        "path": "web/src/views/Overview.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6543f4bb78096ba853fd570a1abdc48cc7f93881"
+      },
+      {
+        "path": "web/src/views/Repos.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3d6f36704d3a5277f93206f71b44fb2a1f5c3873"
+      },
+      {
+        "path": "web/src/views/Repos.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cd928980d69f3c938b765bb2ad4cb51f06c9ebd4"
+      }
+    ],
+    "sha256": "ede8912661c47e80c1589c58ce7dc8e4698d0661c9c862250b8832243c5ef82d"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/023-operations-residual-delta-closure/context.json",
+      "sha256": "9ed0a0e68084b6baea0da08b1ede487cd1e250a54d3e8dd4c33671f6f3cbd317"
+    },
+    "report": {
+      "path": "development/tasks/023-operations-residual-delta-closure/report.md",
+      "sha256": "5b802d9b1af12f0e20c3e240a1186cdaa0494dc9fd4bf5d4479ea426be77f109",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/023-operations-residual-delta-closure/spec-review.md",
+      "sha256": "d038d848d5254820a846cdccf5f0ac1e044092139364b0a589c02ba4c5d61f2d",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/023-operations-residual-delta-closure/quality-review.md",
+      "sha256": "8a11dd4f18cdb1ff4b8cc0c5e478d77f2b0a4ea162c4d1fd1b5d063b0a3057e6",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/validate_task.mjs",
+      "assertion_ids": ["A1", "A2", "A3", "A4"],
+      "recorded_at": "2026-08-13T18:59:14.810Z",
+      "validation_receipt_sha256": "38c6dd1e8ae838d2289b3db4782f8486ee400b53a3dd12020bdf9ac9c8ba99b2",
+      "evidence_log": {
+        "path": "development/evidence/035-023-operations-residual-delta-closure.log",
+        "sha256": "f7776f626e1eff60800f89cc9237ee2b248bcc0367b9b0cbb640ede24258bb66",
+        "size": 15469
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A1",
+      "parent_id": "A1",
+      "status": "passing",
+      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+    },
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

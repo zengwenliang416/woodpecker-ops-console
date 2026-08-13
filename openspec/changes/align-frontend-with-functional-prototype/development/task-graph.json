@@ -681,7 +681,7 @@
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/**"
       ],
-      "status": "planned"
+      "status": "complete"
     }
   ]
 }
