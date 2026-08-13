@@ -24,7 +24,7 @@ and persistent red-team.
 - No prototype fixture, backend contract, permission algorithm, persistence
   path, migration, or new dependency enters production.
 
-## Component Cohesion And Coupling
+## Component Cohesion / Coupling
 
 - Overview separates the core overview request from optional deployment and
   environment hydration. A core failure controls page availability; optional
@@ -76,7 +76,7 @@ and persistent red-team.
   lifecycle ownership changes.
 - Unsupported controls are disabled with explanations and produce no request.
 
-## Reuse And Duplication
+## Reuse / Duplication
 
 - Existing `Scaffold`, `FeedbackState`, `InfrastructureNav`, `OpsMetricCard`,
   `OpsMetricPanel`, `Button`, `IconButton`, table containment, i18n,

@@ -506,7 +506,7 @@
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/**"
       ],
-      "status": "in_progress"
+      "status": "complete"
     }
   ]
 }

@@ -1,0 +1,226 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "021-infrastructure-route-reverification",
+  "generated_at": "2026-08-13T13:53:21.247Z",
+  "recorded_at": "2026-08-13T13:53:02.034Z",
+  "status": "approved",
+  "reviewed_git_head": "473ff84ecccca2b450ef9aadcb3af9018bc42a26",
+  "reviewed_git_tree": "085dca8aef28aeb46161359b8dcfd5bb6757bffd",
+  "implementation_scope": {
+    "included_patterns": [
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/ops/InfrastructureNav.test.ts",
+      "web/src/components/ops/InfrastructureNav.vue",
+      "web/src/store/ops.test.ts",
+      "web/src/store/ops.ts",
+      "web/src/views/infrastructure/*.test.ts",
+      "web/src/views/infrastructure/*.vue"
+    ],
+    "entries": [
+      {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fed39b05d8bc5d35c90633e6b452636753ae42b8"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6ba4e9ba21dd879df1158a5648791913dad95115"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "301d47bb876c8f235205210f320c963d03e40f4b"
+      },
+      {
+        "path": "web/src/components/ops/InfrastructureNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a19aefd7d18d313b12ca81832a8289a2cd77c887"
+      },
+      {
+        "path": "web/src/components/ops/InfrastructureNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "35e2ed9e7fccefaa2be2991b92429c752491aae3"
+      },
+      {
+        "path": "web/src/store/ops.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f0d254846461ab1401063d5a36fc8d9fcb53fb09"
+      },
+      {
+        "path": "web/src/store/ops.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "78be7bb635392d24f47483da4a206987ef67331b"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0393e0ed94a8138794d44874fc207a03a0bcf421"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureAlerts.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ce92753593032d004e7220d63ac41bf30ae19c52"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "37b9252ae682ffc8a40d41220a43d9940a9d7921"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroup.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e9e4a4d141cbcb16bc7c2ba22a1037a165d5589f"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroups.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "50797b8a3ec6098e062688a181d4932ff170c01c"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureGroups.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "314dcce4299f8d3735c435cacbda97d55e9c9166"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c1f621ea86c4052f26ee1d87b20966da339b8eab"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "be436d3d36c3ab99e8a95ba9c03a7025eb90152b"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f2e6fae87b60aa20c5aba7f9b742c0a4468d0b55"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0e6ee98382f7d62963273c35c345549511e108a5"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7eb5cef3686f0b5ce1cec6ba41e06e868aa29beb"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "533b11d625afed8a6dc9ca4f3c59070e2d42984c"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a3db108f82115117e483393a32859a34bbb34cf8"
+      },
+      {
+        "path": "web/src/views/infrastructure/InfrastructureServices.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "abf5010dd98d73c85c874798c42ad7f68e0630f6"
+      }
+    ],
+    "sha256": "98a24ba81b33475684ae374f0df47a210665db9e0f7503f7c7f7fe31fa8444f3"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/021-infrastructure-route-reverification/context.json",
+      "sha256": "93d5b79d54eea4c25e705a3a6212e58bfe69287f27bc61fb8bc9754d15791768"
+    },
+    "report": {
+      "path": "development/tasks/021-infrastructure-route-reverification/report.md",
+      "sha256": "e8d4dff8727d304fe732daf230ed638ed6735bfc3934de8d5cadb7171958a3c0",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/021-infrastructure-route-reverification/spec-review.md",
+      "sha256": "31da9dd954f6b90f7ba4f79146f575f22912e24e89b0cecda62aa9b9af8eff7f",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/021-infrastructure-route-reverification/quality-review.md",
+      "sha256": "535522247cc829f6695bb8c8e4fa37b476f3e04a10295f67ef3821ae3a569b1b",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/evidence/validate_task.mjs",
+      "assertion_ids": ["A1", "A2", "A3", "A4"],
+      "recorded_at": "2026-08-13T13:53:02.034Z",
+      "validation_receipt_sha256": "ac4f952809b6bd54fe08331c380335f43b3a2c82b54620a5adc443acfa932e1e",
+      "evidence_log": {
+        "path": "development/evidence/028-021-infrastructure-route-reverification.log",
+        "sha256": "dca1721a08497e2e34f6d12eebabdadf6d8561e629965275475babb54dd34910",
+        "size": 6487
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A1",
+      "parent_id": "A1",
+      "status": "passing",
+      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+    },
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

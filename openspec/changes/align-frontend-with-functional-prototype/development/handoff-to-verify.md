@@ -93,9 +93,16 @@
   run `1eae7bc3-e742-4aac-bce0-ec61105eebb8` strictly verifies `20`
   production/prototype desktop/390px states for rows `2-3`; all `15` persisted
   verifier mutations are rejected.
+- `021-infrastructure-route-reverification` / baseline task `6.2`: the
+  Infrastructure overview, server list/detail tabs, groups, services, and
+  alerts now expose truthful initial, error, empty, filtered-empty, refresh,
+  permission, mutation, and unsupported-capability states. Current run
+  `84b42687-5a1a-402c-952f-6e5fd1ac338a` strictly verifies `62`
+  production/prototype states for rows `46-57`; all `13` persisted verifier
+  mutations are rejected.
 - Phase 5 is complete. This remains an incremental development snapshot rather
-  than the final six-domain verification handoff: the `12` baseline tasks in
-  phases `6-8`, operations rows `46-67`, blocked repository row `4`, and
+  than the final six-domain verification handoff: the `11` baseline tasks in
+  phases `6-8`, deployment rows `58-67`, blocked repository row `4`, and
   complete change-level acceptance remain open.
 
 ## Files Changed
@@ -173,6 +180,11 @@
   task-local Mock API/capture/verifier, persistent 15-mutation red-team, `20`
   measurement/PNG pairs, approved task acceptance for `A1-A4`, and closure
   lifecycle records.
+- Infrastructure re-verification: seven infrastructure route views, shared
+  infrastructure navigation, server/group/alert store ownership, bilingual
+  state copy, focused regressions, task-local Mock API/capture/verifier,
+  persistent 13-mutation red-team, `62` measurement/PNG pairs, approved task
+  acceptance for `A1-A4`, and closure lifecycle records.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -193,7 +205,8 @@
   `development/tasks/017-user-auth-routes/report.md`, and
   `development/tasks/018-authorization-boundaries/report.md`, and
   `development/tasks/019-route-family-parity-closure/report.md`, and
-  `development/tasks/020-overview-repositories-reverification/report.md`.
+  `development/tasks/020-overview-repositories-reverification/report.md`, and
+  `development/tasks/021-infrastructure-route-reverification/report.md`.
 
 ## Requirements Covered
 
@@ -277,6 +290,13 @@
   role/data boundary states. Focused `5/26`, full `87/513`, strict `20/20`,
   and all `15` isolated verifier mutations pass. This approval does not cover
   task `6.2+`, row `4`, rows `46+`, or complete change-level acceptance.
+- Task-scoped `A1`, `A2`, `A3`, and `A4` are approved for slice `021`.
+  Rows `46-57` pass exact current-byte production/prototype dark
+  Simplified-Chinese desktop/390px comparison plus production light-English,
+  normal-user, and empty-data states. Focused `9/39`, full `95/549`, strict
+  `62/62`, and all `13` isolated verifier mutations pass. This approval does
+  not cover task `6.3+`, row `4`, rows `58-67`, or complete change-level
+  acceptance.
 
 ## Prototype Decisions Implemented
 
@@ -406,6 +426,10 @@
 - Slice `020` changes only existing frontend state/error presentation and
   focused tests. It adds no route, API request, payload, backend, permission,
   persistence, migration, dependency, or approved-prototype contract.
+- Slice `021` changes only existing infrastructure presentation, request and
+  mutation ownership, localized feedback, and focused tests. It adds no route,
+  API request, payload, backend, permission algorithm, persistence, migration,
+  dependency, production fixture, or approved-prototype contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -477,7 +501,11 @@
   failures, safe retry, confirmed-data preservation, administrator versus
   normal-user requests, overlapping refreshes, empty/filter-empty results,
   pagination, selection, cached/forced metrics, and obsolete completions.
-- The current full frontend regression baseline is `87` test files and `513`
+- Infrastructure tests cover initial loading, retry, confirmed-data
+  preservation, empty/filter-empty states, route switching, overlapping
+  refreshes, polling exclusion, mutation ownership, role visibility,
+  unsupported controls, filters, and newest store ownership.
+- The current full frontend regression baseline is `95` test files and `549`
   tests.
 
 ## Local Validation
@@ -574,6 +602,17 @@
   administrator-only requests, browser health, overflow, raw i18n, raw server
   payloads, PNG integrity, checksums, and shared run ID. Its persistent
   red-team rejects all `15` isolated corruptions.
+- PASS: Infrastructure focused suite, `9` files / `39` tests, and complete
+  frontend suite, `95` files / `549` tests.
+- PASS: run `84b42687-5a1a-402c-952f-6e5fd1ac338a` contains exactly `62`
+  measurements and `62` PNGs for rows `46-57`, split into `38` production and
+  `24` approved-prototype states with desktop/mobile, theme, locale, role, and
+  empty-data coverage.
+- PASS: the strict task `021` verifier checks exact inventory, source/service
+  identity, route/tab, viewport, theme, locale, role, content, browser health,
+  overflow, raw i18n, unexpected HTTP failures, administrator controls, PNG
+  integrity, checksums, and shared run ID. Its persistent red-team rejects all
+  `13` isolated corruptions.
 - PASS: Verification 2.0 runtime `2.0.0-alpha.2` is installed and ready with
   `fallback_used:false`; task `019` has an approved task-local acceptance bound
   to signed receipt
@@ -583,11 +622,15 @@
   signed receipt
   `receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29`
   on closure commit `622e858be7d6f5f74f37e7ad1cfccbb094771454`.
+- PASS: task `021` has approved task-local acceptance for `A1-A4` bound to
+  signed receipt
+  `receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e`
+  on implementation commit `473ff84ecccca2b450ef9aadcb3af9018bc42a26`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Twelve baseline tasks remain incomplete across operations,
+- Eleven baseline tasks remain incomplete across operations,
   accessibility/i18n/responsive, and full six-domain verification work.
   Global prototype parity must not be claimed.
 - Repository row `4` remains blocked: production `/repos/add` renders the
