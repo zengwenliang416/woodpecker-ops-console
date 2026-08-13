@@ -28,7 +28,31 @@
     <div class="overview-page">
       <p class="page-description">{{ $t('overview.description') }}</p>
 
-      <div class="metric-grid">
+      <FeedbackState
+        v-if="initialLoading"
+        kind="loading"
+        :title="$t('overview.loading_title')"
+        :description="$t('overview.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError"
+        kind="error"
+        :title="$t('overview.error_title')"
+        :description="$t('overview.error_description')"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('overview.retry')" @click="loadDashboard()" />
+        </template>
+      </FeedbackState>
+      <FeedbackState
+        v-else-if="partialError"
+        compact
+        kind="error"
+        :title="$t('overview.partial_error_title')"
+        :description="$t('overview.partial_error_description')"
+      />
+
+      <div v-if="hasConfirmedCoreData" class="metric-grid">
         <OpsMetricCard
           :label="$t('overview.active_pipelines')"
           :value="String(activePipelineCount)"
@@ -89,15 +113,15 @@
         <OpsMetricCard
           v-else
           :label="$t('overview.repository_count')"
-          :value="String(repos.length)"
-          :hint="$t('overview.repository_count_hint')"
+          :value="hasConfirmedRepos ? String(repos.length) : '—'"
+          :hint="hasConfirmedRepos ? $t('overview.repository_count_hint') : $t('overview.repository_count_unavailable')"
           icon="repo"
-          :chart-values="[repos.length]"
+          :chart-values="hasConfirmedRepos ? [repos.length] : []"
           tone="neutral"
         />
       </div>
 
-      <div class="dashboard-grid">
+      <div v-if="hasConfirmedCoreData" class="dashboard-grid">
         <main class="dashboard-main">
           <section class="wp-card activity-card">
             <div class="wp-card-header">
@@ -153,7 +177,11 @@
                   ><i :class="healthTone(item.score)" :style="{ width: `${item.score}%` }"
                 /></span>
               </div>
-              <div v-if="repositoryHealth.length === 0" class="wp-empty-state">
+              <div v-if="!hasConfirmedRepos" class="wp-empty-state">
+                <strong>{{ $t('overview.repository_health_unavailable') }}</strong>
+                <p>{{ $t('overview.partial_error_description') }}</p>
+              </div>
+              <div v-else-if="repositoryHealth.length === 0" class="wp-empty-state">
                 <strong>{{ $t('overview.no_repositories') }}</strong>
                 <p>{{ $t('overview.no_repositories_hint') }}</p>
               </div>
@@ -175,25 +203,28 @@
             <div class="agent-body">
               <div class="capacity-donut" :style="capacityDonutStyle">
                 <div>
-                  <strong>{{ totalAgentCapacity }}</strong
+                  <strong>{{ hasConfirmedAgents ? totalAgentCapacity : '—' }}</strong
                   ><small>{{ $t('overview.capacity') }}</small>
                 </div>
               </div>
               <div class="agent-stats">
                 <div>
                   <span>{{ $t('overview.online') }}</span
-                  ><strong>{{ onlineAgentCount }}</strong>
+                  ><strong>{{ hasConfirmedAgents ? onlineAgentCount : '—' }}</strong>
                 </div>
                 <div>
                   <span>{{ $t('overview.busy') }}</span
-                  ><strong>{{ busyAgentCount }}</strong>
+                  ><strong>{{ hasConfirmedAgents ? busyAgentCount : '—' }}</strong>
                 </div>
                 <div>
                   <span>{{ $t('overview.disabled') }}</span
-                  ><strong class="danger-text">{{ disabledAgentCount }}</strong>
+                  ><strong class="danger-text">{{ hasConfirmedAgents ? disabledAgentCount : '—' }}</strong>
                 </div>
               </div>
             </div>
+            <p v-if="!hasConfirmedAgents" class="agent-unavailable">
+              {{ $t('overview.agent_capacity_unavailable') }}
+            </p>
           </section>
 
           <section class="wp-card failures-card">
@@ -234,10 +265,11 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/ops/PrototypeIcon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
@@ -267,10 +299,17 @@ const queue = ref<QueueInfo | null>(null);
 const scopeFilter = ref('all');
 const refreshing = ref(false);
 const scopeLoading = ref(false);
+const hasConfirmedCoreData = ref(false);
+const hasConfirmedRepos = ref(false);
+const hasConfirmedAgents = ref(false);
+const loadError = ref(false);
+const partialError = ref(false);
 let environmentLoadGeneration = 0;
 let dashboardLoadGeneration = 0;
+let mounted = true;
 
 const repos = computed(() => repoStore.ownedRepos);
+const initialLoading = computed(() => refreshing.value && !hasConfirmedCoreData.value);
 const fallbackPipelines = computed<DashboardPipeline[]>(() =>
   repos.value
     .filter((repo): repo is Repo & { last_pipeline: Pipeline } => !!repo.last_pipeline)
@@ -472,6 +511,8 @@ async function loadEnvironmentPipelines() {
 async function loadDashboard(showNotification = false) {
   const generation = ++dashboardLoadGeneration;
   refreshing.value = true;
+  loadError.value = false;
+  partialError.value = false;
   environmentLoadGeneration += 1;
   scopeLoading.value = false;
   try {
@@ -481,25 +522,39 @@ async function loadDashboard(showNotification = false) {
         ? Promise.allSettled([apiClient.getAgents({ page: 1, perPage: 50 }), apiClient.getQueueInfo()])
         : Promise.resolve(null),
     ]);
-    if (generation !== dashboardLoadGeneration) return;
+    if (!mounted || generation !== dashboardLoadGeneration) return;
 
-    const [, feedResult] = coreResults;
-    feed.value = feedResult.status === 'fulfilled' ? (feedResult.value ?? []) : [];
+    const [repoResult, feedResult] = coreResults;
+    const coreSucceeded = repoResult.status === 'fulfilled' || feedResult.status === 'fulfilled';
+    const coreFailed = repoResult.status === 'rejected' || feedResult.status === 'rejected';
+    if (repoResult.status === 'fulfilled') hasConfirmedRepos.value = true;
+    if (feedResult.status === 'fulfilled') feed.value = feedResult.value ?? [];
     environmentPipelines.value = [];
     if (adminResults) {
       const [agentResult, queueResult] = adminResults;
-      agents.value = agentResult.status === 'fulfilled' ? (agentResult.value ?? []) : [];
-      queue.value = queueResult.status === 'fulfilled' && !Array.isArray(queueResult.value) ? queueResult.value : null;
+      if (agentResult.status === 'fulfilled') {
+        agents.value = agentResult.value ?? [];
+        hasConfirmedAgents.value = true;
+      }
+      if (queueResult.status === 'fulfilled' && !Array.isArray(queueResult.value)) queue.value = queueResult.value;
+      if (agentResult.status === 'rejected' || queueResult.status === 'rejected') partialError.value = true;
     } else {
       agents.value = [];
       queue.value = null;
     }
 
+    if (coreSucceeded) hasConfirmedCoreData.value = true;
+    if (coreFailed) {
+      if (hasConfirmedCoreData.value) partialError.value = true;
+      else loadError.value = true;
+    }
     if (scopeFilter.value !== 'all') await loadEnvironmentPipelines();
-    if (generation !== dashboardLoadGeneration) return;
-    if (showNotification) notifications.notify({ type: 'success', title: t('overview.refresh_success') });
+    if (!mounted || generation !== dashboardLoadGeneration) return;
+    if (showNotification && !loadError.value && !partialError.value) {
+      notifications.notify({ type: 'success', title: t('overview.refresh_success') });
+    }
   } finally {
-    if (generation === dashboardLoadGeneration) refreshing.value = false;
+    if (mounted && generation === dashboardLoadGeneration) refreshing.value = false;
   }
 }
 
@@ -516,6 +571,11 @@ watch(scopeFilter, (scope) => {
   }
 });
 onMounted(() => loadDashboard());
+onBeforeUnmount(() => {
+  mounted = false;
+  dashboardLoadGeneration += 1;
+  environmentLoadGeneration += 1;
+});
 </script>
 
 <style scoped>
@@ -545,6 +605,9 @@ onMounted(() => loadDashboard());
 }
 .dashboard-sidebar {
   @apply grid content-start gap-4;
+}
+.agent-unavailable {
+  @apply text-wp-text-alt-100 px-4 pb-4 text-[10px];
 }
 .wp-card-header > div h2,
 .wp-card-header > div p {

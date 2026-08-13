@@ -46,7 +46,7 @@ apiClient.setErrorHandler((err) => {
     notify({ title: i18n.t('errors.not_found'), type: 'error' });
     return;
   }
-  notify({ title: err.message || i18n.t('unknown_error'), type: 'error' });
+  notify({ title: i18n.t('unknown_error'), type: 'error' });
 });
 
 const layout = computed(() => route.meta.layout ?? 'default');

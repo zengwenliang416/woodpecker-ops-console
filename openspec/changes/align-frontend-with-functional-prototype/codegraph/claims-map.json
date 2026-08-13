@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-13T02:40:48.058Z",
+  "generated_at": "2026-08-13T07:39:20.154Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -717,6 +717,44 @@
         "web/src/views/NotFound.test.ts"
       ],
       "query_ids": ["development:task-019-route-family-parity-closure:evidence"]
+    },
+    {
+      "id": "development:task-020-overview-repositories-reverification",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "020-overview-repositories-reverification",
+      "text": "Re-verify parity rows `2` and `3` from current production and approved",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/context.json"
+      ],
+      "expected_evidence": [
+        "Focused page, metric, and store regressions for administrator and normal-user roles; populated, empty, filtered-empty, active and partial failures; refresh; pagination; selection; fallback values; and stale overlapping requests.",
+        "Equivalent current-byte production/prototype Overview and Repositories evidence in dark Simplified Chinese and light English at 1600x1000 and 390x844, with administrator and normal-user or read-only representatives plus populated and empty or partial-failure data states.",
+        "A strict verifier proving exact state inventory, routes, viewports, theme, locale, role, data state, content, local/page overflow, raw i18n absence, browser health, PNG integrity, service identity, source hashes, one run ID, and a rejected negative mutation.",
+        "Focused and full Vitest, Prettier, ESLint, TypeScript, Vite build, evidence syntax, JSON/JSONL, diff, SpecNav entry/handoff, task report, spec review, and quality review receipts.",
+        "Route-parity rows 2 and 3 and baseline task 6.1 updated only after current-byte evidence and reviews pass."
+      ],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/App.test.ts",
+        "web/src/views/Overview.vue",
+        "web/src/views/Overview.test.ts",
+        "web/src/views/Repos.vue",
+        "web/src/views/Repos.test.ts",
+        "web/src/lib/repoMetrics.ts",
+        "web/src/lib/repoMetrics.test.ts",
+        "web/src/store/repos.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
+      ],
+      "query_ids": ["development:task-020-overview-repositories-reverification:evidence"]
     }
   ]
 }

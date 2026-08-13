@@ -1,0 +1,89 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 管理代码仓库及其 CI/CD 流水线。 添加仓库 全部状态 成功 失败 运行中 警告 等待中 全部 Forge GitHub GitLab Gitea Bitbucket 清除 仓库 Forge 分支 最近流水线 上次运行 平均时长 成功率 可见性 acme/backend-api Backend API service with Go and PostgreSQL GitHub main 成功 2 分钟前 2m 47s 96.3% 私有 acme/web-frontend Customer-facing Vue application GitLab main 成功 5 分钟前 3m 18s 97.1% 私有 acme/worker-service Asynchronous job processing service GitHub develop 失败 12 分钟前 6m 07s 88.9% 私有 acme/mobile-app Cross-platform mobile application Bitbucket main 成功 18 分钟前 7m 41s 94% 私有 acme/infrastructure Infrastructure as code and cluster configuration GitHub main 警告 24 分钟前 2m 02s 91.2% 私有 acme/data-pipeline Batch and streaming data processing jobs GitLab main 成功 31 分钟前 8m 52s 95.3% 私有 acme/auth-service Authentication and authorization service GitHub feature/oauth2 运行中 1 分钟前 — 86.7% 私有 acme/marketing-site Public website and documentation landing pages GitHub main 成功 1 小时前 1m 34s 99.2% 公开 acme/reports-api Reporting and export APIs GitLab main 失败 1 小时前 5m 21s 84.5% 私有 acme/legacy-monolith Legacy application maintained during migration Bitbucket release/1.4 成功 2 小时前 9m 03s 92.8% 私有 acme/shared-libraries Shared internal packages and design tokens GitHub main 成功 3 小时前 1m 08s 98.6% 公开 acme/notification-service Email, SMS and webhook notifications Gitea main 等待中 刚刚 — 93.1% 私有 显示 1 至 10 项，共 12 项 1 2 3 仓库健康度 12 总仓库 成功 7 失败 2 运行中 1 等待中 1 按团队 Platform 3 个仓库 Backend 4 个仓库 Frontend 1 个仓库 Data 1 个仓库 DevOps 1 个仓库",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 仓库 管理代码仓库及其 CI/CD 流水线。 添加仓库 全部状态 成功 失败 运行中 警告 等待中 全部 Forge GitHub GitLab Gitea Bitbucket 清除 仓库 Forge 分支 最近流水线 上次运行 平均时长 成功率 可见性 acme/backend-api Backend API service with Go and PostgreSQL GitHub main 成功 2 分钟前 2m 47s 96.3% 私有 acme/web-frontend Customer-facing Vue application GitLab main 成功 5 分钟前 3m 18s 97.1% 私有 acme/worker-service Asynchronous job processing service GitHub develop 失败 12 分钟前 6m 07s 88.9% 私有 acme/mobile-app Cross-platform mobile application Bitbucket main 成功 18 分钟前 7m 41s 94% 私有 acme/infrastructure Infrastructure as code and cluster configuration GitHub main 警告 24 分钟前 2m 02s 91.2% 私有 acme/data-pipeline Batch and streaming data processing jobs GitLab main 成功 31 分钟前 8m 52s 95.3% 私有 acme/auth-service Authentication and authorization service GitHub feature/oauth2 运行中 1 分钟前 — 86.7% 私有 acme/marketing-site Public website and documentation landing pages GitHub main 成功 1 小时前 1m 34s 99.2% 公开 acme/reports-api Reporting and export APIs GitLab main 失败 1 小时前 5m 21s 84.5% 私有 acme/legacy-monolith Legacy application maintained during migration Bitbucket release/1.4 成功 2 小时前 9m 03s 92.8% 私有 acme/shared-libraries Shared internal packages and design tokens GitHub main 成功 3 小时前 1m 08s 98.6% 公开 acme/notification-service Email, SMS and webhook notifications Gitea main 等待中 刚刚 — 93.1% 私有 显示 1 至 10 项，共 12 项 1 2 3 仓库健康度 12 总仓库 成功 7 失败 2 运行中 1 等待中 1 按团队 Platform 3 个仓库 Backend 4 个仓库 Frontend 1 个仓库 Data 1 个仓库 DevOps 1 个仓库",
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "auto",
+      "locallyScrollable": false
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/repos",
+  "url": "http://127.0.0.1:8201/#/repos",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+  "stateId": "prototype-dark-zh-desktop-repos",
+  "row": 3,
+  "destination": "repos",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/仓库/",
+      "passed": true
+    },
+    {
+      "pattern": "/acme\\/backend-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T08:52:14.614Z",
+  "health": {
+    "startedAt": "2026-08-13T08:52:13.904Z",
+    "endedAt": "2026-08-13T08:52:14.614Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8201/",
+      "http://127.0.0.1:8201/assets/app.css",
+      "http://127.0.0.1:8201/assets/data.js",
+      "http://127.0.0.1:8201/assets/ui.js",
+      "http://127.0.0.1:8201/assets/views.js",
+      "http://127.0.0.1:8201/assets/app.js",
+      "http://127.0.0.1:8201/favicon.ico"
+    ]
+  }
+}

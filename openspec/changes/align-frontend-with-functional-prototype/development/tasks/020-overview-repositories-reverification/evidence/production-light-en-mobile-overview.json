@@ -1,0 +1,325 @@
+{
+  "bodyText": "Search pipelines, repos, users and settings… 2 Overview All environments Production Staging refresh Configure overview A live summary of the entire CI/CD environment. Active pipelines 2 1 running · 1 queued Success rate 80.0% 4/5 recent pipelines succeeded Average duration 6m 25s 5 completed runs Queue health 96% 1 queued · 0 dependency blocked Recent activity Latest runs across all repositories View all #842 · fix failing typecheck backend-api · main · alice Failed #841 · publish verified release backend-api · main · alice Success #840 · publish verified release backend-api · main · alice Success #632 · build release candidate web-frontend · main · alice Running #631 · publish verified release web-frontend · main · alice Success #455 · await available Agent data-worker · main · alice Queued Repository health Based on recent pipeline status web-frontend 100.0% data-worker 100.0% backend-api 66.7% View all repositories Agent capacity Manage 6 Capacity Online 1 Busy 1 Disabled 1 Recent failures View analysis #842 fix failing typecheck main · alice 8h ago",
+  "bodyTextSample": "Search pipelines, repos, users and settings… 2 Overview All environments Production Staging refresh Configure overview A live summary of the entire CI/CD environment. Active pipelines 2 1 running · 1 queued Success rate 80.0% 4/5 recent pipelines succeeded Average duration 6m 25s 5 completed runs Queue health 96% 1 queued · 0 dependency blocked Recent activity Latest runs across all repositories View all #842 · fix failing typecheck backend-api · main · alice Failed #841 · publish verified release backend-api · main · alice Success #840 · publish verified release backend-api · main · alice Success #632 · build release candidate web-frontend · main · alice Running #631 · publish verified release web-frontend · main · alice Success #455 · await available Agent data-worker · main · alice Queued Repository health Based on recent pipeline status web-frontend 100.0% data-worker 100.0% backend-api 66.7% View all repositories Agent capacity Manage 6 Capacity Online 1 Busy 1 Disabled 1 Recent failures View analysis #842 fix failing typecheck main · alice 8h ago",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "light",
+    "lang": "en"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "denseContainers": [],
+  "terminalRouteName": "overview",
+  "terminalPath": "/overview",
+  "url": "http://127.0.0.1:8200/overview",
+  "title": "Overview · Woodpecker",
+  "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+  "stateId": "production-light-en-mobile-overview",
+  "row": 2,
+  "destination": "overview",
+  "surface": "production",
+  "stateClass": "representative",
+  "role": "admin",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Overview/",
+      "passed": true
+    },
+    {
+      "pattern": "/Active pipelines/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [
+    "/web-config.js",
+    "/api/user/repos",
+    "/api/stream/events",
+    "/api/repos",
+    "/api/user/feed",
+    "/api/user/repos",
+    "/api/queue/info",
+    "/api/user/feed",
+    "/api/agents",
+    "/api/repos"
+  ],
+  "capturedAt": "2026-08-13T08:52:25.673Z",
+  "health": {
+    "startedAt": "2026-08-13T08:52:24.385Z",
+    "endedAt": "2026-08-13T08:52:25.673Z",
+    "consoleErrors": [],
+    "consoleWarnings": [
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages."
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8200/overview",
+      "http://127.0.0.1:8200/@vite/client",
+      "http://127.0.0.1:8200/web-config.js",
+      "http://127.0.0.1:8200/assets/custom.css",
+      "http://127.0.0.1:8200/src/main.ts",
+      "http://127.0.0.1:8200/assets/custom.js",
+      "http://127.0.0.1:8200/@fs/Users/wenliang_zeng/.cache/woodpecker-web-vstore/vite@8.2.1_@types+node@24.13.3_jiti@2.7.0_yaml@2.9.0/node_modules/vite/dist/client/env.mjs",
+      "http://127.0.0.1:8200/src/compositions/useFavicon.ts",
+      "http://127.0.0.1:8200/src/tailwind.css",
+      "http://127.0.0.1:8200/src/style.css",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/pinia.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/vue.js?v=bc181798",
+      "http://127.0.0.1:8200/src/App.vue",
+      "http://127.0.0.1:8200/src/compositions/useEvents.ts",
+      "http://127.0.0.1:8200/src/compositions/useI18n.ts",
+      "http://127.0.0.1:8200/src/compositions/useNotifications.ts",
+      "http://127.0.0.1:8200/src/router.ts",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/vue.runtime.esm-bundler-D9ag4_JJ.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/dist-DnamxKAy.js?v=bc181798",
+      "http://127.0.0.1:8200/src/compositions/useConfig.ts",
+      "http://127.0.0.1:8200/src/compositions/useTheme.ts",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/vue-i18n.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/vue-router.js?v=bc181798",
+      "http://127.0.0.1:8200/src/components/layout/header/Sidebar.vue",
+      "http://127.0.0.1:8200/src/components/layout/header/Navbar.vue",
+      "http://127.0.0.1:8200/src/components/pipeline-feed/PipelineFeedSidebar.vue",
+      "http://127.0.0.1:8200/src/compositions/useApiClient.ts",
+      "http://127.0.0.1:8200/src/App.vue?vue&type=style&index=0&scoped=7a7a37b1&lang.css",
+      "http://127.0.0.1:8200/@id/__x00__plugin-vue:export-helper",
+      "http://127.0.0.1:8200/src/store/pipelines.ts",
+      "http://127.0.0.1:8200/src/store/repos.ts",
+      "http://127.0.0.1:8200/@id/__x00__vite/dynamic-import-helper.js",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/@vueuse_core.js?v=bc181798",
+      "http://127.0.0.1:8200/@id/__x00__virtual:vue-i18n-supported-locales",
+      "http://127.0.0.1:8200/src/compositions/useDate.ts",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/@kyvg_vue3-notification.js?v=bc181798",
+      "http://127.0.0.1:8200/src/compositions/useAuthentication.ts",
+      "http://127.0.0.1:8200/src/compositions/useUserConfig.ts",
+      "http://127.0.0.1:8200/src/assets/logo.svg?import&component",
+      "http://127.0.0.1:8200/src/components/ops/PrototypeIcon.vue",
+      "http://127.0.0.1:8200/src/components/atomic/IconButton.vue",
+      "http://127.0.0.1:8200/src/components/layout/header/Sidebar.vue?vue&type=style&index=0&scoped=e0b923ac&lang.css",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=bc181798",
+      "http://127.0.0.1:8200/src/lib/api/index.ts",
+      "http://127.0.0.1:8200/src/components/pipeline-feed/PipelineFeedItem.vue",
+      "http://127.0.0.1:8200/src/compositions/usePipelineFeed.ts",
+      "http://127.0.0.1:8200/src/components/atomic/Button.vue",
+      "http://127.0.0.1:8200/src/compositions/useVersion.ts",
+      "http://127.0.0.1:8200/src/components/layout/header/ActivePipelines.vue",
+      "http://127.0.0.1:8200/src/components/layout/header/Navbar.vue?vue&type=style&index=0&scoped=23f3069c&lang.css",
+      "http://127.0.0.1:8200/src/compositions/usePaginate.ts",
+      "http://127.0.0.1:8200/src/components/atomic/Icon.vue",
+      "http://127.0.0.1:8200/src/components/atomic/IconButton.vue?vue&type=style&index=0&scoped=ed4e4676&lang.css",
+      "http://127.0.0.1:8200/src/lib/api/client.ts",
+      "http://127.0.0.1:8200/src/components/atomic/RenderMarkdown.vue",
+      "http://127.0.0.1:8200/src/components/repo/pipeline/PipelineStatusIcon.vue",
+      "http://127.0.0.1:8200/src/compositions/usePipeline.ts",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/semver_functions_coerce.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/semver_functions_gt.js?v=bc181798",
+      "http://127.0.0.1:8200/src/components/layout/header/ActivePipelines.vue?vue&type=style&index=0&scoped=74433f7a&lang.css",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/@mdi_js.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/simple-icons.js?v=bc181798",
+      "http://127.0.0.1:8200/src/components/atomic/SvgIcon.vue",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/node-emoji.js?v=bc181798",
+      "http://127.0.0.1:8200/src/compositions/useElapsedTime.ts",
+      "http://127.0.0.1:8200/src/lib/pipelineRefs.ts",
+      "http://127.0.0.1:8200/src/lib/utils/index.ts",
+      "http://127.0.0.1:8200/src/components/repo/pipeline/pipeline-status.ts",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/dompurify.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/marked.js?v=bc181798",
+      "http://127.0.0.1:8200/node_modules/.vite/deps/semver-CR7M5Igw.js?v=bc181798",
+      "http://127.0.0.1:8200/src/lib/api/types/webhook.ts",
+      "http://127.0.0.1:8200/@id/virtual:intlify-i18n-5",
+      "http://127.0.0.1:8200/api/user/repos?",
+      "http://127.0.0.1:8200/src/views/Overview.vue",
+      "http://127.0.0.1:8200/api/stream/events",
+      "http://127.0.0.1:8200/api/repos?page=1",
+      "http://127.0.0.1:8200/src/components/atomic/FeedbackState.vue",
+      "http://127.0.0.1:8200/src/components/layout/scaffold/Scaffold.vue",
+      "http://127.0.0.1:8200/src/components/ops/OpsMetricCard.vue",
+      "http://127.0.0.1:8200/src/compositions/useWPTitle.ts",
+      "http://127.0.0.1:8200/src/lib/repoMetrics.ts",
+      "http://127.0.0.1:8200/src/views/Overview.vue?vue&type=style&index=0&scoped=8e6ceb57&lang.css",
+      "http://127.0.0.1:8200/src/components/atomic/FeedbackState.vue?vue&type=style&index=0&scoped=b91a9838&lang.css",
+      "http://127.0.0.1:8200/src/components/layout/Container.vue",
+      "http://127.0.0.1:8200/src/compositions/useTabs.ts",
+      "http://127.0.0.1:8200/src/components/layout/scaffold/Header.vue",
+      "http://127.0.0.1:8200/api/user/feed",
+      "http://127.0.0.1:8200/src/components/ops/OpsSparkline.vue",
+      "http://127.0.0.1:8200/src/components/ops/OpsMetricCard.vue?vue&type=style&index=0&scoped=cc55a4f3&lang.css",
+      "http://127.0.0.1:8200/src/compositions/useInjectProvide.ts",
+      "http://127.0.0.1:8200/src/components/form/TextField.vue",
+      "http://127.0.0.1:8200/src/components/layout/scaffold/Tabs.vue",
+      "http://127.0.0.1:8200/src/components/ops/OpsSparkline.vue?vue&type=style&index=0&scoped=85dd96cd&lang.css",
+      "http://127.0.0.1:8200/src/components/atomic/CountBadge.vue",
+      "http://127.0.0.1:8200/api/user/repos?",
+      "http://127.0.0.1:8200/api/user/feed",
+      "http://127.0.0.1:8200/api/agents?page=1&perPage=50",
+      "http://127.0.0.1:8200/api/queue/info",
+      "http://127.0.0.1:8200/api/repos?page=1"
+    ]
+  }
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "woodpecker.overview-repositories-verifier-redteam.v1",
+  "ok": true,
+  "positiveVerifierExitCode": 0,
+  "mutations": [
+    {
+      "id": "run-id",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-theme",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-locale",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "tampered-content",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "missing-state",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-role",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-route",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "unhealthy-browser",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "raw-i18n",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "raw-server-toast",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "normal-user-admin-request",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "unexpected-http-error",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "horizontal-overflow",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "source-identity",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "png-signature",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    }
+  ],
+  "generatedAt": "2026-08-13T09:17:17.035Z"
+}

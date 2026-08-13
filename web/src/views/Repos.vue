@@ -11,7 +11,45 @@
     <div class="repos-page">
       <p class="page-description">{{ $t('repositories.description') }}</p>
 
-      <div class="repos-grid">
+      <FeedbackState
+        v-if="initialLoading"
+        kind="loading"
+        :title="$t('repositories.loading_title')"
+        :description="$t('repositories.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError && repos.length === 0"
+        kind="error"
+        :title="$t('repositories.error_title')"
+        :description="$t('repositories.error_description')"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('repositories.retry')" @click="loadRepositories()" />
+        </template>
+      </FeedbackState>
+      <FeedbackState
+        v-else-if="repos.length === 0"
+        kind="empty"
+        :title="$t('repositories.no_repositories')"
+        :description="$t('repositories.no_repositories_hint')"
+      />
+
+      <FeedbackState
+        v-if="repos.length > 0 && loadError"
+        compact
+        kind="error"
+        :title="$t('repositories.refresh_error_title')"
+        :description="$t('repositories.refresh_error_description')"
+      />
+      <FeedbackState
+        v-else-if="repos.length > 0 && partialError"
+        compact
+        kind="error"
+        :title="$t('repositories.partial_error_title')"
+        :description="$t('repositories.partial_error_description')"
+      />
+
+      <div v-if="repos.length > 0" class="repos-grid">
         <main class="wp-card table-card">
           <div class="filters">
             <label class="search-field"
@@ -228,15 +266,15 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, reactive, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/ops/PrototypeIcon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
-import { useAsyncAction } from '~/compositions/useAsyncAction';
 import useApiClient from '~/compositions/useApiClient';
 import useRepos from '~/compositions/useRepos';
 import { useWPTitle } from '~/compositions/useWPTitle';
@@ -259,7 +297,15 @@ const pageSize = 10;
 const selectedRepoIds = ref(new Set<number>());
 const forges = ref<Forge[]>([]);
 const repoStats = reactive(new Map<number, PipelineStats>());
-const loadingStats = new Set<number>();
+const loadingStats = new Map<number, number>();
+const initialLoading = ref(true);
+const isRefreshing = ref(false);
+const loadError = ref(false);
+const forgeError = ref(false);
+const statsError = ref(false);
+let loadGeneration = 0;
+let statsGeneration = 0;
+let mounted = true;
 
 const repos = computed(() => sortReposByLastActivity(repoStore.ownedRepos.map((repo) => repoWithLastPipeline(repo))));
 const forgeMap = computed(() => new Map(forges.value.map((forge) => [forge.id, forge])));
@@ -302,13 +348,47 @@ const ownerGroups = computed(() => {
   const maxCount = Math.max(...groups.map(([, count]) => count), 1);
   return groups.map(([owner, count]) => ({ owner, count, percent: Math.max(18, (count / maxCount) * 100) }));
 });
+const partialError = computed(() => forgeError.value || statsError.value);
 
-const { doSubmit: refreshRepositories, isLoading: isRefreshing } = useAsyncAction(async () => {
-  await repoStore.refreshRepos();
-  await repoStore.loadRepos();
-  repoStats.clear();
-  await loadRepoStats(paginatedRepos.value);
-});
+async function loadRepositories(refresh = false) {
+  const generation = ++loadGeneration;
+  const metricGeneration = ++statsGeneration;
+  loadingStats.clear();
+  statsError.value = false;
+  loadError.value = false;
+  if (refresh) isRefreshing.value = true;
+  else initialLoading.value = repos.value.length === 0;
+
+  try {
+    if (refresh) await repoStore.refreshRepos();
+    const [repoResult, forgeResult] = await Promise.allSettled([
+      repoStore.loadRepos(),
+      apiClient.getForges({ page: 1, perPage: 50 }),
+    ]);
+    if (!mounted || generation !== loadGeneration) return;
+
+    if (repoResult.status === 'rejected') {
+      loadError.value = true;
+      return;
+    }
+
+    forgeError.value = forgeResult.status === 'rejected';
+    if (forgeResult.status === 'fulfilled') forges.value = forgeResult.value ?? [];
+
+    await loadRepoStats(paginatedRepos.value, metricGeneration, refresh);
+  } catch {
+    if (mounted && generation === loadGeneration) loadError.value = true;
+  } finally {
+    if (mounted && generation === loadGeneration) {
+      initialLoading.value = false;
+      isRefreshing.value = false;
+    }
+  }
+}
+
+function refreshRepositories() {
+  return loadRepositories(true);
+}
 
 function statusLabel(status: RepoPipelineStatus): string {
   return {
@@ -408,18 +488,20 @@ function formatDuration(seconds: number): string {
   });
 }
 
-async function loadRepoStats(repoList: Repo[]) {
+async function loadRepoStats(repoList: Repo[], generation = statsGeneration, force = false) {
   await Promise.all(
     repoList.map(async (repo) => {
-      if (repoStats.has(repo.id) || loadingStats.has(repo.id)) return;
-      loadingStats.add(repo.id);
+      if ((!force && repoStats.has(repo.id)) || loadingStats.get(repo.id) === generation) return;
+      loadingStats.set(repo.id, generation);
       try {
         const pipelines = await apiClient.getPipelineList(repo.id, { page: 1, perPage: 20 });
-        repoStats.set(repo.id, calculatePipelineStats(pipelines));
+        if (mounted && generation === statsGeneration) {
+          repoStats.set(repo.id, calculatePipelineStats(pipelines));
+        }
       } catch {
-        return;
+        if (mounted && generation === statsGeneration) statsError.value = true;
       } finally {
-        loadingStats.delete(repo.id);
+        if (loadingStats.get(repo.id) === generation) loadingStats.delete(repo.id);
       }
     }),
   );
@@ -460,17 +542,17 @@ watch([search, statusFilter, forgeFilter], () => {
 watch(totalPages, (pages) => {
   if (currentPage.value > pages) currentPage.value = pages;
 });
-watch(
-  paginatedRepos,
-  (items) => {
-    void loadRepoStats(items);
-  },
-  { immediate: true },
-);
+watch(paginatedRepos, (items) => {
+  void loadRepoStats(items);
+});
 
-onMounted(async () => {
-  const [, forgeList] = await Promise.all([repoStore.loadRepos(), apiClient.getForges({ page: 1, perPage: 50 })]);
-  forges.value = forgeList ?? [];
+onMounted(() => {
+  void loadRepositories();
+});
+onBeforeUnmount(() => {
+  mounted = false;
+  loadGeneration += 1;
+  statsGeneration += 1;
 });
 </script>
 

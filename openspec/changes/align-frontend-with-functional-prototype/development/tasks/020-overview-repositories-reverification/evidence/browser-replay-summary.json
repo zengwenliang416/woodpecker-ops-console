@@ -1,0 +1,56 @@
+{
+  "schema": "woodpecker.overview-repositories-browser-replay.v1",
+  "ok": true,
+  "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+  "states": 20,
+  "productionStates": 12,
+  "prototypeStates": 8,
+  "equivalentStates": 8,
+  "representativeStates": 8,
+  "boundaryStates": 4,
+  "rows": [2, 3],
+  "stateIds": [
+    "production-dark-zh-desktop-overview",
+    "production-dark-zh-desktop-overview-normal-user",
+    "production-dark-zh-desktop-overview-partial",
+    "production-dark-zh-desktop-repos",
+    "production-dark-zh-desktop-repos-empty",
+    "production-dark-zh-desktop-repos-partial",
+    "production-dark-zh-mobile-overview",
+    "production-dark-zh-mobile-repos",
+    "production-light-en-desktop-overview",
+    "production-light-en-desktop-repos",
+    "production-light-en-mobile-overview",
+    "production-light-en-mobile-repos",
+    "prototype-dark-zh-desktop-overview",
+    "prototype-dark-zh-desktop-repos",
+    "prototype-dark-zh-mobile-overview",
+    "prototype-dark-zh-mobile-repos",
+    "prototype-light-zh-desktop-overview",
+    "prototype-light-zh-desktop-repos",
+    "prototype-light-zh-mobile-overview",
+    "prototype-light-zh-mobile-repos"
+  ],
+  "failedStates": [],
+  "sourceIdentity": {
+    "production": {
+      "algorithm": "sha256",
+      "digest": "bb63cdd3afb2b398e823f3dde03398aa624cf0152af7476f2147708d31008a5b",
+      "files": 320
+    },
+    "prototype": {
+      "algorithm": "sha256",
+      "digest": "3c6bab10a6c4354e43980202e8b34424c2d1fd8ad3cb8b1bf9341922f3fea895",
+      "files": 15
+    }
+  },
+  "serviceIdentity": {
+    "fixture": "020-overview-repositories-reverification",
+    "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+    "serviceOwnership": "task-started-exclusive-ports",
+    "productionEntrypoint": "/src/main.ts",
+    "productionMarker": "partial_error_title",
+    "prototypeMarker": "approved-user-design"
+  },
+  "generatedAt": "2026-08-13T08:52:36.127Z"
+}

@@ -1,0 +1,75 @@
+{
+  "task_id": "020-overview-repositories-reverification",
+  "task_items": ["6.1"],
+  "baseline_task_id": "6.1",
+  "acceptance_primary": ["A1", "A2", "A3", "A4"],
+  "goal": "Re-verify Overview and Repositories from current production and approved prototype bytes across equivalent theme, locale, viewport, role, and data states while protecting truthful API/store behavior.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/evidence/capture_browser.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/evidence/verify_evidence.mjs",
+    "web/src/views/Overview.vue",
+    "web/src/views/Repos.vue",
+    "web/src/lib/repoMetrics.ts",
+    "web/src/store/repos.ts"
+  ],
+  "allowed_files": [
+    "web/src/views/Overview.vue",
+    "web/src/views/Overview.test.ts",
+    "web/src/views/Repos.vue",
+    "web/src/views/Repos.test.ts",
+    "web/src/App.vue",
+    "web/src/App.test.ts",
+    "web/src/lib/repoMetrics.ts",
+    "web/src/lib/repoMetrics.test.ts",
+    "web/src/store/repos.ts",
+    "web/src/store/repos.test.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
+  ],
+  "test_paths": [
+    "web/src/views/Overview.test.ts",
+    "web/src/views/Repos.test.ts",
+    "web/src/lib/repoMetrics.test.ts",
+    "web/src/store/repos.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/**"
+  ],
+  "non_goals": [
+    "Do not edit Infrastructure, server, deployment, application, environment, release, or policy routes or complete baseline task 6.2 and later items.",
+    "Do not add routes, APIs, payload fields, backend behavior, persistence, permission algorithms, dependencies, migrations, production fixtures, or unsupported prototype behavior.",
+    "Do not repair the blocked repository-add wizard or reopen repository detail rows owned by task 014.",
+    "Do not claim global accessibility, localization, responsive, release, all-route, or complete-change acceptance."
+  ],
+  "expected_evidence": [
+    "Focused page, metric, and store regressions for administrator and normal-user roles; populated, empty, filtered-empty, active and partial failures; refresh; pagination; selection; fallback values; and stale overlapping requests.",
+    "Equivalent current-byte production/prototype Overview and Repositories evidence in dark Simplified Chinese and light English at 1600x1000 and 390x844, with administrator and normal-user or read-only representatives plus populated and empty or partial-failure data states.",
+    "A strict verifier proving exact state inventory, routes, viewports, theme, locale, role, data state, content, local/page overflow, raw i18n absence, browser health, PNG integrity, service identity, source hashes, one run ID, and a rejected negative mutation.",
+    "Focused and full Vitest, Prettier, ESLint, TypeScript, Vite build, evidence syntax, JSON/JSONL, diff, SpecNav entry/handoff, task report, spec review, and quality review receipts.",
+    "Route-parity rows 2 and 3 and baseline task 6.1 updated only after current-byte evidence and reviews pass."
+  ],
+  "unsafe_assumptions": [
+    "Prior task screenshots and reports are not current-byte evidence for this slice.",
+    "Rendered populated content alone does not prove loading, empty, error, partial-failure, refresh, permission, or stale-response behavior.",
+    "Repository list action visibility does not replace existing server-backed repository route permission enforcement.",
+    "Prototype data and controls are comparison context and never authorize invented production contracts."
+  ],
+  "stop_condition": "Stop if closure needs files outside the locked scope, a new product or backend contract, unsupported prototype data, non-reproducible equivalent states, or parity and task claims outside rows 2-3 and baseline task 6.1."
+}

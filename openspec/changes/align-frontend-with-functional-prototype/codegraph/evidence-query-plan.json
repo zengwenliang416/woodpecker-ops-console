@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-13T02:40:48.059Z",
+  "generated_at": "2026-08-13T07:39:20.166Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -192,6 +192,16 @@
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Resolve every production destination represented by parity rows `1` and `24`\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-019-route-family-parity-closure --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-020-overview-repositories-reverification:evidence",
+      "claim_id": "development:task-020-overview-repositories-reverification",
+      "stage": "development",
+      "task_id": "020-overview-repositories-reverification",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Re-verify parity rows `2` and `3` from current production and approved\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-020-overview-repositories-reverification --query \"<query>\" --write --json"
     }
   ]
 }

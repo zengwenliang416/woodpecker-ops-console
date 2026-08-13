@@ -1,0 +1,72 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 概览 整个 CI/CD 环境的实时摘要。 全部环境 Production Staging 刷新 配置概览 活跃流水线 12 ↑ 20% 较昨日 成功率 96.4% ↑ 2.1% 平均时长 12m 47s ↓ 8% 队列健康度 98% 1 个等待 · 0 个阻塞 最近活动 所有仓库的最新执行 查看全部 #842 · fix: correct null check in user service backend-api · main · alice 2 分钟前 失败 #841 · feat: add pagination to list endpoints backend-api · main · bob 18 分钟前 成功 #840 · chore: bump dependencies backend-api · develop · carol 45 分钟前 成功 #839 · refactor: optimize query performance backend-api · main · alice 1 小时前 失败 #838 · chore: update dependencies backend-api · main · dave 2 小时前 警告 #837 · release: v1.4.0 backend-api · release/1.4.0 · erin 3 小时前 成功 仓库健康度 最近 30 天成功率 backend-api 96.3% web-frontend 97.1% worker-service 88.9% mobile-app 94% infrastructure 91.2% data-pipeline 95.3% auth-service 86.7% 查看所有仓库 Agent 容量 管理 24 Agents 在线 21 忙碌 6 离线 3 最近失败 查看分析 #842 fix: correct null check in user service main · alice 2 分钟前 #839 refactor: optimize query performance main · alice 1 小时前",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 概览 整个 CI/CD 环境的实时摘要。 全部环境 Production Staging 刷新 配置概览 活跃流水线 12 ↑ 20% 较昨日 成功率 96.4% ↑ 2.1% 平均时长 12m 47s ↓ 8% 队列健康度 98% 1 个等待 · 0 个阻塞 最近活动 所有仓库的最新执行 查看全部 #842 · fix: correct null check in user service backend-api · main · alice 2 分钟前 失败 #841 · feat: add pagination to list endpoints backend-api · main · bob 18 分钟前 成功 #840 · chore: bump dependencies backend-api · develop · carol 45 分钟前 成功 #839 · refactor: optimize query performance backend-api · main · alice 1 小时前 失败 #838 · chore: update dependencies backend-api · main · dave 2 小时前 警告 #837 · release: v1.4.0 backend-api · release/1.4.0 · erin 3 小时前 成功 仓库健康度 最近 30 天成功率 backend-api 96.3% web-frontend 97.1% worker-service 88.9% mobile-app 94% infrastructure 91.2% data-pipeline 95.3% auth-service 86.7% 查看所有仓库 Agent 容量 管理 24 Agents 在线 21 忙碌 6 离线 3 最近失败 查看分析 #842 fix: correct null check in user service main · alice 2 分钟前 #839 refactor: optimize query performance main · alice 1 小时前",
+  "document": {
+    "clientWidth": 1600,
+    "clientHeight": 1000,
+    "scrollWidth": 1600,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/overview",
+  "url": "http://127.0.0.1:8201/#/overview",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+  "stateId": "prototype-dark-zh-desktop-overview",
+  "row": 2,
+  "destination": "overview",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/概览/",
+      "passed": true
+    },
+    {
+      "pattern": "/活跃流水线/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T08:52:12.114Z",
+  "health": {
+    "startedAt": "2026-08-13T08:52:11.401Z",
+    "endedAt": "2026-08-13T08:52:12.114Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8201/",
+      "http://127.0.0.1:8201/assets/app.css",
+      "http://127.0.0.1:8201/assets/data.js",
+      "http://127.0.0.1:8201/assets/ui.js",
+      "http://127.0.0.1:8201/assets/views.js",
+      "http://127.0.0.1:8201/assets/app.js",
+      "http://127.0.0.1:8201/favicon.ico"
+    ]
+  }
+}

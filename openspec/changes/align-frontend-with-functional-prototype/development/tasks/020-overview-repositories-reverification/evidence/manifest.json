@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "task_id": "020-overview-repositories-reverification",
+  "commit": "e66eba05d28991e89cbc92d612a7ba06e154c1f1",
+  "matrix": {
+    "route_rows": [2, 3],
+    "equivalent_states": 8,
+    "representative_states": 8,
+    "boundary_states": 4,
+    "expected_states": 20
+  },
+  "runtime": {
+    "production_url": "http://127.0.0.1:8200",
+    "prototype_url": "http://127.0.0.1:8201",
+    "mock_api_url": "http://127.0.0.1:8202",
+    "production_entrypoint": "/src/main.ts",
+    "prototype_marker": "approved-user-design"
+  },
+  "expected_outcome": {
+    "verified_rows": [2, 3],
+    "normal_user_admin_requests": 0,
+    "page_overflow_states": 0,
+    "raw_i18n_states": 0
+  },
+  "run_id": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+  "captured_from": "2026-08-13T08:52:09.371Z",
+  "captured_through": "2026-08-13T08:52:35.396Z",
+  "source_identity": {
+    "production": {
+      "algorithm": "sha256",
+      "digest": "bb63cdd3afb2b398e823f3dde03398aa624cf0152af7476f2147708d31008a5b",
+      "files": 320
+    },
+    "prototype": {
+      "algorithm": "sha256",
+      "digest": "3c6bab10a6c4354e43980202e8b34424c2d1fd8ad3cb8b1bf9341922f3fea895",
+      "files": 15
+    }
+  },
+  "service_identity": {
+    "fixture": "020-overview-repositories-reverification",
+    "runId": "1eae7bc3-e742-4aac-bce0-ec61105eebb8",
+    "serviceOwnership": "task-started-exclusive-ports",
+    "productionEntrypoint": "/src/main.ts",
+    "productionMarker": "partial_error_title",
+    "prototypeMarker": "approved-user-design"
+  },
+  "actual": {
+    "states": 20,
+    "production_states": 12,
+    "prototype_states": 8,
+    "equivalent_states": 8,
+    "representative_states": 8,
+    "boundary_states": 4,
+    "page_overflow_states": [],
+    "raw_i18n_states": [],
+    "browser_error_states": []
+  },
+  "checksums": {
+    "mock_api_py": "e6389e67cbcaebd300092a804cdab01cda0cc6bde8cd17099e2d3cd59eabfcea",
+    "mock_api_smoke_mjs": "a2720f175ef42c8c774c7c7cf6087f4b483b61f26d086caf5d4e193eff07f226",
+    "capture_browser_mjs": "b62d66d43a4e61b9f0144c90e92ed34c4ba0a5b8006f7d2e34b998126190f1e8",
+    "verify_evidence_mjs": "4074c8c3fdb0f977cf15d221a27dd488a09543426ef21b5946fe42574bdcf54d",
+    "browser_replay_summary_json": "aaaeaac6055c1bdd09f9bb7467da700af7a37420189c0c07b6b021302e25eec3",
+    "all_png_files": "4b0fc103c0162cc30d8b109ba73ea85d9100652e84ecb6475004eea2636b78b4",
+    "all_measurement_files": "0e520e2a6bf459604c49f464ce0a3811942562f835218e0e1111102d6ec6c2d4"
+  }
+}

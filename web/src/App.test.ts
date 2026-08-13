@@ -17,6 +17,10 @@ const apiMock = vi.hoisted(() => ({
   setErrorHandler: vi.fn(),
 }));
 
+const notificationsMock = vi.hoisted(() => ({
+  notify: vi.fn(),
+}));
+
 vi.mock('vue-router', async () => {
   const { reactive } = await import('vue');
   routerMock.route = reactive({ path: '/overview', meta: {} });
@@ -31,7 +35,7 @@ vi.mock('~/compositions/useApiClient', () => ({
 }));
 
 vi.mock('~/compositions/useNotifications', () => ({
-  default: () => ({ notify: vi.fn() }),
+  default: () => notificationsMock,
 }));
 
 const SidebarStub = defineComponent({
@@ -92,6 +96,7 @@ describe('application shell drawer', () => {
   let breakpointListener: ((event: MediaQueryListEvent) => void) | undefined;
 
   beforeEach(() => {
+    vi.clearAllMocks();
     routerMock.route!.path = '/overview';
     document.body.style.overflow = '';
     desktopMatches = false;
@@ -199,5 +204,28 @@ describe('application shell drawer', () => {
     const source = readFileSync(resolve(process.cwd(), 'src/App.vue'), 'utf8');
 
     expect(source).toMatch(/\.drawer-backdrop\s*\{[\s\S]*z-25/);
+  });
+
+  it('never exposes raw API error messages through global notifications', () => {
+    const wrapper = mountApp();
+    const errorHandler = apiMock.setErrorHandler.mock.calls.at(-1)?.[0] as
+      ((error: { status: number; message: string }) => void) | undefined;
+
+    expect(errorHandler).toBeTypeOf('function');
+    errorHandler?.({ status: 503, message: 'Service Unavailable: {"error":"agents unavailable"}' });
+    errorHandler?.({ status: 404, message: 'resource details' });
+
+    expect(notificationsMock.notify).toHaveBeenNthCalledWith(1, {
+      title: 'An unknown error occurred',
+      type: 'error',
+    });
+    expect(notificationsMock.notify).toHaveBeenNthCalledWith(2, {
+      title: 'Server could not find requested object',
+      type: 'error',
+    });
+    expect(notificationsMock.notify.mock.calls.flat().join(' ')).not.toContain('agents unavailable');
+    expect(notificationsMock.notify.mock.calls.flat().join(' ')).not.toContain('resource details');
+
+    wrapper.unmount();
   });
 });

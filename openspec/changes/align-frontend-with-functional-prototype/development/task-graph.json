@@ -463,6 +463,30 @@
         "web/src/views/NotFound.test.ts"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "020-overview-repositories-reverification",
+      "baseline_task_id": "6.1",
+      "goal": "Re-verify Overview and Repositories from current production and approved prototype bytes across equivalent theme, locale, viewport, role, and data states while protecting truthful API/store behavior.",
+      "depends_on": ["5.5"],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/App.test.ts",
+        "web/src/views/Overview.vue",
+        "web/src/views/Overview.test.ts",
+        "web/src/views/Repos.vue",
+        "web/src/views/Repos.test.ts",
+        "web/src/lib/repoMetrics.ts",
+        "web/src/lib/repoMetrics.test.ts",
+        "web/src/store/repos.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
+      ],
+      "status": "in_progress"
     }
   ]
 }
