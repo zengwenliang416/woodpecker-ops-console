@@ -1,0 +1,37 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 系统管理 Woodpecker 实例、基础设施与全局安全状态。 下载诊断包 系统设置 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 服务状态 Healthy 运行 18 天 流水线 / 30d 12,481 ↑ 14.8% Agent 容量 87% 21 / 24 在线 队列延迟 18s ↓ 12s 系统组件 全部正常 HTTP API 最近一次健康检查 23 ms gRPC Agent API 最近一次健康检查 18 ms PostgreSQL 最近一次健康检查 7 ms Valkey Queue 最近一次健康检查 4 ms Object Storage 最近一次健康检查 42 ms Forge Webhooks 最近一次健康检查 1 个异常 实例信息 版本 3.10.0-next 构建 e3a91c7 数据库 PostgreSQL 18 队列 Valkey 9 运行模式 Cluster 时区 Asia/Manila 启动时间 2026-07-18 03:12 最近管理员活动 完整审计日志 A Alice 更新了全局 Secret SONAR_TOKEN 2 分钟前 · 192.168.1.12 M Mike 创建了 Forge 连接 Internal Gitea 20 分钟前 · 192.168.1.13 S Sara 禁用了用户 build-bot 38 分钟前 · 192.168.1.14 A Alice 把 agent-asia-southeast-1a-02 设为维护状态 56 分钟前 · 192.168.1.15 S System 完成数据库备份 74 分钟前 · 192.168.1.16",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 系统管理 Woodpecker 实例、基础设施与全局安全状态。 下载诊断包 系统设置 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 服务状态 Healthy 运行 18 天 流水线 / 30d 12,481 ↑ 14.8% Agent 容量 87% 21 / 24 在线 队列延迟 18s ↓ 12s 系统组件 全部正常 HTTP API 最近一次健康检查 23 ms gRPC Agent API 最近一次健康检查 18 ms PostgreSQL 最近一次健康检查 7 ms Valkey Queue 最近一次健康检查 4 ms Object Storage 最近一次健康检查 42 ms Forge Webhooks 最近一次健康检查 1 个异常 实例信息 版本 3.10.0-next 构建 e3a91c7 数据库 PostgreSQL 18 队列 Valkey 9 运行模式 Cluster 时区 Asia/Manila 启动时间 2026-07-18 03:12 最近管理员活动 完整审计日志 A Alice 更新了全局 Secret SONAR_TOKEN 2 分钟前 · 192.168.1.12 M Mike 创建了 Forge 连接 Internal Gitea 20 分钟前 · 192.168.1.13 S Sara 禁用了用户 build-bot 38 分钟前 · 192.168.1.14 A Alice 把 agent-asia-southeast-1a-02 设为维护状态 56 分钟前 · 192.168.1.15 S System 完成数据库备份 74 分钟前 · 192.168.1.16",
+  "terminalRouteName": null,
+  "terminalPath": "/admin",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1590,
+    "scrollWidth": 1590,
+    "height": 1000,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-desktop-admin-info",
+  "row": 28,
+  "surface": "prototype",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/系统管理/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

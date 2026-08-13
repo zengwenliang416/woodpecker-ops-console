@@ -1,0 +1,39 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 用户设置 退出登录 账户设置 密钥 注册表 CLI & API 代理 账户设置 查看 Forge 身份，并管理当前浏览器保存的界面偏好。 账户身份 这些值来自已认证的 Forge 账户，在此处为只读。 AL 用户名 alice 邮箱 alice@example.test FORGE ID 1 界面偏好 这些设置仅在本地生效，不会修改 Forge 资料。 语言 选择当前浏览器使用的语言。 العربية bar বাংলা čeština Deutsch English 世界语 español suomi français हिन्दी magyar Indonesia italiano 日本語 한국어 latviešu norsk bokmål (Norge) Nederlands polski português русский ไทย українська اردو 简体中文 繁體中文 主题 跟随系统主题，或选择固定外观。 自动 亮色 暗色 流水线日志 打开已完成的步骤时，折叠所有命令组以仅显示概要。 默认折叠日志分组",
+  "terminalRouteName": "user",
+  "terminalPath": "/user",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-mobile-user-general",
+  "row": 39,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/账户设置|Account/i",
+      "passed": true
+    },
+    {
+      "pattern": "/alice@example\\.test/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

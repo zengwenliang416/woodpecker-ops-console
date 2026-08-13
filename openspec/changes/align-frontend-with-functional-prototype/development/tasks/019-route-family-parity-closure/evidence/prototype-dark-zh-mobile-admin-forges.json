@@ -1,0 +1,37 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Forge 连接 管理 GitHub、GitLab、Gitea 等代码平台连接。 新建 Forge 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 已连接 Acme GitHub https://github.com · GitHub 186 个仓库 · 76 个用户 已连接 Acme GitLab https://gitlab.com · GitLab 82 个仓库 · 34 个用户 已连接 Internal Gitea https://git.acme.internal · Gitea 47 个仓库 · 22 个用户 异常 Legacy Bitbucket https://bitbucket.org · Bitbucket 13 个仓库 · 8 个用户",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Forge 连接 管理 GitHub、GitLab、Gitea 等代码平台连接。 新建 Forge 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 已连接 Acme GitHub https://github.com · GitHub 186 个仓库 · 76 个用户 已连接 Acme GitLab https://gitlab.com · GitLab 82 个仓库 · 34 个用户 已连接 Internal Gitea https://git.acme.internal · Gitea 47 个仓库 · 22 个用户 异常 Legacy Bitbucket https://bitbucket.org · Bitbucket 13 个仓库 · 8 个用户",
+  "terminalRouteName": null,
+  "terminalPath": "/admin/forges",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-mobile-admin-forges",
+  "row": 36,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Forge 连接/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

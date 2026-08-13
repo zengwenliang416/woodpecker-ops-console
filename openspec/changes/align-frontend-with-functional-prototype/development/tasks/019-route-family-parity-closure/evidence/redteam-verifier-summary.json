@@ -1,0 +1,92 @@
+{
+  "schema": "woodpecker.route-family-verifier-redteam.v1",
+  "ok": true,
+  "positiveVerifierExitCode": 0,
+  "mutations": [
+    {
+      "id": "wrong-theme",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-locale",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "tampered-body-text",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "empty-content-assertions",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "missing-content-assertions",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "empty-health",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "missing-health-key",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-terminal-path",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-terminal-route",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "horizontal-overflow",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "source-identity",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "png-signature",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "png-dimension",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    },
+    {
+      "id": "run-id",
+      "rejected": true,
+      "exitCode": 1,
+      "signal": null
+    }
+  ],
+  "generatedAt": "2026-08-13T03:24:16.121Z"
+}

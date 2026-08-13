@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-12T15:48:50.863Z",
+  "generated_at": "2026-08-13T02:40:48.059Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -10,12 +10,7 @@
       "task_id": "001-date-duration-integrity",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Reproduce invalid or extreme values with focused tests, normalize them in the\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-001-date-duration-integrity --query \"<query>\" --write --json"
     },
     {
@@ -25,12 +20,7 @@
       "task_id": "002-shared-shell-alignment",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open the shared shell as an authenticated regular user or administrator, use the\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-002-shared-shell-alignment --query \"<query>\" --write --json"
     },
     {
@@ -40,12 +30,7 @@
       "task_id": "003-shared-feedback-primitives",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open repository branches, pipeline debug, or repository activation and receive\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-003-shared-feedback-primitives --query \"<query>\" --write --json"
     },
     {
@@ -55,12 +40,7 @@
       "task_id": "004-shell-theme-evidence",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open the production shell and the approved prototype in equivalent theme,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-004-shell-theme-evidence --query \"<query>\" --write --json"
     },
     {
@@ -70,12 +50,7 @@
       "task_id": "005-pipeline-detail-header",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open a real repository pipeline and receive a prototype-aligned detail header\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-005-pipeline-detail-header --query \"<query>\" --write --json"
     },
     {
@@ -85,12 +60,7 @@
       "task_id": "006-pipeline-overview",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open a real repository pipeline at its overview route and receive a responsive\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-006-pipeline-overview --query \"<query>\" --write --json"
     },
     {
@@ -100,12 +70,7 @@
       "task_id": "007-pipeline-log-diagnostics",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open any existing pipeline diagnostic destination and receive a coherent\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-007-pipeline-log-diagnostics --query \"<query>\" --write --json"
     },
     {
@@ -115,12 +80,7 @@
       "task_id": "008-pipeline-regression-coverage",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Resolve every current pipeline destination through its production named route,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-008-pipeline-regression-coverage --query \"<query>\" --write --json"
     },
     {
@@ -130,12 +90,7 @@
       "task_id": "009-pipeline-validation-evidence",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Replay the current pipeline detail implementation against a deterministic Mock\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-009-pipeline-validation-evidence --query \"<query>\" --write --json"
     },
     {
@@ -145,12 +100,7 @@
       "task_id": "010-repository-pipeline-list",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/repos/:repoId`, derive current repository metrics from the pipelines\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-010-repository-pipeline-list --query \"<query>\" --write --json"
     },
     {
@@ -160,12 +110,7 @@
       "task_id": "011-repository-branches-pull-requests",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter the repository Branches or Pull Requests tab, load the existing paginated\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-011-repository-branches-pull-requests --query \"<query>\" --write --json"
     },
     {
@@ -175,12 +120,7 @@
       "task_id": "012-repository-manual-run-settings",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter the manual-run or repository-settings routes, pass the existing\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-012-repository-manual-run-settings --query \"<query>\" --write --json"
     },
     {
@@ -190,12 +130,7 @@
       "task_id": "013-repository-regression-coverage",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Resolve every current non-pipeline repository destination through its production\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-013-repository-regression-coverage --query \"<query>\" --write --json"
     },
     {
@@ -205,12 +140,7 @@
       "task_id": "014-repository-validation-evidence",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Replay repository parity rows `3` through `23` against a deterministic Mock API\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-014-repository-validation-evidence --query \"<query>\" --write --json"
     },
     {
@@ -220,12 +150,7 @@
       "task_id": "015-organization-routes",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/orgs/:orgId`, load the current organization and permissions, browse and\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-015-organization-routes --query \"<query>\" --write --json"
     },
     {
@@ -235,12 +160,7 @@
       "task_id": "016-administration-routes",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/admin` as a system administrator, navigate the nine existing\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-016-administration-routes --query \"<query>\" --write --json"
     },
     {
@@ -250,12 +170,7 @@
       "task_id": "017-user-auth-routes",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Enter `/login` as a guest or enter `/user` as an authenticated user, navigate\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-017-user-auth-routes --query \"<query>\" --write --json"
     },
     {
@@ -265,13 +180,18 @@
       "task_id": "018-authorization-boundaries",
       "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Open the production shell and protected route families as a guest, regular\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
-      "expected_evidence": [
-        "file paths",
-        "symbols",
-        "call relationships",
-        "tests or verification commands"
-      ],
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-018-authorization-boundaries --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-019-route-family-parity-closure:evidence",
+      "claim_id": "development:task-019-route-family-parity-closure",
+      "stage": "development",
+      "task_id": "019-route-family-parity-closure",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Resolve every production destination represented by parity rows `1` and `24`\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-019-route-family-parity-closure --query \"<query>\" --write --json"
     }
   ]
 }

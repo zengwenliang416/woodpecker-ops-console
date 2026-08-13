@@ -1,0 +1,54 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 注册表凭据 可以添加全局注册凭据以在所有流水线中使用私有镜像。 添加注册表 这些注册凭据对所有用户可用。 地址 用户名 访问权限 操作 docker.io mirror-reader 只读 已加载 1 项资源",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 注册表凭据 可以添加全局注册凭据以在所有流水线中使用私有镜像。 添加注册表 这些注册凭据对所有用户可用。 地址 用户名 访问权限 操作 docker.io mirror-reader 只读 已加载 1 项资源",
+  "terminalRouteName": "admin-settings-registries",
+  "terminalPath": "/admin/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 774,
+      "overflowX": "auto"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 356,
+      "scrollWidth": 620,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-mobile-admin-registries",
+  "row": 30,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/docker\\.io/i",
+      "passed": true
+    },
+    {
+      "pattern": "/注册表|镜像仓库|Registry/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

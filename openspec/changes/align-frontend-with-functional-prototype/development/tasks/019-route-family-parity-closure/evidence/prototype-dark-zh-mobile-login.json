@@ -1,0 +1,39 @@
+{
+  "bodyText": "欢迎回来 登录以访问仓库与流水线。 GH 使用 GitHub 登录 GL 使用 GitLab 登录 使用 SSO 登录 或 邮箱 密码 记住我 忘记密码？ 登录 这是交互原型，任何账号均可进入。",
+  "terminalRouteName": null,
+  "terminalPath": "/login",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-mobile-login",
+  "row": 1,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/欢迎回来/i",
+      "passed": true
+    },
+    {
+      "pattern": "/使用 GitHub 登录/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

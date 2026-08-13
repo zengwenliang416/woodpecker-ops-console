@@ -1,0 +1,37 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 组织管理 管理组织、成员数量和资源配额。 新建组织 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 组织 仓库 成员 成功率 配额 最近活动 AC Acme Corp acmecorp 128 42 98.7% 55% 2 分钟前 I Initech initech 64 18 96.1% 61% 12 分钟前 NV Nova Ventures novaventures 42 11 93.8% 67% 1 小时前 OI Orbital Inc. orbital 37 9 91.2% 73% 3 小时前 HL Helios Labs helioslabs 23 7 89.4% 79% 5 小时前 ZS Zenith Systems zenithsystems 19 6 87.6% 85% 1 天前 显示 1 至 6 项，共 6 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 组织管理 管理组织、成员数量和资源配额。 新建组织 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 组织 仓库 成员 成功率 配额 最近活动 AC Acme Corp acmecorp 128 42 98.7% 55% 2 分钟前 I Initech initech 64 18 96.1% 61% 12 分钟前 NV Nova Ventures novaventures 42 11 93.8% 67% 1 小时前 OI Orbital Inc. orbital 37 9 91.2% 73% 3 小时前 HL Helios Labs helioslabs 23 7 89.4% 79% 5 小时前 ZS Zenith Systems zenithsystems 19 6 87.6% 85% 1 天前 显示 1 至 6 项，共 6 项 1 2 3",
+  "terminalRouteName": null,
+  "terminalPath": "/admin/orgs",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-mobile-admin-orgs",
+  "row": 33,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/组织管理/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "task_id": "019-route-family-parity-closure",
+  "task_items": ["5.5"],
+  "acceptance_primary": ["A2", "A3"],
+  "goal": "Close organization, administration, user, authentication, and not-found route-family parity with one concentrated regression contract and one strict current-byte 92-state browser evidence run.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/evidence/capture_browser.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/evidence/verify_evidence.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/evidence/capture_browser.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/evidence/verify_evidence.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/017-user-auth-routes/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/017-user-auth-routes/evidence/capture_browser.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/017-user-auth-routes/evidence/verify_evidence.mjs",
+    "web/src/router.ts",
+    "web/src/router.test.ts"
+  ],
+  "allowed_files": [
+    "web/src/route-family-parity.test.ts",
+    "web/src/views/org/**/*.test.ts",
+    "web/src/components/org/settings/**/*.test.ts",
+    "web/src/views/admin/**/*.test.ts",
+    "web/src/components/admin/settings/**/*.test.ts",
+    "web/src/views/user/**/*.test.ts",
+    "web/src/components/user/settings/**/*.test.ts",
+    "web/src/views/Login.test.ts",
+    "web/src/views/cli/Auth.test.ts",
+    "web/src/views/NotFound.test.ts"
+  ],
+  "test_paths": [
+    "web/src/route-family-parity.test.ts",
+    "web/src/router.test.ts",
+    "web/src/views/org/**/*.test.ts",
+    "web/src/components/org/settings/**/*.test.ts",
+    "web/src/views/admin/**/*.test.ts",
+    "web/src/components/admin/settings/**/*.test.ts",
+    "web/src/views/user/**/*.test.ts",
+    "web/src/components/user/settings/**/*.test.ts",
+    "web/src/views/Login.test.ts",
+    "web/src/views/cli/Auth.test.ts",
+    "web/src/views/NotFound.test.ts"
+  ],
+  "non_goals": [
+    "Do not change production routes, components, APIs, stores, backend behavior, localization, persistence, dependencies, migrations, or features without current-byte red evidence.",
+    "Do not duplicate focused component state logic already owned by tasks 015 through 018.",
+    "Do not verify rows 2-23 or 46+, claim 67-route global parity, close phases 6-8, or mark complete change-level A2.",
+    "Do not replace server-backed data with prototype fixtures or invent unsupported fields, states, and actions."
+  ],
+  "expected_evidence": [
+    "A concentrated route-family test proving all 23 production destinations, route names, parameters, authentication and system-administrator metadata, login guest behavior, catch-all ordering, and focused component-test inventory.",
+    "All existing focused organization, administration, user, login, CLI auth, and not-found suites passing at current bytes.",
+    "Exactly 92 production/prototype dark Simplified-Chinese desktop/mobile measurements and PNGs sharing one run ID for rows 1 and 24-45.",
+    "A strict verifier proving exact state inventory, terminal routes and paths, viewports, PNG integrity, source hashes, service identity, content, overflow, localization, browser health, and bounded cleanup, plus a failing negative mutation.",
+    "Full frontend Vitest, formatting, lint, TypeScript, Vite build, syntax, JSON/JSONL, diff, SpecNav entry/handoff, report, and independent review receipts."
+  ],
+  "unsafe_assumptions": [
+    "Prior task evidence is not current-byte evidence.",
+    "Route resolution alone does not prove component state behavior or browser parity.",
+    "Representative browser evidence does not justify unsupported prototype capabilities.",
+    "Closing phase 5 does not close operations, cross-cutting validation, release readiness, or the full change."
+  ],
+  "stop_condition": "Stop if closure needs files outside the locked scope, a production feature or contract expansion, unsupported prototype data, non-reproducible current-byte evidence, or parity claims outside rows 1 and 24-45."
+}

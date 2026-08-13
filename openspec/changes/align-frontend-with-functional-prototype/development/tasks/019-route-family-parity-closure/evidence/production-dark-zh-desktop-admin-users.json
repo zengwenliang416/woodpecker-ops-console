@@ -1,0 +1,54 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 用户 在此服务器上注册的用户。 添加用户 用户名 邮箱 代码托管平台 管理员 操作 alice alice@example.test forge.example 管理员 已加载 1 项资源",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 用户 在此服务器上注册的用户。 添加用户 用户名 邮箱 代码托管平台 管理员 操作 alice alice@example.test forge.example 管理员 已加载 1 项资源",
+  "terminalRouteName": "admin-settings-users",
+  "terminalPath": "/admin/users",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 218,
+      "scrollWidth": 218,
+      "overflowX": "visible"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 1021,
+      "scrollWidth": 1021,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-desktop-admin-users",
+  "row": 32,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/alice/i",
+      "passed": true
+    },
+    {
+      "pattern": "/用户|Users/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

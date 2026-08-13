@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-12T15:48:50.862Z",
+  "generated_at": "2026-08-13T02:40:48.058Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -28,9 +28,7 @@
         "web/src/compositions/useDate.test.ts",
         "web/src/compositions/useElapsedTime.test.ts"
       ],
-      "query_ids": [
-        "development:task-001-date-duration-integrity:evidence"
-      ]
+      "query_ids": ["development:task-001-date-duration-integrity:evidence"]
     },
     {
       "id": "development:task-002-shared-shell-alignment",
@@ -63,9 +61,7 @@
         "web/src/viteConfig.test.ts",
         "web/vite.config.ts"
       ],
-      "query_ids": [
-        "development:task-002-shared-shell-alignment:evidence"
-      ]
+      "query_ids": ["development:task-002-shared-shell-alignment:evidence"]
     },
     {
       "id": "development:task-003-shared-feedback-primitives",
@@ -104,9 +100,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-003-shared-feedback-primitives:evidence"
-      ]
+      "query_ids": ["development:task-003-shared-feedback-primitives:evidence"]
     },
     {
       "id": "development:task-004-shell-theme-evidence",
@@ -141,9 +135,7 @@
         "web/src/viteConfig.test.ts",
         "web/vite.config.ts"
       ],
-      "query_ids": [
-        "development:task-004-shell-theme-evidence:evidence"
-      ]
+      "query_ids": ["development:task-004-shell-theme-evidence:evidence"]
     },
     {
       "id": "development:task-005-pipeline-detail-header",
@@ -169,9 +161,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-005-pipeline-detail-header:evidence"
-      ]
+      "query_ids": ["development:task-005-pipeline-detail-header:evidence"]
     },
     {
       "id": "development:task-006-pipeline-overview",
@@ -197,9 +187,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-006-pipeline-overview:evidence"
-      ]
+      "query_ids": ["development:task-006-pipeline-overview:evidence"]
     },
     {
       "id": "development:task-007-pipeline-log-diagnostics",
@@ -234,9 +222,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-007-pipeline-log-diagnostics:evidence"
-      ]
+      "query_ids": ["development:task-007-pipeline-log-diagnostics:evidence"]
     },
     {
       "id": "development:task-008-pipeline-regression-coverage",
@@ -266,9 +252,7 @@
         "web/src/views/repo/pipeline/PipelineErrors.test.ts",
         "web/src/views/repo/pipeline/PipelineDebug.test.ts"
       ],
-      "query_ids": [
-        "development:task-008-pipeline-regression-coverage:evidence"
-      ]
+      "query_ids": ["development:task-008-pipeline-regression-coverage:evidence"]
     },
     {
       "id": "development:task-009-pipeline-validation-evidence",
@@ -299,9 +283,7 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/quality-review.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
       ],
-      "query_ids": [
-        "development:task-009-pipeline-validation-evidence:evidence"
-      ]
+      "query_ids": ["development:task-009-pipeline-validation-evidence:evidence"]
     },
     {
       "id": "development:task-010-repository-pipeline-list",
@@ -330,9 +312,7 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/evidence/**"
       ],
-      "query_ids": [
-        "development:task-010-repository-pipeline-list:evidence"
-      ]
+      "query_ids": ["development:task-010-repository-pipeline-list:evidence"]
     },
     {
       "id": "development:task-011-repository-branches-pull-requests",
@@ -370,9 +350,7 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/011-repository-branches-pull-requests/evidence/**"
       ],
-      "query_ids": [
-        "development:task-011-repository-branches-pull-requests:evidence"
-      ]
+      "query_ids": ["development:task-011-repository-branches-pull-requests:evidence"]
     },
     {
       "id": "development:task-012-repository-manual-run-settings",
@@ -425,9 +403,7 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/evidence/**"
       ],
-      "query_ids": [
-        "development:task-012-repository-manual-run-settings:evidence"
-      ]
+      "query_ids": ["development:task-012-repository-manual-run-settings:evidence"]
     },
     {
       "id": "development:task-013-repository-regression-coverage",
@@ -465,9 +441,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-013-repository-regression-coverage:evidence"
-      ]
+      "query_ids": ["development:task-013-repository-regression-coverage:evidence"]
     },
     {
       "id": "development:task-014-repository-validation-evidence",
@@ -500,9 +474,7 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md"
       ],
-      "query_ids": [
-        "development:task-014-repository-validation-evidence:evidence"
-      ]
+      "query_ids": ["development:task-014-repository-validation-evidence:evidence"]
     },
     {
       "id": "development:task-015-organization-routes",
@@ -570,9 +542,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-015-organization-routes:evidence"
-      ]
+      "query_ids": ["development:task-015-organization-routes:evidence"]
     },
     {
       "id": "development:task-016-administration-routes",
@@ -629,9 +599,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-016-administration-routes:evidence"
-      ]
+      "query_ids": ["development:task-016-administration-routes:evidence"]
     },
     {
       "id": "development:task-017-user-auth-routes",
@@ -677,9 +645,7 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": [
-        "development:task-017-user-auth-routes:evidence"
-      ]
+      "query_ids": ["development:task-017-user-auth-routes:evidence"]
     },
     {
       "id": "development:task-018-authorization-boundaries",
@@ -717,9 +683,40 @@
         "web/src/views/org/settings/OrgSettingsWrapper.vue",
         "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
       ],
-      "query_ids": [
-        "development:task-018-authorization-boundaries:evidence"
-      ]
+      "query_ids": ["development:task-018-authorization-boundaries:evidence"]
+    },
+    {
+      "id": "development:task-019-route-family-parity-closure",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "019-route-family-parity-closure",
+      "text": "Resolve every production destination represented by parity rows `1` and `24`",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/context.json"
+      ],
+      "expected_evidence": [
+        "A concentrated route-family test proving all 23 production destinations, route names, parameters, authentication and system-administrator metadata, login guest behavior, catch-all ordering, and focused component-test inventory.",
+        "All existing focused organization, administration, user, login, CLI auth, and not-found suites passing at current bytes.",
+        "Exactly 92 production/prototype dark Simplified-Chinese desktop/mobile measurements and PNGs sharing one run ID for rows 1 and 24-45.",
+        "A strict verifier proving exact state inventory, terminal routes and paths, viewports, PNG integrity, source hashes, service identity, content, overflow, localization, browser health, and bounded cleanup, plus a failing negative mutation.",
+        "Full frontend Vitest, formatting, lint, TypeScript, Vite build, syntax, JSON/JSONL, diff, SpecNav entry/handoff, report, and independent review receipts."
+      ],
+      "allowed_files": [
+        "web/src/route-family-parity.test.ts",
+        "web/src/views/org/**/*.test.ts",
+        "web/src/components/org/settings/**/*.test.ts",
+        "web/src/views/admin/**/*.test.ts",
+        "web/src/components/admin/settings/**/*.test.ts",
+        "web/src/views/user/**/*.test.ts",
+        "web/src/components/user/settings/**/*.test.ts",
+        "web/src/views/Login.test.ts",
+        "web/src/views/cli/Auth.test.ts",
+        "web/src/views/NotFound.test.ts"
+      ],
+      "query_ids": ["development:task-019-route-family-parity-closure:evidence"]
     }
   ]
 }

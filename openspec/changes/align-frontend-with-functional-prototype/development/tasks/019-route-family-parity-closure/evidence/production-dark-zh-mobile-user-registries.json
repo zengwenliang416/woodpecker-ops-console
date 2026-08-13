@@ -1,0 +1,39 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 用户设置 退出登录 账户设置 密钥 注册表 CLI & API 代理 注册表凭据 可以添加用户注册表凭据，以便在所有个人流水线中使用私有镜像。 添加注册表 地址 用户名 访问方式 操作 ghcr.io/acme org-reader 只读 已加载 1 项",
+  "terminalRouteName": "user-registries",
+  "terminalPath": "/user/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-mobile-user-registries",
+  "row": 41,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/ghcr\\.io\\/acme/i",
+      "passed": true
+    },
+    {
+      "pattern": "/注册表|Registry/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

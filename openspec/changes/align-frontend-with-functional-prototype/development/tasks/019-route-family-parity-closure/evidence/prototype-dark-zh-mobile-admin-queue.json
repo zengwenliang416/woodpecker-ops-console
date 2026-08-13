@@ -1,0 +1,37 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 任务队列 检查等待、阻塞和调度中的流水线任务。 暂停调度 刷新 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 等待中 3 阻塞 2 平均等待 42s 吞吐 / min 18.4 优先级 仓库 / 流水线 任务 所需标签 等待 状态 acme/web-frontend #902 build linux x64 18s 等待中 acme/backend-api #901 test linux x64 42s 等待中 acme/mobile-app #900 android-build linux arm64 1m 16s 阻塞 acme/shared-libs #899 publish linux 2m 08s 等待中 acme/data-pipeline #898 integration linux gpu 3m 31s 阻塞 阻塞任务需要标签匹配 mobile-app 需要 arm64，data-pipeline 需要 gpu；当前空闲 Agent 不满足条件。",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 任务队列 检查等待、阻塞和调度中的流水线任务。 暂停调度 刷新 系统概览 全局 Secrets 全局镜像仓库 仓库 用户 组织 Agents 任务队列 Forge 等待中 3 阻塞 2 平均等待 42s 吞吐 / min 18.4 优先级 仓库 / 流水线 任务 所需标签 等待 状态 acme/web-frontend #902 build linux x64 18s 等待中 acme/backend-api #901 test linux x64 42s 等待中 acme/mobile-app #900 android-build linux arm64 1m 16s 阻塞 acme/shared-libs #899 publish linux 2m 08s 等待中 acme/data-pipeline #898 integration linux gpu 3m 31s 阻塞 阻塞任务需要标签匹配 mobile-app 需要 arm64，data-pipeline 需要 gpu；当前空闲 Agent 不满足条件。",
+  "terminalRouteName": null,
+  "terminalPath": "/admin/queue",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-mobile-admin-queue",
+  "row": 35,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/任务队列/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

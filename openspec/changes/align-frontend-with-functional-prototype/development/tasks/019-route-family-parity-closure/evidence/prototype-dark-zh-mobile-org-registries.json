@@ -1,0 +1,37 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Acme Corp 设置 管理组织级共享资源。 组织 Secrets 组织镜像仓库 组织 Agents 组织镜像仓库 让组织仓库共享容器镜像凭据。 添加镜像仓库 全部作用域 Repository Organization Global 地址 类型 用户名 作用域 验证 更新时间 ghcr.io GitHub Container Registry acme-bot Repository 已验证 2 天前 registry.gitlab.com GitLab Registry deploy-token Organization 已验证 5 天前 registry.acme.internal Private Registry woodpecker Production 已验证 9 天前 docker.io Docker Hub acme-ci Global 需要验证 14 天前 显示 1 至 4 项，共 4 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A Acme Corp 设置 管理组织级共享资源。 组织 Secrets 组织镜像仓库 组织 Agents 组织镜像仓库 让组织仓库共享容器镜像凭据。 添加镜像仓库 全部作用域 Repository Organization Global 地址 类型 用户名 作用域 验证 更新时间 ghcr.io GitHub Container Registry acme-bot Repository 已验证 2 天前 registry.gitlab.com GitLab Registry deploy-token Organization 已验证 5 天前 registry.acme.internal Private Registry woodpecker Production 已验证 9 天前 docker.io Docker Hub acme-ci Global 需要验证 14 天前 显示 1 至 4 项，共 4 项 1 2 3",
+  "terminalRouteName": null,
+  "terminalPath": "/orgs/1/settings/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "localScrollContainers": [],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-mobile-org-registries",
+  "row": 26,
+  "surface": "prototype",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Registry|注册表|镜像仓库/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

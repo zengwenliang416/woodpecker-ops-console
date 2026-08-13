@@ -1,0 +1,48 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 编辑代码托管平台 配置 Woodpecker 为其工作的代码托管平台。 显示代码托管平台 编辑代码托管平台 配置当前 Forge 合同支持的字段。 主要代码托管平台由环境变量控制。任何主要代码托管平台的更改将在重启时重置。 代码托管平台类型 GitHub GitLab Gitea Forgejo Bitbucket Bitbucket Data Center Addon URL OAuth 重定向 URL 用这个重定向 URL 来创建或更新 OAuth 应用。 前往 开发者设置 并设置 OAuth 应用。 OAuth Client ID OAuth Client Secret 高级选项 OAuth host 合并 ref 用于合并的 ref。这被用于确定拉取请求的 diff。 仅公开 仅显示公开仓库。 跳过 SSL 验证 为 API 请求跳过 SSL 验证。不建议用于生产环境。 取消 保存",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 编辑代码托管平台 配置 Woodpecker 为其工作的代码托管平台。 显示代码托管平台 编辑代码托管平台 配置当前 Forge 合同支持的字段。 主要代码托管平台由环境变量控制。任何主要代码托管平台的更改将在重启时重置。 代码托管平台类型 GitHub GitLab Gitea Forgejo Bitbucket Bitbucket Data Center Addon URL OAuth 重定向 URL 用这个重定向 URL 来创建或更新 OAuth 应用。 前往 开发者设置 并设置 OAuth 应用。 OAuth Client ID OAuth Client Secret 高级选项 OAuth host 合并 ref 用于合并的 ref。这被用于确定拉取请求的 diff。 仅公开 仅显示公开仓库。 跳过 SSL 验证 为 API 请求跳过 SSL 验证。不建议用于生产环境。 取消 保存",
+  "terminalRouteName": "admin-settings-forge",
+  "terminalPath": "/admin/forges/1",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "admin-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 774,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-mobile-admin-forge",
+  "row": 37,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/编辑代码托管平台|Edit forge/i",
+      "passed": true
+    },
+    {
+      "pattern": "/URL/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

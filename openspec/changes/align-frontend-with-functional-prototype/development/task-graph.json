@@ -444,6 +444,25 @@
         "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "019-route-family-parity-closure",
+      "baseline_task_id": "5.5",
+      "goal": "Close organization, administration, user, authentication, and not-found route-family parity with one concentrated regression contract and one strict current-byte 92-state browser evidence run.",
+      "depends_on": ["5.4"],
+      "allowed_files": [
+        "web/src/route-family-parity.test.ts",
+        "web/src/views/org/**/*.test.ts",
+        "web/src/components/org/settings/**/*.test.ts",
+        "web/src/views/admin/**/*.test.ts",
+        "web/src/components/admin/settings/**/*.test.ts",
+        "web/src/views/user/**/*.test.ts",
+        "web/src/components/user/settings/**/*.test.ts",
+        "web/src/views/Login.test.ts",
+        "web/src/views/cli/Auth.test.ts",
+        "web/src/views/NotFound.test.ts"
+      ],
+      "status": "in_progress"
     }
   ]
 }

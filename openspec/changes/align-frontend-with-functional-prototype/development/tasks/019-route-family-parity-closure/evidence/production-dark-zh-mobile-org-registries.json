@@ -1,0 +1,54 @@
+{
+  "bodyText": "搜索流水线、仓库、用户和设置… 0 acme/ 设置 密钥 注册表 代理 注册表凭据 可以为组织添加注册表凭据，以便在所有流水线中使用私有镜像。 添加注册表 地址 用户名 作用域 访问方式 操作 docker.io mirror-reader 全局注册表 只读 继承 ghcr.io/acme org-reader 组织注册表 可编辑 已加载 2 项资源",
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 0 acme/ 设置 密钥 注册表 代理 注册表凭据 可以为组织添加注册表凭据，以便在所有流水线中使用私有镜像。 添加注册表 地址 用户名 作用域 访问方式 操作 docker.io mirror-reader 全局注册表 只读 继承 ghcr.io/acme org-reader 组织注册表 可编辑 已加载 2 项资源",
+  "terminalRouteName": "org-settings-registries",
+  "terminalPath": "/orgs/1/settings/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 390,
+    "scrollWidth": 390,
+    "height": 844,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "org-settings-nav",
+      "clientWidth": 356,
+      "scrollWidth": 356,
+      "overflowX": "auto"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 356,
+      "scrollWidth": 660,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-mobile-org-registries",
+  "row": 26,
+  "surface": "production",
+  "viewport": {
+    "id": "mobile",
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/ghcr\\.io\\/acme/i",
+      "passed": true
+    },
+    {
+      "pattern": "/Registry|注册表|镜像仓库/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

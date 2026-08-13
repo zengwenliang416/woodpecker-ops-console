@@ -1,0 +1,39 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 用户设置 退出登录 账户设置 密钥 注册表 CLI & API 代理 注册表凭据 可以添加用户注册表凭据，以便在所有个人流水线中使用私有镜像。 添加注册表 地址 用户名 访问方式 操作 ghcr.io/acme org-reader 只读 已加载 1 项",
+  "terminalRouteName": "user-registries",
+  "terminalPath": "/user/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-desktop-user-registries",
+  "row": 41,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/ghcr\\.io\\/acme/i",
+      "passed": true
+    },
+    {
+      "pattern": "/注册表|Registry/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

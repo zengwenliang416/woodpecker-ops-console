@@ -1,0 +1,54 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme/ 设置 密钥 注册表 代理 注册表凭据 可以为组织添加注册表凭据，以便在所有流水线中使用私有镜像。 添加注册表 地址 用户名 作用域 访问方式 操作 docker.io mirror-reader 全局注册表 只读 继承 ghcr.io/acme org-reader 组织注册表 可编辑 已加载 2 项资源",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 1 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 acme/ 设置 密钥 注册表 代理 注册表凭据 可以为组织添加注册表凭据，以便在所有流水线中使用私有镜像。 添加注册表 地址 用户名 作用域 访问方式 操作 docker.io mirror-reader 全局注册表 只读 继承 ghcr.io/acme org-reader 组织注册表 可编辑 已加载 2 项资源",
+  "terminalRouteName": "org-settings-registries",
+  "terminalPath": "/orgs/1/settings/registries",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-Hans",
+    "theme": "dark"
+  },
+  "localScrollContainers": [
+    {
+      "className": "org-settings-nav",
+      "clientWidth": 218,
+      "scrollWidth": 218,
+      "overflowX": "visible"
+    },
+    {
+      "className": "settings-table-scroll",
+      "clientWidth": 1055,
+      "scrollWidth": 1055,
+      "overflowX": "auto"
+    }
+  ],
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "production-dark-zh-desktop-org-registries",
+  "row": 26,
+  "surface": "production",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/ghcr\\.io\\/acme/i",
+      "passed": true
+    },
+    {
+      "pattern": "/Registry|注册表|镜像仓库/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}

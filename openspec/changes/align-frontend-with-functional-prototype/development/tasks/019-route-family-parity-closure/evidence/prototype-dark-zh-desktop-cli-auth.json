@@ -1,0 +1,35 @@
+{
+  "bodyText": "Woodpecker CLI设备授权 授权命令行访问 终端中的 Woodpecker CLI 请求访问你的账号。 设备 MacBook Pro · woodpecker-cli 3.10 位置 Manila, PH 验证码 WP-84K2 请求时间 刚刚 只授权你发起的请求 CLI 将能够读取仓库、运行流水线以及查看日志。 拒绝 授权 CLI",
+  "terminalRouteName": null,
+  "terminalPath": "/cli/auth?port=49152",
+  "pageLevelHorizontalOverflow": false,
+  "document": {
+    "width": 1600,
+    "scrollWidth": 1600,
+    "height": 1000,
+    "lang": "zh-CN",
+    "theme": "dark"
+  },
+  "rawI18nKeys": [],
+  "runId": "93ce89f7-0d51-40ba-827e-3731aeea2f96",
+  "stateId": "prototype-dark-zh-desktop-cli-auth",
+  "row": 44,
+  "surface": "prototype",
+  "viewport": {
+    "id": "desktop",
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/授权命令行访问/i",
+      "passed": true
+    }
+  ],
+  "health": {
+    "consoleErrors": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  }
+}
