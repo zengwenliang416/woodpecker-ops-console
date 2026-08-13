@@ -110,12 +110,12 @@ approved
   review reproduced the strict run-bound verifier, artifact parsing, matrix
   validation, syntax, Mock API smoke, protected-tree check, and
   `git diff --check`.
-- `A2` is not verified for the complete repository family because row `4`
-  remains evidence-bearing `blocked`; this review does not claim all-route or
+- Complete repository-family parity remains open because row `4` is
+  evidence-bearing `blocked`; this review does not claim all-route or
   full-change parity completion.
-- `A4` is not verified by this evidence-only task. Operational value,
-  fallback, and stale-response correctness remains established by the owning
-  implementation and regression slices, not by task `014` alone.
+- Operational value, fallback, and stale-response correctness remain
+  established by the owning implementation and regression slices, not by task
+  `014` alone.
 
 ## Required Fixes
 

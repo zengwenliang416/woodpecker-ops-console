@@ -104,6 +104,14 @@ approved
   harness robustness concern, but it does not invalidate the existing
   checksum-verified artifacts.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through targeted formatting, lint, type checking, focused and
+  full frontend tests, build, diff checks, and strict desktop/mobile evidence.
+- `A4`: verified through real repository pipeline values, invalid-value
+  fallbacks, filtered-empty behavior, confirmed pagination, request-local
+  concurrency results, and obsolete response isolation.
+
 ## Required Fixes
 
 - None for task `010` / baseline task `4.1`.

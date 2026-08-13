@@ -83,6 +83,14 @@ approved
   behavior. It avoids a dependency or generalized drawer framework while
   covering the lifecycle cases that previously remained implicit.
 
+## Acceptance Assertions Verified
+
+- `A2`: verified through the approved shell geometry, responsive drawer,
+  permission-aware navigation, locale selection, theme behavior, and
+  desktop/mobile browser evidence.
+- `A3`: verified through the focused shell tests, complete locale discovery
+  checks, static validation, full frontend tests, build, and diff checks.
+
 ## Required Fixes
 
 - None. The repaired diff closes the prior layer, focus, background-isolation,

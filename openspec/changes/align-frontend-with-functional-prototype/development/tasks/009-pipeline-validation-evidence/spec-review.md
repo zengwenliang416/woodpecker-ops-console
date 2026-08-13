@@ -102,8 +102,8 @@ approved
   values derive from current Mock API contracts; permission and unavailable
   states are explicit; retained unit coverage prevents invalid values and stale
   log responses from replacing current presentation.
-- `A1` is not verified by this task because the parity matrix and remaining
-  route families are intentionally outside this slice.
+- The complete parity matrix and remaining route families are intentionally
+  outside this slice.
 
 ## Required Fixes
 

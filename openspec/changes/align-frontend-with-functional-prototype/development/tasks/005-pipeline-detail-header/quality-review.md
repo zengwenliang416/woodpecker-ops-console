@@ -85,6 +85,14 @@ approved
   header presentation, existing action orchestration, deploy target selection,
   and route-tab registration.
 
+## Acceptance Assertions Verified
+
+- `A2`: verified for the pipeline detail header through approved-prototype
+  hierarchy comparison, preserved route/API/permission/deploy behavior, and
+  equivalent desktop/mobile browser evidence.
+- `A3`: verified through focused and full frontend tests, targeted formatting,
+  lint, type checking, build, and diff checks for the reviewed slice.
+
 ## Required Fixes
 
 - None. The first-round mapping, fallback, test-coverage, TDD-claim, and browser

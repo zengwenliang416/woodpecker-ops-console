@@ -51,6 +51,12 @@ approved
   covered by consumer-oriented tests because older `undefined` checks are now
   unreachable.
 
+## Acceptance Assertions Verified
+
+- `A4`: verified through the shared date/duration guards, zero and missing
+  timestamp regression coverage, locale-aware valid rendering, cumulative
+  duration formatting, and elapsed timer validation.
+
 ## Required Fixes
 
 - None. Focused Vitest, targeted Prettier, TypeScript, and `git diff --check`

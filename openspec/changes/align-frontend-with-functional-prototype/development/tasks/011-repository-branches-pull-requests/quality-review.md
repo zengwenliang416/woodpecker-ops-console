@@ -128,6 +128,15 @@ approved
   `404` per state and all artifacts match their checksums, so neither robustness
   gap invalidates this task's current evidence.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through targeted formatting, lint, type checking, focused and
+  full frontend tests, build, diff checks, and checksum-valid desktop/mobile
+  browser evidence.
+- `A4`: verified through real branch/PR correlation, newest loaded-pipeline
+  selection, explicit missing-value fallbacks, refresh continuity, and
+  repository-generation-owned fulfillment and rejection handling.
+
 ## Required Fixes
 
 - None for task `011` / baseline task `4.2`.

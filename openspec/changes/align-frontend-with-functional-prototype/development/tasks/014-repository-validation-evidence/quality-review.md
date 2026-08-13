@@ -114,6 +114,14 @@ approved
   replacement, exact inventory, and protected-tree hashes now form a linear,
   fail-closed provenance model.
 
+## Acceptance Assertions Verified
+
+- `A1`: verified through the maintained 67-row route/state inventory and its
+  exact allowed status accounting without claiming all rows complete.
+- `A3`: verified through focused and full frontend tests, static/build checks,
+  strict 100-state evidence verification, syntax, inventory, provenance, and
+  diff checks.
+
 ## Required Fixes
 
 None. The initial resume provenance, pre-existing service reuse, warning

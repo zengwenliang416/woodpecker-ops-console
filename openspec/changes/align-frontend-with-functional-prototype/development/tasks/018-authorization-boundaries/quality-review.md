@@ -145,8 +145,8 @@ limited to the final authorization-boundary slice and task-scoped `A3`.
   Vite build, syntax/JSON/JSONL checks, `git diff --check`, and exact ten-state
   desktop/mobile browser run
   `35884fa1-a6ba-4077-bf2e-c80d409f3c86`.
-- Complete `A2` is not verified or claimed. Sensory parity and remaining route
-  families stay owned by baseline task `5.5`.
+- Sensory parity and remaining route families stay owned by baseline task
+  `5.5`.
 
 ## Validation Performed
 

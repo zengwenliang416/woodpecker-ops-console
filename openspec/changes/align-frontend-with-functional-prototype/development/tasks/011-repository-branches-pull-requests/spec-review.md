@@ -70,11 +70,9 @@ approved
   newest loaded-pipeline selection, explicit missing-value fallbacks,
   confirmed-row refresh continuity, successful and rejected active refreshes,
   repository-generation reset, and obsolete fulfillment/rejection isolation.
-- `A1` is not fully verified by task `011`; this slice does not close the
-  complete maintained route/state parity matrix.
-- `A2` is not fully verified by task `011`; full equivalent-state comparison
-  across theme, locale, permissions, viewport, and data state remains assigned
-  to baseline task `4.5`.
+- This slice does not close the complete maintained route/state parity matrix.
+- Full equivalent-state comparison across theme, locale, permissions, viewport,
+  and data state remains assigned to baseline task `4.5`.
 
 ## Required Fixes
 

@@ -113,6 +113,15 @@ shared-store, mutation-feedback, scope-copy, test-coverage, and evidence
 inventory blockers are closed by the implementation and validation cited
 above.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through focused and supporting tests, full frontend tests,
+  formatting, lint, type checking, build, evidence verification, syntax,
+  parsing, entry, and diff checks.
+- `A4`: verified through current organization/repository values, explicit
+  fallbacks and error states, latest-request-wins hydration, lifecycle-owned
+  operations, and obsolete completion isolation.
+
 ## Residual Risks
 
 - Browser evidence is intentionally representative dark Simplified-Chinese

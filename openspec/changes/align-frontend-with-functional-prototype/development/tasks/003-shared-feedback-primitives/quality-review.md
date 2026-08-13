@@ -97,6 +97,12 @@ approved
 - Consumer complexity decreases because affected pages now pass real state and
   translated copy rather than owning repeated presentation structures.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through focused and full frontend tests, targeted formatting,
+  lint, type checking, build, diff checks, and desktop/mobile browser evidence
+  for the shared feedback consumers.
+
 ## Required Fixes
 
 - None. The repaired tests, final system-executed receipts, independent focused

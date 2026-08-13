@@ -89,6 +89,16 @@ approved
   locally without adding viewport watchers, duplicated mobile markup, or
   task-`3.3` query-state behavior.
 
+## Acceptance Assertions Verified
+
+- `A2`: verified for the pipeline overview through approved-prototype
+  comparison, real workflow/step data, preserved permissions and actions, and
+  representative desktop/mobile theme and locale evidence.
+- `A3`: verified through focused and full frontend tests, formatting, lint,
+  type checking, build, and diff checks for the reviewed slice.
+- `A4`: verified through current workflow-derived counts, progress,
+  environment, image, duration, and explicit loading/error/empty presentation.
+
 ## Required Fixes
 
 - None. Direct diff, focused/full tests, static/build checks, and representative

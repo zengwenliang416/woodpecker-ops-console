@@ -99,9 +99,8 @@ approved
   explicit loading/empty/error fallbacks, and generation-owned list, editor,
   mutation, queue, and Forge regressions that prevent stale-response
   publication.
-- Complete `A2` is not verified or claimed. Rows 28-38 remain `in-progress`,
-  and task `5.5` retains family-wide theme, locale, permission, and data-state
-  parity closure.
+- Rows 28-38 remain `in-progress`, and task `5.5` retains family-wide theme,
+  locale, permission, and data-state parity closure.
 
 ## Required Fixes
 

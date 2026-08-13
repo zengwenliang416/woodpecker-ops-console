@@ -77,6 +77,15 @@ approved
 - The implementation remains readable and bounded within existing components;
   no extraction is required for this slice.
 
+## Acceptance Assertions Verified
+
+- `A2`: verified for the log, changed-files, config, errors, and Debug surfaces
+  through approved-prototype comparison and desktop/mobile browser evidence.
+- `A3`: verified through focused and full frontend tests, formatting, lint,
+  type checking, build, evidence verification, and diff checks.
+- `A4`: verified through current pipeline/log values, explicit empty and error
+  states, permission-aware actions, and stale-stream rejection regressions.
+
 ## Required Fixes
 
 - None. Direct source review, the targeted race regression, independent focused

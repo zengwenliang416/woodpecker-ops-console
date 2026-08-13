@@ -75,8 +75,7 @@ approved
   latest-request-wins repository hydration, monotonic organization lifecycle
   ownership, inert obsolete fulfilled/rejected list/save/delete completions,
   and preservation of confirmed rows and editor input after active failures.
-- `A2` is not verified or claimed. Baseline task `5.5` remains open, and rows
-  `24-27` remain `in-progress`.
+- Baseline task `5.5` remains open, and rows `24-27` remain `in-progress`.
 
 ## Required Fixes
 

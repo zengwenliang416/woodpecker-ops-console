@@ -89,6 +89,13 @@ approved
   passes make this a non-blocking cold-transform risk. The pipeline matrix
   itself performs one import rather than one import per destination.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified for the unit/static portion through focused and full frontend
+  tests, targeted formatting, lint, type checking, build, and diff checks.
+- `A4`: verified through pipeline-derived status/tab behavior, explicit
+  empty/error states, inbound route coverage, and stale-log response rejection.
+
 ## Required Fixes
 
 - None. The round-1 inbound-route blocker is fixed and independently

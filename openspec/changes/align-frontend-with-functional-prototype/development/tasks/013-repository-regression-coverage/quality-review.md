@@ -106,6 +106,12 @@ approved
   development entry contract as passed. Independent task-scope Prettier and
   diff checks also passed.
 
+## Acceptance Assertions Verified
+
+- `A4`: verified through real repository-family fixtures, explicit fallback
+  and disabled states, request-counted loading, preserved rejection
+  propagation, active-failure clearing, and lifecycle generation regressions.
+
 ## Required Fixes
 
 - No blocking quality fixes remain for task

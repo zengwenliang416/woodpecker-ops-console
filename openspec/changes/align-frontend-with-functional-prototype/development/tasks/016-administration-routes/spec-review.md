@@ -102,9 +102,8 @@ approved
   inert obsolete/post-unmount completions, and confirmed-row/editor
   preservation after active failures, including the repaired Forge
   post-save-refresh path.
-- `A2` is not verified or claimed. Full theme, locale, permission, and
-  data-state equivalence remains assigned to baseline task `5.5`; parity rows
-  `28-38` remain `in-progress`.
+- Full theme, locale, permission, and data-state equivalence remains assigned
+  to baseline task `5.5`; parity rows `28-38` remain `in-progress`.
 
 ## Required Fixes
 

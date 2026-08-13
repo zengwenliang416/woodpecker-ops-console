@@ -114,6 +114,14 @@ approved
   Secrets document `390/390` with local table `821/345` and
   `scrollLeft 0 -> 120`.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through current formatting, lint, type checking, focused and
+  full frontend tests, build, syntax, parsing, evidence, and diff checks.
+- `A4`: verified through real branch/resource/cron values, explicit
+  fallbacks, lifecycle-owned operations, confirmed pagination continuity, and
+  obsolete response isolation.
+
 ## Required Fixes
 
 - No blocking fixes remain. Retain the non-blocking `useAsyncAction`

@@ -61,6 +61,12 @@ approved
   Prettier command would create unrelated whole-file noise and would violate
   the task's evidence-first stop rule.
 
+## Acceptance Assertions Verified
+
+- `A3`: verified through the zero production/test diff, focused and full
+  frontend tests, lint, type checking, build, targeted formatting, diff checks,
+  and replayable desktop/mobile shell evidence.
+
 ## Required Fixes
 
 - None. Independent file, diff, test, validation-log, drift, and representative

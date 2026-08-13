@@ -99,8 +99,8 @@ coverage findings are closed by the implementation and focused tests.
   and CLI async completions are bound to active lifecycle or query ownership,
   and focused regressions prove obsolete callback-owner completions remain
   inert.
-- Complete `A2` is not verified or claimed. Rows `1` and `39-45` remain
-  `in-progress`; baseline tasks `5.4` and `5.5` remain open.
+- Rows `1` and `39-45` remain `in-progress`; baseline tasks `5.4` and `5.5`
+  remain open.
 
 ## Required Fixes
 

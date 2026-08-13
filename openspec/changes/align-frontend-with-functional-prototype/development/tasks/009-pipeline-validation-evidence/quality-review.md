@@ -99,6 +99,17 @@ approved
   errors, failed requests, runtime exceptions, or acceptance violation, so
   they are non-blocking concerns for this evidence-only slice.
 
+## Acceptance Assertions Verified
+
+- `A2`: verified for the completed pipeline route family through equivalent
+  production/prototype states across routes, viewports, theme, locale,
+  permissions, and deterministic data.
+- `A3`: verified through repeated focused tests, full frontend tests, static
+  validation, build, evidence syntax, checksums, and browser health checks.
+- `A4`: verified through current pipeline/workflow values, explicit
+  fallbacks, permissions, unavailable states, and retained stale-response
+  regressions.
+
 ## Required Fixes
 
 No changes are required for quality approval.

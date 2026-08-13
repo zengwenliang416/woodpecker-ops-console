@@ -73,8 +73,8 @@ approved
   invalid-value fallbacks, initial loading, same-length initial refresh,
   confirmed pagination cursors, request-local concurrent `hasMore` results,
   obsolete fulfillment/rejection isolation, and live-insert isolation.
-- `A1` and `A2` are not verified by task `010`. It does not close the complete
-  parity matrix or equivalent-state prototype comparison.
+- Task `010` does not close the complete parity matrix or equivalent-state
+  prototype comparison.
 
 ## Required Fixes
 

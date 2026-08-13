@@ -71,8 +71,8 @@ approved
   tab counts derive from current pipeline/workflow arrays, empty/error states
   remain explicit, and the retained stale-log regression prevents an obsolete
   response from replacing the selected step's log.
-- `A1` and `A2` are not verified by this task. It neither updates/verifies all
-  parity-matrix rows nor records equivalent-state sensory evidence.
+- Complete parity-matrix and equivalent-state sensory verification remain
+  outside this task.
 
 ## Required Fixes
 
