@@ -1,5 +1,9 @@
 {
   "task_id": "017-user-auth-routes",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Authenticated users can operate the existing personal preferences, Secrets, Registries, CLI/API token, and optional Agents routes while guests, CLI clients, and unknown routes receive resilient prototype-aligned login, authorization, and not-found states.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/017-user-auth-routes/brief.md",

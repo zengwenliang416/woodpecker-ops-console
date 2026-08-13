@@ -1,5 +1,9 @@
 {
   "task_id": "015-organization-routes",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Organization members can browse real organization repositories and administrators can manage existing organization Secrets, Registries, and Agents through a responsive prototype-aligned settings hierarchy with active lifecycle ownership.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/015-organization-routes/brief.md",

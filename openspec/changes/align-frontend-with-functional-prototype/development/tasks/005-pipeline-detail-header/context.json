@@ -1,5 +1,9 @@
 {
   "task_id": "005-pipeline-detail-header",
+  "acceptance_primary": [
+    "A2",
+    "A3"
+  ],
   "goal": "Align the real pipeline detail header, status metadata, primary actions, and existing route tabs with the approved prototype without changing API, store, router, or permission contracts.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/005-pipeline-detail-header/brief.md",

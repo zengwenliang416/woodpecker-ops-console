@@ -1,5 +1,8 @@
 {
   "task_id": "003-shared-feedback-primitives",
+  "acceptance_primary": [
+    "A3"
+  ],
   "goal": "Users receive accessible, prototype-aligned loading, empty, error, disabled, permission, and stale feedback across repository and pipeline route families without changing real data or permission contracts.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/003-shared-feedback-primitives/brief.md",

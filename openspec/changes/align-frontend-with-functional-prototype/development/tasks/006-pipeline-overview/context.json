@@ -1,5 +1,10 @@
 {
   "task_id": "006-pipeline-overview",
+  "acceptance_primary": [
+    "A2",
+    "A3",
+    "A4"
+  ],
   "goal": "Rebuild the real pipeline overview with execution summary, step status, duration, environment, explicit image availability, and current step-log routing without changing APIs or task 3.3 log behavior.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/006-pipeline-overview/brief.md",

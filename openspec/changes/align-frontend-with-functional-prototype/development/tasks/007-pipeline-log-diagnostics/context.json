@@ -1,5 +1,10 @@
 {
   "task_id": "007-pipeline-log-diagnostics",
+  "acceptance_primary": [
+    "A2",
+    "A3",
+    "A4"
+  ],
   "goal": "Align the real pipeline log, changed-files, configuration, error, and debug surfaces with shared responsive diagnostic patterns without changing routes, APIs, permissions, or inventing prototype-only data.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/007-pipeline-log-diagnostics/brief.md",

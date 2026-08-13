@@ -1,5 +1,9 @@
 {
   "task_id": "012-repository-manual-run-settings",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Repository operators can manually trigger a real pipeline and administer the existing repository settings surfaces through a dense, responsive information hierarchy without invented metadata, mutations, or server capabilities.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/brief.md",

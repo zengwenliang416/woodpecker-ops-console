@@ -1,5 +1,9 @@
 {
   "task_id": "016-administration-routes",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "System administrators can operate the existing administration overview, global resources, repositories, users, organizations, Agents, queue, and Forge routes through a responsive prototype-aligned hierarchy with active lifecycle ownership.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/016-administration-routes/brief.md",

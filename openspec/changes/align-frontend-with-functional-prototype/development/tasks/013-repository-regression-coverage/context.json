@@ -1,5 +1,8 @@
 {
   "task_id": "013-repository-regression-coverage",
+  "acceptance_primary": [
+    "A4"
+  ],
   "goal": "Protect the completed repository route family with focused router, wrapper, theme-invariant control, and responsive-containment regressions while ensuring repository permission and load completions belong to the active route lifecycle.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/013-repository-regression-coverage/brief.md",

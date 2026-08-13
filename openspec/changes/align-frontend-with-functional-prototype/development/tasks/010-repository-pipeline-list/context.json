@@ -1,5 +1,9 @@
 {
   "task_id": "010-repository-pipeline-list",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Users can scan, filter, paginate, open, and deploy eligible pipelines from a repository activity page that matches the approved prototype's information density while preserving current repository APIs and permissions.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/brief.md",

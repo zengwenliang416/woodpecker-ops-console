@@ -1,5 +1,9 @@
 {
   "task_id": "011-repository-branches-pull-requests",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Users can search, page, refresh, and open repository branches and pull requests, then inspect their real pipeline history without unsupported Forge metadata or mutations.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/011-repository-branches-pull-requests/brief.md",

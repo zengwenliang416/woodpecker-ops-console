@@ -1,5 +1,8 @@
 {
   "task_id": "018-authorization-boundaries",
+  "acceptance_primary": [
+    "A3"
+  ],
   "goal": "Guests and authenticated actors receive consistent navigation visibility and direct-route behavior while existing system, repository, and organization authorization contracts remain authoritative.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/018-authorization-boundaries/brief.md",

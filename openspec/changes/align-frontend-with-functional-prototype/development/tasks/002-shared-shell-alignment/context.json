@@ -1,5 +1,9 @@
 {
   "task_id": "002-shared-shell-alignment",
+  "acceptance_primary": [
+    "A2",
+    "A3"
+  ],
   "goal": "Authenticated regular users and administrators can use a prototype-aligned, responsive shared shell with accessible drawer behavior, working preferences, localized search feedback, and unchanged permission boundaries.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/002-shared-shell-alignment/brief.md",

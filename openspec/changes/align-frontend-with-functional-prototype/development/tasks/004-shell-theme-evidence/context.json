@@ -1,5 +1,8 @@
 {
   "task_id": "004-shell-theme-evidence",
+  "acceptance_primary": [
+    "A3"
+  ],
   "goal": "Capture current production and approved-prototype evidence proving the shared shell remains equivalent in dark/light desktop and 390px mobile states before route-family implementation.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/004-shell-theme-evidence/brief.md",

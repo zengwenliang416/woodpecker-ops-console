@@ -1,5 +1,8 @@
 {
   "task_id": "001-date-duration-integrity",
+  "acceptance_primary": [
+    "A4"
+  ],
   "goal": "Users see deterministic neutral fallbacks for invalid, missing, negative, non-finite, and extreme dates and durations while valid values remain locale-aware.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/001-date-duration-integrity/brief.md",

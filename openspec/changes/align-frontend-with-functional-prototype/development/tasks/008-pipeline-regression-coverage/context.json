@@ -1,5 +1,9 @@
 {
   "task_id": "008-pipeline-regression-coverage",
+  "acceptance_primary": [
+    "A3",
+    "A4"
+  ],
   "goal": "Protect the completed pipeline detail route family with focused component and router regressions for current routes, status/cancellation variants, permissions, actions, tabs, empty/error states, and responsive containment.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/008-pipeline-regression-coverage/brief.md",

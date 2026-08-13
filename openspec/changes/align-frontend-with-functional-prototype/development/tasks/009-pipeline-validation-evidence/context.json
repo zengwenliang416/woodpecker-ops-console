@@ -1,5 +1,10 @@
 {
   "task_id": "009-pipeline-validation-evidence",
+  "acceptance_primary": [
+    "A2",
+    "A3",
+    "A4"
+  ],
   "goal": "Prove the completed pipeline detail route family passes current focused/full frontend validation and equivalent-state production-versus-prototype browser review across desktop/mobile, theme, locale, and permission boundaries.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",

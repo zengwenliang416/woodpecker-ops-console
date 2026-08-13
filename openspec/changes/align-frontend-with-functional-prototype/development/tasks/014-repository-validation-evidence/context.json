@@ -1,5 +1,9 @@
 {
   "task_id": "014-repository-validation-evidence",
+  "acceptance_primary": [
+    "A1",
+    "A3"
+  ],
   "goal": "Verify repository parity rows 3 through 23 at the current commit with equivalent-state production-versus-approved-prototype browser evidence and honest per-row outcomes.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/brief.md",
