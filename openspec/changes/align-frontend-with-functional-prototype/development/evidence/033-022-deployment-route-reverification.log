@@ -1,0 +1,132 @@
+# command: node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs
+# exit_status: 1
+# duration_ms: 65859
+
+## stdout
+
+## Focused Vitest
+✓ Lockfile passes supply-chain policies (verified 4h ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +620
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/wenliang_zeng/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 620, reused 620, downloaded 0, added 248
+Progress: resolved 620, reused 620, downloaded 0, added 618
+Progress: resolved 620, reused 620, downloaded 0, added 620, done
+
+dependencies:
++ @kyvg/vue3-notification 3.4.2
++ @mdi/js 7.4.47
++ @vueuse/core 14.4.0
++ ansi_up 6.0.6
++ dompurify 3.4.13
++ fuse.js 7.5.0
++ js-base64 3.9.2
++ marked 18.0.9
++ node-emoji 2.2.0
++ pinia 4.0.2
++ prismjs 1.30.0
++ semver 7.8.5
++ simple-icons 16.28.0
++ tailwindcss 4.3.3
++ vue 3.5.41
++ vue-i18n 11.4.8
++ vue-router 5.2.0
+
+devDependencies:
++ @antfu/eslint-config 9.3.0
++ @eslint/js 10.0.1
++ @ianvs/prettier-plugin-sort-imports 4.7.1
++ @intlify/eslint-plugin-vue-i18n 4.5.1
++ @intlify/unplugin-vue-i18n 11.2.4
++ @tailwindcss/typography 0.5.20
++ @tailwindcss/vite 4.3.3
++ @types/node 24.13.3
++ @types/prismjs 1.26.6
++ @types/semver 7.8.0
++ @types/tinycolor2 1.4.6
++ @vitejs/plugin-vue 6.0.8
++ @vue/compiler-sfc 3.5.41
++ @vue/test-utils 2.4.11
++ dotenv 17.4.2
++ eslint 10.8.0
++ eslint-plugin-promise 7.3.0
++ eslint-plugin-vue-scoped-css 3.1.3
++ jsdom 30.0.1
++ prettier 3.9.6
++ prettier-plugin-tailwindcss 0.8.1
++ tinycolor2 1.6.0
++ ts-node 10.9.2
++ typescript 6.0.3
++ vite 8.2.1
++ vite-plugin-prismjs 0.0.11
++ vite-svg-loader 5.1.1
++ vitest 4.1.10
++ vue-tsc 3.3.9
+
+Done in 2.8s using pnpm v11.20.0
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-refresh-kWUZsB/web
+
+
+ Test Files  9 passed (9)
+      Tests  39 passed (39)
+   Start at  02:12:17
+   Duration  6.38s (transform 13.17s, setup 0ms, import 19.64s, tests 821ms, environment 17.71s)
+
+
+## Full Vitest
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-refresh-kWUZsB/web
+
+
+ Test Files  103 passed (103)
+      Tests  582 passed (582)
+   Start at  02:12:25
+   Duration  49.46s (transform 38.29s, setup 0ms, import 114.97s, tests 32.57s, environment 157.74s)
+
+
+## Task 022 Prettier
+Checking formatting...
+
+
+## stderr
+$ vitest -- --run
+[warn] ../openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/acceptance.json
+[warn] Code style issues found in the above file. Run Prettier with --write to fix.
+node:internal/modules/run_main:123
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Task 022 Prettier failed with exit status 1
+
+1 !== 0
+
+    at run (file:///private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-refresh-kWUZsB/openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs:25:10)
+    at file:///private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-refresh-kWUZsB/openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs:65:1
+    at ModuleJob.run (node:internal/modules/esm/module_job:345:25)
+    at async onImport.tracePromise.__proto__ (node:internal/modules/esm/loader:651:26)
+    at async asyncRunEntryPointWithESMLoader (node:internal/modules/run_main:117:5) {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: 1,
+  expected: 0,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v22.19.0
+

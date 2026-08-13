@@ -222,12 +222,7 @@
     {
       "id": "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947",
       "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs",
-      "assertion_ids": [
-        "A1",
-        "A2",
-        "A3",
-        "A4"
-      ],
+      "assertion_ids": ["A1", "A2", "A3", "A4"],
       "recorded_at": "2026-08-13T18:01:47.479Z",
       "validation_receipt_sha256": "ae8c852e6c0edc8fc4ca116e9c8d4ef747463b76838e9c3f160050278deb86c1",
       "evidence_log": {
@@ -242,9 +237,7 @@
       "id": "A1",
       "parent_id": "A1",
       "status": "passing",
-      "test_run_ids": [
-        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
-      ],
+      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
@@ -253,9 +246,7 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": [
-        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
-      ],
+      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -264,9 +255,7 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": [
-        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
-      ],
+      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
@@ -275,9 +264,7 @@
       "id": "A4",
       "parent_id": "A4",
       "status": "passing",
-      "test_run_ids": [
-        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
-      ],
+      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
