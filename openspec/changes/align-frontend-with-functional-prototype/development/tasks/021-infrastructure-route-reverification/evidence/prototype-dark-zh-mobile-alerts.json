@@ -1,0 +1,73 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 告警中心 服务器、服务、部署和证书的活动告警。 告警规则 刷新 基础设施概览 服务器 服务器组 服务与容器 告警 严重 1 需要立即处理 警告 2 已确认 1 平均恢复时间 8m 42s ↓ 18% 全部 活动 已确认 已解决 全部严重级别 严重 警告 信息 Node Agent heartbeat missing 活动 严重 prod-api-03 has stopped reporting metrics and deployment status. prod-api-03 3m 04s / > 60s 3 分钟前 node-agent 确认 解决 查看服务器 Root disk usage above threshold 活动 警告 Disk usage may block image pulls during the active deployment. prod-api-02 86% / > 85% 12 分钟前 node-exporter 确认 解决 查看服务器 Container restart rate elevated 已确认 警告 backend-api-staging restarted four times after the latest release. staging-all-01 4 restarts / > 3 / 15m 18 分钟前 docker 解决 查看服务器 TLS certificate expires soon 已解决 信息 Certificate renewal was completed automatically. prod-web-01 21 days / < 30 days 2 天前 certificate 查看服务器",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 告警中心 服务器、服务、部署和证书的活动告警。 告警规则 刷新 基础设施概览 服务器 服务器组 服务与容器 告警 严重 1 需要立即处理 警告 2 已确认 1 平均恢复时间 8m 42s ↓ 18% 全部 活动 已确认 已解决 全部严重级别 严重 警告 信息 Node Agent heartbeat missing 活动 严重 prod-api-03 has stopped reporting metrics and deployment status. prod-api-03 3m 04s / > 60s 3 分钟前 node-agent 确认 解决 查看服务器 Root disk usage above threshold 活动 警告 Disk usage may block image pulls during the active deployment. prod-api-02 86% / > 85% 12 分钟前 node-exporter 确认 解决 查看服务器 Container restart rate elevated 已确认 警告 backend-api-staging restarted four times after the latest release. staging-all-01 4 restarts / > 3 / 15m 18 分钟前 docker 解决 查看服务器 TLS certificate expires soon 已解决 信息 Certificate renewal was completed automatically. prod-web-01 21 days / < 30 days 2 天前 certificate 查看服务器",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/alerts",
+  "url": "http://127.0.0.1:8211/#/infrastructure/alerts",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-mobile-alerts",
+  "row": 57,
+  "destination": "alerts",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/告警/",
+      "passed": true
+    },
+    {
+      "pattern": "/Node Agent heartbeat missing/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:13:28.503Z",
+  "health": {
+    "startedAt": "2026-08-13T13:13:27.803Z",
+    "endedAt": "2026-08-13T13:13:28.503Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

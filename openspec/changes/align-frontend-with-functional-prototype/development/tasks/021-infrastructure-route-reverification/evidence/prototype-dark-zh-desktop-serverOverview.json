@@ -1,0 +1,73 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 CPU 31% Load 1.24 内存 48% 8/16 GB 磁盘 62% 74/120 GB 网络 32 Mb/s 双向吞吐 运行状态 Node Agent、操作系统和容器运行时 健康 服务器组 prod-api 环境 Production 区域 asia-southeast-1 / sgp-1a 私网 IP 10.20.1.11 公网 IP 203.0.113.11 操作系统 Ubuntu 24.04 Kernel 6.8.0-40-generic 运行时 Docker 27.1 Node Agent 1.2.0 运行时间 48 天 最近心跳 5 秒前 当前发布 此节点上最后验证通过的不可变 Release 应用详情 backend-api · v1.4.0 sha256:1ee6d72a21a8 已部署 提交 b2c3d4e 流水线 #837 镜像大小 184 MB 部署时间 3 天前 最近事件 查看全部 Release v1.4.1-rc.2 deployed Deployment #142 completed health check on this node. 7 分钟前 健康检查 Node Agent 正常 容器运行时 正常 应用端点 HTTP 200 可用磁盘 38% 活动告警 告警中心 没有活动告警 所有检查均正常 快捷操作 重启 Node Agent 复制诊断信息 查看服务",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 CPU 31% Load 1.24 内存 48% 8/16 GB 磁盘 62% 74/120 GB 网络 32 Mb/s 双向吞吐 运行状态 Node Agent、操作系统和容器运行时 健康 服务器组 prod-api 环境 Production 区域 asia-southeast-1 / sgp-1a 私网 IP 10.20.1.11 公网 IP 203.0.113.11 操作系统 Ubuntu 24.04 Kernel 6.8.0-40-generic 运行时 Docker 27.1 Node Agent 1.2.0 运行时间 48 天 最近心跳 5 秒前 当前发布 此节点上最后验证通过的不可变 Release 应用详情 backend-api · v1.4.0 sha256:1ee6d72a21a8 已部署 提交 b2c3d4e 流水线 #837 镜像大小 184 MB 部署时间 3 天前 最近事件 查看全部 Release v1.4.1-rc.2 deployed Deployment #142 completed health check on this node. 7 分钟前 健康检查 Node Agent 正常 容器运行时 正常 应用端点 HTTP 200 可用磁盘 38% 活动告警 告警中心 没有活动告警 所有检查均正常 快捷操作 重启 Node Agent 复制诊断信息 查看服务",
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/servers/201",
+  "url": "http://127.0.0.1:8211/#/infrastructure/servers/201",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-desktop-serverOverview",
+  "row": 48,
+  "destination": "serverOverview",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/prod-api-01/",
+      "passed": true
+    },
+    {
+      "pattern": "/概览/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:12:37.171Z",
+  "health": {
+    "startedAt": "2026-08-13T13:12:36.447Z",
+    "endedAt": "2026-08-13T13:12:37.171Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

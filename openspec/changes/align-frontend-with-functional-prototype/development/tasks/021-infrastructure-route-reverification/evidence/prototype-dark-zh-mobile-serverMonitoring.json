@@ -1,0 +1,73 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 1 小时 6 小时 24 小时 7 天 导出指标 刷新 CPU 使用率 31% 告警阈值 85% 最小 22% 平均 30% 最大 36% 内存使用率 48% 告警阈值 90% 最小 43% 平均 46% 最大 49% 根磁盘使用率 62% 告警阈值 85% 最小 58% 平均 60% 最大 62% 网络吞吐 32 Mb/s Mb/s 最小 18 平均 28 最大 38",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 1 小时 6 小时 24 小时 7 天 导出指标 刷新 CPU 使用率 31% 告警阈值 85% 最小 22% 平均 30% 最大 36% 内存使用率 48% 告警阈值 90% 最小 43% 平均 46% 最大 49% 根磁盘使用率 62% 告警阈值 85% 最小 58% 平均 60% 最大 62% 网络吞吐 32 Mb/s Mb/s 最小 18 平均 28 最大 38",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/servers/201?tab=monitoring",
+  "url": "http://127.0.0.1:8211/#/infrastructure/servers/201?tab=monitoring",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-mobile-serverMonitoring",
+  "row": 49,
+  "destination": "serverMonitoring",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/prod-api-01/",
+      "passed": true
+    },
+    {
+      "pattern": "/CPU 使用率/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:13:09.208Z",
+  "health": {
+    "startedAt": "2026-08-13T13:13:08.549Z",
+    "endedAt": "2026-08-13T13:13:09.208Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

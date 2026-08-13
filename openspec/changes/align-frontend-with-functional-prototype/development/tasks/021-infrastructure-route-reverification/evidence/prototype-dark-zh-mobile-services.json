@@ -1,0 +1,90 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务与容器 跨服务器查看应用实例、容器状态和资源占用。 刷新运行时 基础设施概览 服务器 服务器组 服务与容器 告警 运行实例 6 部署中 1 异常实例 2 需要处理 容器重启 5 过去 24 小时 全部状态 健康 部署中 异常 不可达 已停止 全部应用 backend-api web-frontend worker-service notification-service 服务 服务器 应用 类型 状态 版本 CPU 内存 重启 端口 backend-api ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 prod-api-01 backend-api container 健康 v1.4.0 18% 412 MB 0 8080:8080 postgres-exporter prometheuscommunity/postgres-exporter:v0.17 prod-api-01 backend-api container 健康 v0.17 2% 64 MB 0 9187 backend-api ghcr.io/acme/backend-api@sha256:8dcf1c3a9d01 prod-api-02 backend-api container 部署中 v1.4.1-rc.2 42% 718 MB 1 8080:8080 backend-api ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 prod-api-03 backend-api container 不可达 v1.4.0 0% 0 MB 0 8080:8080 web-frontend ghcr.io/acme/web-frontend@sha256:486b9c4e02aa prod-web-01 web-frontend container 健康 v3.8.2 9% 188 MB 0 3000:3000 web-frontend ghcr.io/acme/web-frontend@sha256:486b9c4e02aa prod-web-02 web-frontend container 已停止 v3.8.2 0% 0 MB 0 3000:3000 backend-api-staging ghcr.io/acme/backend-api@sha256:8dcf1c3a9d01 staging-all-01 backend-api container 异常 v1.4.1-rc.2 24% 536 MB 4 8080:8080 web-frontend-staging ghcr.io/acme/web-frontend@sha256:6972f1cc0b8a staging-all-02 web-frontend container 健康 v3.9.0-beta.1 7% 154 MB 0 3000:3000 worker-service ghcr.io/acme/worker-service@sha256:c511d8ab7c93 prod-worker-01 worker-service container 健康 v2.6.0 31% 624 MB 0 9090 notification notification-service prod-worker-01 notification-service systemd 健康 v1.9.3 8% 132 MB 0 9100 显示 1 至 10 项，共 10 项 1 2 3",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务与容器 跨服务器查看应用实例、容器状态和资源占用。 刷新运行时 基础设施概览 服务器 服务器组 服务与容器 告警 运行实例 6 部署中 1 异常实例 2 需要处理 容器重启 5 过去 24 小时 全部状态 健康 部署中 异常 不可达 已停止 全部应用 backend-api web-frontend worker-service notification-service 服务 服务器 应用 类型 状态 版本 CPU 内存 重启 端口 backend-api ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 prod-api-01 backend-api container 健康 v1.4.0 18% 412 MB 0 8080:8080 postgres-exporter prometheuscommunity/postgres-exporter:v0.17 prod-api-01 backend-api container 健康 v0.17 2% 64 MB 0 9187 backend-api ghcr.io/acme/backend-api@sha256:8dcf1c3a9d01 prod-api-02 backend-api container 部署中 v1.4.1-rc.2 42% 718 MB 1 8080:8080 backend-api ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 prod-api-03 backend-api container 不可达 v1.4.0 0% 0 MB 0 8080:8080 web-frontend ghcr.io/acme/web-frontend@sha256:486b9c4e02aa prod-web-01 web-frontend container 健康 v3.8.2 9% 188 MB 0 3000:3000 web-frontend ghcr.io/acme/web-frontend@sha256:486b9c4e02aa prod-web-02 web-frontend container 已停止 v3.8.2 0% 0 MB 0 3000:3000 backend-api-staging ghcr.io/acme/backend-api@sha256:8dcf1c3a9d01 staging-all-01 backend-api container 异常 v1.4.1-rc.2 24% 536 MB 4 8080:8080 web-frontend-staging ghcr.io/acme/web-frontend@sha256:6972f1cc0b8a staging-all-02 web-frontend container 健康 v3.9.0-beta.1 7% 154 MB 0 3000:3000 worker-service ghcr.io/acme/worker-service@sha256:c511d8ab7c93 prod-worker-01 worker-service container 健康 v2.6.0 31% 624 MB 0 9090 notification notification-service prod-worker-01 notification-service systemd 健康 v1.9.3 8% 132 MB 0 9100 显示 1 至 10 项，共 10 项 1 2 3",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 360,
+      "scrollWidth": 989,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 989,
+      "scrollWidth": 989,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/services",
+  "url": "http://127.0.0.1:8211/#/infrastructure/services",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-mobile-services",
+  "row": 56,
+  "destination": "services",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/服务与容器/",
+      "passed": true
+    },
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:13:26.360Z",
+  "health": {
+    "startedAt": "2026-08-13T13:13:25.685Z",
+    "endedAt": "2026-08-13T13:13:26.360Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

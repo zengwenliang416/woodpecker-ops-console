@@ -76,8 +76,10 @@ export const useServerStore = defineStore('ops-servers', () => {
   async function loadServers() {
     const generation = ++serverLoadGeneration;
     const list = await loadAllPages(async (options) => apiClient.getServers(options));
-    if (generation === serverLoadGeneration) syncMap(servers, list);
-    loaded.value = true;
+    if (generation === serverLoadGeneration) {
+      syncMap(servers, list);
+      loaded.value = true;
+    }
     return list;
   }
 

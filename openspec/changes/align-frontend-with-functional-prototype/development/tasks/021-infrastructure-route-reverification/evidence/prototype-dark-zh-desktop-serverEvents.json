@@ -1,0 +1,73 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 服务器事件 部署、告警、维护和运行时变更 导出审计日志 Release v1.4.1-rc.2 deployed Deployment #142 completed health check on this node. prod-api-01 · deployment 7 分钟前",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 服务器事件 部署、告警、维护和运行时变更 导出审计日志 Release v1.4.1-rc.2 deployed Deployment #142 completed health check on this node. prod-api-01 · deployment 7 分钟前",
+  "document": {
+    "clientWidth": 1600,
+    "clientHeight": 1000,
+    "scrollWidth": 1600,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/servers/201?tab=events",
+  "url": "http://127.0.0.1:8211/#/infrastructure/servers/201?tab=events",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-desktop-serverEvents",
+  "row": 52,
+  "destination": "serverEvents",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/服务器事件/",
+      "passed": true
+    },
+    {
+      "pattern": "/运行时变更/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:12:48.335Z",
+  "health": {
+    "startedAt": "2026-08-13T13:12:47.610Z",
+    "endedAt": "2026-08-13T13:12:48.335Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

@@ -755,6 +755,40 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
       ],
       "query_ids": ["development:task-020-overview-repositories-reverification:evidence"]
+    },
+    {
+      "id": "development:task-021-infrastructure-route-reverification",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "021-infrastructure-route-reverification",
+      "text": "Re-verify infrastructure parity rows `46-57` from current production and approved prototype bytes while protecting truthful API, request, mutation, permission, and responsive behavior.",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/context.json"
+      ],
+      "expected_evidence": [
+        "Focused view, navigation, and store regressions for explicit states, filters, route switching, overlapping requests, mutations, and fallbacks.",
+        "Equivalent current-byte production/prototype infrastructure evidence at desktop and 390px in dark Simplified Chinese plus representative light or English capability.",
+        "Strict exact-inventory evidence verification for rows 46-57 covering routes, tabs, viewport, theme, locale, role, content, containment, i18n, browser health, PNG, service and source identity, one run ID, and rejected mutations.",
+        "Focused/full Vitest, Prettier, ESLint, TypeScript, build, evidence syntax, JSON/JSONL, diff, SpecNav, report, and reviews.",
+        "Rows 46-57 and task 6.2 update only after evidence and reviews pass."
+      ],
+      "allowed_files": [
+        "web/src/views/infrastructure/*.vue",
+        "web/src/views/infrastructure/*.test.ts",
+        "web/src/components/ops/InfrastructureNav.vue",
+        "web/src/components/ops/InfrastructureNav.test.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/**"
+      ],
+      "query_ids": ["development:task-021-infrastructure-route-reverification:evidence"]
     }
   ]
 }

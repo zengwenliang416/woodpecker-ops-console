@@ -1,0 +1,90 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器组 按环境、应用角色和部署策略组织服务器。 新建服务器组 基础设施概览 服务器 服务器组 服务与容器 告警 服务器组 环境 健康 部署策略 批次 健康检查 平均 CPU prod-api Production API nodes in Singapore Production 1/3 健康 rolling 1 :8080/health/ready 34% prod-web Production web and edge nodes Production 1/2 健康 rolling 1 :3000/health 16% staging-shared Shared staging application hosts Staging 1/2 健康 all-at-once 2 :8080/health 38% prod-workers Background workers in Frankfurt Production 1/1 健康 rolling 1 :9090/health 43%",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器组 按环境、应用角色和部署策略组织服务器。 新建服务器组 基础设施概览 服务器 服务器组 服务与容器 告警 服务器组 环境 健康 部署策略 批次 健康检查 平均 CPU prod-api Production API nodes in Singapore Production 1/3 健康 rolling 1 :8080/health/ready 34% prod-web Production web and edge nodes Production 1/2 健康 rolling 1 :3000/health 16% staging-shared Shared staging application hosts Staging 1/2 健康 all-at-once 2 :8080/health 38% prod-workers Background workers in Frankfurt Production 1/1 健康 rolling 1 :9090/health 43%",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 360,
+      "scrollWidth": 750,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 750,
+      "scrollWidth": 750,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/groups",
+  "url": "http://127.0.0.1:8211/#/infrastructure/groups",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-mobile-groups",
+  "row": 54,
+  "destination": "groups",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/服务器组/",
+      "passed": true
+    },
+    {
+      "pattern": "/prod-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:13:21.744Z",
+  "health": {
+    "startedAt": "2026-08-13T13:13:21.068Z",
+    "endedAt": "2026-08-13T13:13:21.744Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

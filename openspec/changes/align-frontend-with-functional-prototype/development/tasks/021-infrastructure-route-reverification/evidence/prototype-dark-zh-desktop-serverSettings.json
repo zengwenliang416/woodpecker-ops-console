@@ -1,0 +1,73 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 节点配置 服务器组 告警规则 节点身份 用于调度、筛选和审计。 显示名称 服务器组 prod-api prod-web staging-shared prod-workers 区域 可用区 标签 使用逗号分隔；部署策略可以按标签选择节点。 Node Agent 自动升级 在维护窗口内升级到 Controller 推荐版本。 指标采样 每 15 秒上报 CPU、内存、磁盘和容器状态。 保存节点配置 危险操作 吊销节点证书 Node Agent 将立即断开，必须重新注册才能连接。 吊销证书 从控制面移除 不会删除服务器上的应用和数据。 移除服务器",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 节点配置 服务器组 告警规则 节点身份 用于调度、筛选和审计。 显示名称 服务器组 prod-api prod-web staging-shared prod-workers 区域 可用区 标签 使用逗号分隔；部署策略可以按标签选择节点。 Node Agent 自动升级 在维护窗口内升级到 Controller 推荐版本。 指标采样 每 15 秒上报 CPU、内存、磁盘和容器状态。 保存节点配置 危险操作 吊销节点证书 Node Agent 将立即断开，必须重新注册才能连接。 吊销证书 从控制面移除 不会删除服务器上的应用和数据。 移除服务器",
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/servers/201?tab=settings",
+  "url": "http://127.0.0.1:8211/#/infrastructure/servers/201?tab=settings",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-desktop-serverSettings",
+  "row": 53,
+  "destination": "serverSettings",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/节点配置/",
+      "passed": true
+    },
+    {
+      "pattern": "/Node Agent/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:12:50.993Z",
+  "health": {
+    "startedAt": "2026-08-13T13:12:50.276Z",
+    "endedAt": "2026-08-13T13:12:50.993Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

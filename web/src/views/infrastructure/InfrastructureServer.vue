@@ -17,20 +17,69 @@
     </template>
     <template #headerActions>
       <Button
+        data-action="server-maintenance"
         :text="server?.maintenance ? $t('ops.server.exit_maintenance') : $t('ops.server.enter_maintenance')"
         :color="server?.maintenance ? 'gray' : 'red'"
+        :disabled="!server || Boolean(activeMutation)"
+        :is-loading="activeMutation === 'maintenance'"
         @click="toggleMaintenance"
       />
       <Button
         start-icon="rocket"
         color="green"
         :text="$t('ops.server.deploy_to_node')"
+        :disabled="!server"
         :to="{ path: '/deployments/new', query: { serverId: server?.id } }"
       />
     </template>
 
     <div class="ops-page">
-      <div v-if="server" class="page-stack">
+      <FeedbackState
+        v-if="loading && !server"
+        kind="loading"
+        :title="$t('feedback.loading_title')"
+        :description="$t('feedback.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError && !server"
+        kind="error"
+        :title="$t('unknown_error')"
+        :description="$t('unknown_error')"
+      >
+        <template #action>
+          <Button
+            data-action="server-retry"
+            start-icon="refresh"
+            :text="$t('repo.settings_surface.retry')"
+            :disabled="Boolean(activeMutation)"
+            @click="reload"
+          />
+        </template>
+      </FeedbackState>
+      <FeedbackState
+        v-else-if="missing"
+        kind="empty"
+        :title="$t('not_found.title')"
+        :description="$t('not_found.description')"
+      />
+      <div v-else-if="server" class="page-stack">
+        <FeedbackState
+          v-if="loadError || mutationError"
+          compact
+          kind="error"
+          :title="$t('unknown_error')"
+          :description="$t('unknown_error')"
+        >
+          <template #action>
+            <Button
+              data-action="server-retry"
+              start-icon="refresh"
+              :text="$t('repo.settings_surface.retry')"
+              :disabled="Boolean(activeMutation)"
+              @click="reload"
+            />
+          </template>
+        </FeedbackState>
         <div class="server-meta">
           <span>{{ environmentName }}</span
           ><span>{{ $t('ops.server.region') }}: {{ server.region || '—' }} · {{ server.zone || '—' }}</span
@@ -38,7 +87,7 @@
           ><span>{{ relativeHeartbeat(server.last_heartbeat) }}</span>
         </div>
 
-        <nav class="server-tabs" aria-label="服务器详情">
+        <nav class="server-tabs" :aria-label="$t('ops.server_detail.tabs_label')">
           <router-link v-for="tab in tabs" :key="tab.key" :to="tab.to" :class="{ active: currentTab === tab.key }">
             <Icon :name="tab.icon" /><span>{{ tab.label }}</span
             ><span v-if="tab.count" class="tab-count">{{ tab.count }}</span>
@@ -58,7 +107,7 @@
             <OpsMetricCard
               :label="$t('ops.server.memory')"
               :value="`${server.memory.toFixed(0)}%`"
-              hint="Node Agent 采样"
+              :hint="$t('ops.server_detail.agent_sample')"
               icon="memory"
               :chart-values="server.metrics?.memory"
               :tone="metricTone(server.memory)"
@@ -66,15 +115,15 @@
             <OpsMetricCard
               :label="$t('ops.server.disk')"
               :value="`${server.disk.toFixed(0)}%`"
-              hint="根磁盘使用率"
+              :hint="$t('ops.server_detail.root_disk_usage')"
               icon="disk"
               :chart-values="server.metrics?.disk"
               :tone="metricTone(server.disk)"
             />
             <OpsMetricCard
-              label="网络"
+              :label="$t('ops.server_detail.network')"
               :value="`${latestNetwork.toFixed(0)} Mb/s`"
-              hint="当前吞吐"
+              :hint="$t('ops.server_detail.current_throughput')"
               icon="activity"
               :chart-values="server.metrics?.network"
               :chart-max="networkMax"
@@ -87,15 +136,16 @@
               <div class="wp-card-header">
                 <div>
                   <h2>{{ $t('ops.server.details') }}</h2>
-                  <p>Node Agent、运行时与操作系统</p>
+                  <p>{{ $t('ops.server_detail.details_description') }}</p>
                 </div>
               </div>
               <div class="detail-list">
                 <div>
-                  <span>环境</span><strong>{{ environmentName }}</strong>
+                  <span>{{ $t('ops.server.environment') }}</span
+                  ><strong>{{ environmentName }}</strong>
                 </div>
                 <div>
-                  <span>服务器组</span
+                  <span>{{ $t('ops.server_detail.server_group') }}</span
                   ><router-link class="text-wp-link-100" :to="`/infrastructure/groups/${server.group_id}`">
                     {{ groupName }}
                   </router-link>
@@ -105,19 +155,23 @@
                   ><strong>{{ server.region || '—' }} / {{ server.zone || '—' }}</strong>
                 </div>
                 <div>
-                  <span>操作系统</span><strong>{{ server.os || '—' }} · {{ server.kernel || '—' }}</strong>
+                  <span>{{ $t('ops.server_detail.operating_system') }}</span
+                  ><strong>{{ server.os || '—' }} · {{ server.kernel || '—' }}</strong>
                 </div>
                 <div>
-                  <span>运行时</span><strong>{{ server.runtime || '—' }}</strong>
+                  <span>{{ $t('ops.server.runtime') }}</span
+                  ><strong>{{ server.runtime || '—' }}</strong>
                 </div>
                 <div>
                   <span>Agent</span><strong>{{ server.agent_version || '—' }}</strong>
                 </div>
                 <div>
-                  <span>在线时长</span><strong>{{ formatUptime(server.uptime_seconds) }}</strong>
+                  <span>{{ $t('ops.server_detail.uptime') }}</span
+                  ><strong>{{ formatUptime(server.uptime_seconds) }}</strong>
                 </div>
                 <div>
-                  <span>证书序列号</span><code>{{ server.cert_serial || '—' }}</code>
+                  <span>{{ $t('ops.server_detail.certificate_serial') }}</span
+                  ><code>{{ server.cert_serial || '—' }}</code>
                 </div>
               </div>
             </section>
@@ -131,15 +185,17 @@
                   <span v-for="(value, key) in server.labels" :key="key" class="label-chip"
                     ><strong>{{ key }}</strong
                     >= {{ value }}</span
-                  ><span v-if="!server.labels || Object.keys(server.labels).length === 0" class="wp-muted"
-                    >暂无标签</span
-                  >
+                  ><span v-if="!server.labels || Object.keys(server.labels).length === 0" class="wp-muted">{{
+                    $t('ops.server_detail.no_labels')
+                  }}</span>
                 </div>
               </section>
               <section class="wp-card">
                 <div class="wp-card-header">
-                  <h2>活动告警</h2>
-                  <router-link class="text-wp-link-100 text-xs" to="/infrastructure/alerts">全部</router-link>
+                  <h2>{{ $t('ops.server_detail.active_alerts') }}</h2>
+                  <router-link class="text-wp-link-100 text-xs" to="/infrastructure/alerts">
+                    {{ $t('ops.server_detail.all') }}
+                  </router-link>
                 </div>
                 <div class="wp-card-body compact-list">
                   <router-link
@@ -153,7 +209,9 @@
                       ><small>{{ formatTimestamp(alert.created) }}</small></span
                     >
                   </router-link>
-                  <span v-if="serverAlerts.length === 0" class="wp-muted">该节点没有活动告警。</span>
+                  <span v-if="serverAlerts.length === 0" class="wp-muted">{{
+                    $t('ops.server_detail.no_active_alerts')
+                  }}</span>
                 </div>
               </section>
             </aside>
@@ -162,39 +220,66 @@
 
         <template v-else-if="currentTab === 'monitoring'">
           <div class="monitor-toolbar">
+            <!-- eslint-disable vue/multiline-html-element-content-newline -->
             <div class="segment-control">
-              <button class="active">1 小时</button><button>6 小时</button><button>24 小时</button><button>7 天</button>
+              <button
+                data-action="metrics-range"
+                class="active"
+                disabled
+                :title="$t('ops.server_detail.metrics_fixed_window')"
+              >
+                {{ $t('ops.server_detail.range_1h') }}</button
+              ><button data-action="metrics-range" disabled :title="$t('ops.server_detail.metrics_fixed_window')">
+                {{ $t('ops.server_detail.range_6h') }}</button
+              ><button data-action="metrics-range" disabled :title="$t('ops.server_detail.metrics_fixed_window')">
+                {{ $t('ops.server_detail.range_24h') }}</button
+              ><button data-action="metrics-range" disabled :title="$t('ops.server_detail.metrics_fixed_window')">
+                {{ $t('ops.server_detail.range_7d') }}
+              </button>
             </div>
-            <Button start-icon="download" text="导出指标" />
-            <Button start-icon="refresh" :text="$t('refresh')" @click="reload" />
+            <!-- eslint-enable vue/multiline-html-element-content-newline -->
+            <Button
+              data-action="metrics-export"
+              disabled
+              start-icon="download"
+              :text="$t('ops.server_detail.export_metrics')"
+              :title="$t('ops.server_detail.export_unsupported')"
+            />
+            <Button
+              data-action="server-refresh"
+              start-icon="refresh"
+              :text="$t('refresh')"
+              :disabled="Boolean(activeMutation)"
+              @click="reload"
+            />
           </div>
           <div v-if="!server.metrics?.cpu?.length" class="wp-alert wp-alert-info">
             <Icon name="info" /><span>{{ $t('ops.server.no_metrics') }}</span>
           </div>
           <div class="monitor-grid">
             <OpsMetricPanel
-              label="CPU 使用率"
+              :label="$t('ops.server_detail.cpu_usage')"
               :value="server.cpu"
               :values="server.metrics?.cpu"
               icon="cpu"
               :threshold="85"
             />
             <OpsMetricPanel
-              label="内存使用率"
+              :label="$t('ops.server_detail.memory_usage')"
               :value="server.memory"
               :values="server.metrics?.memory"
               icon="memory"
               :threshold="90"
             />
             <OpsMetricPanel
-              label="根磁盘使用率"
+              :label="$t('ops.server_detail.root_disk_usage')"
               :value="server.disk"
               :values="server.metrics?.disk"
               icon="disk"
               :threshold="85"
             />
             <OpsMetricPanel
-              label="网络吞吐"
+              :label="$t('ops.server_detail.network_throughput')"
               :value="latestNetwork"
               :values="server.metrics?.network"
               icon="activity"
@@ -207,22 +292,28 @@
           <section class="wp-card">
             <div class="wp-card-header">
               <div>
-                <h2>服务与容器</h2>
-                <p>由 {{ server.runtime || '运行时' }} 上报的工作负载</p>
+                <h2>{{ $t('ops.services.title') }}</h2>
+                <p>{{ $t('ops.server_detail.workloads_reported_by', { runtime: server.runtime || '—' }) }}</p>
               </div>
-              <Button start-icon="refresh" :text="$t('refresh')" @click="reload" />
+              <Button
+                data-action="server-refresh"
+                start-icon="refresh"
+                :text="$t('refresh')"
+                :disabled="Boolean(activeMutation)"
+                @click="reload"
+              />
             </div>
             <div class="wp-table-scroll">
               <table>
                 <thead>
                   <tr>
-                    <th>服务</th>
-                    <th>运行时</th>
-                    <th>状态</th>
-                    <th>实例</th>
+                    <th>{{ $t('ops.server_detail.service') }}</th>
+                    <th>{{ $t('ops.server.runtime') }}</th>
+                    <th>{{ $t('ops.server.status') }}</th>
+                    <th>{{ $t('ops.server_detail.instances') }}</th>
                     <th>CPU</th>
-                    <th>内存</th>
-                    <th>操作</th>
+                    <th>{{ $t('ops.server.memory') }}</th>
+                    <th>{{ $t('ops.server_detail.actions') }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -241,12 +332,20 @@
                     <td>{{ service.containers }}</td>
                     <td>{{ service.cpu.toFixed(0) }}%</td>
                     <td>{{ service.memory.toFixed(0) }}%</td>
-                    <td><Button size="sm" start-icon="refresh" text="重启" @click="restartNode" /></td>
+                    <td>
+                      <Button
+                        data-action="workload-restart-unsupported"
+                        disabled
+                        size="sm"
+                        :text="$t('ops.server_detail.unsupported')"
+                        :title="$t('ops.server_detail.service_restart_unsupported')"
+                      />
+                    </td>
                   </tr>
                   <tr v-if="serverServices.length === 0">
                     <td colspan="7" class="wp-empty-state">
-                      <strong>暂无工作负载数据</strong>
-                      <p>等待 Node Agent 上报容器或服务状态。</p>
+                      <strong>{{ $t('ops.server_detail.no_workloads') }}</strong>
+                      <p>{{ $t('ops.server_detail.no_workloads_hint') }}</p>
                     </td>
                   </tr>
                 </tbody>
@@ -260,12 +359,12 @@
             <div class="wp-card-header">
               <div>
                 <h2>{{ $t('ops.server.deployments') }}</h2>
-                <p>该节点参与过的发布记录</p>
+                <p>{{ $t('ops.server_detail.deployments_description') }}</p>
               </div>
               <Button
                 color="green"
                 start-icon="rocket"
-                text="部署到此节点"
+                :text="$t('ops.server.deploy_to_node')"
                 :to="{ path: '/deployments/new', query: { serverId: server.id } }"
               />
             </div>
@@ -274,11 +373,11 @@
                 <thead>
                   <tr>
                     <th>ID</th>
-                    <th>状态</th>
-                    <th>策略</th>
-                    <th>进度</th>
-                    <th>触发人</th>
-                    <th>开始</th>
+                    <th>{{ $t('ops.server.status') }}</th>
+                    <th>{{ $t('ops.server_detail.strategy') }}</th>
+                    <th>{{ $t('ops.server_detail.progress') }}</th>
+                    <th>{{ $t('ops.server_detail.triggered_by') }}</th>
+                    <th>{{ $t('ops.server_detail.started') }}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -318,8 +417,8 @@
           <section class="wp-card">
             <div class="wp-card-header">
               <div>
-                <h2>节点事件</h2>
-                <p>告警、部署和 Node Agent 状态变更</p>
+                <h2>{{ $t('ops.server_detail.node_events') }}</h2>
+                <p>{{ $t('ops.server_detail.events_description') }}</p>
               </div>
             </div>
             <div class="event-timeline">
@@ -331,7 +430,9 @@
                 </div>
                 <time>{{ event.time }}</time>
               </div>
-              <div v-if="events.length === 0" class="wp-empty-state"><strong>暂无事件</strong></div>
+              <div v-if="events.length === 0" class="wp-empty-state">
+                <strong>{{ $t('ops.server_detail.no_events') }}</strong>
+              </div>
             </div>
           </section>
         </template>
@@ -342,14 +443,18 @@
               <div class="wp-card-header">
                 <div>
                   <h2>Node Agent</h2>
-                  <p>管理代理进程和诊断信息</p>
+                  <p>{{ $t('ops.server_detail.agent_description') }}</p>
                 </div>
               </div>
               <div class="setting-list">
                 <div>
                   <span
-                    ><strong>连接状态</strong
-                    ><small>最近心跳 {{ relativeHeartbeat(server.last_heartbeat) }}</small></span
+                    ><strong>{{ $t('ops.server_detail.connection_status') }}</strong
+                    ><small>{{
+                      $t('ops.server_detail.latest_heartbeat', {
+                        heartbeat: relativeHeartbeat(server.last_heartbeat),
+                      })
+                    }}</small></span
                   ><span
                     class="health-badge"
                     :class="server.status === 'online' ? 'health-healthy' : 'health-critical'"
@@ -357,43 +462,69 @@
                   >
                 </div>
                 <div>
-                  <span><strong>重启 Node Agent</strong><small>重新启动代理并恢复心跳</small></span
-                  ><Button start-icon="refresh" text="重启" @click="restartNode" />
+                  <span
+                    ><strong>{{ $t('ops.server_detail.restart_agent') }}</strong
+                    ><small>{{ $t('ops.server_detail.restart_agent_description') }}</small></span
+                  ><Button
+                    data-action="server-restart"
+                    start-icon="refresh"
+                    :text="$t('ops.server_detail.restart')"
+                    :disabled="Boolean(activeMutation)"
+                    :is-loading="activeMutation === 'restart'"
+                    @click="restartNode"
+                  />
                 </div>
                 <div>
-                  <span><strong>复制诊断信息</strong><small>包含服务器 ID、版本与证书序列号</small></span
-                  ><Button start-icon="download" text="复制" @click="copyDiagnostics" />
+                  <span
+                    ><strong>{{ $t('ops.server_detail.copy_diagnostics') }}</strong
+                    ><small>{{ $t('ops.server_detail.copy_diagnostics_description') }}</small></span
+                  ><Button start-icon="download" :text="$t('ops.server_detail.copy')" @click="copyDiagnostics" />
                 </div>
               </div>
             </section>
             <section class="wp-card danger-card">
               <div class="wp-card-header">
                 <div>
-                  <h2>危险操作</h2>
-                  <p>这些操作会影响节点调度和证书</p>
+                  <h2>{{ $t('ops.server_detail.dangerous_actions') }}</h2>
+                  <p>{{ $t('ops.server_detail.dangerous_actions_description') }}</p>
                 </div>
               </div>
               <div class="setting-list">
                 <div>
                   <span
-                    ><strong>{{ server.maintenance ? '退出维护模式' : '进入维护模式' }}</strong
-                    ><small>维护中的节点不会接收新部署任务</small></span
+                    ><strong>{{
+                      server.maintenance
+                        ? $t('ops.server_detail.exit_maintenance_mode')
+                        : $t('ops.server_detail.enter_maintenance_mode')
+                    }}</strong
+                    ><small>{{ $t('ops.server_detail.maintenance_description') }}</small></span
                   ><Button
+                    data-action="server-maintenance"
                     :color="server.maintenance ? 'gray' : 'red'"
-                    :text="server.maintenance ? '退出维护' : '进入维护'"
+                    :text="server.maintenance ? $t('ops.server.exit_maintenance') : $t('ops.server.enter_maintenance')"
+                    :disabled="Boolean(activeMutation)"
+                    :is-loading="activeMutation === 'maintenance'"
                     @click="toggleMaintenance"
                   />
                 </div>
-                <div>
-                  <span><strong>移除服务器</strong><small>吊销节点注册并从控制面删除</small></span
-                  ><Button color="red" start-icon="trash" text="移除" @click="removeServer" />
+                <div v-if="isAdmin">
+                  <span
+                    ><strong>{{ $t('ops.server_detail.remove_server') }}</strong
+                    ><small>{{ $t('ops.server_detail.remove_server_description') }}</small></span
+                  ><Button
+                    color="red"
+                    start-icon="trash"
+                    :text="$t('ops.server_detail.remove')"
+                    :disabled="Boolean(activeMutation)"
+                    :is-loading="activeMutation === 'delete'"
+                    @click="removeServer"
+                  />
                 </div>
               </div>
             </section>
           </div>
         </template>
       </div>
-      <div v-else class="loading-state"><Icon name="spinner" class="animate-spin" /></div>
     </div>
   </Scaffold>
   <!-- eslint-enable @intlify/vue-i18n/no-raw-text, vue/html-closing-bracket-newline -->
@@ -405,12 +536,14 @@ import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
 import OpsMetricCard from '~/components/ops/OpsMetricCard.vue';
 import OpsMetricPanel from '~/components/ops/OpsMetricPanel.vue';
 import useApiClient from '~/compositions/useApiClient';
+import useAuthentication from '~/compositions/useAuthentication';
 import { useWPTitle } from '~/compositions/useWPTitle';
 import type { Alert, Deployment, Server } from '~/lib/api/types';
 import { useApplicationStore, useServerStore } from '~/store/ops';
@@ -430,6 +563,8 @@ type ServerTab = 'overview' | 'monitoring' | 'workloads' | 'deployments' | 'even
 const route = useRoute();
 const router = useRouter();
 const apiClient = useApiClient();
+const { user } = useAuthentication();
+const isAdmin = Boolean(user?.admin);
 const serverStore = useServerStore();
 const applicationStore = useApplicationStore();
 const { t } = useI18n();
@@ -437,6 +572,11 @@ const { t } = useI18n();
 const server = ref<Server | null>(null);
 const deployments = ref<Deployment[]>([]);
 const services = ref<ServiceView[]>([]);
+const loading = ref(true);
+const loadError = ref(false);
+const mutationError = ref(false);
+const missing = ref(false);
+const activeMutation = ref<'delete' | 'maintenance' | 'restart'>();
 const serverId = computed(() => Number(route.params.serverId));
 const validTabs: ServerTab[] = ['overview', 'monitoring', 'workloads', 'deployments', 'events', 'settings'];
 const currentTab = computed<ServerTab>(() =>
@@ -477,26 +617,26 @@ const tabs = computed<
   },
   {
     key: 'workloads',
-    label: '服务与容器',
+    label: t('ops.services.title'),
     icon: 'docker',
     count: serverServices.value.length || undefined,
     to: { path: route.path, query: { tab: 'workloads' } },
   },
   {
     key: 'deployments',
-    label: '部署',
+    label: t('ops.server.deployments'),
     icon: 'rocket',
     count: deployments.value.length || undefined,
     to: { path: route.path, query: { tab: 'deployments' } },
   },
   {
     key: 'events',
-    label: '事件',
+    label: t('ops.server_detail.events'),
     icon: 'since',
     count: serverAlerts.value.length || undefined,
     to: { path: route.path, query: { tab: 'events' } },
   },
-  { key: 'settings', label: '配置', icon: 'settings', to: { path: route.path, query: { tab: 'settings' } } },
+  { key: 'settings', label: t('settings'), icon: 'settings', to: { path: route.path, query: { tab: 'settings' } } },
 ]);
 
 const events = computed(() => {
@@ -518,15 +658,25 @@ const events = computed(() => {
 });
 
 let pollTimer: ReturnType<typeof setInterval> | undefined;
-let disposed = false;
-let loadingServerId: number | undefined;
+let alive = true;
+let lifecycleGeneration = 0;
+let loadGeneration = 0;
 
-async function reload() {
+function ownsLifecycle(generation: number, requestedId: number) {
+  return alive && generation === lifecycleGeneration && requestedId === serverId.value;
+}
+
+async function reload(): Promise<boolean> {
   const requestedId = serverId.value;
-  if (loadingServerId === requestedId) return;
-  loadingServerId = requestedId;
-  try {
-    const [nextServer, nextDeployments, nextServices] = await Promise.all([
+  const requestLifecycle = lifecycleGeneration;
+  const requestGeneration = ++loadGeneration;
+  loading.value = true;
+  loadError.value = false;
+  mutationError.value = false;
+  missing.value = false;
+
+  const [serverResult, deploymentsResult, servicesResult, groupsResult, alertsResult, environmentsResult] =
+    await Promise.allSettled([
       apiClient.getServer(requestedId),
       apiClient.getServerDeployments(requestedId),
       apiClient.getOpsServices(),
@@ -534,23 +684,77 @@ async function reload() {
       serverStore.loadAlerts(),
       applicationStore.loadEnvironments(),
     ]);
-    if (disposed || requestedId !== serverId.value) return;
-    server.value = nextServer;
-    deployments.value = nextDeployments ?? [];
-    services.value = nextServices as ServiceView[];
-  } finally {
-    if (loadingServerId === requestedId) loadingServerId = undefined;
+
+  if (!ownsLifecycle(requestLifecycle, requestedId) || requestGeneration !== loadGeneration) {
+    return false;
   }
+
+  const supplementalResults = [deploymentsResult, servicesResult, groupsResult, alertsResult, environmentsResult];
+  loadError.value =
+    serverResult.status === 'rejected' || supplementalResults.some((result) => result.status === 'rejected');
+
+  if (serverResult.status === 'fulfilled') {
+    server.value = serverResult.value;
+    missing.value = serverResult.value === null;
+    if (missing.value) {
+      deployments.value = [];
+      services.value = [];
+    }
+  }
+  if (deploymentsResult.status === 'fulfilled') {
+    deployments.value = deploymentsResult.value ?? [];
+  }
+  if (servicesResult.status === 'fulfilled') {
+    services.value = servicesResult.value as ServiceView[];
+  }
+
+  loading.value = false;
+  return serverResult.status === 'fulfilled' && serverResult.value !== null;
 }
 
 async function toggleMaintenance() {
-  if (!server.value) return;
-  server.value = await apiClient.setServerMaintenance(serverId.value, !server.value.maintenance);
+  if (!server.value || activeMutation.value) return;
+  const requestedId = serverId.value;
+  const mutationLifecycle = lifecycleGeneration;
+  loadGeneration += 1;
+  mutationError.value = false;
+  activeMutation.value = 'maintenance';
+  try {
+    const nextServer = await apiClient.setServerMaintenance(requestedId, !server.value.maintenance);
+    if (ownsLifecycle(mutationLifecycle, requestedId) && nextServer) {
+      server.value = nextServer;
+    }
+  } catch {
+    if (ownsLifecycle(mutationLifecycle, requestedId)) {
+      mutationError.value = true;
+    }
+  } finally {
+    if (ownsLifecycle(mutationLifecycle, requestedId) && activeMutation.value === 'maintenance') {
+      activeMutation.value = undefined;
+    }
+  }
 }
 
 async function restartNode() {
-  await apiClient.restartServer(serverId.value);
-  await reload();
+  if (!server.value || activeMutation.value) return;
+  const requestedId = serverId.value;
+  const mutationLifecycle = lifecycleGeneration;
+  loadGeneration += 1;
+  mutationError.value = false;
+  activeMutation.value = 'restart';
+  try {
+    await apiClient.restartServer(requestedId);
+    if (!ownsLifecycle(mutationLifecycle, requestedId)) return;
+    await reload();
+  } catch {
+    if (ownsLifecycle(mutationLifecycle, requestedId)) {
+      mutationError.value = true;
+    }
+  } finally {
+    if (ownsLifecycle(mutationLifecycle, requestedId) && activeMutation.value === 'restart') {
+      activeMutation.value = undefined;
+    }
+  }
 }
 
 async function copyDiagnostics() {
@@ -571,14 +775,37 @@ async function copyDiagnostics() {
 }
 
 async function removeServer() {
-  // eslint-disable-next-line no-alert
-  if (!server.value || !window.confirm(`确认移除服务器 ${server.value.name}？`)) return;
-  await apiClient.deleteServer(server.value.id);
-  await router.push('/infrastructure/servers');
+  if (!isAdmin || !server.value || activeMutation.value) return;
+  // eslint-disable-next-line no-alert -- destructive removal requires explicit confirmation.
+  if (!window.confirm(t('ops.server_detail.remove_confirmation', { name: server.value.name }))) return;
+  const requestedId = serverId.value;
+  const mutationLifecycle = lifecycleGeneration;
+  loadGeneration += 1;
+  mutationError.value = false;
+  activeMutation.value = 'delete';
+  try {
+    await apiClient.deleteServer(requestedId);
+    if (ownsLifecycle(mutationLifecycle, requestedId)) {
+      await router.push('/infrastructure/servers');
+    }
+  } catch {
+    if (ownsLifecycle(mutationLifecycle, requestedId)) {
+      mutationError.value = true;
+    }
+  } finally {
+    if (ownsLifecycle(mutationLifecycle, requestedId) && activeMutation.value === 'delete') {
+      activeMutation.value = undefined;
+    }
+  }
 }
 
 function healthLabel(health: Server['health']): string {
-  return { healthy: '健康', warning: '警告', critical: '严重', maintenance: '维护中' }[health];
+  return {
+    healthy: t('ops.server_detail.health.healthy'),
+    warning: t('ops.server_detail.health.warning'),
+    critical: t('ops.server_detail.health.critical'),
+    maintenance: t('ops.server_detail.health.maintenance'),
+  }[health];
 }
 
 function healthClass(health: Server['health']): string {
@@ -604,13 +831,13 @@ function deploymentStatusClass(status: Deployment['status']): string {
         : 'health-maintenance';
 }
 function relativeHeartbeat(timestamp?: number): string {
-  if (!timestamp) return '无心跳';
+  if (!timestamp) return t('ops.server_detail.no_heartbeat');
   const seconds = Math.max(0, Math.floor(Date.now() / 1000 - timestamp));
   return seconds < 60
-    ? `${seconds} 秒前`
+    ? t('ops.server_detail.seconds_ago', { count: seconds })
     : seconds < 3600
-      ? `${Math.floor(seconds / 60)} 分钟前`
-      : `${Math.floor(seconds / 3600)} 小时前`;
+      ? t('ops.server_detail.minutes_ago', { count: Math.floor(seconds / 60) })
+      : t('ops.server_detail.hours_ago', { count: Math.floor(seconds / 3600) });
 }
 function formatTimestamp(timestamp?: number): string {
   return timestamp ? new Date(timestamp * 1000).toLocaleString() : '—';
@@ -619,21 +846,34 @@ function formatUptime(seconds?: number): string {
   if (!seconds) return '—';
   const days = Math.floor(seconds / 86400);
   const hours = Math.floor((seconds % 86400) / 3600);
-  return `${days} 天 ${hours} 小时`;
+  return t('ops.server_detail.uptime_value', { days, hours });
 }
 
 watch(serverId, () => {
+  lifecycleGeneration += 1;
+  loadGeneration += 1;
+  activeMutation.value = undefined;
   server.value = null;
+  deployments.value = [];
+  services.value = [];
+  loading.value = true;
+  loadError.value = false;
+  mutationError.value = false;
+  missing.value = false;
   void reload();
 });
 
 onMounted(async () => {
   await reload();
-  if (disposed) return;
-  pollTimer = setInterval(() => void reload(), 10_000);
+  if (!alive) return;
+  pollTimer = setInterval(() => {
+    if (!activeMutation.value) void reload();
+  }, 10_000);
 });
 onBeforeUnmount(() => {
-  disposed = true;
+  alive = false;
+  lifecycleGeneration += 1;
+  loadGeneration += 1;
   if (pollTimer) clearInterval(pollTimer);
 });
 </script>

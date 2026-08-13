@@ -1,0 +1,90 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 全部类型 Container systemd 刷新运行时 服务 类型 状态 版本 / 镜像 CPU 内存 重启 端口 运行时间 backend-api backend-api container 健康 v1.4.0 ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 18% 412 MB 0 8080:8080 3 天 postgres-exporter backend-api container 健康 v0.17 prometheuscommunity/postgres-exporter:v0.17 2% 64 MB 0 9187 31 天",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 服务器 / PROD-API prod-api-01 健康 在线 Production asia-southeast-1 · sgp-1a 10.20.1.11 5 秒前 进入维护 部署到此节点 概览 监控 服务与容器 2 部署 事件 配置 全部类型 Container systemd 刷新运行时 服务 类型 状态 版本 / 镜像 CPU 内存 重启 端口 运行时间 backend-api backend-api container 健康 v1.4.0 ghcr.io/acme/backend-api@sha256:1ee6d72a21a8 18% 412 MB 0 8080:8080 3 天 postgres-exporter backend-api container 健康 v0.17 prometheuscommunity/postgres-exporter:v0.17 2% 64 MB 0 9187 31 天",
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 360,
+      "scrollWidth": 874,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 874,
+      "scrollWidth": 874,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure/servers/201?tab=workloads",
+  "url": "http://127.0.0.1:8211/#/infrastructure/servers/201?tab=workloads",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-mobile-serverWorkloads",
+  "row": 50,
+  "destination": "serverWorkloads",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/服务与容器/",
+      "passed": true
+    },
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:13:11.443Z",
+  "health": {
+    "startedAt": "2026-08-13T13:13:10.787Z",
+    "endedAt": "2026-08-13T13:13:11.443Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

@@ -4,6 +4,13 @@
     <template #title>{{ $t('ops.infrastructure.title') }}</template>
     <template #headerActions>
       <Button
+        start-icon="refresh"
+        :is-loading="refreshing"
+        :disabled="refreshing"
+        :text="$t('refresh')"
+        @click="loadOverview(true)"
+      />
+      <Button
         :to="{ path: '/infrastructure/servers' }"
         start-icon="server"
         :text="$t('ops.infrastructure.manage_servers')"
@@ -12,24 +19,63 @@
     </template>
 
     <div class="ops-page">
-      <p class="page-description">服务器健康、运行容量、活动告警和部署状态的统一视图。</p>
+      <p class="page-description">{{ $t('ops.infrastructure.description') }}</p>
       <InfrastructureNav :server-count="overview?.server_count" :alert-count="overview?.active_alerts" />
+
+      <FeedbackState
+        v-if="initialLoading"
+        class="mt-4"
+        kind="loading"
+        :title="$t('feedback.loading_title')"
+        :description="$t('ops.infrastructure.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError && !overview"
+        class="mt-4"
+        kind="error"
+        :title="$t('ops.infrastructure.error_title')"
+        :description="$t('ops.infrastructure.error_description')"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('ops.alerts.retry')" @click="loadOverview()" />
+        </template>
+      </FeedbackState>
+      <FeedbackState
+        v-else-if="loadError"
+        class="mt-4"
+        compact
+        kind="error"
+        :title="$t('ops.infrastructure.refresh_error_title')"
+        :description="$t('ops.infrastructure.refresh_error_description')"
+      />
+      <FeedbackState
+        v-else-if="partialError"
+        class="mt-4"
+        compact
+        kind="error"
+        :title="$t('ops.infrastructure.partial_error_title')"
+        :description="$t('ops.infrastructure.partial_error_description')"
+      />
 
       <div v-if="overview" class="page-stack">
         <div class="metric-grid">
           <OpsMetricCard
             :label="$t('ops.infrastructure.total_servers')"
             :value="`${overview.server_online}/${overview.server_count}`"
-            :hint="`${overview.server_online} ${$t('ops.infrastructure.online')} · ${overview.server_maintenance} 台维护 · ${overview.server_offline} 台离线`"
+            :hint="
+              $t('ops.infrastructure.server_status_hint', {
+                online: overview.server_online,
+                maintenance: overview.server_maintenance,
+                offline: overview.server_offline,
+              })
+            "
             icon="server"
-            :chart-values="onlineSeries"
-            :chart-max="Math.max(overview.server_count, 1)"
             :tone="overview.server_offline > 0 ? 'warning' : 'success'"
           />
           <OpsMetricCard
             :label="$t('ops.infrastructure.avg_cpu')"
             :value="`${overview.avg_cpu.toFixed(0)}%`"
-            hint="过去 12 个采样点"
+            :hint="$t('ops.infrastructure.sample_hint')"
             icon="cpu"
             :chart-values="aggregateSeries.cpu"
             :tone="metricTone(overview.avg_cpu)"
@@ -37,7 +83,7 @@
           <OpsMetricCard
             :label="$t('ops.server.memory')"
             :value="`${overview.avg_memory.toFixed(0)}%`"
-            hint="集群平均使用率"
+            :hint="$t('ops.infrastructure.cluster_average_hint')"
             icon="memory"
             :chart-values="aggregateSeries.memory"
             :tone="metricTone(overview.avg_memory)"
@@ -45,10 +91,13 @@
           <OpsMetricCard
             :label="$t('ops.infrastructure.active_alerts')"
             :value="String(activeEventCount)"
-            :hint="`${overview.active_alerts} 个告警 · ${runningDeployments.length} 个部署`"
+            :hint="
+              $t('ops.infrastructure.activity_hint', {
+                alerts: overview.active_alerts,
+                deployments: runningDeployments.length,
+              })
+            "
             icon="activity"
-            :chart-values="activitySeries"
-            :chart-max="10"
             :tone="overview.active_alerts > 0 ? 'warning' : 'success'"
           />
         </div>
@@ -58,7 +107,7 @@
             <div class="wp-card-header">
               <div>
                 <h2>{{ $t('ops.infrastructure.servers') }}</h2>
-                <p>Node Agent 最近一次上报状态</p>
+                <p>{{ $t('ops.infrastructure.server_report_description') }}</p>
               </div>
               <router-link class="text-wp-link-100 text-xs" to="/infrastructure/servers">
                 {{ $t('ops.infrastructure.view_all') }}
@@ -69,7 +118,7 @@
                 <thead>
                   <tr>
                     <th>{{ $t('ops.server.name') }}</th>
-                    <th>健康</th>
+                    <th>{{ $t('ops.infrastructure.health') }}</th>
                     <th>{{ $t('ops.server.environment') }}</th>
                     <th>{{ $t('ops.groups.name') }}</th>
                     <th>CPU</th>
@@ -114,26 +163,32 @@
 
           <aside class="side-stack">
             <section class="wp-card health-summary-card">
-              <div class="wp-card-header"><h2>基础设施健康</h2></div>
+              <div class="wp-card-header">
+                <h2>{{ $t('ops.infrastructure.health_summary') }}</h2>
+              </div>
               <div class="wp-card-body health-summary">
                 <div class="health-donut" :style="donutStyle">
                   <div>
                     <strong>{{ overview.server_online }}</strong
-                    ><span>在线节点</span>
+                    ><span>{{ $t('ops.infrastructure.online_nodes') }}</span>
                   </div>
                 </div>
                 <div class="health-legend">
                   <div>
-                    <span>健康</span><strong>{{ healthCounts.healthy }}</strong>
+                    <span>{{ $t('ops.infrastructure.healthy') }}</span
+                    ><strong>{{ healthCounts.healthy }}</strong>
                   </div>
                   <div>
-                    <span>警告</span><strong>{{ healthCounts.warning }}</strong>
+                    <span>{{ $t('ops.infrastructure.warning') }}</span
+                    ><strong>{{ healthCounts.warning }}</strong>
                   </div>
                   <div>
-                    <span>严重</span><strong>{{ healthCounts.critical }}</strong>
+                    <span>{{ $t('ops.infrastructure.critical') }}</span
+                    ><strong>{{ healthCounts.critical }}</strong>
                   </div>
                   <div>
-                    <span>维护</span><strong>{{ healthCounts.maintenance }}</strong>
+                    <span>{{ $t('ops.infrastructure.maintenance') }}</span
+                    ><strong>{{ healthCounts.maintenance }}</strong>
                   </div>
                 </div>
               </div>
@@ -142,7 +197,9 @@
             <section class="wp-card">
               <div class="wp-card-header">
                 <h2>{{ $t('ops.infrastructure.latest_alerts') }}</h2>
-                <router-link class="text-wp-link-100 text-xs" to="/infrastructure/alerts">全部告警</router-link>
+                <router-link class="text-wp-link-100 text-xs" to="/infrastructure/alerts">
+                  {{ $t('ops.infrastructure.all_alerts') }}
+                </router-link>
               </div>
               <div class="wp-card-body alert-list">
                 <router-link
@@ -170,43 +227,51 @@
           </aside>
         </div>
 
-        <div class="lower-grid">
-          <section class="wp-card trend-card">
+        <div v-if="hasMetricTrends" class="lower-grid">
+          <section v-if="aggregateSeries.cpu.length > 0" class="wp-card trend-card">
             <div class="wp-card-header">
-              <h2>CPU 使用率</h2>
+              <h2>{{ $t('ops.infrastructure.cpu_usage') }}</h2>
               <strong>{{ overview.avg_cpu.toFixed(0) }}%</strong>
             </div>
-            <div class="trend-chart"><OpsSparkline :values="aggregateSeries.cpu" label="CPU 使用率" /></div>
+            <div class="trend-chart">
+              <OpsSparkline :values="aggregateSeries.cpu" :label="$t('ops.infrastructure.cpu_usage')" />
+            </div>
           </section>
-          <section class="wp-card trend-card">
+          <section v-if="aggregateSeries.memory.length > 0" class="wp-card trend-card">
             <div class="wp-card-header">
-              <h2>内存使用率</h2>
+              <h2>{{ $t('ops.infrastructure.memory_usage') }}</h2>
               <strong>{{ overview.avg_memory.toFixed(0) }}%</strong>
             </div>
-            <div class="trend-chart"><OpsSparkline :values="aggregateSeries.memory" label="内存使用率" /></div>
+            <div class="trend-chart">
+              <OpsSparkline :values="aggregateSeries.memory" :label="$t('ops.infrastructure.memory_usage')" />
+            </div>
           </section>
-          <section class="wp-card trend-card">
+          <section v-if="aggregateSeries.network.length > 0" class="wp-card trend-card">
             <div class="wp-card-header">
-              <h2>网络吞吐</h2>
+              <h2>{{ $t('ops.infrastructure.network_throughput') }}</h2>
               <strong>{{ averageNetwork.toFixed(0) }} Mb/s</strong>
             </div>
             <div class="trend-chart">
-              <OpsSparkline :values="aggregateSeries.network" label="网络吞吐" :max="networkMax" />
+              <OpsSparkline
+                :values="aggregateSeries.network"
+                :label="$t('ops.infrastructure.network_throughput')"
+                :max="networkMax"
+              />
             </div>
           </section>
         </div>
       </div>
-      <div v-else class="loading-state"><Icon name="spinner" class="animate-spin" /></div>
     </div>
   </Scaffold>
   <!-- eslint-enable @intlify/vue-i18n/no-raw-text, vue/html-closing-bracket-newline -->
 </template>
 
 <script lang="ts" setup>
-import { computed, defineComponent, h, onMounted, ref } from 'vue';
+import { computed, defineComponent, h, onBeforeUnmount, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
 import InfrastructureNav from '~/components/ops/InfrastructureNav.vue';
@@ -224,6 +289,12 @@ const { t } = useI18n();
 useWPTitle(computed(() => [t('ops.infrastructure.title')]));
 
 const overview = ref<InfrastructureOverview | null>(null);
+const refreshing = ref(false);
+const loadError = ref(false);
+const partialError = ref(false);
+let loadGeneration = 0;
+let mounted = true;
+const initialLoading = computed(() => refreshing.value && !overview.value);
 
 const MetricCell = defineComponent({
   props: { value: { type: Number, required: true } },
@@ -243,10 +314,6 @@ const MetricCell = defineComponent({
 
 const runningDeployments = computed(() => deploymentStore.runningDeployments);
 const activeEventCount = computed(() => (overview.value?.active_alerts ?? 0) + runningDeployments.value.length);
-const onlineSeries = computed(
-  () => overview.value?.servers[0]?.metrics?.cpu.map(() => overview.value?.server_online ?? 0) ?? [],
-);
-const activitySeries = computed(() => [1, 3, 2, 5, 4, 7, 5, 8, 6, Math.max(activeEventCount.value, 1)]);
 
 function aggregateMetric(key: 'cpu' | 'memory' | 'disk' | 'network'): number[] {
   const series =
@@ -264,6 +331,11 @@ const aggregateSeries = computed(() => ({
   disk: aggregateMetric('disk'),
   network: aggregateMetric('network'),
 }));
+const hasMetricTrends = computed(() =>
+  [aggregateSeries.value.cpu, aggregateSeries.value.memory, aggregateSeries.value.network].some(
+    (values) => values.length > 0,
+  ),
+);
 const averageNetwork = computed(() => {
   const values = aggregateSeries.value.network;
   return values.length > 0 ? values.reduce((sum, value) => sum + value, 0) / values.length : 0;
@@ -297,7 +369,12 @@ function groupName(id: number): string {
 }
 
 function healthLabel(health: Server['health']): string {
-  return { healthy: '健康', warning: '警告', critical: '严重', maintenance: '维护中' }[health];
+  return {
+    healthy: t('ops.infrastructure.healthy'),
+    warning: t('ops.infrastructure.warning'),
+    critical: t('ops.infrastructure.critical'),
+    maintenance: t('ops.infrastructure.maintenance'),
+  }[health];
 }
 
 function healthClass(health: Server['health']): string {
@@ -327,22 +404,44 @@ function metricTone(value: number): 'success' | 'warning' | 'danger' {
 function relativeHeartbeat(timestamp?: number): string {
   if (!timestamp) return '—';
   const seconds = Math.max(0, Math.floor(Date.now() / 1000 - timestamp));
-  if (seconds < 60) return `${seconds} 秒前`;
-  if (seconds < 3600) return `${Math.floor(seconds / 60)} 分钟前`;
-  return `${Math.floor(seconds / 3600)} 小时前`;
+  if (seconds < 60) return t('ops.infrastructure.seconds_ago', { count: seconds });
+  if (seconds < 3600) return t('ops.infrastructure.minutes_ago', { count: Math.floor(seconds / 60) });
+  return t('ops.infrastructure.hours_ago', { count: Math.floor(seconds / 3600) });
 }
 
 function formatTimestamp(timestamp?: number): string {
-  return timestamp ? new Date(timestamp * 1000).toLocaleString() : '刚刚';
+  return timestamp ? new Date(timestamp * 1000).toLocaleString() : t('ops.infrastructure.just_now');
 }
 
-onMounted(async () => {
-  const [data] = await Promise.all([
+async function loadOverview(_refresh = false) {
+  const generation = ++loadGeneration;
+  refreshing.value = true;
+  loadError.value = false;
+  partialError.value = false;
+
+  const [overviewResult, deploymentResult, environmentResult] = await Promise.allSettled([
     apiClient.getInfrastructureOverview(),
     deploymentStore.loadDeployments(),
     applicationStore.loadEnvironments(),
   ]);
-  overview.value = data;
+
+  if (!mounted || generation !== loadGeneration) return;
+
+  if (overviewResult.status === 'fulfilled' && overviewResult.value) {
+    overview.value = overviewResult.value;
+  } else {
+    loadError.value = true;
+  }
+  partialError.value = deploymentResult.status === 'rejected' || environmentResult.status === 'rejected';
+  refreshing.value = false;
+}
+
+onMounted(() => {
+  void loadOverview();
+});
+
+onBeforeUnmount(() => {
+  mounted = false;
 });
 </script>
 
@@ -504,10 +603,6 @@ onMounted(async () => {
 
 .trend-chart {
   @apply h-40 p-4 pt-2;
-}
-
-.loading-state {
-  @apply flex justify-center py-24;
 }
 
 :deep(.metric-cell) {

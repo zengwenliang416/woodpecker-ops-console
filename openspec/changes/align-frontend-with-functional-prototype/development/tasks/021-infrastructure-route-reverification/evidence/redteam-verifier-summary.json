@@ -1,0 +1,86 @@
+{
+  "schema": "woodpecker.infrastructure-verifier-redteam.v1",
+  "ok": true,
+  "positiveVerifierExitCode": 0,
+  "mutations": [
+    {
+      "id": "run-id",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-theme",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-locale",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "tampered-content",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-role",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "admin-control",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "wrong-route",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "unhealthy-browser",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "raw-i18n",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "horizontal-overflow",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "unexpected-http-error",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "source-identity",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    },
+    {
+      "id": "png-signature",
+      "rejected": true,
+      "code": 1,
+      "signal": null
+    }
+  ],
+  "generatedAt": "2026-08-13T13:24:32.402Z"
+}

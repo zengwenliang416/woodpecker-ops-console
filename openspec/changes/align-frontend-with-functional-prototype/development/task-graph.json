@@ -487,6 +487,26 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "021-infrastructure-route-reverification",
+      "baseline_task_id": "6.2",
+      "goal": "Re-verify infrastructure parity rows 46-57 from current production and approved prototype bytes while protecting truthful API, request, mutation, permission, and responsive behavior.",
+      "depends_on": ["6.1"],
+      "allowed_files": [
+        "web/src/views/infrastructure/*.vue",
+        "web/src/views/infrastructure/*.test.ts",
+        "web/src/components/ops/InfrastructureNav.vue",
+        "web/src/components/ops/InfrastructureNav.test.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/**"
+      ],
+      "status": "in_progress"
     }
   ]
 }

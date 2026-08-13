@@ -1,0 +1,90 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 基础设施 服务器健康、运行容量、告警和部署状态的统一视图。 注册服务器 新建部署 基础设施概览 服务器 服务器组 服务与容器 告警 服务器在线 6/8 1 台维护中 平均 CPU 32% 容量充足 平均内存 43% 过去 24 小时 +3% 活动事件 4 2 个告警 · 2 个部署 服务器健康 Node Agent 最近一次上报的状态 查看全部 服务器 健康 环境 服务器组 CPU 内存 磁盘 心跳 prod-api-01 10.20.1.11 · sgp-1a 健康 Production prod-api 31% 48% 62% 5 秒前 prod-api-02 10.20.1.12 · sgp-1b 警告 Production prod-api 72% 81% 86% 7 秒前 prod-api-03 10.20.1.13 · sgp-1c 严重 Production prod-api 0% 0% 67% 3 分钟前 prod-web-01 10.20.2.11 · sgp-1a 健康 Production prod-web 24% 39% 44% 4 秒前 prod-web-02 10.20.2.12 · sgp-1b 维护中 Production prod-web 8% 22% 49% 6 秒前 staging-all-01 10.30.1.11 · sgp-1a 警告 Staging staging-shared 54% 63% 51% 9 秒前 CPU 使用率 32% 24 小时 峰值 76% 内存使用率 43% 24 小时 峰值 82% 网络吞吐 284 Mb/s 24 小时 峰值 310 Mb/s 最近部署 流水线产物到目标服务器的发布记录 部署中心 DEP-142 · backend-api Production · v1.4.1-rc.2 · alice 运行中 12 分钟前 DEP-141 · web-frontend Production · v3.8.2 · alice 成功 2 小时前 DEP-140 · backend-api Staging · v1.4.1-rc.2 · bob 成功 17 分钟前 DEP-139 · worker-service Production · v2.7.0-rc.1 · dave 失败 1 天前 DEP-138 · notification-service Production · v2.0.0-rc.1 · frank 等待审批 8 分钟前 基础设施健康 6 在线节点 健康 4 警告 2 严重 1 维护 1 需要处理 全部告警 Node Agent heartbeat missing prod-api-03 · 3m 04s · 3 分钟前 活动 Root disk usage above threshold prod-api-02 · 86% · 12 分钟前 活动 Container restart rate elevated staging-all-01 · 4 restarts · 18 分钟前 已确认 部署控制面 运行中部署 1 等待审批 1 今日成功 18 自动回滚 已启用 打开部署中心",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 基础设施 服务器健康、运行容量、告警和部署状态的统一视图。 注册服务器 新建部署 基础设施概览 服务器 服务器组 服务与容器 告警 服务器在线 6/8 1 台维护中 平均 CPU 32% 容量充足 平均内存 43% 过去 24 小时 +3% 活动事件 4 2 个告警 · 2 个部署 服务器健康 Node Agent 最近一次上报的状态 查看全部 服务器 健康 环境 服务器组 CPU 内存 磁盘 心跳 prod-api-01 10.20.1.11 · sgp-1a 健康 Production prod-api 31% 48% 62% 5 秒前 prod-api-02 10.20.1.12 · sgp-1b 警告 Production prod-api 72% 81% 86% 7 秒前 prod-api-03 10.20.1.13 · sgp-1c 严重 Production prod-api 0% 0% 67% 3 分钟前 prod-web-01 10.20.2.11 · sgp-1a 健康 Production prod-web 24% 39% 44% 4 秒前 prod-web-02 10.20.2.12 · sgp-1b 维护中 Production prod-web 8% 22% 49% 6 秒前 staging-all-01 10.30.1.11 · sgp-1a 警告 Staging staging-shared 54% 63% 51% 9 秒前 CPU 使用率 32% 24 小时 峰值 76% 内存使用率 43% 24 小时 峰值 82% 网络吞吐 284 Mb/s 24 小时 峰值 310 Mb/s 最近部署 流水线产物到目标服务器的发布记录 部署中心 DEP-142 · backend-api Production · v1.4.1-rc.2 · alice 运行中 12 分钟前 DEP-141 · web-frontend Production · v3.8.2 · alice 成功 2 小时前 DEP-140 · backend-api Staging · v1.4.1-rc.2 · bob 成功 17 分钟前 DEP-139 · worker-service Production · v2.7.0-rc.1 · dave 失败 1 天前 DEP-138 · notification-service Production · v2.0.0-rc.1 · frank 等待审批 8 分钟前 基础设施健康 6 在线节点 健康 4 警告 2 严重 1 维护 1 需要处理 全部告警 Node Agent heartbeat missing prod-api-03 · 3m 04s · 3 分钟前 活动 Root disk usage above threshold prod-api-02 · 86% · 12 分钟前 活动 Container restart rate elevated staging-all-01 · 4 restarts · 18 分钟前 已确认 部署控制面 运行中部署 1 等待审批 1 今日成功 18 自动回滚 已启用 打开部署中心",
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "auto",
+      "locallyScrollable": false
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/infrastructure",
+  "url": "http://127.0.0.1:8211/#/infrastructure",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "stateId": "prototype-dark-zh-desktop-overview",
+  "row": 46,
+  "destination": "overview",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/基础设施/",
+      "passed": true
+    },
+    {
+      "pattern": "/prod-api-01/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T13:12:32.099Z",
+  "health": {
+    "startedAt": "2026-08-13T13:12:31.340Z",
+    "endedAt": "2026-08-13T13:12:32.099Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8211/",
+      "http://127.0.0.1:8211/assets/app.css",
+      "http://127.0.0.1:8211/assets/data.js",
+      "http://127.0.0.1:8211/assets/ui.js",
+      "http://127.0.0.1:8211/assets/views.js",
+      "http://127.0.0.1:8211/assets/app.js",
+      "http://127.0.0.1:8211/favicon.ico"
+    ]
+  }
+}

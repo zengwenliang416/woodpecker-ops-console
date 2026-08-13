@@ -1,0 +1,69 @@
+{
+  "schema_version": 1,
+  "task_id": "021-infrastructure-route-reverification",
+  "matrix": {
+    "route_rows": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57],
+    "equivalent_states": 48,
+    "representative_states": 12,
+    "boundary_states": 2,
+    "expected_states": 62
+  },
+  "runtime": {
+    "production_url": "http://127.0.0.1:8210",
+    "prototype_url": "http://127.0.0.1:8211",
+    "mock_api_url": "http://127.0.0.1:8212",
+    "production_entrypoint": "/src/main.ts",
+    "prototype_marker": "approved-user-design"
+  },
+  "expected_outcome": {
+    "verified_rows": [46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57],
+    "normal_user_delete_controls": 0,
+    "page_overflow_states": 0,
+    "raw_i18n_states": 0
+  },
+  "run_id": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+  "captured_from": "2026-08-13T13:12:28.990Z",
+  "captured_through": "2026-08-13T13:13:59.512Z",
+  "source_identity": {
+    "production": {
+      "algorithm": "sha256",
+      "digest": "d70ad4c3bcbcac587d601cac036a1821ee19353448d14e3a97fd89a5883ed35b",
+      "files": 328
+    },
+    "prototype": {
+      "algorithm": "sha256",
+      "digest": "3c6bab10a6c4354e43980202e8b34424c2d1fd8ad3cb8b1bf9341922f3fea895",
+      "files": 15
+    }
+  },
+  "service_identity": {
+    "fixture": "021-infrastructure-route-reverification",
+    "runId": "84b42687-5a1a-402c-952f-6e5fd1ac338a",
+    "serviceOwnership": "task-started-exclusive-ports",
+    "productionEntrypoint": "/src/main.ts",
+    "productionMarker": "workload-restart-unsupported",
+    "prototypeMarker": "approved-user-design"
+  },
+  "actual": {
+    "states": 62,
+    "production_states": 38,
+    "prototype_states": 24,
+    "equivalent_states": 48,
+    "representative_states": 12,
+    "boundary_states": 2,
+    "page_overflow_states": [],
+    "raw_i18n_states": [],
+    "browser_error_states": []
+  },
+  "checksums": {
+    "matrix_mjs": "0d0d1680291b7aee8b2bc341b3783a875736db4ffac8890efbbdc93b23f402b3",
+    "mock_api_mjs": "b5f951f29852f26d1e67a643ef649fd9a2fc26895bcc2909d9c51f5b3fbb913a",
+    "mock_api_smoke_mjs": "6298e781fe877824ba2d49e52d5f3321da5bc86cfd4012ea28957c42656fd3ca",
+    "capture_browser_mjs": "2537c378f4c110410e8bba29e9493344c96dddd3b358e66e8d44946579f1aef3",
+    "verify_evidence_mjs": "e39c47990538a8219753b0d38c7f35778235f0531e85ff4b29e57b6e5f6106cd",
+    "validate_task_mjs": "0e84e62d3495ab9ab58a138e7bb068757a22b273a6a93b3d638a0af5fca30267",
+    "browser_replay_summary_json": "6a70f961790aab67fa5b6b0bbcf700b93b6364d40a1faa013caba745aa4a9d18",
+    "all_png_files": "d5cc3a36f898110e46247ffebb36fd4faeba530f022bc0c93614642c772afd95",
+    "all_measurement_files": "a96c0410a128a0f70a61a6b95523609486f82b96d7455fe31a8844bedd85f3c2"
+  }
+}

@@ -202,6 +202,16 @@
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Re-verify parity rows `2` and `3` from current production and approved\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-020-overview-repositories-reverification --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-021-infrastructure-route-reverification:evidence",
+      "claim_id": "development:task-021-infrastructure-route-reverification",
+      "stage": "development",
+      "task_id": "021-infrastructure-route-reverification",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement infrastructure parity rows 46-57 in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": ["file paths", "symbols", "call relationships", "tests or verification commands"],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-021-infrastructure-route-reverification --query \"<query>\" --write --json"
     }
   ]
 }

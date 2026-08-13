@@ -1,7 +1,7 @@
 import { createPinia, setActivePinia } from 'pinia';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { Deployment, Server } from '~/lib/api/types';
+import type { Alert, Deployment, Server, ServerGroup } from '~/lib/api/types';
 
 import { useDeploymentStore, useServerStore } from './ops';
 
@@ -24,6 +24,14 @@ function server(id: number): Server {
 
 function deployment(id: number): Deployment {
   return { id, status: 'success' } as Deployment;
+}
+
+function group(id: number): ServerGroup {
+  return { id, name: `group-${id}` } as ServerGroup;
+}
+
+function alert(id: number): Alert {
+  return { id, status: 'active', message: `alert-${id}` } as Alert;
 }
 
 function deferred<T>() {
@@ -73,6 +81,58 @@ describe('ops stores', () => {
     await olderLoad;
 
     expect(store.serverList.map((item) => item.id)).toEqual([2]);
+  });
+
+  it('marks servers loaded only after the newest refresh succeeds', async () => {
+    const older = deferred<Server[]>();
+    const latest = deferred<Server[]>();
+    api.getServers.mockReturnValueOnce(older.promise).mockReturnValueOnce(latest.promise);
+
+    const store = useServerStore();
+    const olderLoad = store.loadServers();
+    const latestLoad = store.loadServers();
+
+    older.resolve([server(1)]);
+    await olderLoad;
+    expect(store.loaded).toBe(false);
+
+    latest.resolve([server(2)]);
+    await latestLoad;
+    expect(store.loaded).toBe(true);
+  });
+
+  it('keeps the latest group refresh when requests finish out of order', async () => {
+    const older = deferred<ServerGroup[]>();
+    const latest = deferred<ServerGroup[]>();
+    api.getServerGroups.mockReturnValueOnce(older.promise).mockReturnValueOnce(latest.promise);
+
+    const store = useServerStore();
+    const olderLoad = store.loadGroups();
+    const latestLoad = store.loadGroups();
+
+    latest.resolve([group(2)]);
+    await latestLoad;
+    older.resolve([group(1)]);
+    await olderLoad;
+
+    expect(store.groupList.map((item) => item.id)).toEqual([2]);
+  });
+
+  it('keeps the latest alert refresh when requests finish out of order', async () => {
+    const older = deferred<Alert[]>();
+    const latest = deferred<Alert[]>();
+    api.getAlerts.mockReturnValueOnce(older.promise).mockReturnValueOnce(latest.promise);
+
+    const store = useServerStore();
+    const olderLoad = store.loadAlerts();
+    const latestLoad = store.loadAlerts();
+
+    latest.resolve([alert(2)]);
+    await latestLoad;
+    older.resolve([alert(1)]);
+    await olderLoad;
+
+    expect(store.alertsList.map((item) => item.id)).toEqual([2]);
   });
 
   it('loads every deployment page for approval and history views', async () => {
