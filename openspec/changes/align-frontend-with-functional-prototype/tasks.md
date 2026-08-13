@@ -51,7 +51,7 @@
 
 用户结果：操作员可以在等价数据与权限状态下使用与批准原型一致的基础设施和部署页面。
 
-- [ ] 6.1 Re-verify Overview and Repositories in equivalent dark/light, Simplified Chinese/English, desktop/mobile, permission, and data states.
+- [x] 6.1 Re-verify Overview and Repositories in equivalent dark/light, Simplified Chinese/English, desktop/mobile, permission, and data states.
 - [ ] 6.2 Re-verify Infrastructure overview, servers, server tabs, groups, services, and alerts against all prototype route states.
 - [ ] 6.3 Re-verify Deployments, wizard steps, detail states, approvals, applications, environments, releases, and policies against all prototype route states.
 - [ ] 6.4 Repair remaining structural, content, status, action, data-integrity, or responsive deltas without importing prototype fixtures.

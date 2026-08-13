@@ -1,0 +1,71 @@
+Task 020 commit-bound validation
+reviewed_head=96ae4c2713130954a38a27ba4cd8788cff3bc9b0
+reviewed_tree=88e790587f5894073ed7c4031e935be3ed6e9271
+
+## Focused Vitest
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  5 passed (5)
+      Tests  26 passed (26)
+   Start at  17:31:19
+   Duration  11.83s (transform 18.39s, setup 0ms, import 24.62s, tests 1.77s, environment 18.05s)
+
+
+## Full Vitest
+$ vitest -- --run
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  87 passed (87)
+      Tests  513 passed (513)
+   Start at  17:31:33
+   Duration  125.77s (transform 136.68s, setup 0ms, import 352.88s, tests 94.66s, environment 344.58s)
+
+
+## Prettier
+Checking formatting...
+All matched files use Prettier code style!
+
+## ESLint
+$ eslint --max-warnings 0 .
+
+## Vue TypeScript
+$ vue-tsc --noEmit
+
+## Vite build
+$ vite build --base=/BASE_PATH
+<script src="/web-config.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/assets/custom.js"> in "/index.html" can't be bundled without type="module" attribute
+
+## Mock API smoke
+task020 mock API listening on http://127.0.0.1:8202
+{"ok":true,"fixture":"020-overview-repositories-reverification","repositories":3,"feed":7,"forges":2,"agents":2,"pipelines":3,"states":["admin/populated","normal/populated","admin/empty","admin/partial"]}
+
+## Strict evidence verifier
+{"ok":true,"runId":"1eae7bc3-e742-4aac-bce0-ec61105eebb8","measurements":20,"screenshots":20,"rows":[2,3],"normalUserAdminRequests":0,"expectedPartialHttpErrors":2,"pageOverflowStates":[],"rawI18nStates":[],"checksumsVerified":true}
+
+## Persistent red-team
+{"schema":"woodpecker.overview-repositories-verifier-redteam.v1","ok":true,"positiveVerifierExitCode":0,"mutations":[{"id":"run-id","rejected":true,"code":1,"signal":null},{"id":"wrong-theme","rejected":true,"code":1,"signal":null},{"id":"wrong-locale","rejected":true,"code":1,"signal":null},{"id":"tampered-content","rejected":true,"code":1,"signal":null},{"id":"missing-state","rejected":true,"code":1,"signal":null},{"id":"wrong-role","rejected":true,"code":1,"signal":null},{"id":"wrong-route","rejected":true,"code":1,"signal":null},{"id":"unhealthy-browser","rejected":true,"code":1,"signal":null},{"id":"raw-i18n","rejected":true,"code":1,"signal":null},{"id":"raw-server-toast","rejected":true,"code":1,"signal":null},{"id":"normal-user-admin-request","rejected":true,"code":1,"signal":null},{"id":"unexpected-http-error","rejected":true,"code":1,"signal":null},{"id":"horizontal-overflow","rejected":true,"code":1,"signal":null},{"id":"source-identity","rejected":true,"code":1,"signal":null},{"id":"png-signature","rejected":true,"code":1,"signal":null}],"generatedAt":"2026-08-13T09:36:34.416Z"}
+
+## JavaScript syntax
+
+## Python syntax
+mock_api.py syntax ok
+
+## JSON and JSONL parsing
+{"ok":true,"jsonFiles":24,"jsonlRecords":717}
+
+## Git whitespace check

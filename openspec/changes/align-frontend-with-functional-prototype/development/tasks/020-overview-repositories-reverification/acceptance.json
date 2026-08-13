@@ -1,0 +1,182 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "020-overview-repositories-reverification",
+  "generated_at": "2026-08-13T09:40:18.070Z",
+  "recorded_at": "2026-08-13T09:38:39.080Z",
+  "status": "approved",
+  "reviewed_git_head": "96ae4c2713130954a38a27ba4cd8788cff3bc9b0",
+  "reviewed_git_tree": "88e790587f5894073ed7c4031e935be3ed6e9271",
+  "implementation_scope": {
+    "included_patterns": [
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+      "web/src/App.test.ts",
+      "web/src/App.vue",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/lib/repoMetrics.test.ts",
+      "web/src/lib/repoMetrics.ts",
+      "web/src/store/repos.test.ts",
+      "web/src/store/repos.ts",
+      "web/src/views/Overview.test.ts",
+      "web/src/views/Overview.vue",
+      "web/src/views/Repos.test.ts",
+      "web/src/views/Repos.vue"
+    ],
+    "entries": [
+      {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "314ce8bed5d226f3db1489b82d8a0ab45dbba90c"
+      },
+      {
+        "path": "web/src/App.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "09cd618b5a8b2147e53ec87996d0d0116d54a5b4"
+      },
+      {
+        "path": "web/src/App.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "950f9f99dff15da8c9773c3fcfd4a742c56ad3fe"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5fee1108424007c896382ccb2c8a376cab4df4ff"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5d442953af012f34ffbc45ab62d27a7eaf271baa"
+      },
+      {
+        "path": "web/src/lib/repoMetrics.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1dbdce953a1d80de0a23a437619c999ca88a134f"
+      },
+      {
+        "path": "web/src/lib/repoMetrics.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7d68df86820f8c51d4b6d0d9c457906f3b786c30"
+      },
+      {
+        "path": "web/src/store/repos.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "86ea602a8b8a2cec252eed5f22854f8cf74283c0"
+      },
+      {
+        "path": "web/src/store/repos.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8407b2fe9943f2c116ce6a9de4dd52c19352c889"
+      },
+      {
+        "path": "web/src/views/Overview.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8682a0035e5c686cc0d32b25207036c493efd98a"
+      },
+      {
+        "path": "web/src/views/Overview.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6543f4bb78096ba853fd570a1abdc48cc7f93881"
+      },
+      {
+        "path": "web/src/views/Repos.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3d6f36704d3a5277f93206f71b44fb2a1f5c3873"
+      },
+      {
+        "path": "web/src/views/Repos.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cd928980d69f3c938b765bb2ad4cb51f06c9ebd4"
+      }
+    ],
+    "sha256": "9f8524cefafc08c3640b2d57b7cb500747778eecaf7cea91fe77d8c54e311ca9"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/020-overview-repositories-reverification/context.json",
+      "sha256": "931d20ea634f53288d3558cc742e486c5e9af8565388d42920490f6cf45b0c1a"
+    },
+    "report": {
+      "path": "development/tasks/020-overview-repositories-reverification/report.md",
+      "sha256": "49b63456ba440dc6eb3f6e9eabf80688c6f55f8595656c2003a2442988899fd2",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/020-overview-repositories-reverification/spec-review.md",
+      "sha256": "212271574c864246bb9c24bd4db93fc1247d8459248f08f7d413f17e616942b3",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/020-overview-repositories-reverification/quality-review.md",
+      "sha256": "6ce7dccbc7b74f05c03c06f11d429d655a7a87bf39b2cc2eb51ea761691d0669",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf",
+      "command": "cd web && pnpm exec vitest run src/App.test.ts src/views/Overview.test.ts src/views/Repos.test.ts src/lib/repoMetrics.test.ts src/store/repos.test.ts && pnpm test -- --run && pnpm exec prettier --check <task-020 committed text files> && pnpm lint && pnpm typecheck && pnpm build && cd .. && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/mock_api_smoke.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/verify_evidence.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/redteam_verifier.mjs && node --check <task-020 evidence scripts> && python3 -m py_compile <task-020 mock API equivalent compile> && parse task JSON/JSONL && git diff --check",
+      "assertion_ids": ["A1", "A2", "A3", "A4"],
+      "recorded_at": "2026-08-13T09:38:39.080Z",
+      "validation_receipt_sha256": "e05d986c4e571dd6a2f5673588fbb27bcbc3a6236ca716ce143c222981c1fdf1",
+      "evidence_log": {
+        "path": "development/evidence/025-020-overview-repositories-reverification.log",
+        "sha256": "0b2776b8a93c73963412f15066b3269234c3e86302f497e67f3bd5f285271147",
+        "size": 3472
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A1",
+      "parent_id": "A1",
+      "status": "passing",
+      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+    },
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

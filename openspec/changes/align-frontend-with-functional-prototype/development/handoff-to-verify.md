@@ -87,10 +87,16 @@
   run `93ce89f7-0d51-40ba-827e-3731aeea2f96` strictly verifies `92`
   production/prototype dark Simplified-Chinese desktop/390px states for rows
   `1` and `24-45`; all `14` persisted verifier mutations are rejected.
+- `020-overview-repositories-reverification` / baseline task `6.1`: Overview
+  and Repositories now expose truthful initial, empty, partial-failure,
+  refresh, permission, pagination, metric, and newest-request states. Current
+  run `1eae7bc3-e742-4aac-bce0-ec61105eebb8` strictly verifies `20`
+  production/prototype desktop/390px states for rows `2-3`; all `15` persisted
+  verifier mutations are rejected.
 - Phase 5 is complete. This remains an incremental development snapshot rather
-  than the final six-domain verification handoff: the `13` baseline tasks in
-  phases `6-8`, operations rows `46-67`, overview row `2`, blocked repository
-  row `4`, and complete change-level acceptance remain open.
+  than the final six-domain verification handoff: the `12` baseline tasks in
+  phases `6-8`, operations rows `46-67`, blocked repository row `4`, and
+  complete change-level acceptance remain open.
 
 ## Files Changed
 
@@ -162,6 +168,11 @@
   `web/src/route-family-parity.test.ts`, task-local aggregate capture, strict
   independent verifier, persistent 14-mutation red-team, `92` measurement/PNG
   pairs, approved task acceptance for `A2/A3`, and closure lifecycle records.
+- Overview and Repositories re-verification: `App`, `Overview`, and
+  `Repositories` localized error/state ownership, focused page regressions,
+  task-local Mock API/capture/verifier, persistent 15-mutation red-team, `20`
+  measurement/PNG pairs, approved task acceptance for `A1-A4`, and closure
+  lifecycle records.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -181,7 +192,8 @@
   `development/tasks/016-administration-routes/report.md`, and
   `development/tasks/017-user-auth-routes/report.md`, and
   `development/tasks/018-authorization-boundaries/report.md`, and
-  `development/tasks/019-route-family-parity-closure/report.md`.
+  `development/tasks/019-route-family-parity-closure/report.md`, and
+  `development/tasks/020-overview-repositories-reverification/report.md`.
 
 ## Requirements Covered
 
@@ -259,6 +271,12 @@
   command passes `34` files / `173` tests, and every one of the `14` isolated
   evidence mutations is rejected. This approval does not cover rows `2-23`,
   rows `46+`, phases `6-8`, or complete change-level acceptance.
+- Task-scoped `A1`, `A2`, `A3`, and `A4` are approved for slice `020`.
+  Rows `2-3` pass exact current-byte production/prototype dark
+  Simplified-Chinese desktop/390px comparison plus representative light and
+  role/data boundary states. Focused `5/26`, full `87/513`, strict `20/20`,
+  and all `15` isolated verifier mutations pass. This approval does not cover
+  task `6.2+`, row `4`, rows `46+`, or complete change-level acceptance.
 
 ## Prototype Decisions Implemented
 
@@ -385,6 +403,9 @@
   permission, persistence, migration, dependency, or approved-prototype
   change. Its frontend delta is test-only; capture, verifier, red-team, and
   browser artifacts remain task-local evidence.
+- Slice `020` changes only existing frontend state/error presentation and
+  focused tests. It adds no route, API request, payload, backend, permission,
+  persistence, migration, dependency, or approved-prototype contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -452,7 +473,11 @@
   exact `23` owned destinations, named/inbound resolution, route metadata,
   dynamic parameters, catch-all ordering, and the exact focused-suite
   inventory.
-- The current full frontend regression baseline is `85` test files and `496`
+- Overview and Repositories tests cover initial loading, core and optional
+  failures, safe retry, confirmed-data preservation, administrator versus
+  normal-user requests, overlapping refreshes, empty/filter-empty results,
+  pagination, selection, cached/forced metrics, and obsolete completions.
+- The current full frontend regression baseline is `87` test files and `513`
   tests.
 
 ## Local Validation
@@ -539,16 +564,30 @@
   browser health, overflow, PNG signature/dimensions, and shared run ID. Its
   persistent red-team rejects all `14` isolated corruptions while the restored
   evidence passes.
+- PASS: Overview and Repositories focused suite, `5` files / `26` tests, and
+  complete frontend suite, `87` files / `513` tests.
+- PASS: run `1eae7bc3-e742-4aac-bce0-ec61105eebb8` contains exactly `20`
+  measurements and `20` PNGs for rows `2-3`, including dark equivalent states,
+  light representatives, normal-user, empty, and partial-failure boundaries.
+- PASS: the strict task `020` verifier checks exact inventory, source/service
+  identity, route, viewport, theme, locale, role, data state, content,
+  administrator-only requests, browser health, overflow, raw i18n, raw server
+  payloads, PNG integrity, checksums, and shared run ID. Its persistent
+  red-team rejects all `15` isolated corruptions.
 - PASS: Verification 2.0 runtime `2.0.0-alpha.2` is installed and ready with
   `fallback_used:false`; task `019` has an approved task-local acceptance bound
   to signed receipt
   `receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c`
   on closure commit `7a9acca2de54994be66beed233c096b321fed1e7`.
+- PASS: task `020` has approved task-local acceptance for `A1-A4` bound to
+  signed receipt
+  `receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf`
+  on implementation commit `96ae4c2713130954a38a27ba4cd8788cff3bc9b0`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Thirteen baseline tasks remain incomplete across operations,
+- Twelve baseline tasks remain incomplete across operations,
   accessibility/i18n/responsive, and full six-domain verification work.
   Global prototype parity must not be claimed.
 - Repository row `4` remains blocked: production `/repos/add` renders the
