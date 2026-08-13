@@ -1,0 +1,173 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "018-authorization-boundaries",
+  "generated_at": "2026-08-13T07:11:13.544Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/components/layout/header/Navbar.test.ts",
+      "web/src/components/layout/header/Sidebar.test.ts",
+      "web/src/components/layout/header/Sidebar.vue",
+      "web/src/router.test.ts",
+      "web/src/router.ts",
+      "web/src/views/admin/AdminSettingsWrapper.test.ts",
+      "web/src/views/admin/AdminSettingsWrapper.vue",
+      "web/src/views/org/OrgWrapper.test.ts",
+      "web/src/views/org/OrgWrapper.vue",
+      "web/src/views/org/settings/OrgSettingsWrapper.test.ts",
+      "web/src/views/org/settings/OrgSettingsWrapper.vue",
+      "web/src/views/repo/RepoWrapper.test.ts",
+      "web/src/views/repo/RepoWrapper.vue",
+      "web/src/views/repo/settings/RepoSettings.test.ts",
+      "web/src/views/repo/settings/RepoSettings.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/components/layout/header/Navbar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8a718f0013b6cc1b48b151698d5d38a1358754a6"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1b7207e569bcf2c6f76bdae5d993a4dbacf48a19"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4b6873d0de53a6b38735c821c03bbf724d6593e9"
+      },
+      {
+        "path": "web/src/router.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fc059a1d177ab7f8dbb37090bc51951c5e776882"
+      },
+      {
+        "path": "web/src/router.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0f6f3305209dc1d2ac75c857cbf3660053c2acfc"
+      },
+      {
+        "path": "web/src/views/admin/AdminSettingsWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6fe7771fb7c8957270189d304bfc96b8ddfc6544"
+      },
+      {
+        "path": "web/src/views/admin/AdminSettingsWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b24dde73cec16f2fa40eb2d96ed07a45397f7da2"
+      },
+      {
+        "path": "web/src/views/org/OrgWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "77b4caa010a360bdc66738a88cac0c952d0c5b0e"
+      },
+      {
+        "path": "web/src/views/org/OrgWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f2e09c027c0e30479d6a7eec7eb1f67aeeadf125"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgSettingsWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e7679894fe7ee9f2e2f92d419354e483fc961555"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgSettingsWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6392c749e577fecfa8b8a16adce072b2494c7685"
+      },
+      {
+        "path": "web/src/views/repo/RepoWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a3492726c86c9528e4b0ecb338057c7b212dff5d"
+      },
+      {
+        "path": "web/src/views/repo/RepoWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f83bf23659bc5e6abd336517b48015f96ec08045"
+      },
+      {
+        "path": "web/src/views/repo/settings/RepoSettings.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6555260f59d1815db3d965002dee38c30cf12ad0"
+      },
+      {
+        "path": "web/src/views/repo/settings/RepoSettings.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6568289092937ca3e11a0b54e6d5c1371d621b6b"
+      }
+    ],
+    "sha256": "75c06ebb2d3ed2e5284ee769cee3f13d2e885fb799bc7319c79cdeeccee9dd0d"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/018-authorization-boundaries/context.json",
+      "sha256": "49ccdafc20f5f5920d83941b33b7066103436264eb849a775ca8c30c3782c747"
+    },
+    "report": {
+      "path": "development/tasks/018-authorization-boundaries/report.md",
+      "sha256": "f7c0a0c0238f978a2aaa66282ef7655f2ed92619bed64994d9ba19022eb524aa",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/018-authorization-boundaries/spec-review.md",
+      "sha256": "909e0a80cae660b315aca92ae7ef1b5fc17d59c47270df20a359954b1517fcda",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/018-authorization-boundaries/quality-review.md",
+      "sha256": "f0437c991b2895aa4ce5cf94d209ac03492fca0db0a5d6f0e6ac7df211fe77f0",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-ca3b340cc21e1bc2c5be48aca3e942c5f89d93a04d8f8320686171ff72a696f5",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "36d65a2113189e390b85ebef36190836969118ce9a1a229a2dcd6a30dc4f4352",
+      "evidence_log": {
+        "path": "development/evidence/023-018-authorization-boundaries.log",
+        "sha256": "fcbbf02e403451a1d24ca60bd74d6a518ce639f116922a5c64644bce594a20a1",
+        "size": 32001
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-ca3b340cc21e1bc2c5be48aca3e942c5f89d93a04d8f8320686171ff72a696f5"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

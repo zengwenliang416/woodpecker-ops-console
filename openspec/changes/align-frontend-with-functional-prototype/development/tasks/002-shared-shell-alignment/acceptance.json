@@ -1,0 +1,150 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "002-shared-shell-alignment",
+  "generated_at": "2026-08-13T07:11:12.589Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/App.test.ts",
+      "web/src/App.vue",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/layout/header/Navbar.test.ts",
+      "web/src/components/layout/header/Navbar.vue",
+      "web/src/components/layout/header/Sidebar.test.ts",
+      "web/src/components/layout/header/Sidebar.vue",
+      "web/src/viteConfig.test.ts",
+      "web/vite.config.ts"
+    ],
+    "entries": [
+      {
+        "path": "web/src/App.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a358d164c42c945c089985f847fccc353cd09557"
+      },
+      {
+        "path": "web/src/App.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "55d728de47aa1fb3dedbef49a850d926dca9c811"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/layout/header/Navbar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8a718f0013b6cc1b48b151698d5d38a1358754a6"
+      },
+      {
+        "path": "web/src/components/layout/header/Navbar.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f11a0bfbe124b8da51b8a0e1f0de9f068b68cf90"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1b7207e569bcf2c6f76bdae5d993a4dbacf48a19"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4b6873d0de53a6b38735c821c03bbf724d6593e9"
+      },
+      {
+        "path": "web/src/viteConfig.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cb496c07965f23f782aaac3e96079fccd81e7640"
+      },
+      {
+        "path": "web/vite.config.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7b58ede9049323630846a644713c7bd08b5e8b4e"
+      }
+    ],
+    "sha256": "72c494dfc9b27285a9b65f92cb20a4500f0d493298fdeaf6a7d918643375bd8d"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/002-shared-shell-alignment/context.json",
+      "sha256": "3b89c3f10fb3b0a176d973affced9a9e32d28a5ef371f7b97122c5fd99c4b891"
+    },
+    "report": {
+      "path": "development/tasks/002-shared-shell-alignment/report.md",
+      "sha256": "9aeabf109ba2f396f90680fc8c1b378150876ba3141dfb3f4955e7424ded26aa",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/002-shared-shell-alignment/spec-review.md",
+      "sha256": "01a41dff54ffe78f8f4510ae4c21d100769f5fbaf4f7b487fb08d50aa91dc3d4",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/002-shared-shell-alignment/quality-review.md",
+      "sha256": "80e2d3cc4bdce252a84248ced1b3c8c4fae680419e0b1d27ebfa8c51936aa657",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-e45cc1b42fbd318951e098cded4d44fefd5bdc706de42b84e8c8b3829de2d511",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "f14ccbeec494edafcdaec17aec524d30293efa9b026158e7dd4fbe4f5c0075a0",
+      "evidence_log": {
+        "path": "development/evidence/007-002-shared-shell-alignment.log",
+        "sha256": "17fbf57d60fc1cbcfa64064ecd3b0f6f060182479758202080444174136deb8a",
+        "size": 31999
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-e45cc1b42fbd318951e098cded4d44fefd5bdc706de42b84e8c8b3829de2d511"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-e45cc1b42fbd318951e098cded4d44fefd5bdc706de42b84e8c8b3829de2d511"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

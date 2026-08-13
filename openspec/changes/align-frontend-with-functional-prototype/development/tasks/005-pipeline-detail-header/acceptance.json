@@ -1,0 +1,108 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "005-pipeline-detail-header",
+  "generated_at": "2026-08-13T07:11:12.759Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+      "web/src/views/repo/pipeline/PipelineWrapper.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1d5d55c62f6663635486af59a96e9a351dea4f3b"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "819e8f83ad9d8a06ab793d806b04f60b449a39b5"
+      }
+    ],
+    "sha256": "34deac0d36945a6114081dc6fbffcf0895f5199374945eac6c0df4fb45e475cf"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/005-pipeline-detail-header/context.json",
+      "sha256": "1db9ee976723d13963b3726e7fab3694187e524b642db3445f760f6ad27c5f7f"
+    },
+    "report": {
+      "path": "development/tasks/005-pipeline-detail-header/report.md",
+      "sha256": "fbcdbee7dca003b978d748b6f090e1636c8bee65e60608eee6916f9819283ff3",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/005-pipeline-detail-header/spec-review.md",
+      "sha256": "fd758c2beaa8be11efb102240ac65bad18b6746b0095991779fec08ecbc5235e",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/005-pipeline-detail-header/quality-review.md",
+      "sha256": "be015c8fa469ceab6c0872859b590fb398678640e4de49fddf4d39df0837d773",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-f5c9761280ccd2dae37300105b333bd4f357ce436e0a8d8c99f182e4e8abb604",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "a554115f4a900152dec5f36450fee0565cf16fc2af4a9daad994688bd49913af",
+      "evidence_log": {
+        "path": "development/evidence/010-005-pipeline-detail-header.log",
+        "sha256": "1680856d49a8ebbc0bf057c62bf8c9712df9f8036018abb9913c0a19a1afcc48",
+        "size": 31999
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f5c9761280ccd2dae37300105b333bd4f357ce436e0a8d8c99f182e4e8abb604"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f5c9761280ccd2dae37300105b333bd4f357ce436e0a8d8c99f182e4e8abb604"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

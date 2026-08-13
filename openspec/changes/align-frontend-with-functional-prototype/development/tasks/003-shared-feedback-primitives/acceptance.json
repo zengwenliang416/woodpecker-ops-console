@@ -1,0 +1,180 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "003-shared-feedback-primitives",
+  "generated_at": "2026-08-13T07:11:12.646Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/atomic/Button.test.ts",
+      "web/src/components/atomic/Button.vue",
+      "web/src/components/atomic/Error.test.ts",
+      "web/src/components/atomic/Error.vue",
+      "web/src/components/atomic/FeedbackState.test.ts",
+      "web/src/components/atomic/FeedbackState.vue",
+      "web/src/components/atomic/IconButton.test.ts",
+      "web/src/components/atomic/IconButton.vue",
+      "web/src/views/RepoAdd.test.ts",
+      "web/src/views/RepoAdd.vue",
+      "web/src/views/repo/RepoBranches.test.ts",
+      "web/src/views/repo/RepoBranches.vue",
+      "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+      "web/src/views/repo/pipeline/PipelineDebug.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/atomic/Button.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "77bcfe68977e27189d2dceafaec4ba6507a72f89"
+      },
+      {
+        "path": "web/src/components/atomic/Button.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "13763603391109cf982a4a62c3c3fa9860f35ea9"
+      },
+      {
+        "path": "web/src/components/atomic/Error.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "864c9884a16d4f1425ffc07d875694aca8e0876f"
+      },
+      {
+        "path": "web/src/components/atomic/Error.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c686cb378f32e007805767ef99c9a49c60fdba5c"
+      },
+      {
+        "path": "web/src/components/atomic/FeedbackState.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0089dae4b29a13823b76fc12d63802f32c6baa25"
+      },
+      {
+        "path": "web/src/components/atomic/FeedbackState.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6576be20227cae3bf20766db37392d263d053610"
+      },
+      {
+        "path": "web/src/components/atomic/IconButton.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8d5b0284ea136468c0479f7f6ba9f336cdcef450"
+      },
+      {
+        "path": "web/src/components/atomic/IconButton.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ed25442b4ae3162dbbfbc20013ada2da6eff9858"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3d96f1c051238ed9b067cd4cdd670d24d6232c11"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineDebug.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b450d9275664bda57c83b31989101511a8a2d45b"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranches.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ec8564f1c050c8b8298b67b7797c9299177d65da"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranches.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4c79a6d4b3a4bcaa18ba54738d1870b069523aeb"
+      },
+      {
+        "path": "web/src/views/RepoAdd.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d6f4da6233f049ea2a96fb71c62c01bf2012fa3d"
+      },
+      {
+        "path": "web/src/views/RepoAdd.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7cad4159d382c7af1a4921a98003a09de9964a91"
+      }
+    ],
+    "sha256": "7f72b47542bd6678e31a4a2c9a610a34e271ab5d4a4b73e8857d5d1893465be6"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/003-shared-feedback-primitives/context.json",
+      "sha256": "361ae54447a4787b8c932479cfb69b215205939fd2cb52a69aa83b8f78a5b8b3"
+    },
+    "report": {
+      "path": "development/tasks/003-shared-feedback-primitives/report.md",
+      "sha256": "70e129676ca1052347324f946336558b07f44a4744cab5af644f861b64816aae",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/003-shared-feedback-primitives/spec-review.md",
+      "sha256": "155998989ca61f23bc0b2c8eb348dd7ed6b47f988bd3c06a5c9161703a6eb1fa",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/003-shared-feedback-primitives/quality-review.md",
+      "sha256": "c890e3410deadf6a0a2d4cad7782380bc24b988c2bf3cecc80e8d28ea9b69f3a",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-bbed5710c3b6d99e2776b13aedfdfb05f4df785131e7b5b07ffc91299dabea85",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "08cef5e980283f3796fb3699139237c0e68a7df170c66a4500bb522197fbc11e",
+      "evidence_log": {
+        "path": "development/evidence/008-003-shared-feedback-primitives.log",
+        "sha256": "71b336d386e60fe02927a431a93247a002403920b53851abdd6f5065c447c595",
+        "size": 32003
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-bbed5710c3b6d99e2776b13aedfdfb05f4df785131e7b5b07ffc91299dabea85"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

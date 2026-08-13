@@ -1,0 +1,120 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "006-pipeline-overview",
+  "generated_at": "2026-08-13T07:11:12.814Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/views/repo/pipeline/Pipeline.test.ts",
+      "web/src/views/repo/pipeline/Pipeline.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/Pipeline.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3bc7c5f96a6bb49c5265825759086791142e3316"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/Pipeline.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8f45f02bb9a164b92d0ab162214317f0a92af372"
+      }
+    ],
+    "sha256": "ace245cf45433f1fe0e5a9e770eca67c317f53ca376640a873a64cb3e1960cc0"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/006-pipeline-overview/context.json",
+      "sha256": "aac2f32a6d19707209f7af8b45adc336f5e29b085bc7e4c9444fc77ac1d65e17"
+    },
+    "report": {
+      "path": "development/tasks/006-pipeline-overview/report.md",
+      "sha256": "481fa6c4d15f1a8cfa0abac625349e660c2329124f5f9d01e2b421cc79e1fe61",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/006-pipeline-overview/spec-review.md",
+      "sha256": "8d72d15cb5341c7a6ff0fbb87ba178db239da2663856f8834d7b7429861fd9b5",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/006-pipeline-overview/quality-review.md",
+      "sha256": "53c8e44d3289e5ce07efa43c246d02a00d060018cec51fba53c215c7ae401290",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-9ef525395a7ffaaa49c6aedf9386636c484892d2567653bf5f490724085b863d",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "7d0252c0bd371ebf464396b6fc4b9fa1c6189c4c557359a1c2c839e8e4adafa8",
+      "evidence_log": {
+        "path": "development/evidence/011-006-pipeline-overview.log",
+        "sha256": "3bcc8609ae41f0354fc2f126e7726bfa049e012f8b9e24dd52b18706a39a9279",
+        "size": 31994
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-9ef525395a7ffaaa49c6aedf9386636c484892d2567653bf5f490724085b863d"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-9ef525395a7ffaaa49c6aedf9386636c484892d2567653bf5f490724085b863d"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-9ef525395a7ffaaa49c6aedf9386636c484892d2567653bf5f490724085b863d"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

@@ -1,0 +1,248 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "017-user-auth-routes",
+  "generated_at": "2026-08-13T07:11:13.481Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/user/settings/UserSettingsNav.test.ts",
+      "web/src/components/user/settings/UserSettingsNav.vue",
+      "web/src/router.test.ts",
+      "web/src/router.ts",
+      "web/src/views/Login.test.ts",
+      "web/src/views/Login.vue",
+      "web/src/views/NotFound.test.ts",
+      "web/src/views/NotFound.vue",
+      "web/src/views/cli/Auth.test.ts",
+      "web/src/views/cli/Auth.vue",
+      "web/src/views/user/UserAgents.test.ts",
+      "web/src/views/user/UserAgents.vue",
+      "web/src/views/user/UserCLIAndAPI.test.ts",
+      "web/src/views/user/UserCLIAndAPI.vue",
+      "web/src/views/user/UserGeneral.test.ts",
+      "web/src/views/user/UserGeneral.vue",
+      "web/src/views/user/UserRegistries.test.ts",
+      "web/src/views/user/UserRegistries.vue",
+      "web/src/views/user/UserSecrets.test.ts",
+      "web/src/views/user/UserSecrets.vue",
+      "web/src/views/user/UserWrapper.test.ts",
+      "web/src/views/user/UserWrapper.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/user/settings/UserSettingsNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5d9fd02139e386f6f10f102815af721d15d64f01"
+      },
+      {
+        "path": "web/src/components/user/settings/UserSettingsNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "bdcfc801fd0f57eed8a41fcc755e5aa7179f1d05"
+      },
+      {
+        "path": "web/src/router.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fc059a1d177ab7f8dbb37090bc51951c5e776882"
+      },
+      {
+        "path": "web/src/router.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0f6f3305209dc1d2ac75c857cbf3660053c2acfc"
+      },
+      {
+        "path": "web/src/views/cli/Auth.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "36f3aea4ef5ec88dc08fdad9e5ae4fa0906d52f8"
+      },
+      {
+        "path": "web/src/views/cli/Auth.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "de6dc3e8483b913103b87445528219ffe89c353c"
+      },
+      {
+        "path": "web/src/views/Login.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4034289ea915d41f28f1f565752a7810d05ba585"
+      },
+      {
+        "path": "web/src/views/Login.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6bf7ecfc8887af09d6ec1165795100c7b1599055"
+      },
+      {
+        "path": "web/src/views/NotFound.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b28b57af490c1ce019bec4dc84c8277aad211c11"
+      },
+      {
+        "path": "web/src/views/NotFound.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "230ca5326aa6baf446430a5829b2098f4ee960e7"
+      },
+      {
+        "path": "web/src/views/user/UserAgents.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0525aa657076fec70cdbae69cfb5ea28f46a351b"
+      },
+      {
+        "path": "web/src/views/user/UserAgents.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c01a3d32a38094493e89223d11b948873dc293d9"
+      },
+      {
+        "path": "web/src/views/user/UserCLIAndAPI.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8f79fb6ee7fae0be4dc81522ec18f8a64972634c"
+      },
+      {
+        "path": "web/src/views/user/UserCLIAndAPI.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c0b02b00b71262dbde62de5c622a962b73c6d03f"
+      },
+      {
+        "path": "web/src/views/user/UserGeneral.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "46b8f0a6709bb457c954640a32c80d91387f517e"
+      },
+      {
+        "path": "web/src/views/user/UserGeneral.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0db29bd77029dc162bb897d99fa3c30fe5813e7a"
+      },
+      {
+        "path": "web/src/views/user/UserRegistries.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "580e80c163f8f586941b4e48557f19b8c8a1fa7b"
+      },
+      {
+        "path": "web/src/views/user/UserRegistries.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a983544f8f2805a28d861c8fbc36bc3eef1cefd5"
+      },
+      {
+        "path": "web/src/views/user/UserSecrets.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "66fc5581aafcfacdd527b9c820306912e2249026"
+      },
+      {
+        "path": "web/src/views/user/UserSecrets.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cd0d918f90e01188d24284a08cc64c8e44b82f93"
+      },
+      {
+        "path": "web/src/views/user/UserWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7f36209ca062f2012e8d9557839e438353942d8a"
+      },
+      {
+        "path": "web/src/views/user/UserWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "aecc0b6f78ed179450c5535ce0b936f71755803f"
+      }
+    ],
+    "sha256": "5ba62901a1fa916b406e83f295056735cab787d3eb65ac3a2838d3ec219b99fb"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/017-user-auth-routes/context.json",
+      "sha256": "c4830cf716b79444a0afb7153796d18ffe69dac0867a67b597e7a5095561659c"
+    },
+    "report": {
+      "path": "development/tasks/017-user-auth-routes/report.md",
+      "sha256": "153a451ac57dddd4b5f447241da78407c4f88ae5d82ed5d9f9f93b733925ef29",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/017-user-auth-routes/spec-review.md",
+      "sha256": "4d6caa14354565b1f5a720fec1d049d59d9a05883dae1c0dc590177b6ec877e9",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/017-user-auth-routes/quality-review.md",
+      "sha256": "d4d90977cf2b0ec7bbbf19d0b4e02b7a9d88b30021033173df2215ff316f55aa",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-e662394773baf476aa9ccd96e0a3d9c76f06b65ee06957e70e6a41e69e0d32ca",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "e39aa12370dc8a875949de6d7ef2ce25d4e2cf6a803fb445c03584ee7e6f9a7d",
+      "evidence_log": {
+        "path": "development/evidence/022-017-user-auth-routes.log",
+        "sha256": "46eac686f869daaf26331f0d9299352244d09d55051ad4d2dbaafca83f9e00c4",
+        "size": 31993
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-e662394773baf476aa9ccd96e0a3d9c76f06b65ee06957e70e6a41e69e0d32ca"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-e662394773baf476aa9ccd96e0a3d9c76f06b65ee06957e70e6a41e69e0d32ca"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

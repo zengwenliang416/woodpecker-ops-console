@@ -2,11 +2,11 @@
   "schema": "specnav.task-acceptance-evidence.v2",
   "generated_by": "specnav-development/task-acceptance-evidence",
   "task_id": "019-route-family-parity-closure",
-  "generated_at": "2026-08-13T04:03:55.651Z",
-  "recorded_at": "2026-08-13T04:02:50.967Z",
+  "generated_at": "2026-08-13T07:11:13.603Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
   "status": "approved",
-  "reviewed_git_head": "7a9acca2de54994be66beed233c096b321fed1e7",
-  "reviewed_git_tree": "93caf16d62e3639cf9ecb9b59313e1bedba76d98",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
   "implementation_scope": {
     "included_patterns": [
       "web/src/components/admin/settings/**/*.test.ts",
@@ -125,15 +125,18 @@
   },
   "test_runs": [
     {
-      "id": "receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c",
-      "command": "cd web && pnpm exec vitest run src/route-family-parity.test.ts src/router.test.ts && cd .. && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/verify_evidence.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/redteam_verifier.mjs && cd web && pnpm lint && pnpm typecheck && pnpm build && cd .. && git diff --check -- . \":(exclude)openspec/changes/align-frontend-with-functional-prototype/development/evidence/*.log\"",
-      "assertion_ids": ["A2", "A3"],
-      "recorded_at": "2026-08-13T04:02:50.967Z",
-      "validation_receipt_sha256": "ba4e2e23b8db1334fce84ce6b79fbad6d80c0cc18bc8e4f7b49fe593f2868791",
+      "id": "receipt-4942fb8e5f18a7af7eba32ff216d98cb06fc562cdd31e2ed07c51483e3986d3a",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "5a3dfaae89acca8a82f3426ed61b5baab4d180db40bf5e7a8e9b8dfa5f4ddafa",
       "evidence_log": {
-        "path": "development/evidence/005-019-route-family-parity-closure.log",
-        "sha256": "d2efab806ae9baed1d29cbdd946c1a49432933ea81d83cc49b158e836c71bf6d",
-        "size": 3337
+        "path": "development/evidence/024-019-route-family-parity-closure.log",
+        "sha256": "5153f1c2ac5634d1b6ab335fdf4b1bdb5a586d59182171623e5cf0f3389836f6",
+        "size": 32004
       }
     }
   ],
@@ -142,7 +145,9 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": ["receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c"],
+      "test_run_ids": [
+        "receipt-4942fb8e5f18a7af7eba32ff216d98cb06fc562cdd31e2ed07c51483e3986d3a"
+      ],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -151,7 +156,9 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": ["receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c"],
+      "test_run_ids": [
+        "receipt-4942fb8e5f18a7af7eba32ff216d98cb06fc562cdd31e2ed07c51483e3986d3a"
+      ],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."

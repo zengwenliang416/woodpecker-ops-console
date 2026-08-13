@@ -1,0 +1,152 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "004-shell-theme-evidence",
+  "generated_at": "2026-08-13T07:11:12.702Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/App.test.ts",
+      "web/src/App.vue",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/layout/header/Navbar.test.ts",
+      "web/src/components/layout/header/Navbar.vue",
+      "web/src/components/layout/header/Sidebar.test.ts",
+      "web/src/components/layout/header/Sidebar.vue",
+      "web/src/compositions/useTheme.ts",
+      "web/src/style.css",
+      "web/src/viteConfig.test.ts",
+      "web/vite.config.ts"
+    ],
+    "entries": [
+      {
+        "path": "web/src/App.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a358d164c42c945c089985f847fccc353cd09557"
+      },
+      {
+        "path": "web/src/App.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "55d728de47aa1fb3dedbef49a850d926dca9c811"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/layout/header/Navbar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8a718f0013b6cc1b48b151698d5d38a1358754a6"
+      },
+      {
+        "path": "web/src/components/layout/header/Navbar.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f11a0bfbe124b8da51b8a0e1f0de9f068b68cf90"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1b7207e569bcf2c6f76bdae5d993a4dbacf48a19"
+      },
+      {
+        "path": "web/src/components/layout/header/Sidebar.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4b6873d0de53a6b38735c821c03bbf724d6593e9"
+      },
+      {
+        "path": "web/src/compositions/useTheme.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6b4d0cdd99bcc97db29b44eb953836b0c0774cc0"
+      },
+      {
+        "path": "web/src/style.css",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a6cd723fcba78ce3204ab1e6576c782a6e2b9bc0"
+      },
+      {
+        "path": "web/src/viteConfig.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cb496c07965f23f782aaac3e96079fccd81e7640"
+      },
+      {
+        "path": "web/vite.config.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7b58ede9049323630846a644713c7bd08b5e8b4e"
+      }
+    ],
+    "sha256": "13b80288aea2f01866207b4fc9a628326e3a7cd6c9e0d895edcd2e724f270826"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/004-shell-theme-evidence/context.json",
+      "sha256": "9604e04f05fb6c08d987521861d35a44f74f6ac47122959a97d8538045bdd3a5"
+    },
+    "report": {
+      "path": "development/tasks/004-shell-theme-evidence/report.md",
+      "sha256": "b243201107d367e9be1deaec2aa39b0d577f700e77c5e65d24ccc322a046ee2f",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/004-shell-theme-evidence/spec-review.md",
+      "sha256": "fe7c27b270bd37cbd9d452910ab1b2c622158a4c69d0623e7ad3cb14d2c4129b",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/004-shell-theme-evidence/quality-review.md",
+      "sha256": "3b6cb73e87ea056009a4acbd3a8c72865640ee59ffafd800ede53bd75946d0e1",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-abc698973bac6917b5d3bc1872a8bcddcf79d61cfc87838a2afabeb6b35293a0",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "436c95161ab192b1baa72e57a9c87ec8164a7107c01046bbb4914ef72a8b71e3",
+      "evidence_log": {
+        "path": "development/evidence/009-004-shell-theme-evidence.log",
+        "sha256": "c52cf27714dee0c0c1339b90576f2aabb1211daac3e67e6e0321726e65ef22f2",
+        "size": 31997
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-abc698973bac6917b5d3bc1872a8bcddcf79d61cfc87838a2afabeb6b35293a0"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

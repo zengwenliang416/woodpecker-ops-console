@@ -1,0 +1,183 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "007-pipeline-log-diagnostics",
+  "generated_at": "2026-08-13T07:11:12.865Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/repo/pipeline/PipelineLog.test.ts",
+      "web/src/components/repo/pipeline/PipelineLog.vue",
+      "web/src/style/console.css",
+      "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+      "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+      "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+      "web/src/views/repo/pipeline/PipelineConfig.vue",
+      "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+      "web/src/views/repo/pipeline/PipelineDebug.vue",
+      "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+      "web/src/views/repo/pipeline/PipelineErrors.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b12602ca60206794512c1faa847f0a29bb3d7190"
+      },
+      {
+        "path": "web/src/components/repo/pipeline/PipelineLog.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "a8839ab9522b6694daf5f5375b131cbb57387b36"
+      },
+      {
+        "path": "web/src/style/console.css",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7313f8bbf1eae9cdf362c2f85391fa78409a5ff0"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62f0b9cb4e053b58b02fbdb1f062598a77258a45"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineChangedFiles.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ca30c9bd9a5b76eb094cb64302507de28a145eac"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "198051942eda498c5809a3d3ef7b05f98c53d4a7"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineConfig.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2563a57c4fdd63bffb704e0173d8e340c68c4e00"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3d96f1c051238ed9b067cd4cdd670d24d6232c11"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineDebug.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b450d9275664bda57c83b31989101511a8a2d45b"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b880299d8636f54b7b32fe8298c32d54c84ffee2"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineErrors.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0ac3a43c6a58c42c7c45a113d8c37ff614710b89"
+      }
+    ],
+    "sha256": "25b8f3fa9e63a3fb672e16254077cb9f2ea727f18dd749674b697207a6512bda"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/007-pipeline-log-diagnostics/context.json",
+      "sha256": "17964c708eee699693e412adddad70e2411d296e4bc3b3c349e5abfe93b1e7c2"
+    },
+    "report": {
+      "path": "development/tasks/007-pipeline-log-diagnostics/report.md",
+      "sha256": "a36ece1c6c7fcea1fa84ef81460ef180ebc11836f3956e6fe67638da5f5a616a",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/007-pipeline-log-diagnostics/spec-review.md",
+      "sha256": "e9721c00ce981f276dcb9bab1deb7b47b2ad3a5166bee466ffb676859df9ab96",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/007-pipeline-log-diagnostics/quality-review.md",
+      "sha256": "696a30b5393ceda3bf5dd8c6332af8db46a48aea2019f5961c254cfcaff90840",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-7958e2c9b12e7c9f96f6bca212a288ea7676ff20874bf2436c545c1f6782af20",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "89c096c46381e607bfd6b18b3470538fc771880a593173ba38e9238b1e92a421",
+      "evidence_log": {
+        "path": "development/evidence/012-007-pipeline-log-diagnostics.log",
+        "sha256": "0176a4f9ccdeeecb2383d09bc0eaeefa2be88b69f6386585e625deed305ee3d8",
+        "size": 32001
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-7958e2c9b12e7c9f96f6bca212a288ea7676ff20874bf2436c545c1f6782af20"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-7958e2c9b12e7c9f96f6bca212a288ea7676ff20874bf2436c545c1f6782af20"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-7958e2c9b12e7c9f96f6bca212a288ea7676ff20874bf2436c545c1f6782af20"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

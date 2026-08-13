@@ -1,0 +1,96 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "001-date-duration-integrity",
+  "generated_at": "2026-08-13T07:11:12.523Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/compositions/useDate.test.ts",
+      "web/src/compositions/useDate.ts",
+      "web/src/compositions/useElapsedTime.test.ts",
+      "web/src/compositions/useElapsedTime.ts"
+    ],
+    "entries": [
+      {
+        "path": "web/src/compositions/useDate.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "49609448d74006b40d69b684872e83fd456e3e6d"
+      },
+      {
+        "path": "web/src/compositions/useDate.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "053b0737674a2a0cf288b640fb14908aaed8b120"
+      },
+      {
+        "path": "web/src/compositions/useElapsedTime.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "588b45ed9192f06d17cb1b28fd61f18b8e28a374"
+      },
+      {
+        "path": "web/src/compositions/useElapsedTime.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d65d83366799c4a9e6e6d6f7d3112bcff21c3b86"
+      }
+    ],
+    "sha256": "5af27ba2a0a0c87813121ce8ec838b55b78b99bad0a8bb6983599e6b2d5c48d1"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/001-date-duration-integrity/context.json",
+      "sha256": "d7f9fdb4e3ed70884739e37ada6df9cca40893c4b4763ad2da69ecdcd999c32e"
+    },
+    "report": {
+      "path": "development/tasks/001-date-duration-integrity/report.md",
+      "sha256": "d681be69f1cee31c02da2b06a2262e53628893532b263db4b948261cb2376631",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/001-date-duration-integrity/spec-review.md",
+      "sha256": "f7fd37cbfa8bfbd9ad26cf07a7463fe8f3a1e440238ad288d719268f4ac45583",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/001-date-duration-integrity/quality-review.md",
+      "sha256": "9fef23dfd3825ddcfccbf552d7b96fc1e27995679ccda5eb3bfebe6d9561d7a7",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-5e304e3258a168a616cfca7cf43c7a51f860b8d87ca81abdf79156ac047caa56",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "105acf141afc500132bded78e65dd863991582104d5f50eb5d70d204dac3a82d",
+      "evidence_log": {
+        "path": "development/evidence/006-001-date-duration-integrity.log",
+        "sha256": "f9b300a9e443297395f5634e3bdba059d6897ad67a5fceadb849e75ace9fd9b5",
+        "size": 32000
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-5e304e3258a168a616cfca7cf43c7a51f860b8d87ca81abdf79156ac047caa56"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

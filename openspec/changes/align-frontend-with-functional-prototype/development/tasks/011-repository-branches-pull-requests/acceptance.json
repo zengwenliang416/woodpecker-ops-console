@@ -1,0 +1,185 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "011-repository-branches-pull-requests",
+  "generated_at": "2026-08-13T07:11:13.098Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/repo/RepoPipelineReference.test.ts",
+      "web/src/components/repo/RepoPipelineReference.vue",
+      "web/src/compositions/usePipeline.ts",
+      "web/src/lib/pipelineRefs.test.ts",
+      "web/src/lib/pipelineRefs.ts",
+      "web/src/views/repo/RepoBranch.test.ts",
+      "web/src/views/repo/RepoBranch.vue",
+      "web/src/views/repo/RepoBranches.test.ts",
+      "web/src/views/repo/RepoBranches.vue",
+      "web/src/views/repo/RepoPullRequest.test.ts",
+      "web/src/views/repo/RepoPullRequest.vue",
+      "web/src/views/repo/RepoPullRequests.test.ts",
+      "web/src/views/repo/RepoPullRequests.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/repo/RepoPipelineReference.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f54c67d8e4ac05557147cece39da5c681b9656fe"
+      },
+      {
+        "path": "web/src/components/repo/RepoPipelineReference.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fac07f8fc8cd8bc75d7af203ef43a4f594aed981"
+      },
+      {
+        "path": "web/src/compositions/usePipeline.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "de24adc73791f04cc315110b1fd80866702c5bac"
+      },
+      {
+        "path": "web/src/lib/pipelineRefs.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4e1cf37531d6e98ea34d5af601f9902725cd784a"
+      },
+      {
+        "path": "web/src/lib/pipelineRefs.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5035650157dbd101d1bd40e5eea782a5facdda0b"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranch.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fdc8096914dbe8b3d3dbe347e4075023e872c855"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranch.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "50a3af68bb269c8ef946b376c6561b55375d23c6"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranches.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ec8564f1c050c8b8298b67b7797c9299177d65da"
+      },
+      {
+        "path": "web/src/views/repo/RepoBranches.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4c79a6d4b3a4bcaa18ba54738d1870b069523aeb"
+      },
+      {
+        "path": "web/src/views/repo/RepoPullRequest.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0eda7707a8be6f63d3eda5a428df37ed9722e040"
+      },
+      {
+        "path": "web/src/views/repo/RepoPullRequest.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2708323f5c3b7efaf8405d584277717b76c14f9b"
+      },
+      {
+        "path": "web/src/views/repo/RepoPullRequests.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8f3d9523e445623d5d97abec004e1303cc19402f"
+      },
+      {
+        "path": "web/src/views/repo/RepoPullRequests.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "39060b47b9f4f8f067815795cd0a8e5dd47c4419"
+      }
+    ],
+    "sha256": "13534a60ae0d734dab2006134f73221b6691b6ddf413d45f74d4891648f53717"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/011-repository-branches-pull-requests/context.json",
+      "sha256": "706080c70b4fd15966dd10fe8af602cd32800ce1e3e6e7859ae9d06ff742f74d"
+    },
+    "report": {
+      "path": "development/tasks/011-repository-branches-pull-requests/report.md",
+      "sha256": "eba6a8657cde1ff817b489329d6ba75d65bc1f77770b46478423197ea869b2b8",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/011-repository-branches-pull-requests/spec-review.md",
+      "sha256": "7a50d0416a0aedb548c8877a4812dcc5e80ca51f87728d7573511229c228b0f8",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/011-repository-branches-pull-requests/quality-review.md",
+      "sha256": "d3c69c21503d6c65c98efd1e28b5060c668dd8f1aa32d46da6c8641955442318",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-2ae9f0a40b31fcf4db07dc81475d8bb19be736126f00b785d6a1985c9ea63342",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "6e60426af339c5f91fcdf565290e5ad88c9e71415cc66307b76255f6e3c33b65",
+      "evidence_log": {
+        "path": "development/evidence/016-011-repository-branches-pull-requests.log",
+        "sha256": "6e0b82852f28ce82a0e6c74a48f119d59c7a1196ba3305297afc455d8f9cbe2a",
+        "size": 32010
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-2ae9f0a40b31fcf4db07dc81475d8bb19be736126f00b785d6a1985c9ea63342"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-2ae9f0a40b31fcf4db07dc81475d8bb19be736126f00b785d6a1985c9ea63342"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

@@ -1,0 +1,325 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "016-administration-routes",
+  "generated_at": "2026-08-13T07:11:13.423Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/admin/settings/AdminSettingsNav.test.ts",
+      "web/src/components/admin/settings/AdminSettingsNav.vue",
+      "web/src/components/admin/settings/forges/AdminForgeForm.test.ts",
+      "web/src/components/admin/settings/forges/AdminForgeForm.vue",
+      "web/src/components/admin/settings/queue/AdminQueueStats.test.ts",
+      "web/src/components/admin/settings/queue/AdminQueueStats.vue",
+      "web/src/components/agent/AgentManager.test.ts",
+      "web/src/components/agent/AgentManager.vue",
+      "web/src/router.test.ts",
+      "web/src/views/admin/AdminAgents.test.ts",
+      "web/src/views/admin/AdminAgents.vue",
+      "web/src/views/admin/AdminInfo.test.ts",
+      "web/src/views/admin/AdminInfo.vue",
+      "web/src/views/admin/AdminOrgs.test.ts",
+      "web/src/views/admin/AdminOrgs.vue",
+      "web/src/views/admin/AdminQueue.test.ts",
+      "web/src/views/admin/AdminQueue.vue",
+      "web/src/views/admin/AdminRegistries.test.ts",
+      "web/src/views/admin/AdminRegistries.vue",
+      "web/src/views/admin/AdminRepos.test.ts",
+      "web/src/views/admin/AdminRepos.vue",
+      "web/src/views/admin/AdminSecrets.test.ts",
+      "web/src/views/admin/AdminSecrets.vue",
+      "web/src/views/admin/AdminSettingsWrapper.test.ts",
+      "web/src/views/admin/AdminSettingsWrapper.vue",
+      "web/src/views/admin/AdminUsers.test.ts",
+      "web/src/views/admin/AdminUsers.vue",
+      "web/src/views/admin/forges/AdminForge.test.ts",
+      "web/src/views/admin/forges/AdminForge.vue",
+      "web/src/views/admin/forges/AdminForgeCreate.test.ts",
+      "web/src/views/admin/forges/AdminForgeCreate.vue",
+      "web/src/views/admin/forges/AdminForges.test.ts",
+      "web/src/views/admin/forges/AdminForges.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/admin/settings/AdminSettingsNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f2b4b7f75e2e998e79d95a104fb2df812d8fa2db"
+      },
+      {
+        "path": "web/src/components/admin/settings/AdminSettingsNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "746f9ac94972f384e165504e3488511f7024022d"
+      },
+      {
+        "path": "web/src/components/admin/settings/forges/AdminForgeForm.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9faef43b10dbef4ddcb038332a2f185b7eef74ce"
+      },
+      {
+        "path": "web/src/components/admin/settings/forges/AdminForgeForm.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9540b266bbdaf0f733e2214ef15557d626adc907"
+      },
+      {
+        "path": "web/src/components/admin/settings/queue/AdminQueueStats.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ed8c987a7bbb6fb276fec54f46e72001fd44dfb0"
+      },
+      {
+        "path": "web/src/components/admin/settings/queue/AdminQueueStats.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "904e7ee60e2c9eb80cdcdddd77eed57481949e23"
+      },
+      {
+        "path": "web/src/components/agent/AgentManager.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "df53fd7e50adcbce6d7758e950f74bc3721680a1"
+      },
+      {
+        "path": "web/src/components/agent/AgentManager.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3807c2f3c0a6683f2965447d5ed6c860c631d706"
+      },
+      {
+        "path": "web/src/router.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fc059a1d177ab7f8dbb37090bc51951c5e776882"
+      },
+      {
+        "path": "web/src/views/admin/AdminAgents.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "493538cc65ef8e4d1291dccb904a5c57114cea4c"
+      },
+      {
+        "path": "web/src/views/admin/AdminAgents.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e290f9baca8c209e567b71630286ce94e74e2287"
+      },
+      {
+        "path": "web/src/views/admin/AdminInfo.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "84b964e505d641baba3d514c60d609adbe9e5e2e"
+      },
+      {
+        "path": "web/src/views/admin/AdminInfo.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "12d4172c6c6994b011118ab24723a26c7f29b0c5"
+      },
+      {
+        "path": "web/src/views/admin/AdminOrgs.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "da8432f8ea783b66ba252646b641bc8763904d0a"
+      },
+      {
+        "path": "web/src/views/admin/AdminOrgs.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "388a263f8d285c7f499e7d5062cafccbb1940202"
+      },
+      {
+        "path": "web/src/views/admin/AdminQueue.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2960cccb29c2297b2c11e58d3e983511bd6f1108"
+      },
+      {
+        "path": "web/src/views/admin/AdminQueue.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e7e08c67b10ddb94db1d1dd30f47112f3a95cc2f"
+      },
+      {
+        "path": "web/src/views/admin/AdminRegistries.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d20064de6cde617c01e3a9b9ab7ff3622c579f13"
+      },
+      {
+        "path": "web/src/views/admin/AdminRegistries.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4b7523a76e35ad402f0a0f34a2473a9aafe96b9b"
+      },
+      {
+        "path": "web/src/views/admin/AdminRepos.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1dbf8838c05ea0c09351f9cd41f8d458f1b859d4"
+      },
+      {
+        "path": "web/src/views/admin/AdminRepos.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c56c5a97e245b7fa25fc963a5848d5e90a931da8"
+      },
+      {
+        "path": "web/src/views/admin/AdminSecrets.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "dc240605a96b4caa4ba6bfe5375d7266a5d8fac5"
+      },
+      {
+        "path": "web/src/views/admin/AdminSecrets.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62c0e980735179f645d6b9eac3ea9023425fa7bf"
+      },
+      {
+        "path": "web/src/views/admin/AdminSettingsWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6fe7771fb7c8957270189d304bfc96b8ddfc6544"
+      },
+      {
+        "path": "web/src/views/admin/AdminSettingsWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b24dde73cec16f2fa40eb2d96ed07a45397f7da2"
+      },
+      {
+        "path": "web/src/views/admin/AdminUsers.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f5ff1e7d289a1ec1478d6dd3b44eea585bbbbffa"
+      },
+      {
+        "path": "web/src/views/admin/AdminUsers.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7175538346ed6effa308b113fd87a2087435199a"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForge.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8eac24371e76658035b7fa0348b2019baecb7313"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForge.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b3019ab42ee5ff12c1b3c574d54659b8c00f3fd9"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForgeCreate.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0549604d42a7da102f0fe2339d34444b71a73e97"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForgeCreate.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "378a23b002dda8d3d5495757bc00980e302ffed9"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForges.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b152c668255c8f94c991d6b4ba8b349dee919135"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForges.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "f2867b2603613e32e556bf0411d332792d051dc0"
+      }
+    ],
+    "sha256": "adb2cd8d4089b07ae06570ed377b4dc14fbec2f136ebd94fac3abc47a580004d"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/016-administration-routes/context.json",
+      "sha256": "1a7dc03123e7517b189294699a9855c3b0ee069cffdc61cfada3a7922b35c427"
+    },
+    "report": {
+      "path": "development/tasks/016-administration-routes/report.md",
+      "sha256": "37acd76fbb4014aba877550891f45e142a2e57bc1eb4318dcbc732cfb08cd951",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/016-administration-routes/spec-review.md",
+      "sha256": "ff215289705ccfd2e9a63f3be63b9a581af8552bdd8f7dc07a4636f6867eb1f4",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/016-administration-routes/quality-review.md",
+      "sha256": "8daaff43a9b61676fe16e3cf691728578e1413b44f26ee157b329ea96654f9c9",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-1ededa81d5a7a9b4501bf49dfb79ee9239d75d3c23df46a85370f2e0b8de1f6d",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "affb7b6bd20799273ee387c6a4f74c317d2f7dac2e757dbe4c96565d448429d3",
+      "evidence_log": {
+        "path": "development/evidence/021-016-administration-routes.log",
+        "sha256": "da4c1c04f1196289adf4597526be14d1d7f85913c25d8839319c204bd94530e3",
+        "size": 31998
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-1ededa81d5a7a9b4501bf49dfb79ee9239d75d3c23df46a85370f2e0b8de1f6d"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-1ededa81d5a7a9b4501bf49dfb79ee9239d75d3c23df46a85370f2e0b8de1f6d"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

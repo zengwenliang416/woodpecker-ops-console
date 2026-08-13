@@ -1,0 +1,87 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "014-repository-validation-evidence",
+  "generated_at": "2026-08-13T07:11:13.275Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md"
+    ],
+    "entries": [
+      {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "314ce8bed5d226f3db1489b82d8a0ab45dbba90c"
+      }
+    ],
+    "sha256": "a4b9a7d305ccaff9d6a36ec9106736372a0218b630940e15436e9fe85461b1a4"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/014-repository-validation-evidence/context.json",
+      "sha256": "d1f4f180367799584df975c93945357fcd1aa81a8bcae0dfebb5899a71070a47"
+    },
+    "report": {
+      "path": "development/tasks/014-repository-validation-evidence/report.md",
+      "sha256": "3394c350b68954a3982bad6fd64a6e0c31fb5ca3decd8a6a68c3ef4c908abd83",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/014-repository-validation-evidence/spec-review.md",
+      "sha256": "a500ed81dc82c92b0123f96fdb38495e31e6c5e4a913a9711002f19e0515eba6",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/014-repository-validation-evidence/quality-review.md",
+      "sha256": "7aa0d34e7a8a51cc0ac2300e142f6b22566af4d18dba375a3b9400641c9c2ef2",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-cdf9fa350b8608199ff2698582e584235b4592e38b9235191dbcc0f9e541ffa3",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A1",
+        "A3"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "89db00001fd9b83fff8f639ac07a7b01f154cc0031b41f974c264d513161ef6d",
+      "evidence_log": {
+        "path": "development/evidence/019-014-repository-validation-evidence.log",
+        "sha256": "87c726ec45a724ee9e69e2f76ac347b4bc931dc87fbe299be305dcbb72da095e",
+        "size": 32007
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A1",
+      "parent_id": "A1",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-cdf9fa350b8608199ff2698582e584235b4592e38b9235191dbcc0f9e541ffa3"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-cdf9fa350b8608199ff2698582e584235b4592e38b9235191dbcc0f9e541ffa3"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

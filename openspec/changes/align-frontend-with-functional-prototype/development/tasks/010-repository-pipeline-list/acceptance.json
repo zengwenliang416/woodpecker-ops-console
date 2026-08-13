@@ -1,0 +1,122 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "010-repository-pipeline-list",
+  "generated_at": "2026-08-13T07:11:13.032Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/store/pipelines.test.ts",
+      "web/src/store/pipelines.ts",
+      "web/src/views/repo/RepoPipelines.test.ts",
+      "web/src/views/repo/RepoPipelines.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/store/pipelines.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2fdbd777f9fb637d528d2711c12f5ab4244ebb95"
+      },
+      {
+        "path": "web/src/store/pipelines.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "46e4801ccdf8679dbb3301e33bf470aa0f1a52f5"
+      },
+      {
+        "path": "web/src/views/repo/RepoPipelines.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6502a7f3538f936d7c9f4a71465aa66d483a843e"
+      },
+      {
+        "path": "web/src/views/repo/RepoPipelines.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9ab097e19a62b7d701a0fe3688ed23838e9e823d"
+      }
+    ],
+    "sha256": "3f1cedec5e27d89309b343aad539cdde034f2d25aee899889165c5854316ef33"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/010-repository-pipeline-list/context.json",
+      "sha256": "5c11f0b4a34173a4302a18517caabcdfb4ac28f86f69f692f6e68baf85869e53"
+    },
+    "report": {
+      "path": "development/tasks/010-repository-pipeline-list/report.md",
+      "sha256": "45392b7c6b7e9b1b3281649ba336540dd4fb4a40189bd79a7be51aa763f18883",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/010-repository-pipeline-list/spec-review.md",
+      "sha256": "47699e65a9cdf04f76424a44683630dfa8ff45334e4aa37851dfb46cb4a9e411",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/010-repository-pipeline-list/quality-review.md",
+      "sha256": "c48c2454590a0d4fb4f4a53a8d85b33719bbbea0226a4192621fbedf5076bf10",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-7f83d3aa7c47f2860128bbb16d548965820e8fa64efb3c4b89070505d1a6e251",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "a4d0a051344a48c27c48517fe39b5f6297ac0674af91ed5d2a29aaf6dc487124",
+      "evidence_log": {
+        "path": "development/evidence/015-010-repository-pipeline-list.log",
+        "sha256": "dd68805b8c308c8065e5fa255574839e6214ee82c140cc8dc805ca919e72f26f",
+        "size": 32001
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-7f83d3aa7c47f2860128bbb16d548965820e8fa64efb3c4b89070505d1a6e251"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-7f83d3aa7c47f2860128bbb16d548965820e8fa64efb3c4b89070505d1a6e251"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

@@ -1,0 +1,254 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "012-repository-manual-run-settings",
+  "generated_at": "2026-08-13T07:11:13.164Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/repo/settings/RepoSettingsActionRow.test.ts",
+      "web/src/components/repo/settings/RepoSettingsActionRow.vue",
+      "web/src/components/repo/settings/RepoSettingsNav.test.ts",
+      "web/src/components/repo/settings/RepoSettingsNav.vue",
+      "web/src/components/repo/settings/RepoSettingsSection.test.ts",
+      "web/src/components/repo/settings/RepoSettingsSection.vue",
+      "web/src/components/repo/settings/RepoSettingsTable.test.ts",
+      "web/src/components/repo/settings/RepoSettingsTable.vue",
+      "web/src/lib/repoBadge.test.ts",
+      "web/src/lib/repoBadge.ts",
+      "web/src/views/repo/RepoManualPipeline.test.ts",
+      "web/src/views/repo/RepoManualPipeline.vue",
+      "web/src/views/repo/settings/Actions.test.ts",
+      "web/src/views/repo/settings/Actions.vue",
+      "web/src/views/repo/settings/Badge.test.ts",
+      "web/src/views/repo/settings/Badge.vue",
+      "web/src/views/repo/settings/Crons.test.ts",
+      "web/src/views/repo/settings/Crons.vue",
+      "web/src/views/repo/settings/Extensions.test.ts",
+      "web/src/views/repo/settings/Extensions.vue",
+      "web/src/views/repo/settings/General.test.ts",
+      "web/src/views/repo/settings/General.vue",
+      "web/src/views/repo/settings/Registries.test.ts",
+      "web/src/views/repo/settings/Registries.vue",
+      "web/src/views/repo/settings/RepoSettings.test.ts",
+      "web/src/views/repo/settings/RepoSettings.vue",
+      "web/src/views/repo/settings/Secrets.test.ts",
+      "web/src/views/repo/settings/Secrets.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5e44293d8641d900713355390742a6d62765d4bc"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62873f48aea6628885655497e01627cb5ad142a7"
+      },
+      {
+        "path": "web/src/components/repo/settings/RepoSettingsNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e4e4d6792883741cc2a56fe66c1d25ad9f5e9fc4"
+      },
+      {
+        "path": "web/src/components/repo/settings/RepoSettingsNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4610158945dd3420ec5bdbeb96bba8ee80b59824"
+      },
+      {
+        "path": "web/src/lib/repoBadge.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "02f1f783796ef2d30789270dfe56a7fe22a152dd"
+      },
+      {
+        "path": "web/src/lib/repoBadge.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ad714a98fd6420c30210bfbf0499b0b15bb22975"
+      },
+      {
+        "path": "web/src/views/repo/RepoManualPipeline.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3a40988abd06ad2ad9f23f82c6d660b5d9a68bd2"
+      },
+      {
+        "path": "web/src/views/repo/RepoManualPipeline.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62f53c2a5ab216f193dabda8d2262886db7a7146"
+      },
+      {
+        "path": "web/src/views/repo/settings/Actions.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "278cf33e460f967895fe8c864472d42166c9cce4"
+      },
+      {
+        "path": "web/src/views/repo/settings/Actions.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8b5ead98e4fe8f6f32cb59c84a0b1d05656b9161"
+      },
+      {
+        "path": "web/src/views/repo/settings/Badge.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "25b1101163518e5165329a3c89fd3ae254f493d1"
+      },
+      {
+        "path": "web/src/views/repo/settings/Badge.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "12fd1520d9efd7e9a6b605fc11147d01da866dfd"
+      },
+      {
+        "path": "web/src/views/repo/settings/Crons.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e8c8933a5ab441b727d3e4a94cf290d9f3f4f97d"
+      },
+      {
+        "path": "web/src/views/repo/settings/Crons.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cfade38f0e78041cc4f1393d38349a80c9e17ffb"
+      },
+      {
+        "path": "web/src/views/repo/settings/Extensions.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "246bbc6049369cc5283a06c4a589c3e2f5c86f0e"
+      },
+      {
+        "path": "web/src/views/repo/settings/Extensions.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "be7db11ee478627123e8d672bb64141eca42a9fd"
+      },
+      {
+        "path": "web/src/views/repo/settings/General.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b49a200156aa50c7b91d9c4b5574836f58463ac6"
+      },
+      {
+        "path": "web/src/views/repo/settings/General.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "18af2d330bdc879ce22f3eb95c16a8ede2c9eee2"
+      },
+      {
+        "path": "web/src/views/repo/settings/Registries.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cdaacfce79fdecc79524d06e7cfd27c5e0594651"
+      },
+      {
+        "path": "web/src/views/repo/settings/Registries.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4af04743292279669f7be994e4dd1c95058db11e"
+      },
+      {
+        "path": "web/src/views/repo/settings/RepoSettings.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6555260f59d1815db3d965002dee38c30cf12ad0"
+      },
+      {
+        "path": "web/src/views/repo/settings/RepoSettings.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6568289092937ca3e11a0b54e6d5c1371d621b6b"
+      },
+      {
+        "path": "web/src/views/repo/settings/Secrets.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3ed83edafb4cae114f8fc5621936af21385b5a66"
+      },
+      {
+        "path": "web/src/views/repo/settings/Secrets.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8d89bdb7cb9dbe8fef407a61d99e3f822a0d16d0"
+      }
+    ],
+    "sha256": "c53746f4f95c3f60735bd1cf0a5918a8a4fa0a7225b6e34859a2620569a0b2e5"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/012-repository-manual-run-settings/context.json",
+      "sha256": "648d82bb762379e3a4ee7b72f381213fa5c6ee835791fb4ed62049a0f20b99cb"
+    },
+    "report": {
+      "path": "development/tasks/012-repository-manual-run-settings/report.md",
+      "sha256": "c44d256b5dfd55017642c7664e3da5e65e740bf6e28e4a08bd13a6840c0b4b8b",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/012-repository-manual-run-settings/spec-review.md",
+      "sha256": "c5ccad9f5c9ddded00e31a7c6fb372c23f64a919aa435fa32deb5185d33e9480",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/012-repository-manual-run-settings/quality-review.md",
+      "sha256": "425589d56752d13dde1d6e03461b153de019947191fde65757e1cb2cca708eb7",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-1e7d0ac1840549423d6d3b476ae3ca1534a66861cd6fc78893d96500a2a2cf96",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "813edfae109a8b8e0190a17c329972c55fd1a9cccc225a969f5b9051be1ace9b",
+      "evidence_log": {
+        "path": "development/evidence/017-012-repository-manual-run-settings.log",
+        "sha256": "96f938f39b0f6d6f95151eda0f44d271fde779f7e943e56ffda6c3621213ebca",
+        "size": 32007
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-1e7d0ac1840549423d6d3b476ae3ca1534a66861cd6fc78893d96500a2a2cf96"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-1e7d0ac1840549423d6d3b476ae3ca1534a66861cd6fc78893d96500a2a2cf96"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

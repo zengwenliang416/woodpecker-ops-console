@@ -1,0 +1,99 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "009-pipeline-validation-evidence",
+  "generated_at": "2026-08-13T07:11:12.969Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/router.test.ts"
+    ],
+    "entries": [
+      {
+        "path": "web/src/router.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fc059a1d177ab7f8dbb37090bc51951c5e776882"
+      }
+    ],
+    "sha256": "426d934492d92db9e63542062cc2d011fa88afd6e472ccb6a3d8056610b935a9"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/009-pipeline-validation-evidence/context.json",
+      "sha256": "d4d6b91c42724763abf7e21cf6a8fb9bb6f42b3a58cceeec2958d2d033a5ae7d"
+    },
+    "report": {
+      "path": "development/tasks/009-pipeline-validation-evidence/report.md",
+      "sha256": "9af805a3f57c4a6eaaffa82c7bb857f9552b6083f3749465c19595043bab833c",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/009-pipeline-validation-evidence/spec-review.md",
+      "sha256": "34f60a3cf7bb2482f43fcd8957cde9ca720729311cef24f57e41f7b6e7dc4b92",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/009-pipeline-validation-evidence/quality-review.md",
+      "sha256": "02e53c725ae935270db4e418fe0d97f940f84d37a96d667c1559e9a4c5bdbf4c",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-f7bfba11408dec7de04bb44534f48db57c3662a3d6215234b8a7d749cbd9d198",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "c303ba2cb7fc87e385a58ccd6156331b970a4b396ace22e76d1d9b523904e311",
+      "evidence_log": {
+        "path": "development/evidence/014-009-pipeline-validation-evidence.log",
+        "sha256": "f761192347ad8653d895044c59e8a055988b2a1a5cbfad2d290e1fe41c72b739",
+        "size": 32005
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f7bfba11408dec7de04bb44534f48db57c3662a3d6215234b8a7d749cbd9d198"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f7bfba11408dec7de04bb44534f48db57c3662a3d6215234b8a7d749cbd9d198"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f7bfba11408dec7de04bb44534f48db57c3662a3d6215234b8a7d749cbd9d198"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

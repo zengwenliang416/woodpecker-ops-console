@@ -1,0 +1,143 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "008-pipeline-regression-coverage",
+  "generated_at": "2026-08-13T07:11:12.915Z",
+  "recorded_at": "2026-08-13T07:10:30.417Z",
+  "status": "approved",
+  "reviewed_git_head": "a84e025123b50d0b072898b72bb28835e2d34e3d",
+  "reviewed_git_tree": "19b477339704d109fd9f846791fcd77468e2f322",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/components/repo/pipeline/PipelineLog.test.ts",
+      "web/src/router.test.ts",
+      "web/src/views/repo/pipeline/Pipeline.test.ts",
+      "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+      "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+      "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+      "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+      "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+      "web/src/views/repo/pipeline/PipelineWrapper.vue"
+    ],
+    "entries": [
+      {
+        "path": "web/src/components/repo/pipeline/PipelineLog.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b12602ca60206794512c1faa847f0a29bb3d7190"
+      },
+      {
+        "path": "web/src/router.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "fc059a1d177ab7f8dbb37090bc51951c5e776882"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/Pipeline.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3bc7c5f96a6bb49c5265825759086791142e3316"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineChangedFiles.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "62f0b9cb4e053b58b02fbdb1f062598a77258a45"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineConfig.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "198051942eda498c5809a3d3ef7b05f98c53d4a7"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineDebug.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "3d96f1c051238ed9b067cd4cdd670d24d6232c11"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineErrors.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b880299d8636f54b7b32fe8298c32d54c84ffee2"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "1d5d55c62f6663635486af59a96e9a351dea4f3b"
+      },
+      {
+        "path": "web/src/views/repo/pipeline/PipelineWrapper.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "819e8f83ad9d8a06ab793d806b04f60b449a39b5"
+      }
+    ],
+    "sha256": "10ab34c11c3bf433241e7c5b78c3af60caef502bb8834e0877cb05eed1ee9735"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/008-pipeline-regression-coverage/context.json",
+      "sha256": "5327d9cb42ee092d86babdce437641ed1e9d3fc38f16f72f663ad428e8ea2d16"
+    },
+    "report": {
+      "path": "development/tasks/008-pipeline-regression-coverage/report.md",
+      "sha256": "87a774a270fb7b21704e0d9a8a52160f5599d176d96028fe035fa00ee2735492",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/008-pipeline-regression-coverage/spec-review.md",
+      "sha256": "3d4027c205a8b80f7a63001f356abd9693b8e17777c6c49456e7df89c9c47f2b",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/008-pipeline-regression-coverage/quality-review.md",
+      "sha256": "24ad294de0831b28e011c4b7a6f4d141455988c2fa0aa2fe3c8a3c33688c9c55",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-6b4502eb5d25049736fbb6cf6794a772b59a2fcf203a4bea601d0ede6afbc9e1",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/evidence/verify_historical_task_acceptance.mjs",
+      "assertion_ids": [
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T07:10:30.417Z",
+      "validation_receipt_sha256": "a5950c0894ec56e17b11153e8135e239b73466bb46f8f4c700a6f25b2f839930",
+      "evidence_log": {
+        "path": "development/evidence/013-008-pipeline-regression-coverage.log",
+        "sha256": "3306316389806c05eadbcd6d30bfbec992841ed9ff7243c27bcd94eae6dfaa2c",
+        "size": 32005
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-6b4502eb5d25049736fbb6cf6794a772b59a2fcf203a4bea601d0ede6afbc9e1"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-6b4502eb5d25049736fbb6cf6794a772b59a2fcf203a4bea601d0ede6afbc9e1"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}
