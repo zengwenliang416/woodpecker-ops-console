@@ -2,11 +2,11 @@
   "schema": "specnav.task-acceptance-evidence.v2",
   "generated_by": "specnav-development/task-acceptance-evidence",
   "task_id": "021-infrastructure-route-reverification",
-  "generated_at": "2026-08-13T13:53:21.247Z",
-  "recorded_at": "2026-08-13T13:53:02.034Z",
+  "generated_at": "2026-08-13T14:14:38.981Z",
+  "recorded_at": "2026-08-13T14:13:51.263Z",
   "status": "approved",
-  "reviewed_git_head": "473ff84ecccca2b450ef9aadcb3af9018bc42a26",
-  "reviewed_git_tree": "085dca8aef28aeb46161359b8dcfd5bb6757bffd",
+  "reviewed_git_head": "c939d9a9677c2258d447387df0fb4d7d0de0d5b4",
+  "reviewed_git_tree": "178e40a644e499058a559f9046ea28ec348d5664",
   "implementation_scope": {
     "included_patterns": [
       "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
@@ -24,7 +24,7 @@
         "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
         "mode": "100644",
         "type": "blob",
-        "object_id": "fed39b05d8bc5d35c90633e6b452636753ae42b8"
+        "object_id": "c82bf51cd167cc80cd7de30d57ad8cfcf1d27332"
       },
       {
         "path": "web/src/assets/locales/en.json",
@@ -147,7 +147,7 @@
         "object_id": "abf5010dd98d73c85c874798c42ad7f68e0630f6"
       }
     ],
-    "sha256": "98a24ba81b33475684ae374f0df47a210665db9e0f7503f7c7f7fe31fa8444f3"
+    "sha256": "3e5b0547239144983831cbb13cf01e2c05f116c607d68668a9fe6a1aee5d4a6a"
   },
   "artifacts": {
     "context": {
@@ -166,21 +166,21 @@
     },
     "quality_review": {
       "path": "development/tasks/021-infrastructure-route-reverification/quality-review.md",
-      "sha256": "535522247cc829f6695bb8c8e4fa37b476f3e04a10295f67ef3821ae3a569b1b",
+      "sha256": "b68bf65f5f09b1bc57b81bfde275809c2b88b8949149d02e8267d43941a00661",
       "verdict": "approved"
     }
   },
   "test_runs": [
     {
-      "id": "receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e",
+      "id": "receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96",
       "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/evidence/validate_task.mjs",
       "assertion_ids": ["A1", "A2", "A3", "A4"],
-      "recorded_at": "2026-08-13T13:53:02.034Z",
-      "validation_receipt_sha256": "ac4f952809b6bd54fe08331c380335f43b3a2c82b54620a5adc443acfa932e1e",
+      "recorded_at": "2026-08-13T14:13:51.263Z",
+      "validation_receipt_sha256": "c0754f31eb6c61dad55d5103fbf8f6756a545dcb8d0f8a5bd988f03fb0a74cfb",
       "evidence_log": {
-        "path": "development/evidence/028-021-infrastructure-route-reverification.log",
-        "sha256": "dca1721a08497e2e34f6d12eebabdadf6d8561e629965275475babb54dd34910",
-        "size": 6487
+        "path": "development/evidence/029-021-infrastructure-route-reverification.log",
+        "sha256": "dfeac0e8468a3519d34263e12bb0961ad6fde1da5b58e206d3c0ded0a6647645",
+        "size": 6507
       }
     }
   ],
@@ -189,7 +189,7 @@
       "id": "A1",
       "parent_id": "A1",
       "status": "passing",
-      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "test_run_ids": ["receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
@@ -198,7 +198,7 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "test_run_ids": ["receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -207,7 +207,7 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "test_run_ids": ["receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
@@ -216,7 +216,7 @@
       "id": "A4",
       "parent_id": "A4",
       "status": "passing",
-      "test_run_ids": ["receipt-68ed6dd97843fa0309ca1d9264fd46c552ed9fc2878fc7f0d05c715a6438d47e"],
+      "test_run_ids": ["receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
