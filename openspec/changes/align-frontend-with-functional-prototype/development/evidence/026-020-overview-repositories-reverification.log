@@ -1,0 +1,52 @@
+Task 020 closure-HEAD validation
+reviewed_head=622e858be7d6f5f74f37e7ad1cfccbb094771454
+reviewed_tree=50747edc197caf363edd93b5688d4ca53e255aed
+
+## Focused Vitest
+
+Test Files  5 passed (5)
+Tests       26 passed (26)
+
+## Full Vitest
+
+Test Files  87 passed (87)
+Tests       513 passed (513)
+
+## Prettier
+
+All matched files use Prettier code style.
+
+## ESLint
+
+eslint --max-warnings 0 . passed.
+
+## Vue TypeScript
+
+vue-tsc --noEmit passed.
+
+## Vite build
+
+vite build --base=/BASE_PATH passed.
+The two existing non-module warnings for /web-config.js and /assets/custom.js remain non-blocking.
+
+## Mock API smoke
+
+{"ok":true,"fixture":"020-overview-repositories-reverification","repositories":3,"feed":7,"forges":2,"agents":2,"pipelines":3,"states":["admin/populated","normal/populated","admin/empty","admin/partial"]}
+
+## Strict evidence verifier
+
+{"ok":true,"runId":"1eae7bc3-e742-4aac-bce0-ec61105eebb8","measurements":20,"screenshots":20,"rows":[2,3],"normalUserAdminRequests":0,"expectedPartialHttpErrors":2,"pageOverflowStates":[],"rawI18nStates":[],"checksumsVerified":true}
+
+## Persistent red-team
+
+{"schema":"woodpecker.overview-repositories-verifier-redteam.v1","ok":true,"positiveVerifierExitCode":0,"mutations":[{"id":"run-id","rejected":true,"code":1},{"id":"wrong-theme","rejected":true,"code":1},{"id":"wrong-locale","rejected":true,"code":1},{"id":"tampered-content","rejected":true,"code":1},{"id":"missing-state","rejected":true,"code":1},{"id":"wrong-role","rejected":true,"code":1},{"id":"wrong-route","rejected":true,"code":1},{"id":"unhealthy-browser","rejected":true,"code":1},{"id":"raw-i18n","rejected":true,"code":1},{"id":"raw-server-toast","rejected":true,"code":1},{"id":"normal-user-admin-request","rejected":true,"code":1},{"id":"unexpected-http-error","rejected":true,"code":1},{"id":"horizontal-overflow","rejected":true,"code":1},{"id":"source-identity","rejected":true,"code":1},{"id":"png-signature","rejected":true,"code":1}]}
+
+## Syntax and structured data
+
+Task evidence JavaScript syntax passed.
+mock_api.py syntax passed.
+26 JSON files and 722 JSONL records parsed.
+
+## Git whitespace check
+
+git diff --check passed.

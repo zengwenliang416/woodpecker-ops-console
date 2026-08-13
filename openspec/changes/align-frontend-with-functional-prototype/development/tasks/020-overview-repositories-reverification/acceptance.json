@@ -2,11 +2,11 @@
   "schema": "specnav.task-acceptance-evidence.v2",
   "generated_by": "specnav-development/task-acceptance-evidence",
   "task_id": "020-overview-repositories-reverification",
-  "generated_at": "2026-08-13T09:40:18.070Z",
-  "recorded_at": "2026-08-13T09:38:39.080Z",
+  "generated_at": "2026-08-13T10:47:59.133Z",
+  "recorded_at": "2026-08-13T10:47:07.795Z",
   "status": "approved",
-  "reviewed_git_head": "96ae4c2713130954a38a27ba4cd8788cff3bc9b0",
-  "reviewed_git_tree": "88e790587f5894073ed7c4031e935be3ed6e9271",
+  "reviewed_git_head": "622e858be7d6f5f74f37e7ad1cfccbb094771454",
+  "reviewed_git_tree": "50747edc197caf363edd93b5688d4ca53e255aed",
   "implementation_scope": {
     "included_patterns": [
       "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
@@ -28,7 +28,7 @@
         "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
         "mode": "100644",
         "type": "blob",
-        "object_id": "314ce8bed5d226f3db1489b82d8a0ab45dbba90c"
+        "object_id": "fed39b05d8bc5d35c90633e6b452636753ae42b8"
       },
       {
         "path": "web/src/App.test.ts",
@@ -103,7 +103,7 @@
         "object_id": "cd928980d69f3c938b765bb2ad4cb51f06c9ebd4"
       }
     ],
-    "sha256": "9f8524cefafc08c3640b2d57b7cb500747778eecaf7cea91fe77d8c54e311ca9"
+    "sha256": "0599854aab452e182e7ffa538450ae2fc29d8314f1eb05406e3f47570182e454"
   },
   "artifacts": {
     "context": {
@@ -128,15 +128,15 @@
   },
   "test_runs": [
     {
-      "id": "receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf",
-      "command": "cd web && pnpm exec vitest run src/App.test.ts src/views/Overview.test.ts src/views/Repos.test.ts src/lib/repoMetrics.test.ts src/store/repos.test.ts && pnpm test -- --run && pnpm exec prettier --check <task-020 committed text files> && pnpm lint && pnpm typecheck && pnpm build && cd .. && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/mock_api_smoke.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/verify_evidence.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/redteam_verifier.mjs && node --check <task-020 evidence scripts> && python3 -m py_compile <task-020 mock API equivalent compile> && parse task JSON/JSONL && git diff --check",
+      "id": "receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29",
+      "command": "cd web && pnpm exec vitest run src/App.test.ts src/views/Overview.test.ts src/views/Repos.test.ts src/lib/repoMetrics.test.ts src/store/repos.test.ts && pnpm test -- --run && pnpm exec prettier --check <task-020 committed text and closure files> && pnpm lint && pnpm typecheck && pnpm build && cd .. && node <task-020 mock smoke, strict verifier, and 15-mutation red-team> && node --check <task-020 evidence scripts> && python3 -m py_compile <task-020 mock API> && parse task JSON/JSONL && git diff --check",
       "assertion_ids": ["A1", "A2", "A3", "A4"],
-      "recorded_at": "2026-08-13T09:38:39.080Z",
-      "validation_receipt_sha256": "e05d986c4e571dd6a2f5673588fbb27bcbc3a6236ca716ce143c222981c1fdf1",
+      "recorded_at": "2026-08-13T10:47:07.795Z",
+      "validation_receipt_sha256": "11bb40591b8676e2cea8c4eb8aec634a77755149c3a309288af88aebd482d1ba",
       "evidence_log": {
-        "path": "development/evidence/025-020-overview-repositories-reverification.log",
-        "sha256": "0b2776b8a93c73963412f15066b3269234c3e86302f497e67f3bd5f285271147",
-        "size": 3472
+        "path": "development/evidence/026-020-overview-repositories-reverification.log",
+        "sha256": "a398bad571b044154627128bdd9db368024b8ebf515110656c442342c64dfd15",
+        "size": 2152
       }
     }
   ],
@@ -145,7 +145,7 @@
       "id": "A1",
       "parent_id": "A1",
       "status": "passing",
-      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "test_run_ids": ["receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
@@ -154,7 +154,7 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "test_run_ids": ["receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -163,7 +163,7 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "test_run_ids": ["receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
@@ -172,7 +172,7 @@
       "id": "A4",
       "parent_id": "A4",
       "status": "passing",
-      "test_run_ids": ["receipt-c34225555fe5d4924eefed0f9b7f85f12ce70c2522e939feb4996c48cb0819cf"],
+      "test_run_ids": ["receipt-64219d16b284e2cf02b77081e8ce8c29a827d485c815b1d543a14966f9ef3c29"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
