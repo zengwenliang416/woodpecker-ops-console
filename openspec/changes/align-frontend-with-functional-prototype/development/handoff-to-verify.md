@@ -705,8 +705,8 @@
   on closure commit `724b95b2b43d1734216639bdbada6ff02342f245`.
 - PASS: task `023` has approved task-local acceptance for `A1-A4` bound to
   signed receipt
-  `receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e`
-  on implementation commit `2b14cd2a7010e9e1c3923d6ba4d5b171fcad3c17`.
+  `receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6`
+  on closure commit `f9f0bab6c30788b3d8c80c5d336753a03dbf78ad`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks

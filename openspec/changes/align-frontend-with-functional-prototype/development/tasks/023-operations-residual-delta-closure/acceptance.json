@@ -2,11 +2,11 @@
   "schema": "specnav.task-acceptance-evidence.v2",
   "generated_by": "specnav-development/task-acceptance-evidence",
   "task_id": "023-operations-residual-delta-closure",
-  "generated_at": "2026-08-13T19:03:15.411Z",
-  "recorded_at": "2026-08-13T18:59:14.810Z",
+  "generated_at": "2026-08-13T19:13:35.206Z",
+  "recorded_at": "2026-08-13T19:12:50.677Z",
   "status": "approved",
-  "reviewed_git_head": "2b14cd2a7010e9e1c3923d6ba4d5b171fcad3c17",
-  "reviewed_git_tree": "257322836483515d5a408f5c343385d24abd9918",
+  "reviewed_git_head": "f9f0bab6c30788b3d8c80c5d336753a03dbf78ad",
+  "reviewed_git_tree": "b2c572a5ca47aff7b79c3fe07699e2d240b9eea3",
   "implementation_scope": {
     "included_patterns": [
       "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
@@ -390,14 +390,14 @@
   },
   "test_runs": [
     {
-      "id": "receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e",
+      "id": "receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6",
       "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/validate_task.mjs",
       "assertion_ids": ["A1", "A2", "A3", "A4"],
-      "recorded_at": "2026-08-13T18:59:14.810Z",
-      "validation_receipt_sha256": "38c6dd1e8ae838d2289b3db4782f8486ee400b53a3dd12020bdf9ac9c8ba99b2",
+      "recorded_at": "2026-08-13T19:12:50.677Z",
+      "validation_receipt_sha256": "d485ade4fc421a8a37505d142997c967bc8e432bcbc46d35a17df703f4b99fff",
       "evidence_log": {
-        "path": "development/evidence/035-023-operations-residual-delta-closure.log",
-        "sha256": "f7776f626e1eff60800f89cc9237ee2b248bcc0367b9b0cbb640ede24258bb66",
+        "path": "development/evidence/036-023-operations-residual-delta-closure.log",
+        "sha256": "a422fd55515a4adfa68bffb5408a4ad285fbe3ea2bfcf533f91816d2d9b426d3",
         "size": 15469
       }
     }
@@ -407,7 +407,7 @@
       "id": "A1",
       "parent_id": "A1",
       "status": "passing",
-      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "test_run_ids": ["receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
@@ -416,7 +416,7 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "test_run_ids": ["receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -425,7 +425,7 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "test_run_ids": ["receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
@@ -434,7 +434,7 @@
       "id": "A4",
       "parent_id": "A4",
       "status": "passing",
-      "test_run_ids": ["receipt-764bcd08e38b50817349be018ae59fc308e275238a193b9f32ccfc342465040e"],
+      "test_run_ids": ["receipt-0e2d1ca52fd0219f62c0fe82f0463339fc4d663fcb798cc42200e442c0e8cee6"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
