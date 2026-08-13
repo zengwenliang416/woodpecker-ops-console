@@ -1,0 +1,13 @@
+# command: web/src/compositions/useDate.test.ts
+# exit_status: 2
+# duration_ms: 19
+
+## stdout
+(empty)
+
+## stderr
+web/src/compositions/useDate.test.ts: line 1: import: command not found
+web/src/compositions/useDate.test.ts: line 3: import: command not found
+web/src/compositions/useDate.test.ts: line 5: syntax error near unexpected token `'useDate','
+web/src/compositions/useDate.test.ts: line 5: `describe('useDate', () => {'
+

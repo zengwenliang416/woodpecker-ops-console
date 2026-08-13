@@ -100,9 +100,16 @@
   `84b42687-5a1a-402c-952f-6e5fd1ac338a` strictly verifies `62`
   production/prototype states for rows `46-57`; all `13` persisted verifier
   mutations are rejected.
+- `022-deployment-route-reverification` / baseline task `6.3`: all ten
+  deployment routes now expose truthful initial, error, empty, missing,
+  filtered, refresh, timestamp, request-ownership, and mutation-confirmation
+  states with exhaustive bilingual deployment vocabulary. Current run
+  `0051a9bc-3312-4bf4-a850-6e4d4a205920` strictly verifies `54`
+  production/prototype states for rows `58-67`; all `15` persisted verifier
+  mutations are rejected.
 - Phase 5 is complete. This remains an incremental development snapshot rather
-  than the final six-domain verification handoff: the `11` baseline tasks in
-  phases `6-8`, deployment rows `58-67`, blocked repository row `4`, and
+  than the final six-domain verification handoff: the `10` baseline tasks in
+  phases `6-8`, blocked repository row `4`, and
   complete change-level acceptance remain open.
 
 ## Files Changed
@@ -185,6 +192,12 @@
   state copy, focused regressions, task-local Mock API/capture/verifier,
   persistent 13-mutation red-team, `62` measurement/PNG pairs, approved task
   acceptance for `A1-A4`, and closure lifecycle records.
+- Deployment re-verification: ten deployment route views, shared confirmed
+  request and typed presentation compositions, deployment collection/detail
+  store ownership, typed policy response, bilingual state copy, focused
+  regressions, task-local Mock API/capture/verifier, persistent 15-mutation
+  red-team, `54` measurement/PNG pairs, approved task acceptance for `A1-A4`,
+  and closure lifecycle records.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -206,7 +219,8 @@
   `development/tasks/018-authorization-boundaries/report.md`, and
   `development/tasks/019-route-family-parity-closure/report.md`, and
   `development/tasks/020-overview-repositories-reverification/report.md`, and
-  `development/tasks/021-infrastructure-route-reverification/report.md`.
+  `development/tasks/021-infrastructure-route-reverification/report.md`, and
+  `development/tasks/022-deployment-route-reverification/report.md`.
 
 ## Requirements Covered
 
@@ -297,6 +311,13 @@
   `62/62`, and all `13` isolated verifier mutations pass. This approval does
   not cover task `6.3+`, row `4`, rows `58-67`, or complete change-level
   acceptance.
+- Task-scoped `A1`, `A2`, `A3`, and `A4` are approved for slice `022`.
+  Rows `58-67` pass exact current-byte production/prototype dark
+  Simplified-Chinese desktop/390px comparison plus production light-English
+  and boundary states. Focused `9/39`, full `103/582`, strict `54/54`, and all
+  `15` isolated verifier mutations pass, including bilingual rendering of the
+  server-emitted failed target phase. This approval does not cover task
+  `6.4+`, row `4`, or complete change-level acceptance.
 
 ## Prototype Decisions Implemented
 
@@ -430,6 +451,11 @@
   mutation ownership, localized feedback, and focused tests. It adds no route,
   API request, payload, backend, permission algorithm, persistence, migration,
   dependency, production fixture, or approved-prototype contract.
+- Slice `022` changes only existing deployment presentation, request/store and
+  mutation-confirmation ownership, typed existing API responses, localized
+  feedback, and focused tests. It adds no route, endpoint, backend behavior,
+  persistence, permission algorithm, migration, dependency, production
+  fixture, or approved-prototype contract.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -505,7 +531,12 @@
   preservation, empty/filter-empty states, route switching, overlapping
   refreshes, polling exclusion, mutation ownership, role visibility,
   unsupported controls, filters, and newest store ownership.
-- The current full frontend regression baseline is `95` test files and `549`
+- Deployment tests cover initial loading, retry, confirmed-data preservation,
+  empty/filter-empty and missing states, route switching, overlapping requests,
+  query-owned wizard initialization, duplicate submission, polling/mutation
+  exclusion through confirmation reload, bilingual enum presentation,
+  timestamp fallbacks, policy scope, and newest store ownership.
+- The current full frontend regression baseline is `103` test files and `582`
   tests.
 
 ## Local Validation
@@ -613,6 +644,17 @@
   overflow, raw i18n, unexpected HTTP failures, administrator controls, PNG
   integrity, checksums, and shared run ID. Its persistent red-team rejects all
   `13` isolated corruptions.
+- PASS: Deployment focused suite, `9` files / `39` tests, and complete frontend
+  suite, `103` files / `582` tests.
+- PASS: run `0051a9bc-3312-4bf4-a850-6e4d4a205920` contains exactly `54`
+  measurements and `54` PNGs for rows `58-67`, split into `34` production and
+  `20` approved-prototype states with desktop/mobile, theme, locale, empty,
+  missing, request-error, and rejected-mutation coverage.
+- PASS: the strict task `022` verifier checks exact inventory, source/service
+  identity, route, viewport, theme, locale, content, browser health, overflow,
+  raw i18n, raw deployment enums, expected writes/errors, PNG integrity,
+  checksums, and shared run ID. Its persistent red-team rejects all `15`
+  isolated corruptions.
 - PASS: Verification 2.0 runtime `2.0.0-alpha.2` is installed and ready with
   `fallback_used:false`; task `019` has an approved task-local acceptance bound
   to signed receipt
@@ -626,11 +668,15 @@
   signed receipt
   `receipt-27410e1f409b7a06f63f7d5f25ab293802be76785a6bb14b6aa274dc60d48f96`
   on closure commit `c939d9a9677c2258d447387df0fb4d7d0de0d5b4`.
+- PASS: task `022` has approved task-local acceptance for `A1-A4` bound to
+  signed receipt
+  `receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947`
+  on implementation commit `a8b378334c899ae770f0bb9297a144b09c6d7190`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Eleven baseline tasks remain incomplete across operations,
+- Ten baseline tasks remain incomplete across operations,
   accessibility/i18n/responsive, and full six-domain verification work.
   Global prototype parity must not be claimed.
 - Repository row `4` remains blocked: production `/repos/add` renders the

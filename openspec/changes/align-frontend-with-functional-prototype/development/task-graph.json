@@ -639,7 +639,7 @@
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/**"
       ],
-      "status": "in_progress"
+      "status": "complete"
     }
   ]
 }

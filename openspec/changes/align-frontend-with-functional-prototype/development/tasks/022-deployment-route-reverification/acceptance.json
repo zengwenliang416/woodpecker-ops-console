@@ -1,0 +1,287 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "022-deployment-route-reverification",
+  "generated_at": "2026-08-13T18:02:50.057Z",
+  "recorded_at": "2026-08-13T18:01:47.479Z",
+  "status": "approved",
+  "reviewed_git_head": "a8b378334c899ae770f0bb9297a144b09c6d7190",
+  "reviewed_git_tree": "8ea5add710a02c0000c2bbddcb34d4826ac92b26",
+  "implementation_scope": {
+    "included_patterns": [
+      "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+      "web/src/assets/locales/en.json",
+      "web/src/assets/locales/zh-Hans.json",
+      "web/src/components/ops/DeploymentNav.test.ts",
+      "web/src/components/ops/DeploymentNav.vue",
+      "web/src/compositions/useConfirmedRequest.test.ts",
+      "web/src/compositions/useConfirmedRequest.ts",
+      "web/src/compositions/useDeploymentPresentation.test.ts",
+      "web/src/compositions/useDeploymentPresentation.ts",
+      "web/src/lib/api/index.ts",
+      "web/src/lib/api/types/ops.ts",
+      "web/src/store/ops.test.ts",
+      "web/src/store/ops.ts",
+      "web/src/views/deployments/*.test.ts",
+      "web/src/views/deployments/*.vue"
+    ],
+    "entries": [
+      {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "c82bf51cd167cc80cd7de30d57ad8cfcf1d27332"
+      },
+      {
+        "path": "web/src/assets/locales/en.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d49cfe6b856afd37cbedc5f00fb0ced7934c51e5"
+      },
+      {
+        "path": "web/src/assets/locales/zh-Hans.json",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4daa45f31bdfbd3d11b04bae551ac697e74ed1a1"
+      },
+      {
+        "path": "web/src/components/ops/DeploymentNav.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "60ce48286648a181c99d2e06434318b56ec2ea08"
+      },
+      {
+        "path": "web/src/components/ops/DeploymentNav.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4660453914b4054dcfa1a5c646d94ae3e75f9d62"
+      },
+      {
+        "path": "web/src/compositions/useConfirmedRequest.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "43801c345b2c66f99c0b9b84c2f99b76677b20af"
+      },
+      {
+        "path": "web/src/compositions/useConfirmedRequest.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2120509962f9830089695a342da82d6dbb02e84d"
+      },
+      {
+        "path": "web/src/compositions/useDeploymentPresentation.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "92b7ce04ebdc0c14eeb6ffacb8c7dfad302a149a"
+      },
+      {
+        "path": "web/src/compositions/useDeploymentPresentation.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "995fe75e1c96b22cc7ef27b0762684f207261485"
+      },
+      {
+        "path": "web/src/lib/api/index.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "cdcbc3fd04996ce0867ccc2baaa797fc3997e248"
+      },
+      {
+        "path": "web/src/lib/api/types/ops.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e70d0eed92b976fbd42dd0dcdc33a465111376c0"
+      },
+      {
+        "path": "web/src/store/ops.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "808dd1e0bc57fb03fd9855b5745d8479cdb55050"
+      },
+      {
+        "path": "web/src/store/ops.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9065595aff1dc05094dd8932294d018e92f846c4"
+      },
+      {
+        "path": "web/src/views/deployments/ApplicationDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "7e7b4ab60824fe2e88d0381d3a709bdd4db8d787"
+      },
+      {
+        "path": "web/src/views/deployments/Applications.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2bbccbddc3bcb9fbd82bd6a60421db9f069133c5"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentApprovals.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "440443968dc7100f01bdf9497cd467d87cf50a1b"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentCollections.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5d5296caca157f18d79b09e1fb59e0e92ad032ca"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetail.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b39940a221469f8ad8c11076b93eea3e3aed0e89"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2150e2145cd40ca985972c9cabffbba22bd043e3"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentDetails.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "11807555b9476c4d1609b72c90dca7fd44520e6b"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentNew.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "d527ebc146c11d95fe17f71312f94a0a2488a02a"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentNew.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "2bec1e8ac6caf98b863d52205f29ca73c10e9973"
+      },
+      {
+        "path": "web/src/views/deployments/DeploymentPolicies.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "240bc438618a88b117f9f93353ce5f4ed178ee01"
+      },
+      {
+        "path": "web/src/views/deployments/Deployments.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ed376b3d24865c142aa80b03a49b2e73502aaaee"
+      },
+      {
+        "path": "web/src/views/deployments/Deployments.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "280d7b361c8fad6b077dee43be2e65f13a2b62c6"
+      },
+      {
+        "path": "web/src/views/deployments/EnvironmentDetail.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "dde1d8c1845b762e7ed873ed45925d3928499305"
+      },
+      {
+        "path": "web/src/views/deployments/Environments.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "657f1ebc44c20288bbd53cbdf80b60498366f0d9"
+      },
+      {
+        "path": "web/src/views/deployments/Releases.vue",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "45ba2e738aa9a1e5cb5ab68cb69eb2ae4477ad37"
+      }
+    ],
+    "sha256": "fa845142029fb4ccef19e685b2ef12950afb6b6bcd241d24be188ce0b6786b08"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/022-deployment-route-reverification/context.json",
+      "sha256": "7f81a2adbb7089184fa82611ee56b55342028eb5281c43ea36abc268c9d7df8d"
+    },
+    "report": {
+      "path": "development/tasks/022-deployment-route-reverification/report.md",
+      "sha256": "81cb3ebbc3c4f4321316f0a6bd6da4cf6adcffecd3cdc0c65fd20d4e26733bb3",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/022-deployment-route-reverification/spec-review.md",
+      "sha256": "65da18dda14d842c21a10234ad93bba2963a87dc65663bcb73d479fb14c41bc2",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/022-deployment-route-reverification/quality-review.md",
+      "sha256": "f375ded924afcb6e80b6788124eb9803c5fdaca93e81db62a9eaab6a318e0675",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947",
+      "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs",
+      "assertion_ids": [
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "recorded_at": "2026-08-13T18:01:47.479Z",
+      "validation_receipt_sha256": "ae8c852e6c0edc8fc4ca116e9c8d4ef747463b76838e9c3f160050278deb86c1",
+      "evidence_log": {
+        "path": "development/evidence/032-022-deployment-route-reverification.log",
+        "sha256": "e1c654197e384f5ceeef3d3c7e845bd1342e52ff5db430db8ee4317b58cab30e",
+        "size": 6179
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A1",
+      "parent_id": "A1",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+    },
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    },
+    {
+      "id": "A4",
+      "parent_id": "A4",
+      "status": "passing",
+      "test_run_ids": [
+        "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"
+      ],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+    }
+  ],
+  "fallback_used": false
+}

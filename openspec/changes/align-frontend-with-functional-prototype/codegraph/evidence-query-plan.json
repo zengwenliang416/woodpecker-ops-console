@@ -323,7 +323,7 @@
       "claim_id": "development:task-022-deployment-route-reverification",
       "stage": "development",
       "task_id": "022-deployment-route-reverification",
-      "status": "in_progress",
+      "status": "complete",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Re-verify parity rows `58-67` from current production and approved prototype\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "Ten deployment route implementations plus shared request-lifecycle and typed presentation compositions",
