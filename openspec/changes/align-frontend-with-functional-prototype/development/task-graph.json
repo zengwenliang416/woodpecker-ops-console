@@ -640,6 +640,48 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/**"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "023-operations-residual-delta-closure",
+      "baseline_task_id": "6.4",
+      "goal": "Audit and close any remaining structural, content, status, action, data-integrity, or 390px responsive delta across Overview, Repositories, Infrastructure, and Deployments without importing prototype fixtures.",
+      "depends_on": [
+        "6.3"
+      ],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/App.test.ts",
+        "web/src/views/Overview.vue",
+        "web/src/views/Overview.test.ts",
+        "web/src/views/Repos.vue",
+        "web/src/views/Repos.test.ts",
+        "web/src/lib/repoMetrics.ts",
+        "web/src/lib/repoMetrics.test.ts",
+        "web/src/store/repos.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/views/infrastructure/*.vue",
+        "web/src/views/infrastructure/*.test.ts",
+        "web/src/components/ops/InfrastructureNav.vue",
+        "web/src/components/ops/InfrastructureNav.test.ts",
+        "web/src/views/deployments/*.vue",
+        "web/src/views/deployments/*.test.ts",
+        "web/src/components/ops/DeploymentNav.vue",
+        "web/src/components/ops/DeploymentNav.test.ts",
+        "web/src/compositions/useConfirmedRequest.ts",
+        "web/src/compositions/useConfirmedRequest.test.ts",
+        "web/src/compositions/useDeploymentPresentation.ts",
+        "web/src/compositions/useDeploymentPresentation.test.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/lib/api/index.ts",
+        "web/src/lib/api/types/ops.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/**"
+      ],
+      "status": "planned"
     }
   ]
 }

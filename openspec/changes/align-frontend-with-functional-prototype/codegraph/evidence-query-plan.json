@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-13T14:36:33.041Z",
+  "generated_at": "2026-08-13T18:33:07.203Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -332,6 +332,21 @@
         "Focused 9/39, full 103/582, zero-warning static checks, build, and all 15 verifier mutations rejected"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-022-deployment-route-reverification --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-023-operations-residual-delta-closure:evidence",
+      "claim_id": "development:task-023-operations-residual-delta-closure",
+      "stage": "development",
+      "task_id": "023-operations-residual-delta-closure",
+      "status": "planned",
+      "query": "Find the production files, components, routes, stores, shared data boundaries, tests, and signed evidence that prove there is no remaining structural, content, status, action, data-integrity, or 390px responsive delta across Overview, Repositories, Infrastructure, and Deployments in change \"align-frontend-with-functional-prototype\". Return concrete ownership and any missing or drifted evidence.",
+      "expected_evidence": [
+        "Exact Task 020-022 signed acceptance object ownership with newest shared-file ownership",
+        "Verified route-parity rows 2-3 and 46-67 with blocked row 4 preserved",
+        "Combined focused and full operations regressions plus static checks and build",
+        "Task-local audit validator, negative mutations, report, spec review, and quality review"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-023-operations-residual-delta-closure --query \"<query>\" --write --json"
     }
   ]
 }
