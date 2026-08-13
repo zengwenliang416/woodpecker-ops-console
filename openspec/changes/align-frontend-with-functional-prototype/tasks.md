@@ -45,7 +45,7 @@
 - [x] 5.2 Align administrator overview, secrets, registries, repositories, users, organizations, agents, queue, forge list/detail/create routes.
 - [x] 5.3 Align personal profile, secrets, registries, CLI/API, agents, CLI authorization, login, and not-found routes.
 - [x] 5.4 Preserve administrator, repository, organization, guest, and authenticated-user permission boundaries in UI visibility and direct-route behavior.
-- [ ] 5.5 Add focused route/component tests and verify all organization, administration, user, authentication, and error-state parity rows.
+- [x] 5.5 Add focused route/component tests and verify all organization, administration, user, authentication, and error-state parity rows.
 
 ## 6. Operations Route Reconciliation
 

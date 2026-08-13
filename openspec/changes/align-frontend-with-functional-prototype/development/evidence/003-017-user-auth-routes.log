@@ -1,0 +1,23 @@
+# command: cd web && pnpm exec vitest run src/router.test.ts src/views/user/**/*.test.ts src/components/user/settings/**/*.test.ts src/views/Login.test.ts src/views/cli/Auth.test.ts src/views/NotFound.test.ts
+# exit_status: 0
+# duration_ms: 4018
+
+## stdout
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  4 passed (4)
+      Tests  37 passed (37)
+   Start at  11:43:39
+   Duration  3.02s (transform 4.91s, setup 0ms, import 5.61s, tests 1.75s, environment 2.71s)
+
+
+
+## stderr
+(empty)

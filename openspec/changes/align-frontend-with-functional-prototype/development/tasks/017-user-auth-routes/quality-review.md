@@ -104,7 +104,9 @@ coverage findings are closed by the implementation and focused tests.
 
 ## Required Fixes
 
-None.
+- No task-local fix remains. The final current-byte implementation closes the
+  callback-owner, OAuth-link, lifecycle, and evidence-format findings; later
+  route-family and change-wide verification remain outside this review.
 
 ## Validation Performed
 

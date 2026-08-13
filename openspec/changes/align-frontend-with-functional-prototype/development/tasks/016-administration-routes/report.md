@@ -118,7 +118,10 @@ DONE_WITH_CONCERNS
 
 ## Scope Deviations
 
-- None.
+- No implementation scope deviation occurred. The slice used only the existing
+  administration routes, typed APIs, shared components, tests, and task-local
+  evidence declared by the packet; unsupported prototype-only capabilities
+  remained explicitly excluded.
 
 ## Follow-up Needed
 

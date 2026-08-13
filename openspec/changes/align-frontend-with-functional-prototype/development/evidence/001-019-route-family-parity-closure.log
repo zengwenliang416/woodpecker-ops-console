@@ -1,0 +1,40 @@
+# command: cd web && pnpm exec vitest run src/route-family-parity.test.ts src/router.test.ts && cd .. && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/verify_evidence.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/redteam_verifier.mjs && cd web && pnpm lint && pnpm typecheck && pnpm build && cd .. && git diff --check
+# exit_status: 0
+# duration_ms: 244708
+
+## stdout
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /Volumes/zwl/open_sources/woodpecker-main/web
+
+
+ Test Files  2 passed (2)
+      Tests  39 passed (39)
+   Start at  11:26:30
+   Duration  6.96s (transform 5.42s, setup 0ms, import 1.47s, tests 5.30s, environment 3.32s)
+
+{"ok":true,"runId":"93ce89f7-0d51-40ba-827e-3731aeea2f96","measurements":92,"screenshots":92,"rows":[1,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45]}
+{"schema":"woodpecker.route-family-verifier-redteam.v1","ok":true,"positiveVerifierExitCode":0,"mutations":[{"id":"wrong-theme","rejected":true,"exitCode":1,"signal":null},{"id":"wrong-locale","rejected":true,"exitCode":1,"signal":null},{"id":"tampered-body-text","rejected":true,"exitCode":1,"signal":null},{"id":"empty-content-assertions","rejected":true,"exitCode":1,"signal":null},{"id":"missing-content-assertions","rejected":true,"exitCode":1,"signal":null},{"id":"empty-health","rejected":true,"exitCode":1,"signal":null},{"id":"missing-health-key","rejected":true,"exitCode":1,"signal":null},{"id":"wrong-terminal-path","rejected":true,"exitCode":1,"signal":null},{"id":"wrong-terminal-route","rejected":true,"exitCode":1,"signal":null},{"id":"horizontal-overflow","rejected":true,"exitCode":1,"signal":null},{"id":"source-identity","rejected":true,"exitCode":1,"signal":null},{"id":"png-signature","rejected":true,"exitCode":1,"signal":null},{"id":"png-dimension","rejected":true,"exitCode":1,"signal":null},{"id":"run-id","rejected":true,"exitCode":1,"signal":null}],"generatedAt":"2026-08-13T03:26:51.445Z"}
+
+
+## stderr
+$ eslint --max-warnings 0 .
+$ vue-tsc --noEmit
+$ vite build --base=/BASE_PATH
+<script src="/web-config.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/assets/custom.js"> in "/index.html" can't be bundled without type="module" attribute
+[33m[PLUGIN_TIMINGS] [0mYour build spent 88% of 11.0s inside plugin hooks (9.6s).
+Measured inside the callback, so queue time is excluded and time the callback itself awaited is not:
+  - prismjs transform (15%, 1.6s, 490 calls)
+  - vite:vue transform (13%, 1.5s, 333 calls)
+Those rows are 28% of the build; the rest of the 88% is below.
+Not measurable — 2 hooks whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - @tailwindcss/vite:generate:build transform (68 calls)
+  - unplugin-vue-i18n:resource load (489 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+

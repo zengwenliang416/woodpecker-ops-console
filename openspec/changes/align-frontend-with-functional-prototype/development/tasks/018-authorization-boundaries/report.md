@@ -135,7 +135,10 @@ DONE_WITH_CONCERNS
 
 ## Scope Deviations
 
-- None.
+- No implementation scope deviation occurred. The final changes stayed within
+  existing route-entry authorization, guest navigation visibility,
+  server-backed repository/organization permission regressions, and task-local
+  evidence; no new role, route, API, or backend permission was introduced.
 
 ## Follow-up Needed
 

@@ -105,7 +105,9 @@ approved
 
 ## Required Fixes
 
-None.
+- No task-local fix remains. The final current-byte implementation and evidence
+  close the earlier lifecycle and verifier findings; change-wide route parity
+  and later verification phases remain separate work.
 
 ## Validation Performed
 

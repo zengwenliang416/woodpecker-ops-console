@@ -81,8 +81,16 @@
   `/admin/**` destinations before administration content mounts; system
   administrators retain direct access; repository and organization decisions
   remain server-backed.
-- This is an incremental development snapshot, not a verification handoff.
-  Tasks `5.5` through `8.4` remain incomplete.
+- `019-route-family-parity-closure` / baseline task `5.5`: one concentrated
+  route contract and the existing focused suites protect all `23` organization,
+  administration, user, authentication, and not-found destinations. Current
+  run `93ce89f7-0d51-40ba-827e-3731aeea2f96` strictly verifies `92`
+  production/prototype dark Simplified-Chinese desktop/390px states for rows
+  `1` and `24-45`; all `14` persisted verifier mutations are rejected.
+- Phase 5 is complete. This remains an incremental development snapshot rather
+  than the final six-domain verification handoff: the `13` baseline tasks in
+  phases `6-8`, operations rows `46-67`, overview row `2`, blocked repository
+  row `4`, and complete change-level acceptance remain open.
 
 ## Files Changed
 
@@ -150,6 +158,10 @@
   direct/saved administration guards, guest Sidebar visibility, focused
   repository/organization permission regressions, ten desktop/mobile browser
   states, exact link-inventory verifier, report, and final independent reviews.
+- Route-family parity closure: test-only
+  `web/src/route-family-parity.test.ts`, task-local aggregate capture, strict
+  independent verifier, persistent 14-mutation red-team, `92` measurement/PNG
+  pairs, approved task acceptance for `A2/A3`, and closure lifecycle records.
 - Exact task-owned file lists are recorded in
   `development/tasks/001-date-duration-integrity/report.md`,
   `development/tasks/002-shared-shell-alignment/report.md`,
@@ -168,7 +180,8 @@
   `development/tasks/015-organization-routes/report.md`, and
   `development/tasks/016-administration-routes/report.md`, and
   `development/tasks/017-user-auth-routes/report.md`, and
-  `development/tasks/018-authorization-boundaries/report.md`.
+  `development/tasks/018-authorization-boundaries/report.md`, and
+  `development/tasks/019-route-family-parity-closure/report.md`.
 
 ## Requirements Covered
 
@@ -238,8 +251,14 @@
   regular-user direct/saved administration denial, system-administrator entry,
   exact role-specific navigation inventories, locale readiness/failure, and
   repository/organization server-backed permission boundaries pass focused,
-  full, static/build, and exact desktop/390px evidence. Full `A2` and parity
-  row verification remain open under task `5.5`.
+  full, static/build, and exact desktop/390px evidence.
+- Task-scoped `A2` and `A3` are approved for route-family closure slice `019`.
+  Rows `1` and `24-45` pass one strict current-byte `92`-state
+  production/prototype replay at desktop and 390px, the concentrated router
+  command passes `2` files / `39` tests, the complete focused route-family
+  command passes `34` files / `173` tests, and every one of the `14` isolated
+  evidence mutations is rejected. This approval does not cover rows `2-23`,
+  rows `46+`, phases `6-8`, or complete change-level acceptance.
 
 ## Prototype Decisions Implemented
 
@@ -362,6 +381,10 @@
   migration, dependency, or static repository/organization authorization. It
   centralizes existing route entry, preserves resource permission owners, and
   changes only authenticated navigation visibility.
+- Slice `019` adds no production route, component, API, store, locale, backend,
+  permission, persistence, migration, dependency, or approved-prototype
+  change. Its frontend delta is test-only; capture, verifier, red-team, and
+  browser artifacts remain task-local evidence.
 - Existing theme and locale preference flows, repository/API truth, pagination,
   injected permissions, and repository identity-conflict data remain the
   authoritative state sources.
@@ -425,7 +448,12 @@
   `A -> B -> A` and same-route refresh preservation, and deferred same-owner
   Agent/Secret/Registry/User editor replacement without stale publication or
   successor locking.
-- The current full frontend regression baseline is 74 test files and 422 tests.
+- Route-family closure adds one concentrated table-driven contract for the
+  exact `23` owned destinations, named/inbound resolution, route metadata,
+  dynamic parameters, catch-all ordering, and the exact focused-suite
+  inventory.
+- The current full frontend regression baseline is `85` test files and `496`
+  tests.
 
 ## Local Validation
 
@@ -498,13 +526,30 @@
   unique link inventories, non-admin `/admin` exclusion, zero overflow/browser
   errors, exact PNG dimensions, and an equal-count malicious-link negative
   replay rejected with exit `1`.
+- PASS: route-family closure concentrated router command, `2` files / `39`
+  tests; complete family-focused suite, `34` files / `173` tests; and full
+  frontend suite, `85` files / `496` tests.
+- PASS: route-family closure run
+  `93ce89f7-0d51-40ba-827e-3731aeea2f96` contains exactly `92` measurements
+  and `92` PNGs for rows `1` and `24-45`, split into `46` production
+  `zh-Hans` states and `46` approved-prototype `zh-CN` states at `1600x1000`
+  and `390x844`.
+- PASS: the strict route-family verifier checks exact source identity,
+  destination/path, theme, locale, viewport, content assertions, four-key
+  browser health, overflow, PNG signature/dimensions, and shared run ID. Its
+  persistent red-team rejects all `14` isolated corruptions while the restored
+  evidence passes.
+- PASS: Verification 2.0 runtime `2.0.0-alpha.2` is installed and ready with
+  `fallback_used:false`; task `019` has an approved task-local acceptance bound
+  to signed receipt
+  `receipt-e4f4a5d2c654fe3d5916b494759c4ea4ba1c6ca01f335d62032fc52b92706804`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
 
-- Fourteen baseline tasks remain incomplete across route-family parity,
-  operations, accessibility/i18n/responsive, and full six-domain verification
-  work. Global prototype parity must not be claimed.
+- Thirteen baseline tasks remain incomplete across operations,
+  accessibility/i18n/responsive, and full six-domain verification work.
+  Global prototype parity must not be claimed.
 - Repository row `4` remains blocked: production `/repos/add` renders the
   Forge activation list while the approved prototype renders a four-step
   configuration wizard. Baseline task `4.5` is complete as an evidence task,
@@ -515,14 +560,13 @@
   formatted.
 - Vite build retains the two pre-existing non-module script warnings for
   `/web-config.js` and `/assets/custom.js`.
-- The installed SpecNav development contract `0.3.0` does not accept this
-  change's established `phases/vertical_slices` task graph and append-only
-  lifecycle context because it now requires `nodes/task_items` plus one
-  authoritative context row per task. Handoff also requires the absent
-  `verify/v2/runtime-status.json`, and it reports the truthful blocked contract
-  receipt as `validation-log:executed-evidence-failed`. This global
-  lifecycle/runtime migration is outside task `016`; entry/handoff must not be
-  reported as passing.
+- Verification 2.0 runtime status is present and ready, and the historical
+  `016-018` failed/blocked validation receipts have valid signed current-HEAD
+  successors plus append-only adjudications. The installed development handoff
+  contract still cannot return `ok:true` while phases `6-8` contain unchecked
+  tasks, and it also reports missing task-local `acceptance.json` artifacts for
+  historical tasks `001-018`. Those historical files must not be fabricated
+  without valid task assertions and signed current-HEAD receipts.
 - Slice `004` prototype mobile rendering used an attested `390x844` viewport,
   while the standalone screenshot API cropped temporary PNG content to
   `380x822`. The crop is disclosed and the PNG alone is not treated as viewport
@@ -544,8 +588,9 @@
 
 ## Items Requiring Six-Domain Verification
 
-- Do not begin final six-domain verification yet.
-- After tasks `5.1` through `8.1` are complete, verify all 67 parity-matrix
+- Do not begin final six-domain verification yet; phase 5 is complete, but
+  phases `6-8` remain open.
+- After the remaining phase `6-8` tasks are complete, verify all 67 parity-matrix
   route/tab rows across equivalent theme, locale, viewport, permission, and
   data states.
 - Re-run facticity, static, unit, redteam, E2E, and sensory verification for

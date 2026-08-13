@@ -32,7 +32,7 @@
       "id": "phase-5",
       "task_ids": ["5.1", "5.2", "5.3", "5.4", "5.5"],
       "depends_on": ["phase-2"],
-      "status": "in_progress"
+      "status": "complete"
     },
     {
       "id": "phase-6",
@@ -462,7 +462,7 @@
         "web/src/views/cli/Auth.test.ts",
         "web/src/views/NotFound.test.ts"
       ],
-      "status": "in_progress"
+      "status": "complete"
     }
   ]
 }
