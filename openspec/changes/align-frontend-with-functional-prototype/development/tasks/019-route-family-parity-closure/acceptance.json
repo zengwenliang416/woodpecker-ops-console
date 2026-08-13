@@ -1,0 +1,161 @@
+{
+  "schema": "specnav.task-acceptance-evidence.v2",
+  "generated_by": "specnav-development/task-acceptance-evidence",
+  "task_id": "019-route-family-parity-closure",
+  "generated_at": "2026-08-13T04:03:55.651Z",
+  "recorded_at": "2026-08-13T04:02:50.967Z",
+  "status": "approved",
+  "reviewed_git_head": "7a9acca2de54994be66beed233c096b321fed1e7",
+  "reviewed_git_tree": "93caf16d62e3639cf9ecb9b59313e1bedba76d98",
+  "implementation_scope": {
+    "included_patterns": [
+      "web/src/components/admin/settings/**/*.test.ts",
+      "web/src/components/org/settings/**/*.test.ts",
+      "web/src/components/user/settings/**/*.test.ts",
+      "web/src/route-family-parity.test.ts",
+      "web/src/views/Login.test.ts",
+      "web/src/views/NotFound.test.ts",
+      "web/src/views/admin/**/*.test.ts",
+      "web/src/views/cli/Auth.test.ts",
+      "web/src/views/org/**/*.test.ts",
+      "web/src/views/user/**/*.test.ts"
+    ],
+    "entries": [
+      {
+        "path": "web/src/components/admin/settings/forges/AdminForgeForm.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9faef43b10dbef4ddcb038332a2f185b7eef74ce"
+      },
+      {
+        "path": "web/src/components/admin/settings/queue/AdminQueueStats.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "ed8c987a7bbb6fb276fec54f46e72001fd44dfb0"
+      },
+      {
+        "path": "web/src/route-family-parity.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "6463da6f330c1f55014c9e638342ad87eb9e62dc"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForge.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "8eac24371e76658035b7fa0348b2019baecb7313"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForgeCreate.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "0549604d42a7da102f0fe2339d34444b71a73e97"
+      },
+      {
+        "path": "web/src/views/admin/forges/AdminForges.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b152c668255c8f94c991d6b4ba8b349dee919135"
+      },
+      {
+        "path": "web/src/views/cli/Auth.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "36f3aea4ef5ec88dc08fdad9e5ae4fa0906d52f8"
+      },
+      {
+        "path": "web/src/views/Login.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "4034289ea915d41f28f1f565752a7810d05ba585"
+      },
+      {
+        "path": "web/src/views/NotFound.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "b28b57af490c1ce019bec4dc84c8277aad211c11"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgAgents.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5321562c89fda5bd2cb04057a3d94737da946ad2"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgRegistries.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "5c998d26795b36a622390fcbfe66af62b1c92096"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgSecrets.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "9c49d1575d062c66cd395549ccb8561d99989b4b"
+      },
+      {
+        "path": "web/src/views/org/settings/OrgSettingsWrapper.test.ts",
+        "mode": "100644",
+        "type": "blob",
+        "object_id": "e7679894fe7ee9f2e2f92d419354e483fc961555"
+      }
+    ],
+    "sha256": "c99329979cb8def8cc5fa67eb7f5eedffc257b2ee234b4df2458b53d4305039d"
+  },
+  "artifacts": {
+    "context": {
+      "path": "development/tasks/019-route-family-parity-closure/context.json",
+      "sha256": "7ea3a190417f4ef7b0bc92aac98a2a988e0a6536df73b778d237c96ade219211"
+    },
+    "report": {
+      "path": "development/tasks/019-route-family-parity-closure/report.md",
+      "sha256": "bfea6bfa15fee9962ab1853ea037be576b2f636a71a578bb852654b62aef2ca0",
+      "status": "DONE"
+    },
+    "spec_review": {
+      "path": "development/tasks/019-route-family-parity-closure/spec-review.md",
+      "sha256": "52b5dade34db9527fc4b5a762e8d1688e758ed0d5c8a3cd7fe34900e12f8868e",
+      "verdict": "approved"
+    },
+    "quality_review": {
+      "path": "development/tasks/019-route-family-parity-closure/quality-review.md",
+      "sha256": "72408093a1a75ae1a4ced91204e89db2a9757888e2a4e1482ad97acf6ecadd40",
+      "verdict": "approved"
+    }
+  },
+  "test_runs": [
+    {
+      "id": "receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c",
+      "command": "cd web && pnpm exec vitest run src/route-family-parity.test.ts src/router.test.ts && cd .. && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/verify_evidence.mjs && node openspec/changes/align-frontend-with-functional-prototype/development/tasks/019-route-family-parity-closure/evidence/redteam_verifier.mjs && cd web && pnpm lint && pnpm typecheck && pnpm build && cd .. && git diff --check -- . \":(exclude)openspec/changes/align-frontend-with-functional-prototype/development/evidence/*.log\"",
+      "assertion_ids": ["A2", "A3"],
+      "recorded_at": "2026-08-13T04:02:50.967Z",
+      "validation_receipt_sha256": "ba4e2e23b8db1334fce84ce6b79fbad6d80c0cc18bc8e4f7b49fe593f2868791",
+      "evidence_log": {
+        "path": "development/evidence/005-019-route-family-parity-closure.log",
+        "sha256": "d2efab806ae9baed1d29cbdd946c1a49432933ea81d83cc49b158e836c71bf6d",
+        "size": 3337
+      }
+    }
+  ],
+  "assertions": [
+    {
+      "id": "A2",
+      "parent_id": "A2",
+      "status": "passing",
+      "test_run_ids": ["receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+    },
+    {
+      "id": "A3",
+      "parent_id": "A3",
+      "status": "passing",
+      "test_run_ids": ["receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c"],
+      "direct_evidence": [],
+      "reused_evidence": [],
+      "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+    }
+  ],
+  "fallback_used": false
+}

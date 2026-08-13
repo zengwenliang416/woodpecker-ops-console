@@ -542,7 +542,8 @@
 - PASS: Verification 2.0 runtime `2.0.0-alpha.2` is installed and ready with
   `fallback_used:false`; task `019` has an approved task-local acceptance bound
   to signed receipt
-  `receipt-e4f4a5d2c654fe3d5916b494759c4ea4ba1c6ca01f335d62032fc52b92706804`.
+  `receipt-546372f64d11faaef51b40ee9c40b261bc2f060ab6e7388873a428d712d4536c`
+  on closure commit `7a9acca2de54994be66beed233c096b321fed1e7`.
 - Detailed replayable receipts are in `development/validation-log.jsonl`.
 
 ## Known Risks
