@@ -1,0 +1,80 @@
+{
+  "task_id": "022-deployment-route-reverification",
+  "task_items": ["6.3"],
+  "baseline_task_id": "6.3",
+  "acceptance_primary": ["A1", "A2", "A3", "A4"],
+  "goal": "Re-verify deployment parity rows 58-67 from current production and approved prototype bytes while protecting truthful API, request, mutation, timestamp, and responsive behavior.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/assets/views.js",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/views/deployments/Deployments.vue",
+    "web/src/views/deployments/DeploymentNew.vue",
+    "web/src/views/deployments/DeploymentDetail.vue",
+    "web/src/views/deployments/DeploymentApprovals.vue",
+    "web/src/views/deployments/Applications.vue",
+    "web/src/views/deployments/ApplicationDetail.vue",
+    "web/src/views/deployments/Environments.vue",
+    "web/src/views/deployments/EnvironmentDetail.vue",
+    "web/src/views/deployments/Releases.vue",
+    "web/src/views/deployments/DeploymentPolicies.vue",
+    "web/src/components/ops/DeploymentNav.vue",
+    "web/src/store/ops.ts",
+    "web/src/lib/api/index.ts",
+    "web/src/lib/api/types/ops.ts"
+  ],
+  "allowed_files": [
+    "web/src/views/deployments/*.vue",
+    "web/src/views/deployments/*.test.ts",
+    "web/src/components/ops/DeploymentNav.vue",
+    "web/src/components/ops/DeploymentNav.test.ts",
+    "web/src/compositions/useConfirmedRequest.ts",
+    "web/src/compositions/useConfirmedRequest.test.ts",
+    "web/src/compositions/useDeploymentPresentation.ts",
+    "web/src/compositions/useDeploymentPresentation.test.ts",
+    "web/src/store/ops.ts",
+    "web/src/store/ops.test.ts",
+    "web/src/lib/api/index.ts",
+    "web/src/lib/api/types/ops.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/**"
+  ],
+  "test_paths": [
+    "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs"
+  ],
+  "non_goals": [
+    "Do not edit infrastructure or other route families or complete task 6.4+.",
+    "Do not add APIs, fields, backend behavior, persistence, authorization algorithms, dependencies, migrations, production fixtures, or unsupported prototype behavior.",
+    "Do not invent success rates, duration aggregates, deployment-lock confirmation, signatures, audit history, release size, environment membership, policy collections, or editors.",
+    "Do not claim complete-change acceptance."
+  ],
+  "expected_evidence": [
+    "Focused view, navigation, and store regressions for explicit states, filters, missing resources, route switching, overlapping requests, mutations, timestamps, and fallbacks.",
+    "Equivalent current-byte production/prototype rows 58-67 at desktop and 390px in dark Simplified Chinese plus representative light or English capability.",
+    "Strict exact-inventory evidence verification covering routes, wizard steps, viewport, theme, locale, role, content, containment, i18n, browser health, PNG, service and source identity, one run ID, and rejected mutations.",
+    "Focused/full Vitest, Prettier, ESLint, TypeScript, build, evidence syntax, JSON/JSONL, diff, SpecNav, report, and reviews.",
+    "Rows 58-67 and task 6.3 update only after evidence and reviews pass."
+  ],
+  "unsafe_assumptions": [
+    "Prior evidence is not current-byte evidence.",
+    "Populated content alone does not prove boundary states.",
+    "Prototype data, preflight claims, metrics, policies, and controls do not authorize new contracts.",
+    "Visible actions do not prove safe duplicate or obsolete-request behavior."
+  ],
+  "stop_condition": "Stop if closure needs files outside scope, a new product or backend contract, unsupported prototype data, non-reproducible equivalent states, or claims outside rows 58-67 and task 6.3."
+}

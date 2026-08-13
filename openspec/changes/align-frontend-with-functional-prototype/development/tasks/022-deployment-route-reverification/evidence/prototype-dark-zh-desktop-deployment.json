@@ -1,0 +1,75 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 部署中心 / PRODUCTION Deployment DEP-142 运行中 backend-api v1.4.1-rc.2 Pipeline #841 alice 12 分钟前 暂停 推进下一节点 取消 部署记录 应用 4 环境 3 Release 8 审批 1 策略 v1.4.1-rc.2 d4e5f6a Production *.acme.example 50% 1 / 3 节点完成 发布进度 rolling · 每批 1 台 10m 14s prod-api-01 sgp-1a · 10.20.1.11 成功 HEALTHY Health check passed 3m 18s 2 prod-api-02 sgp-1b · 10.20.1.12 运行中 DEPLOYING Pulling immutable image digest 1m 46s 3 prod-api-03 sgp-1c · 10.20.1.13 等待中 WAITING Waiting for previous node — 部署日志 Controller 与 Node Agent 的结构化事件流 下载日志 1 10:22:03 Deployment DEP-142 approved by mike 2 10:22:07 Resolved image to sha256:8dcf1c3a9d01 3 10:22:10 Starting rolling deployment, batch size 1 4 10:22:12 prod-api-01: preflight checks passed 5 10:23:04 prod-api-01: docker compose pull api 6 10:24:26 prod-api-01: container replaced 7 10:25:18 prod-api-01: /health/ready returned 200 8 10:25:24 prod-api-02: preflight checks passed 9 10:26:02 prod-api-02: pulling sha256:8dcf1c3a9d01 部署详情 应用 backend-api 环境 Production Release v1.4.1-rc.2 镜像 Digest sha256:8dcf1c3a9d01 策略 rolling 触发人 alice 审批人 mike 开始 10 分钟前 结束 — 健康验证 路径 /health/ready 超时 60 秒 最小健康节点 66% 自动回滚 启用",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 部署中心 / PRODUCTION Deployment DEP-142 运行中 backend-api v1.4.1-rc.2 Pipeline #841 alice 12 分钟前 暂停 推进下一节点 取消 部署记录 应用 4 环境 3 Release 8 审批 1 策略 v1.4.1-rc.2 d4e5f6a Production *.acme.example 50% 1 / 3 节点完成 发布进度 rolling · 每批 1 台 10m 14s prod-api-01 sgp-1a · 10.20.1.11 成功 HEALTHY Health check passed 3m 18s 2 prod-api-02 sgp-1b · 10.20.1.12 运行中 DEPLOYING Pulling immutable image digest 1m 46s 3 prod-api-03 sgp-1c · 10.20.1.13 等待中 WAITING Waiting for previous node — 部署日志 Controller 与 Node Agent 的结构化事件流 下载日志 1 10:22:03 Deployment DEP-142 approved by mike 2 10:22:07 Resolved image to sha256:8dcf1c3a9d01 3 10:22:10 Starting rolling deployment, batch size 1 4 10:22:12 prod-api-01: preflight checks passed 5 10:23:04 prod-api-01: docker compose pull api 6 10:24:26 prod-api-01: container replaced 7 10:25:18 prod-api-01: /health/ready returned 200 8 10:25:24 prod-api-02: preflight checks passed 9 10:26:02 prod-api-02: pulling sha256:8dcf1c3a9d01 部署详情 应用 backend-api 环境 Production Release v1.4.1-rc.2 镜像 Digest sha256:8dcf1c3a9d01 策略 rolling 触发人 alice 审批人 mike 开始 10 分钟前 结束 — 健康验证 路径 /health/ready 超时 60 秒 最小健康节点 66% 自动回滚 启用",
+  "localizationText": "WoodpeckerCI/CD Platform ACAcme Corp 工作区概览仓库12流水线组织6 交付部署中心2应用4环境3 服务器运维基础设施服务器8告警2 构建基础设施Build Agents8任务队列5Secrets9 管理系统管理用户Forge 帮助文档支持 A个人设置 搜索流水线、仓库、用户和设置…⌘ KAAliceAdministrator部署中心 / ProductionDeployment DEP-142运行中backend-apiv1.4.1-rc.2Pipeline #841alice12 分钟前暂停推进下一节点取消部署记录应用4环境3Release8审批1策略v1.4.1-rc.2d4e5f6aProduction*.acme.example50%1 / 3 节点完成发布进度rolling · 每批 1 台10m 14sprod-api-01sgp-1a · 10.20.1.11成功healthyHealth check passed3m 18s2prod-api-02sgp-1b · 10.20.1.12运行中deployingPulling immutable image digest1m 46s3prod-api-03sgp-1c · 10.20.1.13等待中waitingWaiting for previous node—部署日志Controller 与 Node Agent 的结构化事件流下载日志110:22:03210:22:07310:22:10410:22:12510:23:04610:24:26710:25:18810:25:24910:26:02部署详情应用backend-api环境ProductionReleasev1.4.1-rc.2镜像 Digestsha256:8dcf1c3a9d01策略rolling触发人alice审批人mike开始10 分钟前结束—健康验证路径/health/ready超时60 秒最小健康节点66%自动回滚启用",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/deployments/142",
+  "url": "http://127.0.0.1:8221/#/deployments/142",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "prototype-dark-zh-desktop-deployment",
+  "row": 60,
+  "destination": "deployment",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/DEP-142/",
+      "passed": true
+    },
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T17:29:11.255Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:10.026Z",
+    "endedAt": "2026-08-13T17:29:11.255Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8221/",
+      "http://127.0.0.1:8221/assets/app.css",
+      "http://127.0.0.1:8221/assets/data.js",
+      "http://127.0.0.1:8221/assets/ui.js",
+      "http://127.0.0.1:8221/assets/views.js",
+      "http://127.0.0.1:8221/assets/app.js",
+      "http://127.0.0.1:8221/favicon.ico"
+    ]
+  }
+}

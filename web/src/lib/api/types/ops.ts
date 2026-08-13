@@ -1,8 +1,10 @@
 export type ServerStatus = 'online' | 'offline' | 'maintenance';
 export type ServerHealth = 'healthy' | 'warning' | 'critical' | 'maintenance';
 export type DeployStrategy = 'single' | 'all-at-once' | 'rolling';
-export type DeploymentStatus = 'draft' | 'pending_approval' | 'rejected' | 'approved' | 'running' | 'paused' | 'success' | 'failed' | 'cancelled';
+export type DeploymentStatus =
+  'draft' | 'pending_approval' | 'rejected' | 'approved' | 'running' | 'paused' | 'success' | 'failed' | 'cancelled';
 export type TargetStatus = 'queued' | 'deploying' | 'health_check' | 'healthy' | 'failed' | 'skipped' | 'rolled_back';
+export type DeploymentTargetPhase = 'waiting' | 'pulling' | 'starting' | 'health_check' | 'healthy' | 'failed';
 export type AlertStatus = 'active' | 'acknowledged' | 'resolved';
 export type AppReleaseStatus = 'ready' | 'deployed' | 'superseded' | 'rolled_back';
 
@@ -144,7 +146,7 @@ export interface DeploymentTarget {
   deployment_id: number;
   server_id: number;
   status: TargetStatus;
-  phase: string;
+  phase: DeploymentTargetPhase;
   message?: string;
   attempts?: number;
   started_at?: number;
@@ -208,4 +210,11 @@ export interface DeploymentDetail {
   deployment: Deployment;
   targets: DeploymentTarget[];
   approvals: Approval[];
+}
+
+export interface DeploymentPolicies {
+  health_check_retries: number;
+  health_check_interval: number;
+  batch_size_default: number;
+  auto_rollback: boolean;
 }

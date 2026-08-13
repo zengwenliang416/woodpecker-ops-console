@@ -1,0 +1,326 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 backend-api Refresh Deploy application Deployments Applications 1 Environments 2 Releases 2 Production approvals Deployment policies Details Backend API service Image registry.example.test/backend-api Runtime docker-compose Compose file compose.production.yml Service api Health endpoint :8080/health/ready Owner team Platform Releases v1.4.1 sha256:11111111111111111111111111111111 Ready v1.4.0 sha256:22222222222222222222222222222222 Deployed",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM WORKSPACE Overview Repos DELIVERY Deployments Applications Environments Releases Production approvals SERVER OPS Infrastructure Servers Server groups Services & containers Alerts BUILD INFRASTRUCTURE Build Agents Queue Secrets MANAGEMENT System Admin Users Forge HELP Docs Personal settings Search pipelines, repos, users and settings… ⌘ K 0 backend-api Refresh Deploy application Deployments Applications 1 Environments 2 Releases 2 Production approvals Deployment policies Details Backend API service Image registry.example.test/backend-api Runtime docker-compose Compose file compose.production.yml Service api Health endpoint :8080/health/ready Owner team Platform Releases v1.4.1 sha256:11111111111111111111111111111111 Ready v1.4.0 sha256:22222222222222222222222222222222 Deployed",
+  "localizationText": "WoodpeckerCI/CD PlatformWorkspaceOverviewReposDeliveryDeploymentsApplicationsEnvironmentsReleasesProduction approvalsServer OpsInfrastructureServersServer groupsServices & containersAlertsBuild InfrastructureBuild AgentsQueueSecretsManagementSystem AdminUsersForgeHelpDocsPersonal settingsSearch pipelines, repos, users and settings…⌘ K 0backend-apiRefreshDeploy applicationDeploymentsApplications1Environments2Releases2Production approvalsDeployment policiesDetailsBackend API serviceImageRuntimedocker-composeCompose fileServiceapiHealth endpointOwner teamPlatformReleasesv1.4.1Readyv1.4.0Deployed",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 1600,
+    "clientHeight": 1000,
+    "scrollWidth": 1600,
+    "dataTheme": "light",
+    "lang": "en"
+  },
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": "application",
+  "terminalPath": "/deployments/apps/1",
+  "url": "http://127.0.0.1:8220/deployments/apps/1",
+  "title": "backend-api · Woodpecker",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "production-light-en-desktop-application",
+  "row": 63,
+  "destination": "application",
+  "surface": "production",
+  "stateClass": "representative",
+  "role": "admin",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    },
+    {
+      "pattern": "/Details/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [
+    "GET /api/user/repos",
+    "GET /api/stream/events",
+    "GET /api/repos?page=1",
+    "GET /api/user/feed",
+    "GET /api/applications/1",
+    "GET /api/environments?page=1&perPage=50"
+  ],
+  "capturedAt": "2026-08-13T17:30:22.540Z",
+  "health": {
+    "startedAt": "2026-08-13T17:30:20.650Z",
+    "endedAt": "2026-08-13T17:30:22.540Z",
+    "consoleErrors": [],
+    "consoleWarnings": [
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[Vue warn]: Extraneous non-props attributes (appId) were passed to component but could not be automatically inherited because component renders fragment or text or teleport root nodes. \n  at <Scaffold go-back=fn<go-back> appId=\"1\" > \n  at <ApplicationDetail appId=\"1\" onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref<  > > \n  at <RouterView> \n  at <RouterView onVnodeUnmounted=fn<onVnodeUnmounted> ref=Ref<  > > \n  at <RouterView> \n  at <App>"
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8220/deployments/apps/1",
+      "http://127.0.0.1:8220/@vite/client",
+      "http://127.0.0.1:8220/web-config.js",
+      "http://127.0.0.1:8220/assets/custom.css",
+      "http://127.0.0.1:8220/src/main.ts",
+      "http://127.0.0.1:8220/assets/custom.js",
+      "http://127.0.0.1:8220/@fs/Users/wenliang_zeng/.cache/woodpecker-web-vstore/vite@8.2.1_@types+node@24.13.3_jiti@2.7.0_yaml@2.9.0/node_modules/vite/dist/client/env.mjs",
+      "http://127.0.0.1:8220/src/compositions/useFavicon.ts",
+      "http://127.0.0.1:8220/src/tailwind.css",
+      "http://127.0.0.1:8220/src/style.css",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/pinia.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue.js?v=bc181798",
+      "http://127.0.0.1:8220/src/App.vue",
+      "http://127.0.0.1:8220/src/compositions/useEvents.ts",
+      "http://127.0.0.1:8220/src/compositions/useI18n.ts",
+      "http://127.0.0.1:8220/src/compositions/useNotifications.ts",
+      "http://127.0.0.1:8220/src/router.ts",
+      "http://127.0.0.1:8220/src/compositions/useConfig.ts",
+      "http://127.0.0.1:8220/src/compositions/useTheme.ts",
+      "http://127.0.0.1:8220/src/store/pipelines.ts",
+      "http://127.0.0.1:8220/src/store/repos.ts",
+      "http://127.0.0.1:8220/src/compositions/useApiClient.ts",
+      "http://127.0.0.1:8220/@id/__x00__vite/dynamic-import-helper.js",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@vueuse_core.js?v=bc181798",
+      "http://127.0.0.1:8220/@id/__x00__virtual:vue-i18n-supported-locales",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue-i18n.js?v=bc181798",
+      "http://127.0.0.1:8220/src/compositions/useDate.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue.runtime.esm-bundler-D9ag4_JJ.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/dist-DnamxKAy.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@kyvg_vue3-notification.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue-router.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/layout/header/Sidebar.vue",
+      "http://127.0.0.1:8220/src/components/layout/header/Navbar.vue",
+      "http://127.0.0.1:8220/src/components/pipeline-feed/PipelineFeedSidebar.vue",
+      "http://127.0.0.1:8220/src/App.vue?vue&type=style&index=0&scoped=7a7a37b1&lang.css",
+      "http://127.0.0.1:8220/@id/__x00__plugin-vue:export-helper",
+      "http://127.0.0.1:8220/src/compositions/useAuthentication.ts",
+      "http://127.0.0.1:8220/src/compositions/useUserConfig.ts",
+      "http://127.0.0.1:8220/src/compositions/usePaginate.ts",
+      "http://127.0.0.1:8220/src/lib/api/index.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=bc181798",
+      "http://127.0.0.1:8220/src/assets/logo.svg?import&component",
+      "http://127.0.0.1:8220/src/components/ops/PrototypeIcon.vue",
+      "http://127.0.0.1:8220/src/components/atomic/IconButton.vue",
+      "http://127.0.0.1:8220/src/components/layout/header/Sidebar.vue?vue&type=style&index=0&scoped=e0b923ac&lang.css",
+      "http://127.0.0.1:8220/src/components/atomic/Button.vue",
+      "http://127.0.0.1:8220/src/compositions/useVersion.ts",
+      "http://127.0.0.1:8220/src/components/layout/header/ActivePipelines.vue",
+      "http://127.0.0.1:8220/src/components/layout/header/Navbar.vue?vue&type=style&index=0&scoped=23f3069c&lang.css",
+      "http://127.0.0.1:8220/src/components/pipeline-feed/PipelineFeedItem.vue",
+      "http://127.0.0.1:8220/src/compositions/usePipelineFeed.ts",
+      "http://127.0.0.1:8220/src/lib/api/client.ts",
+      "http://127.0.0.1:8220/src/components/atomic/Icon.vue",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver_functions_coerce.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver_functions_gt.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/atomic/IconButton.vue?vue&type=style&index=0&scoped=ed4e4676&lang.css",
+      "http://127.0.0.1:8220/src/components/layout/header/ActivePipelines.vue?vue&type=style&index=0&scoped=74433f7a&lang.css",
+      "http://127.0.0.1:8220/src/components/atomic/RenderMarkdown.vue",
+      "http://127.0.0.1:8220/src/components/repo/pipeline/PipelineStatusIcon.vue",
+      "http://127.0.0.1:8220/src/compositions/usePipeline.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@mdi_js.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/simple-icons.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/atomic/SvgIcon.vue",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver-CR7M5Igw.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/dompurify.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/marked.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/repo/pipeline/pipeline-status.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/node-emoji.js?v=bc181798",
+      "http://127.0.0.1:8220/src/compositions/useElapsedTime.ts",
+      "http://127.0.0.1:8220/src/lib/pipelineRefs.ts",
+      "http://127.0.0.1:8220/src/lib/utils/index.ts",
+      "http://127.0.0.1:8220/src/lib/api/types/webhook.ts",
+      "http://127.0.0.1:8220/@id/virtual:intlify-i18n-5",
+      "http://127.0.0.1:8220/api/user/repos?",
+      "http://127.0.0.1:8220/src/views/RouterView.vue",
+      "http://127.0.0.1:8220/src/views/deployments/ApplicationDetail.vue",
+      "http://127.0.0.1:8220/api/stream/events",
+      "http://127.0.0.1:8220/src/components/atomic/FeedbackState.vue",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Scaffold.vue",
+      "http://127.0.0.1:8220/src/components/ops/DeploymentNav.vue",
+      "http://127.0.0.1:8220/src/compositions/useConfirmedRequest.ts",
+      "http://127.0.0.1:8220/src/compositions/useDeploymentPresentation.ts",
+      "http://127.0.0.1:8220/src/compositions/useWPTitle.ts",
+      "http://127.0.0.1:8220/src/store/ops.ts",
+      "http://127.0.0.1:8220/api/repos?page=1",
+      "http://127.0.0.1:8220/src/components/atomic/FeedbackState.vue?vue&type=style&index=0&scoped=b91a9838&lang.css",
+      "http://127.0.0.1:8220/src/components/layout/Container.vue",
+      "http://127.0.0.1:8220/src/compositions/useTabs.ts",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Header.vue",
+      "http://127.0.0.1:8220/src/components/ops/OpsSectionNav.vue",
+      "http://127.0.0.1:8220/api/user/feed",
+      "http://127.0.0.1:8220/src/compositions/useInjectProvide.ts",
+      "http://127.0.0.1:8220/src/components/form/TextField.vue",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Tabs.vue",
+      "http://127.0.0.1:8220/src/components/ops/OpsSectionNav.vue?vue&type=style&index=0&scoped=e3aedef5&lang.css",
+      "http://127.0.0.1:8220/src/components/atomic/CountBadge.vue",
+      "http://127.0.0.1:8220/api/applications/1",
+      "http://127.0.0.1:8220/api/environments?page=1&perPage=50"
+    ]
+  }
+}

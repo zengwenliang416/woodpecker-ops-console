@@ -1,20 +1,30 @@
 <template>
-  <!-- eslint-disable @intlify/vue-i18n/no-raw-text, vue/html-closing-bracket-newline -->
+  <!-- eslint-disable vue/html-closing-bracket-newline -->
   <Scaffold :go-back="() => router.push('/deployments')" full-width-header fluid-content>
     <template #title>
       <span class="deployment-title"
-        ><span>Deployment {{ $t('ops.deployment.id') }} DEP-{{ deploymentId }}</span
+        ><span>{{ deploymentLabel }}</span
         ><span v-if="detail" class="status-badge" :class="statusClass(detail.deployment.status)">{{
-          detail.deployment.status
+          deploymentStatusLabel(detail.deployment.status)
         }}</span></span
       >
     </template>
     <template #headerActions>
+      <Button
+        start-icon="refresh"
+        :is-loading="refreshing"
+        :disabled="mutationPending"
+        :text="$t('ops.deployment.refresh')"
+        :title="$t('ops.deployment.refresh')"
+        @click="reload(true)"
+      />
       <template v-if="detail">
         <Button
           v-if="detail.deployment.status === 'pending_approval'"
           color="green"
           start-icon="check"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'approve'"
           :text="$t('ops.deployment.approve')"
           @click="approve"
         />
@@ -22,18 +32,24 @@
           v-if="detail.deployment.status === 'pending_approval'"
           color="red"
           start-icon="x"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'reject'"
           :text="$t('ops.deployment.reject')"
           @click="reject"
         />
         <Button
           v-if="detail.deployment.status === 'running'"
           start-icon="pause"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'pause'"
           :text="$t('ops.deployment.pause')"
           @click="pause"
         />
         <Button
           v-if="detail.deployment.status === 'paused'"
           start-icon="play"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'resume'"
           :text="$t('ops.deployment.resume')"
           @click="resume"
         />
@@ -41,14 +57,26 @@
           v-if="detail.deployment.status === 'running' && detail.deployment.strategy === 'rolling'"
           color="green"
           start-icon="play"
-          text="推进下一节点"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'advance'"
+          :text="$t('ops.deployment.advance')"
           @click="advance"
         />
-        <Button v-if="isRunning" color="red" start-icon="stop" :text="$t('ops.deployment.cancel')" @click="cancel" />
+        <Button
+          v-if="isRunning"
+          color="red"
+          start-icon="stop"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'cancel'"
+          :text="$t('ops.deployment.cancel')"
+          @click="cancel"
+        />
         <Button
           v-if="detail.deployment.status === 'failed'"
           color="red"
           start-icon="rollback"
+          :disabled="mutationPending"
+          :is-loading="pendingMutation === 'rollback'"
           :text="$t('ops.deployment.rollback')"
           @click="rollback"
         />
@@ -56,12 +84,48 @@
     </template>
 
     <div class="ops-page">
+      <FeedbackState
+        v-if="initialLoading"
+        kind="loading"
+        :title="$t('ops.deployment.loading_title')"
+        :description="$t('ops.deployment.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError && !hasConfirmedData"
+        kind="error"
+        :title="$t('ops.deployment.error_title')"
+        :description="$t('ops.deployment.error_description')"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('ops.deployment.retry')" @click="reload()" />
+        </template>
+      </FeedbackState>
+      <FeedbackState
+        v-else-if="hasConfirmedData && !detail"
+        kind="empty"
+        :title="$t('ops.deployment.missing_title')"
+        :description="$t('ops.deployment.missing_description')"
+      />
       <div v-if="detail" class="page-stack">
+        <FeedbackState
+          v-if="loadError"
+          compact
+          kind="error"
+          :title="$t('ops.deployment.refresh_error_title')"
+          :description="$t('ops.deployment.refresh_error_description')"
+        />
+        <FeedbackState
+          v-if="mutationError"
+          compact
+          kind="error"
+          :title="$t('ops.deployment.mutation_error_title')"
+          :description="$t('ops.deployment.mutation_error_description')"
+        />
         <div class="deployment-meta">
           <span>{{ appName }}</span
           ><span>{{ releaseVersion }}</span
-          ><span>Pipeline #{{ detail.deployment.pipeline_id || '—' }}</span
-          ><span>{{ detail.deployment.triggered_by || 'system' }}</span
+          ><span>{{ pipelineLabel(detail.deployment.pipeline_id) }}</span
+          ><span>{{ actorLabel(detail.deployment.triggered_by, $t('ops.deployment.system_actor')) }}</span
           ><span>{{ $t('ops.deployment.started') }} {{ relativeTime(detail.deployment.created) }}</span>
         </div>
 
@@ -86,13 +150,15 @@
               <span class="hero-icon"><Icon name="environment" /></span>
               <div>
                 <strong>{{ envName }}</strong
-                ><small>{{ environment?.domain || '目标环境' }}</small>
+                ><small>{{ environment?.domain || $t('ops.deployment.target_environment') }}</small>
               </div>
             </div>
             <div class="hero-progress">
               <div class="progress-copy">
-                <span>{{ targetProgress }}%</span
-                ><small>{{ healthyCount }} / {{ detail.targets.length }} 节点完成</small>
+                <span>{{ percentage(targetProgress) }}</span
+                ><small>{{
+                  $t('ops.deployment.nodes_completed', { healthy: healthyCount, total: detail.targets.length })
+                }}</small>
               </div>
               <span class="progress-track"><i :style="{ width: `${targetProgress}%` }" /></span>
             </div>
@@ -103,7 +169,8 @@
               ><Icon :name="statusIcon(detail.deployment.status)"
             /></span>
             <div>
-              <small>控制面状态</small><strong>{{ statusTitle(detail.deployment.status) }}</strong>
+              <small>{{ $t('ops.deployment.control_plane_status') }}</small
+              ><strong>{{ statusTitle(detail.deployment.status) }}</strong>
               <p>{{ statusDescription(detail.deployment.status) }}</p>
             </div>
           </aside>
@@ -115,13 +182,13 @@
               <div class="wp-card-header">
                 <div>
                   <h2>{{ $t('ops.deployment.targets') }}</h2>
-                  <p>{{ detail.deployment.strategy }} · 每批 {{ detail.deployment.batch_size }} 台</p>
+                  <p>{{ rolloutLabel(detail.deployment.strategy, detail.deployment.batch_size) }}</p>
                 </div>
                 <span class="elapsed">{{ elapsedTime }}</span>
               </div>
               <div class="target-columns">
                 <span>{{ $t('ops.deployment.targets') }}</span>
-                <span>{{ $t('ops.deployment.phase') }} / {{ $t('ops.deployment.message') }}</span>
+                <span>{{ phaseMessageLabel }}</span>
                 <span>{{ $t('ops.deployment.target_status') }}</span>
               </div>
               <div class="target-list">
@@ -143,7 +210,7 @@
                     </router-link>
                     <small>{{ serverMeta(target.server_id) }}</small>
                     <p>
-                      <strong>{{ target.phase.toUpperCase() }}</strong
+                      <strong>{{ phaseLabel(target.phase) }}</strong
                       ><span>{{ target.message || phaseDescription(target.phase) }}</span>
                     </p>
                   </div>
@@ -156,6 +223,8 @@
                       v-if="target.status === 'failed'"
                       size="sm"
                       color="green"
+                      :disabled="mutationPending"
+                      :is-loading="pendingMutation === retryKey(target.server_id)"
                       :text="$t('ops.deployment.retry')"
                       @click="retry(target.server_id)"
                     />
@@ -171,9 +240,14 @@
               <div class="wp-card-header">
                 <div>
                   <h2>{{ $t('ops.deployment.logs') }}</h2>
-                  <p>Controller 与 Node Agent 的结构化事件流</p>
+                  <p>{{ $t('ops.deployment.logs_description') }}</p>
                 </div>
-                <Button size="sm" start-icon="download" text="下载日志" @click="downloadLogs" />
+                <Button
+                  size="sm"
+                  start-icon="download"
+                  :text="$t('ops.deployment.download_logs')"
+                  @click="downloadLogs"
+                />
               </div>
               <div class="log-console">
                 <div v-for="(log, index) in detail.deployment.logs ?? []" :key="`${log.at}-${index}`" class="log-row">
@@ -196,7 +270,7 @@
                   <span class="status-badge" :class="approval.approved ? 'status-success' : 'status-failed'">{{
                     approval.approved ? $t('ops.deployment.approved') : $t('ops.deployment.rejected')
                   }}</span
-                  ><strong>{{ approval.approver }}</strong
+                  ><strong>{{ actorLabel(approval.approver) }}</strong
                   ><span>{{ approval.comment || '—' }}</span
                   ><time>{{ formatTimestamp(approval.created) }}</time>
                 </div>
@@ -206,16 +280,18 @@
 
           <aside class="aside-stack">
             <section class="wp-card">
-              <div class="wp-card-header"><h2>部署详情</h2></div>
+              <div class="wp-card-header">
+                <h2>{{ $t('ops.deployment.details') }}</h2>
+              </div>
               <div class="detail-list">
                 <div>
-                  <span>应用</span
+                  <span>{{ $t('ops.deployment.application') }}</span
                   ><router-link :to="`/deployments/apps/${detail.deployment.application_id}`">
                     {{ appName }}
                   </router-link>
                 </div>
                 <div>
-                  <span>环境</span
+                  <span>{{ $t('ops.deployment.environment') }}</span
                   ><router-link :to="`/deployments/environments/${detail.deployment.environment_id}`">
                     {{ envName }}
                   </router-link>
@@ -228,81 +304,112 @@
                   }}</strong>
                 </div>
                 <div>
-                  <span>Release</span><strong>{{ releaseVersion }}</strong>
+                  <span>{{ $t('ops.deployment.release') }}</span
+                  ><strong>{{ releaseVersion }}</strong>
                 </div>
                 <div>
-                  <span>镜像 Digest</span><code>{{ releaseDigest }}</code>
+                  <span>{{ $t('ops.deployment.digest') }}</span
+                  ><code>{{ releaseDigest }}</code>
                 </div>
                 <div>
-                  <span>策略</span><strong>{{ detail.deployment.strategy }}</strong>
+                  <span>{{ $t('ops.deployment.strategy') }}</span
+                  ><strong>{{ strategyLabel(detail.deployment.strategy) }}</strong>
                 </div>
                 <div>
-                  <span>批次大小</span><strong>{{ detail.deployment.batch_size }}</strong>
+                  <span>{{ $t('ops.deployment.batch_size') }}</span
+                  ><strong>{{ detail.deployment.batch_size }}</strong>
                 </div>
                 <div>
-                  <span>触发人</span><strong>{{ detail.deployment.triggered_by || '—' }}</strong>
+                  <span>{{ $t('ops.deployment.triggered_by') }}</span
+                  ><strong>{{ actorLabel(detail.deployment.triggered_by) }}</strong>
                 </div>
                 <div>
-                  <span>审批人</span><strong>{{ detail.deployment.approved_by || '—' }}</strong>
+                  <span>{{ $t('ops.deployment.approved_by') }}</span
+                  ><strong>{{ actorLabel(detail.deployment.approved_by) }}</strong>
                 </div>
                 <div>
                   <span>{{ $t('ops.deployment.started') }}</span
                   ><strong>{{ formatTimestamp(detail.deployment.started_at) }}</strong>
                 </div>
                 <div>
-                  <span>结束</span><strong>{{ formatTimestamp(detail.deployment.finished_at) }}</strong>
+                  <span>{{ $t('ops.deployment.finished') }}</span
+                  ><strong>{{ formatTimestamp(detail.deployment.finished_at) }}</strong>
                 </div>
               </div>
             </section>
 
             <section class="wp-card">
-              <div class="wp-card-header"><h2>健康验证</h2></div>
+              <div class="wp-card-header">
+                <h2>{{ $t('ops.deployment.health_validation') }}</h2>
+              </div>
               <div class="detail-list">
                 <div>
-                  <span>路径</span><code>{{ application?.health_path || '—' }}</code>
+                  <span>{{ $t('ops.deployment.path') }}</span
+                  ><code>{{ application?.health_path || '—' }}</code>
                 </div>
                 <div>
-                  <span>端口</span><strong>{{ application?.port || '—' }}</strong>
+                  <span>{{ $t('ops.deployment.port') }}</span
+                  ><strong>{{ application?.port || '—' }}</strong>
                 </div>
                 <div>
-                  <span>最小健康节点</span><strong>{{ minimumHealthyPercent }}%</strong>
+                  <span>{{ $t('ops.deployment.minimum_healthy') }}</span
+                  ><strong>{{ percentage(minimumHealthyPercent) }}</strong>
                 </div>
                 <div>
-                  <span>自动回滚</span><strong>{{ environment?.auto_rollback ? '启用' : '关闭' }}</strong>
+                  <span>{{ $t('ops.environment.auto_rollback') }}</span
+                  ><strong>{{
+                    environment?.auto_rollback ? $t('ops.environments.enabled') : $t('ops.environments.disabled')
+                  }}</strong>
                 </div>
               </div>
             </section>
 
             <section v-if="detail.deployment.status === 'failed'" class="wp-card recovery-card">
-              <div class="wp-card-header"><h2>恢复建议</h2></div>
+              <div class="wp-card-header">
+                <h2>{{ $t('ops.deployment.recovery_title') }}</h2>
+              </div>
               <div class="wp-card-body recovery-copy">
                 <Icon name="warning" />
-                <p>先重试失败节点；若健康检查持续失败，创建回滚 Deployment 恢复上一稳定 Release。</p>
-                <Button color="red" start-icon="rollback" text="创建回滚" @click="rollback" />
+                <p>{{ $t('ops.deployment.recovery_description') }}</p>
+                <Button
+                  color="red"
+                  start-icon="rollback"
+                  :disabled="mutationPending"
+                  :is-loading="pendingMutation === 'rollback'"
+                  :text="$t('ops.deployment.create_rollback')"
+                  @click="rollback"
+                />
               </div>
             </section>
           </aside>
         </div>
       </div>
-      <div v-else class="loading-state"><Icon name="spinner" class="animate-spin" /></div>
     </div>
   </Scaffold>
-  <!-- eslint-enable @intlify/vue-i18n/no-raw-text, vue/html-closing-bracket-newline -->
+  <!-- eslint-enable vue/html-closing-bracket-newline -->
 </template>
 
 <script lang="ts" setup>
 import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue';
+import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
 import DeploymentNav from '~/components/ops/DeploymentNav.vue';
+import { useConfirmedRequest } from '~/compositions/useConfirmedRequest';
 import useApiClient from '~/compositions/useApiClient';
+import { useDate } from '~/compositions/useDate';
+import { useDeploymentPresentation } from '~/compositions/useDeploymentPresentation';
 import { useWPTitle } from '~/compositions/useWPTitle';
 import type { DeploymentDetail, DeploymentStatus, DeploymentTarget, TargetStatus } from '~/lib/api/types';
 import { useApplicationStore, useDeploymentStore, useServerStore } from '~/store/ops';
+
+type DeploymentMutation =
+  'approve' | 'reject' | 'pause' | 'resume' | 'advance' | 'cancel' | 'rollback' | `retry:${number}`;
 
 const route = useRoute();
 const router = useRouter();
@@ -310,14 +417,24 @@ const api = useApiClient();
 const store = useDeploymentStore();
 const appStore = useApplicationStore();
 const serverStore = useServerStore();
+const { t } = useI18n();
+const { durationAsNumber, timeAgo, toLocaleString } = useDate();
+const { actorLabel, deploymentStatusLabel, phaseLabel, strategyLabel, targetStatusLabel } = useDeploymentPresentation();
 
 const deploymentId = computed(() => Number(route.params.deploymentId));
 const detail = ref<DeploymentDetail | null>(null);
+const { begin, hasConfirmedData, initialLoading, invalidate, loadError, refreshing, resetConfirmed } =
+  useConfirmedRequest();
+const pendingMutation = ref<DeploymentMutation | null>(null);
+const mutationError = ref(false);
 let pollTimer: ReturnType<typeof setInterval> | undefined;
-let disposed = false;
-let loadingDeploymentId: number | undefined;
+let alive = true;
+let lifecycleGeneration = 0;
 
-useWPTitle(computed(() => [`DEP-${deploymentId.value}`]));
+const deploymentLabel = computed(() => `${t('ops.deployment.title')} DEP-${deploymentId.value}`);
+const mutationPending = computed(() => pendingMutation.value !== null);
+const phaseMessageLabel = computed(() => `${t('ops.deployment.phase')} / ${t('ops.deployment.message')}`);
+useWPTitle(computed(() => [deploymentLabel.value]));
 
 const application = computed(() =>
   detail.value ? appStore.applications.get(detail.value.deployment.application_id) : undefined,
@@ -352,56 +469,101 @@ const elapsedTime = computed(() => {
   const started = detail.value?.deployment.started_at;
   if (!started) return '—';
   const end = detail.value?.deployment.finished_at || Math.floor(Date.now() / 1000);
-  const seconds = Math.max(0, end - started);
-  return `${Math.floor(seconds / 60)}m ${seconds % 60}s`;
+  return durationAsNumber(Math.max(0, end - started) * 1000);
 });
 
-async function reload() {
+async function reload(refresh = false, options: { allowDuringMutation?: boolean } = {}) {
+  if (mutationPending.value && !options.allowDuringMutation) return false;
   const requestedId = deploymentId.value;
-  if (loadingDeploymentId === requestedId) return;
-  loadingDeploymentId = requestedId;
+  const request = begin(refresh);
+
   try {
     const nextDetail = await store.loadDetail(requestedId);
-    if (!disposed && requestedId === deploymentId.value) detail.value = nextDetail;
-  } finally {
-    if (loadingDeploymentId === requestedId) loadingDeploymentId = undefined;
+    if (!request.isCurrent() || requestedId !== deploymentId.value) return false;
+    detail.value = nextDetail;
+    request.confirm();
+    request.finish();
+    return true;
+  } catch {
+    if (!request.isCurrent() || requestedId !== deploymentId.value) return false;
+    request.finish(true);
+    return false;
   }
 }
-async function approve() {
-  await api.approveDeployment(deploymentId.value);
-  await reload();
+
+async function mutate(
+  mutation: DeploymentMutation,
+  action: (requestedId: number) => Promise<unknown>,
+  options: { navigateToCreated?: boolean } = {},
+) {
+  if (mutationPending.value) return;
+  const requestedId = deploymentId.value;
+  const lifecycle = lifecycleGeneration;
+  invalidate();
+  pendingMutation.value = mutation;
+  mutationError.value = false;
+
+  try {
+    const result = await action(requestedId);
+    if (!alive || lifecycle !== lifecycleGeneration || requestedId !== deploymentId.value) return;
+    if (
+      options.navigateToCreated &&
+      typeof result === 'object' &&
+      result !== null &&
+      'id' in result &&
+      typeof result.id === 'number'
+    ) {
+      await router.push(`/deployments/${result.id}`);
+      return;
+    }
+    await reload(true, { allowDuringMutation: true });
+  } catch {
+    if (alive && lifecycle === lifecycleGeneration && requestedId === deploymentId.value) mutationError.value = true;
+  } finally {
+    if (alive && lifecycle === lifecycleGeneration && requestedId === deploymentId.value) {
+      pendingMutation.value = null;
+    }
+  }
 }
-async function reject() {
+
+function approve() {
+  return mutate('approve', (requestedId) => api.approveDeployment(requestedId));
+}
+
+function reject() {
   // eslint-disable-next-line no-alert
-  if (!window.confirm('确认拒绝该生产部署？')) return;
-  await api.rejectDeployment(deploymentId.value, 'Rejected from control plane');
-  await reload();
+  if (!window.confirm(t('ops.deployment.reject_confirmation'))) return;
+  return mutate('reject', (requestedId) => api.rejectDeployment(requestedId, t('ops.deployment.reject_comment')));
 }
-async function pause() {
-  await api.pauseDeployment(deploymentId.value);
-  await reload();
+
+function pause() {
+  return mutate('pause', (requestedId) => api.pauseDeployment(requestedId));
 }
-async function resume() {
-  await api.resumeDeployment(deploymentId.value);
-  await reload();
+
+function resume() {
+  return mutate('resume', (requestedId) => api.resumeDeployment(requestedId));
 }
-async function advance() {
-  await api.advanceDeployment(deploymentId.value);
-  await reload();
+
+function advance() {
+  return mutate('advance', (requestedId) => api.advanceDeployment(requestedId));
 }
-async function cancel() {
+
+function cancel() {
   // eslint-disable-next-line no-alert
-  if (!window.confirm('确认取消正在运行的部署？')) return;
-  await api.cancelDeployment(deploymentId.value);
-  await reload();
+  if (!window.confirm(t('ops.deployment.cancel_confirmation'))) return;
+  return mutate('cancel', (requestedId) => api.cancelDeployment(requestedId));
 }
-async function retry(serverId: number) {
-  await api.retryDeployment(deploymentId.value, [serverId]);
-  await reload();
+
+function retryKey(serverId: number): DeploymentMutation {
+  return `retry:${serverId}`;
 }
-async function rollback() {
-  const deployment = await api.rollbackDeployment(deploymentId.value);
-  if (deployment) await router.push(`/deployments/${deployment.id}`);
+
+function retry(serverId: number) {
+  return mutate(retryKey(serverId), (requestedId) => api.retryDeployment(requestedId, [serverId]));
+}
+
+function rollback() {
+  return mutate('rollback', (requestedId) => api.rollbackDeployment(requestedId), { navigateToCreated: true });
 }
 
 function downloadLogs() {
@@ -422,7 +584,18 @@ function serverName(id: number): string {
 }
 function serverMeta(id: number): string {
   const server = serverStore.servers.get(id);
-  return server ? `${server.zone || server.region || '—'} · ${server.private_ip || '—'}` : `ID ${id}`;
+  return server
+    ? `${server.zone || server.region || '—'} · ${server.private_ip || '—'}`
+    : `${t('ops.deployment.id')} ${id}`;
+}
+function pipelineLabel(pipelineId?: number): string {
+  return pipelineId ? `${t('ops.releases.pipeline')} #${pipelineId}` : `${t('ops.releases.pipeline')} —`;
+}
+function rolloutLabel(strategy: DeploymentDetail['deployment']['strategy'], batchSize: number): string {
+  return `${strategyLabel(strategy)} · ${t('ops.deployment.batch_label', { count: batchSize })}`;
+}
+function percentage(value: number): string {
+  return `${value}%`;
 }
 function statusClass(status: DeploymentStatus): string {
   return status === 'success'
@@ -453,17 +626,6 @@ function targetClass(status: TargetStatus): string {
         ? 'target-running'
         : '';
 }
-function targetStatusLabel(status: TargetStatus): string {
-  return {
-    queued: '等待中',
-    deploying: '运行中',
-    health_check: '健康检查',
-    healthy: '成功',
-    failed: '失败',
-    skipped: '已跳过',
-    rolled_back: '已回滚',
-  }[status];
-}
 function statusIcon(status: DeploymentStatus): IconNames {
   return status === 'success'
     ? 'check'
@@ -476,56 +638,47 @@ function statusIcon(status: DeploymentStatus): IconNames {
           : 'play';
 }
 function statusTitle(status: DeploymentStatus): string {
-  return status === 'pending_approval'
-    ? '等待生产审批'
-    : status === 'running'
-      ? '部署正在进行'
-      : status === 'paused'
-        ? '部署已暂停'
-        : status === 'success'
-          ? '部署已完成'
-          : status === 'failed'
-            ? '部署失败'
-            : status;
+  return {
+    draft: t('ops.deployment.status_titles.draft'),
+    pending_approval: t('ops.deployment.status_titles.pending_approval'),
+    rejected: t('ops.deployment.status_titles.rejected'),
+    approved: t('ops.deployment.status_titles.approved'),
+    running: t('ops.deployment.status_titles.running'),
+    paused: t('ops.deployment.status_titles.paused'),
+    success: t('ops.deployment.status_titles.success'),
+    failed: t('ops.deployment.status_titles.failed'),
+    cancelled: t('ops.deployment.status_titles.cancelled'),
+  }[status];
 }
 function statusDescription(status: DeploymentStatus): string {
-  return status === 'running'
-    ? '控制器正在按策略推进目标节点'
-    : status === 'pending_approval'
-      ? '达到最低审批人数后自动开始'
-      : status === 'failed'
-        ? '检查失败节点并决定重试或回滚'
-        : '状态已同步到控制面';
+  return {
+    draft: t('ops.deployment.status_descriptions.draft'),
+    pending_approval: t('ops.deployment.status_descriptions.pending_approval'),
+    rejected: t('ops.deployment.status_descriptions.rejected'),
+    approved: t('ops.deployment.status_descriptions.approved'),
+    running: t('ops.deployment.status_descriptions.running'),
+    paused: t('ops.deployment.status_descriptions.paused'),
+    success: t('ops.deployment.status_descriptions.success'),
+    failed: t('ops.deployment.status_descriptions.failed'),
+    cancelled: t('ops.deployment.status_descriptions.cancelled'),
+  }[status];
 }
 function phaseDescription(phase: string): string {
-  return (
-    (
-      {
-        waiting: '等待上一批节点完成',
-        pulling: '正在拉取不可变镜像',
-        starting: '正在启动服务',
-        health_check: '正在执行健康检查',
-        healthy: '健康检查通过',
-      } as Record<string, string>
-    )[phase] ?? phase
-  );
+  return phaseLabel(phase);
 }
 function targetDuration(target: DeploymentTarget): string {
   if (!target.started_at) return '—';
   const end = target.finished_at || Math.floor(Date.now() / 1000);
-  const seconds = Math.max(0, end - target.started_at);
-  return seconds < 60 ? `${seconds}s` : `${Math.floor(seconds / 60)}m ${seconds % 60}s`;
+  return durationAsNumber(Math.max(0, end - target.started_at) * 1000);
 }
 function formatTime(timestamp: number): string {
-  return new Date(timestamp * 1000).toLocaleTimeString();
+  return toLocaleString(new Date(timestamp * 1000));
 }
 function formatTimestamp(timestamp?: number): string {
-  return timestamp ? new Date(timestamp * 1000).toLocaleString() : '—';
+  return toLocaleString(timestamp ? new Date(timestamp * 1000) : undefined);
 }
 function relativeTime(timestamp?: number): string {
-  if (!timestamp) return '—';
-  const minutes = Math.floor((Date.now() / 1000 - timestamp) / 60);
-  return minutes < 1 ? '刚刚' : minutes < 60 ? `${minutes} 分钟前` : `${Math.floor(minutes / 60)} 小时前`;
+  return timestamp ? timeAgo(timestamp * 1000) : '—';
 }
 function logLevelClass(level: string): string {
   return level === 'danger'
@@ -537,20 +690,30 @@ function logLevelClass(level: string): string {
         : 'log-info';
 }
 
-watch(deploymentId, () => {
-  detail.value = null;
-  void reload();
-});
+watch(
+  deploymentId,
+  () => {
+    lifecycleGeneration += 1;
+    detail.value = null;
+    resetConfirmed();
+    mutationError.value = false;
+    pendingMutation.value = null;
+    void reload();
+  },
+  { immediate: true },
+);
 
-onMounted(async () => {
-  await Promise.all([reload(), appStore.loadAll(), serverStore.loadAll(), store.loadDeployments()]);
-  if (disposed) return;
+onMounted(() => {
+  void Promise.allSettled([appStore.loadAll(), serverStore.loadAll(), store.loadDeployments()]);
   pollTimer = setInterval(() => {
-    if (isRunning.value || detail.value?.deployment.status === 'pending_approval') void reload();
+    if (!mutationPending.value && (isRunning.value || detail.value?.deployment.status === 'pending_approval')) {
+      void reload();
+    }
   }, 3000);
 });
 onBeforeUnmount(() => {
-  disposed = true;
+  alive = false;
+  lifecycleGeneration += 1;
   if (pollTimer) clearInterval(pollTimer);
 });
 </script>

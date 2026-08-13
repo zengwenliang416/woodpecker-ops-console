@@ -143,6 +143,18 @@ export const useApplicationStore = defineStore('ops-applications', () => {
     return computed(() => environments.get(envId));
   }
 
+  function setApplication(application: Application) {
+    applications.set(application.id, { ...applications.get(application.id), ...application });
+  }
+
+  function setEnvironment(environment: Environment) {
+    environments.set(environment.id, { ...environments.get(environment.id), ...environment });
+  }
+
+  function setRelease(release: AppRelease) {
+    releases.set(release.id, { ...releases.get(release.id), ...release });
+  }
+
   async function loadApplications() {
     const generation = ++applicationLoadGeneration;
     const list = await loadAllPages(async (options) => apiClient.getApplications(options));
@@ -181,6 +193,9 @@ export const useApplicationStore = defineStore('ops-applications', () => {
     releaseList,
     getApplication,
     getEnvironment,
+    setApplication,
+    setEnvironment,
+    setRelease,
     loadApplications,
     loadEnvironments,
     loadReleases,
@@ -197,6 +212,7 @@ export const useDeploymentStore = defineStore('ops-deployments', () => {
   const deployments: Map<number, Deployment> = reactive(new Map());
   const details: Map<number, DeploymentDetail> = reactive(new Map());
   let deploymentLoadGeneration = 0;
+  const detailLoadGenerations = new Map<number, number>();
 
   const deploymentList = computed(() => [...deployments.values()].sort((a, b) => b.id - a.id));
   const runningDeployments = computed(() =>
@@ -225,8 +241,10 @@ export const useDeploymentStore = defineStore('ops-deployments', () => {
   }
 
   async function loadDetail(deploymentId: number) {
+    const generation = (detailLoadGenerations.get(deploymentId) ?? 0) + 1;
+    detailLoadGenerations.set(deploymentId, generation);
     const detail = await apiClient.getDeployment(deploymentId);
-    if (detail) {
+    if (detailLoadGenerations.get(deploymentId) === generation && detail) {
       details.set(deploymentId, detail);
       setDeployment(detail.deployment);
     }

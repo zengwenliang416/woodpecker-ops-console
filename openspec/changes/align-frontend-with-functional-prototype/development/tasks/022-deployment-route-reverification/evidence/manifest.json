@@ -1,0 +1,55 @@
+{
+  "schema": "woodpecker.deployment-evidence-manifest.v1",
+  "task_id": "022-deployment-route-reverification",
+  "run_id": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "matrix": {
+    "route_rows": [58, 59, 60, 61, 62, 63, 64, 65, 66, 67],
+    "expected_states": 54
+  },
+  "captured_from": "2026-08-13T17:29:00.437Z",
+  "captured_through": "2026-08-13T17:30:40.890Z",
+  "source_identity": {
+    "production": {
+      "algorithm": "sha256",
+      "digest": "3502e5ded94660203833e96fc2706658c946c8cced63f4a9c6e22cfbb93b4d75",
+      "files": 338
+    },
+    "prototype": {
+      "algorithm": "sha256",
+      "digest": "3c6bab10a6c4354e43980202e8b34424c2d1fd8ad3cb8b1bf9341922f3fea895",
+      "files": 15
+    }
+  },
+  "service_identity": {
+    "fixture": "022-deployment-route-reverification",
+    "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+    "serviceOwnership": "task-started-exclusive-ports",
+    "productionEntrypoint": "/src/main.ts",
+    "productionMarker": "mutationPending",
+    "prototypeMarker": "approved-user-design"
+  },
+  "actual": {
+    "states": 54,
+    "production_states": 34,
+    "prototype_states": 20,
+    "equivalent_states": 40,
+    "representative_states": 10,
+    "boundary_states": 4,
+    "page_overflow_states": [],
+    "raw_i18n_states": [],
+    "raw_enum_states": [],
+    "browser_error_states": []
+  },
+  "checksums": {
+    "matrix_mjs": "668c526a75b4b5ce91ccdc345cc06a5e6e631348556dfc67308ad3283e62ac78",
+    "mock_api_mjs": "11e05aae65e69a923f61ffa06d0544ccb31694057204d620704603045e29cedb",
+    "mock_api_smoke_mjs": "f1f013e1e443be13a775fca79c719b8d1a351068c78312fc66f9866e695dc839",
+    "capture_browser_mjs": "d3207544353e34f4004ab0634ffcf6adb1f47a215b57df24b1ca71fd145d5c16",
+    "verify_evidence_mjs": "d46d24fadadf7955ce6deac0be1c91338596ea7d7fa31313f9c9537061ccf3d2",
+    "redteam_verifier_mjs": "ec0ea94c0d940560cb2498dca4d0707444bb234f2dcb423e50e805b3637882d3",
+    "validate_task_mjs": "00c3a97b3f2633b49e46aa41ca1c8ea683e3e9971c5aee07b45d5b6135eee817",
+    "browser_replay_summary_json": "84c29485e95202a6014d80aa9eab6c42a91f0f57acf6215d74379f20133ca560",
+    "all_png_files": "afe904c5f5aed11570c4a33091976c544a30f373dcb2d2978e81759b79bc037e",
+    "all_measurement_files": "d0dcd23076bbc102b10317ac6f6d66740c1bc8905654a49b3cbc9e35053ab605"
+  }
+}

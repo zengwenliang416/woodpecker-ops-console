@@ -1,0 +1,75 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 新建部署 从成功流水线的 Release 创建服务器部署。 部署记录 应用 4 环境 3 Release 8 审批 1 策略 1 选择 Release 应用和不可变产物 2 选择环境 保护策略与发布窗口 3 目标与策略 服务器组和批次 4 部署前检查 容量、健康和安全 5 确认 创建部署并开始执行 选择应用和 Release Release 必须来自成功的流水线，并以不可变镜像 Digest 发布。 应用 backend-api · Platform web-frontend · Frontend worker-service · Backend notification-service · Backend v1.4.1-rc.2 可部署 sha256:8dcf1c3a9d01 Pipeline #841 d4e5f6a 18 分钟前 v1.4.0 已部署 sha256:1ee6d72a21a8 Pipeline #837 b2c3d4e 3 天前 取消 下一步",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 新建部署 从成功流水线的 Release 创建服务器部署。 部署记录 应用 4 环境 3 Release 8 审批 1 策略 1 选择 Release 应用和不可变产物 2 选择环境 保护策略与发布窗口 3 目标与策略 服务器组和批次 4 部署前检查 容量、健康和安全 5 确认 创建部署并开始执行 选择应用和 Release Release 必须来自成功的流水线，并以不可变镜像 Digest 发布。 应用 backend-api · Platform web-frontend · Frontend worker-service · Backend notification-service · Backend v1.4.1-rc.2 可部署 sha256:8dcf1c3a9d01 Pipeline #841 d4e5f6a 18 分钟前 v1.4.0 已部署 sha256:1ee6d72a21a8 Pipeline #837 b2c3d4e 3 天前 取消 下一步",
+  "localizationText": "WoodpeckerCI/CD Platform ACAcme Corp 工作区概览仓库12流水线组织6 交付部署中心2应用4环境3 服务器运维基础设施服务器8告警2 构建基础设施Build Agents8任务队列5Secrets9 管理系统管理用户Forge 帮助文档支持 A个人设置 搜索流水线、仓库、用户和设置…⌘ KAAliceAdministrator新建部署从成功流水线的 Release 创建服务器部署。部署记录应用4环境3Release8审批1策略1选择 Release应用和不可变产物2选择环境保护策略与发布窗口3目标与策略服务器组和批次4部署前检查容量、健康和安全5确认创建部署并开始执行选择应用和 ReleaseRelease 必须来自成功的流水线，并以不可变镜像 Digest 发布。应用backend-api · Platformweb-frontend · Frontendworker-service · Backendnotification-service · Backendv1.4.1-rc.2可部署sha256:8dcf1c3a9d01Pipeline #841d4e5f6a18 分钟前v1.4.0已部署sha256:1ee6d72a21a8Pipeline #837b2c3d4e3 天前取消下一步",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 1600,
+    "clientHeight": 1000,
+    "scrollWidth": 1600,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/deployments/new",
+  "url": "http://127.0.0.1:8221/#/deployments/new",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "prototype-dark-zh-desktop-deploymentNew",
+  "row": 59,
+  "destination": "deploymentNew",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/新建部署/",
+      "passed": true
+    },
+    {
+      "pattern": "/选择应用和 Release/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T17:29:07.487Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:06.265Z",
+    "endedAt": "2026-08-13T17:29:07.487Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8221/",
+      "http://127.0.0.1:8221/assets/app.css",
+      "http://127.0.0.1:8221/assets/data.js",
+      "http://127.0.0.1:8221/assets/ui.js",
+      "http://127.0.0.1:8221/assets/views.js",
+      "http://127.0.0.1:8221/assets/app.js",
+      "http://127.0.0.1:8221/favicon.ico"
+    ]
+  }
+}

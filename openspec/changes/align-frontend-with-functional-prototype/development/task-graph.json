@@ -6,50 +6,113 @@
   "phases": [
     {
       "id": "phase-1",
-      "task_ids": ["1.1", "1.2", "1.3", "1.4", "1.5"],
+      "task_ids": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5"
+      ],
       "depends_on": [],
       "status": "in_progress"
     },
     {
       "id": "phase-2",
-      "task_ids": ["2.1", "2.2", "2.3", "2.4"],
-      "depends_on": ["phase-1"],
+      "task_ids": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4"
+      ],
+      "depends_on": [
+        "phase-1"
+      ],
       "status": "in_progress"
     },
     {
       "id": "phase-3",
-      "task_ids": ["3.1", "3.2", "3.3", "3.4", "3.5"],
-      "depends_on": ["phase-2"],
+      "task_ids": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5"
+      ],
+      "depends_on": [
+        "phase-2"
+      ],
       "status": "complete"
     },
     {
       "id": "phase-4",
-      "task_ids": ["4.1", "4.2", "4.3", "4.4", "4.5"],
-      "depends_on": ["phase-2", "phase-3"],
+      "task_ids": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5"
+      ],
+      "depends_on": [
+        "phase-2",
+        "phase-3"
+      ],
       "status": "complete"
     },
     {
       "id": "phase-5",
-      "task_ids": ["5.1", "5.2", "5.3", "5.4", "5.5"],
-      "depends_on": ["phase-2"],
+      "task_ids": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5"
+      ],
+      "depends_on": [
+        "phase-2"
+      ],
       "status": "complete"
     },
     {
       "id": "phase-6",
-      "task_ids": ["6.1", "6.2", "6.3", "6.4", "6.5"],
-      "depends_on": ["phase-2"],
+      "task_ids": [
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5"
+      ],
+      "depends_on": [
+        "phase-2"
+      ],
       "status": "in_progress"
     },
     {
       "id": "phase-7",
-      "task_ids": ["7.1", "7.2", "7.3", "7.4"],
-      "depends_on": ["phase-3", "phase-4", "phase-5", "phase-6"],
+      "task_ids": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4"
+      ],
+      "depends_on": [
+        "phase-3",
+        "phase-4",
+        "phase-5",
+        "phase-6"
+      ],
       "status": "planned"
     },
     {
       "id": "phase-8",
-      "task_ids": ["8.1", "8.2", "8.3", "8.4"],
-      "depends_on": ["phase-7"],
+      "task_ids": [
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4"
+      ],
+      "depends_on": [
+        "phase-7"
+      ],
       "status": "planned"
     }
   ],
@@ -58,7 +121,9 @@
       "packet_id": "001-date-duration-integrity",
       "baseline_task_id": "2.1",
       "goal": "Render invalid, missing, and extreme user-visible dates and durations as explicit neutral fallbacks through the shared formatting boundary.",
-      "depends_on": ["1.5"],
+      "depends_on": [
+        "1.5"
+      ],
       "allowed_files": [
         "web/src/compositions/useDate.ts",
         "web/src/compositions/useElapsedTime.ts",
@@ -71,7 +136,9 @@
       "packet_id": "002-shared-shell-alignment",
       "baseline_task_id": "2.2",
       "goal": "Align the shared desktop and mobile shell with approved dimensions, navigation density, preference behavior, permission visibility, and accessible drawer interaction.",
-      "depends_on": ["2.1"],
+      "depends_on": [
+        "2.1"
+      ],
       "allowed_files": [
         "web/src/App.vue",
         "web/src/App.test.ts",
@@ -90,7 +157,9 @@
       "packet_id": "003-shared-feedback-primitives",
       "baseline_task_id": "2.3",
       "goal": "Provide accessible shared loading, empty, error, disabled, permission, and stale feedback across repository and pipeline route families.",
-      "depends_on": ["2.2"],
+      "depends_on": [
+        "2.2"
+      ],
       "allowed_files": [
         "web/src/components/atomic/FeedbackState.vue",
         "web/src/components/atomic/FeedbackState.test.ts",
@@ -115,7 +184,9 @@
       "packet_id": "004-shell-theme-evidence",
       "baseline_task_id": "2.4",
       "goal": "Capture equivalent dark/light desktop and 390px production-versus-prototype shell evidence before route-family implementation.",
-      "depends_on": ["2.3"],
+      "depends_on": [
+        "2.3"
+      ],
       "allowed_files": [
         "web/src/App.vue",
         "web/src/App.test.ts",
@@ -136,7 +207,9 @@
       "packet_id": "005-pipeline-detail-header",
       "baseline_task_id": "3.1",
       "goal": "Align the real pipeline detail header, status metadata, primary actions, and existing route tabs with the approved prototype.",
-      "depends_on": ["2.4"],
+      "depends_on": [
+        "2.4"
+      ],
       "allowed_files": [
         "web/src/views/repo/pipeline/PipelineWrapper.vue",
         "web/src/views/repo/pipeline/PipelineWrapper.test.ts",
@@ -149,7 +222,9 @@
       "packet_id": "006-pipeline-overview",
       "baseline_task_id": "3.2",
       "goal": "Rebuild the real pipeline overview with execution summary, step status, duration, environment, explicit image availability, and current step-log routing.",
-      "depends_on": ["3.1"],
+      "depends_on": [
+        "3.1"
+      ],
       "allowed_files": [
         "web/src/views/repo/pipeline/Pipeline.vue",
         "web/src/views/repo/pipeline/Pipeline.test.ts",
@@ -162,7 +237,9 @@
       "packet_id": "007-pipeline-log-diagnostics",
       "baseline_task_id": "3.3",
       "goal": "Align the real pipeline log, changed-files, configuration, error, and debug surfaces with shared responsive diagnostic patterns without changing routes, APIs, permissions, or inventing prototype-only data.",
-      "depends_on": ["3.2"],
+      "depends_on": [
+        "3.2"
+      ],
       "allowed_files": [
         "web/src/components/repo/pipeline/PipelineLog.vue",
         "web/src/components/repo/pipeline/PipelineLog.test.ts",
@@ -184,7 +261,9 @@
       "packet_id": "008-pipeline-regression-coverage",
       "baseline_task_id": "3.4",
       "goal": "Protect the completed pipeline detail route family with focused component and router regressions for current routes, status/cancellation variants, permissions, actions, tabs, empty/error states, and responsive containment.",
-      "depends_on": ["3.3"],
+      "depends_on": [
+        "3.3"
+      ],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/views/repo/pipeline/PipelineWrapper.vue",
@@ -202,7 +281,9 @@
       "packet_id": "009-pipeline-validation-evidence",
       "baseline_task_id": "3.5",
       "goal": "Validate the completed pipeline detail route family and capture equivalent-state desktop/mobile, dark/representative-light, locale, and permission evidence against the approved prototype.",
-      "depends_on": ["3.4"],
+      "depends_on": [
+        "3.4"
+      ],
       "allowed_files": [
         "web/src/router.test.ts",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/brief.md",
@@ -218,7 +299,9 @@
       "packet_id": "010-repository-pipeline-list",
       "baseline_task_id": "4.1",
       "goal": "Users can scan, filter, paginate, open, and deploy eligible pipelines from the repository activity page using real repository data and permissions.",
-      "depends_on": ["3.5"],
+      "depends_on": [
+        "3.5"
+      ],
       "allowed_files": [
         "web/src/views/repo/RepoPipelines.vue",
         "web/src/views/repo/RepoPipelines.test.ts",
@@ -233,7 +316,9 @@
       "packet_id": "011-repository-branches-pull-requests",
       "baseline_task_id": "4.2",
       "goal": "Users can search, page, refresh, and open repository branches and pull requests, then inspect their real pipeline history without unsupported Forge metadata or mutations.",
-      "depends_on": ["4.1"],
+      "depends_on": [
+        "4.1"
+      ],
       "allowed_files": [
         "web/src/views/repo/RepoBranches.vue",
         "web/src/views/repo/RepoBranches.test.ts",
@@ -257,7 +342,9 @@
       "packet_id": "012-repository-manual-run-settings",
       "baseline_task_id": "4.3",
       "goal": "Repository operators can manually trigger a real pipeline and administer the existing repository settings surfaces through a dense, responsive information hierarchy without invented metadata, mutations, or server capabilities.",
-      "depends_on": ["4.2"],
+      "depends_on": [
+        "4.2"
+      ],
       "allowed_files": [
         "web/src/views/repo/RepoManualPipeline.vue",
         "web/src/views/repo/RepoManualPipeline.test.ts",
@@ -296,7 +383,9 @@
       "packet_id": "013-repository-regression-coverage",
       "baseline_task_id": "4.4",
       "goal": "Protect the completed repository route family with named and inbound route resolution, shared wrapper permission and action boundaries, active-owner repository loading, theme-invariant controls, and structural 390px containment regressions.",
-      "depends_on": ["4.3"],
+      "depends_on": [
+        "4.3"
+      ],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/views/repo/RepoWrapper.vue",
@@ -321,7 +410,9 @@
       "packet_id": "014-repository-validation-evidence",
       "baseline_task_id": "4.5",
       "goal": "Verify every repository parity-matrix row at the current commit with equivalent-state production-versus-approved-prototype browser evidence and honest per-row outcomes.",
-      "depends_on": ["4.4"],
+      "depends_on": [
+        "4.4"
+      ],
       "allowed_files": [
         "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/**",
@@ -339,7 +430,9 @@
       "packet_id": "015-organization-routes",
       "baseline_task_id": "5.1",
       "goal": "Organization members can browse real organization repositories and administrators can manage existing organization Secrets, Registries, and Agents through a responsive prototype-aligned settings hierarchy with active lifecycle ownership.",
-      "depends_on": ["4.5"],
+      "depends_on": [
+        "4.5"
+      ],
       "allowed_files": [
         "web/src/router.ts",
         "web/src/router.test.ts",
@@ -376,7 +469,9 @@
       "packet_id": "016-administration-routes",
       "baseline_task_id": "5.2",
       "goal": "System administrators can operate the existing administration overview, global resources, repositories, users, organizations, Agents, queue, and Forge routes through a responsive prototype-aligned hierarchy with active lifecycle ownership.",
-      "depends_on": ["5.1"],
+      "depends_on": [
+        "5.1"
+      ],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/views/admin/**",
@@ -392,7 +487,9 @@
       "packet_id": "017-user-auth-routes",
       "baseline_task_id": "5.3",
       "goal": "Authenticated users can operate the existing personal preferences, Secrets, Registries, CLI/API token, and optional Agents routes while guests, CLI clients, and unknown routes receive resilient prototype-aligned login, authorization, and not-found states.",
-      "depends_on": ["5.2"],
+      "depends_on": [
+        "5.2"
+      ],
       "allowed_files": [
         "web/src/router.test.ts",
         "web/src/router.ts",
@@ -425,7 +522,9 @@
       "packet_id": "018-authorization-boundaries",
       "baseline_task_id": "5.4",
       "goal": "Guests and authenticated actors receive consistent navigation visibility and direct-route behavior while current system, repository, and organization authorization contracts remain authoritative.",
-      "depends_on": ["5.3"],
+      "depends_on": [
+        "5.3"
+      ],
       "allowed_files": [
         "web/src/router.ts",
         "web/src/router.test.ts",
@@ -449,7 +548,9 @@
       "packet_id": "019-route-family-parity-closure",
       "baseline_task_id": "5.5",
       "goal": "Close organization, administration, user, authentication, and not-found route-family parity with one concentrated regression contract and one strict current-byte 92-state browser evidence run.",
-      "depends_on": ["5.4"],
+      "depends_on": [
+        "5.4"
+      ],
       "allowed_files": [
         "web/src/route-family-parity.test.ts",
         "web/src/views/org/**/*.test.ts",
@@ -468,7 +569,9 @@
       "packet_id": "020-overview-repositories-reverification",
       "baseline_task_id": "6.1",
       "goal": "Re-verify Overview and Repositories from current production and approved prototype bytes across equivalent theme, locale, viewport, role, and data states while protecting truthful API/store behavior.",
-      "depends_on": ["5.5"],
+      "depends_on": [
+        "5.5"
+      ],
       "allowed_files": [
         "web/src/App.vue",
         "web/src/App.test.ts",
@@ -492,7 +595,9 @@
       "packet_id": "021-infrastructure-route-reverification",
       "baseline_task_id": "6.2",
       "goal": "Re-verify infrastructure parity rows 46-57 from current production and approved prototype bytes while protecting truthful API, request, mutation, permission, and responsive behavior.",
-      "depends_on": ["6.1"],
+      "depends_on": [
+        "6.1"
+      ],
       "allowed_files": [
         "web/src/views/infrastructure/*.vue",
         "web/src/views/infrastructure/*.test.ts",
@@ -507,6 +612,34 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/**"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "022-deployment-route-reverification",
+      "baseline_task_id": "6.3",
+      "goal": "Re-verify deployment parity rows 58-67 from current production and approved prototype bytes while protecting truthful API, request, mutation, timestamp, and responsive behavior.",
+      "depends_on": [
+        "6.2"
+      ],
+      "allowed_files": [
+        "web/src/views/deployments/*.vue",
+        "web/src/views/deployments/*.test.ts",
+        "web/src/components/ops/DeploymentNav.vue",
+        "web/src/components/ops/DeploymentNav.test.ts",
+        "web/src/compositions/useConfirmedRequest.ts",
+        "web/src/compositions/useConfirmedRequest.test.ts",
+        "web/src/compositions/useDeploymentPresentation.ts",
+        "web/src/compositions/useDeploymentPresentation.test.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/lib/api/index.ts",
+        "web/src/lib/api/types/ops.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/**"
+      ],
+      "status": "in_progress"
     }
   ]
 }

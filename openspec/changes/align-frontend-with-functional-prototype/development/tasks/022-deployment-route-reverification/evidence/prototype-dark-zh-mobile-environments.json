@@ -1,0 +1,75 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 环境 定义目标服务器、保护规则、发布窗口和回滚策略。 新建环境 部署记录 应用 4 环境 3 Release 8 审批 1 策略 Production *.acme.example 受保护 节点健康 50% 服务器 6 服务器组 3 运行中部署 1 审批 1 人 发布窗口 Mon–Fri 09:00–18:00 自动回滚 启用 查看环境 部署 Staging *.staging.acme.example 开放 节点健康 50% 服务器 2 服务器组 1 运行中部署 0 审批 无需 发布窗口 Any time 自动回滚 启用 查看环境 部署 Development *.dev.acme.example 开放 节点健康 100% 服务器 0 服务器组 0 运行中部署 0 审批 无需 发布窗口 Any time 自动回滚 禁用 查看环境 部署",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 环境 定义目标服务器、保护规则、发布窗口和回滚策略。 新建环境 部署记录 应用 4 环境 3 Release 8 审批 1 策略 Production *.acme.example 受保护 节点健康 50% 服务器 6 服务器组 3 运行中部署 1 审批 1 人 发布窗口 Mon–Fri 09:00–18:00 自动回滚 启用 查看环境 部署 Staging *.staging.acme.example 开放 节点健康 50% 服务器 2 服务器组 1 运行中部署 0 审批 无需 发布窗口 Any time 自动回滚 启用 查看环境 部署 Development *.dev.acme.example 开放 节点健康 100% 服务器 0 服务器组 0 运行中部署 0 审批 无需 发布窗口 Any time 自动回滚 禁用 查看环境 部署",
+  "localizationText": "WoodpeckerCI/CD Platform ACAcme Corp 工作区概览仓库12流水线组织6 交付部署中心2应用4环境3 服务器运维基础设施服务器8告警2 构建基础设施Build Agents8任务队列5Secrets9 管理系统管理用户Forge 帮助文档支持 A个人设置 搜索流水线、仓库、用户和设置…⌘ KAAliceAdministrator环境定义目标服务器、保护规则、发布窗口和回滚策略。新建环境部署记录应用4环境3Release8审批1策略Production*.acme.example受保护节点健康50%服务器6服务器组3运行中部署1审批1 人发布窗口Mon–Fri 09:00–18:00自动回滚启用查看环境部署Staging*.staging.acme.example开放节点健康50%服务器2服务器组1运行中部署0审批无需发布窗口Any time自动回滚启用查看环境部署Development*.dev.acme.example开放节点健康100%服务器0服务器组0运行中部署0审批无需发布窗口Any time自动回滚禁用查看环境部署",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": null,
+  "terminalPath": "/deployments/environments",
+  "url": "http://127.0.0.1:8221/#/deployments/environments",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "prototype-dark-zh-mobile-environments",
+  "row": 64,
+  "destination": "environments",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/环境/",
+      "passed": true
+    },
+    {
+      "pattern": "/Production/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T17:29:59.501Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:58.347Z",
+    "endedAt": "2026-08-13T17:29:59.501Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8221/",
+      "http://127.0.0.1:8221/assets/app.css",
+      "http://127.0.0.1:8221/assets/data.js",
+      "http://127.0.0.1:8221/assets/ui.js",
+      "http://127.0.0.1:8221/assets/views.js",
+      "http://127.0.0.1:8221/assets/app.js",
+      "http://127.0.0.1:8221/favicon.ico"
+    ]
+  }
+}

@@ -1,9 +1,18 @@
 import { createPinia, setActivePinia } from 'pinia';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
-import type { Alert, Deployment, Server, ServerGroup } from '~/lib/api/types';
+import type {
+  Alert,
+  Application,
+  AppRelease,
+  Deployment,
+  DeploymentDetail,
+  Environment,
+  Server,
+  ServerGroup,
+} from '~/lib/api/types';
 
-import { useDeploymentStore, useServerStore } from './ops';
+import { useApplicationStore, useDeploymentStore, useServerStore } from './ops';
 
 const api = vi.hoisted(() => ({
   getServers: vi.fn(),
@@ -24,6 +33,26 @@ function server(id: number): Server {
 
 function deployment(id: number): Deployment {
   return { id, status: 'success' } as Deployment;
+}
+
+function application(id: number): Application {
+  return { id, name: `app-${id}` } as Application;
+}
+
+function environment(id: number): Environment {
+  return { id, name: `env-${id}` } as Environment;
+}
+
+function release(id: number): AppRelease {
+  return { id, version: `v${id}` } as AppRelease;
+}
+
+function detail(id: number, status: Deployment['status'] = 'success'): DeploymentDetail {
+  return {
+    deployment: { ...deployment(id), status },
+    targets: [],
+    approvals: [],
+  };
 }
 
 function group(id: number): ServerGroup {
@@ -146,5 +175,67 @@ describe('ops stores', () => {
     expect(api.getDeployments).toHaveBeenCalledTimes(2);
     expect(store.deploymentList).toHaveLength(51);
     expect(store.deploymentList[0].id).toBe(51);
+  });
+
+  it('keeps the latest application, environment, and release refreshes', async () => {
+    const olderApplications = deferred<Application[]>();
+    const currentApplications = deferred<Application[]>();
+    const olderEnvironments = deferred<Environment[]>();
+    const currentEnvironments = deferred<Environment[]>();
+    const olderReleases = deferred<AppRelease[]>();
+    const currentReleases = deferred<AppRelease[]>();
+    api.getApplications.mockReturnValueOnce(olderApplications.promise).mockReturnValueOnce(currentApplications.promise);
+    api.getEnvironments.mockReturnValueOnce(olderEnvironments.promise).mockReturnValueOnce(currentEnvironments.promise);
+    api.getReleases.mockReturnValueOnce(olderReleases.promise).mockReturnValueOnce(currentReleases.promise);
+
+    const store = useApplicationStore();
+    const older = Promise.all([store.loadApplications(), store.loadEnvironments(), store.loadReleases()]);
+    const current = Promise.all([store.loadApplications(), store.loadEnvironments(), store.loadReleases()]);
+
+    currentApplications.resolve([application(2)]);
+    currentEnvironments.resolve([environment(2)]);
+    currentReleases.resolve([release(2)]);
+    await current;
+    olderApplications.resolve([application(1)]);
+    olderEnvironments.resolve([environment(1)]);
+    olderReleases.resolve([release(1)]);
+    await older;
+
+    expect(store.applicationList.map((item) => item.id)).toEqual([2]);
+    expect(store.environmentList.map((item) => item.id)).toEqual([2]);
+    expect(store.releaseList.map((item) => item.id)).toEqual([2]);
+  });
+
+  it('keeps the latest deployment refresh when requests finish out of order', async () => {
+    const older = deferred<Deployment[]>();
+    const current = deferred<Deployment[]>();
+    api.getDeployments.mockReturnValueOnce(older.promise).mockReturnValueOnce(current.promise);
+    const store = useDeploymentStore();
+
+    const olderLoad = store.loadDeployments();
+    const currentLoad = store.loadDeployments();
+    current.resolve([deployment(2)]);
+    await currentLoad;
+    older.resolve([deployment(1)]);
+    await olderLoad;
+
+    expect(store.deploymentList.map((item) => item.id)).toEqual([2]);
+  });
+
+  it('keeps the latest detail refresh for one deployment', async () => {
+    const older = deferred<DeploymentDetail | null>();
+    const current = deferred<DeploymentDetail | null>();
+    api.getDeployment.mockReturnValueOnce(older.promise).mockReturnValueOnce(current.promise);
+    const store = useDeploymentStore();
+
+    const olderLoad = store.loadDetail(7);
+    const currentLoad = store.loadDetail(7);
+    current.resolve(detail(7, 'running'));
+    await currentLoad;
+    older.resolve(detail(7, 'failed'));
+    await olderLoad;
+
+    expect(store.details.get(7)?.deployment.status).toBe('running');
+    expect(store.deployments.get(7)?.status).toBe('running');
   });
 });

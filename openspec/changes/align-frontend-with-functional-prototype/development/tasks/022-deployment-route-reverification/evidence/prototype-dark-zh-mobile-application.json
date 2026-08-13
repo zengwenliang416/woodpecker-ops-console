@@ -1,0 +1,92 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 应用 backend-api Customer and internal API service 打开仓库 部署应用 部署记录 应用 4 环境 3 Release 8 审批 1 策略 Production v1.4.0 当前稳定版本 Staging v1.4.1-rc.2 候选版本 部署成功率 96.3% 过去 30 天 平均部署时长 6m 08s ↓ 34s 环境状态 当前 Release 与目标服务器 Production 受保护 v1.4.0 sha256:1ee6d72a21a8 3/6 节点健康 Staging 开放 v1.4.1-rc.2 sha256:8dcf1c3a9d01 1/2 节点健康 最近部署 应用在各环境的发布记录 全部部署 部署 环境 Release 状态 进度 触发人 时间 DEP-142 Production v1.4.1-rc.2 运行中 50% 1 / 3 节点完成 alice 12 分钟前 DEP-140 Staging v1.4.1-rc.2 成功 100% 2 / 2 节点完成 bob 17 分钟前 DEP-137 Production v1.4.0 成功 100% 3 / 3 节点完成 erin 3 天前 应用配置 仓库 acme/backend-api 镜像 ghcr.io/acme/backend-api 运行方式 docker-compose Compose 文件 deploy/docker-compose.yml 服务名 api 健康检查 /health/ready 负责人 Platform 编辑应用 可用 Release 查看全部 v1.4.1-rc.2 d4e5f6a · #841 部署 v1.4.0 b2c3d4e · #837 部署",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… A 应用 backend-api Customer and internal API service 打开仓库 部署应用 部署记录 应用 4 环境 3 Release 8 审批 1 策略 Production v1.4.0 当前稳定版本 Staging v1.4.1-rc.2 候选版本 部署成功率 96.3% 过去 30 天 平均部署时长 6m 08s ↓ 34s 环境状态 当前 Release 与目标服务器 Production 受保护 v1.4.0 sha256:1ee6d72a21a8 3/6 节点健康 Staging 开放 v1.4.1-rc.2 sha256:8dcf1c3a9d01 1/2 节点健康 最近部署 应用在各环境的发布记录 全部部署 部署 环境 Release 状态 进度 触发人 时间 DEP-142 Production v1.4.1-rc.2 运行中 50% 1 / 3 节点完成 alice 12 分钟前 DEP-140 Staging v1.4.1-rc.2 成功 100% 2 / 2 节点完成 bob 17 分钟前 DEP-137 Production v1.4.0 成功 100% 3 / 3 节点完成 erin 3 天前 应用配置 仓库 acme/backend-api 镜像 ghcr.io/acme/backend-api 运行方式 docker-compose Compose 文件 deploy/docker-compose.yml 服务名 api 健康检查 /health/ready 负责人 Platform 编辑应用 可用 Release 查看全部 v1.4.1-rc.2 d4e5f6a · #841 部署 v1.4.0 b2c3d4e · #837 部署",
+  "localizationText": "WoodpeckerCI/CD Platform ACAcme Corp 工作区概览仓库12流水线组织6 交付部署中心2应用4环境3 服务器运维基础设施服务器8告警2 构建基础设施Build Agents8任务队列5Secrets9 管理系统管理用户Forge 帮助文档支持 A个人设置 搜索流水线、仓库、用户和设置…⌘ KAAliceAdministrator应用backend-apiCustomer and internal API service打开仓库部署应用部署记录应用4环境3Release8审批1策略 Production v1.4.0当前稳定版本 Staging v1.4.1-rc.2候选版本 部署成功率 96.3%过去 30 天 平均部署时长 6m 08s↓ 34s 环境状态当前 Release 与目标服务器Production受保护v1.4.0sha256:1ee6d72a21a83/6 节点健康Staging开放v1.4.1-rc.2sha256:8dcf1c3a9d011/2 节点健康最近部署应用在各环境的发布记录全部部署部署环境Release状态进度触发人时间DEP-142Productionv1.4.1-rc.2运行中50%1 / 3 节点完成alice12 分钟前DEP-140Stagingv1.4.1-rc.2成功100%2 / 2 节点完成bob17 分钟前DEP-137Productionv1.4.0成功100%3 / 3 节点完成erin3 天前应用配置仓库acme/backend-api镜像ghcr.io/acme/backend-api运行方式docker-composeCompose 文件deploy/docker-compose.yml服务名api健康检查/health/ready负责人Platform编辑应用可用 Release查看全部v1.4.1-rc.2d4e5f6a · #841部署v1.4.0b2c3d4e · #837部署",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 390,
+    "clientHeight": 844,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 360,
+      "scrollWidth": 490,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 490,
+      "scrollWidth": 490,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/deployments/apps/1",
+  "url": "http://127.0.0.1:8221/#/deployments/apps/1",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "prototype-dark-zh-mobile-application",
+  "row": 63,
+  "destination": "application",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "mobile",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 390,
+    "height": 844
+  },
+  "screenshotDimensions": {
+    "width": 390,
+    "height": 844
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    },
+    {
+      "pattern": "/应用配置/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T17:29:56.257Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:55.113Z",
+    "endedAt": "2026-08-13T17:29:56.257Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8221/",
+      "http://127.0.0.1:8221/assets/app.css",
+      "http://127.0.0.1:8221/assets/data.js",
+      "http://127.0.0.1:8221/assets/ui.js",
+      "http://127.0.0.1:8221/assets/views.js",
+      "http://127.0.0.1:8221/assets/app.js",
+      "http://127.0.0.1:8221/favicon.ico"
+    ]
+  }
+}

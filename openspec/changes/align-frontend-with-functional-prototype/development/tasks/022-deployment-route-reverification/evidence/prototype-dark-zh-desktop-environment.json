@@ -1,0 +1,92 @@
+{
+  "bodyText": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 环境 Production *.acme.example · Mon–Fri 09:00–18:00 编辑环境 部署到环境 部署记录 应用 4 环境 3 Release 8 审批 1 策略 服务器 6 3 台健康 应用 4 当前已部署 等待审批 1 成功率 97.8% 过去 30 天 已部署应用 环境中当前运行的 Release backend-api Platform · docker-compose v1.4.0 已部署 web-frontend Frontend · docker-compose v3.8.2 已部署 worker-service Backend · docker-compose v2.6.0 已部署 notification-service Backend · systemd v1.9.3 已部署 服务器 由 3 个服务器组提供容量 基础设施 服务器 服务器组 健康 CPU 内存 磁盘 心跳 prod-api-01 10.20.1.11 prod-api 健康 31% 48% 62% 5 秒前 prod-api-02 10.20.1.12 prod-api 警告 72% 81% 86% 7 秒前 prod-api-03 10.20.1.13 prod-api 严重 0% 0% 67% 3 分钟前 prod-web-01 10.20.2.11 prod-web 健康 24% 39% 44% 4 秒前 prod-web-02 10.20.2.12 prod-web 维护中 8% 22% 49% 6 秒前 prod-worker-01 10.40.1.11 prod-workers 健康 43% 58% 46% 5 秒前 保护策略 受保护 是 最少审批人 1 申请人自批 禁止 发布窗口 Mon–Fri 09:00–18:00 自动回滚 启用 最大并发 1 管理部署策略 最近部署 全部 backend-api · v1.4.1-rc.2 DEP-142 · alice 运行中 web-frontend · v3.8.2 DEP-141 · alice 成功 worker-service · v2.7.0-rc.1 DEP-139 · dave 失败 notification-service · v2.0.0-rc.1 DEP-138 · frank 等待审批",
+  "bodyTextSample": "Woodpecker CI/CD PLATFORM AC Acme Corp 工作区 概览 仓库 12 流水线 组织 6 交付 部署中心 2 应用 4 环境 3 服务器运维 基础设施 服务器 8 告警 2 构建基础设施 Build Agents 8 任务队列 5 Secrets 9 管理 系统管理 用户 Forge 帮助 文档 支持 A 个人设置 搜索流水线、仓库、用户和设置… ⌘ K A Alice Administrator 环境 Production *.acme.example · Mon–Fri 09:00–18:00 编辑环境 部署到环境 部署记录 应用 4 环境 3 Release 8 审批 1 策略 服务器 6 3 台健康 应用 4 当前已部署 等待审批 1 成功率 97.8% 过去 30 天 已部署应用 环境中当前运行的 Release backend-api Platform · docker-compose v1.4.0 已部署 web-frontend Frontend · docker-compose v3.8.2 已部署 worker-service Backend · docker-compose v2.6.0 已部署 notification-service Backend · systemd v1.9.3 已部署 服务器 由 3 个服务器组提供容量 基础设施 服务器 服务器组 健康 CPU 内存 磁盘 心跳 prod-api-01 10.20.1.11 prod-api 健康 31% 48% 62% 5 秒前 prod-api-02 10.20.1.12 prod-api 警告 72% 81% 86% 7 秒前 prod-api-03 10.20.1.13 prod-api 严重 0% 0% 67% 3 分钟前 prod-web-01 10.20.2.11 prod-web 健康 24% 39% 44% 4 秒前 prod-web-02 10.20.2.12 prod-web 维护中 8% 22% 49% 6 秒前 prod-worker-01 10.40.1.11 prod-workers 健康 43% 58% 46% 5 秒前 保护策略 受保护 是 最少审批人 1 申请人自批 禁止 发布窗口 Mon–Fri 09:00–18:00 自动回滚 启用 最大并发 1 管理部署策略 最近部署 全部 backend-api · v1.4.1-rc.2 DEP-142 · alice 运行中 web-frontend · v3.8.2 DEP-141 · alice 成功 worker-service · v2.7.0-rc.1 DEP-139 · dave 失败 notification-service · v2.0.0-rc.1 DEP-138 · frank 等待审批",
+  "localizationText": "WoodpeckerCI/CD Platform ACAcme Corp 工作区概览仓库12流水线组织6 交付部署中心2应用4环境3 服务器运维基础设施服务器8告警2 构建基础设施Build Agents8任务队列5Secrets9 管理系统管理用户Forge 帮助文档支持 A个人设置 搜索流水线、仓库、用户和设置…⌘ KAAliceAdministrator环境Production*.acme.example · Mon–Fri 09:00–18:00编辑环境部署到环境部署记录应用4环境3Release8审批1策略 服务器 63 台健康 应用 4当前已部署 等待审批 1 成功率 97.8%过去 30 天 已部署应用环境中当前运行的 Releasebackend-apiPlatform · docker-composev1.4.0已部署web-frontendFrontend · docker-composev3.8.2已部署worker-serviceBackend · docker-composev2.6.0已部署notification-serviceBackend · systemdv1.9.3已部署服务器由 3 个服务器组提供容量基础设施服务器服务器组健康CPU内存磁盘心跳prod-api-0110.20.1.11prod-api健康31%48%62%5 秒前prod-api-0210.20.1.12prod-api警告72%81%86%7 秒前prod-api-0310.20.1.13prod-api严重0%0%67%3 分钟前prod-web-0110.20.2.11prod-web健康24%39%44%4 秒前prod-web-0210.20.2.12prod-web维护中8%22%49%6 秒前prod-worker-0110.40.1.11prod-workers健康43%58%46%5 秒前保护策略受保护是最少审批人1申请人自批禁止发布窗口Mon–Fri 09:00–18:00自动回滚启用最大并发1管理部署策略最近部署全部backend-api · v1.4.1-rc.2DEP-142 · alice运行中web-frontend · v3.8.2DEP-141 · alice成功worker-service · v2.7.0-rc.1DEP-139 · dave失败notification-service · v2.0.0-rc.1DEP-138 · frank等待审批",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 1590,
+    "clientHeight": 1000,
+    "scrollWidth": 1590,
+    "dataTheme": "dark",
+    "lang": "zh-CN"
+  },
+  "body": {
+    "clientWidth": 1590,
+    "scrollWidth": 1590
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "table-scroll",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "auto",
+      "locallyScrollable": false
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 938,
+      "scrollWidth": 938,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "terminalRouteName": null,
+  "terminalPath": "/deployments/environments/1",
+  "url": "http://127.0.0.1:8221/#/deployments/environments/1",
+  "title": "Woodpecker CI · Infrastructure & Deployment Prototype",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "prototype-dark-zh-desktop-environment",
+  "row": 65,
+  "destination": "environment",
+  "surface": "prototype",
+  "stateClass": "equivalent",
+  "role": "prototype-administrator",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/Production/",
+      "passed": true
+    },
+    {
+      "pattern": "/保护策略/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [],
+  "capturedAt": "2026-08-13T17:29:28.667Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:27.499Z",
+    "endedAt": "2026-08-13T17:29:28.667Z",
+    "consoleErrors": [],
+    "consoleWarnings": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8221/",
+      "http://127.0.0.1:8221/assets/app.css",
+      "http://127.0.0.1:8221/assets/data.js",
+      "http://127.0.0.1:8221/assets/ui.js",
+      "http://127.0.0.1:8221/assets/views.js",
+      "http://127.0.0.1:8221/assets/app.js",
+      "http://127.0.0.1:8221/favicon.ico"
+    ]
+  }
+}

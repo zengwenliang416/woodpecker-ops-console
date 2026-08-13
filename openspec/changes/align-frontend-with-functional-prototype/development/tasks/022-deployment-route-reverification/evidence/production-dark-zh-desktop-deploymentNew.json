@@ -1,0 +1,924 @@
+{
+  "bodyText": "Woodpecker CI/CD 平台 工作区 概览 仓库 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 新建部署 刷新 从不可变 Release 创建服务器部署，并在提交前核对当前容量、安全和审批输入。 部署中心 应用 2 环境 2 Releases 3 生产审批 部署策略 1 选择应用与 Release 应用和不可变产物 2 选择环境 保护规则与发布窗口 3 目标与策略 服务器组、策略和批次 4 部署前检查 已确认的 Release、容量、磁盘和审批输入 5 确认 创建部署并交由控制面执行 步骤 1 / 5 选择应用与 Release 应用和不可变产物 20% 应用 选择应用 backend-api · registry.example.test/backend-api web-frontend · registry.example.test/web-frontend backend-api Backend API service docker-compose · Platform Release 选择流水线产出的不可变制品。 v1.4.0 sha256:22222222222222222222222222222222 流水线 #832 · bob 已部署 v1.4.1 sha256:11111111111111111111111111111111 流水线 #841 · alice 就绪 部署不可变镜像 Digest 到服务器，滚动部署永不使用 :latest。 部署使用镜像 Digest，避免可变标签漂移。 取消 下一步",
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 0 新建部署 刷新 从不可变 Release 创建服务器部署，并在提交前核对当前容量、安全和审批输入。 部署中心 应用 2 环境 2 Releases 3 生产审批 部署策略 1 选择应用与 Release 应用和不可变产物 2 选择环境 保护规则与发布窗口 3 目标与策略 服务器组、策略和批次 4 部署前检查 已确认的 Release、容量、磁盘和审批输入 5 确认 创建部署并交由控制面执行 步骤 1 / 5 选择应用与 Release 应用和不可变产物 20% 应用 选择应用 backend-api · registry.example.test/backend-api web-frontend · registry.example.test/web-frontend backend-api Backend API service docker-compose · Platform Release 选择流水线产出的不可变制品。 v1.4.0 sha256:22222222222222222222222222222222 流水线 #832 · bob 已部署 v1.4.1 sha256:11111111111111111111111111111111 流水线 #841 · alice 就绪 部署不可变镜像 Digest 到服务器，滚动部署永不使用 :latest。 部署使用镜像 Digest，避免可变标签漂移。 取消 下一步",
+  "localizationText": "WoodpeckerCI/CD 平台工作区概览仓库交付部署中心应用环境Releases生产审批服务器运维基础设施服务器服务器组服务与容器告警构建基础设施构建 Agent任务队列密钥管理系统管理用户Forge帮助文档个人设置搜索流水线、仓库、用户和设置…⌘ K 0新建部署刷新从不可变 Release 创建服务器部署，并在提交前核对当前容量、安全和审批输入。部署中心应用2环境2Releases3生产审批部署策略1选择应用与 Release应用和不可变产物2选择环境保护规则与发布窗口3目标与策略服务器组、策略和批次4部署前检查已确认的 Release、容量、磁盘和审批输入5确认创建部署并交由控制面执行步骤 1 / 5选择应用与 Release应用和不可变产物20%应用选择应用backend-api · registry.example.test/backend-apiweb-frontend · registry.example.test/web-frontendbackend-apiBackend API servicedocker-compose · PlatformRelease选择流水线产出的不可变制品。v1.4.0sha256:22222222222222222222222222222222流水线 #832 · bob已部署v1.4.1sha256:11111111111111111111111111111111流水线 #841 · alice就绪部署不可变镜像 Digest 到服务器，滚动部署永不使用 :latest。部署使用镜像 Digest，避免可变标签漂移。取消下一步",
+  "rawEnumTokens": [],
+  "document": {
+    "clientWidth": 1600,
+    "clientHeight": 1000,
+    "scrollWidth": 1600,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 1600,
+    "scrollWidth": 1600
+  },
+  "pageLevelHorizontalOverflow": false,
+  "rawI18nKeys": [],
+  "deleteControlCount": 0,
+  "denseContainers": [],
+  "terminalRouteName": "deployment-new",
+  "terminalPath": "/deployments/new",
+  "url": "http://127.0.0.1:8220/deployments/new",
+  "title": "新建部署 · Woodpecker",
+  "runId": "0051a9bc-3312-4bf4-a850-6e4d4a205920",
+  "stateId": "production-dark-zh-desktop-deploymentNew",
+  "row": 59,
+  "destination": "deploymentNew",
+  "surface": "production",
+  "stateClass": "equivalent",
+  "role": "admin",
+  "dataState": "populated",
+  "viewportId": "desktop",
+  "viewport": {
+    "devicePixelRatio": 1,
+    "width": 1600,
+    "height": 1000
+  },
+  "screenshotDimensions": {
+    "width": 1600,
+    "height": 1000
+  },
+  "contentAssertions": [
+    {
+      "pattern": "/新建部署/",
+      "passed": true
+    },
+    {
+      "pattern": "/backend-api/",
+      "passed": true
+    }
+  ],
+  "apiRequests": [
+    "GET /api/user/repos",
+    "GET /api/stream/events",
+    "GET /api/repos?page=1",
+    "GET /api/user/feed",
+    "GET /api/applications?page=1&perPage=50",
+    "GET /api/environments?page=1&perPage=50",
+    "GET /api/releases?page=1&perPage=50",
+    "GET /api/infrastructure/servers?page=1&perPage=50",
+    "GET /api/infrastructure/groups?page=1&perPage=50",
+    "GET /api/infrastructure/alerts?page=1&perPage=50"
+  ],
+  "capturedAt": "2026-08-13T17:29:06.093Z",
+  "health": {
+    "startedAt": "2026-08-13T17:29:03.969Z",
+    "endedAt": "2026-08-13T17:29:06.093Z",
+    "consoleErrors": [],
+    "consoleWarnings": [
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.main' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.close' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.workspace' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.delivery' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.server_ops' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.build_infra' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.management' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.help' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'docs' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_name' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_subtitle' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.overview' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'repos' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.deployments' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.applications' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.environments' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.releases.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.approvals.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.infrastructure' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.servers' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.groups.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.services.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.alerts' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.agents' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.queue' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.secrets' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.admin' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.users' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.forges' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.personal' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.open' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_placeholder' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_shortcut' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.theme' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'settings' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'user.settings.settings' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'pipeline_feed' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'en' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.main' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.main' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.close' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.close' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.workspace' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.workspace' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.delivery' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.delivery' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.server_ops' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.server_ops' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.build_infra' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.build_infra' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.management' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.management' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.help' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.help' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'docs' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'docs' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_name' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_name' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.brand_subtitle' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.brand_subtitle' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.overview' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.overview' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'repos' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'repos' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.deployments' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.deployments' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.applications' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.applications' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.environments' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.environments' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.releases.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.releases.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.approvals.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.approvals.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.infrastructure' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.infrastructure' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.servers' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.servers' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.groups.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.groups.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.services.title' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.services.title' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.alerts' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.alerts' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.agents' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.agents' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.queue' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.queue' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.secrets' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.secrets' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.admin' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.admin' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.users' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.users' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.forges' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.forges' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.personal' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.personal' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.sidebar.open' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.sidebar.open' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_placeholder' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_placeholder' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.search_shortcut' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.search_shortcut' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'ops.topbar.theme' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'ops.topbar.theme' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'settings' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'settings' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'user.settings.settings' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'user.settings.settings' key with 'en' locale."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Not found 'pipeline_feed' key in 'zh' locale messages."
+      },
+      {
+        "level": "warning",
+        "message": "[intlify] Fall back to translate 'pipeline_feed' key with 'en' locale."
+      }
+    ],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": [],
+    "unexpectedHttpErrors": [],
+    "missingExpectedHttpErrors": [],
+    "requestUrls": [
+      "http://127.0.0.1:8220/deployments/new",
+      "http://127.0.0.1:8220/@vite/client",
+      "http://127.0.0.1:8220/web-config.js",
+      "http://127.0.0.1:8220/assets/custom.css",
+      "http://127.0.0.1:8220/src/main.ts",
+      "http://127.0.0.1:8220/assets/custom.js",
+      "http://127.0.0.1:8220/@fs/Users/wenliang_zeng/.cache/woodpecker-web-vstore/vite@8.2.1_@types+node@24.13.3_jiti@2.7.0_yaml@2.9.0/node_modules/vite/dist/client/env.mjs",
+      "http://127.0.0.1:8220/src/compositions/useFavicon.ts",
+      "http://127.0.0.1:8220/src/tailwind.css",
+      "http://127.0.0.1:8220/src/style.css",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/pinia.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue.js?v=bc181798",
+      "http://127.0.0.1:8220/src/App.vue",
+      "http://127.0.0.1:8220/src/compositions/useEvents.ts",
+      "http://127.0.0.1:8220/src/compositions/useI18n.ts",
+      "http://127.0.0.1:8220/src/compositions/useNotifications.ts",
+      "http://127.0.0.1:8220/src/router.ts",
+      "http://127.0.0.1:8220/src/compositions/useConfig.ts",
+      "http://127.0.0.1:8220/src/compositions/useTheme.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue.runtime.esm-bundler-D9ag4_JJ.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/dist-DnamxKAy.js?v=bc181798",
+      "http://127.0.0.1:8220/src/store/pipelines.ts",
+      "http://127.0.0.1:8220/src/store/repos.ts",
+      "http://127.0.0.1:8220/src/compositions/useApiClient.ts",
+      "http://127.0.0.1:8220/@id/__x00__vite/dynamic-import-helper.js",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@vueuse_core.js?v=bc181798",
+      "http://127.0.0.1:8220/@id/__x00__virtual:vue-i18n-supported-locales",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue-i18n.js?v=bc181798",
+      "http://127.0.0.1:8220/src/compositions/useDate.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@kyvg_vue3-notification.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/vue-router.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/layout/header/Sidebar.vue",
+      "http://127.0.0.1:8220/src/components/layout/header/Navbar.vue",
+      "http://127.0.0.1:8220/src/components/pipeline-feed/PipelineFeedSidebar.vue",
+      "http://127.0.0.1:8220/src/App.vue?vue&type=style&index=0&scoped=7a7a37b1&lang.css",
+      "http://127.0.0.1:8220/@id/__x00__plugin-vue:export-helper",
+      "http://127.0.0.1:8220/src/compositions/useAuthentication.ts",
+      "http://127.0.0.1:8220/src/compositions/useUserConfig.ts",
+      "http://127.0.0.1:8220/src/compositions/usePaginate.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/rolldown-runtime-DC62tzP2.js?v=bc181798",
+      "http://127.0.0.1:8220/src/lib/api/index.ts",
+      "http://127.0.0.1:8220/src/components/atomic/Button.vue",
+      "http://127.0.0.1:8220/src/components/ops/PrototypeIcon.vue",
+      "http://127.0.0.1:8220/src/components/atomic/IconButton.vue",
+      "http://127.0.0.1:8220/src/compositions/useVersion.ts",
+      "http://127.0.0.1:8220/src/components/layout/header/ActivePipelines.vue",
+      "http://127.0.0.1:8220/src/components/layout/header/Navbar.vue?vue&type=style&index=0&scoped=23f3069c&lang.css",
+      "http://127.0.0.1:8220/src/components/pipeline-feed/PipelineFeedItem.vue",
+      "http://127.0.0.1:8220/src/compositions/usePipelineFeed.ts",
+      "http://127.0.0.1:8220/src/assets/logo.svg?import&component",
+      "http://127.0.0.1:8220/src/components/layout/header/Sidebar.vue?vue&type=style&index=0&scoped=e0b923ac&lang.css",
+      "http://127.0.0.1:8220/src/lib/api/client.ts",
+      "http://127.0.0.1:8220/src/components/atomic/Icon.vue",
+      "http://127.0.0.1:8220/src/components/atomic/IconButton.vue?vue&type=style&index=0&scoped=ed4e4676&lang.css",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver_functions_coerce.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver_functions_gt.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/atomic/RenderMarkdown.vue",
+      "http://127.0.0.1:8220/src/components/repo/pipeline/PipelineStatusIcon.vue",
+      "http://127.0.0.1:8220/src/compositions/usePipeline.ts",
+      "http://127.0.0.1:8220/src/components/layout/header/ActivePipelines.vue?vue&type=style&index=0&scoped=74433f7a&lang.css",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/semver-CR7M5Igw.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/@mdi_js.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/simple-icons.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/atomic/SvgIcon.vue",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/dompurify.js?v=bc181798",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/marked.js?v=bc181798",
+      "http://127.0.0.1:8220/src/components/repo/pipeline/pipeline-status.ts",
+      "http://127.0.0.1:8220/node_modules/.vite/deps/node-emoji.js?v=bc181798",
+      "http://127.0.0.1:8220/src/compositions/useElapsedTime.ts",
+      "http://127.0.0.1:8220/src/lib/pipelineRefs.ts",
+      "http://127.0.0.1:8220/src/lib/utils/index.ts",
+      "http://127.0.0.1:8220/src/lib/api/types/webhook.ts",
+      "http://127.0.0.1:8220/@id/virtual:intlify-i18n-5",
+      "http://127.0.0.1:8220/@id/virtual:intlify-i18n-25",
+      "http://127.0.0.1:8220/api/user/repos?",
+      "http://127.0.0.1:8220/src/views/RouterView.vue",
+      "http://127.0.0.1:8220/src/views/deployments/DeploymentNew.vue",
+      "http://127.0.0.1:8220/api/stream/events",
+      "http://127.0.0.1:8220/api/repos?page=1",
+      "http://127.0.0.1:8220/api/user/feed",
+      "http://127.0.0.1:8220/src/components/atomic/FeedbackState.vue",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Scaffold.vue",
+      "http://127.0.0.1:8220/src/components/ops/DeploymentNav.vue",
+      "http://127.0.0.1:8220/src/compositions/useConfirmedRequest.ts",
+      "http://127.0.0.1:8220/src/compositions/useDeploymentPresentation.ts",
+      "http://127.0.0.1:8220/src/compositions/useWPTitle.ts",
+      "http://127.0.0.1:8220/src/store/ops.ts",
+      "http://127.0.0.1:8220/src/views/deployments/DeploymentNew.vue?vue&type=style&index=0&scoped=63c90534&lang.css",
+      "http://127.0.0.1:8220/src/components/atomic/FeedbackState.vue?vue&type=style&index=0&scoped=b91a9838&lang.css",
+      "http://127.0.0.1:8220/src/components/layout/Container.vue",
+      "http://127.0.0.1:8220/src/compositions/useTabs.ts",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Header.vue",
+      "http://127.0.0.1:8220/src/components/ops/OpsSectionNav.vue",
+      "http://127.0.0.1:8220/src/compositions/useInjectProvide.ts",
+      "http://127.0.0.1:8220/src/components/form/TextField.vue",
+      "http://127.0.0.1:8220/src/components/layout/scaffold/Tabs.vue",
+      "http://127.0.0.1:8220/src/components/ops/OpsSectionNav.vue?vue&type=style&index=0&scoped=e3aedef5&lang.css",
+      "http://127.0.0.1:8220/src/components/atomic/CountBadge.vue",
+      "http://127.0.0.1:8220/api/applications?page=1&perPage=50",
+      "http://127.0.0.1:8220/api/environments?page=1&perPage=50",
+      "http://127.0.0.1:8220/api/releases?page=1&perPage=50",
+      "http://127.0.0.1:8220/api/infrastructure/servers?page=1&perPage=50",
+      "http://127.0.0.1:8220/api/infrastructure/groups?page=1&perPage=50",
+      "http://127.0.0.1:8220/api/infrastructure/alerts?page=1&perPage=50"
+    ]
+  }
+}

@@ -9,6 +9,7 @@ import type {
   Deployment,
   DeploymentDetail,
   DeploymentLog,
+  DeploymentPolicies,
   Environment,
   ExtensionSettings,
   Forge,
@@ -646,8 +647,8 @@ export default class WoodpeckerClient extends ApiClient {
 
   // ---------- Ops: policies & audit ----------
 
-  async getOpsPolicies(): Promise<unknown | null> {
-    return this._get('/api/ops/policies');
+  async getOpsPolicies(): Promise<DeploymentPolicies | null> {
+    return this._get('/api/ops/policies') as Promise<DeploymentPolicies | null>;
   }
 
   async getAuditLogs(opts?: PaginationOptions): Promise<AuditLog[] | null> {

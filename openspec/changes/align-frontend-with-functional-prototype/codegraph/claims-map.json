@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-13T07:39:20.154Z",
+  "generated_at": "2026-08-13T14:36:33.040Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -28,7 +28,9 @@
         "web/src/compositions/useDate.test.ts",
         "web/src/compositions/useElapsedTime.test.ts"
       ],
-      "query_ids": ["development:task-001-date-duration-integrity:evidence"]
+      "query_ids": [
+        "development:task-001-date-duration-integrity:evidence"
+      ]
     },
     {
       "id": "development:task-002-shared-shell-alignment",
@@ -61,7 +63,9 @@
         "web/src/viteConfig.test.ts",
         "web/vite.config.ts"
       ],
-      "query_ids": ["development:task-002-shared-shell-alignment:evidence"]
+      "query_ids": [
+        "development:task-002-shared-shell-alignment:evidence"
+      ]
     },
     {
       "id": "development:task-003-shared-feedback-primitives",
@@ -100,7 +104,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-003-shared-feedback-primitives:evidence"]
+      "query_ids": [
+        "development:task-003-shared-feedback-primitives:evidence"
+      ]
     },
     {
       "id": "development:task-004-shell-theme-evidence",
@@ -135,7 +141,9 @@
         "web/src/viteConfig.test.ts",
         "web/vite.config.ts"
       ],
-      "query_ids": ["development:task-004-shell-theme-evidence:evidence"]
+      "query_ids": [
+        "development:task-004-shell-theme-evidence:evidence"
+      ]
     },
     {
       "id": "development:task-005-pipeline-detail-header",
@@ -161,7 +169,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-005-pipeline-detail-header:evidence"]
+      "query_ids": [
+        "development:task-005-pipeline-detail-header:evidence"
+      ]
     },
     {
       "id": "development:task-006-pipeline-overview",
@@ -187,7 +197,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-006-pipeline-overview:evidence"]
+      "query_ids": [
+        "development:task-006-pipeline-overview:evidence"
+      ]
     },
     {
       "id": "development:task-007-pipeline-log-diagnostics",
@@ -222,7 +234,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-007-pipeline-log-diagnostics:evidence"]
+      "query_ids": [
+        "development:task-007-pipeline-log-diagnostics:evidence"
+      ]
     },
     {
       "id": "development:task-008-pipeline-regression-coverage",
@@ -252,7 +266,9 @@
         "web/src/views/repo/pipeline/PipelineErrors.test.ts",
         "web/src/views/repo/pipeline/PipelineDebug.test.ts"
       ],
-      "query_ids": ["development:task-008-pipeline-regression-coverage:evidence"]
+      "query_ids": [
+        "development:task-008-pipeline-regression-coverage:evidence"
+      ]
     },
     {
       "id": "development:task-009-pipeline-validation-evidence",
@@ -283,7 +299,9 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/quality-review.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/009-pipeline-validation-evidence/evidence/**"
       ],
-      "query_ids": ["development:task-009-pipeline-validation-evidence:evidence"]
+      "query_ids": [
+        "development:task-009-pipeline-validation-evidence:evidence"
+      ]
     },
     {
       "id": "development:task-010-repository-pipeline-list",
@@ -312,7 +330,9 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/010-repository-pipeline-list/evidence/**"
       ],
-      "query_ids": ["development:task-010-repository-pipeline-list:evidence"]
+      "query_ids": [
+        "development:task-010-repository-pipeline-list:evidence"
+      ]
     },
     {
       "id": "development:task-011-repository-branches-pull-requests",
@@ -350,7 +370,9 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/011-repository-branches-pull-requests/evidence/**"
       ],
-      "query_ids": ["development:task-011-repository-branches-pull-requests:evidence"]
+      "query_ids": [
+        "development:task-011-repository-branches-pull-requests:evidence"
+      ]
     },
     {
       "id": "development:task-012-repository-manual-run-settings",
@@ -403,7 +425,9 @@
         "web/src/assets/locales/zh-Hans.json",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/012-repository-manual-run-settings/evidence/**"
       ],
-      "query_ids": ["development:task-012-repository-manual-run-settings:evidence"]
+      "query_ids": [
+        "development:task-012-repository-manual-run-settings:evidence"
+      ]
     },
     {
       "id": "development:task-013-repository-regression-coverage",
@@ -441,7 +465,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-013-repository-regression-coverage:evidence"]
+      "query_ids": [
+        "development:task-013-repository-regression-coverage:evidence"
+      ]
     },
     {
       "id": "development:task-014-repository-validation-evidence",
@@ -474,7 +500,9 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md"
       ],
-      "query_ids": ["development:task-014-repository-validation-evidence:evidence"]
+      "query_ids": [
+        "development:task-014-repository-validation-evidence:evidence"
+      ]
     },
     {
       "id": "development:task-015-organization-routes",
@@ -542,7 +570,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-015-organization-routes:evidence"]
+      "query_ids": [
+        "development:task-015-organization-routes:evidence"
+      ]
     },
     {
       "id": "development:task-016-administration-routes",
@@ -599,7 +629,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-016-administration-routes:evidence"]
+      "query_ids": [
+        "development:task-016-administration-routes:evidence"
+      ]
     },
     {
       "id": "development:task-017-user-auth-routes",
@@ -645,7 +677,9 @@
         "web/src/assets/locales/en.json",
         "web/src/assets/locales/zh-Hans.json"
       ],
-      "query_ids": ["development:task-017-user-auth-routes:evidence"]
+      "query_ids": [
+        "development:task-017-user-auth-routes:evidence"
+      ]
     },
     {
       "id": "development:task-018-authorization-boundaries",
@@ -683,7 +717,9 @@
         "web/src/views/org/settings/OrgSettingsWrapper.vue",
         "web/src/views/org/settings/OrgSettingsWrapper.test.ts"
       ],
-      "query_ids": ["development:task-018-authorization-boundaries:evidence"]
+      "query_ids": [
+        "development:task-018-authorization-boundaries:evidence"
+      ]
     },
     {
       "id": "development:task-019-route-family-parity-closure",
@@ -716,7 +752,9 @@
         "web/src/views/cli/Auth.test.ts",
         "web/src/views/NotFound.test.ts"
       ],
-      "query_ids": ["development:task-019-route-family-parity-closure:evidence"]
+      "query_ids": [
+        "development:task-019-route-family-parity-closure:evidence"
+      ]
     },
     {
       "id": "development:task-020-overview-repositories-reverification",
@@ -738,12 +776,12 @@
         "Route-parity rows 2 and 3 and baseline task 6.1 updated only after current-byte evidence and reviews pass."
       ],
       "allowed_files": [
-        "web/src/App.vue",
-        "web/src/App.test.ts",
         "web/src/views/Overview.vue",
         "web/src/views/Overview.test.ts",
         "web/src/views/Repos.vue",
         "web/src/views/Repos.test.ts",
+        "web/src/App.vue",
+        "web/src/App.test.ts",
         "web/src/lib/repoMetrics.ts",
         "web/src/lib/repoMetrics.test.ts",
         "web/src/store/repos.ts",
@@ -754,14 +792,16 @@
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/**"
       ],
-      "query_ids": ["development:task-020-overview-repositories-reverification:evidence"]
+      "query_ids": [
+        "development:task-020-overview-repositories-reverification:evidence"
+      ]
     },
     {
       "id": "development:task-021-infrastructure-route-reverification",
       "kind": "development-task",
       "stage": "development",
       "task_id": "021-infrastructure-route-reverification",
-      "text": "Re-verify infrastructure parity rows `46-57` from current production and approved prototype bytes while protecting truthful API, request, mutation, permission, and responsive behavior.",
+      "text": "Re-verify parity rows `46-57` from current production and approved prototype",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -770,8 +810,8 @@
       ],
       "expected_evidence": [
         "Focused view, navigation, and store regressions for explicit states, filters, route switching, overlapping requests, mutations, and fallbacks.",
-        "Equivalent current-byte production/prototype infrastructure evidence at desktop and 390px in dark Simplified Chinese plus representative light or English capability.",
-        "Strict exact-inventory evidence verification for rows 46-57 covering routes, tabs, viewport, theme, locale, role, content, containment, i18n, browser health, PNG, service and source identity, one run ID, and rejected mutations.",
+        "Equivalent current-byte production/prototype rows 46-57 at desktop and 390px in dark Simplified Chinese plus representative light or English capability.",
+        "Strict exact-inventory evidence verification covering routes, tabs, viewport, theme, locale, role, content, containment, i18n, browser health, PNG, service and source identity, one run ID, and rejected mutations.",
         "Focused/full Vitest, Prettier, ESLint, TypeScript, build, evidence syntax, JSON/JSONL, diff, SpecNav, report, and reviews.",
         "Rows 46-57 and task 6.2 update only after evidence and reviews pass."
       ],
@@ -788,7 +828,51 @@
         "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/**"
       ],
-      "query_ids": ["development:task-021-infrastructure-route-reverification:evidence"]
+      "query_ids": [
+        "development:task-021-infrastructure-route-reverification:evidence"
+      ]
+    },
+    {
+      "id": "development:task-022-deployment-route-reverification",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "022-deployment-route-reverification",
+      "text": "Re-verify parity rows `58-67` from current production and approved prototype",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/context.json"
+      ],
+      "expected_evidence": [
+        "Focused view, navigation, and store regressions for explicit states, filters, missing resources, route switching, overlapping requests, mutations, timestamps, and fallbacks.",
+        "Equivalent current-byte production/prototype rows 58-67 at desktop and 390px in dark Simplified Chinese plus representative light or English capability.",
+        "Strict exact-inventory evidence verification covering routes, wizard steps, viewport, theme, locale, role, content, containment, i18n, browser health, PNG, service and source identity, one run ID, and rejected mutations.",
+        "Focused/full Vitest, Prettier, ESLint, TypeScript, build, evidence syntax, JSON/JSONL, diff, SpecNav, report, and reviews.",
+        "Rows 58-67 and task 6.3 update only after evidence and reviews pass."
+      ],
+      "allowed_files": [
+        "web/src/views/deployments/*.vue",
+        "web/src/views/deployments/*.test.ts",
+        "web/src/components/ops/DeploymentNav.vue",
+        "web/src/components/ops/DeploymentNav.test.ts",
+        "web/src/compositions/useConfirmedRequest.ts",
+        "web/src/compositions/useConfirmedRequest.test.ts",
+        "web/src/compositions/useDeploymentPresentation.ts",
+        "web/src/compositions/useDeploymentPresentation.test.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/lib/api/index.ts",
+        "web/src/lib/api/types/ops.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/**"
+      ],
+      "query_ids": [
+        "development:task-022-deployment-route-reverification:evidence"
+      ]
     }
   ]
 }

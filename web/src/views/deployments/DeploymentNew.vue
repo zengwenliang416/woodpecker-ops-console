@@ -2,16 +2,41 @@
   <!-- eslint-disable @intlify/vue-i18n/no-raw-text, vue/html-closing-bracket-newline -->
   <Scaffold :go-back="() => router.push('/deployments')" full-width-header fluid-content>
     <template #title>{{ $t('ops.deployment_wizard.title') }}</template>
+    <template #headerActions>
+      <Button
+        start-icon="refresh"
+        :is-loading="refreshing"
+        :text="$t('ops.deployment_wizard.refresh')"
+        :title="$t('ops.deployment_wizard.refresh')"
+        @click="loadOptions(true)"
+      />
+    </template>
 
     <div class="ops-page">
-      <p class="page-description">从不可变 Release 创建服务器部署，并在执行前完成容量、安全和审批检查。</p>
+      <p class="page-description">{{ $t('ops.deployment_wizard.description') }}</p>
       <DeploymentNav
         :application-count="appStore.applicationList.length"
         :environment-count="appStore.environmentList.length"
         :release-count="appStore.releaseList.length"
       />
 
-      <div class="wizard-layout">
+      <FeedbackState
+        v-if="initialLoading"
+        kind="loading"
+        :title="$t('ops.deployment_wizard.loading_title')"
+        :description="$t('ops.deployment_wizard.loading_description')"
+      />
+      <FeedbackState
+        v-else-if="loadError && !hasConfirmedData"
+        kind="error"
+        :title="$t('ops.deployment_wizard.error_title')"
+        :description="$t('ops.deployment_wizard.error_description')"
+      >
+        <template #action>
+          <Button start-icon="refresh" :text="$t('ops.deployment_wizard.retry')" @click="loadOptions()" />
+        </template>
+      </FeedbackState>
+      <div v-else class="wizard-layout">
         <aside class="wizard-steps wp-card">
           <button
             v-for="step in steps"
@@ -33,9 +58,16 @@
 
         <main class="wizard-main">
           <section class="wp-card wizard-card">
+            <FeedbackState
+              v-if="loadError"
+              compact
+              kind="error"
+              :title="$t('ops.deployment_wizard.refresh_error_title')"
+              :description="$t('ops.deployment_wizard.refresh_error_description')"
+            />
             <div class="wizard-card-header">
               <div>
-                <span>步骤 {{ currentStep }} / 5</span>
+                <span>{{ $t('ops.deployment_wizard.step_progress', { current: currentStep, total: 5 }) }}</span>
                 <h2>{{ steps[currentStep - 1].label }}</h2>
                 <p>{{ steps[currentStep - 1].description }}</p>
               </div>
@@ -48,7 +80,7 @@
                   <label class="field"
                     ><span class="field-label">{{ $t('ops.deployment.application') }}</span
                     ><select v-model.number="draft.applicationId" class="select" @change="onAppChange">
-                      <option :value="0" disabled>选择应用</option>
+                      <option :value="0" disabled>{{ $t('ops.deployment_wizard.select_application') }}</option>
                       <option v-for="app in appStore.applicationList" :key="app.id" :value="app.id">
                         {{ app.name }} · {{ app.image }}
                       </option>
@@ -59,14 +91,14 @@
                     <div>
                       <strong>{{ selectedApp.name }}</strong>
                       <p>{{ selectedApp.description || selectedApp.image }}</p>
-                      <small>{{ selectedApp.runtime }} · {{ selectedApp.owner_team || '未分配团队' }}</small>
+                      <small>{{ applicationMeta(selectedApp.runtime, selectedApp.owner_team) }}</small>
                     </div>
                   </div>
                 </div>
                 <div class="form-section">
                   <div class="section-label">
                     <span>{{ $t('ops.deployment.release') }}</span
-                    ><small>选择流水线产出的不可变制品</small>
+                    ><small>{{ $t('ops.deployment_wizard.release_selection_hint') }}</small>
                   </div>
                   <div class="option-grid">
                     <label
@@ -77,12 +109,12 @@
                       ><input v-model.number="draft.releaseId" type="radio" :value="release.id" /><span
                         ><strong>{{ release.version }}</strong
                         ><small>{{ release.digest }}</small
-                        ><em>Pipeline #{{ release.pipeline_id }} · {{ release.author || 'system' }}</em></span
-                      ><span class="status-chip">{{ release.status }}</span></label
+                        ><em>{{ releaseMeta(release.pipeline_id, release.author) }}</em></span
+                      ><span class="status-chip">{{ releaseStatusLabel(release.status) }}</span></label
                     >
                     <div v-if="availableReleases.length === 0" class="wp-empty-state">
-                      <strong>该应用暂无 Release</strong>
-                      <p>请先从成功流水线生成不可变发布产物。</p>
+                      <strong>{{ $t('ops.deployment_wizard.no_releases') }}</strong>
+                      <p>{{ $t('ops.deployment_wizard.no_releases_hint') }}</p>
                     </div>
                   </div>
                 </div>
@@ -90,14 +122,15 @@
                   <Icon name="info" />
                   <div>
                     <strong>{{ $t('ops.deployment_wizard.release_hint') }}</strong>
-                    <p class="wp-muted">部署过程中使用镜像 Digest，避免标签漂移。</p>
+                    <p class="wp-muted">{{ $t('ops.deployment_wizard.digest_hint') }}</p>
                   </div>
                 </div>
               </template>
 
               <template v-else-if="currentStep === 2">
                 <div class="section-label">
-                  <span>选择目标环境</span><small>保护规则、审批人数和发布窗口将在部署中强制执行</small>
+                  <span>{{ $t('ops.deployment_wizard.select_environment') }}</span
+                  ><small>{{ $t('ops.deployment_wizard.environment_hint') }}</small>
                 </div>
                 <div class="environment-grid">
                   <label
@@ -111,34 +144,45 @@
                       ><Icon name="environment" /></span
                     ><span class="environment-copy"
                       ><strong>{{ env.title ?? env.name }}</strong
-                      ><small>{{ env.domain || '未配置域名' }}</small
+                      ><small>{{ env.domain || $t('ops.deployment_wizard.no_domain') }}</small
                       ><span
-                        ><em v-if="env.protected">受保护</em
-                        ><em v-if="env.approval_required">{{ env.minimum_approvers }} 人审批</em
-                        ><em v-if="env.auto_rollback">自动回滚</em></span
+                        ><em v-if="env.protected">{{ $t('ops.environments.protected') }}</em
+                        ><em v-if="env.approval_required">{{
+                          $t('ops.deployment_wizard.approver_count', { count: env.minimum_approvers })
+                        }}</em
+                        ><em v-if="env.auto_rollback">{{ $t('ops.environment.auto_rollback') }}</em></span
                       ></span
                     ></label
                   >
                 </div>
                 <div v-if="selectedEnv" class="environment-detail wp-card">
                   <div>
-                    <span>发布窗口</span><strong>{{ selectedEnv.deploy_window || '随时' }}</strong>
+                    <span>{{ $t('ops.environment.deploy_window') }}</span
+                    ><strong>{{ selectedEnv.deploy_window || $t('ops.deployment_wizard.any_time') }}</strong>
                   </div>
                   <div>
-                    <span>审批要求</span
+                    <span>{{ $t('ops.deployment_wizard.approval_requirement') }}</span
                     ><strong>{{
-                      selectedEnv.approval_required ? `${selectedEnv.minimum_approvers} 人` : '无需审批'
+                      selectedEnv.approval_required
+                        ? $t('ops.deployment_wizard.approver_count', { count: selectedEnv.minimum_approvers })
+                        : $t('ops.deployment_wizard.no_approval')
                     }}</strong>
                   </div>
                   <div>
-                    <span>自动回滚</span><strong>{{ selectedEnv.auto_rollback ? '启用' : '关闭' }}</strong>
+                    <span>{{ $t('ops.environment.auto_rollback') }}</span
+                    ><strong>{{
+                      selectedEnv.auto_rollback ? $t('ops.environments.enabled') : $t('ops.environments.disabled')
+                    }}</strong>
                   </div>
                 </div>
               </template>
 
               <template v-else-if="currentStep === 3">
                 <div class="form-section">
-                  <div class="section-label"><span>选择服务器组</span><small>目标组必须属于所选环境</small></div>
+                  <div class="section-label">
+                    <span>{{ $t('ops.deployment_wizard.select_group') }}</span
+                    ><small>{{ $t('ops.deployment_wizard.group_hint') }}</small>
+                  </div>
                   <div class="group-grid">
                     <label
                       v-for="group in groupsOfSelectedEnv"
@@ -149,21 +193,22 @@
                         ><Icon name="server" /></span
                       ><span
                         ><strong>{{ group.name }}</strong
-                        ><small
-                          >{{ serversInGroup(group.id).length }} 台服务器 · {{ group.description || '无描述' }}</small
-                        ><em>{{ group.health_path || selectedApp?.health_path || '未配置健康检查' }}</em></span
+                        ><small>{{ groupMeta(group.id, group.description) }}</small
+                        ><em>{{
+                          group.health_path || selectedApp?.health_path || $t('ops.deployment_wizard.no_health_check')
+                        }}</em></span
                       ></label
                     >
                     <div v-if="groupsOfSelectedEnv.length === 0" class="wp-empty-state">
-                      <strong>该环境没有服务器组</strong>
-                      <p>请先在基础设施模块创建目标组。</p>
+                      <strong>{{ $t('ops.deployment_wizard.no_groups') }}</strong>
+                      <p>{{ $t('ops.deployment_wizard.no_groups_hint') }}</p>
                     </div>
                   </div>
                 </div>
                 <div class="form-section">
                   <div class="section-label">
                     <span>{{ $t('ops.deployment.strategy') }}</span
-                    ><small>决定节点并发和失败影响范围</small>
+                    ><small>{{ $t('ops.deployment_wizard.strategy_hint') }}</small>
                   </div>
                   <div class="strategy-grid">
                     <label
@@ -187,9 +232,12 @@
                     min="1"
                     :max="Math.max(selectedServers.length, 1)"
                     class="input"
-                  /><small
-                    >当前目标 {{ selectedServers.length }} 台，建议每批 {{ suggestedBatchSize }} 台。</small
-                  ></label
+                  /><small>{{
+                    $t('ops.deployment_wizard.batch_hint', {
+                      target: selectedServers.length,
+                      suggested: suggestedBatchSize,
+                    })
+                  }}</small></label
                 >
               </template>
 
@@ -197,16 +245,24 @@
                 <div class="preflight-summary" :class="preflightPassed ? 'passed' : 'blocked'">
                   <span><Icon :name="preflightPassed ? 'check' : 'warning'" /></span>
                   <div>
-                    <strong>{{ preflightPassed ? '部署前检查通过' : '部署前检查存在阻断项' }}</strong>
+                    <strong>{{
+                      preflightPassed
+                        ? $t('ops.deployment_wizard.preflight_passed')
+                        : $t('ops.deployment_wizard.preflight_blocked')
+                    }}</strong>
                     <p>
                       {{
                         preflightPassed
-                          ? 'Release、容量、锁和磁盘检查均满足执行条件。'
-                          : '请返回前面的步骤修复阻断项后再提交。'
+                          ? $t('ops.deployment_wizard.preflight_passed_description')
+                          : $t('ops.deployment_wizard.preflight_blocked_description')
                       }}
                     </p>
                   </div>
-                  <Button start-icon="refresh" text="重新检查" @click="preflightCheckedAt = Date.now()" />
+                  <Button
+                    start-icon="refresh"
+                    :text="$t('ops.deployment_wizard.recheck')"
+                    @click="preflightCheckedAt = Date.now()"
+                  />
                 </div>
                 <div class="preflight-list">
                   <article
@@ -219,10 +275,18 @@
                       <strong>{{ item.label }}</strong>
                       <p>{{ item.detail }}</p>
                     </div>
-                    <em>{{ item.ok ? '通过' : item.blocking ? '阻断' : '警告' }}</em>
+                    <em>{{
+                      item.ok
+                        ? $t('ops.deployment_wizard.check_passed')
+                        : item.blocking
+                          ? $t('ops.deployment_wizard.check_blocked')
+                          : $t('ops.deployment_wizard.check_warning')
+                    }}</em>
                   </article>
                 </div>
-                <small class="checked-time">检查时间：{{ new Date(preflightCheckedAt).toLocaleTimeString() }}</small>
+                <small class="checked-time">{{
+                  $t('ops.deployment_wizard.checked_at', { time: formatCheckedAt(preflightCheckedAt) })
+                }}</small>
               </template>
 
               <template v-else>
@@ -233,50 +297,66 @@
                     <p>{{ selectedRelease?.version }} · {{ selectedRelease?.digest }}</p>
                   </div>
                   <span v-if="selectedEnv?.approval_required" class="approval-chip"
-                    ><Icon name="shield" />等待审批</span
+                    ><Icon name="shield" />{{ $t('ops.deployments.pending_approval') }}</span
                   >
                 </div>
                 <div class="confirm-grid">
                   <div>
-                    <span>来源流水线</span><strong>#{{ selectedRelease?.pipeline_id || '—' }}</strong>
+                    <span>{{ $t('ops.deployment_wizard.source_pipeline') }}</span
+                    ><strong>{{ pipelineLabel(selectedRelease?.pipeline_id) }}</strong>
                   </div>
                   <div>
-                    <span>Release</span><strong>{{ selectedRelease?.version || '—' }}</strong>
+                    <span>{{ $t('ops.deployment.release') }}</span
+                    ><strong>{{ selectedRelease?.version || '—' }}</strong>
                   </div>
                   <div>
-                    <span>服务器组</span><strong>{{ selectedGroup?.name || '—' }}</strong>
+                    <span>{{ $t('ops.deployment.server_group') }}</span
+                    ><strong>{{ selectedGroup?.name || '—' }}</strong>
                   </div>
                   <div>
-                    <span>目标节点</span><strong>{{ selectedServers.length }} 台</strong>
+                    <span>{{ $t('ops.deployment.targets') }}</span
+                    ><strong>{{ $t('ops.deployment_wizard.node_count', { count: selectedServers.length }) }}</strong>
                   </div>
                   <div>
-                    <span>策略</span><strong>{{ draft.strategy }}</strong>
+                    <span>{{ $t('ops.deployment.strategy') }}</span
+                    ><strong>{{ strategyLabel(draft.strategy) }}</strong>
                   </div>
                   <div>
-                    <span>批次大小</span><strong>{{ draft.batchSize }}</strong>
+                    <span>{{ $t('ops.deployment.batch_size') }}</span
+                    ><strong>{{ draft.batchSize }}</strong>
                   </div>
                   <div>
-                    <span>健康检查</span
+                    <span>{{ $t('ops.deployment_wizard.health_check') }}</span
                     ><strong>{{ selectedGroup?.health_path || selectedApp?.health_path || '—' }}</strong>
                   </div>
                   <div>
-                    <span>自动回滚</span><strong>{{ selectedEnv?.auto_rollback ? '启用' : '关闭' }}</strong>
+                    <span>{{ $t('ops.environment.auto_rollback') }}</span
+                    ><strong>{{
+                      selectedEnv?.auto_rollback ? $t('ops.environments.enabled') : $t('ops.environments.disabled')
+                    }}</strong>
                   </div>
                 </div>
                 <label class="confirm-check"
-                  ><input v-model="confirmed" type="checkbox" /><span
-                    >我确认 Release、目标环境和服务器组无误；{{ $t('ops.deployment_wizard.confirm_note') }}。</span
-                  ></label
+                  ><input v-model="confirmed" type="checkbox" /><span>{{
+                    $t('ops.deployment_wizard.confirmation')
+                  }}</span></label
                 >
                 <div v-if="selectedEnv?.approval_required" class="wp-alert wp-alert-warning">
                   <Icon name="shield" />
                   <div>
                     <strong>{{ $t('ops.deployment_wizard.approval_note') }}</strong>
-                    <p class="wp-muted">提交后 Deployment 将进入 pending_approval 状态。</p>
+                    <p class="wp-muted">{{ $t('ops.deployment_wizard.approval_state_hint') }}</p>
                   </div>
                 </div>
               </template>
 
+              <FeedbackState
+                v-if="submitError"
+                compact
+                kind="error"
+                :title="$t('ops.deployment_wizard.submit_error_title')"
+                :description="$t('ops.deployment_wizard.submit_error_description')"
+              />
               <div v-if="stepError" class="wp-alert wp-alert-danger">
                 <Icon name="warning" />
                 <div>
@@ -318,16 +398,19 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, onMounted, reactive, ref, watch } from 'vue';
+import { computed, onBeforeUnmount, onMounted, reactive, ref, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute, useRouter } from 'vue-router';
 
 import Button from '~/components/atomic/Button.vue';
+import FeedbackState from '~/components/atomic/FeedbackState.vue';
 import Icon from '~/components/atomic/Icon.vue';
 import type { IconNames } from '~/components/atomic/Icon.vue';
 import Scaffold from '~/components/layout/scaffold/Scaffold.vue';
 import DeploymentNav from '~/components/ops/DeploymentNav.vue';
+import { useConfirmedRequest } from '~/compositions/useConfirmedRequest';
 import useApiClient from '~/compositions/useApiClient';
+import { useDeploymentPresentation } from '~/compositions/useDeploymentPresentation';
 import type { AppRelease, DeployStrategy } from '~/lib/api/types';
 import { useWPTitle } from '~/compositions/useWPTitle';
 import { useApplicationStore, useServerStore } from '~/store/ops';
@@ -338,27 +421,50 @@ const api = useApiClient();
 const appStore = useApplicationStore();
 const serverStore = useServerStore();
 const { t } = useI18n();
+const { actorLabel, releaseStatusLabel, strategyLabel } = useDeploymentPresentation();
 useWPTitle(computed(() => [t('ops.deployment_wizard.title')]));
 
 const currentStep = ref(1);
 const submitting = ref(false);
+const submitError = ref(false);
 const confirmed = ref(false);
 const stepError = ref('');
 const preflightCheckedAt = ref(Date.now());
+const { begin, hasConfirmedData, initialLoading, loadError, refreshing } = useConfirmedRequest();
+let alive = true;
+let lifecycleGeneration = 0;
+let draftInitialized = false;
 
 const steps = computed(() => [
-  { number: 1, label: t('ops.deployment_wizard.step_1'), description: '应用和不可变产物' },
-  { number: 2, label: t('ops.deployment_wizard.step_2'), description: '保护策略与发布窗口' },
-  { number: 3, label: t('ops.deployment_wizard.step_3'), description: '服务器组、策略和批次' },
-  { number: 4, label: t('ops.deployment_wizard.step_4'), description: '容量、健康与安全检查' },
-  { number: 5, label: t('ops.deployment_wizard.step_5'), description: '创建部署并开始执行' },
+  { number: 1, label: t('ops.deployment_wizard.step_1'), description: t('ops.deployment_wizard.step_1_description') },
+  { number: 2, label: t('ops.deployment_wizard.step_2'), description: t('ops.deployment_wizard.step_2_description') },
+  { number: 3, label: t('ops.deployment_wizard.step_3'), description: t('ops.deployment_wizard.step_3_description') },
+  { number: 4, label: t('ops.deployment_wizard.step_4'), description: t('ops.deployment_wizard.step_4_description') },
+  { number: 5, label: t('ops.deployment_wizard.step_5'), description: t('ops.deployment_wizard.step_5_description') },
 ]);
 
-const strategies: Array<{ value: DeployStrategy; label: string; description: string; icon: IconNames }> = [
-  { value: 'single', label: '单节点', description: '仅部署一个目标节点，适合开发验证。', icon: 'server' },
-  { value: 'all-at-once', label: '全部同时', description: '所有节点并发执行，速度最快但风险最高。', icon: 'activity' },
-  { value: 'rolling', label: '滚动部署', description: '按批次逐步推进，生产环境推荐。', icon: 'rocket' },
-];
+const strategies = computed<Array<{ value: DeployStrategy; label: string; description: string; icon: IconNames }>>(
+  () => [
+    {
+      value: 'single',
+      label: t('ops.deployment.strategy_single'),
+      description: t('ops.deployment_wizard.strategy_single_description'),
+      icon: 'server',
+    },
+    {
+      value: 'all-at-once',
+      label: t('ops.deployment.strategy_all_at_once'),
+      description: t('ops.deployment_wizard.strategy_all_description'),
+      icon: 'activity',
+    },
+    {
+      value: 'rolling',
+      label: t('ops.deployment.strategy_rolling'),
+      description: t('ops.deployment_wizard.strategy_rolling_description'),
+      icon: 'rocket',
+    },
+  ],
+);
 
 const draft = reactive({
   applicationId: 0,
@@ -395,36 +501,40 @@ const preflight = computed(() => {
       label: t('ops.deployment_wizard.preflight_release'),
       detail: selectedRelease.value
         ? `${selectedRelease.value.version} · ${selectedRelease.value.digest}`
-        : '未选择 Release',
+        : t('ops.deployment_wizard.no_release_selected'),
       ok: !!selectedRelease.value,
       blocking: true,
     },
     {
       label: t('ops.deployment_wizard.preflight_capacity'),
-      detail: `${t('ops.deployment_wizard.preflight_capacity_detail', { online: online.length, total: selectedServers.value.length })}；${offline.length} 台离线，${maintenance.length} 台维护`,
+      detail: t('ops.deployment_wizard.preflight_capacity_summary', {
+        online: online.length,
+        total: selectedServers.value.length,
+        offline: offline.length,
+        maintenance: maintenance.length,
+      }),
       ok: selectedServers.value.length > 0 && online.length > 0,
-      blocking: true,
-    },
-    {
-      label: t('ops.deployment_wizard.preflight_locks'),
-      detail: t('ops.deployment_wizard.preflight_locks_detail'),
-      ok: true,
       blocking: true,
     },
     {
       label: t('ops.deployment_wizard.preflight_disk'),
       detail:
         highDisk.length > 0
-          ? `${highDisk.length} ${t('ops.deployment_wizard.preflight_disk_warn')}：${highDisk.map((server) => server.name).join('、')}`
+          ? t('ops.deployment_wizard.preflight_disk_warning', {
+              count: highDisk.length,
+              servers: highDisk.map((server) => server.name).join(', '),
+            })
           : t('ops.deployment_wizard.preflight_disk_ok'),
       ok: highDisk.length === 0,
       blocking: false,
     },
     {
-      label: '环境保护策略',
+      label: t('ops.deployment_wizard.preflight_environment'),
       detail: selectedEnv.value?.approval_required
-        ? `需要 ${selectedEnv.value.minimum_approvers} 人审批后执行`
-        : '当前环境无需审批',
+        ? t('ops.deployment_wizard.preflight_environment_approval', {
+            count: selectedEnv.value.minimum_approvers,
+          })
+        : t('ops.deployment_wizard.preflight_environment_open'),
       ok: !!selectedEnv.value,
       blocking: true,
     },
@@ -435,6 +545,30 @@ const preflightPassed = computed(() => preflight.value.every((item) => item.ok |
 function serversInGroup(groupId: number) {
   return serverStore.serverList.filter((server) => server.group_id === groupId);
 }
+
+function applicationMeta(runtime: string, ownerTeam?: string) {
+  return `${runtime} · ${ownerTeam || t('ops.applications.unassigned')}`;
+}
+
+function releaseMeta(pipelineId: number, author?: string) {
+  return `${t('ops.releases.pipeline')} #${pipelineId} · ${actorLabel(author, t('ops.deployment.system_actor'))}`;
+}
+
+function groupMeta(groupId: number, description?: string) {
+  return `${t('ops.deployment_wizard.node_count', { count: serversInGroup(groupId).length })} · ${
+    description || t('ops.deployment_wizard.no_description')
+  }`;
+}
+
+function pipelineLabel(pipelineId?: number) {
+  return pipelineId ? `#${pipelineId}` : '—';
+}
+
+function formatCheckedAt(timestamp: number) {
+  const date = new Date(timestamp);
+  return Number.isFinite(date.getTime()) ? date.toLocaleTimeString() : '—';
+}
+
 function onAppChange() {
   draft.releaseId = availableReleases.value[0]?.id ?? 0;
 }
@@ -451,12 +585,13 @@ function validateStep(step: number): string {
     step === 1 &&
     (!selectedApp.value || !selectedRelease.value || selectedRelease.value.application_id !== draft.applicationId)
   )
-    return '请选择当前应用生成的可部署 Release。';
-  if (step === 2 && !selectedEnv.value) return '请选择目标环境。';
-  if (step === 3 && (!selectedGroup.value || selectedServers.value.length === 0)) return '请选择包含服务器的目标组。';
+    return t('ops.deployment_wizard.validation_release');
+  if (step === 2 && !selectedEnv.value) return t('ops.deployment_wizard.validation_environment');
+  if (step === 3 && (!selectedGroup.value || selectedServers.value.length === 0))
+    return t('ops.deployment_wizard.validation_group');
   if (step === 3 && (draft.batchSize < 1 || draft.batchSize > selectedServers.value.length))
-    return `批次大小应在 1 到 ${selectedServers.value.length} 之间。`;
-  if (step === 4 && !preflightPassed.value) return '部署前检查存在阻断项，请修复后再继续。';
+    return t('ops.deployment_wizard.validation_batch', { count: selectedServers.value.length });
+  if (step === 4 && !preflightPassed.value) return t('ops.deployment_wizard.validation_preflight');
   return '';
 }
 
@@ -471,12 +606,15 @@ function previousStep() {
 }
 
 async function submit() {
+  if (submitting.value) return;
   const error = validateStep(4);
   if (error || !confirmed.value) {
-    stepError.value = error || '请确认部署信息。';
+    stepError.value = error || t('ops.deployment_wizard.validation_confirmation');
     return;
   }
+  submitError.value = false;
   submitting.value = true;
+  const lifecycle = lifecycleGeneration;
   try {
     const deployment = await api.createDeployment({
       application_id: draft.applicationId,
@@ -486,10 +624,73 @@ async function submit() {
       strategy: draft.strategy,
       batch_size: draft.batchSize,
     });
-    if (deployment) await router.push(`/deployments/${deployment.id}`);
+    if (!alive || lifecycle !== lifecycleGeneration) return;
+    if (!deployment) {
+      submitError.value = true;
+      return;
+    }
+    await router.push(`/deployments/${deployment.id}`);
+  } catch {
+    if (alive && lifecycle === lifecycleGeneration) submitError.value = true;
   } finally {
-    submitting.value = false;
+    if (alive && lifecycle === lifecycleGeneration) submitting.value = false;
   }
+}
+
+function initializeDraft() {
+  if (draftInitialized) return;
+  draftInitialized = true;
+
+  const queryApplicationId = Number(route.query.applicationId);
+  const queryReleaseId = Number(route.query.releaseId);
+  const queryEnvironmentId = Number(route.query.environmentId);
+  const queryServerId = Number(route.query.serverId);
+
+  draft.applicationId = appStore.applications.has(queryApplicationId)
+    ? queryApplicationId
+    : (appStore.applicationList[0]?.id ?? 0);
+  onAppChange();
+  const queryRelease = appStore.releases.get(queryReleaseId);
+  if (queryRelease?.application_id === draft.applicationId) draft.releaseId = queryRelease.id;
+
+  const queryServer = serverStore.servers.get(queryServerId);
+  if (queryServer) {
+    draft.environmentId = queryServer.environment_id;
+    draft.groupId = queryServer.group_id;
+  } else {
+    draft.environmentId = appStore.environments.has(queryEnvironmentId)
+      ? queryEnvironmentId
+      : (appStore.environmentList[0]?.id ?? 0);
+    selectDefaultGroup();
+  }
+}
+
+function reconcileDraft() {
+  if (!appStore.applications.has(draft.applicationId)) {
+    draft.applicationId = appStore.applicationList[0]?.id ?? 0;
+    onAppChange();
+  }
+  const currentRelease = appStore.releases.get(draft.releaseId);
+  if (currentRelease?.application_id !== draft.applicationId) onAppChange();
+  if (!appStore.environments.has(draft.environmentId)) {
+    draft.environmentId = appStore.environmentList[0]?.id ?? 0;
+  }
+  const currentGroup = serverStore.groups.get(draft.groupId);
+  if (currentGroup?.environment_id !== draft.environmentId) selectDefaultGroup();
+}
+
+async function loadOptions(refresh = false) {
+  const request = begin(refresh);
+
+  const [applicationResult, serverResult] = await Promise.allSettled([appStore.loadAll(), serverStore.loadAll()]);
+  if (!request.isCurrent()) return;
+
+  if (applicationResult.status === 'fulfilled' && serverResult.status === 'fulfilled') {
+    request.confirm();
+    initializeDraft();
+    reconcileDraft();
+  }
+  request.finish(applicationResult.status === 'rejected' || serverResult.status === 'rejected');
 }
 
 watch(
@@ -507,32 +708,14 @@ watch(
 );
 watch([() => draft.applicationId, () => draft.releaseId, () => draft.environmentId, () => draft.groupId], () => {
   stepError.value = '';
+  submitError.value = false;
   confirmed.value = false;
 });
 
-onMounted(async () => {
-  await Promise.all([appStore.loadAll(), serverStore.loadAll()]);
-  const qApplicationId = Number(route.query.applicationId);
-  const qReleaseId = Number(route.query.releaseId);
-  const qServerId = Number(route.query.serverId);
-
-  draft.applicationId = appStore.applications.has(qApplicationId)
-    ? qApplicationId
-    : (appStore.applicationList[0]?.id ?? 0);
-  onAppChange();
-  const queryRelease = appStore.releases.get(qReleaseId);
-  if (queryRelease?.application_id === draft.applicationId) draft.releaseId = queryRelease.id;
-
-  if (qServerId) {
-    const server = serverStore.servers.get(qServerId);
-    if (server) {
-      draft.environmentId = server.environment_id;
-      draft.groupId = server.group_id;
-    }
-  } else {
-    draft.environmentId = appStore.environmentList[0]?.id || 0;
-    selectDefaultGroup();
-  }
+onMounted(() => loadOptions());
+onBeforeUnmount(() => {
+  alive = false;
+  lifecycleGeneration += 1;
 });
 </script>
 
