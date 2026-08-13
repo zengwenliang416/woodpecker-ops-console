@@ -1,0 +1,154 @@
+# command: node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs
+# exit_status: 0
+# duration_ms: 142669
+
+## stdout
+
+## Focused Vitest
+✓ Lockfile passes supply-chain policies (verified 4h ago)
+Lockfile is up to date, resolution step is skipped
+Progress: resolved 1, reused 0, downloaded 0, added 0
+Packages: +620
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+Packages are cloned from the content-addressable store to the virtual store.
+  Content-addressable store is at: /Users/wenliang_zeng/Library/pnpm/store/v11
+  Virtual store is at:             node_modules/.pnpm
+Progress: resolved 620, reused 620, downloaded 0, added 136
+Progress: resolved 620, reused 620, downloaded 0, added 616
+Progress: resolved 620, reused 620, downloaded 0, added 620, done
+
+dependencies:
++ @kyvg/vue3-notification 3.4.2
++ @mdi/js 7.4.47
++ @vueuse/core 14.4.0
++ ansi_up 6.0.6
++ dompurify 3.4.13
++ fuse.js 7.5.0
++ js-base64 3.9.2
++ marked 18.0.9
++ node-emoji 2.2.0
++ pinia 4.0.2
++ prismjs 1.30.0
++ semver 7.8.5
++ simple-icons 16.28.0
++ tailwindcss 4.3.3
++ vue 3.5.41
++ vue-i18n 11.4.8
++ vue-router 5.2.0
+
+devDependencies:
++ @antfu/eslint-config 9.3.0
++ @eslint/js 10.0.1
++ @ianvs/prettier-plugin-sort-imports 4.7.1
++ @intlify/eslint-plugin-vue-i18n 4.5.1
++ @intlify/unplugin-vue-i18n 11.2.4
++ @tailwindcss/typography 0.5.20
++ @tailwindcss/vite 4.3.3
++ @types/node 24.13.3
++ @types/prismjs 1.26.6
++ @types/semver 7.8.0
++ @types/tinycolor2 1.4.6
++ @vitejs/plugin-vue 6.0.8
++ @vue/compiler-sfc 3.5.41
++ @vue/test-utils 2.4.11
++ dotenv 17.4.2
++ eslint 10.8.0
++ eslint-plugin-promise 7.3.0
++ eslint-plugin-vue-scoped-css 3.1.3
++ jsdom 30.0.1
++ prettier 3.9.6
++ prettier-plugin-tailwindcss 0.8.1
++ tinycolor2 1.6.0
++ ts-node 10.9.2
++ typescript 6.0.3
++ vite 8.2.1
++ vite-plugin-prismjs 0.0.11
++ vite-svg-loader 5.1.1
++ vitest 4.1.10
++ vue-tsc 3.3.9
+
+Done in 3.9s using pnpm v11.20.0
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-closure-ZmLJlM/web
+
+
+ Test Files  9 passed (9)
+      Tests  39 passed (39)
+   Start at  02:22:36
+   Duration  7.71s (transform 16.92s, setup 0ms, import 27.46s, tests 940ms, environment 19.24s)
+
+
+## Full Vitest
+1) Please add `WOODPECKER_DEV_WWW_PROXY=http://localhost:8010` to your `.env` file.
+2) Start the Woodpecker server
+3) If you want to run the vite dev server (`pnpm start`) within a container please set `VITE_DEV_SERVER_HOST=0.0.0.0`.
+
+  🚀 Access the UI at http://localhost:8000/
+
+ RUN  v4.1.10 /private/var/folders/1v/8sfc4rjx1834mzlqzxqr8lr40000gn/T/woodpecker-task022-closure-ZmLJlM/web
+
+
+ Test Files  103 passed (103)
+      Tests  582 passed (582)
+   Start at  02:22:46
+   Duration  51.37s (transform 42.99s, setup 0ms, import 124.08s, tests 37.96s, environment 159.09s)
+
+
+## Task 022 Prettier
+Checking formatting...
+All matched files use Prettier code style!
+
+## ESLint
+
+## Vue TypeScript
+
+## Vite build
+
+## Mock API smoke
+{"ok":true,"fixture":"022-deployment-route-reverification","applications":2,"environments":2,"releases":3,"deployments":3,"states":["populated","empty","missing-app","error-applications","mutation-error"]}
+
+## Strict evidence verifier
+{"ok":true,"runId":"0051a9bc-3312-4bf4-a850-6e4d4a205920","measurements":54,"screenshots":54,"rows":[58,59,60,61,62,63,64,65,66,67],"mutationWrites":[{"method":"POST","path":"/api/deployments/142/pause"}],"pageOverflowStates":[],"rawI18nStates":[],"rawEnumStates":[],"checksumsVerified":true}
+
+## Persistent red-team
+{"schema":"woodpecker.deployment-verifier-redteam.v1","ok":true,"positiveVerifierExitCode":0,"mutations":[{"id":"run-id","rejected":true,"code":1,"signal":null},{"id":"wrong-theme","rejected":true,"code":1,"signal":null},{"id":"wrong-locale","rejected":true,"code":1,"signal":null},{"id":"tampered-content","rejected":true,"code":1,"signal":null},{"id":"wrong-state","rejected":true,"code":1,"signal":null},{"id":"unauthorized-write","rejected":true,"code":1,"signal":null},{"id":"missing-mutation","rejected":true,"code":1,"signal":null},{"id":"wrong-http-error","rejected":true,"code":1,"signal":null},{"id":"wrong-route","rejected":true,"code":1,"signal":null},{"id":"unhealthy-browser","rejected":true,"code":1,"signal":null},{"id":"raw-i18n","rejected":true,"code":1,"signal":null},{"id":"raw-enum","rejected":true,"code":1,"signal":null},{"id":"horizontal-overflow","rejected":true,"code":1,"signal":null},{"id":"source-identity","rejected":true,"code":1,"signal":null},{"id":"png-signature","rejected":true,"code":1,"signal":null}],"generatedAt":"2026-08-13T18:24:51.972Z"}
+
+## JavaScript syntax: capture_browser.mjs
+
+## JavaScript syntax: matrix.mjs
+
+## JavaScript syntax: mock_api.mjs
+
+## JavaScript syntax: mock_api_smoke.mjs
+
+## JavaScript syntax: redteam_verifier.mjs
+
+## JavaScript syntax: validate_task.mjs
+
+## JavaScript syntax: verify_evidence.mjs
+
+## Git whitespace check
+
+{"ok":true,"focused":"9/39","full":"103/582","runId":"0051a9bc-3312-4bf4-a850-6e4d4a205920","strict":"54/54","redTeam":"15/15","jsonFiles":60,"hardcodedChineseVisibleStrings":0}
+
+
+## stderr
+$ vitest -- --run
+$ eslint --max-warnings 0 .
+$ vue-tsc --noEmit
+$ vite build --base=/BASE_PATH
+<script src="/web-config.js"> in "/index.html" can't be bundled without type="module" attribute
+<script src="/assets/custom.js"> in "/index.html" can't be bundled without type="module" attribute
+[33m[PLUGIN_TIMINGS] [0mYour build spent 95% of 4.6s inside plugin hooks (4.4s).
+Not measurable — 2 hooks whose calls overlap, so elapsed time covers work other calls were doing. Profile with `node --cpu-prof`:
+  - @tailwindcss/vite:generate:build transform (68 calls)
+  - unplugin-vue-i18n:resource load (491 calls)
+See https://rolldown.rs/reference/InputOptions.checks#plugintimings for more details.
+
+task022 mock API listening on http://127.0.0.1:8222
+

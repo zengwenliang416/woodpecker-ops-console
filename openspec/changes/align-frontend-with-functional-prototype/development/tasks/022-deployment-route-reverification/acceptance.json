@@ -2,11 +2,11 @@
   "schema": "specnav.task-acceptance-evidence.v2",
   "generated_by": "specnav-development/task-acceptance-evidence",
   "task_id": "022-deployment-route-reverification",
-  "generated_at": "2026-08-13T18:02:50.057Z",
-  "recorded_at": "2026-08-13T18:01:47.479Z",
+  "generated_at": "2026-08-13T18:25:16.152Z",
+  "recorded_at": "2026-08-13T18:24:53.327Z",
   "status": "approved",
-  "reviewed_git_head": "a8b378334c899ae770f0bb9297a144b09c6d7190",
-  "reviewed_git_tree": "8ea5add710a02c0000c2bbddcb34d4826ac92b26",
+  "reviewed_git_head": "724b95b2b43d1734216639bdbada6ff02342f245",
+  "reviewed_git_tree": "fa28b889bb819e72685a71046c223415523cfbbb",
   "implementation_scope": {
     "included_patterns": [
       "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
@@ -30,7 +30,7 @@
         "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
         "mode": "100644",
         "type": "blob",
-        "object_id": "c82bf51cd167cc80cd7de30d57ad8cfcf1d27332"
+        "object_id": "32351b99149d7318237d92d34a15ed939c4b18ee"
       },
       {
         "path": "web/src/assets/locales/en.json",
@@ -195,7 +195,7 @@
         "object_id": "45ba2e738aa9a1e5cb5ab68cb69eb2ae4477ad37"
       }
     ],
-    "sha256": "fa845142029fb4ccef19e685b2ef12950afb6b6bcd241d24be188ce0b6786b08"
+    "sha256": "fdc051d3472adc220ccd37283426917897a9452b1840c6a759d1db262713d5be"
   },
   "artifacts": {
     "context": {
@@ -220,15 +220,15 @@
   },
   "test_runs": [
     {
-      "id": "receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947",
+      "id": "receipt-1031ba3b2406d987d38d7c9cd171b756db40dc4a7edc101ddbf17c517de62bb4",
       "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/evidence/validate_task.mjs",
       "assertion_ids": ["A1", "A2", "A3", "A4"],
-      "recorded_at": "2026-08-13T18:01:47.479Z",
-      "validation_receipt_sha256": "ae8c852e6c0edc8fc4ca116e9c8d4ef747463b76838e9c3f160050278deb86c1",
+      "recorded_at": "2026-08-13T18:24:53.327Z",
+      "validation_receipt_sha256": "c72ad755f088da819413184998e154bbab0d7084f461acf36049cef7b1fdfb40",
       "evidence_log": {
-        "path": "development/evidence/032-022-deployment-route-reverification.log",
-        "sha256": "e1c654197e384f5ceeef3d3c7e845bd1342e52ff5db430db8ee4317b58cab30e",
-        "size": 6179
+        "path": "development/evidence/034-022-deployment-route-reverification.log",
+        "sha256": "905107d6ff3c9ba0a6bf44eb48b554ab024e8244774eb2f5e4bd14784f9a2496",
+        "size": 6181
       }
     }
   ],
@@ -237,7 +237,7 @@
       "id": "A1",
       "parent_id": "A1",
       "status": "passing",
-      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
+      "test_run_ids": ["receipt-1031ba3b2406d987d38d7c9cd171b756db40dc4a7edc101ddbf17c517de62bb4"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
@@ -246,7 +246,7 @@
       "id": "A2",
       "parent_id": "A2",
       "status": "passing",
-      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
+      "test_run_ids": ["receipt-1031ba3b2406d987d38d7c9cd171b756db40dc4a7edc101ddbf17c517de62bb4"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
@@ -255,7 +255,7 @@
       "id": "A3",
       "parent_id": "A3",
       "status": "passing",
-      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
+      "test_run_ids": ["receipt-1031ba3b2406d987d38d7c9cd171b756db40dc4a7edc101ddbf17c517de62bb4"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
@@ -264,7 +264,7 @@
       "id": "A4",
       "parent_id": "A4",
       "status": "passing",
-      "test_run_ids": ["receipt-f1f893caa0940c891dfb83232c3a286238c378f9cceaddd5ad184e4113a93947"],
+      "test_run_ids": ["receipt-1031ba3b2406d987d38d7c9cd171b756db40dc4a7edc101ddbf17c517de62bb4"],
       "direct_evidence": [],
       "reused_evidence": [],
       "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
