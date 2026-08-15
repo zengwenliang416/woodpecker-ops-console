@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-13T18:33:07.203Z",
+  "generated_at": "2026-08-15T15:20:36.241Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -323,13 +323,13 @@
       "claim_id": "development:task-022-deployment-route-reverification",
       "stage": "development",
       "task_id": "022-deployment-route-reverification",
-      "status": "complete",
+      "status": "planned",
       "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Re-verify parity rows `58-67` from current production and approved prototype\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
-        "Ten deployment route implementations plus shared request-lifecycle and typed presentation compositions",
-        "Focused route, store, useConfirmedRequest, and bilingual presentation regressions",
-        "Current-byte run 0051a9bc-3312-4bf4-a850-6e4d4a205920 with exact 54/54 strict browser evidence including the server-emitted failed target phase",
-        "Focused 9/39, full 103/582, zero-warning static checks, build, and all 15 verifier mutations rejected"
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-022-deployment-route-reverification --query \"<query>\" --write --json"
     },
@@ -338,15 +338,30 @@
       "claim_id": "development:task-023-operations-residual-delta-closure",
       "stage": "development",
       "task_id": "023-operations-residual-delta-closure",
-      "status": "complete",
-      "query": "Find the production files, components, routes, stores, shared data boundaries, tests, and signed evidence that prove there is no remaining structural, content, status, action, data-integrity, or 390px responsive delta across Overview, Repositories, Infrastructure, and Deployments in change \"align-frontend-with-functional-prototype\". Return concrete ownership and any missing or drifted evidence.",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Audit the current production bytes across parity rows `2-3` and `46-67`\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
-        "Exact Task 020-022 signed acceptance object ownership with newest shared-file ownership",
-        "Verified route-parity rows 2-3 and 46-67 with blocked row 4 preserved",
-        "Combined focused and full operations regressions plus static checks and build",
-        "Task-local audit validator, negative mutations, report, spec review, and quality review"
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-023-operations-residual-delta-closure --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-024-operations-regression-coverage:evidence",
+      "claim_id": "development:task-024-operations-regression-coverage",
+      "stage": "development",
+      "task_id": "024-operations-regression-coverage",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-024-operations-regression-coverage --query \"<query>\" --write --json"
     }
   ]
 }

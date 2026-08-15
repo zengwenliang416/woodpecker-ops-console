@@ -1,0 +1,17 @@
+{
+  "schema": "specnav.task-024-regression-receipt.v1",
+  "task_id": "024-operations-regression-coverage",
+  "baseline_task_id": "6.5",
+  "generated_at": "2026-08-15T15:45:18.273Z",
+  "behavior_count": 35,
+  "resolved_behaviors": 35,
+  "test_reference_count": 95,
+  "focused": {
+    "files": 25,
+    "tests": 104
+  },
+  "full": {
+    "tests": 588
+  },
+  "coverage_file": "evidence/behavior-coverage.json"
+}

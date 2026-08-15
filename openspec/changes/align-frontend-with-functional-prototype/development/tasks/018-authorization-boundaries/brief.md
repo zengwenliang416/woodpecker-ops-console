@@ -90,7 +90,9 @@ server-returned permission objects.
 
 ## Components To Create
 
-- None.
+- No new components are created by this slice; the work enforces the existing
+  router-guard, `Sidebar`/`Navbar`, and wrapper-level authorization boundaries
+  already owned by the components listed under Components To Reuse.
 
 ## Components To Reuse
 

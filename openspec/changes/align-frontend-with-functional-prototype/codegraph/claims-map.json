@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-13T18:33:07.203Z",
+  "generated_at": "2026-08-15T15:20:36.241Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -879,7 +879,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "023-operations-residual-delta-closure",
-      "text": "Audit and close any remaining structural, content, status, action, data-integrity, or 390px responsive delta across Overview, Repositories, Infrastructure, and Deployments without importing prototype fixtures.",
+      "text": "Audit the current production bytes across parity rows `2-3` and `46-67`",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -927,6 +927,31 @@
       ],
       "query_ids": [
         "development:task-023-operations-residual-delta-closure:evidence"
+      ]
+    },
+    {
+      "id": "development:task-024-operations-regression-coverage",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "024-operations-regression-coverage",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/024-operations-regression-coverage/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/024-operations-regression-coverage/context.json"
+      ],
+      "expected_evidence": [
+        "Focused tests or command output",
+        "Task report",
+        "Spec review",
+        "Quality review"
+      ],
+      "allowed_files": [
+        "src"
+      ],
+      "query_ids": [
+        "development:task-024-operations-regression-coverage:evidence"
       ]
     }
   ]

@@ -1,0 +1,641 @@
+{
+  "schema": "specnav.task-024-behavior-coverage.v1",
+  "task_id": "024-operations-regression-coverage",
+  "baseline_task_id": "6.5",
+  "generated_by": "specnav-development/task-024-operations-regression-coverage",
+  "source_tasks": [
+    "020-overview-repositories-reverification",
+    "021-infrastructure-route-reverification",
+    "022-deployment-route-reverification",
+    "023-operations-residual-delta-closure"
+  ],
+  "behavior_count": 35,
+  "behaviors": [
+    {
+      "id": "020-01",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Overview never renders fake zero metrics while the first current-data request is pending; it shows explicit loading, retryable core failure, and partial-failure feedback.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "shows truthful initial loading and a retryable core failure instead of fake zero metrics"
+        }
+      ]
+    },
+    {
+      "id": "020-02",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Overview requests and renders Agent and queue data only for system administrators; overlapping refreshes adopt only the newest completion.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "renders real administrator metrics and requests administrator-only resources"
+        },
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "allows only the newest overlapping refresh to replace confirmed feed data"
+        }
+      ]
+    },
+    {
+      "id": "020-03",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Normal users see no administrator controls and receive the real repository count instead of an unconfirmed zero.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "keeps administrator APIs and controls absent for a normal user"
+        },
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "does not present an unconfirmed repository count as zero for a normal user"
+        }
+      ]
+    },
+    {
+      "id": "020-04",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Overview tracks repository and Agent confirmation independently; a failed optional request shows an unavailable placeholder and a failed refresh preserves confirmed values.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "preserves confirmed core data and reports an administrator-only partial failure"
+        },
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "preserves confirmed administrator metrics when optional refresh requests fail"
+        },
+        {
+          "file": "web/src/views/Overview.test.ts",
+          "test": "preserves confirmed repository data when a normal-user refresh loses the repository request"
+        }
+      ]
+    },
+    {
+      "id": "020-05",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Repositories distinguishes first-load failure, no repositories, filtered empty results, refresh failure with confirmed rows, and optional Forge/pipeline-stat partial failure.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "distinguishes a repository-empty state from a filter with no matches"
+        },
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "shows initial loading, retries an active list failure, and keeps Forge failure partial"
+        },
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "preserves confirmed rows and metrics through a failed refresh"
+        }
+      ]
+    },
+    {
+      "id": "020-06",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Repository metric refresh preserves last confirmed values; explicit refresh forces a new fetch, ordinary pagination reuses the cache, and obsolete metric completions cannot overwrite the newest page.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "keeps confirmed metrics when a refreshed statistics request fails"
+        },
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "discards obsolete per-repository metric completion after refresh"
+        },
+        {
+          "file": "web/src/regression/operations/repos-metrics-cache.test.ts",
+          "test": "reuses cached pipeline statistics when pagination changes the visible page"
+        },
+        {
+          "file": "web/src/regression/operations/repos-metrics-cache.test.ts",
+          "test": "forces a fresh pipeline-statistics fetch on explicit refresh"
+        }
+      ]
+    },
+    {
+      "id": "020-07",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Initial empty-store hydration requests each visible repository's pipeline statistics exactly once.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "requests repository metrics once when an empty store hydrates"
+        }
+      ]
+    },
+    {
+      "id": "020-08",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Repositories filter, paginate, select, and reset pagination on filter changes without stale state.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "filters, paginates, selects the current page, and resets pagination on filter changes"
+        }
+      ]
+    },
+    {
+      "id": "020-09",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Repositories renders stable bilingual guidance with real metrics and unknown fallbacks instead of arbitrary Error.message content.",
+      "test_refs": [
+        {
+          "file": "web/src/views/Repos.test.ts",
+          "test": "renders real metrics, unknown fallbacks, bilingual labels, and contained dense-table structure"
+        }
+      ]
+    },
+    {
+      "id": "020-10",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Shared error policy keeps the localized 404 notification and replaces every other raw global API error payload with the localized generic error.",
+      "test_refs": [
+        {
+          "file": "web/src/App.test.ts",
+          "test": "never exposes raw API error messages through global notifications"
+        }
+      ]
+    },
+    {
+      "id": "020-11",
+      "source_task": "020-overview-repositories-reverification",
+      "behavior": "Repository pipeline metrics derive from valid terminal pipelines with correct success rate, duration, and pending classification.",
+      "test_refs": [
+        {
+          "file": "web/src/lib/repoMetrics.test.ts",
+          "test": "does not classify repositories without pipelines as pending"
+        },
+        {
+          "file": "web/src/lib/repoMetrics.test.ts",
+          "test": "calculates success rate and duration from real terminal pipelines"
+        },
+        {
+          "file": "web/src/lib/repoMetrics.test.ts",
+          "test": "excludes canceled pipelines that never started from duration samples"
+        }
+      ]
+    },
+    {
+      "id": "021-01",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Every infrastructure route distinguishes initial loading, retryable initial failure, confirmed empty, filtered-empty, refresh failure with retained confirmed content, and successful refresh.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+          "test": "shows explicit initial loading, a retryable core error, and confirmed content after retry"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+          "test": "distinguishes initial loading, list error, empty inventory, and filtered-empty results"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+          "test": "preserves confirmed rows when a refresh fails"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroups.test.ts",
+          "test": "distinguishes confirmed empty data from filters with no matches"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+          "test": "shows loading, retries an initial error, and treats a null response as an empty list"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+          "test": "keeps confirmed rows when refresh fails"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+          "test": "shows initial loading, retries an active error, and distinguishes empty states"
+        }
+      ]
+    },
+    {
+      "id": "021-02",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Infrastructure overview keeps the API authoritative, separates optional deployment/environment failures from core failure, and renders trend panels only when the API supplies metric samples.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+          "test": "keeps confirmed core data through optional and refresh failures without fabricated chart series"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureOverview.test.ts",
+          "test": "omits metric trend panels when the API provides no metric samples"
+        }
+      ]
+    },
+    {
+      "id": "021-03",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Servers search current-contract fields (name, IP, labels, group, environment, region, zone, status, health) and filters operate on confirmed store data.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+          "test": "searches all supported server fields and applies health, group, and region filters"
+        }
+      ]
+    },
+    {
+      "id": "021-04",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Server registration prevents duplicate submission, reports a stable localized failure, keeps the form retryable, and publishes only an API-confirmed server.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServers.test.ts",
+          "test": "guards registration while pending and keeps the form open with a retryable mutation error"
+        }
+      ]
+    },
+    {
+      "id": "021-05",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Server detail owns route changes, refreshes, polling, and mutations with lifecycle generations; obsolete responses cannot update a new route and a terminal missing state replaces endless spinners.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "ignores an obsolete route response when the server ID changes"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "renders a terminal missing state instead of an endless spinner"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "publishes only the latest overlapping refresh for the same server ID"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "locks maintenance while pending and ignores its completion after a route change"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "locks node restart through its confirmed refresh and suppresses polling while a mutation owns the page"
+        }
+      ]
+    },
+    {
+      "id": "021-06",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Server detail mutation failure retains confirmed data and exposes a stable retry path.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "preserves confirmed data, reports a stable error, and unlocks maintenance after rejection"
+        }
+      ]
+    },
+    {
+      "id": "021-07",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Workload rows never present a service restart that would call the node restart endpoint; monitoring range/export are visibly disabled as unsupported.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "does not present server restart as a workload action"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "marks static monitoring range and export controls as unavailable"
+        }
+      ]
+    },
+    {
+      "id": "021-08",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Destructive server deletion remains administrator-only with confirmation; normal-user evidence contains zero delete controls.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServer.test.ts",
+          "test": "hides administrator-only deletion from normal users"
+        }
+      ]
+    },
+    {
+      "id": "021-09",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Groups and group detail use only current fields, preserve confirmed data through refresh failure, and handle missing or empty membership.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroups.test.ts",
+          "test": "renders current group fields and preserves confirmed rows when refresh fails"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+          "test": "ends in a missing state after a successful load without the requested group"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+          "test": "retries an initial failure and renders only current group contracts"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+          "test": "keeps the confirmed detail visible through a failed refresh"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureGroup.test.ts",
+          "test": "reloads the current group when the route parameter changes"
+        }
+      ]
+    },
+    {
+      "id": "021-10",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Services derive aggregate counts from current rows and never invent instances, instance KPIs, logs, or restart controls.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureServices.test.ts",
+          "test": "calculates real aggregate KPIs and filters by search and status"
+        }
+      ]
+    },
+    {
+      "id": "021-11",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Alerts filter by status and severity with current server/deployment relationships, adopt only API-confirmed acknowledge/resolve results, prevent duplicate mutations, and preserve confirmed data after failure.",
+      "test_refs": [
+        {
+          "file": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+          "test": "filters severity and exposes current server and deployment relationships"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+          "test": "prevents duplicate mutations and adopts the API-confirmed alert"
+        },
+        {
+          "file": "web/src/views/infrastructure/InfrastructureAlerts.test.ts",
+          "test": "reports mutation errors, keeps current data, and unlocks retry"
+        }
+      ]
+    },
+    {
+      "id": "021-12",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "All visible infrastructure copy is owned by the locale dictionaries; the production SFC templates contain no hardcoded Chinese user-facing strings.",
+      "test_refs": [
+        {
+          "file": "web/src/regression/operations/infrastructure-locale-copy.test.ts",
+          "test": "contains no hardcoded Chinese in infrastructure view templates"
+        },
+        {
+          "file": "web/src/regression/operations/infrastructure-locale-copy.test.ts",
+          "test": "contains no hardcoded Chinese in deployment view templates"
+        }
+      ]
+    },
+    {
+      "id": "021-13",
+      "source_task": "021-infrastructure-route-reverification",
+      "behavior": "Ops store owns newest-request completion for server, group, and alert collections and removes server-deleted records from shared maps.",
+      "test_refs": [
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "loads every server page and removes stale records"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest server refresh when requests finish out of order"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "marks servers loaded only after the newest refresh succeeds"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest group refresh when requests finish out of order"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest alert refresh when requests finish out of order"
+        }
+      ]
+    },
+    {
+      "id": "022-01",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Every deployment route distinguishes initial loading, retryable first-load failure, confirmed empty or missing data, filtered-empty data, refresh failure with retained confirmed content, and successful refresh.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/Deployments.test.ts",
+          "test": "shows initial loading, retries a first-load failure, and confirms an empty result"
+        },
+        {
+          "file": "web/src/views/deployments/Deployments.test.ts",
+          "test": "keeps confirmed rows when a refresh fails"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentCollections.test.ts",
+          "test": "shows confirmed empty and filtered-empty approval states"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentCollections.test.ts",
+          "test": "keeps releases on refresh failure and renders safe timestamps"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetails.test.ts",
+          "test": "distinguishes missing application from loading and retries an initial failure"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetails.test.ts",
+          "test": "shows missing environment and reloads when the route changes"
+        }
+      ]
+    },
+    {
+      "id": "022-02",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Deployment list, approvals, applications, environments, and releases use current API fields for search and filters and never fabricate success-rate, duration, release-size, membership, or audit-history values.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentCollections.test.ts",
+          "test": "filters environments by search and protection state"
+        },
+        {
+          "file": "web/src/views/deployments/Deployments.test.ts",
+          "test": "filters confirmed rows and renders valid and invalid timestamps safely"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentCollections.test.ts",
+          "test": "treats policies as one default object and preserves it after refresh failure"
+        }
+      ]
+    },
+    {
+      "id": "022-03",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Deployment, application, and environment detail views own route changes and overlapping requests; obsolete success or failure cannot replace the current route's confirmed resource.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "ignores an obsolete detail response after the route changes"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetails.test.ts",
+          "test": "keeps the latest application when route requests resolve out of order"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetails.test.ts",
+          "test": "preserves confirmed application detail after a failed refresh"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetails.test.ts",
+          "test": "keeps confirmed environment data when an auxiliary refresh fails"
+        }
+      ]
+    },
+    {
+      "id": "022-04",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Deployment detail owns a mutation through the action request and its confirming detail reload; refresh, polling, and every second mutation stay locked until confirmation; failure retains the last confirmed deployment and unlocks actions for retry.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "prevents duplicate mutations and preserves confirmed data after failure"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "keeps mutation ownership through the confirming reload"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "unlocks after a confirming reload failure while retaining confirmed data"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "retries an initial failure and distinguishes a missing deployment"
+        }
+      ]
+    },
+    {
+      "id": "022-05",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Deployment status, strategy, system actor, and phase vocabulary render through localized labels without raw enum leakage.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentDetail.test.ts",
+          "test": "renders deployment API vocabulary through Simplified Chinese labels"
+        },
+        {
+          "file": "web/src/views/deployments/Deployments.test.ts",
+          "test": "localizes status, strategy, and system actor in Simplified Chinese"
+        },
+        {
+          "file": "web/src/compositions/useDeploymentPresentation.test.ts",
+          "test": "maps typed deployment vocabulary to English labels"
+        },
+        {
+          "file": "web/src/compositions/useDeploymentPresentation.test.ts",
+          "test": "maps typed deployment vocabulary to Simplified Chinese labels"
+        }
+      ]
+    },
+    {
+      "id": "022-06",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "The five-step wizard preserves its confirmed option set and draft through refresh or submission failure, prevents duplicate submission, initializes from application/release/environment/server query values, and submits only the existing deployment payload.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentNew.test.ts",
+          "test": "shows an initial error and retries option loading"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentNew.test.ts",
+          "test": "initializes valid application, release, and environment query parameters"
+        },
+        {
+          "file": "web/src/views/deployments/DeploymentNew.test.ts",
+          "test": "prevents duplicate submissions and preserves the confirmed draft after failure"
+        }
+      ]
+    },
+    {
+      "id": "022-07",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Wizard preflight reports only client-confirmable release, target capacity, disk, and environment approval inputs; the unsupported deployment-lock assertion is absent.",
+      "test_refs": [
+        {
+          "file": "web/src/regression/operations/deployment-wizard-preflight.test.ts",
+          "test": "renders exactly the four client-confirmable preflight checks and never a deployment-lock assertion"
+        },
+        {
+          "file": "web/src/regression/operations/deployment-wizard-preflight.test.ts",
+          "test": "blocks preflight without a release and passes once every client-confirmable input is present"
+        }
+      ]
+    },
+    {
+      "id": "022-08",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Application creation prevents duplicate submissions and retries initial load failures.",
+      "test_refs": [
+        {
+          "file": "web/src/views/deployments/DeploymentCollections.test.ts",
+          "test": "retries application loading and prevents duplicate creation submissions"
+        }
+      ]
+    },
+    {
+      "id": "022-09",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Shared confirmed-request lifecycle lets only the newest request confirm or finish state, preserves confirmed data on refresh failure, invalidates on route reset, and rejects completion after unmount.",
+      "test_refs": [
+        {
+          "file": "web/src/compositions/useConfirmedRequest.test.ts",
+          "test": "lets only the latest request confirm or finish state"
+        },
+        {
+          "file": "web/src/compositions/useConfirmedRequest.test.ts",
+          "test": "preserves confirmed data while exposing a refresh failure"
+        },
+        {
+          "file": "web/src/compositions/useConfirmedRequest.test.ts",
+          "test": "invalidates active completion and resets route-owned confirmation"
+        },
+        {
+          "file": "web/src/compositions/useConfirmedRequest.test.ts",
+          "test": "rejects late completion after unmount"
+        }
+      ]
+    },
+    {
+      "id": "022-10",
+      "source_task": "022-deployment-route-reverification",
+      "behavior": "Ops store owns newest-request completion for deployment, application, environment, release, approval, and detail collections.",
+      "test_refs": [
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "loads every deployment page for approval and history views"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest application, environment, and release refreshes"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest deployment refresh when requests finish out of order"
+        },
+        {
+          "file": "web/src/store/ops.test.ts",
+          "test": "keeps the latest detail refresh for one deployment"
+        }
+      ]
+    },
+    {
+      "id": "023-01",
+      "source_task": "023-operations-residual-delta-closure",
+      "behavior": "The residual audit fails closed on unapproved acceptance, missing evidence, verified-row regression, blocked-row overclaim, and accepted-object drift; the positive audit passes against the signed Task 020-022 closures.",
+      "test_refs": [
+        {
+          "file": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/audit_residuals.mjs",
+          "test": "residual source and lifecycle audit"
+        },
+        {
+          "file": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/redteam_audit.mjs",
+          "test": "residual audit red-team"
+        }
+      ],
+      "note": "The 023-01 references are the Task 023 task-local audit scripts (audit_residuals.mjs, redteam_audit.mjs), which fail closed on drift of the signed Task 020-022 closures. The runner validates their existence; their execution is bound to the Task 023 closure HEAD because later legitimate shared-file edits (e.g. route-parity.md re-owned by Task 024) intentionally advance the newest-owner boundary. Re-running them at the 024 HEAD would report that shared-file drift, which is the known historical-drift item kept open at the change level."
+    }
+  ]
+}

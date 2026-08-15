@@ -55,7 +55,7 @@
 - [x] 6.2 Re-verify Infrastructure overview, servers, server tabs, groups, services, and alerts against all prototype route states.
 - [x] 6.3 Re-verify Deployments, wizard steps, detail states, approvals, applications, environments, releases, and policies against all prototype route states.
 - [x] 6.4 Repair remaining structural, content, status, action, data-integrity, or responsive deltas without importing prototype fixtures.
-- [ ] 6.5 Add regression tests for every repaired operations behavior and update matrix evidence.
+- [x] 6.5 Add regression tests for every repaired operations behavior and update matrix evidence.
 
 ## 7. Accessibility, Internationalization, And Responsive Closure
 
