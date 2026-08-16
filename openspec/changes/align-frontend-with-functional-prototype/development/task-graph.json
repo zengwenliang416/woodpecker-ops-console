@@ -725,6 +725,12 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/024-operations-regression-coverage/**"
       ],
       "status": "complete"
+    },
+    {
+      "packet_id": "030-six-domain-verification",
+      "baseline_task_id": "8.2",
+      "description": "Six-domain verification: facticity, static, unit, redteam, E2E, sensory",
+      "status": "complete"
     }
   ]
 }

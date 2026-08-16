@@ -1,0 +1,112 @@
+[
+  {
+    "schema": "woodpecker.task030-e2e-journey.v1",
+    "stateId": "journey-login-light",
+    "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+    "theme": "light",
+    "locale": "zh-Hans",
+    "route": "/login",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "light",
+    "className": "light",
+    "bodyBackground": "rgb(244, 247, 248)",
+    "bodyColor": "rgb(21, 35, 45)",
+    "logContainment": null,
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/login"
+  },
+  {
+    "schema": "woodpecker.task030-e2e-journey.v1",
+    "stateId": "journey-overview-light",
+    "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+    "theme": "light",
+    "locale": "zh-Hans",
+    "route": "/overview",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "light",
+    "className": "light",
+    "bodyBackground": "rgb(244, 247, 248)",
+    "bodyColor": "rgb(21, 35, 45)",
+    "logContainment": null,
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/overview"
+  },
+  {
+    "schema": "woodpecker.task030-e2e-journey.v1",
+    "stateId": "journey-overview-dark",
+    "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/overview",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "logContainment": null,
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/overview"
+  },
+  {
+    "schema": "woodpecker.task030-e2e-journey.v1",
+    "stateId": "journey-repos-dark",
+    "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/repos",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "logContainment": null,
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/repos"
+  },
+  {
+    "schema": "woodpecker.task030-e2e-journey.v1",
+    "stateId": "journey-deployment-detail-dark",
+    "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/deployments/142",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "logContainment": {
+      "clientWidth": 628,
+      "scrollWidth": 1735,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/deployments/142"
+  }
+]

@@ -1,0 +1,118 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "030-six-domain-verification",
+ "generated_at": "2026-08-16T07:44:38Z",
+ "recorded_at": "2026-08-16T07:44:38Z",
+ "status": "approved",
+ "reviewed_git_head": "787fd4580976d227f8456357f5f8f29c2b118325",
+ "reviewed_git_tree": "8de78e9d6a139b77567eaee6fec43c4b188c9bed",
+ "implementation_scope": {
+  "included_patterns": [
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/**",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/mock_api.py"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/mock_api.py",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "8c6c979c63707cfdf18fca5eaca706d6cc3f8b3d"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "0a712a03c69cc54ff8e6b98d65d8c85f62a8bd7c"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/context.json",
+   "sha256": "b381e05b9f6b82270a6cf99a3621b8fffe773c86e3c361945e7874af6d1b1648"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/report.md",
+   "sha256": "944217719149ab974b9a71a8dc99f495752d552b86af28949643273b91a8bb25",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/spec-review.md",
+   "sha256": "3951159ad3b934a724d17b1af95b4ef5d33ff778c930e9617e8e5d36887af8c5",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/quality-review.md",
+   "sha256": "26d351d19584e85982f55de4477f487825b4bd72032cd73e63d7f9439d3a4620",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-d5fc94c8547e7bd4ba2fa2bb8a779e1c2548c92b7ef6f4134d077bf9d55136ff",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/run_six_domains.mjs",
+   "assertion_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "recorded_at": "2026-08-16T07:44:38Z",
+   "validation_receipt_sha256": "b68f0304a4491f233864124efd89b04bb5f1116a8d15cc681007d1d2a84862e9",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/041-030-six-domain-verification.log",
+    "sha256": "b02d23e68350e335bf5157f9def78504c6ba6e2c69353b21a3a61ef9c4dc2a68",
+    "size": 428326
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A1",
+   "parent_id": "A1",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-d5fc94c8547e7bd4ba2fa2bb8a779e1c2548c92b7ef6f4134d077bf9d55136ff"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "The parity matrix is maintained with all 67 rows and blocked repository row 4."
+  },
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-d5fc94c8547e7bd4ba2fa2bb8a779e1c2548c92b7ef6f4134d077bf9d55136ff"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme/locale/viewport/permission/data state."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-d5fc94c8547e7bd4ba2fa2bb8a779e1c2548c92b7ef6f4134d077bf9d55136ff"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review."
+  },
+  {
+   "id": "A4",
+   "parent_id": "A4",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-d5fc94c8547e7bd4ba2fa2bb8a779e1c2548c92b7ef6f4134d077bf9d55136ff"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "No data-flow or API regressions in completed slices."
+  }
+ ],
+ "fallback_used": false
+}

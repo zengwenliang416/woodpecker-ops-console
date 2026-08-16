@@ -1,0 +1,67 @@
+{
+  "task_id": "030-six-domain-verification",
+  "task_items": [
+    "8.2"
+  ],
+  "baseline_task_id": "8.2",
+  "acceptance_primary": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "goal": "Run facticity, static, unit, redteam, E2E, and sensory verification against the requirements and the full parity matrix with replayable orchestration and a consolidated six-domain summary.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/evidence/run_static_gate.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/verify_responsive.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/redteam_verifier.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/audit_residuals.mjs",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/023-operations-residual-delta-closure/evidence/redteam_audit.mjs"
+  ],
+  "allowed_files": [
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/mock_api.py"
+  ],
+  "test_paths": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/*.mjs"
+  ],
+  "non_goals": [
+    "Do not produce the HTML report (8.3) or the final parity declaration (8.4).",
+    "Do not reopen blocked repository-add row 4.",
+    "Do not change production code, routes, APIs, or fixtures.",
+    "Do not bypass component extraction rules."
+  ],
+  "expected_evidence": [
+    "evidence/facticity-report.json matrix/source consistency",
+    "evidence/e2e-journey-summary.json key journey capture",
+    "evidence/six-domain-summary.json consolidated verdicts",
+    "development/evidence/041-030-six-domain-verification.log orchestrated run",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "Reusing sibling sensory bundles is valid only when their manifests and run IDs are re-verified.",
+    "The E2E journey is a representative sampling, not full interactive re-driving."
+  ],
+  "stop_condition": "Stop if a domain command fails without a direct in-scope fix, the facticity checker finds an unexplained matrix/source mismatch, or closure would complete tasks 8.3-8.4, row 4, or parent acceptance."
+}

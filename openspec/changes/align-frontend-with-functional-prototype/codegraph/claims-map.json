@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-16T06:16:22.943Z",
+  "generated_at": "2026-08-16T06:26:31.009Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -1158,12 +1158,50 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "029-static-gate-closure",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Close baseline task `8.1`: run the complete static gate chain against the",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/brief.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/context.json"
+      ],
+      "expected_evidence": [
+        "evidence/run_static_gate.mjs consolidated gate script",
+        "evidence/static-gate-receipt.json with exact counts",
+        "development/evidence/040-029-static-gate-closure.log executed gate output",
+        "web/.prettierignore **/._* exclusion plus four reformatted files",
+        "Task report, spec review, quality review"
+      ],
+      "allowed_files": [
+        "web/.prettierignore",
+        "web/src/components/atomic/ListItem.vue",
+        "web/src/components/atomic/Warning.vue",
+        "web/src/components/layout/Popup.vue",
+        "web/src/regression/responsive/containment.test.ts",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+      ],
+      "query_ids": [
+        "development:task-029-static-gate-closure:evidence"
+      ]
+    },
+    {
+      "id": "development:task-030-six-domain-verification",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "030-six-domain-verification",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/context.json"
       ],
       "expected_evidence": [
         "Focused tests or command output",
@@ -1175,7 +1213,7 @@
         "src"
       ],
       "query_ids": [
-        "development:task-029-static-gate-closure:evidence"
+        "development:task-030-six-domain-verification:evidence"
       ]
     }
   ]

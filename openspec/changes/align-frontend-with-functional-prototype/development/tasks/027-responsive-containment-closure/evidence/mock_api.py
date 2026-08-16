@@ -172,8 +172,18 @@ INFRA_ALERTS = [
     {"id": 15, "server_id": 205, "environment_id": 2, "deployment_id": 0, "severity": "warning", "status": "open", "name": "memory-pressure", "message": "Memory usage above 75% on staging-web-01", "created": NOW - 1_800, "updated": NOW - 1_800, "acknowledged": False, "resolved": False},
 ]
 
+LONG_LOG_TOKEN = (
+    "pulling-image-registry.example.test/backend-api:v302"
+    + "1a2b3c4d5e6f708192a3b4c5d6e7f8091a2b3c4d5e6f708192a3b4c5d6e7f809" * 4
+)
+
 DEPLOYMENTS = [
-    {"id": 142, "application_id": 1, "environment_id": 1, "release_id": 302, "group_id": 1, "status": "failed", "phase": "failed", "strategy": "rolling", "batch_size": 1, "progress": 100, "created": NOW - 2_000, "updated": NOW - 1_700, "started": NOW - 1_900, "finished": NOW - 1_700, "cancel_info": {"canceled_by_user": "", "canceled_by_step": "", "superseded_by": 0}, "author": "alice", "triggered_by": "alice", "reviewed_by": "", "deployment_approvals": []},
+    {"id": 142, "application_id": 1, "environment_id": 1, "release_id": 302, "group_id": 1, "status": "failed", "phase": "failed", "strategy": "rolling", "batch_size": 1, "progress": 100, "created": NOW - 2_000, "updated": NOW - 1_700, "started": NOW - 1_900, "finished": NOW - 1_700, "cancel_info": {"canceled_by_user": "", "canceled_by_step": "", "superseded_by": 0}, "author": "alice", "triggered_by": "alice", "reviewed_by": "", "deployment_approvals": [], "logs": [
+        {"at": NOW - 1_900, "level": "info", "message": LONG_LOG_TOKEN},
+        {"at": NOW - 1_850, "level": "success", "message": "container backend-api-201 started"},
+        {"at": NOW - 1_800, "level": "warning", "message": "health check delayed on prod-api-02"},
+        {"at": NOW - 1_750, "level": "danger", "message": "container exited with code 1"},
+    ]},
     {"id": 141, "application_id": 1, "environment_id": 1, "release_id": 301, "group_id": 1, "status": "success", "phase": "completed", "strategy": "rolling", "batch_size": 1, "progress": 100, "created": NOW - 86_400, "updated": NOW - 86_000, "started": NOW - 86_300, "finished": NOW - 86_000, "cancel_info": {"canceled_by_user": "", "canceled_by_step": "", "superseded_by": 0}, "author": "alice", "triggered_by": "alice", "reviewed_by": "", "deployment_approvals": []},
     {"id": 140, "application_id": 2, "environment_id": 2, "release_id": 501, "group_id": 2, "status": "running", "phase": "deploying", "strategy": "rolling", "batch_size": 1, "progress": 40, "created": NOW - 600, "updated": NOW - 200, "started": NOW - 550, "finished": 0, "cancel_info": {"canceled_by_user": "", "canceled_by_step": "", "superseded_by": 0}, "author": "bob", "triggered_by": "bob", "reviewed_by": "", "deployment_approvals": []},
     {"id": 139, "application_id": 1, "environment_id": 2, "release_id": 300, "group_id": 2, "status": "paused", "phase": "paused", "strategy": "single", "batch_size": 1, "progress": 25, "created": NOW - 172_800, "updated": NOW - 171_600, "started": NOW - 172_600, "finished": 0, "cancel_info": {"canceled_by_user": "", "canceled_by_step": "", "superseded_by": 0}, "author": "alice", "triggered_by": "alice", "reviewed_by": "", "deployment_approvals": []},
@@ -302,7 +312,7 @@ class FixtureHandler(base.FixtureHandler):
         if path == "/api/deployments/142/logs":
             self.send_json(
                 [
-                    {"id": 1, "server_id": 201, "time": NOW - 1_900, "level": "info", "message": "pulling image registry.example.test/backend-api:v302"},
+                    {"id": 1, "server_id": 201, "time": NOW - 1_900, "level": "info", "message": "pulling-image-registry.example.test/backend-api:v302----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"},
                     {"id": 2, "server_id": 201, "time": NOW - 1_850, "level": "success", "message": "container backend-api-201 started"},
                     {"id": 3, "server_id": 202, "time": NOW - 1_800, "level": "warning", "message": "health check delayed on prod-api-02"},
                     {"id": 4, "server_id": 202, "time": NOW - 1_750, "level": "danger", "message": "container exited with code 1"},

@@ -1,0 +1,57 @@
+{
+  "findings": [
+    {
+      "ok": true,
+      "message": "matrix shape: 67 ordered rows"
+    },
+    {
+      "ok": true,
+      "message": "status counts: {\"verified\":66,\"blocked\":1}"
+    },
+    {
+      "ok": true,
+      "message": "row 4 remains blocked"
+    },
+    {
+      "ok": true,
+      "message": "concrete single-segment routes registered in router.ts"
+    },
+    {
+      "ok": true,
+      "message": "route top-level segments resolve to the router (9 segments)"
+    },
+    {
+      "ok": true,
+      "message": "task 019: approved acceptance"
+    },
+    {
+      "ok": true,
+      "message": "task 020: approved acceptance"
+    },
+    {
+      "ok": true,
+      "message": "task 021: approved acceptance"
+    },
+    {
+      "ok": true,
+      "message": "task 022: approved acceptance"
+    },
+    {
+      "ok": true,
+      "message": "acceptance.json declares A1-A4"
+    }
+  ],
+  "ok": true,
+  "rows": 67,
+  "status_counts": {
+    "verified": 66,
+    "blocked": 1
+  },
+  "schema": "woodpecker.task030-facticity-report.v1",
+  "generated_at": "2026-08-16T07:36:55.835Z",
+  "tamper_self_test": {
+    "row4_status": "rejected",
+    "route_cell": "rejected",
+    "multi_segment_route": "rejected"
+  }
+}

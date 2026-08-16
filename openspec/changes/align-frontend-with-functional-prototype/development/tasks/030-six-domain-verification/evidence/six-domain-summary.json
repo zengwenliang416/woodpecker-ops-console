@@ -1,0 +1,45 @@
+{
+  "schema": "woodpecker.task030-six-domain-summary.v1",
+  "task_id": "030-six-domain-verification",
+  "baseline_task_id": "8.2",
+  "generated_at": "2026-08-16T07:39:11.059Z",
+  "ok": true,
+  "domains": [
+    {
+      "domain": "facticity",
+      "ok": true,
+      "detail": "67 rows, {\"verified\":66,\"blocked\":1}"
+    },
+    {
+      "domain": "static",
+      "ok": true,
+      "detail": "whole-tree Prettier/ESLint/vue-tsc/Vite build/git diff --check"
+    },
+    {
+      "domain": "unit",
+      "ok": true,
+      "detail": "full Vitest 610 tests"
+    },
+    {
+      "domain": "redteam",
+      "ok": true,
+      "detail": "027 responsive red-team 9/9 mutations rejected"
+    },
+    {
+      "domain": "redteam",
+      "ok": true,
+      "detail": "023 audit red-team re-executed at its closure HEAD: all 5 mutations rejected"
+    },
+    {
+      "domain": "e2e",
+      "ok": true,
+      "detail": "5 journey states, 4 routes"
+    },
+    {
+      "domain": "sensory",
+      "ok": true,
+      "detail": "020-overview-repositories-reverification: 20 states run 1eae7bc3-e742-4aac-bce0-ec61105eebb8; 021-infrastructure-route-reverification: 62 states run 84b42687-5a1a-402c-952f-6e5fd1ac338a; 022-deployment-route-reverification: 54 states run 0051a9bc-3312-4bf4-a850-6e4d4a205920; 027: 39 states x 3 viewports run b9894081-81e5-4b79-a9e3-2e2c6d0f5297"
+    }
+  ],
+  "blocked_row_4": "explicit"
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "woodpecker.task030-e2e-journey.v1",
+  "ok": true,
+  "runId": "5d9b17c0-849f-4daf-8071-1185730dc044",
+  "states": 5,
+  "themes": [
+    "light",
+    "dark"
+  ],
+  "routes": [
+    "/login",
+    "/overview",
+    "/repos",
+    "/deployments/142"
+  ],
+  "failures": [],
+  "generatedAt": "2026-08-16T07:39:10.746Z"
+}
