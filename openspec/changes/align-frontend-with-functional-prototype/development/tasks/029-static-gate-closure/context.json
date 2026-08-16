@@ -1,0 +1,60 @@
+{
+  "task_id": "029-static-gate-closure",
+  "task_items": ["8.1"],
+  "baseline_task_id": "8.1",
+  "acceptance_primary": ["A3"],
+  "goal": "The complete frontend passes the full static gate chain (whole-tree Prettier, ESLint zero warnings, Vue TypeScript, full Vitest, Vite build, git diff --check) with a replayable gate script and recorded evidence.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/package.json",
+    "web/.prettierignore"
+  ],
+  "allowed_files": [
+    "web/.prettierignore",
+    "web/src/components/atomic/ListItem.vue",
+    "web/src/components/atomic/Warning.vue",
+    "web/src/components/layout/Popup.vue",
+    "web/src/regression/responsive/containment.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+  ],
+  "test_paths": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/evidence/*.mjs"
+  ],
+  "non_goals": [
+    "Do not change production behavior; formatting and ignore-configuration only.",
+    "Do not complete tasks 8.2-8.4, row 4, or parent acceptance.",
+    "Do not bypass component extraction rules."
+  ],
+  "expected_evidence": [
+    "evidence/run_static_gate.mjs consolidated gate script",
+    "evidence/static-gate-receipt.json with exact counts",
+    "development/evidence/040-029-static-gate-closure.log executed gate output",
+    "web/.prettierignore **/._* exclusion plus four reformatted files",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "A full gate pass does not prove six-domain verification (8.2).",
+    "The ._* exclusion applies only to AppleDouble metadata, never real source."
+  ],
+  "stop_condition": "Stop if a gate command fails without a direct in-scope fix, the exclusion hides a real violation, or closure would complete tasks 8.2-8.4, row 4, or parent acceptance."
+}

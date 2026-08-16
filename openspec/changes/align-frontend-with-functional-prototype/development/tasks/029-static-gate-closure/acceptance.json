@@ -1,0 +1,110 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "029-static-gate-closure",
+ "generated_at": "2026-08-16T06:25:49Z",
+ "recorded_at": "2026-08-16T06:25:49Z",
+ "status": "approved",
+ "reviewed_git_head": "bef2648b075cf61e38441c7ab4b3c598bf8ba6e4",
+ "reviewed_git_tree": "8c8a519ac82b89fdd5728a8209d6a61d98740ddf",
+ "implementation_scope": {
+  "included_patterns": [
+   "web/.prettierignore",
+   "web/src/components/atomic/ListItem.vue",
+   "web/src/components/atomic/Warning.vue",
+   "web/src/components/layout/Popup.vue",
+   "web/src/regression/responsive/containment.test.ts",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "e0a6f014c24d6c00ca0b4a3b4fe8d7d5cd1eddb7"
+   },
+   {
+    "path": "web/.prettierignore",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "eb6da1b3bac0ff8fb1807cbff8a9f2c9f29d2d07"
+   },
+   {
+    "path": "web/src/components/atomic/ListItem.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "abcc5f8280431a1894d6c91be0d29f29d93557e8"
+   },
+   {
+    "path": "web/src/components/atomic/Warning.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "bcbfe29dc1fef202d7093d60c839ad435e047e61"
+   },
+   {
+    "path": "web/src/components/layout/Popup.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "78e06362ce105e02ec2b96d9cdc6fed1432912dc"
+   },
+   {
+    "path": "web/src/regression/responsive/containment.test.ts",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "6767d30aed518ba54ff7285a146824d911285803"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/context.json",
+   "sha256": "52c3519b1583a29dfff06fce26a3870ca1e90bd394e3aef0a3c78e000a8fcc88"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/report.md",
+   "sha256": "977887fe6ae76e65674efb0d6fe7c653145b92913465d04e5b7249c95bce739f",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/spec-review.md",
+   "sha256": "da548110a6d6a447272c0447f08863a782fcf20207ad49d7d2327f731aa7c891",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/quality-review.md",
+   "sha256": "559d239bff2add01a6ec312640eda64ee0c785b50a75e5fa6319bb1ff03597de",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-a3afd89c2a06e1fc710b21446cbe2c0253034b6b838b31dc1c443d1315556416",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/evidence/run_static_gate.mjs",
+   "assertion_ids": [
+    "A3"
+   ],
+   "recorded_at": "2026-08-16T06:25:49Z",
+   "validation_receipt_sha256": "f6446be4b6ed44471e45ba88e4a521152446f567a6c619e1758dedbfc8cbc7f2",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/040-029-static-gate-closure.log",
+    "sha256": "c55b787c5a46c570117c2d45a6638324282a41e7ee40a08da60ef8059db77bca",
+    "size": 210147
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-a3afd89c2a06e1fc710b21446cbe2c0253034b6b838b31dc1c443d1315556416"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+  }
+ ],
+ "fallback_used": false
+}

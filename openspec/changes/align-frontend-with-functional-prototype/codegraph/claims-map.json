@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-16T05:27:28.978Z",
+  "generated_at": "2026-08-16T06:16:22.943Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -1116,12 +1116,54 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "028-token-parity-closure",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Close baseline task `7.4`: replace every page-local color value in components,",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/brief.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/context.json"
+      ],
+      "expected_evidence": [
+        "web/src/regression/tokens/token-parity.test.ts raw-color scan and token resolution",
+        "Light/dark spot-check browser evidence under evidence/",
+        "Updated style.css token definitions (light and dark values)",
+        "Task report, spec review, quality review"
+      ],
+      "allowed_files": [
+        "web/src/style.css",
+        "web/src/style/console.css",
+        "web/src/style/prism.css",
+        "web/src/views/deployments/DeploymentDetail.vue",
+        "web/src/views/Login.vue",
+        "web/src/components/atomic/Button.vue",
+        "web/src/components/layout/header/ActivePipelines.vue",
+        "web/src/compositions/useTheme.ts",
+        "web/src/regression/tokens/**",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+      ],
+      "query_ids": [
+        "development:task-028-token-parity-closure:evidence"
+      ]
+    },
+    {
+      "id": "development:task-029-static-gate-closure",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "029-static-gate-closure",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/context.json"
       ],
       "expected_evidence": [
         "Focused tests or command output",
@@ -1133,7 +1175,7 @@
         "src"
       ],
       "query_ids": [
-        "development:task-028-token-parity-closure:evidence"
+        "development:task-029-static-gate-closure:evidence"
       ]
     }
   ]

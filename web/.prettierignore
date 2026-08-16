@@ -1,3 +1,4 @@
+**/._*
 .pnpm-store/
 pnpm-lock.yaml
 dist

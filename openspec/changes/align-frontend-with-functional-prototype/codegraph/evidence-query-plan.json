@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-16T05:27:28.978Z",
+  "generated_at": "2026-08-16T06:16:22.943Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -414,7 +414,7 @@
       "stage": "development",
       "task_id": "028-token-parity-closure",
       "status": "planned",
-      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Close baseline task `7.4`: replace every page-local color value in components,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "file paths",
         "symbols",
@@ -422,6 +422,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-028-token-parity-closure --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-029-static-gate-closure:evidence",
+      "claim_id": "development:task-029-static-gate-closure",
+      "stage": "development",
+      "task_id": "029-static-gate-closure",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-029-static-gate-closure --query \"<query>\" --write --json"
     }
   ]
 }
