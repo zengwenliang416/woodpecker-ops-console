@@ -1,0 +1,143 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "031-html-verification-report",
+ "generated_at": "2026-08-16T07:58:00Z",
+ "recorded_at": "2026-08-16T07:58:00Z",
+ "status": "approved",
+ "reviewed_git_head": "bb23726ceadb1b9e3d9898fc5f8270bad42818d7",
+ "reviewed_git_tree": "8df898d80c314c60183d6964d0e27701629bf892",
+ "implementation_scope": {
+  "included_patterns": [
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/reports/**",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "be01ac61b1e65e6925e2b5e2f26c71de482db227"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/context.json",
+   "sha256": "caaaf6f62a98ffbdb2df2e7081ec92456bf54fdfdf590fcc05cb953f53695ed1"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/report.md",
+   "sha256": "4c13acf69aca8733e32253b6b76ba49966b8345f5adf72e315f15aeb4b0962b9",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/spec-review.md",
+   "sha256": "d84b751220c6a8d7848a156618647fae346ad81176e3c8763f0935a8026897e6",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/quality-review.md",
+   "sha256": "7a296fb96ceb52d3b2cda7982b550b11e700a9203fc66ba82cad036f0c203c25",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-8f9e6d74f6ab24f88d8db6cbf4f0c3adae1d9eb50db64d1b29fa1fd5ec8a98e8",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/evidence/validate_task.mjs",
+   "assertion_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "recorded_at": "2026-08-16T07:58:00Z",
+   "validation_receipt_sha256": "de6a5b87ec4236a0fce4feaa1befd08d5795a3e1c0f5567d63c28447aac96b6a",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/042-031-html-verification-report.log",
+    "sha256": "5fbdb2d95b267a57536ac4d7aacd0be21a7666da423011e68f47e735016ef84d",
+    "size": 712
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A1",
+   "parent_id": "A1",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-8f9e6d74f6ab24f88d8db6cbf4f0c3adae1d9eb50db64d1b29fa1fd5ec8a98e8"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "The parity matrix is maintained with all 67 rows and blocked repository row 4."
+  },
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-8f9e6d74f6ab24f88d8db6cbf4f0c3adae1d9eb50db64d1b29fa1fd5ec8a98e8"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme/locale/viewport/permission/data state."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-8f9e6d74f6ab24f88d8db6cbf4f0c3adae1d9eb50db64d1b29fa1fd5ec8a98e8"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review."
+  },
+  {
+   "id": "A4",
+   "parent_id": "A4",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-8f9e6d74f6ab24f88d8db6cbf4f0c3adae1d9eb50db64d1b29fa1fd5ec8a98e8"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "No data-flow or API regressions in completed slices."
+  }
+ ],
+ "report_bindings": {
+  "report_model_id": "report-b0edbfe39b45b481dc1c391e",
+  "manifest": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+   "sha256": "3c7de6ac873fd0b53abcf5d69dd39023f982a7e48976e73c73320bc5f0589b2a"
+  },
+  "pages": [
+   {
+    "path": "verify/reports/overview.html",
+    "sha256": "b0edbfe39b45b481dc1c391eef35efa86fcc81e0b244461180f04e94af2f294d",
+    "size": 6354
+   },
+   {
+    "path": "verify/reports/test-case-catalog.html",
+    "sha256": "0fc13bd4a9eb88c1ed7d43779c1e35178513f7c5b84aa10cd7502c712cd0cd91",
+    "size": 44849
+   },
+   {
+    "path": "verify/reports/test-case-results.html",
+    "sha256": "d2c6bea4c1b3f91371d769781a00dd712e509a8a4ecf46361bc14e8f6a9c88c1",
+    "size": 12296
+   }
+  ],
+  "spot_check": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/evidence/report-spot-check-summary.json",
+   "ok": true,
+   "catalog_rows": 67
+  }
+ },
+ "fallback_used": false
+}

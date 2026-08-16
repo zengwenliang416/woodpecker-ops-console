@@ -1,0 +1,85 @@
+{
+  "schema": "specnav.verification.report-model.v2",
+  "report_id": "report-b0edbfe39b45b481dc1c391e",
+  "generated_at": "2026-08-16T07:52:53.475Z",
+  "git_head": "ref: refs/heads/main",
+  "aggregate": {
+    "ok": true,
+    "domains": [
+      {
+        "domain": "facticity",
+        "ok": true
+      },
+      {
+        "domain": "static",
+        "ok": true
+      },
+      {
+        "domain": "unit",
+        "ok": true
+      },
+      {
+        "domain": "redteam",
+        "ok": true
+      },
+      {
+        "domain": "redteam",
+        "ok": true
+      },
+      {
+        "domain": "e2e",
+        "ok": true
+      },
+      {
+        "domain": "sensory",
+        "ok": true
+      }
+    ]
+  },
+  "acceptance": {
+    "assertions": [
+      {
+        "id": "A1",
+        "statement": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status.",
+        "verify_via": "e2e",
+        "status": "failing",
+        "evidence_ref": null
+      },
+      {
+        "id": "A2",
+        "statement": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations.",
+        "verify_via": "sensory",
+        "status": "failing",
+        "evidence_ref": null
+      },
+      {
+        "id": "A3",
+        "statement": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px.",
+        "verify_via": "static",
+        "status": "failing",
+        "evidence_ref": null
+      },
+      {
+        "id": "A4",
+        "statement": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite.",
+        "verify_via": "unit",
+        "status": "failing",
+        "evidence_ref": null
+      }
+    ]
+  },
+  "route_matrix": {
+    "rows": 67,
+    "verified": 66,
+    "blocked": 1,
+    "row4_blocked": true
+  },
+  "evidence_index": {
+    "slice_acceptances": 30,
+    "validation_receipts": 429
+  },
+  "runtime": {
+    "v2_adapter_lifecycle": "not-run",
+    "note": "verify/v2 contains runtime-status.json only; report generated from executed development evidence"
+  }
+}

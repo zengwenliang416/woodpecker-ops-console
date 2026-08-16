@@ -1,0 +1,22 @@
+{
+  "schema": "specnav.verification.report-render-manifest.v2",
+  "report_model_id": "report-b0edbfe39b45b481dc1c391e",
+  "generated_at": "2026-08-16T07:52:53.475Z",
+  "pages": [
+    {
+      "path": "verify/reports/overview.html",
+      "sha256": "b0edbfe39b45b481dc1c391eef35efa86fcc81e0b244461180f04e94af2f294d",
+      "size": 6354
+    },
+    {
+      "path": "verify/reports/test-case-catalog.html",
+      "sha256": "0fc13bd4a9eb88c1ed7d43779c1e35178513f7c5b84aa10cd7502c712cd0cd91",
+      "size": 44849
+    },
+    {
+      "path": "verify/reports/test-case-results.html",
+      "sha256": "d2c6bea4c1b3f91371d769781a00dd712e509a8a4ecf46361bc14e8f6a9c88c1",
+      "size": 12296
+    }
+  ]
+}

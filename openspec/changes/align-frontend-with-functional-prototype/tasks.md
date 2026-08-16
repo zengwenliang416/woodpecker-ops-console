@@ -72,5 +72,5 @@
 
 - [x] 8.1 Run Prettier check, ESLint, TypeScript, all Vitest tests, Vite build, and `git diff --check`.
 - [x] 8.2 Run facticity, static, unit, redteam, E2E, and sensory verification against requirements and the full parity matrix.
-- [ ] 8.3 Produce the SpecNav HTML verification report with evidence for every completed assertion and route row.
+- [x] 8.3 Produce the SpecNav HTML verification report with evidence for every completed assertion and route row.
 - [ ] 8.4 Leave incomplete or blocked route rows and tasks explicit; do not claim global prototype parity until all 67 rows are verified.

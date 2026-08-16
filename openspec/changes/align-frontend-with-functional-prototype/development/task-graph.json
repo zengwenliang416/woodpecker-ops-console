@@ -731,6 +731,12 @@
       "baseline_task_id": "8.2",
       "description": "Six-domain verification: facticity, static, unit, redteam, E2E, sensory",
       "status": "complete"
+    },
+    {
+      "packet_id": "031-html-verification-report",
+      "baseline_task_id": "8.3",
+      "description": "HTML verification report with evidence for every completed assertion and route row",
+      "status": "complete"
     }
   ]
 }

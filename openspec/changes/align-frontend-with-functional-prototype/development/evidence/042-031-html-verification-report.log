@@ -1,0 +1,26 @@
+
+## Generate HTML report
+{
+  "ok": true,
+  "pages": [
+    "verify/reports/overview.html",
+    "verify/reports/test-case-catalog.html",
+    "verify/reports/test-case-results.html"
+  ],
+  "report_model_id": "report-637150eeff72e2a701c6c6a4"
+}
+
+## Report browser spot check
+{"schema":"woodpecker.task031-report-spot-check.v1","ok":true,"runId":"826f2d5c-dc0c-419c-a926-cc227347e4d1","pages":3,"catalog_rows":67,"console_errors":0,"network_requests":0,"generatedAt":"2026-08-16T07:52:32.134Z"}
+
+## JS syntax: build_html_report.mjs
+
+## JS syntax: spot_check_report.mjs
+
+## Task 031 Prettier
+Checking formatting...
+All matched files use Prettier code style!
+
+## git diff --check
+
+Task 031 validation gates all passed.
