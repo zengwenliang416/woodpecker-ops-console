@@ -62,7 +62,7 @@
 用户结果：用户可以通过键盘、辅助技术、不同语言和 390px 移动端稳定访问已完成的页面。
 
 - [x] 7.1 Remove untranslated visible strings from completed slices and verify Simplified Chinese plus English fallback.
-- [ ] 7.2 Verify keyboard navigation, visible focus, semantic controls, accessible labels, status text/icon pairing, and reduced-motion behavior.
+- [x] 7.2 Verify keyboard navigation, visible focus, semantic controls, accessible labels, status text/icon pairing, and reduced-motion behavior.
 - [ ] 7.3 Verify desktop, tablet, and 390px layouts with no page-level horizontal overflow and contained scrolling for dense tables and logs.
 - [ ] 7.4 Verify light and dark semantic token parity without page-local color systems.
 

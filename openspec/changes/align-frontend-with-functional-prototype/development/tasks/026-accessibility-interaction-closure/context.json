@@ -1,0 +1,27 @@
+{
+  "task_id": "026-accessibility-interaction-closure",
+  "task_items": ["7.2"],
+  "baseline_task_id": "7.2",
+  "acceptance_primary": ["A2", "A3"],
+  "goal": "Keyboard operation, visible focus, semantic controls, accessible names, status text/icon pairing, and reduced-motion behavior are verified and locked by focused regressions.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/goal.md",
+    "web/src/App.vue",
+    "web/src/App.test.ts",
+    "web/src/components/atomic/IconButton.vue",
+    "web/src/components/repo/pipeline/PipelineRunningIcon.vue"
+  ],
+  "production_files": [
+    "web/src/App.vue",
+    "web/src/components/layout/header/ActivePipelines.vue",
+    "web/src/components/repo/pipeline/PipelineRunningIcon.vue"
+  ],
+  "test_files": ["web/src/accessibilityInteraction.test.ts"],
+  "exclusions": [
+    "App.vue drawer backdrop click target (aria-hidden with tested Escape close path).",
+    "RepoAdd.vue click-guard div around a real Button (navigation bubbling stop)."
+  ]
+}

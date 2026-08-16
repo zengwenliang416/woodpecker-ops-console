@@ -1,0 +1,28 @@
+Task 026 accessibility interaction closure — verification log (2026-08-16)
+
+Run environment: node v24.18.0, cwd web, branch main.
+
+1. npx vitest run src/accessibilityInteraction.test.ts
+   Test Files  1 passed (1)
+   Tests       6 passed (6)
+   Covers: reduced-motion guard for keyframes/infinite animation/transition:all,
+   semantic click-target guard (two documented exceptions), no global outline
+   reset, focus-visible on shared form controls, IconButton semantics across
+   button/link/router-link variants, decorative running icon aria-hidden.
+
+2. npx vitest run src/App.test.ts src/components/layout/ src/views/repo/pipeline/ src/accessibilityInteraction.test.ts
+   Test Files  11 passed (11)
+   Tests       90 passed (90)
+
+3. npx vitest run   (full frontend suite at the closure HEAD)
+   Test Files  108 passed (108)
+   Tests       600 passed (600)
+
+4. npx eslint on all changed files: 0 errors, 0 warnings.
+5. npx prettier --check on all changed files: clean.
+6. npm run typecheck (vue-tsc --noEmit): 0 errors.
+
+Audit summary (evidence/accessibility-audit.json):
+- 3 motion findings fixed (slide-right panel, active-pipeline spinner, pecking icon).
+- Decorative running icon marked aria-hidden (translated status text pairs it).
+- 6 verified-conforming checks; 2 documented non-semantic click exceptions.

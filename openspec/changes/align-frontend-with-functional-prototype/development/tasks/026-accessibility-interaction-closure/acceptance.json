@@ -1,0 +1,170 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "026-accessibility-interaction-closure",
+ "generated_at": "2026-08-16T03:36:55Z",
+ "recorded_at": "2026-08-16T03:36:55Z",
+ "status": "approved",
+ "reviewed_git_head": "24be79fd22e1abbb4bca9a65e006fd2148feab59",
+ "reviewed_git_tree": "8c3f915b9b4f27acbc9e734db026816628e080ed",
+ "implementation_scope": {
+  "included_patterns": [
+   "web/src/App.vue",
+   "web/src/components/layout/header/ActivePipelines.vue",
+   "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+   "web/src/accessibilityInteraction.test.ts",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "d0151bcabd3b5f7b318cf2dea3c3eaa45308460e"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/brief.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "023c31f7420aad9fb96376ea204d55980f9d5fd4"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/context.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "b03a58232ae44ad19a37a7c4fadc1ffe4821bc4c"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/evidence/accessibility-audit.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "4fcedfdfeaf4d4718098d42a6e6a5fdedbd8b195"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/evidence/build_acceptance.py",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "29d09f24bcd8a8d4bb9a9a73020c4dc5e3c52750"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/evidence/verification-receipt.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "0b255677f9c3185ecceaed5836cf749fa944b08b"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/quality-review.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "4042837f46afbadc866a18bfa09172e031fc46e1"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/report.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "4cd3b2ad9812bf622be767d48366c4b92c6d8536"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/spec-review.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "f9a2f7da0d600dbf96ec497187ee9454a8f2b45f"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "563a1aa0865e53d418425fe07f45a2d995d3e6da"
+   },
+   {
+    "path": "web/src/App.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "d5c06ed5d9617ec915139a45a2ad095d7a40c7be"
+   },
+   {
+    "path": "web/src/accessibilityInteraction.test.ts",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "c49044c65ba328cd0840e7e3958b1cd9f89634b1"
+   },
+   {
+    "path": "web/src/components/layout/header/ActivePipelines.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "a31027d3560816d3e6af9c5790f4315b0659342a"
+   },
+   {
+    "path": "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "f1f7761f64ca0e9a23dcbe1c88ba8030429209e4"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/context.json",
+   "sha256": "59d4d538867c866af7dd691921da3f0c800d89025e3d3cd426887ad788894d10"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/report.md",
+   "sha256": "0593dddc97f94779117202bc8b010742c98bb66f13bbb2256f0bc91063f029cc",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/spec-review.md",
+   "sha256": "c55333f3f88bc42e113a519633a24dd9f45d5f21b7336d92f4ae03183fe0c37b",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/quality-review.md",
+   "sha256": "3dfb6b12e79e14159416477a694602b1895633ebb50feb2168156eb67dcda8c3",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-e7a4b321f2fe15ad333d3062ac599595db3c2c4a84b5cff91575cbc8fd2ee2ec",
+   "command": "npx vitest run src/accessibilityInteraction.test.ts && npx vitest run",
+   "assertion_ids": [
+    "A2",
+    "A3"
+   ],
+   "recorded_at": "2026-08-16T03:36:55Z",
+   "validation_receipt_sha256": "2bbcbac84bd0899576f294d67ee67106c2a192d7fb0acef57bbc55cee94fc9d1",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/039-026-accessibility-interaction-closure.log",
+    "sha256": "fea8380f272ca53257e7844ac16908a5629d61a1f386f056f16fb377159bf5a7",
+    "size": 1318
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-e7a4b321f2fe15ad333d3062ac599595db3c2c4a84b5cff91575cbc8fd2ee2ec"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-e7a4b321f2fe15ad333d3062ac599595db3c2c4a84b5cff91575cbc8fd2ee2ec"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+  }
+ ],
+ "fallback_used": false
+}

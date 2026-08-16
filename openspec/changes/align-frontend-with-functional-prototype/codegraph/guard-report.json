@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.guard_report.v1",
-  "generated_at": "2026-08-16T03:23:48.929Z",
+  "generated_at": "2026-08-16T03:36:54.860Z",
   "active_change": "align-frontend-with-functional-prototype",
   "stage": "development",
   "ok": true,
@@ -63,7 +63,7 @@
   },
   "evidence_index": {
     "schema": "specnav.codegraph.evidence_index.v1",
-    "generated_at": "2026-08-16T03:23:48.929Z",
+    "generated_at": "2026-08-16T03:36:54.860Z",
     "active_change": "align-frontend-with-functional-prototype",
     "source_raw": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence.jsonl",
     "by_claim": {},
@@ -74,11 +74,11 @@
   },
   "claims_report": {
     "schema": "specnav.codegraph.claims_report.v1",
-    "generated_at": "2026-08-16T03:23:48.929Z",
+    "generated_at": "2026-08-16T03:36:54.860Z",
     "active_change": "align-frontend-with-functional-prototype",
     "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
     "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-    "claims_count": 25,
+    "claims_count": 26,
     "verified_claims": [],
     "unverified_claims": [
       "development:task-001-date-duration-integrity",
@@ -105,7 +105,8 @@
       "development:task-022-deployment-route-reverification",
       "development:task-023-operations-residual-delta-closure",
       "development:task-024-operations-regression-coverage",
-      "development:task-025-i18n-visible-string-closure"
+      "development:task-025-i18n-visible-string-closure",
+      "development:task-026-accessibility-interaction-closure"
     ],
     "blockers": [],
     "warnings": [
@@ -133,7 +134,8 @@
       "codegraph:claim-unverified:development:task-022-deployment-route-reverification",
       "codegraph:claim-unverified:development:task-023-operations-residual-delta-closure",
       "codegraph:claim-unverified:development:task-024-operations-regression-coverage",
-      "codegraph:claim-unverified:development:task-025-i18n-visible-string-closure"
+      "codegraph:claim-unverified:development:task-025-i18n-visible-string-closure",
+      "codegraph:claim-unverified:development:task-026-accessibility-interaction-closure"
     ]
   },
   "drift": {

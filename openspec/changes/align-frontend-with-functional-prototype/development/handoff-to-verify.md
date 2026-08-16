@@ -123,9 +123,16 @@
   the missing zh-Hans `delete` message was added, and `6` focused regressions
   lock source-key locale parity, template hygiene, bilingual file-tree names,
   and the English fallback. Full suite at closure: `594/594`.
-- Phase 6 and baseline `7.1` are complete. This remains an incremental
+- `026-accessibility-interaction-closure` / baseline task `7.2`: keyboard
+  operation, visible focus, semantic controls, accessible names, status
+  text/icon pairing, and reduced-motion behavior were audited across the
+  completed slices. Three motion gaps were repaired (pipeline-feed slide,
+  active-pipeline spinner, running-icon peck), the decorative running icon
+  became `aria-hidden`, and `6` focused regressions lock the baseline. Full
+  suite at closure: `600/600`.
+- Phase 6 and baselines `7.1-7.2` are complete. This remains an incremental
   development snapshot rather than the final six-domain verification handoff:
-  the `7` baseline tasks `7.2-8.4`, blocked repository row `4`, and
+  the `6` baseline tasks `7.3-8.4`, blocked repository row `4`, and
   complete change-level acceptance remain open.
 
 ## Files Changed

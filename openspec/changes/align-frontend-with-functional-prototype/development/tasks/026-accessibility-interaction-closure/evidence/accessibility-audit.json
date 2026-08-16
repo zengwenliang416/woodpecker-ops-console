@@ -1,0 +1,66 @@
+{
+  "schema": "specnav.task-evidence.accessibility-audit.v1",
+  "task_id": "026-accessibility-interaction-closure",
+  "audit_rules": [
+    "click handlers on div/span/li/tr/td/p without role",
+    "global outline:none / outline:0 in shared styles",
+    "focus-visible (or focus:) styling on shared form controls",
+    "component styles with @keyframes, infinite animation, or transition:all must declare prefers-reduced-motion",
+    "icon-only controls expose aria-label and title",
+    "decorative status icons are aria-hidden when paired text carries meaning"
+  ],
+  "findings_and_resolutions": [
+    {
+      "path": "web/src/App.vue",
+      "finding": "slide-right panel transition has no reduced-motion guard",
+      "resolution": "added prefers-reduced-motion block disabling the transition"
+    },
+    {
+      "path": "web/src/components/layout/header/ActivePipelines.vue",
+      "finding": "infinite rotate spinner has no reduced-motion guard",
+      "resolution": "added prefers-reduced-motion block stopping the spinner"
+    },
+    {
+      "path": "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+      "finding": "infinite peck animation without reduced-motion guard; decorative icon not hidden from assistive tech",
+      "resolution": "added prefers-reduced-motion block and aria-hidden=true (translated status text carries the meaning)"
+    }
+  ],
+  "verified_conforming": [
+    {
+      "check": "drawer keyboard close",
+      "evidence": "App.vue handleDrawerKeydown closes on Escape; covered by App.test.ts 'contains focus and closes on Escape and route changes'"
+    },
+    {
+      "check": "drawer backdrop pattern",
+      "evidence": "aria-hidden backdrop with click-to-close is the standard pattern alongside the tested Escape path"
+    },
+    {
+      "check": "IconButton semantics",
+      "evidence": "router-link/a/button variants expose title + aria-label; button variant uses type=button, aria-disabled, aria-busy; locked by accessibilityInteraction.test.ts"
+    },
+    {
+      "check": "form control focus visibility",
+      "evidence": "Checkbox/TextField/RadioField carry focus-visible: classes; style.css contains no global outline reset"
+    },
+    {
+      "check": "sidebar transition",
+      "evidence": "Sidebar.vue already declares prefers-reduced-motion for its transition"
+    },
+    {
+      "check": "file-tree keyboard activation",
+      "evidence": "FileTree.vue directory nodes are role=button with tabindex, Enter and Space handlers, and aria-expanded state"
+    }
+  ],
+  "allowed_exceptions": [
+    {
+      "path": "web/src/App.vue",
+      "reason": "drawer backdrop: aria-hidden click-to-close with tested Escape path"
+    },
+    {
+      "path": "web/src/views/RepoAdd.vue",
+      "reason": "click-guard div wraps a real Button to stop ListItem navigation bubbling; the Button is the interactive control"
+    }
+  ],
+  "findings_after": []
+}
