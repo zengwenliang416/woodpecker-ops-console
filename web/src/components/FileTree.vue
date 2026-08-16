@@ -6,7 +6,13 @@
       tabindex="0"
       role="button"
       :aria-expanded="node.isDirectory ? !collapsed : undefined"
-      :aria-label="node.isDirectory ? `${collapsed ? 'Expand' : 'Collapse'} folder ${node.name}` : `File ${node.name}`"
+      :aria-label="
+        node.isDirectory
+          ? collapsed
+            ? $t('file_tree.expand_folder', { name: node.name })
+            : $t('file_tree.collapse_folder', { name: node.name })
+          : $t('file_tree.file', { name: node.name })
+      "
       @click="collapsed = !collapsed"
       @keydown.enter="collapsed = !collapsed"
       @keydown.space="collapsed = !collapsed"

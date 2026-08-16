@@ -97,7 +97,7 @@
         <template v-if="currentTab === 'overview'">
           <div class="metric-grid">
             <OpsMetricCard
-              label="CPU"
+              :label="$t('ops.server.cpu')"
               :value="`${server.cpu.toFixed(0)}%`"
               :hint="`${$t('ops.server.load')} ${server.load.toFixed(2)}`"
               icon="cpu"
@@ -163,7 +163,8 @@
                   ><strong>{{ server.runtime || '—' }}</strong>
                 </div>
                 <div>
-                  <span>Agent</span><strong>{{ server.agent_version || '—' }}</strong>
+                  <span>{{ $t('ops.server.agent') }}</span
+                  ><strong>{{ server.agent_version || '—' }}</strong>
                 </div>
                 <div>
                   <span>{{ $t('ops.server_detail.uptime') }}</span
@@ -311,7 +312,7 @@
                     <th>{{ $t('ops.server.runtime') }}</th>
                     <th>{{ $t('ops.server.status') }}</th>
                     <th>{{ $t('ops.server_detail.instances') }}</th>
-                    <th>CPU</th>
+                    <th>{{ $t('ops.server.cpu') }}</th>
                     <th>{{ $t('ops.server.memory') }}</th>
                     <th>{{ $t('ops.server_detail.actions') }}</th>
                   </tr>
@@ -442,7 +443,7 @@
             <section class="wp-card">
               <div class="wp-card-header">
                 <div>
-                  <h2>Node Agent</h2>
+                  <h2>{{ $t('ops.server_detail.agent_section') }}</h2>
                   <p>{{ $t('ops.server_detail.agent_description') }}</p>
                 </div>
               </div>

@@ -121,7 +121,7 @@
                     <th>{{ $t('ops.infrastructure.health') }}</th>
                     <th>{{ $t('ops.server.environment') }}</th>
                     <th>{{ $t('ops.groups.name') }}</th>
-                    <th>CPU</th>
+                    <th>{{ $t('ops.server.cpu') }}</th>
                     <th>{{ $t('ops.server.memory') }}</th>
                     <th>{{ $t('ops.server.disk') }}</th>
                     <th>{{ $t('ops.server.heartbeat') }}</th>

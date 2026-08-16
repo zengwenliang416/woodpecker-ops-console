@@ -105,6 +105,11 @@
   "errors": {
     "not_found": "Server could not find requested object"
   },
+  "file_tree": {
+    "expand_folder": "Expand folder {name}",
+    "collapse_folder": "Collapse folder {name}",
+    "file": "File {name}"
+  },
   "time": {
     "not_started": "not started yet",
     "just_now": "just now"
@@ -1226,7 +1231,10 @@
       "offline": "Offline",
       "none": "No servers found",
       "none_hint": "Adjust filters or register a new server.",
-      "manage": "Manage"
+      "manage": "Manage",
+      "filter_status": "Server status",
+      "filter_group": "Server group",
+      "filter_region": "Server region"
     },
     "server": {
       "name": "Name",
@@ -1247,7 +1255,9 @@
       "no_deployments": "No deployments on this node.",
       "enter_maintenance": "Enter maintenance",
       "exit_maintenance": "Exit maintenance",
-      "deploy_to_node": "Deploy to this node"
+      "deploy_to_node": "Deploy to this node",
+      "cpu": "CPU",
+      "agent": "Agent"
     },
     "server_detail": {
       "tabs_label": "Server details",
@@ -1319,7 +1329,8 @@
       "seconds_ago": "{count} seconds ago",
       "minutes_ago": "{count} minutes ago",
       "hours_ago": "{count} hours ago",
-      "uptime_value": "{days} days {hours} hours"
+      "uptime_value": "{days} days {hours} hours",
+      "agent_section": "Node Agent"
     },
     "alerts": {
       "title": "Alert center",

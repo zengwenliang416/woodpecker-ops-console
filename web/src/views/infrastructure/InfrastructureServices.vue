@@ -93,7 +93,7 @@
                   <th>{{ $t('ops.services.runtime') }}</th>
                   <th>{{ $t('ops.services.status') }}</th>
                   <th>{{ $t('ops.services.containers') }}</th>
-                  <th>CPU</th>
+                  <th>{{ $t('ops.server.cpu') }}</th>
                   <th>{{ $t('ops.server.memory') }}</th>
                 </tr>
               </thead>

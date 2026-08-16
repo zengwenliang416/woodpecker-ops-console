@@ -59,7 +59,7 @@
 
     <section v-if="hasConfirmedServerData && (serverStore.serverList.length > 0 || hasFilters)" class="wp-card">
       <div class="wp-filters">
-        <select v-model="statusFilter" class="select wp-mono" aria-label="Server status">
+        <select v-model="statusFilter" class="select wp-mono" :aria-label="$t('ops.servers.filter_status')">
           <option value="all">{{ $t('ops.servers.all_status') }}</option>
           <option value="online">{{ $t('ops.servers.online') }}</option>
           <option value="maintenance">{{ $t('ops.servers.maintenance') }}</option>
@@ -67,13 +67,13 @@
           <option value="warning">{{ $t('ops.servers.warning') }}</option>
           <option value="critical">{{ $t('ops.servers.critical') }}</option>
         </select>
-        <select v-model="groupFilter" class="select" aria-label="Server group">
+        <select v-model="groupFilter" class="select" :aria-label="$t('ops.servers.filter_group')">
           <option value="all">{{ $t('ops.servers.all_groups') }}</option>
           <option v-for="group in serverStore.groupList" :key="group.id" :value="String(group.id)">
             {{ group.name }}
           </option>
         </select>
-        <select v-model="regionFilter" class="select" aria-label="Server region">
+        <select v-model="regionFilter" class="select" :aria-label="$t('ops.servers.filter_region')">
           <option value="all">{{ $t('ops.servers.all_regions') }}</option>
           <option v-for="region in regions" :key="region" :value="region">{{ region }}</option>
         </select>
@@ -85,7 +85,7 @@
               <th>{{ $t('ops.server.name') }}</th>
               <th>{{ $t('ops.server.status') }}</th>
               <th>{{ $t('ops.server.environment') }}</th>
-              <th>CPU</th>
+              <th>{{ $t('ops.server.cpu') }}</th>
               <th>{{ $t('ops.server.memory') }}</th>
               <th>{{ $t('ops.server.disk') }}</th>
               <th>{{ $t('ops.server.runtime') }}</th>

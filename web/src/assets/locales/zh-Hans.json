@@ -199,11 +199,17 @@
   "api": "API",
   "back": "返回",
   "cancel": "取消",
+  "delete": "删除",
   "default": "默认",
   "docs": "文档",
   "documentation_for": "\"{topic}\"的文档",
   "errors": {
     "not_found": "服务器找不到请求的对象"
+  },
+  "file_tree": {
+    "expand_folder": "展开文件夹 {name}",
+    "collapse_folder": "折叠文件夹 {name}",
+    "file": "文件 {name}"
   },
   "info": "信息",
   "login": "登录",
@@ -1385,7 +1391,10 @@
       "offline": "离线",
       "none": "未找到服务器",
       "none_hint": "修改筛选条件或注册新服务器。",
-      "manage": "管理"
+      "manage": "管理",
+      "filter_status": "服务器状态",
+      "filter_group": "服务器分组",
+      "filter_region": "服务器区域"
     },
     "server": {
       "name": "名称",
@@ -1406,7 +1415,9 @@
       "no_deployments": "该节点暂无部署。",
       "enter_maintenance": "进入维护",
       "exit_maintenance": "退出维护",
-      "deploy_to_node": "部署到此节点"
+      "deploy_to_node": "部署到此节点",
+      "cpu": "CPU",
+      "agent": "Agent"
     },
     "server_detail": {
       "tabs_label": "服务器详情",
@@ -1478,7 +1489,8 @@
       "seconds_ago": "{count} 秒前",
       "minutes_ago": "{count} 分钟前",
       "hours_ago": "{count} 小时前",
-      "uptime_value": "{days} 天 {hours} 小时"
+      "uptime_value": "{days} 天 {hours} 小时",
+      "agent_section": "Node Agent"
     },
     "alerts": {
       "title": "告警中心",

@@ -83,7 +83,7 @@
                 <tr>
                   <th>{{ $t('ops.server.name') }}</th>
                   <th>{{ $t('ops.server.status') }}</th>
-                  <th>CPU</th>
+                  <th>{{ $t('ops.server.cpu') }}</th>
                   <th>{{ $t('ops.server.memory') }}</th>
                   <th>{{ $t('ops.server.disk') }}</th>
                 </tr>
