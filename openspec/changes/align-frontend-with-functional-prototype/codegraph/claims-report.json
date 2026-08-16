@@ -1,10 +1,10 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-16T03:36:54.860Z",
+  "generated_at": "2026-08-16T08:25:51.491Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 26,
+  "claims_count": 32,
   "verified_claims": [],
   "unverified_claims": [
     "development:task-001-date-duration-integrity",
@@ -32,7 +32,13 @@
     "development:task-023-operations-residual-delta-closure",
     "development:task-024-operations-regression-coverage",
     "development:task-025-i18n-visible-string-closure",
-    "development:task-026-accessibility-interaction-closure"
+    "development:task-026-accessibility-interaction-closure",
+    "development:task-027-responsive-containment-closure",
+    "development:task-028-token-parity-closure",
+    "development:task-029-static-gate-closure",
+    "development:task-030-six-domain-verification",
+    "development:task-031-html-verification-report",
+    "development:task-032-final-parity-declaration"
   ],
   "blockers": [],
   "warnings": [
@@ -61,6 +67,12 @@
     "codegraph:claim-unverified:development:task-023-operations-residual-delta-closure",
     "codegraph:claim-unverified:development:task-024-operations-regression-coverage",
     "codegraph:claim-unverified:development:task-025-i18n-visible-string-closure",
-    "codegraph:claim-unverified:development:task-026-accessibility-interaction-closure"
+    "codegraph:claim-unverified:development:task-026-accessibility-interaction-closure",
+    "codegraph:claim-unverified:development:task-027-responsive-containment-closure",
+    "codegraph:claim-unverified:development:task-028-token-parity-closure",
+    "codegraph:claim-unverified:development:task-029-static-gate-closure",
+    "codegraph:claim-unverified:development:task-030-six-domain-verification",
+    "codegraph:claim-unverified:development:task-031-html-verification-report",
+    "codegraph:claim-unverified:development:task-032-final-parity-declaration"
   ]
 }
