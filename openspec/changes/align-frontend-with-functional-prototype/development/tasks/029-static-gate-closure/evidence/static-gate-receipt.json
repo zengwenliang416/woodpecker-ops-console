@@ -2,7 +2,7 @@
   "schema": "specnav.task029-static-gate-receipt.v1",
   "task_id": "029-static-gate-closure",
   "baseline_task_id": "8.1",
-  "generated_at": "2026-08-16T06:19:50.825Z",
+  "generated_at": "2026-08-16T07:38:17.943Z",
   "ok": true,
   "full_vitest": {
     "files": "110",
@@ -12,37 +12,37 @@
     {
       "label": "Prettier (whole web tree)",
       "ok": true,
-      "durationMs": 5075,
+      "durationMs": 5704,
       "exitStatus": 0
     },
     {
       "label": "ESLint (whole web tree)",
       "ok": true,
-      "durationMs": 33760,
+      "durationMs": 35752,
       "exitStatus": 0
     },
     {
       "label": "Vue TypeScript",
       "ok": true,
-      "durationMs": 6510,
+      "durationMs": 6831,
       "exitStatus": 0
     },
     {
       "label": "Full Vitest",
       "ok": true,
-      "durationMs": 24229,
+      "durationMs": 28903,
       "exitStatus": 0
     },
     {
       "label": "Vite build",
       "ok": true,
-      "durationMs": 4411,
+      "durationMs": 4808,
       "exitStatus": 0
     },
     {
       "label": "git diff --check",
       "ok": true,
-      "durationMs": 60,
+      "durationMs": 69,
       "exitStatus": 0
     }
   ]
