@@ -1,0 +1,213 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "025-i18n-visible-string-closure",
+ "generated_at": "2026-08-16T03:23:50Z",
+ "recorded_at": "2026-08-16T03:23:50Z",
+ "status": "approved",
+ "reviewed_git_head": "ab769e276aa1501a920fc3eab6f3f7bc9f2e9aeb",
+ "reviewed_git_tree": "d057ef664bef89ca8f9907b4b5c17b6cbed67f94",
+ "implementation_scope": {
+  "included_patterns": [
+   "web/src/components/FileTree.vue",
+   "web/src/views/infrastructure/*.vue",
+   "web/src/assets/locales/en.json",
+   "web/src/assets/locales/zh-Hans.json",
+   "web/src/i18nVisibleStrings.test.ts",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "2ce59ac74ced4849f23b59d4646533479511bb15"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/brief.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "cf85c21f11f505dbcc397742f9a17c1fe041b15f"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/context.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "1afd848d8d6eff66d121c775dad737dce3af9052"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/evidence/build_acceptance.py",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "9bbaecf7d0a2fde074d17908755ceb3fcd693f89"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/evidence/verification-receipt.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "a174edb2da1a2b515c9bbb3ed8877ef1440b1ec1"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/evidence/visible-string-scan.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "91918825f7076aa43b756321203bf907c2ff9c8f"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/quality-review.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "ae4402c361d354a416d4f7c70dfdc386399cd65f"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/report.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "212755458d29664e9fc849c37a8eef646f3a776b"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/spec-review.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "09fbe256758251c75404c4af1a9f58df720c8e81"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "3d9b2e5ad11ca9134f38f2c4c3acd9e74943a6c9"
+   },
+   {
+    "path": "web/src/assets/locales/en.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "021c6ff49c9afa4bd3ca417bb26b45d7c07d29be"
+   },
+   {
+    "path": "web/src/assets/locales/zh-Hans.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "999a193a975de920544c75578eb265153cde4fa0"
+   },
+   {
+    "path": "web/src/components/FileTree.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "1f518ec309670d7383022764365fcdb56480b190"
+   },
+   {
+    "path": "web/src/i18nVisibleStrings.test.ts",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "6f35ed5b89f952c679469db915739fccb896d769"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureAlerts.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "ce92753593032d004e7220d63ac41bf30ae19c52"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureGroup.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "d0142901dfab82752fcba9ca42348ff417017e41"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureGroups.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "314dcce4299f8d3735c435cacbda97d55e9c9166"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "52c26d8b19723ffcbff8ba98e8e7c4fad301249a"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "42b475f959ef5113c101ffb280a0cbd5521f7c65"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "f2c71b2a5b093731d8fee5f832c20b26899c18ce"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureServices.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "8db6e261237ae4a28b438ff1f0dc232fdb95e56a"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/context.json",
+   "sha256": "8793e441818abf6c2fe9e0dbac29935a8ec9b7166ba49754e0e449189b0ffb03"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/report.md",
+   "sha256": "80ad4939f40f5de40dcec2d84e9f6b90a1684a1b832d0771b0dbc50dd7ecfc05",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/spec-review.md",
+   "sha256": "c2f3216a0058484fa43f3fb41aaabdb515f0fca42213ed8efcb49fb00faa58be",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/quality-review.md",
+   "sha256": "cc55025c5bb7125f458237f2ef112cb558c6ec80ec6766b58ec83d0597b3d7d9",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-396ba6e2c6f9e63dde74875e434982cdbe14010b2ef3d7a0e74dcf26285c11b2",
+   "command": "npx vitest run src/i18nVisibleStrings.test.ts && npx vitest run",
+   "assertion_ids": [
+    "A2",
+    "A3"
+   ],
+   "recorded_at": "2026-08-16T03:23:50Z",
+   "validation_receipt_sha256": "a8a36ed6c0bb864cbae4682a4c1f5d4c9bcd126beea778062e22fcd4fbad49c2",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/038-025-i18n-visible-string-closure.log",
+    "sha256": "78a454036dc04b3178c289ea9ef118376fbcdef0395ae50eb2f42515ccc2c6b2",
+    "size": 1318
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-396ba6e2c6f9e63dde74875e434982cdbe14010b2ef3d7a0e74dcf26285c11b2"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-396ba6e2c6f9e63dde74875e434982cdbe14010b2ef3d7a0e74dcf26285c11b2"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+  }
+ ],
+ "fallback_used": false
+}

@@ -113,9 +113,19 @@
   objects, all `136` Task `020-022` measurement/PNG pairs and checksums, rows
   `2-3` and `46-67`, preservation of blocked row `4`, and rejection of all
   `5` isolated audit mutations.
-- Phase 5 is complete. This remains an incremental development snapshot rather
-  than the final six-domain verification handoff: the `9` baseline tasks in
-  phases `6-8`, blocked repository row `4`, and
+- `024-operations-regression-coverage` / baseline task `6.5`: every behavior
+  repaired by Tasks `020-023` now has a direct Vitest regression and the
+  operations parity rows `2-3` and `46-67` reference the Task `024` receipt.
+- `025-i18n-visible-string-closure` / baseline task `7.1`: the completed
+  slices render every user-visible control label, header, section title, and
+  accessibility name through vue-i18n with real Simplified Chinese and English
+  messages. Twelve hardcoded findings were routed through new bilingual keys,
+  the missing zh-Hans `delete` message was added, and `6` focused regressions
+  lock source-key locale parity, template hygiene, bilingual file-tree names,
+  and the English fallback. Full suite at closure: `594/594`.
+- Phase 6 and baseline `7.1` are complete. This remains an incremental
+  development snapshot rather than the final six-domain verification handoff:
+  the `7` baseline tasks `7.2-8.4`, blocked repository row `4`, and
   complete change-level acceptance remain open.
 
 ## Files Changed

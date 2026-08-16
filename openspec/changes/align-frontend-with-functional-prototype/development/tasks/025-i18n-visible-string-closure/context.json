@@ -1,0 +1,34 @@
+{
+  "task_id": "025-i18n-visible-string-closure",
+  "task_items": ["7.1"],
+  "baseline_task_id": "7.1",
+  "acceptance_primary": ["A2", "A3"],
+  "goal": "No hardcoded user-visible English remains in the completed slices; every referenced i18n key resolves from both en.json and zh-Hans.json, and the English fallback locale is proven.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/goal.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "web/src/compositions/useI18n.ts",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json"
+  ],
+  "production_files": [
+    "web/src/components/FileTree.vue",
+    "web/src/views/infrastructure/InfrastructureOverview.vue",
+    "web/src/views/infrastructure/InfrastructureServer.vue",
+    "web/src/views/infrastructure/InfrastructureServers.vue",
+    "web/src/views/infrastructure/InfrastructureGroup.vue",
+    "web/src/views/infrastructure/InfrastructureServices.vue",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json"
+  ],
+  "test_files": ["web/src/i18nVisibleStrings.test.ts"],
+  "exclusions": [
+    "Runtime identifiers docker/kubernetes/systemd stay untranslated by design.",
+    "Proper nouns Node Agent, Agent, and CPU keep prototype-consistent values in Simplified Chinese."
+  ]
+}

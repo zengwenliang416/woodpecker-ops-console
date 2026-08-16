@@ -953,6 +953,31 @@
       "query_ids": [
         "development:task-024-operations-regression-coverage:evidence"
       ]
+    },
+    {
+      "id": "development:task-025-i18n-visible-string-closure",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "025-i18n-visible-string-closure",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/context.json"
+      ],
+      "expected_evidence": [
+        "Focused tests or command output",
+        "Task report",
+        "Spec review",
+        "Quality review"
+      ],
+      "allowed_files": [
+        "src"
+      ],
+      "query_ids": [
+        "development:task-025-i18n-visible-string-closure:evidence"
+      ]
     }
   ]
 }

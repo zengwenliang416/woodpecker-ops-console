@@ -1,0 +1,33 @@
+Task 025 i18n visible-string closure — verification log (2026-08-16)
+
+Run environment: node v24.18.0, cwd web, branch main.
+
+1. npx vitest run src/i18nVisibleStrings.test.ts
+   Test Files  1 passed (1)
+   Tests       6 passed (6)
+   Covers: source-key locale parity (en + zh-Hans), template hardcoded-string
+   hygiene with explicit runtime-identifier allowlist, bilingual FileTree
+   accessibility names, operations filter/metric label exposure, English
+   fallback for keys missing from the active locale, zh-Hans delete message.
+
+2. npx vitest run src/views/infrastructure/ src/components/form/ src/views/repo/pipeline/
+   Test Files  14 passed (14)
+   Tests       111 passed (111)
+
+3. npx vitest run   (full frontend suite at the closure HEAD)
+   Test Files  107 passed (107)
+   Tests       594 passed (594)
+
+4. npx eslint src/i18nVisibleStrings.test.ts src/components/FileTree.vue src/views/infrastructure/
+   0 errors, 0 warnings.
+
+5. npx prettier --check on all changed files
+   All matched files use Prettier code style.
+
+6. npm run typecheck (vue-tsc --noEmit)
+   0 errors.
+
+Scan summary (evidence/visible-string-scan.json):
+- 12 hardcoded findings resolved through new bilingual keys.
+- 1 missing zh-Hans message (delete) added.
+- 0 findings after; 1534 referenced i18n keys all resolve from both locales.

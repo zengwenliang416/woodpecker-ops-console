@@ -1,0 +1,109 @@
+{
+  "schema": "specnav.task-evidence.visible-string-scan.v1",
+  "task_id": "025-i18n-visible-string-closure",
+  "scan_target": "web/src/**/*.vue templates",
+  "scan_rules": [
+    "static title/aria-label/label/placeholder/alt attributes with English words",
+    "bare multi-word English text nodes",
+    "lines already using $t() or v-t are excluded from the static sweep"
+  ],
+  "findings_before": [
+    {
+      "path": "web/src/components/FileTree.vue",
+      "kind": "aria-label",
+      "value": "Expand/Collapse folder ${name} | File ${name}",
+      "resolution": "file_tree.expand_folder / file_tree.collapse_folder / file_tree.file with {name}"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+      "kind": "aria-label",
+      "value": "Server status",
+      "resolution": "ops.servers.filter_status"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+      "kind": "aria-label",
+      "value": "Server group",
+      "resolution": "ops.servers.filter_group"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+      "kind": "aria-label",
+      "value": "Server region",
+      "resolution": "ops.servers.filter_region"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServers.vue",
+      "kind": "text",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+      "kind": "label-prop",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+      "kind": "text",
+      "value": "Agent",
+      "resolution": "ops.server.agent"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+      "kind": "text",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServer.vue",
+      "kind": "text",
+      "value": "Node Agent",
+      "resolution": "ops.server_detail.agent_section"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+      "kind": "text",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureGroup.vue",
+      "kind": "text",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    },
+    {
+      "path": "web/src/views/infrastructure/InfrastructureServices.vue",
+      "kind": "text",
+      "value": "CPU",
+      "resolution": "ops.server.cpu"
+    }
+  ],
+  "locale_key_gaps_before": [
+    {
+      "key": "delete",
+      "used_by": "web/src/components/form/ListEditor.vue",
+      "gap": "missing from zh-Hans.json",
+      "resolution": "zh-Hans delete = 删除"
+    }
+  ],
+  "allowed_untranslated": [
+    {
+      "value": "docker",
+      "reason": "runtime identifier rendered verbatim in the server runtime select"
+    },
+    {
+      "value": "kubernetes",
+      "reason": "runtime identifier rendered verbatim in the server runtime select"
+    },
+    {
+      "value": "systemd",
+      "reason": "runtime identifier rendered verbatim in the server runtime select"
+    }
+  ],
+  "findings_after": [],
+  "referenced_key_count": 1534,
+  "missing_referenced_keys_after": []
+}
