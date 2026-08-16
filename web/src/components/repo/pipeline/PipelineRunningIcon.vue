@@ -1,5 +1,5 @@
 <template>
-  <WoodpeckerIcon class="woodpecker h-15" />
+  <WoodpeckerIcon class="woodpecker h-15" aria-hidden="true" />
 </template>
 
 <script lang="ts" setup>
@@ -30,5 +30,11 @@ import WoodpeckerIcon from '~/assets/woodpecker.svg?component';
 .woodpecker :deep(path) {
   animation: peck 1s ease infinite;
   @apply fill-wp-text-100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .woodpecker :deep(path) {
+    animation: none;
+  }
 }
 </style>

@@ -54,6 +54,12 @@ onMounted(async () => {
   background-image: linear-gradient(#fff, #fff);
   animation: rotate 1.5s linear infinite;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .spinner::before {
+    animation: none;
+  }
+}
 .spinner::after {
   @apply bg-wp-primary-200 absolute inset-0.5;
   /*

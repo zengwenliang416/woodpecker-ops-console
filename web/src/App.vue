@@ -215,4 +215,11 @@ watch(
 .slide-right-leave-to {
   transform: translate(100%, 0);
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .slide-right-enter-active,
+  .slide-right-leave-active {
+    transition: none;
+  }
+}
 </style>
