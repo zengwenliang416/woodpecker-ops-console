@@ -1,0 +1,10 @@
+{
+  "schema": "woodpecker.task028-light-dark-spot.v1",
+  "ok": true,
+  "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+  "states": 6,
+  "themes": ["light", "dark"],
+  "routes": ["/overview", "/deployments/142", "/login"],
+  "failures": [],
+  "generatedAt": "2026-08-16T06:09:24.684Z"
+}

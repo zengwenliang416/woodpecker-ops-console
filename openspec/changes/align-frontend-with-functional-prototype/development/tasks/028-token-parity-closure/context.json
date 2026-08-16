@@ -1,0 +1,72 @@
+{
+  "task_id": "028-token-parity-closure",
+  "task_items": ["7.4"],
+  "baseline_task_id": "7.4",
+  "acceptance_primary": ["A2", "A3"],
+  "goal": "Every user-visible color resolves through the shared semantic token system with explicit light and dark values; no page-local color systems remain; a regression scan and light/dark spot check lock the parity contract.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "web/src/style.css",
+    "web/src/tailwind.css",
+    "web/src/compositions/useTheme.ts",
+    "web/src/views/deployments/DeploymentDetail.vue",
+    "web/src/views/Login.vue",
+    "web/src/components/atomic/Button.vue",
+    "web/src/components/layout/header/ActivePipelines.vue"
+  ],
+  "allowed_files": [
+    "web/src/style.css",
+    "web/src/style/console.css",
+    "web/src/style/prism.css",
+    "web/src/views/deployments/DeploymentDetail.vue",
+    "web/src/views/Login.vue",
+    "web/src/components/atomic/Button.vue",
+    "web/src/components/layout/header/ActivePipelines.vue",
+    "web/src/compositions/useTheme.ts",
+    "web/src/regression/tokens/**",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+  ],
+  "test_paths": [
+    "web/src/regression/tokens/**/*.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/evidence/*.mjs"
+  ],
+  "non_goals": [
+    "Do not change token values or visual output.",
+    "Do not add routes, APIs, payload fields, or prototype fixtures.",
+    "Do not reopen blocked repository-add row 4.",
+    "Do not complete phase 8, row 4, or parent acceptance.",
+    "Do not bypass component extraction rules."
+  ],
+  "expected_evidence": [
+    "web/src/regression/tokens/token-parity.test.ts raw-color scan and token resolution",
+    "Light/dark spot-check browser evidence under evidence/",
+    "Updated style.css token definitions (light and dark values)",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "A passing full suite does not prove token parity; only the raw-color scan with its allowlist does.",
+    "Light/dark parity is proven by token definitions plus the browser spot check, not by re-screenshotting every route in both themes."
+  ],
+  "stop_condition": "Stop if a page-local color cannot be tokenized without changing its light/dark behavior, the scan finds uncovered raw colors, or a gate fails without a direct in-scope fix."
+}

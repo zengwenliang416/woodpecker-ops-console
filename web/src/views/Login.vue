@@ -186,9 +186,9 @@ useWPTitle(computed(() => [i18n.t('login')]));
 .login-visual {
   @apply relative hidden min-h-screen overflow-hidden p-10 lg:flex lg:flex-col lg:justify-between;
   background:
-    radial-gradient(circle at 18% 18%, rgba(49, 210, 121, 0.34), transparent 30%),
-    radial-gradient(circle at 80% 72%, rgba(24, 116, 255, 0.24), transparent 28%),
-    linear-gradient(145deg, #07170f 0%, #0e2d20 52%, #07110d 100%);
+    radial-gradient(circle at 18% 18%, rgba(var(--wp-login-glow-rgb), 0.34), transparent 30%),
+    radial-gradient(circle at 80% 72%, rgba(var(--wp-login-info-rgb), 0.24), transparent 28%),
+    linear-gradient(145deg, var(--wp-login-bg-100) 0%, var(--wp-login-bg-200) 52%, var(--wp-login-bg-300) 100%);
 }
 
 .login-visual::after {
@@ -197,8 +197,8 @@ useWPTitle(computed(() => [i18n.t('login')]));
   inset: 0;
   opacity: 0.16;
   background-image:
-    linear-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+    linear-gradient(rgba(var(--wp-login-grid-rgb), 0.16) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(var(--wp-login-grid-rgb), 0.16) 1px, transparent 1px);
   background-size: 42px 42px;
   mask-image: linear-gradient(to bottom, black, transparent);
 }

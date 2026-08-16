@@ -181,6 +181,7 @@ DEPLOYMENTS = [
 
 DEPLOYMENT_DETAIL = {
     "deployment": deepcopy(DEPLOYMENTS[0]),
+    "approvals": [],
     "targets": [
         {"deployment_id": 142, "server_id": 201, "status": "success", "phase": "completed", "exit_code": 0},
         {"deployment_id": 142, "server_id": 202, "status": "failed", "phase": "failed", "exit_code": 1},
@@ -296,6 +297,17 @@ class FixtureHandler(base.FixtureHandler):
 
         if path == "/api/deployments/142":
             self.send_json(DEPLOYMENT_DETAIL)
+            return
+
+        if path == "/api/deployments/142/logs":
+            self.send_json(
+                [
+                    {"id": 1, "server_id": 201, "time": NOW - 1_900, "level": "info", "message": "pulling image registry.example.test/backend-api:v302"},
+                    {"id": 2, "server_id": 201, "time": NOW - 1_850, "level": "success", "message": "container backend-api-201 started"},
+                    {"id": 3, "server_id": 202, "time": NOW - 1_800, "level": "warning", "message": "health check delayed on prod-api-02"},
+                    {"id": 4, "server_id": 202, "time": NOW - 1_750, "level": "danger", "message": "container exited with code 1"},
+                ]
+            )
             return
 
         super().do_GET()

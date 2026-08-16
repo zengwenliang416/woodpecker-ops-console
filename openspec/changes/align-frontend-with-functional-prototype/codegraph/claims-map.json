@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-16T04:33:44.248Z",
+  "generated_at": "2026-08-16T05:27:28.978Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -1076,12 +1076,52 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "027-responsive-containment-closure",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Run a deterministic cross-family browser audit of representative production",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/brief.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/context.json"
+      ],
+      "expected_evidence": [
+        "evidence/matrix.mjs 13-route x 3-viewport audit matrix",
+        "evidence/browser-replay-summary.json with 39 measured states",
+        "evidence/verify_report.json strict verifier output",
+        "evidence/redteam_verifier.mjs persistent mutations",
+        "Focused regressions under web/src/regression/responsive/",
+        "Updated route-parity.md rows for sampled families",
+        "Task report, spec review, quality review"
+      ],
+      "allowed_files": [
+        "web/src/views/**/*.vue",
+        "web/src/components/**/*.vue",
+        "web/src/assets/tailwind.css",
+        "web/src/regression/responsive/**",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+      ],
+      "query_ids": [
+        "development:task-027-responsive-containment-closure:evidence"
+      ]
+    },
+    {
+      "id": "development:task-028-token-parity-closure",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "028-token-parity-closure",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/context.json"
       ],
       "expected_evidence": [
         "Focused tests or command output",
@@ -1093,7 +1133,7 @@
         "src"
       ],
       "query_ids": [
-        "development:task-027-responsive-containment-closure:evidence"
+        "development:task-028-token-parity-closure:evidence"
       ]
     }
   ]

@@ -1,195 +1,195 @@
 .ansi-black-fg {
-  color: #374151;
+  color: var(--wp-ansi-black-fg);
 }
 .ansi-red-fg {
-  color: #cc0000;
+  color: var(--wp-ansi-red-fg);
 }
 .ansi-green-fg {
-  color: #4e9a06;
+  color: var(--wp-ansi-green-fg);
 }
 .ansi-yellow-fg {
-  color: #c4a000;
+  color: var(--wp-ansi-yellow-fg);
 }
 .ansi-blue-fg {
-  color: #729fcf;
+  color: var(--wp-ansi-blue-fg);
 }
 .ansi-magenta-fg {
-  color: #75507b;
+  color: var(--wp-ansi-magenta-fg);
 }
 .ansi-cyan-fg {
-  color: #06989a;
+  color: var(--wp-ansi-cyan-fg);
 }
 .ansi-white-fg {
-  color: #d3d7cf;
+  color: var(--wp-ansi-white-fg);
 }
 .ansi-bright-black-fg {
-  color: #555753;
+  color: var(--wp-ansi-bright-black-fg);
 }
 .ansi-bright-red-fg {
-  color: #ef2929;
+  color: var(--wp-ansi-bright-red-fg);
 }
 .ansi-bright-green-fg {
-  color: #8ae234;
+  color: var(--wp-ansi-bright-green-fg);
 }
 .ansi-bright-yellow-fg {
-  color: #fce94f;
+  color: var(--wp-ansi-bright-yellow-fg);
 }
 .ansi-bright-blue-fg {
-  color: #32afff;
+  color: var(--wp-ansi-bright-blue-fg);
 }
 .ansi-bright-magenta-fg {
-  color: #ad7fa8;
+  color: var(--wp-ansi-bright-magenta-fg);
 }
 .ansi-bright-cyan-fg {
-  color: #34e2e2;
+  color: var(--wp-ansi-bright-cyan-fg);
 }
 .ansi-bright-white-fg {
-  color: #ffffff;
+  color: var(--wp-ansi-bright-white-fg);
 }
 
 .ansi-black-bg {
-  background-color: #374151;
+  background-color: var(--wp-ansi-black-bg);
 }
 .ansi-red-bg {
-  background-color: #cc0000;
+  background-color: var(--wp-ansi-red-bg);
 }
 .ansi-green-bg {
-  background-color: #4e9a06;
+  background-color: var(--wp-ansi-green-bg);
 }
 .ansi-yellow-bg {
-  background-color: #c4a000;
+  background-color: var(--wp-ansi-yellow-bg);
 }
 .ansi-blue-bg {
-  background-color: #729fcf;
+  background-color: var(--wp-ansi-blue-bg);
 }
 .ansi-magenta-bg {
-  background-color: #75507b;
+  background-color: var(--wp-ansi-magenta-bg);
 }
 .ansi-cyan-bg {
-  background-color: #06989a;
+  background-color: var(--wp-ansi-cyan-bg);
 }
 .ansi-white-bg {
-  background-color: #d3d7cf;
+  background-color: var(--wp-ansi-white-bg);
 }
 .ansi-bright-black-bg {
-  background-color: #555753;
+  background-color: var(--wp-ansi-bright-black-bg);
 }
 .ansi-bright-red-bg {
-  background-color: #ef2929;
+  background-color: var(--wp-ansi-bright-red-bg);
 }
 .ansi-bright-green-bg {
-  background-color: #8ae234;
+  background-color: var(--wp-ansi-bright-green-bg);
 }
 .ansi-bright-yellow-bg {
-  background-color: #fce94f;
+  background-color: var(--wp-ansi-bright-yellow-bg);
 }
 .ansi-bright-blue-bg {
-  background-color: #32afff;
+  background-color: var(--wp-ansi-bright-blue-bg);
 }
 .ansi-bright-magenta-bg {
-  background-color: #ad7fa8;
+  background-color: var(--wp-ansi-bright-magenta-bg);
 }
 .ansi-bright-cyan-bg {
-  background-color: #34e2e2;
+  background-color: var(--wp-ansi-bright-cyan-bg);
 }
 .ansi-bright-white-bg {
-  background-color: #ffffff;
+  background-color: var(--wp-ansi-bright-white-bg);
 }
 
 .dark .ansi-black-fg {
-  color: #666666;
+  color: var(--wp-ansi-black-fg);
 }
 .dark .ansi-red-fg {
-  color: #ff7070;
+  color: var(--wp-ansi-red-fg);
 }
 .dark .ansi-green-fg {
-  color: #b0f986;
+  color: var(--wp-ansi-green-fg);
 }
 .dark .ansi-yellow-fg {
-  color: #c6c502;
+  color: var(--wp-ansi-yellow-fg);
 }
 .dark .ansi-blue-fg {
-  color: #8db7e0;
+  color: var(--wp-ansi-blue-fg);
 }
 .dark .ansi-magenta-fg {
-  color: #f271fb;
+  color: var(--wp-ansi-magenta-fg);
 }
 .dark .ansi-cyan-fg {
-  color: #6bf7ff;
+  color: var(--wp-ansi-cyan-fg);
 }
 .dark .ansi-white-fg {
-  color: #9ca3af;
+  color: var(--wp-ansi-white-fg);
 }
 .dark .ansi-bright-black-fg {
-  color: #838887;
+  color: var(--wp-ansi-bright-black-fg);
 }
 .dark .ansi-bright-red-fg {
-  color: #ff3333;
+  color: var(--wp-ansi-bright-red-fg);
 }
 .dark .ansi-bright-green-fg {
-  color: #00ff00;
+  color: var(--wp-ansi-bright-green-fg);
 }
 .dark .ansi-bright-yellow-fg {
-  color: #fffc67;
+  color: var(--wp-ansi-bright-yellow-fg);
 }
 .dark .ansi-bright-blue-fg {
-  color: #6871ff;
+  color: var(--wp-ansi-bright-blue-fg);
 }
 .dark .ansi-bright-magenta-fg {
-  color: #ff76ff;
+  color: var(--wp-ansi-bright-magenta-fg);
 }
 .dark .ansi-bright-cyan-fg {
-  color: #60fcff;
+  color: var(--wp-ansi-bright-cyan-fg);
 }
 .dark .ansi-bright-white-fg {
-  color: #e6e3e3;
+  color: var(--wp-ansi-bright-white-fg);
 }
 
 .dark .ansi-black-bg {
-  background-color: #666666;
+  background-color: var(--wp-ansi-black-bg);
 }
 .dark .ansi-red-bg {
-  background-color: #ff7070;
+  background-color: var(--wp-ansi-red-bg);
 }
 .dark .ansi-green-bg {
-  background-color: #b0f986;
+  background-color: var(--wp-ansi-green-bg);
 }
 .dark .ansi-yellow-bg {
-  background-color: #c6c502;
+  background-color: var(--wp-ansi-yellow-bg);
 }
 .dark .ansi-blue-bg {
-  background-color: #8db7e0;
+  background-color: var(--wp-ansi-blue-bg);
 }
 .dark .ansi-magenta-bg {
-  background-color: #f271fb;
+  background-color: var(--wp-ansi-magenta-bg);
 }
 .dark .ansi-cyan-bg {
-  background-color: #6bf7ff;
+  background-color: var(--wp-ansi-cyan-bg);
 }
 .dark .ansi-white-bg {
-  background-color: #9ca3af;
+  background-color: var(--wp-ansi-white-bg);
 }
 .dark .ansi-bright-black-bg {
-  background-color: #838887;
+  background-color: var(--wp-ansi-bright-black-bg);
 }
 .dark .ansi-bright-red-bg {
-  background-color: #ff3333;
+  background-color: var(--wp-ansi-bright-red-bg);
 }
 .dark .ansi-bright-green-bg {
-  background-color: #00ff00;
+  background-color: var(--wp-ansi-bright-green-bg);
 }
 .dark .ansi-bright-yellow-bg {
-  background-color: #fffc67;
+  background-color: var(--wp-ansi-bright-yellow-bg);
 }
 .dark .ansi-bright-blue-bg {
-  background-color: #6871ff;
+  background-color: var(--wp-ansi-bright-blue-bg);
 }
 .dark .ansi-bright-magenta-bg {
-  background-color: #ff76ff;
+  background-color: var(--wp-ansi-bright-magenta-bg);
 }
 .dark .ansi-bright-cyan-bg {
-  background-color: #60fcff;
+  background-color: var(--wp-ansi-bright-cyan-bg);
 }
 .dark .ansi-bright-white-bg {
-  background-color: #e6e3e3;
+  background-color: var(--wp-ansi-bright-white-bg);
 }

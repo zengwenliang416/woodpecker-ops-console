@@ -1,0 +1,122 @@
+[
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "overview-light",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "light",
+    "locale": "zh-Hans",
+    "route": "/overview",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "light",
+    "className": "light",
+    "bodyBackground": "rgb(244, 247, 248)",
+    "bodyColor": "rgb(21, 35, 45)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/overview"
+  },
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "overview-dark",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/overview",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/overview"
+  },
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "deployment-log-light",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "light",
+    "locale": "zh-Hans",
+    "route": "/deployments/142",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "light",
+    "className": "light",
+    "bodyBackground": "rgb(244, 247, 248)",
+    "bodyColor": "rgb(21, 35, 45)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/deployments/142"
+  },
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "deployment-log-dark",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/deployments/142",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/deployments/142"
+  },
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "login-light",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "light",
+    "locale": "zh-Hans",
+    "route": "/login",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "light",
+    "className": "light",
+    "bodyBackground": "rgb(244, 247, 248)",
+    "bodyColor": "rgb(21, 35, 45)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/login"
+  },
+  {
+    "schema": "woodpecker.task028-light-dark-spot.v1",
+    "stateId": "login-dark",
+    "runId": "f26131f6-cec3-4014-a360-98ae0d446f83",
+    "theme": "dark",
+    "locale": "zh-Hans",
+    "route": "/login",
+    "health": {
+      "consoleMessages": [],
+      "runtimeExceptions": [],
+      "networkFailures": [],
+      "httpErrors": []
+    },
+    "dataTheme": "dark",
+    "className": "dark",
+    "bodyBackground": "rgb(8, 16, 23)",
+    "bodyColor": "rgb(237, 245, 247)",
+    "pageOverflow": false,
+    "url": "http://127.0.0.1:8280/login"
+  }
+]

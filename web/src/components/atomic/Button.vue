@@ -8,7 +8,7 @@
       {
         'border-wp-border-200 bg-wp-control-neutral-100 text-wp-text-200 hover:border-wp-border-100 hover:bg-wp-control-neutral-200':
           color === 'gray',
-        'from-wp-primary-100 to-wp-primary-200 hover:to-wp-primary-100 border-transparent bg-gradient-to-br text-white shadow-[0_8px_22px_rgba(37,194,103,0.18)] hover:from-[#32d477]':
+        'from-wp-primary-100 to-wp-primary-200 hover:to-wp-primary-100 border-transparent bg-gradient-to-br text-white shadow-[0_8px_22px_rgba(var(--wp-primary-glow-rgb),0.18)] hover:from-[var(--wp-primary-hover-100)]':
           color === 'green',
         'border-wp-error-100/40 bg-wp-error-100/10 text-wp-error-100 hover:border-wp-error-100/60 hover:bg-wp-error-100/20':
           color === 'red',

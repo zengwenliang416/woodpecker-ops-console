@@ -1,292 +1,292 @@
 /* cSpell:ignore atrule hexcode */
 .token.atrule {
-  color: #7c4dff;
+  color: var(--wp-syntax-atrule);
 }
 
 .token.attr-name {
-  color: #39adb5;
+  color: var(--wp-syntax-attr-name);
 }
 
 .token.attr-value {
-  color: #f6a434;
+  color: var(--wp-syntax-attr-value);
 }
 
 .token.attribute {
-  color: #f6a434;
+  color: var(--wp-syntax-attribute);
 }
 
 .token.boolean {
-  color: #7c4dff;
+  color: var(--wp-syntax-boolean);
 }
 
 .token.builtin {
-  color: #39adb5;
+  color: var(--wp-syntax-builtin);
 }
 
 .token.cdata {
-  color: #39adb5;
+  color: var(--wp-syntax-cdata);
 }
 
 .token.char {
-  color: #39adb5;
+  color: var(--wp-syntax-char);
 }
 
 .token.class {
-  color: #39adb5;
+  color: var(--wp-syntax-class);
 }
 
 .token.class-name {
-  color: #6182b8;
+  color: var(--wp-syntax-class-name);
 }
 
 .token.comment {
-  color: #aabfc9;
+  color: var(--wp-syntax-comment);
 }
 
 .token.constant {
-  color: #7c4dff;
+  color: var(--wp-syntax-constant);
 }
 
 .token.deleted {
-  color: #e53935;
+  color: var(--wp-syntax-deleted);
 }
 
 .token.doctype {
-  color: #aabfc9;
+  color: var(--wp-syntax-doctype);
 }
 
 .token.entity {
-  color: #e53935;
+  color: var(--wp-syntax-entity);
 }
 
 .token.function {
-  color: #7c4dff;
+  color: var(--wp-syntax-function);
 }
 
 .token.hexcode {
-  color: #f76d47;
+  color: var(--wp-syntax-hexcode);
 }
 
 .token.id {
-  color: #7c4dff;
+  color: var(--wp-syntax-id);
   font-weight: bold;
 }
 
 .token.important {
-  color: #7c4dff;
+  color: var(--wp-syntax-important);
   font-weight: bold;
 }
 
 .token.inserted {
-  color: #39adb5;
+  color: var(--wp-syntax-inserted);
 }
 
 .token.keyword {
-  color: #7c4dff;
+  color: var(--wp-syntax-keyword);
 }
 
 .token.number {
-  color: #f76d47;
+  color: var(--wp-syntax-number);
 }
 
 .token.operator {
-  color: #39adb5;
+  color: var(--wp-syntax-operator);
 }
 
 .token.prolog {
-  color: #aabfc9;
+  color: var(--wp-syntax-prolog);
 }
 
 .token.property {
-  color: #39adb5;
+  color: var(--wp-syntax-property);
 }
 
 .token.pseudo-class {
-  color: #f6a434;
+  color: var(--wp-syntax-pseudo-class);
 }
 
 .token.pseudo-element {
-  color: #f6a434;
+  color: var(--wp-syntax-pseudo-element);
 }
 
 .token.punctuation {
-  color: #39adb5;
+  color: var(--wp-syntax-punctuation);
 }
 
 .token.regex {
-  color: #6182b8;
+  color: var(--wp-syntax-regex);
 }
 
 .token.selector {
-  color: #e53935;
+  color: var(--wp-syntax-selector);
 }
 
 .token.string {
-  color: #f6a434;
+  color: var(--wp-syntax-string);
 }
 
 .token.symbol {
-  color: #7c4dff;
+  color: var(--wp-syntax-symbol);
 }
 
 .token.tag {
-  color: #e53935;
+  color: var(--wp-syntax-tag);
 }
 
 .token.unit {
-  color: #f76d47;
+  color: var(--wp-syntax-unit);
 }
 
 .token.url {
-  color: #e53935;
+  color: var(--wp-syntax-url);
 }
 
 .token.variable {
-  color: #e53935;
+  color: var(--wp-syntax-variable);
 }
 
 .dark .token.atrule {
-  color: #c792ea;
+  color: var(--wp-syntax-atrule);
 }
 
 .dark .token.attr-name {
-  color: #ffcb6b;
+  color: var(--wp-syntax-attr-name);
 }
 
 .dark .token.attr-value {
-  color: #a5e844;
+  color: var(--wp-syntax-attr-value);
 }
 
 .dark .token.attribute {
-  color: #a5e844;
+  color: var(--wp-syntax-attribute);
 }
 
 .dark .token.boolean {
-  color: #c792ea;
+  color: var(--wp-syntax-boolean);
 }
 
 .dark .token.builtin {
-  color: #ffcb6b;
+  color: var(--wp-syntax-builtin);
 }
 
 .dark .token.cdata {
-  color: #80cbc4;
+  color: var(--wp-syntax-cdata);
 }
 
 .dark .token.char {
-  color: #80cbc4;
+  color: var(--wp-syntax-char);
 }
 
 .dark .token.class {
-  color: #ffcb6b;
+  color: var(--wp-syntax-class);
 }
 
 .dark .token.class-name {
-  color: #f2ff00;
+  color: var(--wp-syntax-class-name);
 }
 
 .dark .token.comment {
-  color: #616161;
+  color: var(--wp-syntax-comment);
 }
 
 .dark .token.constant {
-  color: #c792ea;
+  color: var(--wp-syntax-constant);
 }
 
 .dark .token.deleted {
-  color: #ff6666;
+  color: var(--wp-syntax-deleted);
 }
 
 .dark .token.doctype {
-  color: #616161;
+  color: var(--wp-syntax-doctype);
 }
 
 .dark .token.entity {
-  color: #ff6666;
+  color: var(--wp-syntax-entity);
 }
 
 .dark .token.function {
-  color: #c792ea;
+  color: var(--wp-syntax-function);
 }
 
 .dark .token.hexcode {
-  color: #f2ff00;
+  color: var(--wp-syntax-hexcode);
 }
 
 .dark .token.id {
-  color: #c792ea;
+  color: var(--wp-syntax-id);
   font-weight: bold;
 }
 
 .dark .token.important {
-  color: #c792ea;
+  color: var(--wp-syntax-important);
   font-weight: bold;
 }
 
 .dark .token.inserted {
-  color: #80cbc4;
+  color: var(--wp-syntax-inserted);
 }
 
 .dark .token.keyword {
-  color: #c792ea;
+  color: var(--wp-syntax-keyword);
 }
 
 .dark .token.number {
-  color: #fd9170;
+  color: var(--wp-syntax-number);
 }
 
 .dark .token.operator {
-  color: #89ddff;
+  color: var(--wp-syntax-operator);
 }
 
 .dark .token.prolog {
-  color: #616161;
+  color: var(--wp-syntax-prolog);
 }
 
 .dark .token.property {
-  color: #80cbc4;
+  color: var(--wp-syntax-property);
 }
 
 .dark .token.pseudo-class {
-  color: #a5e844;
+  color: var(--wp-syntax-pseudo-class);
 }
 
 .dark .token.pseudo-element {
-  color: #a5e844;
+  color: var(--wp-syntax-pseudo-element);
 }
 
 .dark .token.punctuation {
-  color: #89ddff;
+  color: var(--wp-syntax-punctuation);
 }
 
 .dark .token.regex {
-  color: #f2ff00;
+  color: var(--wp-syntax-regex);
 }
 
 .dark .token.selector {
-  color: #ff6666;
+  color: var(--wp-syntax-selector);
 }
 
 .dark .token.string {
-  color: #a5e844;
+  color: var(--wp-syntax-string);
 }
 
 .dark .token.symbol {
-  color: #c792ea;
+  color: var(--wp-syntax-symbol);
 }
 
 .dark .token.tag {
-  color: #ff6666;
+  color: var(--wp-syntax-tag);
 }
 
 .dark .token.unit {
-  color: #fd9170;
+  color: var(--wp-syntax-unit);
 }
 
 .dark .token.url {
-  color: #ff6666;
+  color: var(--wp-syntax-url);
 }
 
 .dark .token.variable {
-  color: #ff6666;
+  color: var(--wp-syntax-variable);
 }

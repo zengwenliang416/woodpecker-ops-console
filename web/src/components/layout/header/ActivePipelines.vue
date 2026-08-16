@@ -51,7 +51,7 @@ onMounted(async () => {
   background-size:
     50% 50%,
     50% 50%;
-  background-image: linear-gradient(#fff, #fff);
+  background-image: linear-gradient(var(--wp-spinner-arc-100), var(--wp-spinner-arc-100));
   animation: rotate 1.5s linear infinite;
 }
 

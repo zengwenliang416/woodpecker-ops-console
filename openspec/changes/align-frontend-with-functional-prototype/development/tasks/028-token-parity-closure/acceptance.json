@@ -1,0 +1,151 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "028-token-parity-closure",
+ "generated_at": "2026-08-16T06:15:03Z",
+ "recorded_at": "2026-08-16T06:15:03Z",
+ "status": "approved",
+ "reviewed_git_head": "096c1521fde648eb201779f617836b1953643a57",
+ "reviewed_git_tree": "dd33b0ca55888ad49994ad6262e4e1b37551decd",
+ "implementation_scope": {
+  "included_patterns": [
+   "web/src/style.css",
+   "web/src/style/console.css",
+   "web/src/style/prism.css",
+   "web/src/views/deployments/DeploymentDetail.vue",
+   "web/src/views/Login.vue",
+   "web/src/components/atomic/Button.vue",
+   "web/src/components/layout/header/ActivePipelines.vue",
+   "web/src/views/infrastructure/InfrastructureOverview.vue",
+   "web/src/compositions/useTheme.ts",
+   "web/src/regression/tokens/**",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "89ce281632500cbd8dbfc6a9c7d60c388071ed30"
+   },
+   {
+    "path": "web/src/components/atomic/Button.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "13763603391109cf982a4a62c3c3fa9860f35ea9"
+   },
+   {
+    "path": "web/src/components/layout/header/ActivePipelines.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "a31027d3560816d3e6af9c5790f4315b0659342a"
+   },
+   {
+    "path": "web/src/compositions/useTheme.ts",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "6b4d0cdd99bcc97db29b44eb953836b0c0774cc0"
+   },
+   {
+    "path": "web/src/style.css",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "a6cd723fcba78ce3204ab1e6576c782a6e2b9bc0"
+   },
+   {
+    "path": "web/src/style/console.css",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "7313f8bbf1eae9cdf362c2f85391fa78409a5ff0"
+   },
+   {
+    "path": "web/src/style/prism.css",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "73901ff3d5d4f712a103620ea784522ee65ec19b"
+   },
+   {
+    "path": "web/src/views/Login.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "6bf7ecfc8887af09d6ec1165795100c7b1599055"
+   },
+   {
+    "path": "web/src/views/deployments/DeploymentDetail.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "2150e2145cd40ca985972c9cabffbba22bd043e3"
+   },
+   {
+    "path": "web/src/views/infrastructure/InfrastructureOverview.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "52c26d8b19723ffcbff8ba98e8e7c4fad301249a"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/context.json",
+   "sha256": "dd151f8e72ca91b3ef27e531f1b434333f3220ef57fd5022a3c38102b4253412"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/report.md",
+   "sha256": "ac9c42ddd5309cfdb2408458488c4a67be45c9b315241c2dfa5b0f07797579c2",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/spec-review.md",
+   "sha256": "dd5806e9a3627a3351b00275ef6d793202780a8a7b2257f4fe3b97ea8978524e",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/quality-review.md",
+   "sha256": "76ce0cdf61cafb58d5c1b059d7ab67e5c3e207735213cdb4250822aa02a33ef1",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-c548a2b36983f10b8a7d25e3fa0952b635d2de75ea3bc1200b8731bbbb8dd857",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/028-token-parity-closure/evidence/validate_task.mjs",
+   "assertion_ids": [
+    "A2",
+    "A3"
+   ],
+   "recorded_at": "2026-08-16T06:15:03Z",
+   "validation_receipt_sha256": "6e2892920fae9e4e56bc367525a73d98d189822a1a032469ce8f3e0dcd5963c8",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/039-028-token-parity-closure.log",
+    "sha256": "5aa851a71e05536e323410ecb4bce8453214240588c435b2cc2ec17db880052b",
+    "size": 211168
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-c548a2b36983f10b8a7d25e3fa0952b635d2de75ea3bc1200b8731bbbb8dd857"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-c548a2b36983f10b8a7d25e3fa0952b635d2de75ea3bc1200b8731bbbb8dd857"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+  }
+ ],
+ "fallback_used": false
+}

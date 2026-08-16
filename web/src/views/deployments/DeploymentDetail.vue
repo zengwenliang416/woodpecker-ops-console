@@ -879,29 +879,29 @@ onBeforeUnmount(() => {
   @apply overflow-hidden;
 }
 .log-console {
-  @apply max-h-96 overflow-auto bg-[#050b10] py-3 font-mono text-[10px] leading-6;
+  @apply max-h-96 overflow-auto bg-[var(--wp-log-bg-100)] py-3 font-mono text-[10px] leading-6;
 }
 .log-row {
   @apply grid grid-cols-[38px_76px_minmax(0,1fr)] gap-2 px-4;
 }
 .log-line,
 .log-row time {
-  @apply text-[#506674];
+  @apply text-[var(--wp-log-muted-100)];
 }
 .log-success {
-  @apply text-[#42d884];
+  @apply text-[var(--wp-log-success-100)];
 }
 .log-warning {
-  @apply text-[#ffc15c];
+  @apply text-[var(--wp-log-warning-100)];
 }
 .log-danger {
-  @apply text-[#ff7478];
+  @apply text-[var(--wp-log-danger-100)];
 }
 .log-info {
-  @apply text-[#b2c2ca];
+  @apply text-[var(--wp-log-text-100)];
 }
 .log-empty {
-  @apply px-4 text-[#708492];
+  @apply px-4 text-[var(--wp-log-muted-200)];
 }
 .detail-list > div {
   @apply border-wp-border-100 flex items-center justify-between gap-4 border-b px-4 py-3 text-[11px] last:border-0;
