@@ -1,10 +1,10 @@
 {
   "schema": "specnav.codegraph.claims_report.v1",
-  "generated_at": "2026-08-12T16:35:23.787Z",
+  "generated_at": "2026-08-15T15:47:31.935Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims_file": "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
   "evidence_index": "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-index.json",
-  "claims_count": 18,
+  "claims_count": 24,
   "verified_claims": [],
   "unverified_claims": [
     "development:task-001-date-duration-integrity",
@@ -24,7 +24,13 @@
     "development:task-015-organization-routes",
     "development:task-016-administration-routes",
     "development:task-017-user-auth-routes",
-    "development:task-018-authorization-boundaries"
+    "development:task-018-authorization-boundaries",
+    "development:task-019-route-family-parity-closure",
+    "development:task-020-overview-repositories-reverification",
+    "development:task-021-infrastructure-route-reverification",
+    "development:task-022-deployment-route-reverification",
+    "development:task-023-operations-residual-delta-closure",
+    "development:task-024-operations-regression-coverage"
   ],
   "blockers": [],
   "warnings": [
@@ -45,6 +51,12 @@
     "codegraph:claim-unverified:development:task-015-organization-routes",
     "codegraph:claim-unverified:development:task-016-administration-routes",
     "codegraph:claim-unverified:development:task-017-user-auth-routes",
-    "codegraph:claim-unverified:development:task-018-authorization-boundaries"
+    "codegraph:claim-unverified:development:task-018-authorization-boundaries",
+    "codegraph:claim-unverified:development:task-019-route-family-parity-closure",
+    "codegraph:claim-unverified:development:task-020-overview-repositories-reverification",
+    "codegraph:claim-unverified:development:task-021-infrastructure-route-reverification",
+    "codegraph:claim-unverified:development:task-022-deployment-route-reverification",
+    "codegraph:claim-unverified:development:task-023-operations-residual-delta-closure",
+    "codegraph:claim-unverified:development:task-024-operations-regression-coverage"
   ]
 }
