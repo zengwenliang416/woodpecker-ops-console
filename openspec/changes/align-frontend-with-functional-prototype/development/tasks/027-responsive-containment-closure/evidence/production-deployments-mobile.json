@@ -1,0 +1,59 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "deployments-mobile",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 58,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "id": "mobile",
+    "mobile": true
+  },
+  "destination": {
+    "productionPath": "/deployments",
+    "productionRoute": "deployments"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 2 部署中心 刷新 新建部署 部署中心 应用 1 环境 1 Releases 1 生产审批 0 部署策略 总部署 4 运行中 2 待审批 0 已成功 1 全部状态 失败 已暂停 运行中 已成功 全部环境 Staging 全部应用 backend-api ID 状态 应用 Release 环境 策略 进度 触发人 创建时间 DEP-142 失败 backend-api #302 Staging 滚动部署 100% alice 2026/8/13 08:26 DEP-141 已成功 backend-api v2.4.0 Staging 滚动部署 100% alice 2026/8/12 09:00 DEP-140 运行中 #2 #501 #2 滚动部署 40% bob 2026/8/13 08:50 DEP-139 已暂停 backend-api #300 #2 单节点 25% alice 2026/8/11 09:00",
+  "document": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "wp-table-scroll",
+      "clientWidth": 356,
+      "scrollWidth": 775,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 775,
+      "scrollWidth": 775,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/deployments",
+  "title": "部署中心 · Woodpecker"
+}

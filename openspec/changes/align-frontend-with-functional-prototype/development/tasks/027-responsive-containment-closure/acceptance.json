@@ -1,0 +1,108 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "027-responsive-containment-closure",
+ "generated_at": "2026-08-16T05:26:01Z",
+ "recorded_at": "2026-08-16T05:26:01Z",
+ "status": "approved",
+ "reviewed_git_head": "3d6cf0d38a0b9f417aca885b66c409d9f733e497",
+ "reviewed_git_tree": "970ce910332c414760a6a2b04e21fcc3d7df4721",
+ "implementation_scope": {
+  "included_patterns": [
+   "web/src/views/Repos.vue",
+   "web/src/components/agent/AgentList.vue",
+   "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "a48c55e4058958d45098e06cacae80808601f948"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "563a1aa0865e53d418425fe07f45a2d995d3e6da"
+   },
+   {
+    "path": "web/src/components/agent/AgentList.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "3924c3a359f3053f86de78c691b75ce14496eb56"
+   },
+   {
+    "path": "web/src/views/Repos.vue",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "cd928980d69f3c938b765bb2ad4cb51f06c9ebd4"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/context.json",
+   "sha256": "136dc65a7753728fb844fee5c8aae207150f8b2f82fe822cda60fa384bf35ef2"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/report.md",
+   "sha256": "2cc22027969bc19a7ec6b983bd676cbab425b6f796bf6d5fafe6abe5ee2f01df",
+   "status": "DONE"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/spec-review.md",
+   "sha256": "81006cf194894d51f2ba39f1ed8e74f8cc49a0687874294e8c03a013a9ee54da",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/quality-review.md",
+   "sha256": "959ed56f58c95f1ffd3cbf557fe293f82e3e5f0657a92b0ff97541393aedfd50",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-9ac95aebf56aa9ceab3de6eb1c6d839b4a74080452c36cfa33c7b570f622174f",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/validate_task.mjs",
+   "assertion_ids": [
+    "A2",
+    "A3"
+   ],
+   "recorded_at": "2026-08-16T05:26:01Z",
+   "validation_receipt_sha256": "d0d995eaa99709f57328fb6df8ba9f5e44c788cf62704c6a0dfd6476377cfad7",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/038-027-responsive-containment-closure.log",
+    "sha256": "2f89b27149a431bd4aebbb943e546e05c9c058106ca7b94ea081b6194f6b86fd",
+    "size": 212924
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-9ac95aebf56aa9ceab3de6eb1c6d839b4a74080452c36cfa33c7b570f622174f"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-9ac95aebf56aa9ceab3de6eb1c6d839b4a74080452c36cfa33c7b570f622174f"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px."
+  }
+ ],
+ "fallback_used": false
+}

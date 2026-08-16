@@ -1,8 +1,8 @@
 <template>
   <div class="text-wp-text-100 space-y-4">
-    <ListItem v-for="agent in agents" :key="agent.id" class="items-center gap-2">
+    <ListItem v-for="agent in agents" :key="agent.id" class="flex-wrap items-center gap-2">
       <span>{{ agent.name || `Agent ${agent.id}` }}</span>
-      <span class="ml-auto flex gap-2">
+      <span class="ml-auto flex flex-wrap justify-end gap-2">
         <Badge v-if="agent.no_schedule" :value="$t('disabled')" />
         <Badge
           v-if="isAdmin === true && agent.org_id !== -1"

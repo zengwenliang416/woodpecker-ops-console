@@ -576,7 +576,7 @@ onBeforeUnmount(() => {
   @apply overflow-hidden;
 }
 .filters {
-  @apply border-wp-border-100 grid gap-2 border-b p-3 md:grid-cols-[minmax(260px,1fr)_140px_140px_auto];
+  @apply border-wp-border-100 grid gap-2 border-b p-3 md:grid-cols-[minmax(0,1fr)_140px_140px] xl:grid-cols-[minmax(260px,1fr)_140px_140px_auto];
 }
 .search-field {
   @apply relative block;

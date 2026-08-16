@@ -1,0 +1,25 @@
+{
+  "schema": "woodpecker.task027-responsive-replay.v1",
+  "ok": true,
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "states": 39,
+  "viewports": ["desktop", "tablet", "mobile"],
+  "families": [
+    "overview",
+    "repos",
+    "pipelineLogs",
+    "org",
+    "admin",
+    "adminUsers",
+    "adminAgents",
+    "user",
+    "infraServers",
+    "infraAlerts",
+    "deployments",
+    "login",
+    "notFound"
+  ],
+  "rows": [1, 2, 3, 11, 24, 28, 32, 34, 39, 45, 47, 57, 58],
+  "failedStates": [],
+  "generatedAt": "2026-08-16T05:18:39.190Z"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "notFound-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 45,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/definitely-not-a-real-route",
+    "productionRoute": "not-found"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 404 页面不存在 此地址没有对应的 Woodpecker 页面，或请求的资源已不可用。 返回概览 查看仓库",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/definitely-not-a-real-route",
+  "title": "Woodpecker"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "org-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 24,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/orgs/1",
+    "productionRoute": "org"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 acme 组织仓库 属于此组织且当前账号可见的仓库。 仓库 分支 最近流水线 操作 acme/data-worker main 等待中 acme/web-frontend main 运行中 acme/backend-api main 失败 已加载 3 个仓库",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 680,
+      "scrollWidth": 680,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/orgs/1",
+  "title": "仓库 · acme · Woodpecker"
+}

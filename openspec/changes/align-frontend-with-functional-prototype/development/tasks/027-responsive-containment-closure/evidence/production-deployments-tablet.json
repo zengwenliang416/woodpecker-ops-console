@@ -1,0 +1,59 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "deployments-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 58,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/deployments",
+    "productionRoute": "deployments"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 部署中心 刷新 新建部署 部署中心 应用 1 环境 1 Releases 1 生产审批 0 部署策略 总部署 4 运行中 2 待审批 0 已成功 1 全部状态 失败 已暂停 运行中 已成功 全部环境 Staging 全部应用 backend-api ID 状态 应用 Release 环境 策略 进度 触发人 创建时间 DEP-142 失败 backend-api #302 Staging 滚动部署 100% alice 2026/8/13 08:26 DEP-141 已成功 backend-api v2.4.0 Staging 滚动部署 100% alice 2026/8/12 09:00 DEP-140 运行中 #2 #501 #2 滚动部署 40% bob 2026/8/13 08:50 DEP-139 已暂停 backend-api #300 #2 单节点 25% alice 2026/8/11 09:00",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "wp-table-scroll",
+      "clientWidth": 486,
+      "scrollWidth": 775,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 775,
+      "scrollWidth": 775,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/deployments",
+  "title": "部署中心 · Woodpecker"
+}

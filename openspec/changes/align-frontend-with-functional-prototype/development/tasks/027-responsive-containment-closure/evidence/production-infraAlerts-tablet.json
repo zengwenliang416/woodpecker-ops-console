@@ -1,0 +1,59 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "infraAlerts-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 57,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/infrastructure/alerts",
+    "productionRoute": "infrastructure-alerts"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 告警中心 刷新 基础设施 服务器 4 服务器组 服务与容器 告警中心 0 全部 活动 已确认 已解决 全部严重级别 critical info warning 级别 类型 内容 状态 时间 warning Memory usage above 75% on staging-web-01 open 2026/8/13 08:30:00 查看服务器 解决 info Pipeline queue backlog cleared resolved 2026/8/12 09:00:00 critical Deployment 141 failed on prod-web-01 open 2026/8/13 08:55:00 查看服务器 查看部署 解决 info Agent heartbeat restored for prod-api-01 acknowledged 2026/8/13 08:00:00 查看服务器 解决 warning Disk usage at or above 85% on prod-api-02 open 2026/8/13 08:45:00 查看服务器 查看部署 解决",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "wp-table-scroll",
+      "clientWidth": 486,
+      "scrollWidth": 534,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 534,
+      "scrollWidth": 534,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/infrastructure/alerts",
+  "title": "告警中心 · Woodpecker"
+}

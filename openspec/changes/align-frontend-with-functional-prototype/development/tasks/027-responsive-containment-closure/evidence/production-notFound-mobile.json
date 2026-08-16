@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "notFound-mobile",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 45,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "id": "mobile",
+    "mobile": true
+  },
+  "destination": {
+    "productionPath": "/definitely-not-a-real-route",
+    "productionRoute": "not-found"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 2 404 页面不存在 此地址没有对应的 Woodpecker 页面，或请求的资源已不可用。 返回概览 查看仓库",
+  "document": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/definitely-not-a-real-route",
+  "title": "Woodpecker"
+}

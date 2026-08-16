@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "login-desktop",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 1,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "desktop",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "id": "desktop",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/login",
+    "productionRoute": "login"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 帮助 文档 搜索流水线、仓库、用户和设置… ⌘ K 登录",
+  "document": {
+    "clientWidth": 1280,
+    "scrollWidth": 1280,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 1280,
+    "scrollWidth": 1280
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/login",
+  "title": "Woodpecker"
+}

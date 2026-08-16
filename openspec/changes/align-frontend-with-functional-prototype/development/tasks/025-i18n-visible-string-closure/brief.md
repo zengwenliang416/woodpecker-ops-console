@@ -51,3 +51,41 @@ appears.
   (`Node Agent`, `Agent`, `CPU`) keep their prototype-consistent values.
 - Full phase `8` static/sensory verification runs; this slice only adds the
   focused regressions and its own clean lint/type/format receipt.
+
+## Files Allowed
+
+- `web/src/components/FileTree.vue`
+- `web/src/views/infrastructure/InfrastructureOverview.vue`
+- `web/src/views/infrastructure/InfrastructureServer.vue`
+- `web/src/views/infrastructure/InfrastructureServers.vue`
+- `web/src/views/infrastructure/InfrastructureGroup.vue`
+- `web/src/views/infrastructure/InfrastructureServices.vue`
+- `web/src/assets/locales/en.json`
+- `web/src/assets/locales/zh-Hans.json`
+- `web/src/i18nVisibleStrings.test.ts`
+- `openspec/changes/align-frontend-with-functional-prototype/tasks.md`
+- `openspec/changes/align-frontend-with-functional-prototype/route-parity.md`
+- `openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/**`
+- Existing task graph, CodeGraph plan, ledger, context, validation, drift, and
+  acceptance files for task `025`.
+
+## Verification Commands
+
+- Focused Vitest: `web/src/i18nVisibleStrings.test.ts` (`6/6`).
+- Touched-area suites: infrastructure views, form components, and pipeline
+  routes (`14` files, `111/111`).
+- Full frontend Vitest recorded in `evidence/verification-receipt.json`.
+- ESLint, `prettier --check` on all changed files, and `vue-tsc --noEmit`
+  with zero errors.
+- SpecNav entry and handoff contracts with `OPENSPEC_TELEMETRY=0`.
+
+## Stop Conditions
+
+- Scope lock mismatch.
+- A new untranslated visible string appears that is not covered by the
+  documented runtime-identifier/proper-noun allowlist.
+- A locale key referenced by source does not resolve from both `en.json` and
+  `zh-Hans.json`, or the English fallback cannot be proven.
+- Any focused, touched-area, or full regression, lint, format, or type check
+  fails.
+- Closure would touch blocked row `4`, phase `8`, or parent acceptance.

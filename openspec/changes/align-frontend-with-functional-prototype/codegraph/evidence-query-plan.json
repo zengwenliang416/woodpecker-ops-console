@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-15T15:20:36.241Z",
+  "generated_at": "2026-08-16T04:33:44.248Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -354,7 +354,7 @@
       "stage": "development",
       "task_id": "024-operations-regression-coverage",
       "status": "planned",
-      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Build a behavior-to-test coverage map that enumerates every repaired operations\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "file paths",
         "symbols",
@@ -362,6 +362,51 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-024-operations-regression-coverage --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-025-i18n-visible-string-closure:evidence",
+      "claim_id": "development:task-025-i18n-visible-string-closure",
+      "stage": "development",
+      "task_id": "025-i18n-visible-string-closure",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Close baseline task `7.1`: sweep all `web/src` Vue templates for hardcoded\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-025-i18n-visible-string-closure --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-026-accessibility-interaction-closure:evidence",
+      "claim_id": "development:task-026-accessibility-interaction-closure",
+      "stage": "development",
+      "task_id": "026-accessibility-interaction-closure",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Audit every Vue template for non-semantic click targets, globally removed\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-026-accessibility-interaction-closure --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-027-responsive-containment-closure:evidence",
+      "claim_id": "development:task-027-responsive-containment-closure",
+      "stage": "development",
+      "task_id": "027-responsive-containment-closure",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-027-responsive-containment-closure --query \"<query>\" --write --json"
     }
   ]
 }

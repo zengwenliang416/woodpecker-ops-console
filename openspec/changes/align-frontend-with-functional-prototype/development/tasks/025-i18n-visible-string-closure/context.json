@@ -1,8 +1,13 @@
 {
   "task_id": "025-i18n-visible-string-closure",
-  "task_items": ["7.1"],
+  "task_items": [
+    "7.1"
+  ],
   "baseline_task_id": "7.1",
-  "acceptance_primary": ["A2", "A3"],
+  "acceptance_primary": [
+    "A2",
+    "A3"
+  ],
   "goal": "No hardcoded user-visible English remains in the completed slices; every referenced i18n key resolves from both en.json and zh-Hans.json, and the English fallback locale is proven.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/brief.md",
@@ -14,7 +19,16 @@
     "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
     "web/src/compositions/useI18n.ts",
     "web/src/assets/locales/en.json",
-    "web/src/assets/locales/zh-Hans.json"
+    "web/src/assets/locales/zh-Hans.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md"
   ],
   "production_files": [
     "web/src/components/FileTree.vue",
@@ -26,9 +40,48 @@
     "web/src/assets/locales/en.json",
     "web/src/assets/locales/zh-Hans.json"
   ],
-  "test_files": ["web/src/i18nVisibleStrings.test.ts"],
+  "test_files": [
+    "web/src/i18nVisibleStrings.test.ts"
+  ],
   "exclusions": [
     "Runtime identifiers docker/kubernetes/systemd stay untranslated by design.",
     "Proper nouns Node Agent, Agent, and CPU keep prototype-consistent values in Simplified Chinese."
-  ]
+  ],
+  "allowed_files": [
+    "web/src/components/FileTree.vue",
+    "web/src/views/infrastructure/InfrastructureOverview.vue",
+    "web/src/views/infrastructure/InfrastructureServer.vue",
+    "web/src/views/infrastructure/InfrastructureServers.vue",
+    "web/src/views/infrastructure/InfrastructureGroup.vue",
+    "web/src/views/infrastructure/InfrastructureServices.vue",
+    "web/src/assets/locales/en.json",
+    "web/src/assets/locales/zh-Hans.json",
+    "web/src/i18nVisibleStrings.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+  ],
+  "non_goals": [
+    "Do not translate runtime identifiers rendered verbatim by design (docker/kubernetes/systemd).",
+    "Do not reword prototype-consistent proper nouns (Node Agent, Agent, CPU).",
+    "Do not change routes, APIs, permissions, stores, or streaming behavior.",
+    "Do not touch blocked row 4, phase 8, or parent acceptance."
+  ],
+  "expected_evidence": [
+    "web/src/i18nVisibleStrings.test.ts focused suite (6/6)",
+    "evidence/verification-receipt.json full-suite record",
+    "Bilingual en/zh-Hans locale keys and English fallback proof",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "A clean full suite does not prove no hardcoded visible string remains; the template hygiene scan with its explicit allowlist is the authority.",
+    "Locale parity holds only for keys actually referenced by source."
+  ],
+  "stop_condition": "Stop if a new untranslated visible string appears outside the allowlist, a referenced key is missing from either locale, or a gate fails."
 }

@@ -1,0 +1,51 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "org-mobile",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 24,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "id": "mobile",
+    "mobile": true
+  },
+  "destination": {
+    "productionPath": "/orgs/1",
+    "productionRoute": "org"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 2 acme 组织仓库 属于此组织且当前账号可见的仓库。 仓库 分支 最近流水线 操作 acme/data-worker main 等待中 acme/web-frontend main 运行中 acme/backend-api main 失败 已加载 3 个仓库",
+  "document": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 680,
+      "scrollWidth": 680,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/orgs/1",
+  "title": "仓库 · acme · Woodpecker"
+}

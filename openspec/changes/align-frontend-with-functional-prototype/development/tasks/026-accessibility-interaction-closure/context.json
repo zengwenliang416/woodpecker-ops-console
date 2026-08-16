@@ -1,8 +1,13 @@
 {
   "task_id": "026-accessibility-interaction-closure",
-  "task_items": ["7.2"],
+  "task_items": [
+    "7.2"
+  ],
   "baseline_task_id": "7.2",
-  "acceptance_primary": ["A2", "A3"],
+  "acceptance_primary": [
+    "A2",
+    "A3"
+  ],
   "goal": "Keyboard operation, visible focus, semantic controls, accessible names, status text/icon pairing, and reduced-motion behavior are verified and locked by focused regressions.",
   "must_read": [
     "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/brief.md",
@@ -12,16 +17,56 @@
     "web/src/App.vue",
     "web/src/App.test.ts",
     "web/src/components/atomic/IconButton.vue",
-    "web/src/components/repo/pipeline/PipelineRunningIcon.vue"
+    "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md"
   ],
   "production_files": [
     "web/src/App.vue",
     "web/src/components/layout/header/ActivePipelines.vue",
     "web/src/components/repo/pipeline/PipelineRunningIcon.vue"
   ],
-  "test_files": ["web/src/accessibilityInteraction.test.ts"],
+  "test_files": [
+    "web/src/accessibilityInteraction.test.ts"
+  ],
   "exclusions": [
     "App.vue drawer backdrop click target (aria-hidden with tested Escape close path).",
     "RepoAdd.vue click-guard div around a real Button (navigation bubbling stop)."
-  ]
+  ],
+  "allowed_files": [
+    "web/src/App.vue",
+    "web/src/components/layout/header/ActivePipelines.vue",
+    "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+    "web/src/accessibilityInteraction.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+  ],
+  "non_goals": [
+    "Do not change routes, APIs, permissions, stores, or data flow.",
+    "Do not remove focus outlines globally or break the documented semantic click-target allowlist.",
+    "Do not touch blocked row 4, phase 8, or parent acceptance."
+  ],
+  "expected_evidence": [
+    "web/src/accessibilityInteraction.test.ts focused suite (6/6)",
+    "evidence/accessibility-audit.json findings and resolutions",
+    "Touched-area (90/90) and full (600/600) Vitest records",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "A passing suite does not prove keyboard/focus semantics without the audit findings and allowlist review.",
+    "Reduced-motion guards apply only to motion the slice audited."
+  ],
+  "stop_condition": "Stop if a keyboard, focus, semantic, label, pairing, or reduced-motion regression appears outside the allowlist, or a gate fails."
 }

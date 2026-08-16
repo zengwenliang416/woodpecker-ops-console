@@ -1,0 +1,51 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "adminUsers-desktop",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 32,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "desktop",
+  "viewport": {
+    "width": 1280,
+    "height": 1000,
+    "id": "desktop",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/admin/users",
+    "productionRoute": "admin-users"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 用户 在此服务器上注册的用户。 添加用户 用户名 邮箱 代码托管平台 管理员 操作 alice alice@example.test forge.example 管理员 bob bob@example.test forge.example — carol carol@example.test forge.example — dave dave@example.test — — erin erin@example.test — — 已加载 5 项资源",
+  "document": {
+    "clientWidth": 1280,
+    "scrollWidth": 1280,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 1280,
+    "scrollWidth": 1280
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 760,
+      "scrollWidth": 760,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/admin/users",
+  "title": "用户 · 设置 · Woodpecker"
+}

@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "adminAgents-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 34,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/admin/agents",
+    "productionRoute": "admin-agents"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 代理 注册到此服务器的代理。 添加代理 代理 注册到此服务器的代理。 linux-amd64-01 组织 平台 linux/amd64 后端 docker 容量 4 上次通信 3天前 linux-arm64-02 组织 平台 linux/arm64 后端 docker 容量 2 上次通信 3天前 windows-amd64-03 组织 平台 windows/amd64 后端 docker 容量 8 上次通信 3天前 linux-amd64-04 禁用 组织 平台 linux/amd64 后端 docker 容量 4 上次通信 3天前",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/admin/agents",
+  "title": "代理 · 设置 · Woodpecker"
+}

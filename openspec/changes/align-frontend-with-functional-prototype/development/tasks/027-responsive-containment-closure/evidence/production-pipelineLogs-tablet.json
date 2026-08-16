@@ -1,0 +1,51 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "pipelineLogs-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 11,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/repos/101/pipeline/842?tab=logs",
+    "productionRoute": "repo-pipeline-logs"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 backend-api / 流水线 流水线 #842 失败 fix null handling in user route 分支： main 触发事件： 推送 作者： alice 提交： a1b2c3d4e5 创建时间： 6天前 持续时间： 5分钟 重试 概览 修改的文件 6 配置 alice main a1b2c3d4e5 CI true NODE_ENV test build-and-test 05:20 Clone repository 00:32 Install dependencies 01:59 Typecheck application 02:47 TARGET_ENV staging release-verification 00:01 Verify release 00:01 流水线执行概览 来自本次流水线执行的步骤状态、耗时与运行环境。 工作流 2 步骤 4 已完成 4/4 持续时间 5分钟 步骤 状态 环境 镜像 持续时间 操作 Clone repository build-and-test 成功 CI true NODE_ENV test 未报告 查看配置 00:32 查看日志 Install dependencies build-and-test 成功 CI true NODE_ENV test 未报告 查看配置 01:59 查看日志 Typecheck application build-and-test 失败 CI true NODE_ENV test 未报告 查看配置 02:47 查看日志 Verify release release-verification 已跳过 TARGET_ENV staging 未报告 查看配置 00:01 查看日志",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "table",
+      "className": "w-full min-w-3xl border-collapse text-left text-sm",
+      "clientWidth": 783,
+      "scrollWidth": 783,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/repos/101/pipeline/842?tab=logs",
+  "title": "任务 · 流水线 #842 · acme/backend-api · Woodpecker"
+}

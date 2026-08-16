@@ -1,0 +1,71 @@
+{
+  "task_id": "027-responsive-containment-closure",
+  "task_items": ["7.3"],
+  "baseline_task_id": "7.3",
+  "acceptance_primary": ["A2", "A3"],
+  "goal": "Every completed route family renders at desktop 1280, tablet 768, and mobile 390 without page-level horizontal overflow, dense tables and logs scroll inside their designated containers, and a replayable cross-family audit locks the containment contract.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/014-repository-validation-evidence/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/021-infrastructure-route-reverification/report.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/022-deployment-route-reverification/report.md",
+    "web/src/views",
+    "web/src/components",
+    "web/src/assets/tailwind.css"
+  ],
+  "allowed_files": [
+    "web/src/views/**/*.vue",
+    "web/src/components/**/*.vue",
+    "web/src/assets/tailwind.css",
+    "web/src/regression/responsive/**",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+  ],
+  "test_paths": [
+    "web/src/regression/responsive/**/*.test.ts",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/evidence/*.mjs"
+  ],
+  "non_goals": [
+    "Do not add routes, APIs, payload fields, backend behavior, or prototype fixtures to production.",
+    "Do not reopen blocked repository-add row 4.",
+    "Do not re-run full sensory parity; the Task 020-022 bundles remain the parity evidence.",
+    "Do not complete task 7.4, phase 8, or parent acceptance.",
+    "Do not bypass component extraction rules."
+  ],
+  "expected_evidence": [
+    "evidence/matrix.mjs 13-route x 3-viewport audit matrix",
+    "evidence/browser-replay-summary.json with 39 measured states",
+    "evidence/verify_report.json strict verifier output",
+    "evidence/redteam_verifier.mjs persistent mutations",
+    "Focused regressions under web/src/regression/responsive/",
+    "Updated route-parity.md rows for sampled families",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "Per-family desktop/390px evidence does not prove tablet 768 containment.",
+    "A passing full suite does not prove containment; only the replayable browser audit does.",
+    "The 13-route matrix is a sampling contract, not a claim that all 67 rows were re-measured."
+  ],
+  "stop_condition": "Stop if a genuine overflow defect requires scope outside the allowed files, the audit cannot reach a readiness pattern, any state fails the strict verifier without a direct fix, or closure would complete task 7.4, phase 8, row 4, or parent acceptance."
+}

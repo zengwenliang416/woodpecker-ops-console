@@ -1,0 +1,59 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "repos-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 3,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/repos",
+    "productionRoute": "repos"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 仓库 添加仓库 管理代码仓库及其 CI/CD 流水线。 全部状态 成功 失败 运行中 等待中 已跳过 无运行记录 全部 Forge GitHub 仓库 FORGE 分支 最近流水线 上次运行 平均时长 成功率 可见性 acme/data-worker GIT · .woodpecker.yml Forge #2 main 等待中 3 天前 6 分 25 秒 100.0% 公开 acme/web-frontend GIT · .woodpecker.yml GitHub main 运行中 3 天前 6 分 25 秒 100.0% 内部 acme/backend-api GIT · .woodpecker.yml GitHub main 失败 3 天前 7 分 52 秒 50.0% 私有 共 3 个仓库 上一页 1 / 1 下一页 仓库健康度 3 总仓库 成功 0 失败 1 运行中 1 等待中 1 已跳过 0 无运行记录 0 按所有者 acme 3 个仓库",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "wp-table-scroll repo-table-scroll",
+      "clientWidth": 462,
+      "scrollWidth": 940,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "repo-table",
+      "clientWidth": 940,
+      "scrollWidth": 940,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/repos",
+  "title": "仓库 · Woodpecker"
+}

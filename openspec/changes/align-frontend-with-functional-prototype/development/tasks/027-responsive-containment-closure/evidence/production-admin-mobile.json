@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "admin-mobile",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 28,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "id": "mobile",
+    "mobile": true
+  },
+  "destination": {
+    "productionPath": "/admin",
+    "productionRoute": "admin"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 2 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 系统概览 查看当前 Woodpecker 版本，并进入服务器已有的管理页面。 Woodpecker 版本 当前 Woodpecker 服务报告的版本信息。 你正在运行 Woodpecker 3.9.0-task027 本页仅展示版本信息；服务健康和工作负载指标需要独立的生产证据。 管理入口 管理当前 Woodpecker API 已提供的服务器资源。 仓库 该服务器上已启用或曾经启用的仓库。 用户 在此服务器上注册的用户。 组织 在此服务器上拥有存储库的组织。 代理 注册到此服务器的代理。 队列 正在等待 Agents 执行的任务。 代码托管平台 配置 Woodpecker 为其工作的代码托管平台。",
+  "document": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/admin",
+  "title": "信息 · 设置 · Woodpecker"
+}

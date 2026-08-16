@@ -1,0 +1,42 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "adminAgents-mobile",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 34,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "mobile",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "id": "mobile",
+    "mobile": true
+  },
+  "destination": {
+    "productionPath": "/admin/agents",
+    "productionRoute": "admin-agents"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "搜索流水线、仓库、用户和设置… 2 设置 信息 密钥 注册表 仓库 用户 组织 代理 队列 代码托管平台 代理 注册到此服务器的代理。 添加代理 代理 注册到此服务器的代理。 linux-amd64-01 组织 平台 linux/amd64 后端 docker 容量 4 上次通信 3天前 linux-arm64-02 组织 平台 linux/arm64 后端 docker 容量 2 上次通信 3天前 windows-amd64-03 组织 平台 windows/amd64 后端 docker 容量 8 上次通信 3天前 linux-amd64-04 禁用 组织 平台 linux/amd64 后端 docker 容量 4 上次通信 3天前",
+  "document": {
+    "clientWidth": 390,
+    "scrollWidth": 390,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 390,
+    "scrollWidth": 390
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/admin/agents",
+  "title": "代理 · 设置 · Woodpecker"
+}

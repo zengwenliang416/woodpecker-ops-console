@@ -49,3 +49,32 @@ with `web/src/accessibilityInteraction.test.ts`.
   `App.test.ts`) and the RepoAdd click-guard wrapper around a real Button.
 - Full phase `8` static/sensory runs; this slice records its own clean
   lint/type/format receipts and the full-suite pass at the closure HEAD.
+
+## Files Allowed
+
+- `web/src/App.vue`
+- `web/src/components/layout/header/ActivePipelines.vue`
+- `web/src/components/repo/pipeline/PipelineRunningIcon.vue`
+- `web/src/accessibilityInteraction.test.ts`
+- `openspec/changes/align-frontend-with-functional-prototype/tasks.md`
+- `openspec/changes/align-frontend-with-functional-prototype/route-parity.md`
+- `openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/**`
+- Existing task graph, CodeGraph plan, ledger, context, validation, drift, and
+  acceptance files for task `026`.
+
+## Verification Commands
+
+- Focused Vitest: `web/src/accessibilityInteraction.test.ts` (`6/6`).
+- Touched-area suites (App, layout, pipeline views): `90/90`.
+- Full frontend Vitest: `600/600` at the closure HEAD.
+- ESLint, Prettier, and `vue-tsc --noEmit` clean on all changed files.
+- SpecNav entry and handoff contracts with `OPENSPEC_TELEMETRY=0`.
+
+## Stop Conditions
+
+- Scope lock mismatch.
+- A keyboard, focus, semantic-control, label, status text/icon pairing, or
+  reduced-motion regression appears outside the documented allowlist.
+- Any focused, touched-area, or full regression, lint, format, or type check
+  fails.
+- Closure would touch blocked row `4`, phase `8`, or parent acceptance.

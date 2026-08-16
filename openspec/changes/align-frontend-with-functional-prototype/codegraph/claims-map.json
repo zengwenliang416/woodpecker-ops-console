@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-15T15:20:36.241Z",
+  "generated_at": "2026-08-16T04:33:44.248Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -934,7 +934,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "024-operations-regression-coverage",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Build a behavior-to-test coverage map that enumerates every repaired operations",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -942,13 +942,53 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/024-operations-regression-coverage/context.json"
       ],
       "expected_evidence": [
-        "Focused tests or command output",
+        "evidence/behavior-coverage.json mapping every repaired behavior to a test",
+        "evidence/regression-receipt.json from the focused and full runs",
+        "Updated route-parity.md rows 2-3 and 46-67 evidence references",
         "Task report",
         "Spec review",
         "Quality review"
       ],
       "allowed_files": [
-        "src"
+        "web/src/App.test.ts",
+        "web/src/views/Overview.test.ts",
+        "web/src/views/Repos.test.ts",
+        "web/src/lib/repoMetrics.test.ts",
+        "web/src/store/repos.test.ts",
+        "web/src/views/infrastructure/*.test.ts",
+        "web/src/components/ops/InfrastructureNav.test.ts",
+        "web/src/views/deployments/*.test.ts",
+        "web/src/components/ops/DeploymentNav.test.ts",
+        "web/src/store/ops.test.ts",
+        "web/src/compositions/useConfirmedRequest.test.ts",
+        "web/src/compositions/useDeploymentPresentation.test.ts",
+        "web/src/regression/operations/**",
+        "web/src/App.vue",
+        "web/src/views/Overview.vue",
+        "web/src/views/Repos.vue",
+        "web/src/views/infrastructure/*.vue",
+        "web/src/views/deployments/*.vue",
+        "web/src/components/ops/InfrastructureNav.vue",
+        "web/src/components/ops/DeploymentNav.vue",
+        "web/src/compositions/useConfirmedRequest.ts",
+        "web/src/compositions/useDeploymentPresentation.ts",
+        "web/src/store/ops.ts",
+        "web/src/store/repos.ts",
+        "web/src/lib/repoMetrics.ts",
+        "web/src/lib/api/index.ts",
+        "web/src/lib/api/types/ops.ts",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/024-operations-regression-coverage/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/drift-check.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
       ],
       "query_ids": [
         "development:task-024-operations-regression-coverage:evidence"
@@ -959,7 +999,7 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "025-i18n-visible-string-closure",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Close baseline task `7.1`: sweep all `web/src` Vue templates for hardcoded",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
@@ -967,13 +1007,30 @@
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/context.json"
       ],
       "expected_evidence": [
-        "Focused tests or command output",
-        "Task report",
-        "Spec review",
-        "Quality review"
+        "web/src/i18nVisibleStrings.test.ts focused suite (6/6)",
+        "evidence/verification-receipt.json full-suite record",
+        "Bilingual en/zh-Hans locale keys and English fallback proof",
+        "Task report, spec review, quality review"
       ],
       "allowed_files": [
-        "src"
+        "web/src/components/FileTree.vue",
+        "web/src/views/infrastructure/InfrastructureOverview.vue",
+        "web/src/views/infrastructure/InfrastructureServer.vue",
+        "web/src/views/infrastructure/InfrastructureServers.vue",
+        "web/src/views/infrastructure/InfrastructureGroup.vue",
+        "web/src/views/infrastructure/InfrastructureServices.vue",
+        "web/src/assets/locales/en.json",
+        "web/src/assets/locales/zh-Hans.json",
+        "web/src/i18nVisibleStrings.test.ts",
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/025-i18n-visible-string-closure/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
       ],
       "query_ids": [
         "development:task-025-i18n-visible-string-closure:evidence"
@@ -984,12 +1041,47 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "026-accessibility-interaction-closure",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Audit every Vue template for non-semantic click targets, globally removed",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/brief.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/context.json"
+      ],
+      "expected_evidence": [
+        "web/src/accessibilityInteraction.test.ts focused suite (6/6)",
+        "evidence/accessibility-audit.json findings and resolutions",
+        "Touched-area (90/90) and full (600/600) Vitest records",
+        "Task report, spec review, quality review"
+      ],
+      "allowed_files": [
+        "web/src/App.vue",
+        "web/src/components/layout/header/ActivePipelines.vue",
+        "web/src/components/repo/pipeline/PipelineRunningIcon.vue",
+        "web/src/accessibilityInteraction.test.ts",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/026-accessibility-interaction-closure/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+      ],
+      "query_ids": [
+        "development:task-026-accessibility-interaction-closure:evidence"
+      ]
+    },
+    {
+      "id": "development:task-027-responsive-containment-closure",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "027-responsive-containment-closure",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/027-responsive-containment-closure/context.json"
       ],
       "expected_evidence": [
         "Focused tests or command output",
@@ -1001,7 +1093,7 @@
         "src"
       ],
       "query_ids": [
-        "development:task-026-accessibility-interaction-closure:evidence"
+        "development:task-027-responsive-containment-closure:evidence"
       ]
     }
   ]

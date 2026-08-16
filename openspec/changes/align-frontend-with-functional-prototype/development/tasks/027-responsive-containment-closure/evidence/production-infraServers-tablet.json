@@ -1,0 +1,59 @@
+{
+  "schema": "woodpecker.task027-responsive-measurement.v1",
+  "stateId": "infraServers-tablet",
+  "runId": "b9894081-81e5-4b79-a9e3-2e2c6d0f5297",
+  "row": 47,
+  "theme": "dark",
+  "locale": "zh-Hans",
+  "viewportId": "tablet",
+  "viewport": {
+    "width": 768,
+    "height": 1024,
+    "id": "tablet",
+    "mobile": false
+  },
+  "destination": {
+    "productionPath": "/infrastructure/servers",
+    "productionRoute": "infrastructure-servers"
+  },
+  "health": {
+    "consoleMessages": [],
+    "runtimeExceptions": [],
+    "networkFailures": [],
+    "httpErrors": []
+  },
+  "bodyTextSample": "Woodpecker CI/CD 平台 工作区 概览 仓库 3 交付 部署中心 应用 环境 Releases 生产审批 服务器运维 基础设施 服务器 服务器组 服务与容器 告警 构建基础设施 构建 Agent 任务队列 密钥 管理 系统管理 用户 Forge 帮助 文档 个人设置 搜索流水线、仓库、用户和设置… ⌘ K 2 服务器 刷新 注册服务器 基础设施 服务器 4 服务器组 服务与容器 告警中心 0 全部状态 在线 维护中 离线 警告 严重 全部服务器组 prod-api prod-web 全部区域 asia-southeast-1 名称 状态 环境 CPU 内存 磁盘 运行时 心跳 prod-api-01 online Staging 31% 48% 62% Docker 27.1 08:59:55 prod-api-02 warning Staging 72% 81% 86% Docker 27.1 08:59:53 prod-web-01 online Staging 18% 34% 41% Docker 27.1 08:59:57 staging-web-01 online — 9% 22% 33% Docker 27.1 08:59:56",
+  "document": {
+    "clientWidth": 768,
+    "scrollWidth": 768,
+    "dataTheme": "dark",
+    "lang": "zh-Hans"
+  },
+  "body": {
+    "clientWidth": 768,
+    "scrollWidth": 768
+  },
+  "pageLevelHorizontalOverflow": false,
+  "overflowContributors": [],
+  "denseContainers": [
+    {
+      "tag": "div",
+      "className": "wp-table-scroll",
+      "clientWidth": 486,
+      "scrollWidth": 617,
+      "overflowX": "auto",
+      "locallyScrollable": true
+    },
+    {
+      "tag": "table",
+      "className": "",
+      "clientWidth": 617,
+      "scrollWidth": 617,
+      "overflowX": "visible",
+      "locallyScrollable": false
+    }
+  ],
+  "rawI18nKeys": [],
+  "url": "http://127.0.0.1:8270/infrastructure/servers",
+  "title": "服务器 · Woodpecker"
+}
