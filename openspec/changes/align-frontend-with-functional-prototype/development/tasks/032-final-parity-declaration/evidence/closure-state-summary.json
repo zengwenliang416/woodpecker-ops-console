@@ -1,0 +1,70 @@
+{
+  "schema": "woodpecker.task032-closure-state.v1",
+  "generated_at": "2026-08-16T08:25:50.187Z",
+  "ok": true,
+  "checks": [
+    {
+      "ok": true,
+      "message": "baseline 7.1 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 7.2 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 7.3 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 7.4 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 8.1 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 8.2 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 8.3 checked"
+    },
+    {
+      "ok": true,
+      "message": "baseline 8.4 checked"
+    },
+    {
+      "ok": true,
+      "message": "32 approved slice acceptances (slices 001-032)"
+    },
+    {
+      "ok": true,
+      "message": "matrix: 67 rows (66 verified + row 4 blocked)"
+    },
+    {
+      "ok": true,
+      "message": "six domains ok (7 domain records)"
+    },
+    {
+      "ok": true,
+      "message": "HTML report model + manifest bound with 3 pages"
+    },
+    {
+      "ok": true,
+      "message": "change-level acceptance A1-A4 passing with evidence refs"
+    },
+    {
+      "ok": true,
+      "message": "32 complete task-ledger entries"
+    }
+  ],
+  "matrix": {
+    "rows": 67,
+    "verified": 66,
+    "blocked": 1
+  },
+  "slice_acceptances": 32,
+  "complete_ledger_entries": 32
+}

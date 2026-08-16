@@ -1,7 +1,7 @@
 {
   "schema": "specnav.verification.report-model.v2",
-  "report_id": "report-b0edbfe39b45b481dc1c391e",
-  "generated_at": "2026-08-16T07:52:53.475Z",
+  "report_id": "report-00680c50f3be68c6de1c4d31",
+  "generated_at": "2026-08-16T08:05:25.574Z",
   "git_head": "ref: refs/heads/main",
   "aggregate": {
     "ok": true,
@@ -42,29 +42,29 @@
         "id": "A1",
         "statement": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status.",
         "verify_via": "e2e",
-        "status": "failing",
-        "evidence_ref": null
+        "status": "passing",
+        "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/facticity-report.json"
       },
       {
         "id": "A2",
         "statement": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations.",
         "verify_via": "sensory",
-        "status": "failing",
-        "evidence_ref": null
+        "status": "passing",
+        "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/browser-replay-summary.json"
       },
       {
         "id": "A3",
         "statement": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px.",
         "verify_via": "static",
-        "status": "failing",
-        "evidence_ref": null
+        "status": "passing",
+        "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/evidence/static-gate-receipt.json"
       },
       {
         "id": "A4",
         "statement": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite.",
         "verify_via": "unit",
-        "status": "failing",
-        "evidence_ref": null
+        "status": "passing",
+        "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/041-030-six-domain-verification.log"
       }
     ]
   },
@@ -75,8 +75,8 @@
     "row4_blocked": true
   },
   "evidence_index": {
-    "slice_acceptances": 30,
-    "validation_receipts": 429
+    "slice_acceptances": 31,
+    "validation_receipts": 430
   },
   "runtime": {
     "v2_adapter_lifecycle": "not-run",

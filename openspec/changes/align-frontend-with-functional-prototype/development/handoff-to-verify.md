@@ -781,3 +781,21 @@
   semantic token behavior.
 - Produce the final HTML report only after remaining incomplete or blocked
   routes are explicitly resolved or retained as open findings.
+
+## Implemented Slices 025-032 (phases 7-8)
+
+| Slice | Baseline | Deliverable | Evidence |
+| --- | --- | --- | --- |
+| 025 | 7.1 | i18n visible-string closure | i18nVisibleStrings suite, acceptance bound at its HEAD |
+| 026 | 7.2 | accessibility interaction closure | accessibilityInteraction suite, acceptance bound at its HEAD |
+| 027 | 7.3 | responsive containment closure (three viewports) | 39-state CDP audit, strict verifier, red-team 9/9 |
+| 028 | 7.4 | light/dark semantic token parity | token-parity suite 5/5 (value-pinned), light/dark spot check 6/6 |
+| 029 | 8.1 | whole-tree static gate | static-gate receipt, log 040 |
+| 030 | 8.2 | six-domain verification | six-domain summary, log 041 (facticity/static/unit/redteam/e2e/sensory) |
+| 031 | 8.3 | HTML verification report | overview/catalog/results pages, report model + manifest |
+| 032 | 8.4 | final parity declaration + change-level acceptance | parity-declaration.md, acceptance.json A1-A4 approved |
+
+Final state: 66/67 matrix rows verified, repository row 4 explicitly
+blocked, A1-A4 approved on the final HEAD, global prototype parity NOT
+claimed. The six domains pass; the HTML report covers every completed
+assertion and route row with the blocked row explicit.

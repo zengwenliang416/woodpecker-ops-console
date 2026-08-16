@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.evidence_query_plan.v1",
-  "generated_at": "2026-08-16T07:45:18.308Z",
+  "generated_at": "2026-08-16T07:58:27.625Z",
   "active_change": "align-frontend-with-functional-prototype",
   "queries": [
     {
@@ -459,7 +459,7 @@
       "stage": "development",
       "task_id": "031-html-verification-report",
       "status": "planned",
-      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Close baseline task `8.3`: generate the HTML verification report with\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
       "expected_evidence": [
         "file paths",
         "symbols",
@@ -467,6 +467,21 @@
         "tests or verification commands"
       ],
       "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-031-html-verification-report --query \"<query>\" --write --json"
+    },
+    {
+      "id": "development:task-032-final-parity-declaration:evidence",
+      "claim_id": "development:task-032-final-parity-declaration",
+      "stage": "development",
+      "task_id": "032-final-parity-declaration",
+      "status": "planned",
+      "query": "Find the files, symbols, components, routes, services, data flow, and tests that implement \"Implement one user-visible flow from UI entry through state, API/data boundary,\" in change \"align-frontend-with-functional-prototype\". Return concrete file paths, symbols, relationships, and any missing implementation evidence.",
+      "expected_evidence": [
+        "file paths",
+        "symbols",
+        "call relationships",
+        "tests or verification commands"
+      ],
+      "command": "node \"$SPECNAV_CODEGRAPH_ROOT/scripts/codegraph-context.js\" --stage development --claim development:task-032-final-parity-declaration --query \"<query>\" --write --json"
     }
   ]
 }

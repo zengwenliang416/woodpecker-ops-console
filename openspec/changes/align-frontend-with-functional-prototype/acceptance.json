@@ -1,34 +1,56 @@
 {
-  "schema_version": 1,
+  "schema_version": "1.0",
   "change_id": "align-frontend-with-functional-prototype",
   "assertions": [
     {
       "id": "A1",
       "statement": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status.",
       "verify_via": "e2e",
-      "status": "failing",
-      "evidence_ref": null
+      "status": "passing",
+      "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/facticity-report.json"
     },
     {
       "id": "A2",
       "statement": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations.",
       "verify_via": "sensory",
-      "status": "failing",
-      "evidence_ref": null
+      "status": "passing",
+      "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/020-overview-repositories-reverification/evidence/browser-replay-summary.json"
     },
     {
       "id": "A3",
       "statement": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review at desktop and 390px.",
       "verify_via": "static",
-      "status": "failing",
-      "evidence_ref": null
+      "status": "passing",
+      "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/029-static-gate-closure/evidence/static-gate-receipt.json"
     },
     {
       "id": "A4",
       "statement": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite.",
       "verify_via": "unit",
-      "status": "failing",
-      "evidence_ref": null
+      "status": "passing",
+      "evidence_ref": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/041-030-six-domain-verification.log"
     }
-  ]
+  ],
+  "approval": {
+    "approved_at": "2026-08-16T08:05:14Z",
+    "approved_on_head": "222932d6e4521af644b47e809248ae4f3caf10e1",
+    "approved_by": "specnav-development-controller",
+    "note": "A1-A4 passing with evidence refs per the change-level schema; the final parity declaration (Task 032) records the verified state; repository row 4 stays blocked; global prototype parity is not claimed.",
+    "basis": {
+      "six_domain_summary": {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/six-domain-summary.json",
+        "sha256": "b68f0304a4491f233864124efd89b04bb5f1116a8d15cc681007d1d2a84862e9",
+        "ok": true
+      },
+      "report_model": {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+        "sha256": "6176a94798a29071e38ecf9a691f08d30f5428bdb38a880a26e29cf0d87127ca"
+      },
+      "report_manifest": {
+        "path": "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+        "sha256": "eb28729ed3b4758721e3e06ba74c30c58f90ee7add223443d88d3a72ed1b599e"
+      }
+    },
+    "refreshed_at": "2026-08-16T08:10:36Z"
+  }
 }

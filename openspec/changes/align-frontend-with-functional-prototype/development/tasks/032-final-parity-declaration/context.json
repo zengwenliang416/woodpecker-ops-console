@@ -1,0 +1,74 @@
+{
+  "task_id": "032-final-parity-declaration",
+  "task_items": [
+    "8.4"
+  ],
+  "baseline_task_id": "8.4",
+  "acceptance_primary": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+  ],
+  "goal": "Declare the final verification state: approve the change-level acceptance (A1-A4) on the final HEAD, keep blocked row 4 explicit, extend the handoff record, and close the phase 7-8 records without claiming global parity.",
+  "must_read": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/brief.md",
+    "openspec/changes/align-frontend-with-functional-prototype/requirements.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.md",
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/spec-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/component-impact-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/handoff.md",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/decision.json",
+    "openspec/changes/align-frontend-with-functional-prototype/prototype/artifact/index.html",
+    "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/030-six-domain-verification/evidence/six-domain-summary.json",
+    "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+    "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+    "openspec/specs/ui-design/design.md",
+    "openspec/specs/system-architecture/design.md",
+    "openspec/specs/frontend-backend-data-flow/design.md",
+    "openspec/specs/component-architecture/design.md"
+  ],
+  "allowed_files": [
+    "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "openspec/changes/align-frontend-with-functional-prototype/route-parity.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/**",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+    "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json",
+    "openspec/changes/align-frontend-with-functional-prototype/verify/reports/**",
+    "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+    "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+    "openspec/changes/align-frontend-with-functional-prototype/development/evidence/043-032-final-parity-declaration.log",
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/evidence/build_html_report.mjs"
+  ],
+  "test_paths": [
+    "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/evidence/*.mjs"
+  ],
+  "non_goals": [
+    "Do not claim parity for blocked or unverified rows.",
+    "Do not reopen blocked repository-add row 4.",
+    "Do not change production code, routes, APIs, or fixtures.",
+    "Do not re-run the six domains; Task 030 evidence is reused and bound."
+  ],
+  "expected_evidence": [
+    "acceptance.json A1-A4 approved with evidence_ref bindings",
+    "parity-declaration.md final state document",
+    "handoff-to-verify.md extended implemented-slice entry",
+    "evidence/verify_closure_state.mjs + closure-state-summary.json",
+    "Task report, spec review, quality review"
+  ],
+  "unsafe_assumptions": [
+    "Parent acceptance approval records the verified state on the final HEAD and does not change production code.",
+    "Global prototype parity is not claimed; row 4 stays blocked."
+  ],
+  "stop_condition": "Stop if a phase 7-8 checkbox is unchecked, a slice acceptance is missing, the closure-state script fails without a direct in-scope fix, or the declaration would claim parity for blocked/unverified rows."
+}

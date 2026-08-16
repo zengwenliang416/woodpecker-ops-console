@@ -1,0 +1,168 @@
+{
+ "schema": "specnav.task-acceptance-evidence.v2",
+ "generated_by": "specnav-development/task-acceptance-evidence",
+ "task_id": "032-final-parity-declaration",
+ "generated_at": "2026-08-16T08:25:49Z",
+ "recorded_at": "2026-08-16T08:25:49Z",
+ "status": "approved",
+ "reviewed_git_head": "222932d6e4521af644b47e809248ae4f3caf10e1",
+ "reviewed_git_tree": "d32f04d68a8ae4ec1535fa7d255148f386cd6d51",
+ "implementation_scope": {
+  "included_patterns": [
+   "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+   "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+   "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/reports/**",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+   "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+   "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/**"
+  ],
+  "entries": [
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "e8357604afe3905fc44ad92cb8753d92e3550af0"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/handoff-to-verify.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "d0151bcabd3b5f7b318cf2dea3c3eaa45308460e"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "1dbaa5f4c4c19641fcc07b1c564764f4f4bfbfff"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/verify/reports/overview.html",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "cff4b8d47ee1b1086e24af140e0ffe1586f186aa"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/verify/reports/test-case-catalog.html",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "ab969bf5cd1d96027dee3841f2a416572dd9815c"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/verify/reports/test-case-results.html",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "c81c393421d0c4c8e254bad13b9c93804f60c727"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "be754e2ca0718317d8c85dfa0e63c9f1016a8dde"
+   },
+   {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+    "mode": "100644",
+    "type": "blob",
+    "object_id": "e3e34dccd66f1d4285c279f538702823c0b0e9eb"
+   }
+  ]
+ },
+ "artifacts": {
+  "context": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/context.json",
+   "sha256": "2bf784e8d327f3a6ce523f4724d0fee3dd79dc8d4b61d9841b12f2461a4a7aef"
+  },
+  "report": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/report.md",
+   "sha256": "285ecb0e0785eb01022fef89ecc36bda1d85bd3585cf3974155b2a30f23fe429",
+   "status": "DONE"
+  },
+  "declaration": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/parity-declaration.md",
+   "sha256": "52562c7ce0ae61c6d28cf5319fbbac84a37039b25b8a980ab622f293b88c104e"
+  },
+  "spec_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/spec-review.md",
+   "sha256": "61885a3b7faf6f73a56155ba6928f58f1f2d25bf25ebda9c811e01fa3fbabb77",
+   "verdict": "approved"
+  },
+  "quality_review": {
+   "path": "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/quality-review.md",
+   "sha256": "9d34282df31b7509d77ecc683f0bd5436f932cfc4accf19d60626433e4c52f8a",
+   "verdict": "approved"
+  }
+ },
+ "test_runs": [
+  {
+   "id": "receipt-f57bb3355ce2d85b471e50a34acdd5cdfa5f7e06815aa579c04329746a381657",
+   "command": "node openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/evidence/verify_closure_state.mjs",
+   "assertion_ids": [
+    "A1",
+    "A2",
+    "A3",
+    "A4"
+   ],
+   "recorded_at": "2026-08-16T08:25:49Z",
+   "validation_receipt_sha256": "2def58dd68835f11c229ac6a4f46527821c159b8f2bae5f089bb37bf9a6131fb",
+   "evidence_log": {
+    "path": "openspec/changes/align-frontend-with-functional-prototype/development/evidence/043-032-final-parity-declaration.log",
+    "sha256": "d4b03de8d713218649fb3e605dc317934fcd3246fd03028eef3680e0e7062391",
+    "size": 1396
+   }
+  }
+ ],
+ "assertions": [
+  {
+   "id": "A1",
+   "parent_id": "A1",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-f57bb3355ce2d85b471e50a34acdd5cdfa5f7e06815aa579c04329746a381657"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Every documented prototype route and tab state is present in a maintained parity matrix with an explicit verification status."
+  },
+  {
+   "id": "A2",
+   "parent_id": "A2",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-f57bb3355ce2d85b471e50a34acdd5cdfa5f7e06815aa579c04329746a381657"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed route families match the approved prototype in equivalent theme, locale, viewport, permission, and data state while preserving real APIs and mutations."
+  },
+  {
+   "id": "A3",
+   "parent_id": "A3",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-f57bb3355ce2d85b471e50a34acdd5cdfa5f7e06815aa579c04329746a381657"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Completed frontend slices pass formatting, lint, TypeScript, Vitest, Vite build, git diff checks, and targeted browser review."
+  },
+  {
+   "id": "A4",
+   "parent_id": "A4",
+   "status": "passing",
+   "test_run_ids": [
+    "receipt-f57bb3355ce2d85b471e50a34acdd5cdfa5f7e06815aa579c04329746a381657"
+   ],
+   "direct_evidence": [],
+   "reused_evidence": [],
+   "claim": "Operational data, dates, durations, counts, and statuses render valid confirmed values or explicit fallbacks without stale-response overwrite."
+  }
+ ],
+ "parent_acceptance": {
+  "path": "openspec/changes/align-frontend-with-functional-prototype/acceptance.json",
+  "sha256": "ecc91404133e59c9775c7f0607a58a93b46d3d7cf67d9a594223f978a640f689",
+  "status": "passing"
+ },
+ "report_model_id": "report-00680c50f3be68c6de1c4d31",
+ "fallback_used": false
+}

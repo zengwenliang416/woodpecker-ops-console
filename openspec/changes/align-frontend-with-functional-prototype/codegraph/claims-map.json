@@ -1,6 +1,6 @@
 {
   "schema": "specnav.codegraph.claims.v1",
-  "generated_at": "2026-08-16T07:45:18.308Z",
+  "generated_at": "2026-08-16T07:58:27.625Z",
   "active_change": "align-frontend-with-functional-prototype",
   "claims": [
     {
@@ -1230,12 +1230,47 @@
       "kind": "development-task",
       "stage": "development",
       "task_id": "031-html-verification-report",
-      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "text": "Close baseline task `8.3`: generate the HTML verification report with",
       "required": true,
       "source": "specnav-codegraph-plan",
       "source_paths": [
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/brief.md",
         "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/context.json"
+      ],
+      "expected_evidence": [
+        "verify/reports/overview.html, test-case-catalog.html, test-case-results.html",
+        "verify/v2/report-model.json and report-render-manifest.json",
+        "Browser spot-check screenshot evidence of overview.html",
+        "Task report, spec review, quality review"
+      ],
+      "allowed_files": [
+        "openspec/changes/align-frontend-with-functional-prototype/tasks.md",
+        "openspec/changes/align-frontend-with-functional-prototype/verify/reports/**",
+        "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-model.json",
+        "openspec/changes/align-frontend-with-functional-prototype/verify/v2/report-render-manifest.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/031-html-verification-report/**",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-graph.json",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-context.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/task-ledger.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/development/validation-log.jsonl",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/claims-map.json",
+        "openspec/changes/align-frontend-with-functional-prototype/codegraph/evidence-query-plan.json"
+      ],
+      "query_ids": [
+        "development:task-031-html-verification-report:evidence"
+      ]
+    },
+    {
+      "id": "development:task-032-final-parity-declaration",
+      "kind": "development-task",
+      "stage": "development",
+      "task_id": "032-final-parity-declaration",
+      "text": "Implement one user-visible flow from UI entry through state, API/data boundary,",
+      "required": true,
+      "source": "specnav-codegraph-plan",
+      "source_paths": [
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/brief.md",
+        "openspec/changes/align-frontend-with-functional-prototype/development/tasks/032-final-parity-declaration/context.json"
       ],
       "expected_evidence": [
         "Focused tests or command output",
@@ -1247,7 +1282,7 @@
         "src"
       ],
       "query_ids": [
-        "development:task-031-html-verification-report:evidence"
+        "development:task-032-final-parity-declaration:evidence"
       ]
     }
   ]
