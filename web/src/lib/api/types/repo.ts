@@ -14,10 +14,6 @@ export interface Repo {
   // The id of the forge that the repository is on.
   forge_id: number;
 
-  // The source control management being used.
-  // Currently, this is either 'git' or 'hg' (Mercurial).
-  scm: string;
-
   // Whether the forge repo has PRs enabled.
   pr_enabled: boolean;
 

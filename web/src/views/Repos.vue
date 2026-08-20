@@ -442,7 +442,7 @@ function forgeIcon(forgeId: number): IconNames {
 
 function repoDescription(repo: Repo): string {
   if (!repo.active) return t('repositories.disabled_description');
-  return `${repo.scm.toUpperCase()} · ${repo.config_file || '.woodpecker.yml'}`;
+  return repo.config_file || '.woodpecker.yml';
 }
 
 function repoSuccessRate(repo: Repo): number | null {

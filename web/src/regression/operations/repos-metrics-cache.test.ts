@@ -157,7 +157,6 @@ function repository(id: number, status: Pipeline['status'] = 'success'): Repo {
     full_name: `${id % 2 === 0 ? 'platform' : 'acme'}/repo-${id}`,
     forge_id: 1,
     forge_remote_id: `repo-${id}`,
-    scm: 'git',
     config_file: '.woodpecker.yml',
     default_branch: 'main',
     visibility: 'private',

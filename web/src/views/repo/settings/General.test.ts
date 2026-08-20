@@ -76,7 +76,6 @@ function repository(): Repo {
     active: true,
     forge_remote_id: 'remote-101',
     forge_id: 1,
-    scm: 'git',
     pr_enabled: true,
     org_id: 1,
     owner: 'acme',

@@ -164,7 +164,6 @@ function repository(id: number, name: string, lastPipeline?: PipelineFeed): Repo
     full_name: `acme/${name}`,
     forge_id: 1,
     forge_remote_id: `repo-${id}`,
-    scm: 'git',
     config_file: '.woodpecker.yml',
     default_branch: 'main',
     visibility: 'private',

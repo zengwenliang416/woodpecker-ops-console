@@ -150,7 +150,6 @@ function repository(id: number, status: Pipeline['status'] = 'success'): Repo {
     full_name: `${id % 2 === 0 ? 'platform' : 'acme'}/repo-${id}`,
     forge_id: id % 2 === 0 ? 2 : 1,
     forge_remote_id: `repo-${id}`,
-    scm: 'git',
     config_file: '.woodpecker.yml',
     default_branch: 'main',
     visibility: id % 3 === 0 ? 'internal' : 'private',
@@ -214,6 +213,7 @@ describe('repositories overview', () => {
     expect(wrapper.text()).toContain('仓库');
     expect(wrapper.text()).toContain('acme/repo-1');
     expect(wrapper.text()).toContain('platform/repo-2');
+    expect(wrapper.text()).toContain('.woodpecker.yml');
     expect(wrapper.text()).toContain('100.0%');
     expect(wrapper.text()).toContain('—');
     expect(wrapper.get('[data-feedback-state="error"]').text()).toContain('部分仓库数据暂不可用');
