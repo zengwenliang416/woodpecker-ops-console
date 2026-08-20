@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { flushPromises, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { defineComponent, h, nextTick, ref } from 'vue';
@@ -128,5 +130,18 @@ describe('repository settings wrapper', () => {
     });
     expect(mocks.replace).toHaveBeenCalledWith({ name: 'home' });
     expect(wrapper.find('[data-testid="settings-nav"]').exists()).toBe(false);
+  });
+
+  it('keeps repository settings navigation in the main content flow', () => {
+    const wrapperSource = readFileSync(resolve(process.cwd(), 'src/views/repo/settings/RepoSettings.vue'), 'utf8');
+    const navigationSource = readFileSync(
+      resolve(process.cwd(), 'src/components/repo/settings/RepoSettingsNav.vue'),
+      'utf8',
+    );
+
+    expect(wrapperSource).toContain('flex-col');
+    expect(wrapperSource).not.toContain('lg:grid-cols-[220px_minmax(0,1fr)]');
+    expect(navigationSource).toContain('lg:flex-wrap');
+    expect(navigationSource).not.toContain('lg:flex-col');
   });
 });

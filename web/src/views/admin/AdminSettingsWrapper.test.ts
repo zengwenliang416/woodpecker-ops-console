@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { flushPromises, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { createI18n } from 'vue-i18n';
@@ -56,6 +58,19 @@ describe('administration settings wrapper', () => {
     expect(wrapper.find('.admin-settings-layout').exists()).toBe(true);
     expect(wrapper.find('.admin-settings-content').exists()).toBe(true);
     expect(state.replace).not.toHaveBeenCalled();
+  });
+
+  it('keeps administration navigation in the main content flow', () => {
+    const wrapperSource = readFileSync(resolve(process.cwd(), 'src/views/admin/AdminSettingsWrapper.vue'), 'utf8');
+    const navigationSource = readFileSync(
+      resolve(process.cwd(), 'src/components/admin/settings/AdminSettingsNav.vue'),
+      'utf8',
+    );
+
+    expect(wrapperSource).toContain('flex-col');
+    expect(wrapperSource).not.toContain('lg:grid-cols-[220px_minmax(0,1fr)]');
+    expect(navigationSource).toContain('lg:flex-wrap');
+    expect(navigationSource).not.toContain('lg:flex-col');
   });
 
   it('notifies and redirects non-administrators without rendering route content', async () => {

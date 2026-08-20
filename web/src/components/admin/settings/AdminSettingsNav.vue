@@ -57,7 +57,7 @@ function isActive(item: NavigationItem) {
 @reference '~/tailwind.css';
 
 .admin-settings-nav {
-  @apply border-wp-border-100 bg-wp-background-300 flex min-w-0 gap-1 overflow-x-auto rounded-xl border p-2 shadow-sm lg:sticky lg:top-20 lg:flex-col lg:self-start lg:overflow-visible;
+  @apply border-wp-border-100 bg-wp-background-300 flex min-w-0 gap-1 overflow-x-auto rounded-xl border p-2 shadow-sm lg:flex-wrap lg:overflow-visible;
   scrollbar-width: thin;
 }
 

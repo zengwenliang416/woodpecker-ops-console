@@ -27,7 +27,7 @@ const address = `${window.location.protocol}//${window.location.host}${useConfig
 @reference '~/tailwind.css';
 
 .user-settings-layout {
-  @apply mx-auto grid w-full max-w-[1500px] min-w-0 grid-cols-1 gap-4 px-4 py-5 sm:px-6 lg:grid-cols-[220px_minmax(0,1fr)];
+  @apply mx-auto flex w-full max-w-[1500px] min-w-0 flex-col gap-4 px-4 py-5 sm:px-6;
 }
 
 .user-settings-content {

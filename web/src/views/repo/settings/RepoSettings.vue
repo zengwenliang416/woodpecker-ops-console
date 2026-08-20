@@ -71,6 +71,6 @@ const goBack = useRouteBack({ name: 'repo' });
 @reference '~/tailwind.css';
 
 .repo-settings-layout {
-  @apply grid min-w-0 gap-4 lg:grid-cols-[220px_minmax(0,1fr)];
+  @apply flex min-w-0 flex-col gap-4;
 }
 </style>
