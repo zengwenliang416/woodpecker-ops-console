@@ -32,8 +32,8 @@ import (
 	"go.woodpecker-ci.org/woodpecker/v3/server/cache"
 	"go.woodpecker-ci.org/woodpecker/v3/server/forge/setup"
 	"go.woodpecker-ci.org/woodpecker/v3/server/logging"
-	"go.woodpecker-ci.org/woodpecker/v3/server/ops"
 	"go.woodpecker-ci.org/woodpecker/v3/server/model"
+	"go.woodpecker-ci.org/woodpecker/v3/server/ops"
 	"go.woodpecker-ci.org/woodpecker/v3/server/pubsub/memory"
 	"go.woodpecker-ci.org/woodpecker/v3/server/queue"
 	"go.woodpecker-ci.org/woodpecker/v3/server/scheduler"
@@ -251,6 +251,7 @@ func setupEvilGlobals(ctx context.Context, c *cli.Command, s store.Store) (err e
 	server.Config.Server.Cert = c.String("server-cert")
 	server.Config.Server.Key = c.String("server-key")
 	server.Config.Server.AgentToken = c.String("agent-secret")
+	server.Config.Server.NodeAgentToken = c.String("node-agent-secret")
 	serverHost := strings.TrimSuffix(c.String("server-host"), "/")
 	server.Config.Server.Host = serverHost
 	if c.IsSet("server-webhook-host") {

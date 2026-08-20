@@ -287,6 +287,17 @@ var flags = append([]cli.Flag{
 			TrimSpace: true,
 		},
 	},
+	&cli.StringFlag{
+		Sources: cli.NewValueSourceChain(
+			cli.File(os.Getenv("WOODPECKER_NODE_AGENT_SECRET_FILE")),
+			cli.EnvVar("WOODPECKER_NODE_AGENT_SECRET"),
+		),
+		Name:  "node-agent-secret",
+		Usage: "shared secret for Ops node agents",
+		Config: cli.StringConfig{
+			TrimSpace: true,
+		},
+	},
 	&cli.BoolFlag{
 		Sources: cli.EnvVars("WOODPECKER_DISABLE_USER_AGENT_REGISTRATION"),
 		Name:    "disable-user-agent-registration",

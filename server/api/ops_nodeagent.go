@@ -15,27 +15,30 @@
 package api
 
 import (
+	"crypto/subtle"
 	"net/http"
+	"strings"
 
 	"github.com/gin-gonic/gin"
 
+	"go.woodpecker-ci.org/woodpecker/v3/server"
 	"go.woodpecker-ci.org/woodpecker/v3/server/model"
 	"go.woodpecker-ci.org/woodpecker/v3/server/store"
 )
 
 // NodeAgentRegisterInput is the bootstrap payload sent once by a Node Agent.
 type NodeAgentRegisterInput struct {
-	Name     string            `json:"name"`
-	OrgID    int64             `json:"org_id"`
-	Region   string            `json:"region"`
-	Zone     string            `json:"zone"`
-	PrivateIP string           `json:"private_ip"`
-	PublicIP string            `json:"public_ip"`
-	OS       string            `json:"os"`
-	Kernel   string            `json:"kernel"`
-	Runtime  string            `json:"runtime"`
-	AgentVersion string         `json:"agent_version"`
-	Labels   map[string]string `json:"labels"`
+	Name         string            `json:"name"`
+	OrgID        int64             `json:"org_id"`
+	Region       string            `json:"region"`
+	Zone         string            `json:"zone"`
+	PrivateIP    string            `json:"private_ip"`
+	PublicIP     string            `json:"public_ip"`
+	OS           string            `json:"os"`
+	Kernel       string            `json:"kernel"`
+	Runtime      string            `json:"runtime"`
+	AgentVersion string            `json:"agent_version"`
+	Labels       map[string]string `json:"labels"`
 }
 
 // PostNodeAgentRegister registers (or re-registers) a server from a Node Agent.
@@ -70,19 +73,19 @@ func PostNodeAgentRegister(c *gin.Context) {
 	}
 
 	server = &model.Server{
-		OrgID:        in.OrgID,
-		Name:         in.Name,
-		Region:       in.Region,
-		Zone:         in.Zone,
-		PrivateIP:    in.PrivateIP,
-		PublicIP:     in.PublicIP,
-		OS:           in.OS,
-		Kernel:       in.Kernel,
-		Runtime:      in.Runtime,
-		AgentVersion: in.AgentVersion,
-		Labels:       in.Labels,
-		Status:       model.ServerStatusOnline,
-		Health:       model.ServerHealthHealthy,
+		OrgID:         in.OrgID,
+		Name:          in.Name,
+		Region:        in.Region,
+		Zone:          in.Zone,
+		PrivateIP:     in.PrivateIP,
+		PublicIP:      in.PublicIP,
+		OS:            in.OS,
+		Kernel:        in.Kernel,
+		Runtime:       in.Runtime,
+		AgentVersion:  in.AgentVersion,
+		Labels:        in.Labels,
+		Status:        model.ServerStatusOnline,
+		Health:        model.ServerHealthHealthy,
 		LastHeartbeat: timeNow(),
 	}
 	if err := store_.ServerCreate(server); err != nil {
@@ -94,15 +97,15 @@ func PostNodeAgentRegister(c *gin.Context) {
 
 // NodeAgentHeartbeatInput is the periodic metrics payload.
 type NodeAgentHeartbeatInput struct {
-	ServerID    int64              `json:"server_id"`
-	CPU         float64            `json:"cpu"`
-	Memory      float64            `json:"memory"`
-	Disk        float64            `json:"disk"`
-	Load        float64            `json:"load"`
-	Uptime      int64              `json:"uptime_seconds"`
-	Runtime     string             `json:"runtime"`
-	Containers  int                `json:"containers"`
-	Metrics     model.MetricsSnapshot `json:"metrics"`
+	ServerID   int64                 `json:"server_id"`
+	CPU        float64               `json:"cpu"`
+	Memory     float64               `json:"memory"`
+	Disk       float64               `json:"disk"`
+	Load       float64               `json:"load"`
+	Uptime     int64                 `json:"uptime_seconds"`
+	Runtime    string                `json:"runtime"`
+	Containers int                   `json:"containers"`
+	Metrics    model.MetricsSnapshot `json:"metrics"`
 }
 
 // PostNodeAgentHeartbeat updates server liveness and metric windows.
@@ -212,11 +215,22 @@ func GetNodeAgentStatus(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"server_id": server.ID, "status": server.Status, "last_heartbeat": server.LastHeartbeat})
 }
 
-// NodeAgent token middleware — validates the agent bearer token against the
-// server's cert serial placeholder (simplified phase-3 auth; mTLS upgrade planned).
+// nodeAgentAuth validates the shared bearer token and binds non-bootstrap calls
+// to an existing server record.
 func nodeAgentAuth(c *gin.Context) {
+	expectedToken := server.Config.Server.NodeAgentToken
+	actualToken := strings.TrimSpace(strings.TrimPrefix(c.GetHeader("Authorization"), "Bearer "))
+	if expectedToken == "" || subtle.ConstantTimeCompare([]byte(actualToken), []byte(expectedToken)) != 1 {
+		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "invalid node agent token"})
+		return
+	}
+
 	serverID := parseID(c.GetHeader("X-Node-Agent-Server-Id"))
 	if serverID == 0 {
+		if c.Request.Method == http.MethodPost && strings.HasSuffix(c.Request.URL.Path, "/node-agent/register") {
+			c.Next()
+			return
+		}
 		c.AbortWithStatusJSON(http.StatusUnauthorized, gin.H{"error": "missing X-Node-Agent-Server-Id header"})
 		return
 	}

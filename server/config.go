@@ -47,6 +47,7 @@ var Config = struct {
 		Port                  string
 		PortTLS               string
 		AgentToken            string
+		NodeAgentToken        string
 		StatusContext         string
 		StatusContextFormat   string
 		SessionExpires        time.Duration
