@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
 import { flushPromises, mount } from '@vue/test-utils';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { defineComponent, h, reactive } from 'vue';
@@ -252,6 +254,37 @@ describe('deployment collection routes', () => {
     await flushPromises();
     expect(wrapper.get('form [data-feedback-state="error"]').text()).toContain('Application creation failed');
     expect(wrapper.find('form').exists()).toBe(true);
+  });
+
+  it('renders applications and environments with prototype card layout seams', async () => {
+    const applicationsSource = readFileSync(resolve(process.cwd(), 'src/views/deployments/Applications.vue'), 'utf8');
+    const environmentsSource = readFileSync(resolve(process.cwd(), 'src/views/deployments/Environments.vue'), 'utf8');
+
+    const applicationsWrapper = mountApplications();
+    await flushPromises();
+    const environmentsWrapper = mountEnvironments();
+    await flushPromises();
+
+    expect(applicationsWrapper.findAll('.application-card')).toHaveLength(2);
+    expect(applicationsWrapper.get('.application-grid').classes()).toContain('p-4');
+    expect(applicationsWrapper.find('.application-card-head').exists()).toBe(true);
+    expect(applicationsWrapper.find('.application-card-meta').exists()).toBe(true);
+    expect(applicationsWrapper.find('.application-card-details').exists()).toBe(true);
+    expect(applicationsWrapper.find('.application-card-foot').exists()).toBe(true);
+    expect(environmentsWrapper.findAll('.environment-card')).toHaveLength(2);
+    expect(environmentsWrapper.find('.environment-card-head').exists()).toBe(true);
+    expect(environmentsWrapper.find('.environment-card-details').exists()).toBe(true);
+    expect(environmentsWrapper.find('.environment-card-foot').exists()).toBe(true);
+    expect(applicationsSource).toContain('<Scaffold full-width-header fluid-content>');
+    expect(applicationsSource).toContain('.ops-page-content');
+    expect(applicationsSource).toContain('.application-grid');
+    expect(applicationsSource).toContain('xl:grid-cols-2');
+    expect(applicationsSource).toContain('.application-card-foot');
+    expect(environmentsSource).toContain('<Scaffold full-width-header fluid-content>');
+    expect(environmentsSource).toContain('.ops-page-content');
+    expect(environmentsSource).toContain('.environment-card-grid');
+    expect(environmentsSource).toContain('xl:grid-cols-2');
+    expect(environmentsSource).toContain('.environment-card-foot');
   });
 
   it('filters environments by search and protection state', async () => {
