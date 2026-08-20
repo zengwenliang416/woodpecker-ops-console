@@ -36,7 +36,7 @@ func main() {
 			&cli.StringFlag{Name: "server", Usage: "Woodpecker server URL", Required: true, Sources: cli.EnvVars("WOODPECKER_SERVER")},
 			&cli.StringFlag{Name: "name", Usage: "Server name registered on the control plane", Required: true, Sources: cli.EnvVars("WOODPECKER_NODE_NAME")},
 			&cli.Int64Flag{Name: "server-id", Usage: "Node Agent server id (returned at registration)", Sources: cli.EnvVars("WOODPECKER_NODE_SERVER_ID")},
-			&cli.StringFlag{Name: "org-id", Usage: "Organization id", Sources: cli.EnvVars("WOODPECKER_NODE_ORG_ID")},
+				&cli.Int64Flag{Name: "org-id", Usage: "Organization id", Sources: cli.EnvVars("WOODPECKER_NODE_ORG_ID")},
 			&cli.StringFlag{Name: "agent-token", Usage: "Node Agent bearer token", Sources: cli.EnvVars("WOODPECKER_NODE_AGENT_TOKEN")},
 			&cli.BoolFlag{Name: "insecure", Usage: "Skip TLS verification", Sources: cli.EnvVars("WOODPECKER_NODE_INSECURE")},
 			&cli.IntFlag{Name: "heartbeat-interval", Usage: "Heartbeat interval in seconds", Value: 5, Sources: cli.EnvVars("WOODPECKER_NODE_HEARTBEAT_INTERVAL")},
