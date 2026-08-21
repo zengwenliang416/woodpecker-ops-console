@@ -1162,6 +1162,7 @@
       "search_unavailable_title": "Search unavailable",
       "search_unavailable_text": "Global search is not available in this build.",
       "theme": "Toggle theme",
+      "language": "Language",
       "search_shortcut": "⌘ K"
     },
     "infrastructure": {

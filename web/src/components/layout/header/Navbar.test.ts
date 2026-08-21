@@ -12,12 +12,14 @@ const state = vi.hoisted<{
   user: Record<string, unknown> | null;
   notify: ReturnType<typeof vi.fn>;
   setUserConfig: ReturnType<typeof vi.fn>;
+  setI18nLanguage: ReturnType<typeof vi.fn>;
   theme?: { value: string };
   storeTheme?: { value: string };
 }>(() => ({
   user: { id: 1, login: 'regular', admin: false },
   notify: vi.fn(),
   setUserConfig: vi.fn(),
+  setI18nLanguage: vi.fn().mockResolvedValue(undefined),
 }));
 
 vi.mock('~/compositions/useAuthentication', () => ({
@@ -43,6 +45,10 @@ vi.mock('~/compositions/useTheme', async () => {
 
 vi.mock('~/compositions/useUserConfig', () => ({
   default: () => ({ setUserConfig: state.setUserConfig }),
+}));
+
+vi.mock('~/compositions/useI18n', () => ({
+  setI18nLanguage: state.setI18nLanguage,
 }));
 
 vi.mock('~/compositions/useVersion', () => ({
@@ -116,6 +122,9 @@ describe('shared topbar', () => {
     state.user = { id: 1, login: 'regular', admin: false };
     state.notify.mockReset();
     state.setUserConfig.mockReset();
+    state.setI18nLanguage.mockReset();
+    state.setI18nLanguage.mockResolvedValue(undefined);
+    localStorage.removeItem('woodpecker:locale');
     state.theme!.value = 'dark';
     state.storeTheme!.value = 'dark';
   });
@@ -140,6 +149,17 @@ describe('shared topbar', () => {
     await nextTick();
     await wrapper.get('[title="Toggle theme"]').trigger('click');
     expect(state.storeTheme!.value).toBe('dark');
+  });
+
+  it('switches and persists the global locale from the topbar', async () => {
+    const wrapper = mountNavbar('en');
+    const localeSelect = wrapper.get('select[aria-label="Language"]');
+
+    await localeSelect.setValue('zh-Hans');
+    await nextTick();
+
+    expect(state.setI18nLanguage).toHaveBeenCalledWith('zh-Hans');
+    expect(localStorage.getItem('woodpecker:locale')).toBe('zh-Hans');
   });
 
   it('uses localized placeholder and unavailable feedback in English', async () => {

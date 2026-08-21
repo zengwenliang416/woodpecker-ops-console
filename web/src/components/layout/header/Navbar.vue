@@ -14,6 +14,14 @@
       <kbd>{{ $t('ops.topbar.search_shortcut') }}</kbd>
     </button>
     <div class="topbar-spacer" />
+    <label class="locale-switcher">
+      <span class="sr-only">{{ $t('ops.topbar.language') }}</span>
+      <select v-model="selectedLocale" :aria-label="$t('ops.topbar.language')">
+        <option v-for="option in localeOptions" :key="option.value" :value="option.value">
+          {{ option.text }}
+        </option>
+      </select>
+    </label>
     <IconButton :title="$t('ops.topbar.theme')" @click="toggleTheme">
       <Icon :name="isDark ? 'sun' : 'moon'" />
     </IconButton>
@@ -36,6 +44,8 @@
 </template>
 
 <script lang="ts" setup>
+import { useStorage } from '@vueuse/core';
+import { SUPPORTED_LOCALES } from 'virtual:vue-i18n-supported-locales';
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRoute } from 'vue-router';
@@ -44,6 +54,7 @@ import Button from '~/components/atomic/Button.vue';
 import Icon from '~/components/ops/PrototypeIcon.vue';
 import IconButton from '~/components/atomic/IconButton.vue';
 import useAuthentication from '~/compositions/useAuthentication';
+import { setI18nLanguage } from '~/compositions/useI18n';
 import useNotifications from '~/compositions/useNotifications';
 import { useTheme } from '~/compositions/useTheme';
 import useUserConfig from '~/compositions/useUserConfig';
@@ -66,9 +77,24 @@ const authentication = useAuthentication();
 const { user } = authentication;
 const { notify } = useNotifications();
 const { theme, storeTheme } = useTheme();
-const { t } = useI18n();
+const { locale, t } = useI18n();
 
 const isDark = computed(() => theme.value === 'dark');
+const storedLocale = useStorage('woodpecker:locale', locale.value);
+const localeOptions = computed(() => {
+  const displayNames = new Intl.DisplayNames(locale.value, { type: 'language' });
+  return SUPPORTED_LOCALES.map((supportedLocale) => ({
+    value: supportedLocale,
+    text: displayNames.of(supportedLocale) || supportedLocale,
+  }));
+});
+const selectedLocale = computed<string>({
+  get: () => storedLocale.value,
+  async set(value) {
+    await setI18nLanguage(value);
+    storedLocale.value = value;
+  },
+});
 
 function emitOpenSidebar(event: MouseEvent) {
   emit('openSidebar', event.currentTarget instanceof HTMLElement ? event.currentTarget : null);
@@ -122,6 +148,14 @@ function notifySearch() {
   @apply hover:bg-wp-control-neutral-200 dark:hover:bg-wp-control-neutral-100;
 }
 
+.locale-switcher {
+  @apply border-wp-border-100 bg-wp-control-neutral-100 text-wp-text-100 inline-flex h-9.5 shrink-0 items-center rounded-lg border px-2;
+}
+
+.locale-switcher select {
+  @apply bg-transparent text-xs outline-none;
+}
+
 .topbar-link {
   @apply text-wp-primary-text-100;
 }
@@ -139,6 +173,14 @@ function notifySearch() {
   .global-search kbd,
   .topbar-spacer {
     display: none;
+  }
+
+  .locale-switcher {
+    @apply px-1.5;
+  }
+
+  .locale-switcher select {
+    max-width: 4.5rem;
   }
 }
 </style>
